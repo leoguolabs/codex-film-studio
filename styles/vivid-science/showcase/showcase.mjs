@@ -29,7 +29,13 @@ function setLanguage(next) {
   document.title = next === 'zh' ? '鲜彩科学动画 — Codex Film Studio' : 'Vivid Science — Codex Film Studio';
   document.querySelectorAll('[data-en]').forEach(node => node.textContent = next === 'zh' ? node.dataset.zh : node.dataset.en);
   document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.lang === next)));
-  document.querySelectorAll('[data-home]').forEach(link => { const url = new URL(link.href); url.searchParams.set('lang',next); link.href = url.href; });
+  document.querySelectorAll('[data-home]').forEach(link => {
+    const local = ['localhost','127.0.0.1','[::1]'].includes(location.hostname) || location.protocol === 'file:';
+    const url = new URL(local ? '../../../index.html' : next === 'zh' ? '../../../zh/' : '../../../',location.href);
+    url.hash = new URL(link.href).hash;
+    if(local) url.searchParams.set('lang',next);
+    link.href = url.href;
+  });
   const url = new URL(location.href); url.searchParams.set('lang',next); history.replaceState(null,'',url);
   try { localStorage.setItem('film-studio-language',next); } catch { /* Storage may be disabled. */ }
   renderChapters();
