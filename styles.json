@@ -1026,6 +1026,65 @@
       },
       "public_assets": "styles/luminous-worlds/demo-assets.json",
       "preview_showcase": "luminous-worlds-film"
+    },
+    {
+      "id": "vivid-science",
+      "name": "Vivid Science",
+      "name_zh": "鲜彩科学动画",
+      "description": "Expressive vector characters, saturated colour worlds and scale-changing science explanations.",
+      "description_zh": "鲜明的矢量角色、饱和色彩世界与跨尺度科学叙事。",
+      "status": "toolkit-ready",
+      "status_note": "Original visual grammar, generic material primitives, abstract proof and every-frame comparison tools; story scenes and audio must be authored. No example content is bundled.",
+      "status_note_zh": "含原创视觉方法、通用绘制原语、抽象材质验证和全帧比对工具；故事场景与声音仍需创作，不附实例内容。",
+      "guide": "styles/vivid-science/STYLE.md",
+      "readme": "styles/vivid-science/README.md",
+      "prompt": "styles/vivid-science/prompt.txt",
+      "template": "styles/vivid-science/starter",
+      "template_kind": "blank",
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": false,
+        "published_demo": false,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": false,
+        "source_bundle_restore": false,
+        "published_film": true,
+        "original_source": "unavailable",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "material-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "vivid-science-film",
+          "title": "Finished film",
+          "title_zh": "最终成片",
+          "page": "styles/vivid-science/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/vivid-science/showcase/media/films.json"
+        }
+      ],
+      "preview": "styles/vivid-science/preview.svg",
+      "preview_zh": "styles/vivid-science/preview.svg",
+      "preview_kind": "schematic",
+      "landing": {
+        "page": "styles/vivid-science/showcase/index.html",
+        "assets": [
+          "styles/vivid-science/showcase/showcase.css",
+          "styles/vivid-science/showcase/showcase.mjs",
+          "styles/vivid-science/showcase/world.svg",
+          "styles/vivid-science/showcase/fonts/Jost.ttf",
+          "styles/vivid-science/showcase/fonts/OFL-Jost.txt",
+          "styles/vivid-science/STYLE.md",
+          "styles/vivid-science/README.md",
+          "styles/vivid-science/prompt.txt",
+          "styles/vivid-science/PROVENANCE.md"
+        ]
+      },
+      "public_assets": "styles/vivid-science/demo-assets.json",
+      "preview_showcase": "vivid-science-film"
     }
   ],
   "capability_schema_version": 2

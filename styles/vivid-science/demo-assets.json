@@ -1,0 +1,24 @@
+{
+  "release": "vivid-science-v32",
+  "archive": {
+    "name": "vivid-science-media-v32.tar.gz",
+    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/vivid-science-v32/vivid-science-media-v32.tar.gz",
+    "bytes": 232544,
+    "sha256": "8c426ad6c71398c44f87106718a2908efd3c175740f9c706dfabba9a3286bf42"
+  },
+  "files": [
+    "media/captions.vtt",
+    "media/credits.html",
+    "media/films.json",
+    "media/poster.jpg",
+    "media/transcript.json"
+  ],
+  "external_media": [
+    {
+      "name": "vivid-science-film.mp4",
+      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/vivid-science-v32/vivid-science-film.mp4",
+      "bytes": 47429722,
+      "sha256": "60f968714d1e900292e4784fbd1cf9fa6d8f25b81fea7a10fb0b600f19917967"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Frame comparison inspector</title><style>body{margin:0;padding:24px;background:#1b1332;color:#fff5cf;font:16px system-ui}h1{font-size:24px;margin:0 0 16px}header,p{max-width:1100px}section{display:grid;grid-template-columns:1fr 1fr;gap:18px}article{min-width:0}video{display:block;width:100%;background:#090711;aspect-ratio:16/9;margin-top:12px}label{display:inline-block;margin-right:20px}button,input{font:inherit}button{padding:8px 14px;background:#6740a1;color:white;border:0;border-radius:8px;cursor:pointer}input[type=number]{width:90px}input[type=range]{width:min(750px,80vw)}.muted{color:#c4b7d6}.toolbar{margin:22px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}output{font-family:monospace}@media(max-width:900px){section{grid-template-columns:1fr}}</style><header><h1>Frame comparison inspector</h1><p class="muted">Load your reference and output locally. Load a nearest-feature CSV or an explicit role/phase CSV. Unmatched rows hide the reference. Correspondences are review targets, not style-equivalence scores.</p></header><section><article><label>Reference <input id="referenceFile" type="file" accept="video/*"></label><video id="reference" controls muted></video><p><output id="referenceReadout">No reference loaded</output></p></article><article><label>Output <input id="outputFile" type="file" accept="video/*"></label><video id="output" controls muted></video><p><output id="outputReadout">No output loaded</output></p></article></section><div class="toolbar"><label>Output FPS <input id="fps" type="number" value="60" min="1" max="240"></label><label>Reference FPS <input id="refFps" type="number" value="60" min="1" max="240"></label><label>Correspondence CSV <input id="csv" type="file" accept=".csv"></label></div><div class="toolbar"><button id="previous">← Previous frame</button><button id="next">Next frame →</button><label>Frame <input id="frame" type="number" min="0" value="0"></label><output id="match"></output></div><input id="scrub" type="range" min="0" max="1" value="0"><p class="muted">Keyboard arrows step one frame. Browser seeking can differ from the requested frame; compare the displayed media timestamp. For definitive frame identity use decoded images from the scanner.</p><script>
+const $=id=>document.getElementById(id);let rows=null,urls={};
+for(const id of ['reference','output']){$(id+'File').onchange=e=>{if(urls[id])URL.revokeObjectURL(urls[id]);urls[id]=URL.createObjectURL(e.target.files[0]);$(id).src=urls[id]};$(id).addEventListener('loadedmetadata',()=>{if(id==='output')$('scrub').max=Math.max(0,Math.ceil($(id).duration*+$('fps').value)-1);seek()});$(id).addEventListener('seeked',()=>{if(!$(id).requestVideoFrameCallback)$(id+'Readout').value=`Requested frame ${$(id).dataset.frame} · seek time ${$(id).currentTime.toFixed(6)} s (decoded timestamp unavailable)`})}
+function frameLimit(v,fps){return isFinite(v.duration)?Math.max(0,Math.ceil(v.duration*fps)-1):0}
+function set(v,f,fps){if(!isFinite(v.duration))return;v.pause();f=Math.max(0,Math.min(frameLimit(v,fps),f));v.dataset.frame=f;if(v.requestVideoFrameCallback)v.requestVideoFrameCallback((_,m)=>{$(v.id+'Readout').value=`Requested frame ${f} · decoded frame ${Math.round(m.mediaTime*fps)} · displayed media time ${m.mediaTime.toFixed(6)} s`});v.currentTime=Math.min(v.duration-.0001,(f+.25)/fps)}
+function seek(){
+ const fps=+$('fps').value;let f=Math.max(0,Math.min(frameLimit($('output'),fps),Math.round(+$('frame').value)));
+ $('frame').value=f;$('scrub').max=frameLimit($('output'),fps);$('scrub').value=f;set($('output'),f,fps);
+ let row=rows?.get(f),unmatched=rows&&(!row||row.reference_frame===null);
+ $('reference').style.visibility=unmatched?'hidden':'visible';
+ if(unmatched){$('reference').pause();$('referenceReadout').value='No reference selected for this frame';$('match').value=row?.reason||'CSV has no correspondence for this output frame';return;}
+ let rf=row?row.reference_frame:Math.round(f/fps*+$('refFps').value);set($('reference'),rf,+$('refFps').value);
+ $('match').value=row?(Number.isFinite(row.feature_distance)?`Feature distance: ${row.feature_distance.toFixed(4)} (not a percentage)`:`${row.role} · ${row.phase} · ${row.reason}`):'';
+}
+$('fps').onchange=seek;$('refFps').onchange=seek;
+$('previous').onclick=()=>{$('frame').value=Math.max(0,+$('frame').value-1);seek()};$('next').onclick=()=>{$('frame').value=+$('frame').value+1;seek()};$('frame').onchange=seek;$('scrub').oninput=()=>{$('frame').value=$('scrub').value;seek()};document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;if(e.key==='ArrowLeft')$('previous').click();if(e.key==='ArrowRight')$('next').click()});
+function parseCSV(text){
+ const records=[];let record=[],field='',quoted=false;
+ for(let i=0;i<text.length;i++){const c=text[i];
+  if(c==='"'){if(quoted&&text[i+1]==='"'){field+='"';i++;}else quoted=!quoted;}
+  else if(c===','&&!quoted){record.push(field);field='';}
+  else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;record.push(field);if(record.some(x=>x!==''))records.push(record);record=[];field='';}
+  else field+=c;
+ }
+ if(quoted)throw new Error('Unclosed CSV quote');
+ record.push(field);if(record.some(x=>x!==''))records.push(record);return records;
+}
+$('csv').onchange=async e=>{
+ try{let records=parseCSV(await e.target.files[0].text()),header=records.shift();
+  if(!header?.includes('output_frame')||!header.includes('reference_frame'))throw new Error('CSV needs output_frame and reference_frame');
+  const parsed=new Map();
+  for(const cells of records){const r=Object.fromEntries(header.map((k,i)=>[k,cells[i]??'']));r.output_frame=Number(r.output_frame);r.reference_frame=r.reference_frame.trim()===''?null:Number(r.reference_frame);r.feature_distance=r.feature_distance?.trim()?Number(r.feature_distance):null;
+   if(!Number.isInteger(r.output_frame)||r.output_frame<0||parsed.has(r.output_frame)||r.reference_frame!==null&&(!Number.isInteger(r.reference_frame)||r.reference_frame<0))throw new Error('Invalid or duplicate frame index');parsed.set(r.output_frame,r);
+  }rows=parsed;seek();
+ }catch(err){rows=null;$('match').value=`CSV error: ${err.message}`;}
+};
+</script></html>

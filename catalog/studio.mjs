@@ -24,6 +24,7 @@ const categories = {
   'halftone-dossier':['animation','material'],
   'prismatic-atlas':['animation'],
   'luminous-worlds':['animation'],
+  'vivid-science':['animation','drawn'],
   'hologram-hud':['animation'],
 };
 const state = { catalog:null, frames:{}, availability:{mode:'public', pages:{}}, language:'en', filter:'all', query:'', detail:null };

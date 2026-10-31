@@ -1,0 +1,1 @@
+{"name":"vivid-science-material-toolkit","version":"1.0.0","private":true,"type":"module","scripts":{"proof":"node scripts/proof.mjs"},"dependencies":{"@napi-rs/canvas":"1.0.13"}}

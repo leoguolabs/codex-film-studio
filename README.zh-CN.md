@@ -201,6 +201,16 @@
 <p><b>材质工具包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh#screening"><img src="styles/vivid-science/preview.svg" alt="鲜彩科学动画 — 风格示意" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>18 / <code>vivid-science</code></sub>
+<h3>鲜彩科学动画</h3>
+<sub>Vivid Science</sub>
+<p>鲜明的矢量角色、饱和色彩世界与跨尺度科学叙事。</p>
+<p><b>材质工具包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+</td>
+</tr>
 </table>
 
 <!-- style-atlas:end -->

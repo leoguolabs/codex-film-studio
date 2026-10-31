@@ -114,5 +114,17 @@
       "method": "在深色投影台上构建相互连接的线框几何，区分远处点阵、物体与前景标签。以冷色为主，以暖色强调落定信息，让镜头移动有明确目的。旁白、目标锁定、字幕和声音共用时间轴。",
       "check": "检查交付尺寸下的线条分离度、引线锚点、装配轴与字幕空间。观看编码后的运动并试听完整混音，分别说明逐帧比较覆盖范围、源工程重建限制与用户验收。"
     }
+  },
+  "vivid-science": {
+    "en": {
+      "use": "Use Vivid Science to explain hidden processes, living systems and changes of scale through expressive vector characters. It suits science stories with a visible cause, an action and a consequence.",
+      "method": "Stage crisp silhouettes in deep indigo and teal worlds, with warm coral focal subjects and broad cream highlights. Let gaze, anticipation, action and response follow the same narration-led timeline. Carry a recognizable object through each change of scale.",
+      "check": "Inspect complete silhouettes, attached parts, moving labels and every transition. Use consecutive-frame diagnostics to locate defects, then review real playback and the sound mix. Keep scientific claims grounded in sources. The toolkit provides generic primitives and empty inputs; every production needs original scenes and audio."
+    },
+    "zh": {
+      "use": "鲜彩科学动画适合解释隐藏的过程、生命系统和尺度变化。用有表情的矢量角色，把原因、动作与结果连接成一个可以看懂的科学故事。",
+      "method": "在深靛蓝与青绿的世界里建立清晰轮廓，以温暖的珊瑚色突出主体，用大块浅色高光交代形体。让眼神、准备、动作与反应跟随旁白的时间线；每次尺度变化，都保留可辨认的对象作为线索。",
+      "check": "检查完整轮廓、连接部位、移动标签与每个转场。用连续帧诊断定位问题，再通过实际播放和听审判断运动与混音。科学内容需要资料依据；工具包提供通用原语和空白输入，每部影片仍需独立创作场景与声音。"
+    }
   }
 }

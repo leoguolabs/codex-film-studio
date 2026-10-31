@@ -201,6 +201,16 @@
 <p><b>Material toolkit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening"><img src="styles/vivid-science/preview.svg" alt="Vivid Science — style sketch" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>18 / <code>vivid-science</code></sub>
+<h3>Vivid Science</h3>
+<sub>鲜彩科学动画</sub>
+<p>Expressive vector characters, saturated colour worlds and scale-changing science explanations.</p>
+<p><b>Material toolkit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
 </table>
 
 <!-- style-atlas:end -->
