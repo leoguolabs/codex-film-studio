@@ -84,7 +84,7 @@ async function setLanguage(language) {
       const metadata = 'link[rel="canonical"],link[rel="alternate"],meta[name="description"],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]';
       document.head.querySelectorAll(metadata).forEach(node => node.remove());
       translated.head.querySelectorAll(metadata).forEach(node => document.head.append(node.cloneNode(true)));
-      for (const selector of ['.search-answers', '.footer-links > a[href$="sitemap.xml"]']) {
+      for (const selector of ['.search-answers', '.capability-overview', '.footer-links > a[href$="sitemap.xml"]']) {
         const source = translated.querySelector(selector), target = $(selector);
         if (source && target) target.replaceWith(source.cloneNode(true));
       }
@@ -106,7 +106,12 @@ async function setLanguage(language) {
   }
   state.language = language;
   document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-  document.title = language === 'zh' ? 'Codex Film Studio — 动画与视频风格库' : 'Codex Film Studio — Animation & Video Style Library';
+  document.title = t('pageTitle');
+  for (const [selector, key] of [
+    ['meta[name="description"]', 'pageDescription'],
+    ['meta[property="og:title"],meta[name="twitter:title"]', 'pageTitle'],
+    ['meta[property="og:description"],meta[name="twitter:description"]', 'pageDescription'],
+  ]) document.querySelectorAll(selector).forEach(node => node.content = t(key));
   document.querySelectorAll('[data-i18n]').forEach(node => { node.innerHTML = t(node.dataset.i18n); });
   document.querySelectorAll('button[data-language]').forEach(button => button.setAttribute('aria-pressed', button.dataset.language === language));
   document.querySelectorAll('a[data-language]').forEach(link => {
@@ -128,6 +133,15 @@ function guideURL(entry) {
 function guideLink(entry) {
   return PAGE_LANGUAGE ? '<a class="card-page" href="' + escape(guideURL(entry)) + '">' + (state.language === 'zh' ? '风格与制作指南' : 'Style & production guide') + '<span aria-hidden="true">→</span></a>' : '';
 }
+function capabilitySummary(entry) {
+  const caps = entry.capabilities;
+  const source = {'public-inputs-and-repository':'sourcePublic', 'local-source-bundle':'sourceLocal', 'not-audited':'sourceUnaudited', 'unavailable':'sourceUnavailable'};
+  const rebuild = {'clip':'rebuildClip', 'full':'rebuildFull', 'not-yet-revalidated':'rebuildUnvalidated'};
+  const rows = [['renderer', caps.scene_renderer ? 'rendererIncluded' : 'rendererAuthored'],
+    ['originalSource', source[caps.original_source] ?? 'sourceUnknown'],
+    ['sampleRebuild', rebuild[caps.sample_rebuild] ?? 'rebuildUnknown']];
+  return `<dl class="capability-facts">${rows.map(([label, value]) => `<div><dt>${escape(t(label))}</dt><dd>${escape(t(value))}</dd></div>`).join('')}</dl>`;
+}
 function renderStyles() {
   if (!state.catalog) return;
   const entries = state.catalog.styles.filter(entry => {
@@ -142,7 +156,7 @@ function renderStyles() {
     const pages = entry.showcases ?? [], hasLocal = pages.some(p => p.access === 'local');
     const primary = stylePage(entry);
     const filmLabel = pages.some(p => p.access === 'release') ? 'publicSample' : hasLocal ? 'localPages' : 'noFilm';
-    return `<article class="style-card" style="--delay:${i*.035}s">${previewAction(entry,`<div class="card-art">${preview(entry)}<span class="card-index">${String(state.catalog.styles.indexOf(entry)+1).padStart(2,'0')}</span><span class="preview-kind">${t(entry.preview_kind === 'frame' ? 'frame' : 'sketch')}</span><span class="card-arrow" aria-hidden="true">↗</span></div><div class="card-heading"><h3>${escape(localized(entry,'name'))}</h3><span aria-hidden="true">↗</span></div><p class="card-description">${escape(localized(entry,'description'))}</p>`,'card-open',true)}<div class="card-meta"><span>${escape(localized(state.catalog.statuses[entry.status],'name'))}</span><span class="${(entry.capabilities.published_film ?? entry.capabilities.published_demo) ? 'published' : ''}">${t(filmLabel)}</span></div>${primary ? `<a class="card-page" href="${escape(pageURL(primary))}">${stylePageLabel(primary)}<span aria-hidden="true">↗</span></a>` : ''}${guideLink(entry)}</article>`;
+    return `<article class="style-card" style="--delay:${i*.035}s">${previewAction(entry,`<div class="card-art">${preview(entry)}<span class="card-index">${String(state.catalog.styles.indexOf(entry)+1).padStart(2,'0')}</span><span class="preview-kind">${t(entry.preview_kind === 'frame' ? 'frame' : 'sketch')}</span><span class="card-arrow" aria-hidden="true">↗</span></div><div class="card-heading"><h3>${escape(localized(entry,'name'))}</h3><span aria-hidden="true">↗</span></div><p class="card-description">${escape(localized(entry,'description'))}</p>`,'card-open',true)}<div class="card-meta"><span>${escape(localized(state.catalog.statuses[entry.status],'name'))}</span><span class="${(entry.capabilities.published_film ?? entry.capabilities.published_demo) ? 'published' : ''}">${t(filmLabel)}</span></div>${capabilitySummary(entry)}${primary ? `<a class="card-page" href="${escape(pageURL(primary))}">${stylePageLabel(primary)}<span aria-hidden="true">↗</span></a>` : ''}${guideLink(entry)}</article>`;
   }).join('') || `<p class="empty-state">${t('noResults')}</p>`;
 }
 function renderDetail() {

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://visiontrail.github.io/codex-film-studio/?lang=en">
+  <a href="https://visiontrail.github.io/codex-film-studio/">
     <img src="docs/readme/cover-en.png" alt="Codex Film Studio — Stories take shape. A collection of film styles, from whiteboard drawings to paper collage and cartoons." width="100%">
   </a>
 </p>
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://visiontrail.github.io/codex-film-studio/?lang=en"><strong>Open the style library ↗</strong></a> ·
+  <a href="https://visiontrail.github.io/codex-film-studio/"><strong>Open the style library ↗</strong></a> ·
   <a href="#the-style-atlas">Explore styles</a> ·
   <a href="#make-your-film">Start creating</a> ·
   <a href="CONTRIBUTING.md">Contribute</a> ·
@@ -26,7 +26,17 @@
 
 <br>
 
+Codex Film Studio is an open-source library of video styles and production workflows for OpenAI Codex. It combines style guides, project scaffolds, rendering tools and documented audiovisual QA. Rendering capabilities and sample reproducibility vary by style.
+
 ## The style atlas
+
+<!-- capability-summary:start -->
+
+**18 styles** · 1 complete demo kit · 12 executable production kits · 2 authoring starters · 3 material toolkit
+
+<!-- capability-summary:end -->
+
+Package readiness, public films, source access and rebuild scope are separate. A renderer still needs authored scenes; a local source bundle is not a public download. [Compare capabilities](styles/README.md#capabilities--能力与网页) · [Whiteboard sample walkthrough](https://visiontrail.github.io/codex-film-studio/cases/whiteboard-rebuild/).
 
 <!-- style-atlas:start -->
 

@@ -60,17 +60,14 @@ is published as a 720p web preview with eight chapters, English captions, a
 transcript, research notes and credits. Film-specific text and media come from
 the checksum-pinned `art-collage-preview-v1` Release bundle; the production
 folder and 1080p master remain external. README previews link directly to the screening room. Its Collection card
-opens the shared style dialog, with a separate link to the full style page. The style remains an
-authoring starter: publishing a preview does not supply a reusable scene renderer.
+opens the shared style dialog, with a separate link to the full style page. The package is now `renderer-ready`, with reusable scene tools. Its sample source is a local bundle; only an excerpt rebuild is recorded.
 
 Animated Line Chart Comedy has a bilingual independent page at
 `styles/line-chart-comedy/showcase/index.html`. Its original, schematic chart study
 lets visitors play, pause, scrub and jump between line reveal, event annotation,
 close-up and pullback. The page starts paused and needs no external fonts, media
 or production data. The registry provides English/Chinese preview artwork and a
-`landing` entry for the Collection and README galleries. It remains an authoring
-starter, with no published film registered. Only its generic page, assets and
-guides enter the Pages build.
+`landing` entry for the Collection and README galleries. It is now `renderer-ready`, with published films and a pinned media bundle. Original sample source is a local bundle, with an excerpt rebuild recorded.
 
 Microgame Frenzy has a bilingual independent page at
 `styles/microgame/showcase/index.html`, registered through `landing` and linked
@@ -80,7 +77,7 @@ an original 16-second silent material study: Swiss print, indexed pixels,
 character-built terminal and blueprint construction. Playback starts paused;
 visitors can play, restart, scrub or select a material. The blueprint uses the repository’s licensed Architects Daughter
 font; no remote media or production folder is needed. Its bilingual preview artwork is labelled as a
-style study. The package remains a material toolkit without an accepted film.
+style study. The package is now `renderer-ready`, with published films. Sample source remains a local bundle; its recorded rebuild scope is an excerpt.
 
 Art Deco has a bilingual independent page at
 `styles/art-deco/showcase/index.html`. Its original 16-second silent Canvas study
@@ -91,8 +88,7 @@ also includes palette and motion principles, project commands, a reusable prompt
 production notes and provenance. Locally hosted OFL fonts, the toolkit module and
 all page assets are explicitly registered in `landing.assets`. English/Chinese
 schematic preview SVGs link from the Collection, root README galleries and style
-index. Art Deco remains `toolkit-ready`; this page does not publish the retained
-experimental films.
+index. Art Deco is now `renderer-ready`, and published films use a pinned media bundle. Original source remains local; the recorded rebuild covers an excerpt.
 
 LiDAR Survey has a bilingual independent page at
 `styles/lidar-survey/showcase/index.html`, following Whiteboard's demonstration,
@@ -101,7 +97,7 @@ Canvas study shows fixed synthetic returns, canopy peeling, surface reveal, a
 section and ghosted context. The page starts paused, supports play, restart,
 seeking and chapter selection, and pauses offscreen or when hidden. All geometry
 is labelled synthetic; no measurements or observations of a real place are implied.
-The style guide and empty survey/timeline starter are registered as `starter-ready`.
+The package is now `renderer-ready`; published films are registered separately from the synthetic study. Its sample source remains local and rebuild scope is an excerpt.
 All Styles (including Geography), both root README galleries and the style index
 link to the page. Bilingual search summaries also supply its generated guide
 pages and sitemap entries. The generic page, preview SVGs, self-hosted OFL fonts and licence
@@ -119,11 +115,11 @@ visual principles, project creation, copyable prompts, production notes and
 provenance. The former frame-review interface is retained at `comparison.html`.
 All page dependencies and the locally hosted OFL display font are registered in
 `landing.assets`. Films, reference material and timelines still come from the
-existing pinned Release bundle; the package remains `starter-ready`.
+existing pinned Release bundle. The package is now `renderer-ready`; the registry records a full sample rebuild, while source access remains a local bundle.
 
 ## Prompt-first film creation
 
-The homepage, style detail dialogs and all twelve style pages use
+The homepage, style detail dialogs and registered style pages use
 `catalog/agent-start.mjs` for the same bilingual entry point. Visitors copy a
 natural-language brief for a new film or an exact sample recreation. An optional
 setup prompt delegates cloning to the Agent. Project creation, environment setup
@@ -161,7 +157,7 @@ production notes and source links follow the films. The original short-film
 frame comparison remains at `styles/midcentury-cartoon/showcase/comparison.html`;
 the long player and motion review retain their existing URLs. Generic page assets
 are registered explicitly in `landing.assets`; films remain in the pinned Release.
-The package remains `starter-ready`.
+The package is now `renderer-ready`; original sample source remains local and its recorded rebuild scope is an excerpt.
 
 Mid-century Cartoon has short/long players and motion review. Satellite Briefing
 has a player, live composition and frame comparison. Sci-Fi Sitcom has its independent style page and frame-review
@@ -356,7 +352,7 @@ The page includes a paused-by-default Canvas study of spinning headlines, nine
 portrait cards, left-spine page turns and an iris close; playback, scrubbing,
 effect selection and film-texture controls work without production assets.
 Local OFL font subsets and all dependencies are explicitly registered. The
-library package remains an authoring starter; the 1080p masters and detailed
+library package is now `renderer-ready`; the 1080p masters and detailed
 production reviews remain in the independent production.
 
 The complete Newsreel MP4s stream directly from the pinned GitHub Release;
@@ -378,8 +374,7 @@ budget. The checksum-pinned page bundle contains posters, captions, chapters,
 English transcripts, research/credit links and explicit review scope. Page
 language switching preserves film choice and playback position. All Styles,
 both README galleries and the generated search guides use the registry entry.
-The authoring starter contains an empty object/timeline contract and no film
-content or scene renderer.
+The `renderer-ready` package contains an empty object/timeline contract and reusable scene tools. Sample content stays external; the registry records local source and an excerpt rebuild.
 
 ## Halftone Dossier
 
@@ -426,3 +421,31 @@ study with scan, lock and reveal controls, plus the shared prompt entry.
 The catalog and bilingual README link to the page. The reusable package is an
 authoring starter; its public film does not imply a released source renderer.
 Font files and OFL notices are explicitly included in `landing.assets`.
+
+## Search content ownership and validation
+
+`catalog/strings.mjs` owns homepage titles, descriptions, product definitions and
+capability labels for the Python build and browser. Keep its default export valid
+JSON. `index.html` has matching English fallbacks. `styles.json` supplies all
+counts, readiness and capability facts; both README summaries and the detailed
+catalog are generated by `scripts/update_style_index.py`.
+
+`build_search.py` emits capability facts in the initial homepage cards and style
+guides, plus linked bilingual FAQ answers. `catalog/case-studies.json` describes
+an existing public whiteboard sample; the builder adds `/cases/whiteboard-rebuild/`
+and `/zh/cases/whiteboard-rebuild/` to navigation and the sitemap. Its links pin
+code and released inputs, and its media measurements identify the actual playback
+file. It does not add production assets to the library or certify a fresh rebuild.
+Content dates follow the owning files' Git history, including the shared dictionary
+and generator; deployment time is not a content update.
+
+Run `python3 scripts/update_style_index.py --check` and the search tests for both
+`/` and `/codex-film-studio/`. Check the raw HTML, JavaScript startup and EN → 中文
+→ EN metadata; no-JavaScript visitors retain real language and guide links.
+
+Search Console ownership, sitemap submission, indexing and AI referrals must be
+checked independently. A verification file or HTTP 200 does not establish them.
+The effective robots policy is at the origin root; a project robots.txt cannot
+set it. Follow [Google's AI search guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide): useful source-backed content and crawlable
+pages are the baseline, with no special AI schema or llms.txt requirement.
+FAQ copy serves visitors; [FAQ rich results were retired](https://developers.google.com/search/updates#may-2026).

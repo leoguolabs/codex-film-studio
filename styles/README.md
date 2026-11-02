@@ -265,6 +265,9 @@ Ask your Agent to open local showcases and check their retained project files.
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.
 Local source bundles require separate delivery and are not automatically public.
+`public-inputs-and-repository` means released inputs plus code in this repository.
+`not-audited` means access has not been verified; `unavailable` means no source is available.
+`not-yet-revalidated` is not a successful rebuild. Read the per-style notes for scope.
 See [reproduction](../methods/reproduction.md) for acquisition and verification.
 
 `demo-ready` includes a released sample and editable renderer. `renderer-ready`

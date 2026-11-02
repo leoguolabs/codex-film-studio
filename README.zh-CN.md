@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://visiontrail.github.io/codex-film-studio/?lang=zh">
+  <a href="https://visiontrail.github.io/codex-film-studio/zh/">
     <img src="docs/readme/cover-zh.png" alt="Codex Film Studio — 让故事成为画面。从白板、纸张拼贴到卡通表演的影片风格集。" width="100%">
   </a>
 </p>
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://visiontrail.github.io/codex-film-studio/?lang=zh"><strong>打开风格片库 ↗</strong></a> ·
+  <a href="https://visiontrail.github.io/codex-film-studio/zh/"><strong>打开风格片库 ↗</strong></a> ·
   <a href="#风格手册">浏览风格</a> ·
   <a href="#制作你的影片">开始创作</a> ·
   <a href="CONTRIBUTING.md">参与贡献</a> ·
@@ -26,7 +26,17 @@
 
 <br>
 
+Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库，提供风格指南、项目脚手架、渲染工具和影音质检流程，支持制作 MP4 与可编辑工程。各风格的可执行能力、原工程获取方式和复现范围分别标注。
+
 ## 风格手册
+
+<!-- capability-summary:start -->
+
+**18 种风格** · 1 种完整样片工程 · 12 种可执行制作包 · 2 种创作起步包 · 3 种材质工具包
+
+<!-- capability-summary:end -->
+
+制作包状态、公开影片、原工程获取和重建范围分别记录。已有渲染器仍需编写新故事场景，本地原工程包不代表公开下载。[能力速查](styles/README.md#capabilities--能力与网页) · [白板样片制作案例](https://visiontrail.github.io/codex-film-studio/zh/cases/whiteboard-rebuild/)。
 
 <!-- style-atlas:start -->
 

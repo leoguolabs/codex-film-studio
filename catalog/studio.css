@@ -130,3 +130,14 @@ dialog{padding:0;border:1px solid #ffffff26;background:var(--bg);color:var(--ink
   .library .card-heading { margin-top: 16px; }
   .library .card-description { font-size: 15px; }
 }
+
+/* Source-backed product definition and capability summaries. */
+.product-definition{max-width:540px;font-size:14px;line-height:1.7;color:#d1dacd;margin:18px 0}
+.hero{height:auto;max-height:none}
+.capability-facts{font-size:12px;line-height:1.6;color:var(--muted);margin:14px 0}
+.capability-facts div{display:grid;grid-template-columns:minmax(90px,.7fr) minmax(0,1.3fr);gap:12px;margin:5px 0}
+.capability-facts dt{color:var(--ink)}.capability-facts dd{margin:0;overflow-wrap:anywhere}
+.capability-overview{padding-block:25px;border-top:1px solid var(--line);font-size:14px;line-height:1.8;color:var(--muted)}
+.capability-overview h3{font-size:18px;color:var(--ink)}.capability-overview a,.answer-grid a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.case-body{max-width:78ch;padding-block:20px 65px}.case-body p,.case-body li{font-size:17px;line-height:1.9;color:var(--muted)}.case-body a{color:var(--accent);text-decoration:underline;overflow-wrap:anywhere}.case-body section{padding-block:12px}
+@media(max-width:700px){.product-definition{font-size:13px;max-width:36ch}.hero{padding-top:130px;min-height:800px}.capability-facts{font-size:12px}.capability-facts div{grid-template-columns:1fr;gap:0}.guide-body .capability-facts div{grid-template-columns:1fr 1.6fr}.case-body p,.case-body li{font-size:16px}}

@@ -1,0 +1,145 @@
+[
+  {
+    "id": "whiteboard-rebuild",
+    "style": "whiteboard",
+    "source_revision": "a331a949c97f7350084e0f84630c80538cf81621",
+    "media": {
+      "manifest": "styles/whiteboard/demo-assets.json",
+      "edition": "short",
+      "duration_seconds": 180,
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    "en": {
+      "title": "Rebuilding a whiteboard explainer with public inputs",
+      "description": "Trace a three-minute Codex Film Studio sample from released audio and timing to editable scenes, rendering steps and explicit verification limits.",
+      "sections": [
+        {
+          "id": "sample",
+          "heading": "The published sample",
+          "paragraphs": [
+            "“Does AI Help You Learn?” uses the Whiteboard Explainer style: one persistent board, handwritten ideas, moving markers and line characters. This walkthrough covers the released three-minute English edition. It is written by the project maintainer, LeoGuoLabs.",
+            "The pinned v0.1.0 playback file measures 180 seconds, 1920 × 1080, 24 fps, H.264 video and stereo AAC audio at 48 kHz. Its size is 32,014,920 bytes. These are measurements of the public file, not a promised export setting for every style."
+          ]
+        },
+        {
+          "id": "inputs",
+          "heading": "Inputs and environment",
+          "paragraphs": [
+            "Use a complete checkout at the linked code revision plus the SHA-256-pinned whiteboard-short-inputs.tar.gz and MP4. The input archive contains 18 narration WAVs, the audio manifest, timeline.json, captions and media/asr/review.json. Source code, fonts and instrument samples live in the repository.",
+            "The documented environment is Apple Silicon macOS, Node 24, Python and FFmpeg 8. Install the locked npm dependencies and the studio requirements.txt in a virtual environment. Existing recorded speech is enough for a replay; new narration requires an available voice service or imported audio. No credential is bundled."
+          ]
+        },
+        {
+          "id": "composition",
+          "heading": "How the editable film is organized",
+          "paragraphs": [
+            "content/narration.json holds the script; src/film.mjs holds the short-film composition. media/timeline.json aligns narration, captions and the picture clock. The long edition has its own content directory and src/long-film.mjs, so it must not be substituted for the short edition.",
+            "For a new subject, create an independent external project and rewrite both narration and scenes. Keep picture, voice, captions, camera and sound on one timeline. Changing captions alone does not create an adapted film."
+          ]
+        },
+        {
+          "id": "render",
+          "heading": "From inputs to an output",
+          "paragraphs": [
+            "Ask Codex to follow the repository’s whiteboard rebuild instructions. The commands below describe an isolated checkout, so generated media cannot overwrite a retained production. fetch_demo.py checks the Release size and SHA-256 before installing inputs.",
+            "The eight-second command is a picture preview. build.py then validates scenes, renders, mixes sound, exports metadata and runs delivery checks. --skip-atlases skips atlas generation; it does not mark visual or listening review complete."
+          ],
+          "code": "git clone https://github.com/visiontrail/codex-film-studio.git whiteboard-replay\ncd whiteboard-replay\ngit checkout a331a949c97f7350084e0f84630c80538cf81621\npython3 scripts/fetch_demo.py --edition short\ncd styles/whiteboard/studio\nnpm ci\npython3 -m venv .venv\n.venv/bin/pip install -r requirements.txt\nnode scripts/render.mjs --start 0 --end 8 --width 960 --out media/preview.mp4\n.venv/bin/python scripts/build.py --skip-atlases"
+        },
+        {
+          "id": "verification",
+          "heading": "Evidence and limits",
+          "paragraphs": [
+            "The registry at the linked revision records public-inputs-and-repository, an available scene renderer, and sample_rebuild: clip. That is an excerpt-rebuild claim, not a certified fresh full-film replay. The Release’s media/asr/review.json records speech recognition and alignment evidence; it does not establish visual quality or subjective listening.",
+            "This walkthrough verifies the public asset identity and playback-file metadata. It does not claim a new complete rebuild, byte-identical encoding, full-film visual review, listening review, measured production cost or render time. Renderer and encoder versions can change the output. Use the source and review links to assess the documented scope."
+          ]
+        }
+      ]
+    },
+    "zh": {
+      "title": "用公开输入重建白板解说样片",
+      "description": "追溯 Codex Film Studio 三分钟白板样片的公开音频、时间轴、可编辑场景与渲染步骤，了解真实验证范围。",
+      "sections": [
+        {
+          "id": "sample",
+          "heading": "公开样片",
+          "paragraphs": [
+            "《Does AI Help You Learn?》采用白板讲解风格，以一块持续存在的白板、手写内容、移动画笔和线条角色组织画面。本案例介绍已发布的三分钟英文版，由项目维护者 LeoGuoLabs 编写。",
+            "v0.1.0 中固定的公开播放文件实测为 180 秒、1920 × 1080、24 fps、H.264 视频及 48 kHz 双声道 AAC 音频，大小为 32,014,920 字节。这是该文件的实际规格，不是所有风格的导出承诺。"
+          ]
+        },
+        {
+          "id": "inputs",
+          "heading": "输入与环境",
+          "paragraphs": [
+            "使用下方所链接代码版本的完整 checkout，并取得 SHA-256 固定的 whiteboard-short-inputs.tar.gz 与 MP4。输入包包含 18 段旁白 WAV、音频清单、timeline.json、字幕和 media/asr/review.json；源码、字体和乐器采样位于仓库中。",
+            "文档记录的环境是 Apple Silicon macOS、Node 24、Python 与 FFmpeg 8。安装锁定的 npm 依赖，并在虚拟环境安装 studio 的 requirements.txt。原样重放可用现有录音；新旁白需要可访问的语音服务或导入音频，包内不提供凭据。"
+          ]
+        },
+        {
+          "id": "composition",
+          "heading": "可编辑影片如何组织",
+          "paragraphs": [
+            "content/narration.json 保存脚本，src/film.mjs 保存短片构图，media/timeline.json 对齐旁白、字幕和画面时钟。长版使用独立内容目录与 src/long-film.mjs，不能替代短版输入。",
+            "制作新主题时，创建独立的外部工程，同时改写旁白与场景。画面、声音、字幕、镜头和音效共用时间轴；仅替换字幕不能完成影片改编。"
+          ]
+        },
+        {
+          "id": "render",
+          "heading": "从输入到输出",
+          "paragraphs": [
+            "让 Codex 按仓库白板重建说明执行。以下命令使用独立 checkout，避免覆盖保留的制作工程。fetch_demo.py 在安装前核对 Release 文件大小与 SHA-256。",
+            "八秒命令只生成画面预览。build.py 随后验证场景、渲染、混音、导出元数据并执行交付检查。--skip-atlases 只跳过图集生成，不会将画面或听审标记为完成。"
+          ],
+          "code": "git clone https://github.com/visiontrail/codex-film-studio.git whiteboard-replay\ncd whiteboard-replay\ngit checkout a331a949c97f7350084e0f84630c80538cf81621\npython3 scripts/fetch_demo.py --edition short\ncd styles/whiteboard/studio\nnpm ci\npython3 -m venv .venv\n.venv/bin/pip install -r requirements.txt\nnode scripts/render.mjs --start 0 --end 8 --width 960 --out media/preview.mp4\n.venv/bin/python scripts/build.py --skip-atlases"
+        },
+        {
+          "id": "verification",
+          "heading": "证据与限制",
+          "paragraphs": [
+            "链接版本的注册表记录 public-inputs-and-repository、已有场景渲染器及 sample_rebuild: clip。它表示片段重建，不能当作本次已完成整片重放。Release 中的 media/asr/review.json 记录语音识别和对齐证据，不能证明画面质量或主观听感。",
+            "本案例核对了公开资源身份和播放文件元数据，未进行新的整片重建、逐字节编码一致性验证、整片视觉审阅或听审，也未测量制作成本与渲染耗时。渲染器与编码器版本可能影响输出，请结合下方源码和审阅方法判断范围。"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://github.com/visiontrail/codex-film-studio/blob/a331a949c97f7350084e0f84630c80538cf81621/styles.json",
+        "en": "Capability record at the audited revision",
+        "zh": "核查版本的能力记录"
+      },
+      {
+        "url": "https://github.com/visiontrail/codex-film-studio/blob/a331a949c97f7350084e0f84630c80538cf81621/styles/whiteboard/demo-assets.json",
+        "en": "Release file sizes, checksums and download URLs",
+        "zh": "Release 大小、校验值与下载地址"
+      },
+      {
+        "url": "https://github.com/visiontrail/codex-film-studio/blob/a331a949c97f7350084e0f84630c80538cf81621/styles/whiteboard/studio/src/film.mjs",
+        "en": "Editable scene composition",
+        "zh": "可编辑场景源码"
+      },
+      {
+        "url": "https://github.com/visiontrail/codex-film-studio/blob/a331a949c97f7350084e0f84630c80538cf81621/styles/whiteboard/studio/scripts/build.py",
+        "en": "Build and technical checks",
+        "zh": "构建与技术检查"
+      },
+      {
+        "url": "https://github.com/visiontrail/codex-film-studio/blob/a331a949c97f7350084e0f84630c80538cf81621/methods/reproduction.md",
+        "en": "Reproduction and review boundaries",
+        "zh": "复现与审阅范围"
+      },
+      {
+        "url": "https://github.com/visiontrail/codex-film-studio/blob/a331a949c97f7350084e0f84630c80538cf81621/styles/whiteboard/studio/CREDITS.md",
+        "en": "Sample credits and asset licenses",
+        "zh": "样片署名与素材许可"
+      }
+    ]
+  }
+]

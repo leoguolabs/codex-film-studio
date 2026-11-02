@@ -165,6 +165,9 @@ def render(catalog):
         'Publication, executable rendering, source access and rebuild scope are independent.',
         '`full` means a complete rebuild; `clip` covers only the documented excerpt.',
         'Local source bundles require separate delivery and are not automatically public.',
+        '`public-inputs-and-repository` means released inputs plus code in this repository.',
+        '`not-audited` means access has not been verified; `unavailable` means no source is available.',
+        '`not-yet-revalidated` is not a successful rebuild. Read the per-style notes for scope.',
         'See [reproduction](../methods/reproduction.md) for acquisition and verification.', '',
         '`demo-ready` includes a released sample and editable renderer. `renderer-ready`',
         'provides executable style tools and audio/export checks; author the new story scenes.',
@@ -211,6 +214,7 @@ def main():
     for filename, language in [('README.md', 'en'), ('README.zh-CN.md', 'zh')]:
         target = ROOT / filename
         expected = target.read_text(encoding='utf-8')
+        expected = replace_block(expected, 'capability-summary', render_summary(catalog, language))
         outputs[target] = replace_block(expected, 'style-atlas', render_gallery(catalog, language, include_resource_links=False))
     stale = []
     for target, expected in outputs.items():

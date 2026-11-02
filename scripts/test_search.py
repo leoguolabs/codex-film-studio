@@ -104,6 +104,40 @@ class SearchTests(unittest.TestCase):
                 self.assertIn('noindex',(out/'404.html').read_text())
                 self.assertIn("strings.mjs?v=test-revision",(out/'catalog/studio.mjs').read_text())
 
+    def test_shared_metadata_capabilities_and_case_evidence(self):
+        strings=json.loads((ROOT/'catalog/strings.mjs').read_text().split('export default ',1)[1].strip().removesuffix(';'))
+        template=Document((ROOT/'index.html').read_text())
+        self.assertEqual(template.attrs('meta',name='description')[0]['content'],strings['en']['pageDescription'])
+        self.assertIn(strings['en']['pageTitle'],' '.join(template.text))
+        with tempfile.TemporaryDirectory() as directory:
+            out=Path(directory); base='https://films.example/'
+            catalog=self.make_site(out,'https://films.example','/')
+            for lang in ['en','zh']:
+                prefix='zh/' if lang=='zh' else ''
+                doc=Document((out/prefix/'index.html').read_text())
+                self.assertIn(strings[lang]['pageTitle'],' '.join(doc.text))
+                for attrs in [dict(name='description'),dict(property='og:description'),dict(name='twitter:description')]:
+                    self.assertEqual(doc.attrs('meta',**attrs)[0]['content'],strings[lang]['pageDescription'])
+                self.assertIn(strings[lang]['productDefinition'],' '.join(doc.text))
+                self.assertEqual(len(doc.attrs('dl',**{'class':'capability-facts'})),len(catalog['styles']))
+                self.assertEqual(len(doc.attrs('section',**{'class':'capability-overview'})),1)
+                for style in catalog['styles']:
+                    guide=Document((out/prefix/'styles'/style['id']/'index.html').read_text())
+                    key='rendererIncluded' if style['capabilities']['scene_renderer'] else 'rendererAuthored'
+                    self.assertIn(strings[lang][key],' '.join(guide.text))
+                    if style['capabilities']['original_source']=='local-source-bundle':
+                        self.assertIn(strings[lang]['sourceLocal'],' '.join(guide.text))
+                case=Document((out/prefix/'cases/whiteboard-rebuild/index.html').read_text())
+                self.assertEqual(len(case.attrs('h1')),1)
+                self.assertEqual(case.attrs('link',rel='canonical')[0]['href'],base+prefix+'cases/whiteboard-rebuild/')
+                self.assertEqual(case.attrs('link',rel='alternate',hreflang='zh-CN')[0]['href'],base+'zh/cases/whiteboard-rebuild/')
+                manifest=json.loads((ROOT/'styles/whiteboard/demo-assets.json').read_text())['editions']['short']
+                for asset in ['inputs','video']:
+                    self.assertIn(manifest[asset]['url'],[a['href'] for a in case.attrs('a')])
+                self.assertIn(base+prefix+'cases/whiteboard-rebuild/',[a['href'] for a in doc.attrs('a')])
+                self.assertIn('media/asr/review.json',' '.join(case.text))
+                self.assertFalse(any(node['@type']=='FAQPage' for node in doc.json[0]['@graph']))
+
     def test_legacy_implicit_heads_keep_media_and_gain_head_metadata(self):
         for name in ['crayon-book/showcase/index.html', 'midcentury-cartoon/showcase/motion.html',
                      'satellite-briefing/showcase/comparison.html', 'scifi-sitcom/showcase/index.html']:

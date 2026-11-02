@@ -143,32 +143,69 @@ def credit(lang, date, source):
     return f'<p class="search-credit"><a href="{AUTHOR}">LeoGuoLabs</a>{time} · <a href="{source}">{"源码与修订记录" if lang == "zh" else "Source & revision history"} ↗</a></p>'
 
 
-def home_answers(lang, date):
+def capability_facts(style, strings):
+    caps = style['capabilities']
+    source = {'public-inputs-and-repository': 'sourcePublic', 'local-source-bundle': 'sourceLocal', 'not-audited': 'sourceUnaudited', 'unavailable': 'sourceUnavailable'}
+    rebuild = {'clip': 'rebuildClip', 'full': 'rebuildFull', 'not-yet-revalidated': 'rebuildUnvalidated'}
+    rows = [('renderer', 'rendererIncluded' if caps['scene_renderer'] else 'rendererAuthored'),
+            ('originalSource', source.get(caps.get('original_source'), 'sourceUnknown')),
+            ('sampleRebuild', rebuild.get(caps.get('sample_rebuild'), 'rebuildUnknown'))]
+    return '<dl class="capability-facts">' + ''.join(f'<div><dt>{escape(strings[k])}</dt><dd>{escape(strings[v])}</dd></div>' for k, v in rows) + '</dl>'
+
+
+def capability_overview(catalog, lang, strings):
+    counts = {key: sum(s['status'] == key for s in catalog['styles']) for key in catalog['statuses']}
+    renderers = sum(s['capabilities']['scene_renderer'] for s in catalog['styles'])
+    summary = ' · '.join(f'{counts[key]} {escape(strings["demoKit"] if key == "demo-ready" else loc(value, "name", lang))}' for key, value in catalog['statuses'].items())
+    if lang == 'zh':
+        title = f"{len(catalog['styles'])} 种风格，{renderers} 种提供场景渲染器"
+        note = '制作包状态描述可复用工具。新题材仍需创作场景；公开样片、本地原工程与完整重建验证分别记录。'
+        link = '比较原工程获取与重建范围'
+    else:
+        title = f"{len(catalog['styles'])} styles, {renderers} with scene renderers"
+        note = 'Readiness describes reusable tools. New subjects still need authored scenes. Public films, local source bundles and full rebuild verification are separate.'
+        link = 'Compare source access and rebuild scope'
+    return f'<section class="capability-overview" aria-labelledby="capability-title"><h3 id="capability-title">{title}</h3><p>{summary}</p><p>{note} <a href="{REPO}/blob/main/styles/README.md#capabilities--能力与网页">{link} →</a></p></section>'
+
+
+def home_answers(lang, date, catalog, base):
+    home = base + ('zh/' if lang == 'zh' else '')
+    case = home + 'cases/whiteboard-rebuild/'
+    renderers = sum(s['capabilities']['scene_renderer'] for s in catalog['styles'])
     if lang == 'zh':
         heading = '如何用 Codex Film Studio 制作视频？'
-        intro = 'Codex Film Studio 是由 LeoGuoLabs 维护的可复用动画与视频风格库。每种风格提供视觉规则、创作提示和项目入口；根据风格不同，还提供工具、可编辑渲染工程或公开展示。'
-        qa = [('应该选择哪种风格？', '逐步解释可以从白板讲解开始；材质叙事可考虑艺术拼贴或蜡笔绘本；空间关系适合卫星影像；数据变化可用动态折线图喜剧。先阅读风格指南，再查看样片或交互示意。'),
-              ('如何开始一个新项目？', '在 Agent 中打开已克隆的仓库，直接描述主题、观众、风格、语言和时长。Agent 会创建独立项目、准备环境、制作并检查影片，再交付 MP4 和可编辑工程；尚未克隆时，也可以让 Agent 完成。'),
-              ('每种风格都有可直接渲染的影片吗？', '并非如此。白板风格提供已发布样片和可编辑渲染工程，其他条目包含不同程度的起步项目或工具包。公开展示与可复用工程能力是两回事，请核对每种风格的说明。'),
-              ('如何核验制作方法和素材来源？', '风格指南链接到对应的 STYLE.md、创作提示和源码历史。公开样片和参考素材应遵守各自的署名与许可；新制作的事实、角色和素材需要单独核验。')]
+        intro = '从选风格、编写场景到检查交付，先确认所选制作包和样片的实际范围。'
+        qa = [
+            ('如何用 Codex 开始制作？', '在 Codex 中打开完整仓库，描述主题、观众、风格、语言和时长。Agent 按仓库流程创建外部项目，准备依赖并执行制作与审阅；交付范围包括 MP4、可编辑工程和实际检查说明。', home+'#create', '创作入口'),
+            ('应该选择哪种风格？', '逐步解释可选白板讲解，材质叙事可选艺术拼贴或蜡笔绘本，空间关系可选卫星影像，数据变化可选动态折线图喜剧。结合场景需求、能力摘要和样片选择。', home+'#library', '浏览风格'),
+            ('哪些包带场景渲染器？', f'当前 {len(catalog["styles"])} 种风格中有 {renderers} 种标记为提供场景渲染器。已有渲染器仍需要为新选题编写画面、准备输入和检查结果；创作起步包与材质工具包的能力另行标注。', REPO+'/blob/main/styles/README.md#capabilities--能力与网页', '能力速查'),
+            ('样片能原样复现吗？', '需要原始场景、素材、已接受的音频和时间信息。白板样片提供公开输入与仓库代码；本地原工程包并非公开下载，观看 MP4 也不意味着已取得可编辑工程。', case, '白板样片案例'),
+            ('需要什么依赖和输入？', '完整仓库包含根脚本、风格和共享方法，单独复制 Skill 目录不够。依赖按风格检查；白板示例用 Node、Python 与 FFmpeg。新主题需脚本、可用素材、录音或可访问的语音服务。', case+'#inputs', '依赖与公开输入'),
+            ('如何理解验证范围？', 'clip 仅表示片段；full 表示记录所覆盖的整片重建。技术检查、画面审阅、播放与听审需分别报告。尚未重新验证不能视为成功，新片也需独立验收。', REPO+'/blob/main/methods/reproduction.md', '复现与验证方法'),
+            ('能在其他 Agent 中直接安装吗？', '当前可靠入口是完整 checkout 与仓库内 codex-film Skill。尚未提供其他 Agent 的独立安装与完整流程验证；复制 Skill 子目录不能获得全部工作室资源。', REPO+'/tree/main/.agents/skills/codex-film', '仓库内 Skill')]
     else:
         heading = 'How do you make a video with Codex Film Studio?'
-        intro = 'Codex Film Studio is a reusable animation and video style library maintained by LeoGuoLabs. Each style provides visual rules, an authoring prompt and a project entry point, with tools, editable rendering code or public showcases depending on the package.'
-        qa = [('Which style should I choose?', 'Start with Whiteboard Explainer for a step-by-step argument, Art Collage or Crayon Picture Book for material-led storytelling, Satellite Briefing for spatial relationships, or Animated Line Chart Comedy for changing data. Read the guide, then inspect a sample or interactive study.'),
-              ('How do I start a new project?', 'Open the cloned repository in your coding Agent and describe the subject, audience, style, language and duration. The Agent creates the project, prepares the environment, produces and reviews the film, then delivers an MP4 and editable project. You can also ask it to clone the studio first.'),
-              ('Does every style include a ready-to-render film?', 'No. Whiteboard includes released samples and an editable renderer; the other packages provide different combinations of starters and tools. A public showcase and a reusable scene renderer are separate capabilities. Check each style guide before planning production.'),
-              ('Where can I verify the methods and sources?', 'Each guide links to its STYLE.md, authoring prompt and source history. Public samples and reference assets retain their own attribution and licensing requirements. Verify facts, characters and assets separately for each new production.')]
-    return f'''<section class="search-answers section-wrap" aria-labelledby="answers-title"><p class="eyebrow">CODEX FILM STUDIO / FIELD GUIDE</p><h2 id="answers-title">{heading}</h2><p class="search-intro">{intro}</p><div class="answer-grid">{''.join(f'<article><h3>{q}</h3><p>{a}</p></article>' for q, a in qa)}</div>{credit(lang,date,REPO+'/commits/main/styles.json')}</section>'''
+        intro = 'Choose a style, author the scenes and review the delivery against the actual scope of the package and sample.'
+        qa = [
+            ('How do I start with Codex?', 'Open the complete repository in Codex and describe the subject, audience, style, language and duration. The Agent follows the project workflow to create an external project, prepare dependencies, produce and review it. Delivery includes an MP4, editable project and actual review coverage.', home+'#create', 'Start a film'),
+            ('Which style should I choose?', 'Use Whiteboard Explainer for step-by-step arguments, Art Collage or Crayon Picture Book for material-led stories, Satellite Briefing for spatial relationships, or Animated Line Chart Comedy for changing data. Compare the scene needs, capabilities and samples.', home+'#library', 'Explore styles'),
+            ('Which packages include scene renderers?', f'{renderers} of the current {len(catalog["styles"])} styles are marked as including scene renderers. New subjects still need authored scenes, inputs and review. Authoring starters and material toolkits have separately documented capabilities.', REPO+'/blob/main/styles/README.md#capabilities--能力与网页', 'Compare capabilities'),
+            ('Can I reproduce a sample exactly?', 'You need its composition, assets, accepted recordings and timing. Whiteboard has public inputs plus repository code. Local source bundles are not public downloads, and a playable MP4 is not an editable source package.', case, 'Whiteboard sample walkthrough'),
+            ('What dependencies and inputs do I need?', 'Use the full checkout, including root scripts, styles and shared methods; copying the Skill directory alone is insufficient. Dependencies vary by style. Whiteboard uses Node, Python and FFmpeg. New subjects need a script, usable assets, recordings or access to a voice service.', case+'#inputs', 'Dependencies and public inputs'),
+            ('What does the verification scope mean?', 'clip covers an excerpt; full covers the complete rebuild identified in its record. Technical checks, visual review, playback and listening are reported separately. Not revalidated is not a pass, and each new film needs its own acceptance.', REPO+'/blob/main/methods/reproduction.md', 'Reproduction and verification'),
+            ('Can I install it in another Agent?', 'The documented entry point is a complete checkout with the repo-local codex-film Skill. Standalone installation and end-to-end validation for other Agents are not provided. Copying the Skill subdirectory does not install the whole studio.', REPO+'/tree/main/.agents/skills/codex-film', 'Repo-local Skill')]
+    articles = ''.join(f'<article><h3>{escape(q)}</h3><p>{escape(a)} <a href="{escape(url, quote=True)}">{escape(label)} →</a></p></article>' for q, a, url, label in qa)
+    return f'<section class="search-answers section-wrap" aria-labelledby="answers-title"><p class="eyebrow">CODEX FILM STUDIO / FIELD GUIDE</p><h2 id="answers-title">{heading}</h2><p class="search-intro">{intro}</p><div class="answer-grid">{articles}</div>{credit(lang,date,REPO+"/commits/main/scripts/build_search.py")}</section>'
 
 
-def static_cards(catalog, base, lang):
+def static_cards(catalog, base, lang, strings):
     cards = []
     for index, style in enumerate(catalog['styles'], 1):
         name, description = loc(style, 'name', lang), loc(style, 'description', lang)
         href = base + route(style, lang)
         preview = loc(style, 'preview', lang) or style.get('poster', '')
         kind = ('样片剧照' if lang == 'zh' else 'FILM FRAME') if style.get('preview_kind') == 'frame' else ('风格示意' if lang == 'zh' else 'STYLE STUDY')
-        cards.append(f'''<article class="style-card"><a class="card-open" href="{href}"><div class="card-art"><img src="{base + preview}" alt="{escape(name)} — {kind}" loading="lazy"><span class="card-index">{index:02}</span><span class="preview-kind">{kind}</span></div><div class="card-heading"><h3>{escape(name)}</h3><span aria-hidden="true">↗</span></div><p class="card-description">{escape(description)}</p></a><a class="card-page" href="{href}">{'风格与制作指南' if lang == 'zh' else 'Style & production guide'} →</a></article>''')
+        cards.append(f'''<article class="style-card"><a class="card-open" href="{href}"><div class="card-art"><img src="{base + preview}" alt="{escape(name)} — {kind}" loading="lazy"><span class="card-index">{index:02}</span><span class="preview-kind">{kind}</span></div><div class="card-heading"><h3>{escape(name)}</h3><span aria-hidden="true">↗</span></div><p class="card-description">{escape(description)}</p></a><div class="card-meta"><span>{escape(loc(catalog["statuses"][style["status"]],"name",lang))}</span><span>{escape(strings["publicSample"] if style["capabilities"].get("published_film",style["capabilities"].get("published_demo")) else strings["noFilm"])}</span></div>{capability_facts(style, strings)}<a class="card-page" href="{href}">{'风格与制作指南' if lang == 'zh' else 'Style & production guide'} →</a></article>''')
     return ''.join(cards)
 
 
@@ -187,7 +224,7 @@ def agent_entry(style, lang):
     return f'<film-agent-start style-id="{escape(style, quote=True)}"><p>{intro}</p><blockquote>{escape(prompt)}</blockquote></film-agent-start>'
 
 
-def render_guide(style, content, catalog, base, prefix, lang, date, revision):
+def render_guide(style, content, catalog, base, prefix, lang, date, revision, strings):
     zh = lang == 'zh'; name = loc(style, 'name', lang); url = base + route(style, lang)
     title = name + ('：风格与制作指南' if zh else ' — Style & Production Guide') + ' | Codex Film Studio'
     desc = loc(style, 'description', lang); home = base + ('zh/' if zh else '')
@@ -200,7 +237,9 @@ def render_guide(style, content, catalog, base, prefix, lang, date, revision):
         if landing.get('access') != 'local': links.append((landing['page'], '风格展示' if zh else 'Style showcase'))
     for page in style.get('showcases', []):
         if page['access'] == 'release' and page['page'] not in [p for p, _ in links]: links.append((page['page'], loc(page,'title',lang)))
-    showcases = ''.join(f'<li><a href="{base+p}?lang={lang}">{escape(label)} ↗</a></li>' for p, label in links)
+    if style['id'] == 'whiteboard':
+        links.append((('zh/' if zh else '')+'cases/whiteboard-rebuild/', '公开输入制作案例' if zh else 'Public-input production walkthrough'))
+    showcases = ''.join(f'<li><a href="{base+p}{"?lang="+lang if not p.endswith("/") else ""}">{escape(label)} ↗</a></li>' for p, label in links)
     if not showcases: showcases = '<li>' + ('暂无公开影片，请从风格指南和工具开始。' if zh else 'No public film is registered; start with the guide and tools.') + '</li>'
     method_links = [(style['guide'],'视觉规则' if zh else 'Visual rules'), (style['prompt'],'创作提示' if zh else 'Authoring prompt'), ('methods/WORKFLOW.md','制作流程' if zh else 'Production workflow'), ('methods/REVIEW.md','审阅方法' if zh else 'Review method')]
     related = ''.join(f'<a href="{base + route(other,lang)}">{escape(loc(other,"name",lang))} →</a>' for other in catalog['styles'] if other['id'] != style['id'])
@@ -210,7 +249,7 @@ def render_guide(style, content, catalog, base, prefix, lang, date, revision):
 <main id="guide" class="section-wrap"><nav class="breadcrumbs" aria-label="{'面包屑导航' if zh else 'Breadcrumb'}"><a href="{home}">{'风格片库' if zh else 'Style library'}</a><span aria-hidden="true"> / </span><span>{escape(name)}</span></nav>
 <section class="guide-hero"><div><p class="eyebrow">STYLE / {escape(style['id'].upper())}</p><h1>{escape(name)}</h1><p class="guide-description">{escape(desc)}</p>{credit(lang,date,REPO+'/commits/main/'+style['guide'])}</div><figure><img src="{base+preview}" alt="{escape(name)}" fetchpriority="high"><figcaption>{('样片剧照' if zh else 'Film frame') if style.get('preview_kind') == 'frame' else ('风格示意' if zh else 'Style study')}</figcaption></figure></section>
 <div class="guide-body"><article><section><h2>{'什么时候适合使用？' if zh else 'When should you use this style?'}</h2><p>{escape(content['use'])}</p></section><section><h2>{'如何组织画面与运动？' if zh else 'How do you build the picture and motion?'}</h2><p>{escape(content['method'])}</p><p><a href="{source_url}">{'阅读完整视觉规则' if zh else 'Read the full visual rules'} ↗</a></p></section><section><h2>{'交付前需要检查什么？' if zh else 'What should you check before delivery?'}</h2><p>{escape(content['check'])}</p></section><section><h2>{'如何开始创作？' if zh else 'How do you start a production?'}</h2>{agent_entry(style['id'], lang)}</section></article>
-<aside><section><h2>{'可复用内容' if zh else 'What is included?'}</h2><p>{escape(loc(style,'status_note',lang))}</p></section><section><h2>{'观看与探索' if zh else 'Watch & explore'}</h2><ul>{showcases}</ul></section><section><h2>{'方法与依据' if zh else 'Methods & sources'}</h2><ul>{''.join(f'<li><a href="{REPO}/blob/main/{p}">{label} ↗</a></li>' for p,label in method_links)}</ul></section></aside></div>
+<aside><section><h2>{'可复用内容' if zh else 'What is included?'}</h2><p>{escape(loc(style,'status_note',lang))}</p>{capability_facts(style, strings)}</section><section><h2>{'观看与探索' if zh else 'Watch & explore'}</h2><ul>{showcases}</ul></section><section><h2>{'方法与依据' if zh else 'Methods & sources'}</h2><ul>{''.join(f'<li><a href="{REPO}/blob/main/{p}">{label} ↗</a></li>' for p,label in method_links)}</ul></section></aside></div>
 <section class="related-styles"><h2>{'继续探索风格' if zh else 'Explore the collection'}</h2><div>{related}</div></section></main><footer class="footer section-wrap"><a href="{home}">← {'返回风格片库' if zh else 'Back to the style library'}</a><a href="{REPO}">{'源码与文档' if zh else 'Source & documentation'} ↗</a><a href="{base}sitemap.xml">{'站点地图' if zh else 'Sitemap'}</a></footer></body></html>'''
     graph = schema(base,url,title,desc,lang,date)
     graph.append({'@type':'BreadcrumbList','itemListElement':[
@@ -219,25 +258,57 @@ def render_guide(style, content, catalog, base, prefix, lang, date, revision):
     return metadata(page,title,desc,url,base+'catalog/social-card.jpg',lang,alternatives,graph)
 
 
+def render_case(case, base, prefix, lang, date, revision):
+    zh = lang == 'zh'; content = case[lang]
+    relative = 'cases/' + case['id'] + '/'
+    home = base + ('zh/' if zh else '')
+    url = home + relative
+    alternatives = {'en': base + relative, 'zh-CN': base + 'zh/' + relative, 'x-default': base + relative}
+    title = content['title'] + ' | Codex Film Studio'
+    version = '?v=' + revision if revision else ''
+    sections = []
+    for section in content['sections']:
+        body = ''.join('<p>' + escape(p) + '</p>' for p in section['paragraphs'])
+        if section.get('code'): body += '<pre><code>' + escape(section['code']) + '</code></pre>'
+        sections.append(f'<section id="{section["id"]}"><h2>{escape(section["heading"])}</h2>{body}</section>')
+    manifest = json.loads((ROOT / case['media']['manifest']).read_text())['editions'][case['media']['edition']]
+    resources = [(base + 'styles/whiteboard/studio/index.html?edition=short', '观看三分钟样片' if zh else 'Watch the three-minute sample'),
+                 (manifest['video']['url'], '下载公开 MP4' if zh else 'Download the public MP4'),
+                 (manifest['inputs']['url'], '下载原始输入（含 ASR 记录）' if zh else 'Download original inputs (including ASR record)'),
+                 (home + 'styles/whiteboard/', '白板风格指南' if zh else 'Whiteboard style guide')]
+    links = ''.join(f'<li><a href="{escape(href, quote=True)}">{escape(label)} ↗</a></li>' for href,label in resources)
+    sources = ''.join(f'<li><a href="{escape(s["url"], quote=True)}">{escape(s[lang])} ↗</a></li>' for s in case['sources'])
+    page = f'''<!doctype html><html lang="{'zh-CN' if zh else 'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101816"><link rel="icon" href="{prefix}catalog/brand/studio-logo.svg{version}"><link rel="stylesheet" href="{prefix}catalog/studio.css{version}"><link rel="stylesheet" href="{prefix}catalog/studio-header.css{version}"><link rel="stylesheet" href="{prefix}catalog/brand.css{version}"></head><body class="guide-page">
+<a class="skip-link" href="#case">{'跳转到正文' if zh else 'Skip to content'}</a><header class="guide-header section-wrap"><a class="footer-brand studio-brand-lockup" href="{home}"><img class="studio-brand-logo" src="{prefix}catalog/brand/studio-logo.svg{version}" width="48" height="48" alt=""><span>CODEX FILM STUDIO</span></a><div class="studio-header-actions"><nav aria-label="Language"><a href="{alternatives['en']}" lang="en" hreflang="en" {'aria-current="page"' if not zh else ''}>EN</a><a href="{alternatives['zh-CN']}" lang="zh-CN" hreflang="zh-CN" {'aria-current="page"' if zh else ''}>中文</a></nav><a class="studio-x-link" href="{AUTHOR}">@LeoGuoLabs</a></div></header>
+<main id="case" class="section-wrap"><nav class="breadcrumbs"><a href="{home}">{'风格片库' if zh else 'Style library'}</a> / {'制作案例' if zh else 'Production walkthrough'}</nav><section class="guide-hero"><div><p class="eyebrow">WHITEBOARD / PUBLIC SAMPLE</p><h1>{escape(content['title'])}</h1><p class="guide-description">{escape(content['description'])}</p>{credit(lang,date,REPO+'/commits/main/catalog/case-studies.json')}</div><figure><img src="{base}docs/readme/previews/whiteboard.{'zh' if zh else 'en'}.jpg" alt="{'白板样片剧照' if zh else 'Whiteboard sample frame'}"><figcaption>{'已发布样片剧照' if zh else 'Published sample frame'}</figcaption></figure></section><article class="case-body"><section><h2>{'观看与获取' if zh else 'Watch and obtain the inputs'}</h2><ul>{links}</ul></section>{''.join(sections)}<section><h2>{'源码与证据' if zh else 'Source and evidence'}</h2><ul>{sources}</ul></section></article></main><footer class="footer section-wrap"><a href="{home}">← {'返回风格片库' if zh else 'Back to the style library'}</a><a href="{REPO}">GitHub ↗</a></footer></body></html>'''
+    graph = schema(base,url,title,content['description'],lang,date)
+    graph.append({'@type':'BreadcrumbList','itemListElement':[
+        {'@type':'ListItem','position':1,'name':'风格片库' if zh else 'Style library','item':home},
+        {'@type':'ListItem','position':2,'name':content['title'],'item':url}]})
+    return metadata(page,title,content['description'],url,base+'catalog/social-card.jpg',lang,alternatives,graph)
+
+
 def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-studio/', revision=''):
     base,prefix = site_base(origin,base_path)
     content = json.loads((ROOT/'catalog/search-content.json').read_text())
     strings = json.loads((ROOT/'catalog/strings.mjs').read_text().split('export default ',1)[1].strip().removesuffix(';'))
+    cases = json.loads((ROOT/'catalog/case-studies.json').read_text())
     entries = {}; home_source = (output/'index.html').read_text()
-    date = modified('styles.json','catalog/search-content.json','index.html')
+    date = modified('styles.json','catalog/search-content.json','index.html','catalog/strings.mjs','scripts/build_search.py')
     for lang in ['en','zh']:
         home_path = 'zh/index.html' if lang == 'zh' else 'index.html'; url = canonical(base,home_path)
-        title = 'Codex Film Studio — 动画与视频风格库' if lang == 'zh' else 'Codex Film Studio — Animation & Video Style Library'
-        desc = ('探索白板讲解、艺术拼贴、蜡笔绘本等动画与视频风格，查看公开样片、视觉规则和制作指南，创建独立影片项目。' if lang == 'zh' else 'Explore animation and video styles, from whiteboard explainers to paper collage. Watch public samples, read production guides and start an independent film project.')
+        title = strings[lang]['pageTitle']
+        desc = strings[lang]['pageDescription']
         page = translate_home(home_source, strings[lang])
         page = page.replace('<html lang="en">', f'<html lang="{"zh-CN" if lang == "zh" else "en"}" data-site-root="{prefix}" data-page-language="{lang}">')
         # Root-based asset paths also work at /zh/ and at custom-domain deployments.
         page = re.sub(r'(href|src)="((?:catalog/|styles/)[^"]*)"', lambda m:f'{m[1]}="{prefix}{m[2]}"', page)
         page = re.sub(r'href="(?:\./|#(library|create))"', lambda m:'href="'+url+('#'+m[1] if m[1] else '')+'"', page)
         page = re.sub(r'<button type="button" data-language="(en|zh)"[^>]*>(.*?)</button>', lambda m:f'<a data-language="{m[1]}" href="{base + ("zh/" if m[1]=="zh" else "")}" lang="{"zh-CN" if m[1]=="zh" else "en"}" hreflang="{"zh-CN" if m[1]=="zh" else "en"}"'+(' aria-current="page"' if m[1]==lang else '')+f'>{m[2]}</a>',page)
-        page = re.sub(r'(<div class="style-grid" id="style-grid"[^>]*>).*?(</div>)', lambda m:m[1]+static_cards(catalog,base,lang)+m[2],page,flags=re.S)
+        page = re.sub(r'(<div class="style-grid" id="style-grid"[^>]*>).*?(</div>)', lambda m:m[1]+static_cards(catalog,base,lang,strings[lang])+m[2],page,flags=re.S)
         page = re.sub(r'(<span id="collection-range">).*?(</span>)',rf'\g<1>01 — {len(catalog["styles"]):02}\2',page)
-        page = page.replace('</main>',home_answers(lang,date)+'</main>')
+        page = page.replace('<div class="collection-note">', capability_overview(catalog,lang,strings[lang])+'<div class="collection-note">')
+        page = page.replace('</main>',home_answers(lang,date,catalog,base)+'</main>')
         page = page.replace('<div class="footer-links">', '<div class="footer-links"><a href="'+base+'sitemap.xml">'+('站点地图' if lang=='zh' else 'Sitemap')+'</a>')
         page = re.sub(r'<noscript>.*?</noscript>', '<noscript><p class="noscript">'+('风格指南可直接阅读；搜索、筛选与详情弹窗需要 JavaScript。' if lang=='zh' else 'Read all style guides without JavaScript. Search, filters and detail dialogs use JavaScript.')+'</p></noscript>',page,flags=re.S)
         page = page.replace('placeholder="Find a style" aria-label="Find a style"',f'placeholder="{strings[lang]["search"]}" aria-label="{strings[lang]["search"]}"')
@@ -246,10 +317,17 @@ def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-
         target=output/home_path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page)
         entries[url]=date
         for style in catalog['styles']:
-            style_date=modified(style['guide'],'catalog/search-content.json','styles.json')
+            style_date=modified(style['guide'],'catalog/search-content.json','styles.json','catalog/strings.mjs','scripts/build_search.py')
             target=output/route(style,lang)/'index.html'; target.parent.mkdir(parents=True,exist_ok=True)
-            target.write_text(render_guide(style,content[style['id']][lang],catalog,base,prefix,lang,style_date,revision))
+            target.write_text(render_guide(style,content[style['id']][lang],catalog,base,prefix,lang,style_date,revision,strings[lang]))
             entries[base+route(style,lang)]=style_date
+    for case in cases:
+        case_date = modified('catalog/case-studies.json',case['media']['manifest'],'scripts/build_search.py')
+        for lang in ['en','zh']:
+            relative = ('zh/' if lang == 'zh' else '') + 'cases/' + case['id'] + '/'
+            target = output/relative/'index.html'; target.parent.mkdir(parents=True,exist_ok=True)
+            target.write_text(render_case(case,base,prefix,lang,case_date,revision))
+            entries[base+relative] = case_date
     # Existing sample players keep their compositions. Index public entrypoints;
     # internal bundle HTML is a duplicate/implementation detail, not a search destination.
     for style in catalog['styles']:
