@@ -1,4 +1,4 @@
-/* Shared identity, using the approved artwork without recoloring or cropping. */
+/* Transparent vector identity shared by light and dark style pages. */
 .studio-brand-lockup {
   display: inline-flex !important;
   align-items: center;
@@ -7,8 +7,8 @@
 }
 .studio-brand-lockup > .studio-brand-logo {
   display: block !important;
-  width: 64px !important;
-  height: 64px !important;
+  width: 48px !important;
+  height: 48px !important;
   max-width: none !important;
   max-height: none !important;
   flex: 0 0 auto;
@@ -22,8 +22,8 @@
   transform: none !important;
 }
 footer .studio-brand-lockup > .studio-brand-logo {
-  width: 48px !important;
-  height: 48px !important;
+  width: 40px !important;
+  height: 40px !important;
 }
 .studio-brand-bar {
   padding: 12px 24px;
@@ -37,7 +37,7 @@ footer .studio-brand-lockup > .studio-brand-logo {
 @media (max-width: 540px) {
   .studio-brand-lockup { gap: 7px; }
   .studio-brand-lockup > .studio-brand-logo {
-    width: 48px !important;
-    height: 48px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
 }

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <title>Codex Film Studio</title>
+  <g stroke="#ed9a7d" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="7" width="10" height="10" rx="2.4"/>
+    <rect x="7" y="31" width="10" height="10" rx="2.4"/>
+    <rect x="7" y="55" width="10" height="10" rx="2.4"/>
+    <rect x="7" y="79" width="10" height="10" rx="2.4"/>
+    <rect x="79" y="7" width="10" height="10" rx="2.4"/>
+    <rect x="79" y="31" width="10" height="10" rx="2.4"/>
+    <rect x="79" y="55" width="10" height="10" rx="2.4"/>
+    <rect x="79" y="79" width="10" height="10" rx="2.4"/>
+    <path d="M37.5 29.813 C37.5 15.396 58.5 15.396 58.5 29.813 C70.986 22.604 81.486 40.791 69 48 C81.486 55.209 70.986 73.396 58.5 66.187 C58.5 80.604 37.5 80.604 37.5 66.187 C25.014 73.396 14.514 55.209 27 48 C14.514 40.791 25.014 22.604 37.5 29.813 Z"/>
+    <path d="M43 39 57 48 43 57 Z"/>
+  </g>
+</svg>
