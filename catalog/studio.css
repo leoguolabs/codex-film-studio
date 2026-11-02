@@ -47,6 +47,7 @@ dialog{padding:0;border:1px solid #ffffff26;background:var(--bg);color:var(--ink
   font-weight: 600;
   letter-spacing: -.035em;
   margin-top: 12px;
+  text-wrap: balance;
 }
 .library .section-aside { font-size: 14px; color: #c4cec3; max-width: 320px; }
 .library .library-toolbar {
