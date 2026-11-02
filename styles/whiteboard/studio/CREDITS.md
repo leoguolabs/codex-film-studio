@@ -19,6 +19,11 @@ The new film uses the same openly licensed font families to study the style:
   is a derived font representation under those terms.
 - **Architects Daughter**, Kimberly Geswein, SIL Open Font License 1.1.
   The font and license are in `fonts/`.
+- The showcase page's Chinese blue handwriting uses **Whiteboard Hand SC**,
+  a renamed WOFF2 subset of **Xiaolai** by LXGW, derived from SetoFont by
+  Nozomi Seto, under SIL Open Font License 1.1. Source, regeneration instructions
+  and license are retained in `fonts/README-WhiteboardHandSC.md` and
+  `fonts/OFL-Xiaolai.txt`.
 - EMS Tech was obtained from **hersheytext**, James T / techninja, MIT.
   The package license is retained as `fonts/hersheytext-LICENSE.txt`.
 

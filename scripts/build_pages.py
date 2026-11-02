@@ -91,7 +91,8 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
     published_roots = published_roots or {}
     source_files = [
         "index.html", "showcase.css", "showcase.mjs", "showcase-i18n.mjs",
-        "fonts/ArchitectsDaughter-Regular.ttf", "src/comparison.mjs",
+        "fonts/ArchitectsDaughter-Regular.ttf", "fonts/WhiteboardHandSC-Regular.woff2",
+        "fonts/OFL-Xiaolai.txt", "fonts/README-WhiteboardHandSC.md", "src/comparison.mjs",
         "content/comparison.json", "content/sources.json",
         "editions/long/content/comparison.json", "editions/long/content/sources.json",
     ]
