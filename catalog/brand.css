@@ -1,0 +1,43 @@
+/* Shared identity, using the approved artwork without recoloring or cropping. */
+.studio-brand-lockup {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.studio-brand-lockup > .studio-brand-logo {
+  display: block !important;
+  width: 64px !important;
+  height: 64px !important;
+  max-width: none !important;
+  max-height: none !important;
+  flex: 0 0 auto;
+  object-fit: contain !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+footer .studio-brand-lockup > .studio-brand-logo {
+  width: 48px !important;
+  height: 48px !important;
+}
+.studio-brand-bar {
+  padding: 12px 24px;
+  border-bottom: 1px solid currentColor;
+}
+.studio-brand-bar .studio-brand-lockup {
+  color: inherit;
+  font: 600 12px/1.25 system-ui, sans-serif;
+  letter-spacing: .08em;
+}
+@media (max-width: 540px) {
+  .studio-brand-lockup { gap: 7px; }
+  .studio-brand-lockup > .studio-brand-logo {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}

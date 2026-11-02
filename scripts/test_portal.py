@@ -61,7 +61,8 @@ class PortalTests(unittest.TestCase):
                     published_roots[style['id']] = source
             build_site(demo, output, 'portal-test', published_roots)
             homepage = (output / 'index.html').read_text()
-            for asset in ['catalog/studio.mjs', 'catalog/studio.css', 'catalog/hero.svg', 'catalog/mark.svg']:
+            for asset in ['catalog/studio.mjs', 'catalog/studio.css', 'catalog/hero.svg',
+                          'catalog/brand.css', 'catalog/brand/studio-logo.png']:
                 self.assertIn(f'{asset}?v=portal-test', homepage)
             self.assertTrue((output / 'catalog/agent-start.mjs').is_file())
             # A <base> from a retained film must not redirect the shared entry

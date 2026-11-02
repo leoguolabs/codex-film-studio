@@ -1,9 +1,9 @@
 <!doctype html><html lang="zh-CN"><meta charset="utf-8">
 <base href="/_projects/satellite-comparison/review/">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Satellite briefing · 逐帧配对审阅</title><style>
+<title>Satellite briefing · 逐帧配对审阅</title><link rel="icon" href="/catalog/brand/studio-logo.png" type="image/png"><link rel="stylesheet" href="/catalog/brand.css"><style>
 :root{color-scheme:dark;font:15px system-ui;background:#0b1016;color:#edf1f5}body{max-width:1900px;margin:24px auto;padding:0 22px}h1{font-size:22px;font-weight:500}p{color:#aebbc6;line-height:1.65}.videos{display:grid;grid-template-columns:1fr 1fr;gap:16px}video{display:block;width:100%;background:#030507;aspect-ratio:16/9}article{min-width:0}h2{font:16px ui-monospace,monospace}button,select,input[type=number]{padding:10px;background:#19232e;color:inherit;border:1px solid #405365;border-radius:5px}button{cursor:pointer}button:hover{border-color:#ffbd60}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:20px 0}input[type=range]{width:100%;accent-color:#ffbd60}output{font-family:ui-monospace,monospace}#status{min-height:1.5em;color:#ffbd60}.help{font-size:13px}a{color:#93caff}#frame{width:90px}@media(max-width:800px){.videos{grid-template-columns:1fr}}
-</style><h1>Satellite briefing · 逐帧配对审阅</h1>
+</style><header class="studio-brand-bar"><a class="studio-brand-lockup" href="/" aria-label="Codex Film Studio home"><img class="studio-brand-logo" src="/catalog/brand/studio-logo.png" alt="" width="64" height="64" aria-hidden="true"><span class="studio-brand-name">CODEX<br>FILM STUDIO</span></a></header><h1>Satellite briefing · 逐帧配对审阅</h1>
 <p>按镜头类型归一化映射参考时间；左右题材和地理内容不同。每一帧都有配对记录，指标描述亮度、色度、线条和运动，不能证明风格“100% 一致”。</p>
 <div class="videos"><article><h2 id="refLabel">参考片</h2><video id="ref" muted playsinline preload="auto" src="../reference/satellite-briefing.mp4"></video></article><article><h2 id="finalLabel">新加坡成片</h2><video id="final" muted playsinline preload="auto" src="../media/final.mp4"></video></article></div>
 <div class="controls"><button id="prev">← 上一帧</button><button id="next">下一帧 →</button><button id="play">按配对顺序播放</button><select id="scene"></select><label>成片帧 <input id="frame" type="number" min="0" step="1"></label><button id="jump">跳转</button><output id="pair"></output></div>

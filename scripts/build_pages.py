@@ -104,6 +104,7 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
         "catalog/hero.svg", "catalog/mark.svg", "catalog/studio-header.css", "catalog/strings.mjs", "catalog/social-card.jpg",
         "catalog/film-screening.css", "catalog/film-screening.mjs",
         "catalog/agent-start.mjs",
+        "catalog/brand.css", "catalog/brand/studio-logo.png",
     ])
     # Public ownership proof downloaded from the owner's Search Console property.
     files.append((ROOT / "site-verification/google4f5a2a3073124a07.html", "google4f5a2a3073124a07.html"))
@@ -189,7 +190,7 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
         # with an external-project <base>, so version every HTML reference.
         for page in output.rglob('*.html'):
             html = page.read_text(encoding='utf-8')
-            for asset in ['agent-start.mjs', 'studio-header.css']:
+            for asset in ['agent-start.mjs', 'studio-header.css', 'brand.css', 'brand/studio-logo.png']:
                 html = html.replace(f'catalog/{asset}"', f'catalog/{asset}?{query}"')
             page.write_text(html, encoding='utf-8')
     build_search(output, catalog, site_origin, base_path, revision)
