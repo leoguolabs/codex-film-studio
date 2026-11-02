@@ -3,7 +3,8 @@ const REPO = 'https://github.com/visiontrail/codex-film-studio';
 const SITE = 'https://visiontrail.github.io/codex-film-studio/';
 const LOCAL_SITE = 'http://127.0.0.1:8249/';
 const SITE_ROOT = new URL(document.documentElement.dataset.siteRoot ?? './', location.href);
-const PAGE_LANGUAGE = document.documentElement.dataset.pageLanguage;
+let PAGE_LANGUAGE = document.documentElement.dataset.pageLanguage;
+let languageRequest = 0;
 const assetRevision = new URL(import.meta.url).searchParams.get('v');
 function assetURL(path) {
   const url = new URL(path,SITE_ROOT);
@@ -66,17 +67,52 @@ function readPreference() {
   if (['en','zh'].includes(query)) return query;
   try { return localStorage.getItem('film-studio-language') === 'zh' ? 'zh' : 'en'; } catch { return 'en'; }
 }
-function setLanguage(language) {
+async function setLanguage(language) {
+  const request = ++languageRequest;
+  const position = window.scrollY;
   if (PAGE_LANGUAGE && language !== PAGE_LANGUAGE) {
     const url = new URL(language === 'zh' ? 'zh/' : './', SITE_ROOT);
-    url.search = location.search; url.searchParams.delete('lang'); url.hash = location.hash;
-    location.assign(url.href); return;
+    url.search = location.search; url.searchParams.delete('lang');
+    try {
+      // Keep the live controls and their state; translate generated content
+      // from the crawlable language page without navigating to an old fragment.
+      const response = await fetch(url.href);
+      if (!response.ok) throw new Error(`Language page HTTP ${response.status}`);
+      const translated = new DOMParser().parseFromString(await response.text(), 'text/html');
+      if (translated.documentElement.dataset.pageLanguage !== language) throw new Error('Invalid language page');
+      if (request !== languageRequest) return;
+      const metadata = 'link[rel="canonical"],link[rel="alternate"],meta[name="description"],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]';
+      document.head.querySelectorAll(metadata).forEach(node => node.remove());
+      translated.head.querySelectorAll(metadata).forEach(node => document.head.append(node.cloneNode(true)));
+      for (const selector of ['.search-answers', '.footer-links > a[href$="sitemap.xml"]']) {
+        const source = translated.querySelector(selector), target = $(selector);
+        if (source && target) target.replaceWith(source.cloneNode(true));
+      }
+      const previousHome = new URL(PAGE_LANGUAGE === 'zh' ? 'zh/' : './', SITE_ROOT);
+      document.querySelectorAll('a[href]:not([data-language])').forEach(link => {
+        const target = new URL(link.href);
+        if (target.origin === previousHome.origin && target.pathname === previousHome.pathname) {
+          target.pathname = url.pathname;
+          link.href = target.href;
+        }
+      });
+      history.replaceState(history.state, '', url);
+      PAGE_LANGUAGE = language;
+      document.documentElement.dataset.pageLanguage = language;
+    } catch {
+      if (request === languageRequest) location.assign(url.href);
+      return;
+    }
   }
   state.language = language;
   document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
   document.title = language === 'zh' ? 'Codex Film Studio — 动画与视频风格库' : 'Codex Film Studio — Animation & Video Style Library';
   document.querySelectorAll('[data-i18n]').forEach(node => { node.innerHTML = t(node.dataset.i18n); });
   document.querySelectorAll('button[data-language]').forEach(button => button.setAttribute('aria-pressed', button.dataset.language === language));
+  document.querySelectorAll('a[data-language]').forEach(link => {
+    if (link.dataset.language === language) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
   const search = $('#style-search');
   search.placeholder = t('search'); search.setAttribute('aria-label',t('search'));
   $('.filters').setAttribute('aria-label',t('filterLabel'));
@@ -84,6 +120,7 @@ function setLanguage(language) {
   try { localStorage.setItem('film-studio-language',language); } catch { /* Private browsing can disable storage. */ }
   if (!PAGE_LANGUAGE) { const url = new URL(location.href); url.searchParams.set('lang',language); history.replaceState(null,'',url); }
   if (state.catalog) { renderStyles(); if (state.detail) renderDetail(); }
+  window.scrollTo({top: position, behavior: 'instant'});
 }
 function guideURL(entry) {
   return new URL(`${state.language === 'zh' ? 'zh/' : ''}styles/${entry.id}/`, SITE_ROOT).href;

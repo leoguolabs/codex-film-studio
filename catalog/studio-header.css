@@ -80,8 +80,11 @@ html .studio-x-link:focus-visible { outline: 2px solid currentColor; outline-off
 
 /* The All Styles header: readable controls against the illustrated hero. */
 .studio-library-header {
+  height: 80px;
   gap: clamp(20px, 3vw, 48px);
-  background: #101816f5;
+  background: #101816b3;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom-color: #b5c7a047;
   box-shadow: 0 8px 28px #00000020;
 }
@@ -160,15 +163,15 @@ html .studio-x-link:focus-visible { outline: 2px solid currentColor; outline-off
     display: grid;
     grid-template-columns: auto 1fr;
     height: auto;
-    gap: 12px 20px;
-    padding-block: 16px;
+    gap: 8px 20px;
+    padding-block: 10px;
   }
   .studio-library-header .header-tools { justify-self: end; margin: 0; }
   .studio-library-header .main-nav { grid-row: 2; grid-column: 1 / -1; margin: 0; }
   .studio-library-header + main .hero { padding-top: 220px; }
 }
 @media (max-width: 700px) {
-  .studio-library-header { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+  .studio-library-header { grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }
   .studio-library-header .header-tools { display: contents; }
   .studio-library-header .language-switch { grid-row: 1; grid-column: 2; }
   .studio-library-header .main-nav { display: grid; grid-template-columns: 1fr 1fr; }
