@@ -62,13 +62,13 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh"><img src="docs/readme/frames/crayon-book.jpg" alt="蜡笔绘本 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh#film"><img src="docs/readme/frames/crayon-book.jpg" alt="蜡笔绘本 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>03 / <code>crayon-book</code></sub>
 <h3>蜡笔绘本</h3>
 <sub>Crayon Picture Book</sub>
 <p>蜡质笔触与暖纸纹理，逐笔显现的绘画配合真实的绘本翻页。</p>
-<p><b>可执行制作包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh">▶ 在线播放</a></p>
+<p><b>可执行制作包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh#film">▶ 在线播放</a></p>
 </td>
 </tr>
 <tr>

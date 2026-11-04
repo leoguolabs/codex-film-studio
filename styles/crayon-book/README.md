@@ -1,5 +1,11 @@
 # Crayon Picture Book · 蜡笔绘本
 
+[Open the style page](https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en) · [打开中文风格页](https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh)
+
+The bilingual page includes the retained film and chapter navigation, wax/paper
+principles, a prompt-first creation path, production notes and reference credits.
+The online film is a 720p preview; the full production remains external.
+
 Executable tooling is now included: see [TOOLS.md](TOOLS.md). New subjects still
 need authored scenes, source assets and accepted audio. Original-sample replay
 uses an external source bundle, as described in [reproduction](../../methods/reproduction.md).
