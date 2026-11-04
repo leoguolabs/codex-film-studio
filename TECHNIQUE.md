@@ -56,6 +56,8 @@ paths and subtitle typography before non-Latin text can render correctly.
 
 ## Voice
 
+New projects include the optional [Edge TTS narration workflow](methods/narration.md). It sends the requested narration to the online voice service. Keep accepted WAV files with the project. Imported recordings and the Chatterbox integration are also supported.
+
 The released demo inputs let you rebuild the examples without a TTS service.
 For a new story, choose one of these paths:
 

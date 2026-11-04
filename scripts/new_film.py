@@ -121,6 +121,8 @@ def create(name, style, root=ROOT, output=None):
         review_tools = root / "scripts/frame_review"
         if review_tools.is_dir():
             shutil.copytree(review_tools, destination / "tools/frame_review", ignore=IGNORE)
+    if (root / "scripts/tts").is_dir():
+        shutil.copytree(root / "scripts/tts", destination / "tools/tts", ignore=IGNORE)
     return destination
 
 

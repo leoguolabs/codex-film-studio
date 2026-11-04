@@ -28,6 +28,17 @@
 
 Codex Film Studio is an open-source library of video styles and production workflows for OpenAI Codex. It combines style guides, project scaffolds, rendering tools and documented audiovisual QA. Rendering capabilities and sample reproducibility vary by style.
 
+## Install the Codex plugin
+
+Install once from any directory, then describe the film in a new local Codex chat. For example, “Make a ten-second Caption News film about leap day. Deliver the MP4 and editable project.”
+
+```sh
+codex plugin marketplace add https://github.com/visiontrail/codex-film-studio.git --ref plugin-v0.1.0
+codex plugin add codex-film-studio@visiontrail
+```
+
+[Installation, system requirements and release packaging](docs/plugin.md)
+
 ## The style atlas
 
 <!-- capability-summary:start -->
