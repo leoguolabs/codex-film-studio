@@ -52,9 +52,9 @@
         }
       ],
       "description_zh": "一块持续保留内容的白板，用手写文字、移动马克笔和线条人物逐步解释想法。",
-      "preview": "docs/readme/previews/whiteboard.en.jpg",
+      "preview": "docs/readme/frames/whiteboard.jpg",
       "preview_kind": "frame",
-      "preview_zh": "docs/readme/previews/whiteboard.zh.jpg"
+      "preview_zh": "docs/readme/frames/whiteboard.jpg"
     },
     {
       "id": "art-collage",
@@ -95,9 +95,9 @@
         }
       ],
       "description_zh": "纸张剪贴、错落字体与层叠构图，让信息通过进入、遮挡和替换形成关系。",
-      "preview": "docs/readme/previews/art-collage.en.jpg",
+      "preview": "docs/readme/frames/art-collage.jpg",
       "preview_kind": "frame",
-      "preview_zh": "docs/readme/previews/art-collage.zh.jpg",
+      "preview_zh": "docs/readme/frames/art-collage.jpg",
       "landing": {
         "page": "styles/art-collage/showcase/index.html",
         "assets": [
@@ -157,9 +157,9 @@
         }
       ],
       "description_zh": "蜡质笔触与暖纸纹理，逐笔显现的绘画配合真实的绘本翻页。",
-      "preview": "docs/readme/previews/crayon-book.en.jpg",
+      "preview": "docs/readme/frames/crayon-book.jpg",
       "preview_kind": "frame",
-      "preview_zh": "docs/readme/previews/crayon-book.zh.jpg",
+      "preview_zh": "docs/readme/frames/crayon-book.jpg",
       "landing": {
         "page": "styles/crayon-book/showcase/index.html",
         "id": "crayon-film",
@@ -231,9 +231,9 @@
         }
       ],
       "description_zh": "柔和套色、微微错位的墨线与停格姿态，配合清楚的教学表演和爵士节奏。",
-      "preview": "docs/readme/previews/midcentury-cartoon.en.jpg",
+      "preview": "docs/readme/frames/midcentury-cartoon.jpg",
       "preview_kind": "frame",
-      "preview_zh": "docs/readme/previews/midcentury-cartoon.zh.jpg",
+      "preview_zh": "docs/readme/frames/midcentury-cartoon.jpg",
       "landing": {
         "page": "styles/midcentury-cartoon/showcase/index.html",
         "id": "midcentury-short",
@@ -323,9 +323,9 @@
         }
       ],
       "description_zh": "以地理镜头连接真实卫星影像，用克制的标注解释位置、尺度与空间关系。",
-      "preview": "docs/readme/previews/satellite-briefing.en.jpg",
+      "preview": "docs/readme/frames/satellite-briefing.jpg",
       "preview_kind": "frame",
-      "preview_zh": "docs/readme/previews/satellite-briefing.zh.jpg",
+      "preview_zh": "docs/readme/frames/satellite-briefing.jpg",
       "landing": {
         "page": "styles/satellite-briefing/showcase/index.html",
         "id": "satellite-film",
@@ -385,9 +385,9 @@
         }
       ],
       "description_zh": "粗墨线、平涂阴影与反差表演，用反应镜头和空间变化组织喜剧节奏。",
-      "preview": "docs/readme/previews/scifi-sitcom.en.jpg",
+      "preview": "docs/readme/frames/scifi-sitcom.jpg",
       "preview_kind": "frame",
-      "preview_zh": "docs/readme/previews/scifi-sitcom.zh.jpg",
+      "preview_zh": "docs/readme/frames/scifi-sitcom.jpg",
       "landing": {
         "page": "styles/scifi-sitcom/showcase/index.html",
         "id": "scifi-review",
@@ -456,9 +456,9 @@
           "styles/whiteboard/studio/fonts/OFL-ArchitectsDaughter.txt"
         ]
       },
-      "preview": "styles/microgame/showcase/preview.en.svg",
-      "preview_zh": "styles/microgame/showcase/preview.zh.svg",
-      "preview_kind": "schematic",
+      "preview": "docs/readme/frames/microgame.jpg",
+      "preview_zh": "docs/readme/frames/microgame.jpg",
+      "preview_kind": "frame",
       "public_assets": "styles/microgame/demo-assets.json",
       "preview_showcase": "microgame-films"
     },
@@ -501,9 +501,9 @@
           "media_manifest": "styles/art-deco/showcase/media/films.json"
         }
       ],
-      "preview": "styles/art-deco/showcase/preview.en.svg",
-      "preview_zh": "styles/art-deco/showcase/preview.zh.svg",
-      "preview_kind": "schematic",
+      "preview": "docs/readme/frames/art-deco.jpg",
+      "preview_zh": "docs/readme/frames/art-deco.jpg",
+      "preview_kind": "frame",
       "landing": {
         "page": "styles/art-deco/showcase/index.html",
         "assets": [
@@ -571,8 +571,8 @@
           "title_zh": "字幕新闻合并版影片"
         }
       ],
-      "preview": "docs/readme/previews/caption-news.en.jpg",
-      "preview_zh": "docs/readme/previews/caption-news.zh.jpg",
+      "preview": "docs/readme/frames/caption-news.jpg",
+      "preview_zh": "docs/readme/frames/caption-news.jpg",
       "preview_kind": "frame",
       "landing": {
         "page": "styles/caption-news/showcase/index.html",
@@ -630,9 +630,9 @@
           "media_manifest": "styles/line-chart-comedy/showcase/media/films.json"
         }
       ],
-      "preview": "styles/line-chart-comedy/showcase/preview.en.svg",
-      "preview_zh": "styles/line-chart-comedy/showcase/preview.zh.svg",
-      "preview_kind": "schematic",
+      "preview": "docs/readme/frames/line-chart-comedy.jpg",
+      "preview_zh": "docs/readme/frames/line-chart-comedy.jpg",
+      "preview_kind": "frame",
       "landing": {
         "page": "styles/line-chart-comedy/showcase/index.html",
         "assets": [
@@ -685,9 +685,9 @@
           "media_manifest": "styles/lidar-survey/showcase/media/films.json"
         }
       ],
-      "preview": "styles/lidar-survey/showcase/preview.en.svg",
-      "preview_zh": "styles/lidar-survey/showcase/preview.zh.svg",
-      "preview_kind": "schematic",
+      "preview": "docs/readme/frames/lidar-survey.jpg",
+      "preview_zh": "docs/readme/frames/lidar-survey.jpg",
+      "preview_kind": "frame",
       "landing": {
         "page": "styles/lidar-survey/showcase/index.html",
         "assets": [
@@ -855,8 +855,8 @@
           "media_manifest": "styles/halftone-dossier/showcase/media/films.json"
         }
       ],
-      "preview": "styles/halftone-dossier/showcase/preview.jpg",
-      "preview_zh": "styles/halftone-dossier/showcase/preview.jpg",
+      "preview": "docs/readme/frames/halftone-dossier.jpg",
+      "preview_zh": "docs/readme/frames/halftone-dossier.jpg",
       "preview_kind": "frame",
       "preview_showcase": "halftone-dossier-film",
       "landing": {
@@ -905,9 +905,9 @@
           "media_manifest": "styles/prismatic-atlas/showcase/media/films.json"
         }
       ],
-      "preview": "styles/prismatic-atlas/showcase/atlas.svg",
-      "preview_zh": "styles/prismatic-atlas/showcase/atlas.svg",
-      "preview_kind": "schematic",
+      "preview": "docs/readme/frames/prismatic-atlas.jpg",
+      "preview_zh": "docs/readme/frames/prismatic-atlas.jpg",
+      "preview_kind": "frame",
       "preview_showcase": "prismatic-atlas-film",
       "public_assets": "styles/prismatic-atlas/demo-assets.json",
       "landing": {
@@ -1011,9 +1011,9 @@
           "media_manifest": "styles/luminous-worlds/showcase/media/films.json"
         }
       ],
-      "preview": "styles/luminous-worlds/preview.svg",
-      "preview_zh": "styles/luminous-worlds/preview.svg",
-      "preview_kind": "schematic",
+      "preview": "docs/readme/frames/luminous-worlds.jpg",
+      "preview_zh": "docs/readme/frames/luminous-worlds.jpg",
+      "preview_kind": "frame",
       "landing": {
         "page": "styles/luminous-worlds/showcase/index.html",
         "assets": [
@@ -1069,9 +1069,9 @@
           "media_manifest": "styles/vivid-science/showcase/media/films.json"
         }
       ],
-      "preview": "styles/vivid-science/preview.svg",
-      "preview_zh": "styles/vivid-science/preview.svg",
-      "preview_kind": "schematic",
+      "preview": "docs/readme/frames/vivid-science.jpg",
+      "preview_zh": "docs/readme/frames/vivid-science.jpg",
+      "preview_kind": "frame",
       "landing": {
         "page": "styles/vivid-science/showcase/index.html",
         "assets": [

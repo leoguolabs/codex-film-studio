@@ -4,7 +4,13 @@ from pathlib import Path
 
 
 def running_ffmpeg():
-    rows = subprocess.check_output(['ps', '-axo', 'pid=,comm='], text=True).splitlines()
+    # Sandboxed Codex sessions can launch FFmpeg but cannot enumerate host
+    # processes. The shared lock still serializes participating film encoders.
+    try:
+        rows = subprocess.check_output(['ps', '-axo', 'pid=,comm='], text=True).splitlines()
+    except (PermissionError, FileNotFoundError, subprocess.CalledProcessError):
+        print("Process list unavailable; using the shared FFmpeg lock.", file=sys.stderr)
+        return []
     return [int(row.split(None, 1)[0]) for row in rows if len(row.split(None, 1)) == 2 and Path(row.split(None, 1)[1]).name == 'ffmpeg']
 
 
