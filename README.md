@@ -62,13 +62,13 @@ Package readiness, public films, source access and rebuild scope are separate. A
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en"><img src="docs/readme/previews/crayon-book.en.jpg" alt="Crayon Picture Book — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en#film"><img src="docs/readme/previews/crayon-book.en.jpg" alt="Crayon Picture Book — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>03 / <code>crayon-book</code></sub>
 <h3>Crayon Picture Book</h3>
 <sub>蜡笔绘本</sub>
 <p>Wax pigment, textured paper, hand-drawn reveals and physical book motion.</p>
-<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en#film">▶ Watch online</a></p>
 </td>
 </tr>
 <tr>

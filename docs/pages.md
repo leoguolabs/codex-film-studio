@@ -117,6 +117,19 @@ All page dependencies and the locally hosted OFL display font are registered in
 `landing.assets`. Films, reference material and timelines still come from the
 existing pinned Release bundle. The package is now `renderer-ready`; the registry records a full sample rebuild, while source access remains a local bundle.
 
+Crayon Picture Book now has a complete bilingual independent page at
+`styles/crayon-book/showcase/index.html`. Following the Whiteboard page’s film,
+creation, production-note and source structure, it uses warm paper, handwritten
+titles, wax colours and original schematic material drawings. The retained
+*Leo the Farmer* 720p web preview has fifteen chapter jumps, active-chapter
+tracking, playback error feedback and its existing frame comparison. The page
+also covers paper/pigment, drawing reveals and physical book motion, with shared
+Agent prompts, a copyable creative brief, production guides and source credits.
+English and Chinese page text share the same video and preserve playback when
+switching languages. `landing.assets` registers the CSS and module; README
+preview images and watch links open `#film`, while the style-page entry opens
+the complete page. The checksum-pinned film bundle and review records are unchanged.
+
 ## Prompt-first film creation
 
 The homepage, style detail dialogs and registered style pages use
