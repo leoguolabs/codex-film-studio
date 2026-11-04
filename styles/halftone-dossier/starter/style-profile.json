@@ -1,0 +1,10 @@
+{
+  "id": "halftone-dossier",
+  "width": 1920,
+  "height": 1080,
+  "background": "#f4ecdd",
+  "ink": "#1d2340",
+  "accent": "#2e55d6",
+  "secondary": "#ff5a87",
+  "font": "Jost"
+}

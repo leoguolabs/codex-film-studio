@@ -8,7 +8,7 @@ import unittest
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
-from build_search import ROOT, build_search, site_base, metadata
+from build_search import ROOT, build_search, site_base, metadata, renderer_summary
 
 
 class Document(HTMLParser):
@@ -104,6 +104,32 @@ class SearchTests(unittest.TestCase):
                 self.assertIn('noindex',(out/'404.html').read_text())
                 self.assertIn("strings.mjs?v=test-revision",(out/'catalog/studio.mjs').read_text())
 
+    def test_renderer_heading_tracks_registered_capabilities(self):
+        entries = [{'capabilities': {'scene_renderer': True}},
+                   {'capabilities': {'scene_renderer': False}}]
+        catalog = {'styles': entries}
+        self.assertEqual(renderer_summary(catalog, 'zh'), '2 种风格，1 种提供场景渲染器')
+        self.assertEqual(renderer_summary(catalog, 'en'), '2 styles, 1 with scene renderers')
+        entries[1]['capabilities']['scene_renderer'] = True
+        self.assertEqual(renderer_summary(catalog, 'zh'), '2 种风格均提供场景渲染器')
+        self.assertEqual(renderer_summary(catalog, 'en'), 'All 2 styles include scene renderers')
+
+    def test_editable_demo_is_counted_as_an_executable_kit(self):
+        from update_style_index import production_kit_summary
+        from build_search import capability_overview
+
+        def entry(kind, renderer):
+            return {'template_kind': kind, 'name': 'Whiteboard', 'name_zh': '白板',
+                    'capabilities': {'project_creation': True, 'scene_renderer': renderer}}
+
+        catalog = {'styles': [entry('demo', True), entry('blank', True), entry('blank', False)]}
+        for lang, expected in [
+            ('zh', '2 个可执行制作包，其中 1 个附完整可编辑样片工程（白板）'),
+            ('en', '2 executable production kits, including 1 with a complete editable sample project (Whiteboard)'),
+        ]:
+            self.assertEqual(production_kit_summary(catalog, lang), expected)
+            self.assertIn(expected, Document(capability_overview(catalog, lang)).text)
+
     def test_shared_metadata_capabilities_and_case_evidence(self):
         strings=json.loads((ROOT/'catalog/strings.mjs').read_text().split('export default ',1)[1].strip().removesuffix(';'))
         template=Document((ROOT/'index.html').read_text())
@@ -121,6 +147,7 @@ class SearchTests(unittest.TestCase):
                 self.assertIn(strings[lang]['productDefinition'],' '.join(doc.text))
                 self.assertEqual(len(doc.attrs('dl',**{'class':'capability-facts'})),len(catalog['styles']))
                 self.assertEqual(len(doc.attrs('section',**{'class':'capability-overview'})),1)
+                self.assertIn(renderer_summary(catalog, lang), doc.text)
                 for style in catalog['styles']:
                     guide=Document((out/prefix/'styles'/style['id']/'index.html').read_text())
                     key='rendererIncluded' if style['capabilities']['scene_renderer'] else 'rendererAuthored'

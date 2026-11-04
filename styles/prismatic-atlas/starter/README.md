@@ -1,13 +1,15 @@
-# Empty Prismatic Atlas authoring project
+# Prismatic Atlas production
 
-Read STYLE.md and fill content/production.json with an original treatment and
-verified claims. lib/atlas.mjs supplies generic palette, projection, prism and
-frame-time helpers. lib/motion.mjs supplies generic parent/child transforms,
-arc-length path positions, blinks, bounded contact motion and a two-link
-attachment solver that preserves segment lengths. It contains no subject or narration and no finished scene.
+A `tiles` layer takes a pixel `unit` and a `cells` array. Each cell has grid
+`x`, `y`, a nonnegative `height`, optional `heightTo`, and face colours
+`top`, `left` and `right`. Heights use grid units. Cells draw back-to-front.
+A `prism` takes `radius`, `depth`, `squash`, `facetAngle` in radians, a
+`top` colour and a `sides` palette. Keep using `lib/motion.mjs` for parent
+transforms, arc-length paths and attachment constraints.
 
-Choose an implementation appropriate to the authored shots. Keep all assets,
-voice files, music, render outputs and review evidence within this independent
-project. Choose FPS after measuring the reference. For every action, use the same
-integer event frame in picture and audio. Deliver an editable project and MP4;
-copying this contract is only setup.
+In the independent project, run `npm ci` and `npm run doctor`. Fill
+`content/production.json` with your frame rate, duration, shots and audio
+(or set `silent: true`). Put the material layers inside each shot's `layers`
+array. Use `npm run preview` for a timed excerpt and `npm run build` for
+`media/film.mp4`. PRODUCTION.md documents the timeline, text, image and
+group layers. Extend `src/scene.mjs` for subject-specific drawings.

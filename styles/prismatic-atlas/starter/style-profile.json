@@ -1,0 +1,10 @@
+{
+  "id": "prismatic-atlas",
+  "width": 1920,
+  "height": 1080,
+  "background": "#100c46",
+  "ink": "#adf7e9",
+  "accent": "#39dcdf",
+  "secondary": "#f27460",
+  "font": "Jost"
+}

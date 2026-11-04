@@ -1,0 +1,10 @@
+{
+  "id": "hologram-hud",
+  "width": 1920,
+  "height": 1080,
+  "background": "#071920",
+  "ink": "#bdf9ff",
+  "accent": "#5ce2ef",
+  "secondary": "#ffbc63",
+  "font": "Share Tech Mono"
+}

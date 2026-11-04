@@ -46,17 +46,29 @@ def page_actions(entry, language='en'):
     return actions
 
 
-def render_summary(catalog, language):
-    entries = catalog['styles']
-    counts = {status: sum(e['status'] == status for e in entries)
-              for status in catalog['statuses']}
+def production_kit_summary(catalog, language):
+    kits = [entry for entry in catalog['styles'] if entry['capabilities']['project_creation']
+            and entry['capabilities']['scene_renderer']]
+    samples = [entry for entry in kits if entry['template_kind'] == 'demo']
     if language == 'zh':
-        return (f"**{len(entries)} 种风格** · {counts['demo-ready']} 种完整样片工程 · "
-                f"{counts.get('renderer-ready', 0)} 种可执行制作包 · "
-                f"{counts['starter-ready']} 种创作起步包 · {counts['toolkit-ready']} 种材质工具包")
-    return (f"**{len(entries)} styles** · {counts['demo-ready']} complete demo kit · "
-            f"{counts.get('renderer-ready', 0)} executable production kits · "
-            f"{counts['starter-ready']} authoring starters · {counts['toolkit-ready']} material toolkit")
+        summary = f'{len(kits)} 个可执行制作包'
+        if samples:
+            names = '、'.join(entry['name_zh'] for entry in samples)
+            summary += f'，其中 {len(samples)} 个附完整可编辑样片工程（{names}）'
+        return summary
+
+    noun = 'kit' if len(kits) == 1 else 'kits'
+    summary = f'{len(kits)} executable production {noun}'
+    if samples:
+        names = ', '.join(entry['name'] for entry in samples)
+        summary += f', including {len(samples)} with a complete editable sample project ({names})'
+    return summary
+
+
+def render_summary(catalog, language):
+    count = len(catalog['styles'])
+    label = '种风格' if language == 'zh' else 'styles'
+    return f'**{count} {label}** · {production_kit_summary(catalog, language)}'
 
 
 def render_gallery(catalog, language='en', prefix='', include_resource_links=True):

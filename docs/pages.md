@@ -402,8 +402,7 @@ interactive halftone-and-stamp study and a natural-language creation prompt.
 Film metadata stays in the checksum-pinned `halftone-dossier-preview-v1`
 Release bundle. The MP4 streams directly from the same Release, keeping the
 Pages artifact within its size budget. The catalog and both root READMEs link to the page and screening.
-The reusable package is an authoring starter; sample publication does not certify
-full subjective listening or exact equivalence to its reference.
+The reusable package includes screened ink and stamp rendering. The sample credits describe its review scope.
 
 ## Prismatic Atlas
 
@@ -419,8 +418,7 @@ English transcript and credits. The original MP4 is published without transcodin
 its byte count and SHA-256 hash are recorded under `external_media`.
 All Styles (including Animation), both root README galleries, the style index,
 bilingual search guides and the sitemap resolve through the registry entry.
-The reusable package remains a generic toolkit; film content stays in Release
-assets and the independent production.
+The package includes isometric tile and prism rendering. Film content stays in Release assets and the independent production.
 
 ## Sci-fi Hologram HUD
 
@@ -434,8 +432,7 @@ poster and credits; the MP4 is an external Release asset and is not duplicated
 inside the Pages size budget. The page includes a finite, silent optical-module
 study with scan, lock and reveal controls, plus the shared prompt entry.
 
-The catalog and bilingual README link to the page. The reusable package is an
-authoring starter; its public film does not imply a released source renderer.
+The catalog and bilingual README link to the page. The reusable package includes wireframe and scan rendering for authored geometry.
 Font files and OFL notices are explicitly included in `landing.assets`.
 
 ## Search content ownership and validation

@@ -68,7 +68,7 @@ frame coverage, sampled visual review, motion playback and actual listening.
 Different story content makes a pixel-equality score unsuitable as proof of
 style matching. Publishing a sample does not certify equivalence to a reference.
 
-The starter is an empty authoring contract, not a reusable story renderer.
+The starter includes a scene renderer for screened polygons and frame-timed stamps.
 Author the composition for each subject. Keep production scripts, media,
 provider jobs and review records in the external project.
 

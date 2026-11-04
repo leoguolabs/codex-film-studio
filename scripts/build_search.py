@@ -8,6 +8,8 @@ import subprocess
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
+from update_style_index import production_kit_summary
+
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_ORIGIN = 'https://visiontrail.github.io'
 REPO = 'https://github.com/visiontrail/codex-film-studio'
@@ -153,16 +155,23 @@ def capability_facts(style, strings):
     return '<dl class="capability-facts">' + ''.join(f'<div><dt>{escape(strings[k])}</dt><dd>{escape(strings[v])}</dd></div>' for k, v in rows) + '</dl>'
 
 
-def capability_overview(catalog, lang, strings):
-    counts = {key: sum(s['status'] == key for s in catalog['styles']) for key in catalog['statuses']}
-    renderers = sum(s['capabilities']['scene_renderer'] for s in catalog['styles'])
-    summary = ' · '.join(f'{counts[key]} {escape(strings["demoKit"] if key == "demo-ready" else loc(value, "name", lang))}' for key, value in catalog['statuses'].items())
+def renderer_summary(catalog, lang):
+    total = len(catalog['styles'])
+    included = sum(s['capabilities']['scene_renderer'] for s in catalog['styles'])
     if lang == 'zh':
-        title = f"{len(catalog['styles'])} 种风格，{renderers} 种提供场景渲染器"
+        return (f'{total} 种风格均提供场景渲染器' if included == total
+                else f'{total} 种风格，{included} 种提供场景渲染器')
+    return (f'All {total} styles include scene renderers' if included == total
+            else f'{total} styles, {included} with scene renderers')
+
+
+def capability_overview(catalog, lang):
+    title = renderer_summary(catalog, lang)
+    summary = escape(production_kit_summary(catalog, lang))
+    if lang == 'zh':
         note = '制作包状态描述可复用工具。新题材仍需创作场景；公开样片、本地原工程与完整重建验证分别记录。'
         link = '比较原工程获取与重建范围'
     else:
-        title = f"{len(catalog['styles'])} styles, {renderers} with scene renderers"
         note = 'Readiness describes reusable tools. New subjects still need authored scenes. Public films, local source bundles and full rebuild verification are separate.'
         link = 'Compare source access and rebuild scope'
     return f'<section class="capability-overview" aria-labelledby="capability-title"><h3 id="capability-title">{title}</h3><p>{summary}</p><p>{note} <a href="{REPO}/blob/main/styles/README.md#capabilities--能力与网页">{link} →</a></p></section>'
@@ -302,7 +311,7 @@ def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-
         page = re.sub(r'<button type="button" data-language="(en|zh)"[^>]*>(.*?)</button>', lambda m:f'<a data-language="{m[1]}" href="{base + ("zh/" if m[1]=="zh" else "")}" lang="{"zh-CN" if m[1]=="zh" else "en"}" hreflang="{"zh-CN" if m[1]=="zh" else "en"}"'+(' aria-current="page"' if m[1]==lang else '')+f'>{m[2]}</a>',page)
         page = re.sub(r'(<div class="style-grid" id="style-grid"[^>]*>).*?(</div>)', lambda m:m[1]+static_cards(catalog,base,lang,strings[lang])+m[2],page,flags=re.S)
         page = re.sub(r'(<span id="collection-range">).*?(</span>)',rf'\g<1>01 — {len(catalog["styles"]):02}\2',page)
-        page = page.replace('<div class="collection-note">', capability_overview(catalog,lang,strings[lang])+'<div class="collection-note">')
+        page = page.replace('<div class="collection-note">', capability_overview(catalog,lang)+'<div class="collection-note">')
         page = page.replace('</main>',home_answers(lang,date,catalog,base)+'</main>')
         page = page.replace('href="sitemap.xml"', f'href="{base}sitemap.xml"')
         page = re.sub(r'<noscript>.*?</noscript>', '<noscript><p class="noscript">'+('风格指南可直接阅读；搜索、筛选与详情弹窗需要 JavaScript。' if lang=='zh' else 'Read all style guides without JavaScript. Search, filters and detail dialogs use JavaScript.')+'</p></noscript>',page,flags=re.S)

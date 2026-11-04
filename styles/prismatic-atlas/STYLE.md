@@ -194,7 +194,7 @@ certify aesthetic equality. Track viewed frames, sequential motion review,
 listening and technical delivery checks separately. Fix observed differences in
 geometry, staging, timing and mix before producing another full export.
 
-This is an authoring toolkit. A separately published film demonstrates one
+The renderer supports isometric tiles and faceted prisms. A separately published film demonstrates one
 production; it does not certify exact style equality or supply scenes for a new
 subject.
 See [provenance](PROVENANCE.md).

@@ -1,0 +1,10 @@
+{
+  "id": "luminous-worlds",
+  "width": 1920,
+  "height": 1080,
+  "background": "#18254b",
+  "ink": "#ebffd7",
+  "accent": "#39dcd0",
+  "secondary": "#ffb851",
+  "font": "Jost"
+}

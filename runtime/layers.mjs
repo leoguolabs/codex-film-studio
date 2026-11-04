@@ -36,3 +36,22 @@ export function proofLayers(state) {
     motion:{from:[w*.12,h*.22],to:[w*.22,h*.22]}},
     {type:'shape',points:[[w*.52,h*.25],[w*.79,h*.33],[w*.72,h*.67],[w*.5,h*.55]],fill:state.profile.secondary,stroke:state.profile.ink}];
 }
+
+// A diagnostic composition uses a 640 × 360 drawing space. Authored shots
+// keep their own coordinates and layer order, including nested transforms.
+export function studyLayers(plan, study) {
+  const scale = Math.min(plan.width / 640, plan.height / 360);
+  return [{type: 'group', scale, x: (plan.width - 640 * scale) / 2,
+    y: (plan.height - 360 * scale) / 2, layers: study()}];
+}
+
+export function renderMaterialLayers(context, state, study, drawMaterial) {
+  const shot = state.shot.proof ? {...state.shot, layers: studyLayers(state.plan, study)} : state.shot;
+  return layers(context, {...state, shot}, (ctx, layer) => {
+    if (layer.type === 'shape') {
+      polygon(ctx, layer.points, layer.fill ?? state.profile.accent, layer.stroke ?? null, layer.width ?? 2);
+    } else {
+      drawMaterial(ctx, layer, state);
+    }
+  });
+}

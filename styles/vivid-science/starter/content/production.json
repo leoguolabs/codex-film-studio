@@ -10,5 +10,10 @@
   "shots": [],
   "events": [],
   "narration": [],
-  "reference": null
+  "reference": null,
+  "schema_version": 1,
+  "silent": false,
+  "assets": [],
+  "audio": [],
+  "captions": []
 }

@@ -1,1 +1,23 @@
-{"name":"vivid-science-material-toolkit","version":"1.0.0","private":true,"type":"module","scripts":{"proof":"node scripts/proof.mjs"},"dependencies":{"@napi-rs/canvas":"1.0.13"}}
+{
+  "name": "vivid-science-production",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node scripts/render.mjs",
+    "proof": "node scripts/proof.mjs",
+    "build": "python3 tools/runtime/build.py",
+    "preview": "python3 tools/runtime/build.py --preview",
+    "doctor": "python3 tools/runtime/build.py --doctor",
+    "serve": "python3 tools/runtime/serve.py",
+    "check": "python3 tools/runtime/build.py --check",
+    "verify": "python3 tools/runtime/verify.py",
+    "proof:video": "python3 tools/runtime/build.py --proof"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "1.0.13"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

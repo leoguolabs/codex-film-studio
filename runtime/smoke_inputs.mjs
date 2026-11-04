@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createCanvas} from '@napi-rs/canvas';
+import {studyLayers} from './layers.mjs';
 import {ROOT,hash} from './render.mjs';
 const file=path.join(ROOT,'content/production.json');
 if(JSON.parse(fs.readFileSync(file)).shots.length)throw Error('Smoke inputs require an empty timeline');
@@ -21,6 +22,10 @@ if(['scifi-sitcom','midcentury-cartoon'].includes(id)){
  const polygon=(points,fill)=>({type:'shape',points,fill,stroke:profile.ink,width:3});
  const puppet=x=>({type:'group',x,y:105,layers:[polygon([[-25,65],[25,65],[35,145],[-35,145]],profile.accent),polygon([[-30,0],[30,0],[35,50],[0,62],[-35,45]],profile.secondary),polygon([[-19,19],[-7,19],[-7,30],[-19,30]],'#fff'),polygon([[7,19],[19,19],[19,30],[7,30]],'#fff'),polygon([[-15,23],[-11,23],[-11,28],[-15,28]],profile.ink),polygon([[11,23],[15,23],[15,28],[11,28]],profile.ink),polygon([[-12,43],[12,43],[8,48],[-8,48]],profile.ink),{type:'group',x:22,y:76,motion:{rotation:[-.6,.8],holdFrames:id==='midcentury-cartoon'?2:1},layers:[polygon([[0,0],[65,-7],[68,5],[0,12]],profile.accent)]}]});
  shots=[{...base,layers:[puppet(210),puppet(430)]}];
+}
+if (['halftone-dossier', 'hologram-hud', 'prismatic-atlas', 'luminous-worlds', 'vivid-science'].includes(id)) {
+  const {materialStudy} = await import(new URL('../../lib/scene.mjs', import.meta.url));
+  shots = [{...base, layers: studyLayers({width: w, height: h}, materialStudy)}];
 }
 if(id==='crayon-book'){
  const page=createCanvas(w,h),g=page.getContext('2d');

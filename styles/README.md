@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**18 styles** · 1 complete demo kit · 12 executable production kits · 2 authoring starters · 3 material toolkit
+**18 styles** · 18 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -168,7 +168,7 @@ Ask your Agent to open local showcases and check their retained project files.
 <h3>Halftone Dossier</h3>
 <sub>复古半调案卷</sub>
 <p>Warm archive paper, spot-ink dots, offset headlines and physical stamps turn a story into a trail of exhibits.</p>
-<p><b>Authoring starter</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 <sub><a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en">Style page</a> · <a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening">English-narrated sample film</a> · <a href="../styles/halftone-dossier/STYLE.md">Style guide</a> · <a href="../styles/halftone-dossier/prompt.txt">Prompt</a> · <a href="../styles/halftone-dossier/starter">Project files</a></sub>
 </td>
 </tr>
@@ -179,7 +179,7 @@ Ask your Agent to open local showcases and check their retained project files.
 <h3>Prismatic Atlas</h3>
 <sub>棱彩图谱</sub>
 <p>Saturated vector worlds, inhabited isometric scenes and clear mechanisms connected by purposeful changes of scale.</p>
-<p><b>Material toolkit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 <sub><a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en">Style page</a> · <a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening">English-narrated sample film</a> · <a href="../styles/prismatic-atlas/STYLE.md">Style guide</a> · <a href="../styles/prismatic-atlas/prompt.txt">Prompt</a> · <a href="../styles/prismatic-atlas/starter">Project files</a></sub>
 </td>
 </tr>
@@ -190,7 +190,7 @@ Ask your Agent to open local showcases and check their retained project files.
 <h3>Sci-fi Hologram HUD</h3>
 <sub>科幻全息 HUD</sub>
 <p>Luminous wireframes, scanning planes, target locks and local exploded views reveal how an object works.</p>
-<p><b>Authoring starter</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 <sub><a href="https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en">Style page</a> · <a href="https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening">English-narrated V60 film</a> · <a href="../styles/hologram-hud/STYLE.md">Style guide</a> · <a href="../styles/hologram-hud/prompt.txt">Prompt</a> · <a href="../styles/hologram-hud/starter">Project files</a></sub>
 </td>
 </tr>
@@ -201,7 +201,7 @@ Ask your Agent to open local showcases and check their retained project files.
 <h3>Luminous Worlds</h3>
 <sub>明彩世界</sub>
 <p>Layered illustrated worlds, crisp animated subjects and luminous mechanisms, with role-based every-frame diagnostics.</p>
-<p><b>Material toolkit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 <sub><a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en">Style page</a> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening">Finished film</a> · <a href="../styles/luminous-worlds/STYLE.md">Style guide</a> · <a href="../styles/luminous-worlds/prompt.txt">Prompt</a> · <a href="../styles/luminous-worlds/starter">Project files</a></sub>
 </td>
 </tr>
@@ -212,7 +212,7 @@ Ask your Agent to open local showcases and check their retained project files.
 <h3>Vivid Science</h3>
 <sub>鲜彩科学动画</sub>
 <p>Expressive vector characters, saturated colour worlds and scale-changing science explanations.</p>
-<p><b>Material toolkit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 <sub><a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en">Style page</a> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening">Finished film</a> · <a href="../styles/vivid-science/STYLE.md">Style guide</a> · <a href="../styles/vivid-science/prompt.txt">Prompt</a> · <a href="../styles/vivid-science/starter">Project files</a></sub>
 </td>
 </tr>
@@ -235,11 +235,11 @@ Ask your Agent to open local showcases and check their retained project files.
 | [点云测绘 / LiDAR Survey](lidar-survey/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html?lang=en) · [Finished films](https://visiontrail.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html?lang=en#films) | `local-source-bundle` | `clip` |
 | [复古新闻片 / Newsreel](newsreel/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/newsreel/showcase/index.html?lang=en) · [Newsreel · Two complete films](https://visiontrail.github.io/codex-film-studio/styles/newsreel/showcase/index.html?lang=en#screening) | `local-source-bundle` | `clip` |
 | [爆炸拆解 / Exploded Teardown](exploded-teardown/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/exploded-teardown/showcase/index.html?lang=en) · [Two complete films](https://visiontrail.github.io/codex-film-studio/styles/exploded-teardown/showcase/index.html?lang=en#screening) | `local-source-bundle` | `clip` |
-| [复古半调案卷 / Halftone Dossier](halftone-dossier/README.md) | `starter-ready` | Author per project / 需按选题编写 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en) · [English-narrated sample film](https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening) | `not-audited` | `not-yet-revalidated` |
-| [棱彩图谱 / Prismatic Atlas](prismatic-atlas/README.md) | `toolkit-ready` | Author per project / 需按选题编写 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en) · [English-narrated sample film](https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
-| [科幻全息 HUD / Sci-fi Hologram HUD](hologram-hud/README.md) | `starter-ready` | Author per project / 需按选题编写 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en) · [English-narrated V60 film](https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
-| [明彩世界 / Luminous Worlds](luminous-worlds/README.md) | `toolkit-ready` | Author per project / 需按选题编写 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en) · [Finished film](https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening) | `unavailable` | `not-yet-revalidated` |
-| [鲜彩科学动画 / Vivid Science](vivid-science/README.md) | `toolkit-ready` | Author per project / 需按选题编写 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en) · [Finished film](https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening) | `unavailable` | `not-yet-revalidated` |
+| [复古半调案卷 / Halftone Dossier](halftone-dossier/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en) · [English-narrated sample film](https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening) | `not-audited` | `not-yet-revalidated` |
+| [棱彩图谱 / Prismatic Atlas](prismatic-atlas/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en) · [English-narrated sample film](https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
+| [科幻全息 HUD / Sci-fi Hologram HUD](hologram-hud/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en) · [English-narrated V60 film](https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
+| [明彩世界 / Luminous Worlds](luminous-worlds/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en) · [Finished film](https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening) | `unavailable` | `not-yet-revalidated` |
+| [鲜彩科学动画 / Vivid Science](vivid-science/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en) · [Finished film](https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening) | `unavailable` | `not-yet-revalidated` |
 
 ## What is complete / 已完成什么
 
@@ -256,11 +256,11 @@ Ask your Agent to open local showcases and check their retained project files.
 - **lidar-survey** — 已含锁定依赖、授权字体、风格材质渲染、帧时间轴、混音与交付检查；新主题仍需创作场景。 Pinned runtime, licensed fonts, style material renderer, frame timeline, audio mix and delivery checks; author new story scenes.
 - **newsreel** — 已含锁定依赖、授权字体、风格材质渲染、帧时间轴、混音与交付检查；新主题仍需创作场景。 Pinned runtime, licensed fonts, style material renderer, frame timeline, audio mix and delivery checks; author new story scenes.
 - **exploded-teardown** — 已有可执行 Three.js 装配渲染、PBR 材质、错峰拆解、相机与标注；新题材仍需创作几何和时间轴。原工程包目前仅在本地，两部原片均已重建 30–34 秒片段，整片尚未验收。 Executable Three.js assembly renderer with PBR materials, staggered separation, camera and labels; new subjects still require authored geometry and timing. Original source bundles remain local; both original 30–34 s clips are rebuilt; full videos are not yet verified.
-- **halftone-dossier** — 包含视觉说明、创作提示词与空白输入；新影片需创作画稿、场景与声音，公开样片单独发布。 Visual guide, creative prompt and empty authoring inputs; a new film needs authored artwork, scenes and sound. The published sample is separate.
-- **prismatic-atlas** — 包含原创视觉说明、通用几何与帧时间工具及空白输入。另有完整英文影片公开展示；新故事需独立创作场景与声音。 Original visual guide, generic geometry and frame-time helpers, and empty production inputs. A complete English film is published separately; author scenes and sound for each new story.
-- **hologram-hud** — 包含视觉说明、创作提示词与空白输入。新主题需创作几何模型、场景与声音；已验收影片单独发布。 Visual guide, creative prompt and empty authoring inputs. Author geometry, scenes and sound for a new subject. The accepted film is published separately.
-- **luminous-worlds** — 含视觉方法、几何与时序工具、空白输入契约、全帧诊断与已发布英文成片。新的场景和声音需要另行创作。 Visual method, geometry and timing helpers, an empty production contract and full-frame diagnostics, plus a published English film. New scenes and sound require authoring.
-- **vivid-science** — 含原创视觉方法、通用绘制原语、抽象材质验证和全帧比对工具；故事场景与声音仍需创作，不附实例内容。 Original visual grammar, generic material primitives, abstract proof and every-frame comparison tools; story scenes and audio must be authored. No example content is bundled.
+- **halftone-dossier** — 可绘制专色网点图形，按指定帧落印。每部新片需编排图层与声音。 Screened spot-ink polygons and frame-timed stamp impressions. Author the layers and soundtrack for each film.
+- **prismatic-atlas** — 可渲染有遮挡顺序的等距色块、高度变化与切面棱柱。每部新片需编排图层与声音。 Depth-ordered isometric tiles, animated heights and faceted prisms. Author the layers and soundtrack for each film.
+- **hologram-hud** — 可渲染线框模型、扫描光带与投影环。每部新片需编排图层与声音。 Projected mesh edges, scanning bands and projector rings. Author the layers and soundtrack for each film.
+- **luminous-worlds** — 可渲染分层插画与沿曲线路径运动的发光标记。每部新片需编排图层与声音。 Layered illustration fields and luminous markers following cubic paths. Author the layers and soundtrack for each film.
+- **vivid-science** — 可渲染带彩色阴影的矢量形体和可变形的渐细曲带。每部新片需编排图层与声音。 Shaded vector bodies and tapered ribbons with interpolated poses. Author the layers and soundtrack for each film.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

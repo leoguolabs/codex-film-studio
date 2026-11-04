@@ -5,10 +5,7 @@ a sequence of exhibits. Explore the [independent style page](https://visiontrail
 including a complete English-narrated sample, visual grammar and an interactive
 print study. Page explanations support English and Chinese; the film stays English.
 
-Status: **starter-ready**. This package includes a [style guide](STYLE.md),
-[prompt](prompt.txt) and [empty input contract](starter/content/production.json).
-It does not include a general scene renderer or the sample's editable production.
-The sample is a separate publication, with review limits recorded in its credits.
+Status: **renderer-ready**. The scene renderer draws screened spot-ink shapes and timed stamp impressions. Use the [blank timeline](starter/content/production.json) and [layer guide](starter/README.md) to compose a new subject. The sample credits document the published film's review scope.
 
 Open the studio in your coding Agent and ask:
 

@@ -12,7 +12,7 @@ isometric volumes, clear mechanisms and purposeful changes of scale.
 - [Full-frame scanning tool](starter/tools/README.md)
 - [Provenance](PROVENANCE.md)
 
-Authoring toolkit. The library contains no production narration, subject-specific
+Status: **renderer-ready**. The [scene renderer](starter/lib/scene.mjs) draws isometric tile arrays and faceted prisms. The library contains no production narration, subject-specific
 scene code, films, provider jobs or acceptance records. Each film is an independent
 external project. The helpers do not create a finished story automatically.
 

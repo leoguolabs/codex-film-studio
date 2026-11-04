@@ -43,7 +43,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**18 styles** · 1 complete demo kit · 12 executable production kits · 2 authoring starters · 3 material toolkit
+**18 styles** · 18 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -189,7 +189,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <h3>Halftone Dossier</h3>
 <sub>复古半调案卷</sub>
 <p>Warm archive paper, spot-ink dots, offset headlines and physical stamps turn a story into a trail of exhibits.</p>
-<p><b>Authoring starter</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 <tr>
@@ -199,7 +199,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <h3>Prismatic Atlas</h3>
 <sub>棱彩图谱</sub>
 <p>Saturated vector worlds, inhabited isometric scenes and clear mechanisms connected by purposeful changes of scale.</p>
-<p><b>Material toolkit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 <tr>
@@ -209,7 +209,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <h3>Sci-fi Hologram HUD</h3>
 <sub>科幻全息 HUD</sub>
 <p>Luminous wireframes, scanning planes, target locks and local exploded views reveal how an object works.</p>
-<p><b>Authoring starter</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 <tr>
@@ -219,7 +219,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <h3>Luminous Worlds</h3>
 <sub>明彩世界</sub>
 <p>Layered illustrated worlds, crisp animated subjects and luminous mechanisms, with role-based every-frame diagnostics.</p>
-<p><b>Material toolkit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <h3>Vivid Science</h3>
 <sub>鲜彩科学动画</sub>
 <p>Expressive vector characters, saturated colour worlds and scale-changing science explanations.</p>
-<p><b>Material toolkit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<p><b>Executable production kit</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

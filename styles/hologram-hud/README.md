@@ -8,10 +8,7 @@ for the complete English sample, chapter navigation, a visual grammar study,
 production notes and a prompt-first creation entry. The page supports English
 and Chinese; the film remains English.
 
-Status: **starter-ready**. The package contains a [visual guide](STYLE.md),
-[creative prompt](prompt.txt) and [blank production inputs](starter/content/production.json).
-Author the new subject's geometry, scene renderer and sound in an independent
-project. The published sample is not a general renderer or a released source kit.
+Status: **renderer-ready**. The scene renderer projects authored mesh edges with depth, orbit and a scan band. Use the [layer guide](starter/README.md) to compose the new object's geometry and sound in an independent project.
 
 > Use hologram-hud to make a [duration] film about [subject] for [audience].
 > Use [language] narration and captions. Handle project setup, geometry, scene

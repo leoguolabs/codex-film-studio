@@ -43,7 +43,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**18 种风格** · 1 种完整样片工程 · 12 种可执行制作包 · 2 种创作起步包 · 3 种材质工具包
+**18 种风格** · 18 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -189,7 +189,7 @@ codex plugin add codex-film-studio@visiontrail
 <h3>复古半调案卷</h3>
 <sub>Halftone Dossier</sub>
 <p>暖色档案纸、专色网点、错版大字和实体印章，把故事编成一条证据链。</p>
-<p><b>创作起步包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+<p><b>可执行制作包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 <tr>
@@ -199,7 +199,7 @@ codex plugin add codex-film-studio@visiontrail
 <h3>棱彩图谱</h3>
 <sub>Prismatic Atlas</sub>
 <p>以高饱和矢量世界、等距场景与清晰机制图，通过有意义的尺度变化解释科学。</p>
-<p><b>材质工具包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+<p><b>可执行制作包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 <tr>
@@ -209,7 +209,7 @@ codex plugin add codex-film-studio@visiontrail
 <h3>科幻全息 HUD</h3>
 <sub>Sci-fi Hologram HUD</sub>
 <p>发光线框、扫描平面、目标锁定与局部拆解，逐步揭示物体如何运作。</p>
-<p><b>创作起步包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+<p><b>可执行制作包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 <tr>
@@ -219,7 +219,7 @@ codex plugin add codex-film-studio@visiontrail
 <h3>明彩世界</h3>
 <sub>Luminous Worlds</sub>
 <p>分层插画世界、清晰角色动作与明亮机制图，配套按视觉功能逐帧比对的工具。</p>
-<p><b>材质工具包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+<p><b>可执行制作包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ codex plugin add codex-film-studio@visiontrail
 <h3>鲜彩科学动画</h3>
 <sub>Vivid Science</sub>
 <p>鲜明的矢量角色、饱和色彩世界与跨尺度科学叙事。</p>
-<p><b>材质工具包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+<p><b>可执行制作包</b> · <a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

@@ -831,9 +831,9 @@
       "name_zh": "复古半调案卷",
       "description": "Warm archive paper, spot-ink dots, offset headlines and physical stamps turn a story into a trail of exhibits.",
       "description_zh": "暖色档案纸、专色网点、错版大字和实体印章，把故事编成一条证据链。",
-      "status": "starter-ready",
-      "status_note": "Visual guide, creative prompt and empty authoring inputs; a new film needs authored artwork, scenes and sound. The published sample is separate.",
-      "status_note_zh": "包含视觉说明、创作提示词与空白输入；新影片需创作画稿、场景与声音，公开样片单独发布。",
+      "status": "renderer-ready",
+      "status_note": "Screened spot-ink polygons and frame-timed stamp impressions. Author the layers and soundtrack for each film.",
+      "status_note_zh": "可绘制专色网点图形，按指定帧落印。每部新片需编排图层与声音。",
       "guide": "styles/halftone-dossier/STYLE.md",
       "readme": "styles/halftone-dossier/README.md",
       "prompt": "styles/halftone-dossier/prompt.txt",
@@ -841,12 +841,16 @@
       "template_kind": "blank",
       "capabilities": {
         "project_creation": true,
-        "scene_renderer": false,
+        "scene_renderer": true,
         "published_demo": false,
         "published_film": true,
         "original_source": "not-audited",
         "sample_rebuild": "not-yet-revalidated",
-        "new_film_scope": "authored-scenes"
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": true
       },
       "showcases": [
         {
@@ -881,9 +885,9 @@
       "name_zh": "棱彩图谱",
       "description": "Saturated vector worlds, inhabited isometric scenes and clear mechanisms connected by purposeful changes of scale.",
       "description_zh": "以高饱和矢量世界、等距场景与清晰机制图，通过有意义的尺度变化解释科学。",
-      "status": "toolkit-ready",
-      "status_note": "Original visual guide, generic geometry and frame-time helpers, and empty production inputs. A complete English film is published separately; author scenes and sound for each new story.",
-      "status_note_zh": "包含原创视觉说明、通用几何与帧时间工具及空白输入。另有完整英文影片公开展示；新故事需独立创作场景与声音。",
+      "status": "renderer-ready",
+      "status_note": "Depth-ordered isometric tiles, animated heights and faceted prisms. Author the layers and soundtrack for each film.",
+      "status_note_zh": "可渲染有遮挡顺序的等距色块、高度变化与切面棱柱。每部新片需编排图层与声音。",
       "guide": "styles/prismatic-atlas/STYLE.md",
       "readme": "styles/prismatic-atlas/README.md",
       "prompt": "styles/prismatic-atlas/prompt.txt",
@@ -891,12 +895,16 @@
       "template_kind": "blank",
       "capabilities": {
         "project_creation": true,
-        "scene_renderer": false,
+        "scene_renderer": true,
         "published_demo": false,
         "published_film": true,
         "original_source": "local-source-bundle",
         "sample_rebuild": "not-yet-revalidated",
-        "new_film_scope": "style-tools-and-authored-scenes"
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": true
       },
       "showcases": [
         {
@@ -932,9 +940,9 @@
       "name_zh": "科幻全息 HUD",
       "description": "Luminous wireframes, scanning planes, target locks and local exploded views reveal how an object works.",
       "description_zh": "发光线框、扫描平面、目标锁定与局部拆解，逐步揭示物体如何运作。",
-      "status": "starter-ready",
-      "status_note": "Visual guide, creative prompt and empty authoring inputs. Author geometry, scenes and sound for a new subject. The accepted film is published separately.",
-      "status_note_zh": "包含视觉说明、创作提示词与空白输入。新主题需创作几何模型、场景与声音；已验收影片单独发布。",
+      "status": "renderer-ready",
+      "status_note": "Projected mesh edges, scanning bands and projector rings. Author the layers and soundtrack for each film.",
+      "status_note_zh": "可渲染线框模型、扫描光带与投影环。每部新片需编排图层与声音。",
       "guide": "styles/hologram-hud/STYLE.md",
       "readme": "styles/hologram-hud/README.md",
       "prompt": "styles/hologram-hud/prompt.txt",
@@ -942,12 +950,16 @@
       "template_kind": "blank",
       "capabilities": {
         "project_creation": true,
-        "scene_renderer": false,
+        "scene_renderer": true,
         "published_demo": false,
         "published_film": true,
         "original_source": "local-source-bundle",
         "sample_rebuild": "not-yet-revalidated",
-        "new_film_scope": "authored-scenes"
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": true
       },
       "showcases": [
         {
@@ -987,9 +999,9 @@
       "name_zh": "明彩世界",
       "description": "Layered illustrated worlds, crisp animated subjects and luminous mechanisms, with role-based every-frame diagnostics.",
       "description_zh": "分层插画世界、清晰角色动作与明亮机制图，配套按视觉功能逐帧比对的工具。",
-      "status": "toolkit-ready",
-      "status_note": "Visual method, geometry and timing helpers, an empty production contract and full-frame diagnostics, plus a published English film. New scenes and sound require authoring.",
-      "status_note_zh": "含视觉方法、几何与时序工具、空白输入契约、全帧诊断与已发布英文成片。新的场景和声音需要另行创作。",
+      "status": "renderer-ready",
+      "status_note": "Layered illustration fields and luminous markers following cubic paths. Author the layers and soundtrack for each film.",
+      "status_note_zh": "可渲染分层插画与沿曲线路径运动的发光标记。每部新片需编排图层与声音。",
       "guide": "styles/luminous-worlds/STYLE.md",
       "readme": "styles/luminous-worlds/README.md",
       "prompt": "styles/luminous-worlds/prompt.txt",
@@ -997,12 +1009,16 @@
       "template_kind": "blank",
       "capabilities": {
         "project_creation": true,
-        "scene_renderer": false,
+        "scene_renderer": true,
         "published_demo": false,
         "published_film": true,
         "original_source": "unavailable",
         "sample_rebuild": "not-yet-revalidated",
-        "new_film_scope": "hybrid-material-tools-and-authored-scenes"
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": true
       },
       "showcases": [
         {
@@ -1040,9 +1056,9 @@
       "name_zh": "鲜彩科学动画",
       "description": "Expressive vector characters, saturated colour worlds and scale-changing science explanations.",
       "description_zh": "鲜明的矢量角色、饱和色彩世界与跨尺度科学叙事。",
-      "status": "toolkit-ready",
-      "status_note": "Original visual grammar, generic material primitives, abstract proof and every-frame comparison tools; story scenes and audio must be authored. No example content is bundled.",
-      "status_note_zh": "含原创视觉方法、通用绘制原语、抽象材质验证和全帧比对工具；故事场景与声音仍需创作，不附实例内容。",
+      "status": "renderer-ready",
+      "status_note": "Shaded vector bodies and tapered ribbons with interpolated poses. Author the layers and soundtrack for each film.",
+      "status_note_zh": "可渲染带彩色阴影的矢量形体和可变形的渐细曲带。每部新片需编排图层与声音。",
       "guide": "styles/vivid-science/STYLE.md",
       "readme": "styles/vivid-science/README.md",
       "prompt": "styles/vivid-science/prompt.txt",
@@ -1050,17 +1066,17 @@
       "template_kind": "blank",
       "capabilities": {
         "project_creation": true,
-        "scene_renderer": false,
+        "scene_renderer": true,
         "published_demo": false,
         "material_proof": true,
         "locked_dependencies": true,
         "bundled_fonts": true,
-        "audio_mix": false,
+        "audio_mix": true,
         "source_bundle_restore": false,
         "published_film": true,
         "original_source": "unavailable",
         "sample_rebuild": "not-yet-revalidated",
-        "new_film_scope": "material-tools-and-authored-scenes"
+        "new_film_scope": "style-tools-and-authored-scenes"
       },
       "showcases": [
         {

@@ -59,6 +59,6 @@ Inspect line separation at delivery resolution, callout anchors, subtitle safe
 areas, opening and closing assemblies, transitions and final audio. Frame metrics
 and contact sheets describe their own scope; they do not prove perceptual identity.
 
-This package supplies a visual guide and blank authoring inputs. The published
+This package supplies a mesh renderer, a visual guide and blank authoring inputs. The published
 film is separate from the reusable package. The sample's retained source and
 assembly require separate access for exact replay. See [provenance](PROVENANCE.md).

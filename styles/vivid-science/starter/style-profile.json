@@ -1,0 +1,10 @@
+{
+  "id": "vivid-science",
+  "width": 1920,
+  "height": 1080,
+  "background": "#180d49",
+  "ink": "#fff5cf",
+  "accent": "#4bdcc7",
+  "secondary": "#fa6558",
+  "font": "Nunito"
+}

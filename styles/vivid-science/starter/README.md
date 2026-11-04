@@ -1,13 +1,20 @@
 # Independent vector-science production
 
-Read STYLE.md and METHOD.md before authoring. Fill `content/production.json` with
-your own topic, sources, cast, shots and events. Generate speech before final
-shot timings. Keep narration audio and the complete editable source here.
+A `body` takes positive ellipse radii `rx`, `ry` and material colours
+`fill`, `shadow`, `highlight`. A `ribbon` takes four local Bézier control
+`points`, a `fill` and half-widths `rootWidth` and `tipWidth`. Optionally
+set four `pointsTo` to deform it through the shot. Draw the ribbon before
+its host body to tuck its root underneath.
 
-`npm ci && npm run proof` renders an abstract material diagnostic, not a story or
-finished sample. `lib/vector.mjs` supplies a few generic drawing and timing
-primitives. Author the actual scene renderer yourself; this toolkit does not
-include a ready-made composition, a voice provider or a finished-film builder.
+The existing `npm run proof` command creates the abstract material still.
+Use `npm run proof:video` for the animated diagnostic.
+
+In the independent project, run `npm ci` and `npm run doctor`. Fill
+`content/production.json` with your frame rate, duration, shots and audio
+(or set `silent: true`). Put the material layers inside each shot's `layers`
+array. Use `npm run preview` for a timed excerpt and `npm run build` for
+`media/film.mp4`. PRODUCTION.md documents the timeline, text, image and
+group layers. Extend `src/scene.mjs` for subject-specific drawings.
 
 Install `requirements.txt` into a private Python environment for the generic
 analysis tools. Invoke `python tools/scan_frames.py VIDEO OUTPUT_DIRECTORY` to

@@ -318,7 +318,7 @@ If another task is using ffmpeg, wait before starting another ffmpeg command.
 
 ## Package scope
 
-This is a reusable material and analysis toolkit with empty production inputs.
+The package includes a vector scene renderer, analysis tools and an empty timeline.
 It contains no film, narration, claims, scene composition or review record from
 a commissioned example. Author each new film in an external working directory.
 See [README](README.md) and [provenance](PROVENANCE.md).

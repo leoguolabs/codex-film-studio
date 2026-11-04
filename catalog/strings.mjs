@@ -70,8 +70,7 @@ export default {
     "rebuildClip": "Excerpt only",
     "rebuildFull": "Full film (recorded scope)",
     "rebuildUnvalidated": "Not revalidated",
-    "rebuildUnknown": "Not documented",
-    "demoKit": "Complete demo kit"
+    "rebuildUnknown": "Not documented"
   },
   "zh": {
     "skip": "跳转到风格片库",
@@ -143,7 +142,6 @@ export default {
     "rebuildClip": "仅片段",
     "rebuildFull": "整片（以记录范围为准）",
     "rebuildUnvalidated": "尚未重新验证",
-    "rebuildUnknown": "尚无记录",
-    "demoKit": "完整样片工程"
+    "rebuildUnknown": "尚无记录"
   }
 };

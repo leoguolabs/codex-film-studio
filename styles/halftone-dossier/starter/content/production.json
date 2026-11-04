@@ -1,8 +1,20 @@
 {
   "style": "halftone-dossier",
-  "brief": {"subject": "", "audience": "", "language": "", "duration_seconds": null},
-  "delivery": {"width": 1920, "height": 1080, "fps": 30},
+  "brief": {
+    "subject": "",
+    "audience": "",
+    "language": "",
+    "duration_seconds": null
+  },
   "sources": [],
   "assets": [],
-  "shots": []
+  "shots": [],
+  "schema_version": 1,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 0,
+  "silent": false,
+  "audio": [],
+  "captions": []
 }
