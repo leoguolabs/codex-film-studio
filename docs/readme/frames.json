@@ -89,11 +89,11 @@
     },
     {
       "style": "scifi-sitcom",
-      "source_video": "productions/2026-10-22-odds-coffee-run/media/the-house-gets-coffee.mp4",
-      "source_sha256": "c19a012b992322aa691962fad0055a36327a8413ae41010fb61c156c99eed45c",
-      "title": "The House Gets Coffee · Pocket V9",
-      "title_zh": "庄家去买咖啡 · 科幻情景喜剧 V9",
-      "seconds": 20.0,
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/scifi-sitcom-stable-v10/scifi-sitcom-stable-v10.tar.gz#_assets/media/the-house-gets-coffee-stable-v10.mp4",
+      "source_sha256": "2669522be2d3ce0aad29f18571f87db5466c45c827b67e5d74cc012a6edc6f37",
+      "title": "The House Gets Coffee · Stable V10",
+      "title_zh": "庄家去买咖啡 · 稳定版 V10",
+      "seconds": 20,
       "frame": 480,
       "fps": "24",
       "native_dimensions": [
@@ -101,8 +101,56 @@
         1080
       ],
       "image": "docs/readme/frames/scifi-sitcom.jpg",
-      "image_sha256": "430dff62c4fb42e63b3a6ec0d5956c1620a11b4cd6ab7c2d4fb46689aa6b54f5",
-      "treatment": "Decoded source frame; full composition retained and resized. Localized labels are outside the image."
+      "image_sha256": "54e11abbcb2b046c5591bbdcc4dcac7e86ae3636740244a0f33c95aae8ce635e",
+      "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
+    },
+    {
+      "style": "microgame",
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/microgame-finished-films-v1.tar.gz#media/film-01.mp4",
+      "source_sha256": "550c98077cdcc2c0a8891a0f10283236ff3b49310e91d958a870315b2d37d82b",
+      "title": "Midnight Bakery",
+      "title_zh": "午夜烘焙坊",
+      "seconds": 6,
+      "frame": 180,
+      "fps": "30",
+      "native_dimensions": [
+        1280,
+        720
+      ],
+      "image": "docs/readme/frames/microgame.jpg",
+      "image_sha256": "2af6ac04d7a9f51d000630cb10fd89b23289662b5ebc7c2133eefee25a3bffc0",
+      "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
+    },
+    {
+      "style": "art-deco",
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/art-deco-finished-films-v1.tar.gz#media/film-01.mp4",
+      "source_sha256": "4b7b57ffb6db1b55fd9b15f3273e3c43731c8baca26774fa8c8ba949e3e8cbc3",
+      "title": "The Last Frequency",
+      "title_zh": "最后的频率",
+      "seconds": 45,
+      "frame": 1080,
+      "fps": "24",
+      "native_dimensions": [
+        540,
+        960
+      ],
+      "samples": [
+        {
+          "seconds": 45,
+          "frame": 1080
+        },
+        {
+          "seconds": 80,
+          "frame": 1920
+        },
+        {
+          "seconds": 120,
+          "frame": 2880
+        }
+      ],
+      "image": "docs/readme/frames/art-deco.jpg",
+      "image_sha256": "6f5909e3a99b6a2a84a737603a2c59d7eb499afdfd1299963cadaeabae03c437",
+      "treatment": "Three decoded frames from the current published portrait film, arranged side by side. Each complete portrait frame is uniformly resized and separated by plain dark padding. No text, artwork or decoration added."
     },
     {
       "style": "caption-news",
@@ -134,6 +182,40 @@
       "image": "docs/readme/frames/caption-news.jpg",
       "image_sha256": "d96e7c9b0c19cd677f6821dd846109015eab3fa6c2ea9d1438170d6023b7156f",
       "treatment": "Three decoded frames arranged side by side. Each full portrait composition is retained, uniformly resized and separated by narrow dark padding. No captions or picture regions are repainted."
+    },
+    {
+      "style": "line-chart-comedy",
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/line-chart-comedy-finished-films-v1.tar.gz#media/film-01.mp4",
+      "source_sha256": "def6d7c4414656e7254777f48cff7485bf47122a5b7bfd67cc5898ecb70d6818",
+      "title": "Eight Economies, 1950–2026",
+      "title_zh": "八个经济体，1950–2026",
+      "seconds": 35,
+      "frame": 2100,
+      "fps": "60",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/line-chart-comedy.jpg",
+      "image_sha256": "5ac2cd391da5f25a8aefb1de7e0c391bafabaa9e416aefc04f1ab1d00b9640ed",
+      "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
+    },
+    {
+      "style": "lidar-survey",
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-film-01.mp4",
+      "source_sha256": "6ae3119689d2b937adebfb6889da54da201978734ac78df01bab2ef26b5079f6",
+      "title": "The Height of a Forest",
+      "title_zh": "一片森林的高度",
+      "seconds": 40,
+      "frame": 960,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/lidar-survey.jpg",
+      "image_sha256": "88d1e7f9bd18a055b74e434e953be09c1c08f86029b4c1f47f80283636b7a8e7",
+      "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
     },
     {
       "style": "newsreel",
@@ -187,6 +269,23 @@
       "treatment": "Decoded web-video frame at 1.8 seconds; full composition retained."
     },
     {
+      "style": "prismatic-atlas",
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/prismatic-atlas-v16/prismatic-atlas-film.mp4",
+      "source_sha256": "d74a44ba17f2443d464206ab1dfb9c03f5e5d5e9a8b06ca796bf620de318f58f",
+      "title": "The Secret Life of a Snowflake",
+      "title_zh": "雪花的秘密一生",
+      "seconds": 150,
+      "frame": 9000,
+      "fps": "60",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/prismatic-atlas.jpg",
+      "image_sha256": "6863227813d4a0e600d94c692501f0a9cf47873d8168bdc05e151643b0b8ab1d",
+      "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
+    },
+    {
       "style": "hologram-hud",
       "source_video": "productions/hologram-hud-20261027/lyra-v60-sci-fi-hologram-hud.mp4",
       "source_sha256": "30b3c35731ced02d365e0ff54675e1cfc80a930a30d31030277c057bb569bfd8",
@@ -202,6 +301,40 @@
       "image": "styles/hologram-hud/showcase/preview.jpg",
       "image_sha256": "e607bb86a1d19283c90f2c96b61e06fb91eac4f388698498ff83f36f20bd7e76",
       "treatment": "Retained decoded V60 frame 4200; full composition and original image preserved."
+    },
+    {
+      "style": "luminous-worlds",
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/luminous-worlds-v51/luminous-worlds-film.mp4",
+      "source_sha256": "056e1bb9396581778b0b88fbb96cf79df33d242b8845578ca916c5518a358cdf",
+      "title": "The Sleeping World",
+      "title_zh": "沉睡的世界",
+      "seconds": 140,
+      "frame": 8400,
+      "fps": "60",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/luminous-worlds.jpg",
+      "image_sha256": "743f3d79cda7491fe5375da3c31c62393d209b1594ada456d264784f58ea018a",
+      "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
+    },
+    {
+      "style": "vivid-science",
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/vivid-science-v32/vivid-science-film.mp4",
+      "source_sha256": "60f968714d1e900292e4784fbd1cf9fa6d8f25b81fea7a10fb0b600f19917967",
+      "title": "The Ocean’s Night Shift",
+      "title_zh": "海洋的夜班",
+      "seconds": 25,
+      "frame": 1500,
+      "fps": "60",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/vivid-science.jpg",
+      "image_sha256": "57a12c95cd70c4ad355c8e6f0a8efeb650fb5edb36337f28bdc5873bf885778f",
+      "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
     }
   ]
 }

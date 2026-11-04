@@ -19,7 +19,7 @@ Ask your Agent to open local showcases and check their retained project files.
 
 <table>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/whiteboard/studio/index.html?lang=en"><img src="../docs/readme/previews/whiteboard.en.jpg" alt="Whiteboard Explainer — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/whiteboard/studio/index.html?lang=en"><img src="../docs/readme/frames/whiteboard.jpg" alt="Whiteboard Explainer — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>01 / <code>whiteboard</code></sub>
 <h3>Whiteboard Explainer</h3>
@@ -30,7 +30,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/art-collage/showcase/index.html?lang=en#film"><img src="../docs/readme/previews/art-collage.en.jpg" alt="Art Collage — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/art-collage/showcase/index.html?lang=en#film"><img src="../docs/readme/frames/art-collage.jpg" alt="Art Collage — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>02 / <code>art-collage</code></sub>
 <h3>Art Collage</h3>
@@ -41,7 +41,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en"><img src="../docs/readme/previews/crayon-book.en.jpg" alt="Crayon Picture Book — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en"><img src="../docs/readme/frames/crayon-book.jpg" alt="Crayon Picture Book — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>03 / <code>crayon-book</code></sub>
 <h3>Crayon Picture Book</h3>
@@ -52,7 +52,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/midcentury-cartoon/showcase/index.html?lang=en"><img src="../docs/readme/previews/midcentury-cartoon.en.jpg" alt="Mid-century Cartoon — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/midcentury-cartoon/showcase/index.html?lang=en"><img src="../docs/readme/frames/midcentury-cartoon.jpg" alt="Mid-century Cartoon — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>04 / <code>midcentury-cartoon</code></sub>
 <h3>Mid-century Cartoon</h3>
@@ -63,7 +63,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/satellite-briefing/showcase/index.html?lang=en"><img src="../docs/readme/previews/satellite-briefing.en.jpg" alt="Satellite Briefing — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/satellite-briefing/showcase/index.html?lang=en"><img src="../docs/readme/frames/satellite-briefing.jpg" alt="Satellite Briefing — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>05 / <code>satellite-briefing</code></sub>
 <h3>Satellite Briefing</h3>
@@ -74,7 +74,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/scifi-sitcom/showcase/index.html?lang=en"><img src="../docs/readme/previews/scifi-sitcom.en.jpg" alt="Sci-Fi Sitcom Toon — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/scifi-sitcom/showcase/index.html?lang=en"><img src="../docs/readme/frames/scifi-sitcom.jpg" alt="Sci-Fi Sitcom Toon — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>06 / <code>scifi-sitcom</code></sub>
 <h3>Sci-Fi Sitcom Toon</h3>
@@ -85,7 +85,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=en#films"><img src="../styles/microgame/showcase/preview.en.svg" alt="Microgame Frenzy — style sketch" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=en#films"><img src="../docs/readme/frames/microgame.jpg" alt="Microgame Frenzy — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>07 / <code>microgame</code></sub>
 <h3>Microgame Frenzy</h3>
@@ -96,7 +96,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=en#films"><img src="../styles/art-deco/showcase/preview.en.svg" alt="Art Deco — style sketch" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=en#films"><img src="../docs/readme/frames/art-deco.jpg" alt="Art Deco — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>08 / <code>art-deco</code></sub>
 <h3>Art Deco</h3>
@@ -107,7 +107,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/caption-news/showcase/index.html?lang=en#screening"><img src="../docs/readme/previews/caption-news.en.jpg" alt="Caption News — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/caption-news/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/caption-news.jpg" alt="Caption News — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>09 / <code>caption-news</code></sub>
 <h3>Caption News</h3>
@@ -118,7 +118,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/line-chart-comedy/showcase/index.html?lang=en#films"><img src="../styles/line-chart-comedy/showcase/preview.en.svg" alt="Animated Line Chart Comedy — style sketch" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/line-chart-comedy/showcase/index.html?lang=en#films"><img src="../docs/readme/frames/line-chart-comedy.jpg" alt="Animated Line Chart Comedy — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>10 / <code>line-chart-comedy</code></sub>
 <h3>Animated Line Chart Comedy</h3>
@@ -129,7 +129,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html?lang=en#films"><img src="../styles/lidar-survey/showcase/preview.en.svg" alt="LiDAR Survey — style sketch" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html?lang=en#films"><img src="../docs/readme/frames/lidar-survey.jpg" alt="LiDAR Survey — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>11 / <code>lidar-survey</code></sub>
 <h3>LiDAR Survey</h3>
@@ -162,7 +162,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening"><img src="../styles/halftone-dossier/showcase/preview.jpg" alt="Halftone Dossier — film frame" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/halftone-dossier.jpg" alt="Halftone Dossier — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>14 / <code>halftone-dossier</code></sub>
 <h3>Halftone Dossier</h3>
@@ -173,7 +173,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening"><img src="../styles/prismatic-atlas/showcase/atlas.svg" alt="Prismatic Atlas — style sketch" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/prismatic-atlas.jpg" alt="Prismatic Atlas — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>15 / <code>prismatic-atlas</code></sub>
 <h3>Prismatic Atlas</h3>
@@ -195,7 +195,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening"><img src="../styles/luminous-worlds/preview.svg" alt="Luminous Worlds — style sketch" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/luminous-worlds.jpg" alt="Luminous Worlds — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>17 / <code>luminous-worlds</code></sub>
 <h3>Luminous Worlds</h3>
@@ -206,7 +206,7 @@ Ask your Agent to open local showcases and check their retained project files.
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening"><img src="../styles/vivid-science/preview.svg" alt="Vivid Science — style sketch" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/vivid-science.jpg" alt="Vivid Science — film frame" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>18 / <code>vivid-science</code></sub>
 <h3>Vivid Science</h3>

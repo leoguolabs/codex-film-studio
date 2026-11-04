@@ -22,18 +22,20 @@ These project READMEs were reviewed for information architecture:
 | [Manim](https://github.com/3b1b/manim) | Connect a minimal working command to examples and deeper usage |
 
 The cover layout and copy are original. Film thumbnails come from this project's
-generated films; no reference-film frames are used. Caption News uses three actual
-frames from its published web preview, arranged side by side. The type study on
-its independent style page remains separately labelled as an original study.
+generated films; no reference-film frames are used. All 18 collection cards,
+including their static HTML and Chinese editions, use decoded film frames.
+Caption News and Art Deco each use three complete portrait frames arranged side
+by side; the remaining cards use a single complete frame. The type study on the
+Caption News style page remains separately labelled as an original study.
 
 ## Frame sources
 
-The first six images were decoded from existing landscape MP4s. Each 1920×1080
-frame was resized as a complete composition to 1440×810. Caption News retains
-three complete 720×1280 portrait frames in a 1440×810 strip, with narrow dark
-padding and no replacement text. The English and Chinese preview
-cards add their own labels below that picture; the source image itself retains
-its original text. Both covers use these same six frames in registry order.
+The collection uses complete decoded source frames, uniformly resized without
+repainting their contents or replacing text. Caption News retains three complete
+720×1280 frames and Art Deco retains three complete 540×960 frames in 1440×810
+strips, with narrow dark padding. Both languages use the same source images.
+Legacy decorated preview files and the two six-frame covers remain retained
+separately; the collection and README atlas point to the undecorated stills.
 
 | Style | Generated film | Selected time |
 | --- | --- | --- |
@@ -42,9 +44,19 @@ its original text. Both covers use these same six frames in registry order.
 | Crayon Picture Book | Leo the Farmer · V11 | 01:06 |
 | Mid-century Cartoon | Does AI Help You Learn—or Just Finish? | 00:13 |
 | Satellite Briefing | Singapore · Three Days, Three Routes | 00:06 |
-| Sci-Fi Sitcom Toon | The House Gets Coffee · Pocket V9 | 00:20 |
+| Sci-Fi Sitcom Toon | The House Gets Coffee · Stable V10 | 00:20 |
+| Microgame Frenzy | Midnight Bakery | 00:06 |
+| Art Deco | The Last Frequency | 00:45 / 01:20 / 02:00 |
 | Caption News | Published complete web preview | 00:06 / 01:28 / 02:25 |
-| Halftone Dossier | The Coffee Case · English Chatterbox edition | 00:01.8 |
+| Animated Line Chart Comedy | Eight Economies, 1950–2026 | 00:35 |
+| LiDAR Survey | The Height of a Forest | 00:40 |
+| Newsreel | Under the City · English V3 | 00:54.792 |
+| Exploded Teardown | Inside an Imaging Satellite | 00:18 |
+| Halftone Dossier | The Coffee Case | 00:01.8 |
+| Prismatic Atlas | The Secret Life of a Snowflake | 02:30 |
+| Sci-fi Hologram HUD | LYRA · Systems in Space | 02:55 |
+| Luminous Worlds | The Sleeping World | 02:20 |
+| Vivid Science | The Ocean’s Night Shift | 00:25 |
 
 [frames.json](frames.json) records each source filename, video SHA-256, exact
 frame/time, native dimensions and retained image SHA-256. Source movies and
@@ -70,6 +82,9 @@ Credits retained from the production records:
   [@lemomo_ai](https://x.com/lemomo_ai). These are the new productions' frames.
 
 Caption News footage and reporting credits remain in the [film source notes](https://visiontrail.github.io/codex-film-studio/styles/caption-news/showcase/media/credits.html).
+The additional sample frames retain their films’ credits in the released
+`showcase/media/credits.html` files. Exact released-video URLs (or archive
+members), source hashes and frame numbers are recorded in `frames.json`.
 
 Code, documentation and layout use MIT. The screenshots retain the source
 materials' credits above; this does not relicense third-party marks, characters

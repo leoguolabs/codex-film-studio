@@ -42,7 +42,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 
 <table>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/whiteboard/studio/index.html?lang=zh"><img src="docs/readme/previews/whiteboard.zh.jpg" alt="白板讲解 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/whiteboard/studio/index.html?lang=zh"><img src="docs/readme/frames/whiteboard.jpg" alt="白板讲解 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>01 / <code>whiteboard</code></sub>
 <h3>白板讲解</h3>
@@ -52,7 +52,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/art-collage/showcase/index.html?lang=zh#film"><img src="docs/readme/previews/art-collage.zh.jpg" alt="艺术拼贴 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/art-collage/showcase/index.html?lang=zh#film"><img src="docs/readme/frames/art-collage.jpg" alt="艺术拼贴 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>02 / <code>art-collage</code></sub>
 <h3>艺术拼贴</h3>
@@ -62,7 +62,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh"><img src="docs/readme/previews/crayon-book.zh.jpg" alt="蜡笔绘本 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh"><img src="docs/readme/frames/crayon-book.jpg" alt="蜡笔绘本 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>03 / <code>crayon-book</code></sub>
 <h3>蜡笔绘本</h3>
@@ -72,7 +72,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/midcentury-cartoon/showcase/index.html?lang=zh"><img src="docs/readme/previews/midcentury-cartoon.zh.jpg" alt="50 年代平涂卡通 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/midcentury-cartoon/showcase/index.html?lang=zh"><img src="docs/readme/frames/midcentury-cartoon.jpg" alt="50 年代平涂卡通 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>04 / <code>midcentury-cartoon</code></sub>
 <h3>50 年代平涂卡通</h3>
@@ -82,7 +82,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/satellite-briefing/showcase/index.html?lang=zh"><img src="docs/readme/previews/satellite-briefing.zh.jpg" alt="卫星影像／地理简报 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/satellite-briefing/showcase/index.html?lang=zh"><img src="docs/readme/frames/satellite-briefing.jpg" alt="卫星影像／地理简报 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>05 / <code>satellite-briefing</code></sub>
 <h3>卫星影像／地理简报</h3>
@@ -92,7 +92,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/scifi-sitcom/showcase/index.html?lang=zh"><img src="docs/readme/previews/scifi-sitcom.zh.jpg" alt="科幻情景喜剧卡通 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/scifi-sitcom/showcase/index.html?lang=zh"><img src="docs/readme/frames/scifi-sitcom.jpg" alt="科幻情景喜剧卡通 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>06 / <code>scifi-sitcom</code></sub>
 <h3>科幻情景喜剧卡通</h3>
@@ -102,7 +102,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=zh#films"><img src="styles/microgame/showcase/preview.zh.svg" alt="极速微游戏 — 风格示意" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=zh#films"><img src="docs/readme/frames/microgame.jpg" alt="极速微游戏 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>07 / <code>microgame</code></sub>
 <h3>极速微游戏</h3>
@@ -112,7 +112,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=zh#films"><img src="styles/art-deco/showcase/preview.zh.svg" alt="装饰艺术 — 风格示意" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=zh#films"><img src="docs/readme/frames/art-deco.jpg" alt="装饰艺术 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>08 / <code>art-deco</code></sub>
 <h3>装饰艺术</h3>
@@ -122,7 +122,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/caption-news/showcase/index.html?lang=zh#screening"><img src="docs/readme/previews/caption-news.zh.jpg" alt="字幕新闻 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/caption-news/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/caption-news.jpg" alt="字幕新闻 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>09 / <code>caption-news</code></sub>
 <h3>字幕新闻</h3>
@@ -132,7 +132,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/line-chart-comedy/showcase/index.html?lang=zh#films"><img src="styles/line-chart-comedy/showcase/preview.zh.svg" alt="动态折线图喜剧 — 风格示意" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/line-chart-comedy/showcase/index.html?lang=zh#films"><img src="docs/readme/frames/line-chart-comedy.jpg" alt="动态折线图喜剧 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>10 / <code>line-chart-comedy</code></sub>
 <h3>动态折线图喜剧</h3>
@@ -142,7 +142,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html?lang=zh#films"><img src="styles/lidar-survey/showcase/preview.zh.svg" alt="点云测绘 — 风格示意" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html?lang=zh#films"><img src="docs/readme/frames/lidar-survey.jpg" alt="点云测绘 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>11 / <code>lidar-survey</code></sub>
 <h3>点云测绘</h3>
@@ -172,7 +172,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=zh#screening"><img src="styles/halftone-dossier/showcase/preview.jpg" alt="复古半调案卷 — 影片截图" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/halftone-dossier.jpg" alt="复古半调案卷 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>14 / <code>halftone-dossier</code></sub>
 <h3>复古半调案卷</h3>
@@ -182,7 +182,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=zh#screening"><img src="styles/prismatic-atlas/showcase/atlas.svg" alt="棱彩图谱 — 风格示意" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/prismatic-atlas.jpg" alt="棱彩图谱 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>15 / <code>prismatic-atlas</code></sub>
 <h3>棱彩图谱</h3>
@@ -202,7 +202,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=zh#screening"><img src="styles/luminous-worlds/preview.svg" alt="明彩世界 — 风格示意" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/luminous-worlds.jpg" alt="明彩世界 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>17 / <code>luminous-worlds</code></sub>
 <h3>明彩世界</h3>
@@ -212,7 +212,7 @@ Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh#screening"><img src="styles/vivid-science/preview.svg" alt="鲜彩科学动画 — 风格示意" width="320"></a></td>
+<td width="38%" valign="middle"><a href="https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/vivid-science.jpg" alt="鲜彩科学动画 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
 <sub>18 / <code>vivid-science</code></sub>
 <h3>鲜彩科学动画</h3>
