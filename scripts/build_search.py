@@ -177,23 +177,19 @@ def home_answers(lang, date, catalog, base):
         intro = '从选风格、编写场景到检查交付，先确认所选制作包和样片的实际范围。'
         qa = [
             ('如何用 Codex 开始制作？', '在 Codex 中打开完整仓库，描述主题、观众、风格、语言和时长。Agent 按仓库流程创建外部项目，准备依赖并执行制作与审阅；交付范围包括 MP4、可编辑工程和实际检查说明。', home+'#create', '创作入口'),
-            ('应该选择哪种风格？', '逐步解释可选白板讲解，材质叙事可选艺术拼贴或蜡笔绘本，空间关系可选卫星影像，数据变化可选动态折线图喜剧。结合场景需求、能力摘要和样片选择。', home+'#library', '浏览风格'),
             ('哪些包带场景渲染器？', f'当前 {len(catalog["styles"])} 种风格中有 {renderers} 种标记为提供场景渲染器。已有渲染器仍需要为新选题编写画面、准备输入和检查结果；创作起步包与材质工具包的能力另行标注。', REPO+'/blob/main/styles/README.md#capabilities--能力与网页', '能力速查'),
             ('样片能原样复现吗？', '需要原始场景、素材、已接受的音频和时间信息。白板样片提供公开输入与仓库代码；本地原工程包并非公开下载，观看 MP4 也不意味着已取得可编辑工程。', case, '白板样片案例'),
             ('需要什么依赖和输入？', '完整仓库包含根脚本、风格和共享方法，单独复制 Skill 目录不够。依赖按风格检查；白板示例用 Node、Python 与 FFmpeg。新主题需脚本、可用素材、录音或可访问的语音服务。', case+'#inputs', '依赖与公开输入'),
-            ('如何理解验证范围？', 'clip 仅表示片段；full 表示记录所覆盖的整片重建。技术检查、画面审阅、播放与听审需分别报告。尚未重新验证不能视为成功，新片也需独立验收。', REPO+'/blob/main/methods/reproduction.md', '复现与验证方法'),
-            ('能在其他 Agent 中直接安装吗？', '当前可靠入口是完整 checkout 与仓库内 codex-film Skill。尚未提供其他 Agent 的独立安装与完整流程验证；复制 Skill 子目录不能获得全部工作室资源。', REPO+'/tree/main/.agents/skills/codex-film', '仓库内 Skill')]
+            ('能在其他 Agent 中直接安装吗？', '原则上可以。只要 Agent 能读写项目文件、执行命令，并准备所需依赖，就可以使用这套工作室。克隆完整仓库，让 Agent 读取 AGENTS.md 和所选风格的制作指南；若它支持 Skill，也可按其加载方式使用仓库内的 codex-film。具体能完成哪些制作与检查，取决于该 Agent 的工具、权限和运行环境。', REPO+'#make-your-film', '开始使用')]
     else:
         heading = 'How do you make a video with Codex Film Studio?'
         intro = 'Choose a style, author the scenes and review the delivery against the actual scope of the package and sample.'
         qa = [
             ('How do I start with Codex?', 'Open the complete repository in Codex and describe the subject, audience, style, language and duration. The Agent follows the project workflow to create an external project, prepare dependencies, produce and review it. Delivery includes an MP4, editable project and actual review coverage.', home+'#create', 'Start a film'),
-            ('Which style should I choose?', 'Use Whiteboard Explainer for step-by-step arguments, Art Collage or Crayon Picture Book for material-led stories, Satellite Briefing for spatial relationships, or Animated Line Chart Comedy for changing data. Compare the scene needs, capabilities and samples.', home+'#library', 'Explore styles'),
             ('Which packages include scene renderers?', f'{renderers} of the current {len(catalog["styles"])} styles are marked as including scene renderers. New subjects still need authored scenes, inputs and review. Authoring starters and material toolkits have separately documented capabilities.', REPO+'/blob/main/styles/README.md#capabilities--能力与网页', 'Compare capabilities'),
             ('Can I reproduce a sample exactly?', 'You need its composition, assets, accepted recordings and timing. Whiteboard has public inputs plus repository code. Local source bundles are not public downloads, and a playable MP4 is not an editable source package.', case, 'Whiteboard sample walkthrough'),
             ('What dependencies and inputs do I need?', 'Use the full checkout, including root scripts, styles and shared methods; copying the Skill directory alone is insufficient. Dependencies vary by style. Whiteboard uses Node, Python and FFmpeg. New subjects need a script, usable assets, recordings or access to a voice service.', case+'#inputs', 'Dependencies and public inputs'),
-            ('What does the verification scope mean?', 'clip covers an excerpt; full covers the complete rebuild identified in its record. Technical checks, visual review, playback and listening are reported separately. Not revalidated is not a pass, and each new film needs its own acceptance.', REPO+'/blob/main/methods/reproduction.md', 'Reproduction and verification'),
-            ('Can I install it in another Agent?', 'The documented entry point is a complete checkout with the repo-local codex-film Skill. Standalone installation and end-to-end validation for other Agents are not provided. Copying the Skill subdirectory does not install the whole studio.', REPO+'/tree/main/.agents/skills/codex-film', 'Repo-local Skill')]
+            ('Can I install it in another Agent?', 'In principle, yes. A coding Agent that can read and write project files, run commands and prepare the required dependencies can use the studio. Clone the complete repository and have the Agent read AGENTS.md and the chosen style’s production guide. If it supports Skills, load the repo-local codex-film Skill using that Agent’s conventions. The production and review steps it can perform depend on its tools, permissions and runtime environment.', REPO+'#make-your-film', 'Getting started')]
     articles = ''.join(f'<article><h3>{escape(q)}</h3><p>{escape(a)} <a href="{escape(url, quote=True)}">{escape(label)} →</a></p></article>' for q, a, url, label in qa)
     return f'<section class="search-answers section-wrap" aria-labelledby="answers-title"><p class="eyebrow">CODEX FILM STUDIO / FIELD GUIDE</p><h2 id="answers-title">{heading}</h2><p class="search-intro">{intro}</p><div class="answer-grid">{articles}</div>{credit(lang,date,REPO+"/commits/main/scripts/build_search.py")}</section>'
 
@@ -309,7 +305,7 @@ def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-
         page = re.sub(r'(<span id="collection-range">).*?(</span>)',rf'\g<1>01 — {len(catalog["styles"]):02}\2',page)
         page = page.replace('<div class="collection-note">', capability_overview(catalog,lang,strings[lang])+'<div class="collection-note">')
         page = page.replace('</main>',home_answers(lang,date,catalog,base)+'</main>')
-        page = page.replace('<div class="footer-links">', '<div class="footer-links"><a href="'+base+'sitemap.xml">'+('站点地图' if lang=='zh' else 'Sitemap')+'</a>')
+        page = page.replace('href="sitemap.xml"', f'href="{base}sitemap.xml"')
         page = re.sub(r'<noscript>.*?</noscript>', '<noscript><p class="noscript">'+('风格指南可直接阅读；搜索、筛选与详情弹窗需要 JavaScript。' if lang=='zh' else 'Read all style guides without JavaScript. Search, filters and detail dialogs use JavaScript.')+'</p></noscript>',page,flags=re.S)
         page = page.replace('placeholder="Find a style" aria-label="Find a style"',f'placeholder="{strings[lang]["search"]}" aria-label="{strings[lang]["search"]}"')
         graph=schema(base,url,title,desc,lang,date,[(loc(s,'name',lang),base+route(s,lang)) for s in catalog['styles']])

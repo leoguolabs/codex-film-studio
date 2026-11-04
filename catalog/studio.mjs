@@ -84,7 +84,7 @@ async function setLanguage(language) {
       const metadata = 'link[rel="canonical"],link[rel="alternate"],meta[name="description"],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]';
       document.head.querySelectorAll(metadata).forEach(node => node.remove());
       translated.head.querySelectorAll(metadata).forEach(node => document.head.append(node.cloneNode(true)));
-      for (const selector of ['.search-answers', '.capability-overview', '.footer-links > a[href$="sitemap.xml"]']) {
+      for (const selector of ['.search-answers', '.capability-overview']) {
         const source = translated.querySelector(selector), target = $(selector);
         if (source && target) target.replaceWith(source.cloneNode(true));
       }
