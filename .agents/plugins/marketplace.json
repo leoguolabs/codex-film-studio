@@ -1,15 +1,20 @@
 {
   "name": "visiontrail",
-  "interface": {"displayName": "LeoGuoLabs"},
-  "plugins": [{
-    "name": "codex-film-studio",
-    "source": {
-      "source": "git-subdir",
-      "url": "https://github.com/visiontrail/codex-film-studio.git",
-      "ref": "plugin-v0.1.0",
-      "path": "./plugins/codex-film-studio"
-    },
-    "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
-    "category": "Productivity"
-  }]
+  "interface": {
+    "displayName": "LeoGuoLabs"
+  },
+  "plugins": [
+    {
+      "name": "codex-film-studio",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-film-studio"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
 }
