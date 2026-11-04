@@ -8,11 +8,18 @@ import sys
 import tempfile
 import unittest
 import zipfile
+from unittest.mock import patch
+
+from frame_review.ffmpeg_gate import running_ffmpeg
 
 from package_plugin import build, ROOT
 
 
 class InstalledPluginTests(unittest.TestCase):
+    def test_restricted_process_list_still_allows_the_shared_lock(self):
+        with patch("subprocess.check_output", side_effect=PermissionError):
+            self.assertEqual(running_ffmpeg(), [])
+
     def test_distribution_and_every_style(self):
         with tempfile.TemporaryDirectory(prefix="film plugin ") as temp:
             work = Path(temp) / "empty workspace"
