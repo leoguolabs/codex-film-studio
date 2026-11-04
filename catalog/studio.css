@@ -108,6 +108,27 @@ dialog{padding:0;border:1px solid #ffffff26;background:var(--bg);color:var(--ink
   gap: 12px;
 }
 .library .card-page:hover { background: #354634; border-color: var(--green); color: var(--ink); }
+/* Share section heights within each grid row, including wrapped action buttons. */
+.library .style-card { display: flex; flex-direction: column; }
+.library .card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+.library .card-actions .card-page { margin: 0; }
+@supports (grid-template-rows: subgrid) {
+  .library .style-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    row-gap: 0;
+  }
+  .library .style-card > * { align-self: start; }
+  .library .card-actions { margin-top: 0; }
+}
 .library .collection-note { font-size: 14px; color: #c4cec3; gap: 16px; padding-block: 28px; }
 .library .collection-note > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 600; }
 @media (max-width: 1100px) {
