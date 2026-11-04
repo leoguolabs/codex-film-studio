@@ -168,7 +168,11 @@
         "assets": [
           "styles/crayon-book/showcase/comparison.html",
           "styles/crayon-book/showcase/showcase.css",
-          "styles/crayon-book/showcase/showcase.mjs"
+          "styles/crayon-book/showcase/showcase.mjs",
+          "styles/crayon-book/showcase/fonts/CrayonHandSC-Regular.woff2",
+          "styles/crayon-book/showcase/fonts/OFL-Xiaolai.txt",
+          "styles/crayon-book/showcase/fonts/README.md",
+          "styles/crayon-book/showcase/wax-grain.svg"
         ]
       },
       "public_assets": "styles/crayon-book/demo-assets.json",

@@ -128,7 +128,10 @@ Agent prompts, a copyable creative brief, production guides and source credits.
 English and Chinese page text share the same video and preserve playback when
 switching languages. `landing.assets` registers the CSS and module; README
 preview images and watch links open `#film`, while the style-page entry opens
-the complete page. The checksum-pinned film bundle and review records are unchanged.
+the complete page. The checksum-pinned film bundle and review records are unchanged. Chinese
+display text uses a locally hosted, renamed Xiaolai subset (Crayon Hand SC),
+with fixed dry-pigment grain on large titles. The pinned generator verifies
+source identity and all page glyphs; its OFL licence ships with the font.
 
 ## Prompt-first film creation
 
