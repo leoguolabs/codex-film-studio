@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-film-studio",
+  "version": "0.1.0",
+  "description": "Produce editable animated films from a brief using the Codex Film Studio style library.",
+  "author": {"name": "LeoGuoLabs", "url": "https://github.com/visiontrail"},
+  "homepage": "https://visiontrail.github.io/codex-film-studio/",
+  "repository": "https://github.com/visiontrail/codex-film-studio",
+  "license": "MIT",
+  "keywords": ["video", "animation", "film", "captions", "storyboard"],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Codex Film Studio",
+        "shortDescription": "Make editable animated films",
+        "longDescription": "Describe a video in your own words. Choose a style or let Codex select one, then direct scenes, render an MP4 and keep the editable project. The library includes complete renderers, authoring starters and material toolkits. Starter and toolkit styles require original scene and rendering work. Production runs on your computer and may require dependency downloads, source assets or recordings.",
+        "developerName": "LeoGuoLabs",
+        "category": "Productivity",
+        "capabilities": ["Create film projects", "Render and inspect video"],
+        "websiteURL": "https://visiontrail.github.io/codex-film-studio/",
+        "privacyPolicyURL": "https://github.com/visiontrail/codex-film-studio/blob/main/docs/plugin-privacy.md",
+        "supportURL": "https://github.com/visiontrail/codex-film-studio/issues",
+        "defaultPrompt": ["Make a short whiteboard film explaining how a pulley works.", "用字幕新闻风格做一支短片，交付 MP4 和可编辑工程。"],
+        "logo": "./assets/studio-logo.svg",
+        "composerIcon": "./assets/studio-logo.svg"
+      },
+      "publication": {
+        "release_notes": "First packaged release of the complete Film Studio style catalog, production tools and review workflow.",
+        "translations": {"zh-CN": {"subtitle": "用自然语言制作可编辑的动画短片", "description": "描述主题、风格和时长，在本机制作影片并交付 MP4 与可编辑工程。各风格保留原有成熟度，部分风格需要另外编写场景和渲染程序。"}}
+      }
+    }
+  }
+}

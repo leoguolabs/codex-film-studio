@@ -28,6 +28,17 @@
 
 Codex Film Studio 是面向 OpenAI Codex 的开源视频风格与制作流程库，提供风格指南、项目脚手架、渲染工具和影音质检流程，支持制作 MP4 与可编辑工程。各风格的可执行能力、原工程获取方式和复现范围分别标注。
 
+## 安装 Codex 插件
+
+在任意目录运行以下两条命令，再打开一个本地 Codex 新对话。例如：“用字幕新闻风格做一支十秒的闰日短片，交付 MP4 和可编辑工程。”
+
+```sh
+codex plugin marketplace add https://github.com/visiontrail/codex-film-studio.git --ref plugin-v0.1.0
+codex plugin add codex-film-studio@visiontrail
+```
+
+[安装、环境要求与发布说明](docs/plugin.md)
+
 ## 风格手册
 
 <!-- capability-summary:start -->
