@@ -171,24 +171,23 @@ def capability_overview(catalog, lang, strings):
 def home_answers(lang, date, catalog, base):
     home = base + ('zh/' if lang == 'zh' else '')
     case = home + 'cases/whiteboard-rebuild/'
-    renderers = sum(s['capabilities']['scene_renderer'] for s in catalog['styles'])
     if lang == 'zh':
         heading = '如何用 Codex Film Studio 制作视频？'
         intro = '从选风格、编写场景到检查交付，先确认所选制作包和样片的实际范围。'
         qa = [
             ('如何用 Codex 开始制作？', '在 Codex 中打开完整仓库，描述主题、观众、风格、语言和时长。Agent 按仓库流程创建外部项目，准备依赖并执行制作与审阅；交付范围包括 MP4、可编辑工程和实际检查说明。', home+'#create', '创作入口'),
-            ('哪些包带场景渲染器？', f'当前 {len(catalog["styles"])} 种风格中有 {renderers} 种标记为提供场景渲染器。已有渲染器仍需要为新选题编写画面、准备输入和检查结果；创作起步包与材质工具包的能力另行标注。', REPO+'/blob/main/styles/README.md#capabilities--能力与网页', '能力速查'),
-            ('样片能原样复现吗？', '需要原始场景、素材、已接受的音频和时间信息。白板样片提供公开输入与仓库代码；本地原工程包并非公开下载，观看 MP4 也不意味着已取得可编辑工程。', case, '白板样片案例'),
+            ('样片能原样复现吗？', '理论上可以。实际还原程度取决于模型能力、思考强度、参考信息的完整程度，以及可用素材和制作环境。通过对照样片、反复渲染和调整，可以逐步提高还原度。', case, '白板样片案例'),
             ('需要什么依赖和输入？', '完整仓库包含根脚本、风格和共享方法，单独复制 Skill 目录不够。依赖按风格检查；白板示例用 Node、Python 与 FFmpeg。新主题需脚本、可用素材、录音或可访问的语音服务。', case+'#inputs', '依赖与公开输入'),
+            ('配音和 TTS 怎么处理？', '可以导入现有录音，也可以让 Agent 使用仓库提供的 Edge TTS 工具生成配音，无需个人 API Key，但需要联网；已配置的 Chatterbox 服务也是一种选择。指定语言、音色和语速后，按实际音频时长安排画面与字幕，并检查发音、停顿和音画同步。复刻样片时，优先复用原配音。', REPO+'/blob/main/methods/narration.md', '配音与 TTS 指南'),
             ('能在其他 Agent 中直接安装吗？', '原则上可以。只要 Agent 能读写项目文件、执行命令，并准备所需依赖，就可以使用这套工作室。克隆完整仓库，让 Agent 读取 AGENTS.md 和所选风格的制作指南；若它支持 Skill，也可按其加载方式使用仓库内的 codex-film。具体能完成哪些制作与检查，取决于该 Agent 的工具、权限和运行环境。', REPO+'#make-your-film', '开始使用')]
     else:
         heading = 'How do you make a video with Codex Film Studio?'
         intro = 'Choose a style, author the scenes and review the delivery against the actual scope of the package and sample.'
         qa = [
             ('How do I start with Codex?', 'Open the complete repository in Codex and describe the subject, audience, style, language and duration. The Agent follows the project workflow to create an external project, prepare dependencies, produce and review it. Delivery includes an MP4, editable project and actual review coverage.', home+'#create', 'Start a film'),
-            ('Which packages include scene renderers?', f'{renderers} of the current {len(catalog["styles"])} styles are marked as including scene renderers. New subjects still need authored scenes, inputs and review. Authoring starters and material toolkits have separately documented capabilities.', REPO+'/blob/main/styles/README.md#capabilities--能力与网页', 'Compare capabilities'),
-            ('Can I reproduce a sample exactly?', 'You need its composition, assets, accepted recordings and timing. Whiteboard has public inputs plus repository code. Local source bundles are not public downloads, and a playable MP4 is not an editable source package.', case, 'Whiteboard sample walkthrough'),
+            ('Can I reproduce a sample exactly?', 'In principle, yes. How closely the result matches depends on the model’s capabilities and reasoning effort, the completeness of the reference, and the available assets and production environment. Comparing renders with the sample and iterating on them can improve fidelity.', case, 'Whiteboard sample walkthrough'),
             ('What dependencies and inputs do I need?', 'Use the full checkout, including root scripts, styles and shared methods; copying the Skill directory alone is insufficient. Dependencies vary by style. Whiteboard uses Node, Python and FFmpeg. New subjects need a script, usable assets, recordings or access to a voice service.', case+'#inputs', 'Dependencies and public inputs'),
+            ('How do narration and TTS work?', 'You can import an existing recording or have the Agent generate narration with the included Edge TTS tools, which require internet access but no personal API key. A configured Chatterbox service is another option. Specify the language, voice and speaking rate, then align pictures and captions to the actual audio duration and review pronunciation, pauses and synchronization. For sample replays, reuse the original narration when available.', REPO+'/blob/main/methods/narration.md', 'Narration & TTS guide'),
             ('Can I install it in another Agent?', 'In principle, yes. A coding Agent that can read and write project files, run commands and prepare the required dependencies can use the studio. Clone the complete repository and have the Agent read AGENTS.md and the chosen style’s production guide. If it supports Skills, load the repo-local codex-film Skill using that Agent’s conventions. The production and review steps it can perform depend on its tools, permissions and runtime environment.', REPO+'#make-your-film', 'Getting started')]
     articles = ''.join(f'<article><h3>{escape(q)}</h3><p>{escape(a)} <a href="{escape(url, quote=True)}">{escape(label)} →</a></p></article>' for q, a, url, label in qa)
     return f'<section class="search-answers section-wrap" aria-labelledby="answers-title"><p class="eyebrow">CODEX FILM STUDIO / FIELD GUIDE</p><h2 id="answers-title">{heading}</h2><p class="search-intro">{intro}</p><div class="answer-grid">{articles}</div>{credit(lang,date,REPO+"/commits/main/scripts/build_search.py")}</section>'
