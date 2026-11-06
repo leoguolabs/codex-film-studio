@@ -4,7 +4,7 @@
     "name": "caption-news-preview-v1.tar.gz",
     "bytes": 21442840,
     "sha256": "f4ed80e38370e568aee15dd40734053af0763dd464c93cff9c1607c1d7999e34",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/caption-news-preview-v1/caption-news-preview-v1.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/caption-news-preview-v1/caption-news-preview-v1.tar.gz"
   },
   "files": [
     "media/captions.srt",

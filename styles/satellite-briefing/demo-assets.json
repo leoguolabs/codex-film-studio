@@ -4,7 +4,7 @@
     "name": "satellite-briefing-showcase-v1.tar.gz",
     "bytes": 83500432,
     "sha256": "e988e4a04717d663b7394d411f87c7128a84965c04d94ae9bb2bbeacddf5b931",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/style-showcases-v1/satellite-briefing-showcase-v1.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/style-showcases-v1/satellite-briefing-showcase-v1.tar.gz"
   },
   "mounts": {
     "satellite-film": "_assets",

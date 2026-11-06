@@ -12,7 +12,7 @@ import tempfile
 import urllib.request
 from urllib.parse import urlencode
 from fetch_demo import sha
-from build_search import build_search, DEFAULT_ORIGIN
+from build_search import build_search, DEFAULT_ORIGIN, REPO
 
 ROOT = Path(__file__).resolve().parents[1]
 STUDIO = ROOT / "styles/whiteboard/studio"
@@ -159,13 +159,17 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
     # Legacy players use origin-root routes and retained-project base URLs.
     # Rebase only the newly released pages and assets; local sources stay intact.
     for path in output.rglob('*'):
-        if path.suffix in {'.html', '.css', '.mjs'} and path.is_file():
+        if path.suffix in {'.html', '.css', '.mjs', '.json'} and path.is_file():
             original = path.read_text(encoding='utf-8')
+            # Pinned Release archives retain their original bytes and hashes.
+            # Their published media manifests must use the current repository.
+            migrated = original.replace('https://github.com/visiontrail/codex-film-studio/', REPO + '/')
             relative = str(path.relative_to(output))
             web_preview = path.suffix == '.html' and (
                 relative in public_pages or any(relative.startswith(prefix.rstrip('/') + '/')
                                                 for prefix in mounts.values()))
-            rewritten = prepare_public_document(original, mounts, base_path, web_preview)
+            rewritten = (migrated if path.suffix == '.json' else
+                         prepare_public_document(migrated, mounts, base_path, web_preview))
             if rewritten != original:
                 path.write_text(rewritten, encoding='utf-8')
     if revision:

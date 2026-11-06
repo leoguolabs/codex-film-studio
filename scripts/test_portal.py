@@ -57,9 +57,21 @@ class PortalTests(unittest.TestCase):
                         p = source / name
                         p.parent.mkdir(parents=True, exist_ok=True)
                         p.write_bytes(b'public preview fixture')
+                        if name.endswith('films.json'):
+                            p.write_text(json.dumps({'films': [{
+                                'file': 'https://github.com/visiontrail/codex-film-studio/releases/download/sample/film.mp4',
+                                'sha256': 'unchanged-media-digest'}]}))
                         preview_movies += name.endswith('.mp4')
                     published_roots[style['id']] = source
             build_site(demo, output, 'portal-test', published_roots)
+            for style in catalog['styles']:
+                if source := published_roots.get(style['id']):
+                    for manifest_file in source.rglob('films.json'):
+                        relative=Path(style['landing']['page']).parent / manifest_file.relative_to(source)
+                        film=json.loads((output/relative).read_text())['films'][0]
+                        self.assertEqual(film['file'], 'https://github.com/leoguolabs/codex-film-studio/releases/download/sample/film.mp4')
+                        self.assertEqual(film['sha256'], 'unchanged-media-digest')
+                        self.assertIn('github.com/visiontrail/',manifest_file.read_text())
             homepage = (output / 'index.html').read_text()
             for asset in ['catalog/studio.mjs', 'catalog/studio.css', 'catalog/hero.svg',
                           'catalog/brand.css', 'catalog/brand/studio-logo.svg']:

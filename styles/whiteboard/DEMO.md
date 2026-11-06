@@ -5,7 +5,7 @@
 | Short | 180 seconds | 1920 × 1080, 24 fps | 18 Chatterbox segments |
 | Long | 720.166667 seconds | 1920 × 1080, 24 fps | 52 Chatterbox segments |
 
-Watch or download both films from the [v0.1.0 release](https://github.com/visiontrail/codex-film-studio/releases/tag/v0.1.0).
+Watch or download both films from the [v0.1.0 release](https://github.com/leoguolabs/codex-film-studio/releases/tag/v0.1.0).
 Run `python3 scripts/fetch_demo.py --edition all` from the repository root to
 download the films and original narration/timing inputs into this studio.
 

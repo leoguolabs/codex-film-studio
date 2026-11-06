@@ -4,7 +4,7 @@
     "name": "lidar-survey-finished-films-v1.tar.gz",
     "bytes": 773602,
     "sha256": "d8d3f0bffe7e3ba7fcff555dcd6a7383471909402361833eead3f33c2f496df2",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-finished-films-v1.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-finished-films-v1.tar.gz"
   },
   "files": [
     "media/credits.html",
@@ -19,13 +19,13 @@
       "name": "lidar-survey-film-01.mp4",
       "bytes": 43903182,
       "sha256": "6ae3119689d2b937adebfb6889da54da201978734ac78df01bab2ef26b5079f6",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-film-01.mp4"
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-film-01.mp4"
     },
     {
       "name": "lidar-survey-film-02.mp4",
       "bytes": 43786357,
       "sha256": "0562842dd70a37619a15243d97cd7c6939b8bd27a5027ec55ccdb274b9355ae7",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-film-02.mp4"
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-film-02.mp4"
     }
   ]
 }

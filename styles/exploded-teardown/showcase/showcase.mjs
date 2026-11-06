@@ -15,7 +15,7 @@ const video = $('#film');
 let films = [], selected = -1, failed = false, pendingSeek = null;
 function media(path) {
   const url = new URL(path, new URL('media/',location.href));
-  if (url.origin !== location.origin && !url.href.startsWith('https://github.com/visiontrail/codex-film-studio/releases/download/')) throw Error('Unapproved media URL');
+  if (url.origin !== location.origin && !url.href.startsWith('https://github.com/leoguolabs/codex-film-studio/releases/download/')) throw Error('Unapproved media URL');
   if (revision && url.origin === location.origin) url.searchParams.set('v',revision);
   return url.href;
 }

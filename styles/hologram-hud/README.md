@@ -3,7 +3,7 @@
 Luminous wireframes, scanning planes, target locks and local exploded views
 explain an object one system at a time.
 
-Open the [independent style page](https://visiontrail.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html)
+Open the [independent style page](https://leoguolabs.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html)
 for the complete English sample, chapter navigation, a visual grammar study,
 production notes and a prompt-first creation entry. The page supports English
 and Chinese; the film remains English.

@@ -1,6 +1,6 @@
 # Exploded Teardown · 爆炸拆解
 
-[Open the independent style page](https://visiontrail.github.io/codex-film-studio/styles/exploded-teardown/showcase/index.html?lang=en) · [中文页面](https://visiontrail.github.io/codex-film-studio/styles/exploded-teardown/showcase/index.html?lang=zh)
+[Open the independent style page](https://leoguolabs.github.io/codex-film-studio/styles/exploded-teardown/showcase/index.html?lang=en) · [中文页面](https://leoguolabs.github.io/codex-film-studio/styles/exploded-teardown/showcase/index.html?lang=zh)
 
 Dark-studio product photography, functional layer separation, material close-ups and projected engineering annotations. The bilingual page includes two complete English films, chapter navigation, transcripts, style rules, a prompt-first authoring path, build notes and reference attribution.
 

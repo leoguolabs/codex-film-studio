@@ -4,7 +4,7 @@
     "name": "prismatic-atlas-media-v16.tar.gz",
     "bytes": 127020,
     "sha256": "debcc66771a7c82a56c0218b6b0b8ec751775c121b801ace73472841131f8b32",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/prismatic-atlas-v16/prismatic-atlas-media-v16.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/prismatic-atlas-v16/prismatic-atlas-media-v16.tar.gz"
   },
   "files": [
     "media/captions.vtt",
@@ -16,7 +16,7 @@
   "external_media": [
     {
       "name": "prismatic-atlas-film.mp4",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/prismatic-atlas-v16/prismatic-atlas-film.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/prismatic-atlas-v16/prismatic-atlas-film.mp4",
       "bytes": 53044891,
       "sha256": "d74a44ba17f2443d464206ab1dfb9c03f5e5d5e9a8b06ca796bf620de318f58f"
     }

@@ -44,8 +44,35 @@ class SearchTests(unittest.TestCase):
             for name in pages:
                 p=output/name; p.parent.mkdir(parents=True,exist_ok=True)
                 p.write_text('<html><head><title>A sample</title><meta name="description" content="A real sample."></head><body><h1>A sample</h1></body></html>')
-        build_search(output,catalog,origin,path,'test-revision')
+        options = {'origin': origin} if origin is not None else {}
+        build_search(output,catalog,base_path=path,revision='test-revision',**options)
         return catalog
+
+    def test_default_deployment_targets_current_pages_host(self):
+        # A successful Pages deployment can otherwise publish canonical URLs
+        # for a retired account. Exercise the actual default, not a test origin.
+        with tempfile.TemporaryDirectory() as directory:
+            out=Path(directory)
+            self.make_site(out,None,'/codex-film-studio/')
+            base='https://leoguolabs.github.io/codex-film-studio/'
+            urls=[n.text for n in ET.parse(out/'sitemap.xml').findall(
+                '{http://www.sitemaps.org/schemas/sitemap/0.9}url/'
+                '{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+            self.assertIn(base+'zh/cases/whiteboard-rebuild/',urls)
+            for url in urls:
+                self.assertTrue(url.startswith(base),url)
+                target=out/url[len(base):]
+                target=target/'index.html' if url.endswith('/') else target
+                source=target.read_text();doc=Document(source)
+                self.assertEqual(doc.attrs('link',rel='canonical')[0]['href'],url)
+                for link in doc.attrs('link',rel='alternate'):
+                    self.assertIn(link['href'],urls)
+                self.assertNotIn('https://visiontrail.github.io',source)
+                self.assertNotIn('https://github.com/visiontrail/',source)
+            self.assertIn(base+'sitemap.xml',(out/'robots.txt').read_text())
+            for name in ['catalog/studio.mjs','catalog/agent-start.mjs']:
+                self.assertNotIn('https://visiontrail.github.io',(ROOT/name).read_text())
+                self.assertNotIn('https://github.com/visiontrail/',(ROOT/name).read_text())
 
     def test_static_language_pages_and_sitemap_under_root_and_project_path(self):
         for prefix in ['/', '/codex-film-studio/']:

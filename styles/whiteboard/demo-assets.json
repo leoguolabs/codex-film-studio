@@ -6,13 +6,13 @@
         "name": "whiteboard-short-inputs.tar.gz",
         "bytes": 6191367,
         "sha256": "168157fd025e38a3a419cf0a37e163e7f4837da536ebbf8927772f6eff99ddd2",
-        "url": "https://github.com/visiontrail/codex-film-studio/releases/download/v0.1.0/whiteboard-short-inputs.tar.gz"
+        "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/v0.1.0/whiteboard-short-inputs.tar.gz"
       },
       "video": {
         "name": "does-ai-help-you-learn-3min.mp4",
         "bytes": 32014920,
         "sha256": "9db8ae139d3ccbc7e576bb40a790ab8baded687fed897d6a9a43325f8b431df9",
-        "url": "https://github.com/visiontrail/codex-film-studio/releases/download/v0.1.0/does-ai-help-you-learn-3min.mp4"
+        "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/v0.1.0/does-ai-help-you-learn-3min.mp4"
       }
     },
     "long": {
@@ -20,13 +20,13 @@
         "name": "whiteboard-long-inputs.tar.gz",
         "bytes": 26649344,
         "sha256": "59c5c5a739ec67954cd32825c9457287306d83b7ccfa34eb49104d5da45375e5",
-        "url": "https://github.com/visiontrail/codex-film-studio/releases/download/v0.1.0/whiteboard-long-inputs.tar.gz"
+        "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/v0.1.0/whiteboard-long-inputs.tar.gz"
       },
       "video": {
         "name": "does-ai-help-you-learn-long.mp4",
         "bytes": 69155105,
         "sha256": "b3990bb14fbae1ce44a8725a1547c8bd40413ce08f9cf28dea9b7711dfc60ee2",
-        "url": "https://github.com/visiontrail/codex-film-studio/releases/download/v0.1.0/does-ai-help-you-learn-long.mp4"
+        "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/v0.1.0/does-ai-help-you-learn-long.mp4"
       }
     }
   }

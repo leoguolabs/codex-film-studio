@@ -1,6 +1,6 @@
 # The Film Studio homepage
 
-Site URL: <https://visiontrail.github.io/codex-film-studio/>.
+Site URL: <https://leoguolabs.github.io/codex-film-studio/>.
 
 The source now builds a unified style library at the root and keeps the existing
 whiteboard player at `styles/whiteboard/studio/index.html`. The English and Chinese
@@ -289,16 +289,23 @@ no-JavaScript reading and desktop/mobile layout.
 
 ### Canonical origin and crawler policy
 
-Defaults are `--site-origin https://visiontrail.github.io` and
-`--base-path /codex-film-studio/`. A custom-domain deployment can build with
+Defaults are `--site-origin https://leoguolabs.github.io` and
+`--base-path /codex-film-studio/`. The Pages workflow explicitly supplies this
+origin so the deployed canonical URLs match the current account. A custom-domain
+deployment can build with
 `--site-origin https://your-domain.example --base-path /`. Configuring DNS,
 GitHub Pages' custom-domain setting and redirects is a separate deployment
 change; changing these build arguments alone does not register a domain.
 
+Approved Release archives keep their original checksums. During site assembly,
+repository links in their published media manifests are updated to the current
+repository; the input archives and media digests remain unchanged.
+
 Robots rules apply at the **origin root**. For the current project site, crawlers
-read `https://visiontrail.github.io/robots.txt`, not
-`https://visiontrail.github.io/codex-film-studio/robots.txt`. The origin-root
-URL returned HTTP 404 during the 2026-10-26 audit, so it did not block crawling.
+read `https://leoguolabs.github.io/robots.txt`, not
+`https://leoguolabs.github.io/codex-film-studio/robots.txt`. The retired account's
+origin-root URL returned HTTP 404 during the 2026-10-26 audit. Recheck the current
+origin when diagnosing crawl restrictions.
 The generated project robots file documents the intended policy and works when
 this artifact is deployed at an origin root. It cannot override a future
 origin-wide restriction. Do not change another repository's root policy as
@@ -311,14 +318,14 @@ HTTP fetch do not establish indexing or citation by an AI answer.
 
 ### Google Search Console
 
-Use the URL-prefix property `https://visiontrail.github.io/codex-film-studio/`.
+Use the URL-prefix property `https://leoguolabs.github.io/codex-film-studio/`.
 `site-verification/google4f5a2a3073124a07.html` is the public verification document
 provided by Google for the owner's property; the build copies it to the site
 root unchanged. It is public ownership proof, not an API key. Keep it deployed
 after verification.
 
 After a successful deployment, verify that property and submit
-`https://visiontrail.github.io/codex-film-studio/sitemap.xml`. Use URL Inspection
+`https://leoguolabs.github.io/codex-film-studio/sitemap.xml`. Use URL Inspection
 for the English/Chinese homepages and representative style guides. Check Page
 indexing and the Search results performance report after Google processes data.
 Track impressions, clicks, queries and landing pages; do not infer ranking or

@@ -7,7 +7,7 @@ uses an external source bundle, as described in [reproduction](../../methods/rep
 
 The [style guide](STYLE.md) describes an animated chart interface with expressive endpoint tokens, event cards and comic accents. The [starter](starter/) supplies an empty input contract and generic frame-review/encoder-coordination tools.
 
-Explore the [independent style page](https://visiontrail.github.io/codex-film-studio/styles/line-chart-comedy/showcase/index.html), with bilingual copy, an interactive motion study and a reusable authoring path. The motion study is schematic; the page separately links released films. The blank starter contains no subject data.
+Explore the [independent style page](https://leoguolabs.github.io/codex-film-studio/styles/line-chart-comedy/showcase/index.html), with bilingual copy, an interactive motion study and a reusable authoring path. The motion study is schematic; the page separately links released films. The blank starter contains no subject data.
 
 Status: **renderer-ready**. A new production must author its data transformation, narration, chart events, camera plan and score using the included renderer. Published films and local original-source bundles are recorded separately from this blank package.
 

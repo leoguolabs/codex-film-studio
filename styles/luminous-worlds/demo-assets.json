@@ -4,7 +4,7 @@
     "name": "luminous-worlds-media-v51.tar.gz",
     "bytes": 86392,
     "sha256": "c945610d78feb87d7a93e04f91f52e571ade9475c1d31e8cbfc5a837bf136088",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/luminous-worlds-v51/luminous-worlds-media-v51.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/luminous-worlds-v51/luminous-worlds-media-v51.tar.gz"
   },
   "files": [
     "media/GeneralUser-LICENSE.txt",
@@ -17,7 +17,7 @@
   "external_media": [
     {
       "name": "luminous-worlds-film.mp4",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/luminous-worlds-v51/luminous-worlds-film.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/luminous-worlds-v51/luminous-worlds-film.mp4",
       "bytes": 82349703,
       "sha256": "056e1bb9396581778b0b88fbb96cf79df33d242b8845578ca916c5518a358cdf"
     }

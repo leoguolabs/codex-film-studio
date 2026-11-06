@@ -13,10 +13,10 @@ The catalog records local showcase pages separately from a published demo.
 
 ## Explore the style
 
-[Open the Sci-Fi Sitcom Toon page](https://visiontrail.github.io/codex-film-studio/styles/scifi-sitcom/showcase/index.html)
+[Open the Sci-Fi Sitcom Toon page](https://leoguolabs.github.io/codex-film-studio/styles/scifi-sitcom/showcase/index.html)
 for the finished English sample, a bilingual visual guide, an interactive expression
 study and copyable creation prompts. The original reference and frame controls
-remain on the [comparison page](https://visiontrail.github.io/codex-film-studio/styles/scifi-sitcom/showcase/comparison.html).
+remain on the [comparison page](https://leoguolabs.github.io/codex-film-studio/styles/scifi-sitcom/showcase/comparison.html).
 The study illustrates generic expression and timing; its figures are not a required
 cast for new productions.
 

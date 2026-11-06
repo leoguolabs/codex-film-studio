@@ -5,7 +5,7 @@ need authored scenes, source assets and accepted audio. Original-sample replay
 uses an external source bundle, as described in [reproduction](../../methods/reproduction.md).
 
 
-[**Open the Art Collage page / 打开艺术拼贴独立页面 ↗**](https://visiontrail.github.io/codex-film-studio/styles/art-collage/showcase/index.html)
+[**Open the Art Collage page / 打开艺术拼贴独立页面 ↗**](https://leoguolabs.github.io/codex-film-studio/styles/art-collage/showcase/index.html)
 
 **Package status: renderer-ready / 可执行制作包.** Paper materials, cutouts, typography, physical motion and review rules.
 

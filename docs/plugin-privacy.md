@@ -8,4 +8,4 @@ Codex processes prompts and any files it reads under the terms and settings of y
 
 The plugin keeps local project files until you remove them. Download and model caches are managed by the corresponding package or model tools. Removing the plugin does not delete your independent projects. You can delete a project and its backups or clear the relevant tool caches yourself. Codex and any external providers apply their own retention policies to requests they receive. Public sharing is a separate action.
 
-For plugin privacy questions, contact LeoGuoLabs through the [project support page](https://github.com/visiontrail/codex-film-studio/issues). Reports on that page are public. Please describe the issue without including private scripts, recordings or credentials.
+For plugin privacy questions, contact LeoGuoLabs through the [project support page](https://github.com/leoguolabs/codex-film-studio/issues). Reports on that page are public. Please describe the issue without including private scripts, recordings or credentials.

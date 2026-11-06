@@ -1,9 +1,9 @@
 # Whiteboard studio
 
 This is the editable whiteboard template from
-[Codex Film Studio](https://github.com/visiontrail/codex-film-studio).
+[Codex Film Studio](https://github.com/leoguolabs/codex-film-studio).
 
-Start with the repository's [setup and sample rebuild instructions](https://github.com/visiontrail/codex-film-studio#rebuild-the-whiteboard-sample).
+Start with the repository's [setup and sample rebuild instructions](https://github.com/leoguolabs/codex-film-studio#rebuild-the-whiteboard-sample).
 `content/narration.json` and `src/film.mjs` hold the short example. The separate
 long edition uses `editions/long/content/` and `src/long-film.mjs`.
 

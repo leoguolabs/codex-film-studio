@@ -5,7 +5,7 @@ need authored scenes, source assets and accepted audio. Original-sample replay
 uses an external source bundle, as described in [reproduction](../../methods/reproduction.md).
 
 
-[Open the independent style page](https://visiontrail.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=en) · [中文风格页](https://visiontrail.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=zh)
+[Open the independent style page](https://leoguolabs.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=en) · [中文风格页](https://leoguolabs.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=zh)
 
 The page contains an original, silent interactive material study, creation steps
 and source references. It is separate from the blank production kit; the page also links released films.

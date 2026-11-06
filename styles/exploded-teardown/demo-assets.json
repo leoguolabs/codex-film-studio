@@ -4,7 +4,7 @@
     "name": "exploded-teardown-page-assets-v1.tar.gz",
     "bytes": 866146,
     "sha256": "ca9a67e0477e0f6824a8a0591eeb324da41f531f0d79da6e7ededfbd6fec3961",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/exploded-teardown-films-v1/exploded-teardown-page-assets-v1.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/exploded-teardown-films-v1/exploded-teardown-page-assets-v1.tar.gz"
   },
   "files": [
     "media/detail.jpg",
@@ -24,13 +24,13 @@
   "external_media": [
     {
       "name": "inside-an-imaging-satellite.mp4",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/exploded-teardown-films-v1/inside-an-imaging-satellite.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/exploded-teardown-films-v1/inside-an-imaging-satellite.mp4",
       "bytes": 63115045,
       "sha256": "9e101c5fc95ace1f8a82b5ea8c46cfcc397037bc8f207d94c1a8ff843feeba13"
     },
     {
       "name": "inside-a-keystroke.mp4",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/exploded-teardown-films-v1/inside-a-keystroke.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/exploded-teardown-films-v1/inside-a-keystroke.mp4",
       "bytes": 68101896,
       "sha256": "254a7611510ef9729d99f62031eea8751b8043198a96248cd4bb7e1c171e61a1"
     }

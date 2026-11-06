@@ -40,7 +40,7 @@ preview is available on the style page.
 
 Open the library's `styles/caption-news/showcase/index.html` for an original type study,
 visual rules, bilingual navigation and a screening room. Watch the
-[complete online film preview](https://visiontrail.github.io/codex-film-studio/styles/caption-news/showcase/index.html#screening).
+[complete online film preview](https://leoguolabs.github.io/codex-film-studio/styles/caption-news/showcase/index.html#screening).
 For local production playback, from the library
 root, run `python3 scripts/serve_styles.py --port 8249`, then open
 <http://127.0.0.1:8249/styles/caption-news/showcase/index.html>.

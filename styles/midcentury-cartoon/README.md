@@ -13,7 +13,7 @@ The catalog records local showcase pages separately from a published demo.
 
 ## Independent style page
 
-[Open the bilingual style page](https://visiontrail.github.io/codex-film-studio/styles/midcentury-cartoon/showcase/index.html).
+[Open the bilingual style page](https://leoguolabs.github.io/codex-film-studio/styles/midcentury-cartoon/showcase/index.html).
 Watch the short or long film, explore an original hand-to-switch print study,
 and use the style notes, Agent prompts to start a new film.
 The retained frame comparison and motion review are linked from the page.

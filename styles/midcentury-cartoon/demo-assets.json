@@ -4,7 +4,7 @@
     "name": "midcentury-cartoon-showcase-v1.tar.gz",
     "bytes": 326860964,
     "sha256": "15eab900d9fce81188d82dd6bb52635f1ee34069d0f6407b9e2417291df80c8f",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/style-showcases-v1/midcentury-cartoon-showcase-v1.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/style-showcases-v1/midcentury-cartoon-showcase-v1.tar.gz"
   },
   "mounts": {
     "midcentury-short": "_assets",

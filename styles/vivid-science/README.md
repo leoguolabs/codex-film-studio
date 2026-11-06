@@ -13,9 +13,9 @@ requirements apply to the delivered result.
 
 ## Independent style page
 
-[Open the style page](https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en) ·
-[中文风格页](https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh) ·
-[Watch the film](https://visiontrail.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening)
+[Open the style page](https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en) ·
+[中文风格页](https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh) ·
+[Watch the film](https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening)
 
 The bilingual page brings together a finished-film screening, chapters, an
 English transcript, original generic style studies and the prompt-first creation

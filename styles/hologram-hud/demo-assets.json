@@ -4,7 +4,7 @@
     "name": "hologram-hud-media-v60.tar.gz",
     "bytes": 265883,
     "sha256": "49e7d212d4cbb8fdf59ba4f268b4d1b69697d46e67d5be0f9b7fbdf5f4651661",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/hologram-hud-v60/hologram-hud-media-v60.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/hologram-hud-v60/hologram-hud-media-v60.tar.gz"
   },
   "files": [
     "media/captions.vtt",
@@ -16,7 +16,7 @@
   "external_media": [
     {
       "name": "lyra-v60-web-1080p.mp4",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/hologram-hud-v60/lyra-v60-web-1080p.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/hologram-hud-v60/lyra-v60-web-1080p.mp4",
       "bytes": 59453796,
       "sha256": "fd131e023bc0fb09a43cc29a5f3c7cc8410d2b8763890b7ecf72900e7361b379"
     }

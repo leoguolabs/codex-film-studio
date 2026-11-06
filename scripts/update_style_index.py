@@ -7,7 +7,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = 'https://visiontrail.github.io/codex-film-studio/'
+SITE = 'https://leoguolabs.github.io/codex-film-studio/'
 LOCAL_SITE = 'http://127.0.0.1:8249/'
 
 

@@ -3,8 +3,8 @@
 A reusable vocabulary for saturated vector science films: inhabited environments,
 isometric volumes, clear mechanisms and purposeful changes of scale.
 
-- [Independent style page](https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en) · [中文独立页面](https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=zh)
-- [Watch the complete sample](https://visiontrail.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening)
+- [Independent style page](https://leoguolabs.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en) · [中文独立页面](https://leoguolabs.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=zh)
+- [Watch the complete sample](https://leoguolabs.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening)
 - [Style guide](STYLE.md)
 - [Generic geometry and timing helpers](starter/lib/atlas.mjs)
 - [Generic motion and attachment helpers](starter/lib/motion.mjs)

@@ -1,5 +1,5 @@
 // A shared, prompt-first entry point. Production commands belong to the Agent.
-const REPO = 'https://github.com/visiontrail/codex-film-studio';
+const REPO = 'https://github.com/leoguolabs/codex-film-studio';
 export function filmPrompt(style, language = 'en', mode = 'new') {
   if (mode === 'replay') return language === 'zh'
     ? `请用 Codex Film Studio 原样复刻 ${style} 的样片：[样片标题或链接]。请你查找可用的原始工程、素材和配音，创建独立制作项目，完成环境准备、渲染与检查，交付 MP4 和可编辑工程。如果缺少源工程或素材，请明确告诉我缺什么；不要用新编内容代替原片。`

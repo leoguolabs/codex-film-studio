@@ -4,7 +4,7 @@
     "name": "scifi-sitcom-stable-v10.tar.gz",
     "bytes": 47561228,
     "sha256": "28e5b6c4d67ba926e403316b305e64d43a937ad267bdc6cab6059e38979c25e6",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/scifi-sitcom-stable-v10/scifi-sitcom-stable-v10.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/scifi-sitcom-stable-v10/scifi-sitcom-stable-v10.tar.gz"
   },
   "mounts": {
     "scifi-review": "_assets"

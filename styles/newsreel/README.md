@@ -1,6 +1,6 @@
 # Newsreel
 
-[Watch the double feature and explore the style](https://visiontrail.github.io/codex-film-studio/styles/newsreel/showcase/).
+[Watch the double feature and explore the style](https://leoguolabs.github.io/codex-film-studio/styles/newsreel/showcase/).
 
 Warm monochrome, spinning headlines, nine-card paper montages, left-spine page turns and period transitions. See [STYLE.md](STYLE.md) for the visual rules and [PROVENANCE.md](PROVENANCE.md) for the reference.
 

@@ -5,7 +5,7 @@ need authored scenes, source assets and accepted audio. Original-sample replay
 uses an external source bundle, as described in [reproduction](../../methods/reproduction.md).
 
 
-[Open the Art Deco style page](https://visiontrail.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=en) · [中文独立风格页](https://visiontrail.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=zh)
+[Open the Art Deco style page](https://leoguolabs.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=en) · [中文独立风格页](https://leoguolabs.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=zh)
 
 Explore a 16-second interactive material study, palette, drawing and motion rules,
 and prompts to start a film with your Agent. The original study uses the reusable toolkit; it is

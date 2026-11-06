@@ -1,6 +1,6 @@
 # LiDAR Survey · 点云测绘
 
-Explore the [independent style page](https://visiontrail.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html),
+Explore the [independent style page](https://leoguolabs.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html),
 with English and Chinese copy, an interactive synthetic point-cloud study,
 visual principles, creation steps and source credits.
 

@@ -29,4 +29,4 @@ to the executable timeline. Supply declared `frontFile`/`backFile` images,
 `profile` (`rounded` or `hinge`). The source-page image stays attached to the
 curved sheet; occlusion and face selection follow its projected strips.
 
-Use `npm run doctor`, `npm run preview -- --start 0 --end 96 --width 640`, `npm run build`, `npm run verify -- media/film.mp4` and `npm run serve` in the independent project. Frame ranges use the production FPS. Original-source availability and rebuild scope are listed independently in [the capability table](https://github.com/visiontrail/codex-film-studio/blob/main/styles/README.md#capabilities--能力与网页).
+Use `npm run doctor`, `npm run preview -- --start 0 --end 96 --width 640`, `npm run build`, `npm run verify -- media/film.mp4` and `npm run serve` in the independent project. Frame ranges use the production FPS. Original-source availability and rebuild scope are listed independently in [the capability table](https://github.com/leoguolabs/codex-film-studio/blob/main/styles/README.md#capabilities--能力与网页).

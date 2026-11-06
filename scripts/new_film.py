@@ -36,7 +36,7 @@ def project_text(text):
             .replace("../scripts/frame_review", "tools/frame_review")
             .replace("../../methods/", "methods/")
             .replace("../../CONTRIBUTING.md",
-                     "https://github.com/visiontrail/codex-film-studio/blob/main/CONTRIBUTING.md")
+                     "https://github.com/leoguolabs/codex-film-studio/blob/main/CONTRIBUTING.md")
             .replace("../../LICENSE", "LICENSE"))
 
 
@@ -95,7 +95,7 @@ def create(name, style, root=ROOT, output=None):
             text = project_text(path.read_text())
             if path.parent == style_root:
                 text = re.sub(r'\]\((showcase/[^)]+)\)',
-                              lambda m: f'](https://visiontrail.github.io/codex-film-studio/styles/{style}/{m[1]})', text)
+                              lambda m: f'](https://leoguolabs.github.io/codex-film-studio/styles/{style}/{m[1]})', text)
             (destination / target).write_text(text, encoding="utf-8")
         else:
             shutil.copy2(path, destination / target)
@@ -108,7 +108,7 @@ def create(name, style, root=ROOT, output=None):
             text = text.replace("../scripts/frame_review", "../tools/frame_review")
             text = text.replace("`scripts/frame_review/", "`../tools/frame_review/")
             text = text.replace("(../styles/README.md)",
-                                "(https://github.com/visiontrail/codex-film-studio/blob/main/styles/README.md)")
+                                "(https://github.com/leoguolabs/codex-film-studio/blob/main/styles/README.md)")
             path.write_text(text, encoding="utf-8")
         # Root workflow/review copies have a different base directory from methods/.
         for source_path, target in copies:

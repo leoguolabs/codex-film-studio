@@ -4,7 +4,7 @@
     "name": "crayon-book-showcase-v1.tar.gz",
     "bytes": 243762975,
     "sha256": "a83140511cb96138fdad1da7bd8f169fe54c3a2953ad15c9efdb437fe9dfb55b",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/style-showcases-v1/crayon-book-showcase-v1.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/style-showcases-v1/crayon-book-showcase-v1.tar.gz"
   },
   "mounts": {
     "crayon-film": "_assets",

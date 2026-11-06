@@ -29,7 +29,7 @@ document.querySelector('[data-film-play]').addEventListener('click',async()=>{if
 const stamp=document.querySelector('.lab-stamp');document.querySelector('#stamp').addEventListener('click',()=>{stamp.classList.remove('slam');void stamp.offsetWidth;stamp.classList.add('visible','slam')});
 try{
  const url=new URL('media/films.json',location.href);const response=await fetch(url);if(!response.ok)throw new Error(response.status);const data=await response.json();film=data.films?.[0];
- if(!film || film.file!=='https://github.com/visiontrail/codex-film-studio/releases/download/halftone-dossier-preview-v1/coffee-case-en.mp4')throw new Error('Unexpected film source');
+ if(!film || film.file!=='https://github.com/leoguolabs/codex-film-studio/releases/download/halftone-dossier-preview-v1/coffee-case-en.mp4')throw new Error('Unexpected film source');
  chapters=film.chapters??[];renderChapters();renderFilm();document.querySelector('[data-film-screening]').dataset.ready='true';
  const transcript=await fetch(new URL('media/transcript.json',location.href));if(!transcript.ok)throw new Error(transcript.status);const rows=await transcript.json();const box=document.querySelector('[data-transcript]');rows.forEach(s=>{const p=document.createElement('p');p.textContent=s.text;box.append(p)});
 }catch(e){document.querySelector('[data-chapters]').hidden=true;document.querySelector('.transcript').hidden=true;console.error('Optional film details unavailable',e)}

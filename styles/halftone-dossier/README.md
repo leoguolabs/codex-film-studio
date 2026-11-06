@@ -1,7 +1,7 @@
 # Halftone Dossier / 复古半调案卷
 
 Warm paper, spot-ink dots, offset headlines and physical stamps turn a story into
-a sequence of exhibits. Explore the [independent style page](https://visiontrail.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html),
+a sequence of exhibits. Explore the [independent style page](https://leoguolabs.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html),
 including a complete English-narrated sample, visual grammar and an interactive
 print study. Page explanations support English and Chinese; the film stays English.
 

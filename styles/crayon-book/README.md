@@ -1,6 +1,6 @@
 # Crayon Picture Book · 蜡笔绘本
 
-[Open the style page](https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en) · [打开中文风格页](https://visiontrail.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh)
+[Open the style page](https://leoguolabs.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en) · [打开中文风格页](https://leoguolabs.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh)
 
 The bilingual page includes the retained film and chapter navigation, wax/paper
 principles, a prompt-first creation path, production notes and reference credits.

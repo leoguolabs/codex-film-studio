@@ -81,7 +81,7 @@ Credits retained from the production records:
   LemoLab's [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar), by
   [@lemomo_ai](https://x.com/lemomo_ai). These are the new productions' frames.
 
-Caption News footage and reporting credits remain in the [film source notes](https://visiontrail.github.io/codex-film-studio/styles/caption-news/showcase/media/credits.html).
+Caption News footage and reporting credits remain in the [film source notes](https://leoguolabs.github.io/codex-film-studio/styles/caption-news/showcase/media/credits.html).
 The additional sample frames retain their films’ credits in the released
 `showcase/media/credits.html` files. Exact released-video URLs (or archive
 members), source hashes and frame numbers are recorded in `frames.json`.

@@ -4,7 +4,7 @@
     "name": "newsreel-page-assets-en-v3.tar.gz",
     "bytes": 306886,
     "sha256": "0c14e649a2e12928fb09dfa05e4737e80c64ba2c51fc274d9fcf82f1f806cef9",
-    "url": "https://github.com/visiontrail/codex-film-studio/releases/download/newsreel-english-v3/newsreel-page-assets-en-v3.tar.gz"
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/newsreel-english-v3/newsreel-page-assets-en-v3.tar.gz"
   },
   "files": [
     "media/credits.html",
@@ -18,13 +18,13 @@
   "external_media": [
     {
       "name": "subway.mp4",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/newsreel-english-v3/subway.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/newsreel-english-v3/subway.mp4",
       "bytes": 36447687,
       "sha256": "fe0c25fc2891ad365309f57cda9388c7a60b7670de8a19e8abeb6863dd4ca270"
     },
     {
       "name": "weekend.mp4",
-      "url": "https://github.com/visiontrail/codex-film-studio/releases/download/newsreel-english-v3/weekend.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/newsreel-english-v3/weekend.mp4",
       "bytes": 42875883,
       "sha256": "80ba69aeec6b65cf1a3a2b1378bc9e898f7dae31aa8e1bd4e97033f24be962a4"
     }

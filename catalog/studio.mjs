@@ -1,6 +1,6 @@
 import copy from './strings.mjs';
-const REPO = 'https://github.com/visiontrail/codex-film-studio';
-const SITE = 'https://visiontrail.github.io/codex-film-studio/';
+const REPO = 'https://github.com/leoguolabs/codex-film-studio';
+const SITE = 'https://leoguolabs.github.io/codex-film-studio/';
 const LOCAL_SITE = 'http://127.0.0.1:8249/';
 const SITE_ROOT = new URL(document.documentElement.dataset.siteRoot ?? './', location.href);
 let PAGE_LANGUAGE = document.documentElement.dataset.pageLanguage;

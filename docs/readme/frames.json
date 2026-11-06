@@ -89,7 +89,7 @@
     },
     {
       "style": "scifi-sitcom",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/scifi-sitcom-stable-v10/scifi-sitcom-stable-v10.tar.gz#_assets/media/the-house-gets-coffee-stable-v10.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/scifi-sitcom-stable-v10/scifi-sitcom-stable-v10.tar.gz#_assets/media/the-house-gets-coffee-stable-v10.mp4",
       "source_sha256": "2669522be2d3ce0aad29f18571f87db5466c45c827b67e5d74cc012a6edc6f37",
       "title": "The House Gets Coffee · Stable V10",
       "title_zh": "庄家去买咖啡 · 稳定版 V10",
@@ -106,7 +106,7 @@
     },
     {
       "style": "microgame",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/microgame-finished-films-v1.tar.gz#media/film-01.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/finished-style-films-v1/microgame-finished-films-v1.tar.gz#media/film-01.mp4",
       "source_sha256": "550c98077cdcc2c0a8891a0f10283236ff3b49310e91d958a870315b2d37d82b",
       "title": "Midnight Bakery",
       "title_zh": "午夜烘焙坊",
@@ -123,7 +123,7 @@
     },
     {
       "style": "art-deco",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/art-deco-finished-films-v1.tar.gz#media/film-01.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/finished-style-films-v1/art-deco-finished-films-v1.tar.gz#media/film-01.mp4",
       "source_sha256": "4b7b57ffb6db1b55fd9b15f3273e3c43731c8baca26774fa8c8ba949e3e8cbc3",
       "title": "The Last Frequency",
       "title_zh": "最后的频率",
@@ -154,7 +154,7 @@
     },
     {
       "style": "caption-news",
-      "source_video": "https://visiontrail.github.io/codex-film-studio/styles/caption-news/showcase/media/film.mp4",
+      "source_video": "https://leoguolabs.github.io/codex-film-studio/styles/caption-news/showcase/media/film.mp4",
       "source_sha256": "33b499f1f1fb2206a40771126aeee066089c3aabab448ca612908c63470584d6",
       "title": "Caption News · Full film preview",
       "title_zh": "字幕新闻 · 完整影片预览",
@@ -185,7 +185,7 @@
     },
     {
       "style": "line-chart-comedy",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/line-chart-comedy-finished-films-v1.tar.gz#media/film-01.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/finished-style-films-v1/line-chart-comedy-finished-films-v1.tar.gz#media/film-01.mp4",
       "source_sha256": "def6d7c4414656e7254777f48cff7485bf47122a5b7bfd67cc5898ecb70d6818",
       "title": "Eight Economies, 1950–2026",
       "title_zh": "八个经济体，1950–2026",
@@ -202,7 +202,7 @@
     },
     {
       "style": "lidar-survey",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-film-01.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/finished-style-films-v1/lidar-survey-film-01.mp4",
       "source_sha256": "6ae3119689d2b937adebfb6889da54da201978734ac78df01bab2ef26b5079f6",
       "title": "The Height of a Forest",
       "title_zh": "一片森林的高度",
@@ -219,7 +219,7 @@
     },
     {
       "style": "newsreel",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/newsreel-english-v3/subway.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/newsreel-english-v3/subway.mp4",
       "source_sha256": "fe0c25fc2891ad365309f57cda9388c7a60b7670de8a19e8abeb6863dd4ca270",
       "title": "Under the City · Newsreel English edition v3",
       "title_zh": "城市之下 · 复古新闻片英文版 V3",
@@ -253,7 +253,7 @@
     },
     {
       "style": "halftone-dossier",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/halftone-dossier-preview-v1/halftone-dossier-preview-v1.tar.gz#media/coffee-case-en.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/halftone-dossier-preview-v1/halftone-dossier-preview-v1.tar.gz#media/coffee-case-en.mp4",
       "source_sha256": "001b427e11b6f505a1fd79ab25e713189d3a11f7ec20de876c29da3a316a3e49",
       "title": "The Coffee Case",
       "title_zh": "消失的咖啡时间案",
@@ -270,7 +270,7 @@
     },
     {
       "style": "prismatic-atlas",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/prismatic-atlas-v16/prismatic-atlas-film.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/prismatic-atlas-v16/prismatic-atlas-film.mp4",
       "source_sha256": "d74a44ba17f2443d464206ab1dfb9c03f5e5d5e9a8b06ca796bf620de318f58f",
       "title": "The Secret Life of a Snowflake",
       "title_zh": "雪花的秘密一生",
@@ -304,7 +304,7 @@
     },
     {
       "style": "luminous-worlds",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/luminous-worlds-v51/luminous-worlds-film.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/luminous-worlds-v51/luminous-worlds-film.mp4",
       "source_sha256": "056e1bb9396581778b0b88fbb96cf79df33d242b8845578ca916c5518a358cdf",
       "title": "The Sleeping World",
       "title_zh": "沉睡的世界",
@@ -321,7 +321,7 @@
     },
     {
       "style": "vivid-science",
-      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/vivid-science-v32/vivid-science-film.mp4",
+      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/vivid-science-v32/vivid-science-film.mp4",
       "source_sha256": "60f968714d1e900292e4784fbd1cf9fa6d8f25b81fea7a10fb0b600f19917967",
       "title": "The Ocean’s Night Shift",
       "title_zh": "海洋的夜班",
