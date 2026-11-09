@@ -21,4 +21,4 @@ Write new narration. An energetic period voice can use narrow bandwidth, gentle 
 
 Create fresh narration and visual inputs for the new subject. Inspect corresponding effect phases, not global timestamps of unrelated stories. Decode every delivery frame and inspect consecutive frames for continuity; enlarge typography, paper edges, page hinges and contact points. Check playback and listening separately. Record the resolution and scope of real observations. A successful render or ASR match does not demonstrate style equivalence.
 
-The package is an authoring starter. It includes an empty contract and production/review guidance. The page's interactive study demonstrates a subset of effects and is not a general film renderer. A new production still requires its own scene renderer, source treatment and audio pipeline.
+The package includes an executable material renderer, empty timeline, licensed fonts and shared audio/export pipeline; see TOOLS.md. The interactive page is a separate study. For the original films' exact composition, restore the external source bundle. New subjects require new scenes, sources and sound cues.

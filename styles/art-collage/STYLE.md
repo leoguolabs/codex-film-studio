@@ -67,8 +67,8 @@ discarding the reference's scale, layering, camera behaviour or material quality
    jobs. Never stop another project's encoder to gain capacity.
 
 The starter's `lib/paper.mjs` supplies deterministic torn-paper geometry,
-dimension-safe material loading and cutout compositing. It deliberately has no
-story renderer or supplied portrait. Author shots for the new subject.
+dimension-safe material loading and cutout compositing. The shared runtime now supplies frame rendering and delivery tools;
+`lib/scene.mjs` applies these materials to authored layers. No portrait is supplied.
 
 ## Compare and repair
 

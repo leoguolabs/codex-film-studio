@@ -1,0 +1,18 @@
+{
+  "upstream": "https://github.com/lemomo-ai/lemo-opuscar",
+  "revision": "02dce5b6ff6210622788c15319c082e9cb9e7217",
+  "upstream_paths": [
+    "styles/midcentury-toon/demo/engine/toon.js",
+    "styles/midcentury-toon/demo/engine/chars.js"
+  ],
+  "license": "MIT",
+  "adaptation": [
+    "Canvas backend import",
+    "Generic hand only; no sample cast",
+    "Cap hand ink at screen-readable widths"
+  ],
+  "files": {
+    "toon.mjs": "413a493b3c3aacf7d4731dcfef67d4635e7f794e29c2af0612173746f505b14f",
+    "hand.mjs": "5ea6d4d516366ad047b5d35bcd908f482a9d2c1c1b30f2d0da8b1e540eb2ff30"
+  }
+}

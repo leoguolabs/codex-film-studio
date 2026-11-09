@@ -3,7 +3,7 @@
 A subject-independent material and production method for tactile, hand-drawn
 picture-book films. Start a production in an external directory and fill in
 `input-contract.json` there. This directory contains no example story, cast,
-narration, edit, media or acceptance record. It is registered as a material toolkit in `styles.json`. Its tools do not
+narration, edit, media or acceptance record. It includes an executable material renderer and a shared production runtime. Its tools do not
 establish that an arbitrary render matches a reference.
 
 ## Visual grammar

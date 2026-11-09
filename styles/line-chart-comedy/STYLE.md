@@ -44,4 +44,4 @@ For different subjects, compare the style: card geometry, hierarchy, line treatm
 
 Inspect native-resolution dense frames and transition intervals in addition to thumbnail coverage. Record which frames were visually inspected, which were only decoded, which playback intervals were checked, and whether audio was perceptually heard. Repair concrete findings, then recheck the encoded replacement. Keep final media, source data, voice recordings, provider details and acceptance records outside this library.
 
-This package is a blank authoring starter and generic review toolkit. It contains no finished film, subject data, narration or composition.
+This package includes a blank chart authoring contract, executable renderer and review toolkit. It contains no finished film, subject data, narration or composition.

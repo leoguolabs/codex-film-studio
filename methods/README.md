@@ -8,6 +8,7 @@ All visual styles and their completion status are in [the style catalog](../styl
 | [WORKFLOW.md](WORKFLOW.md) | Brief, sources, shots, audio, frame timeline, render and delivery |
 | [REVIEW.md](REVIEW.md) | Stills, motion, listening, encoded-file verification and revision evidence |
 | [Reference adaptation](reference-adaptation.md) | Transfer visual functions, motion grammar and aspect-ratio hierarchy |
+| [Frame-by-frame style comparison](frame-style-comparison.md) | Compare visual roles and record the scope of frame inspection |
 | [Media selection](media-selection.md) | Inspect used intervals, preserve source meaning and verify the primary medium |
 | [Aspect-ratio editions](aspect-ratio-editions.md) | Recompose actions and UI, isolate caches and verify each delivery shape |
 | [Revision and delivery](revision-delivery.md) | Re-edit, invalidate affected evidence and retain one authoritative delivery |

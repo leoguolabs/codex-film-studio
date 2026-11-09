@@ -20,11 +20,14 @@ class PackagingTests(unittest.TestCase):
             for name in ["DIRECTOR.md", "TECHNIQUE.md"]:
                 (root / name).write_text(name)
             (root / "styles/whiteboard/STYLE.md").write_text("Whiteboard")
+            (root / "scripts/tts").mkdir(parents=True)
+            (root / "scripts/tts/edge_voice.py").write_text("# shared voice tool")
             (root / "styles.json").write_text(json.dumps({"styles": [{
                 "id": "whiteboard", "template": "styles/whiteboard/studio",
                 "guide": "styles/whiteboard/STYLE.md"}]}))
             dest = create("test-film", "whiteboard", root)
             self.assertTrue((dest / "film.mjs").exists())
+            self.assertEqual((dest / "tools/tts/edge_voice.py").read_text(), "# shared voice tool")
             self.assertEqual(dest, (root.parent / "library-projects" / "test-film").resolve())
             self.assertNotIn(root.resolve(), dest.parents)
             self.assertFalse((dest / "media").exists())

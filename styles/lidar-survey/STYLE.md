@@ -71,10 +71,11 @@ above them. Review the actual mix as well as its loudness measurements.
 ## New production workflow
 
 Fill the blank `content/film.json` contract in the independent project. Select and
-verify data, author a new argument, build its renderer and plan camera, labels
+verify data, author a new argument, extend the supplied renderer and plan camera, labels
 and sound together. Keep raw survey files, generated media, facts and review
-records outside the style library. The package contains a guide and input
-contract; it does not contain a survey loader or a finished film renderer.
+records outside the style library. The package includes a CSV importer, point/surface renderer and empty contract.
+See TOOLS.md. For original-film shaders and measured data, restore the external
+source bundle; its WebGL renderer handles the large native survey.
 
 Inspect encoded stills at native size for point clarity, legible labels, correct
 occlusion and undistorted measurement. Watch the transitions and complete camera

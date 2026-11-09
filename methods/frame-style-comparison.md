@@ -37,6 +37,9 @@ convenient round-number timestamp can cross an iris, wipe or new scene. Keep a
 comparison interval inside one visual role unless transition behavior is the
 explicit comparison target. When a production changes composition, update the
 role mapping with a recorded reason; do not choose ranges to minimize a metric.
+After correcting an interval, inspect the entire replacement window at a stated
+scale. Preserve the earlier mapping and correction reason, then regenerate all
+affected correspondence rows even when the production's pixels did not change.
 
 Store this role mapping separately from nearest-feature retrieval. Use explicit
 half-open source and output intervals, a visual role, an action phase and the
@@ -46,6 +49,22 @@ misleading counterpart; reject gaps and overlaps in output coverage. For
 constant-rate films, mapping the first and last included frames preserves both
 ends even when interval lengths differ. This is comparison indexing, not
 retiming or proof of equal movement. Bind the mapping to both media hashes.
+
+`scripts/frame_review/correspondence.py` expands a production's authored shot contracts
+and reference index into that ledger. Supply the candidate's previously verified
+SHA-256 and decoded frame count, plus paths to every used reference movie; the
+tool checks the movie hashes, reference bounds and complete non-overlapping
+candidate coverage. It starts no FFmpeg process. The output directory must be
+new, so it cannot overwrite an earlier review. Each row preserves the candidate
+action phase, role and reference interval. Normalized positions are explicitly
+provisional navigation, not aligned contact events or aesthetic acceptance.
+
+During a transition that composites two shots, a single counterpart would be
+misleading. Keep those rows as unmatched transition composites, identify the
+incoming shot and its held source frame, and inspect both components separately.
+Also report missing action-phase annotations. Do not turn complete indexing
+coverage into complete observed comparison coverage. Keep the separately viewed
+frame pairs and their findings in the production's review records.
 
 Compare motion in physical playback time as well as normalized shot phase.
 Different shot lengths can make adjacent-frame differences incomparable. Separate
@@ -85,11 +104,41 @@ shot in the recheck when encoding changes propagate beyond the source edit.
 Associate the review ledger with the delivery hash and retain earlier-version
 observations under their original version.
 
+Before reusing an export helper, bind its inputs and output directory explicitly
+to the new revision. Check actual file identity as well as resolved paths:
+different paths can be hard links to the same file. Reject any encoder output
+that shares an inode with an input, and write a new export before replacing a
+delivery link. Validate version substitutions in helper filenames and codec
+settings; word boundaries and filename separators are not interchangeable.
+If a retained export is touched accidentally, restore and verify its original
+hash before using it as comparison evidence.
+
+A previous visual observation may carry forward only for frames whose decoded
+pixels are exactly unchanged and whose earlier inspection is recorded. Bind
+both the equality comparison and the earlier ledger to their media hashes.
+Inspect every changed frame at the declared review resolution, including any
+encoding changes outside the edited shot. Report newly viewed frames separately
+from inherited observations; a small numerical difference is not exact identity.
+Audio identity and listening coverage need their own evidence.
+
+Check the editable rebuild entrypoint separately from rendering isolated frames.
+Pass output paths explicitly from each producer to its consumer; revision names
+in independent defaults can drift while individual modules still run. A dry run
+can verify that the renderer's output is the muxer's input and that subsequent
+checks address the new master. Export into a fresh directory so a reconstruction
+cannot replace the reviewed delivery. Record this as command-wiring validation,
+not as a complete rebuild or a clean dependency installation.
+
 Report coverage in separate fields: all-frame numerical scan, atlas availability,
 actually viewed frames, normal-speed motion, speech transcription, audio signal
 checks and subjective listening. Generating a contact sheet is not viewing it;
 playing a file through a UI is not proof that its sound was heard. Do not convert
 feature differences into an invented similarity percentage.
+
+Keep player overlays separate from authored pixels. Controls, captions supplied
+by the player and display transforms can change the apparent contrast or obscure
+the composition. Recheck a suspected defect in an unobstructed player frame and
+an explicitly decoded image before revising the film.
 
 Record the displayed resolution as well as the stored thumbnail dimensions.
 An image tool may downscale an atlas even when its original detail is requested.

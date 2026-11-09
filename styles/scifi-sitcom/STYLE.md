@@ -98,7 +98,7 @@ the intended occlusion; avoid a glow or rim accidentally covering the speaker.
 Use rounded heavy caption lettering, an off-white fill and a dark outline.
 Speaker indicators may use each character's color. Retro pixel lettering suits
 small world labels and machine readouts. Font licenses and glyph coverage must
-be checked for the requested language. No font is bundled by this starter.
+be checked for the requested language. Licensed fonts are bundled in `fonts/` with a hash and license manifest.
 
 Reserve a caption region before staging people and objects. Wrap by measured
 text width; check at a practical viewing size. Clear captions for intentional
