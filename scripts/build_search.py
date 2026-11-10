@@ -284,12 +284,46 @@ def render_case(case, base, prefix, lang, date, revision):
     sources = ''.join(f'<li><a href="{escape(s["url"], quote=True)}">{escape(s[lang])} ↗</a></li>' for s in case['sources'])
     page = f'''<!doctype html><html lang="{'zh-CN' if zh else 'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101816"><link rel="icon" href="{prefix}catalog/brand/studio-logo.svg{version}"><link rel="stylesheet" href="{prefix}catalog/studio.css{version}"><link rel="stylesheet" href="{prefix}catalog/studio-header.css{version}"><link rel="stylesheet" href="{prefix}catalog/brand.css{version}"></head><body class="guide-page">
 <a class="skip-link" href="#case">{'跳转到正文' if zh else 'Skip to content'}</a><header class="guide-header section-wrap"><a class="footer-brand studio-brand-lockup" href="{home}"><img class="studio-brand-logo" src="{prefix}catalog/brand/studio-logo.svg{version}" width="48" height="48" alt=""><span>CODEX FILM STUDIO</span></a><div class="studio-header-actions"><nav aria-label="Language"><a href="{alternatives['en']}" lang="en" hreflang="en" {'aria-current="page"' if not zh else ''}>EN</a><a href="{alternatives['zh-CN']}" lang="zh-CN" hreflang="zh-CN" {'aria-current="page"' if zh else ''}>中文</a></nav><a class="studio-x-link" href="{AUTHOR}">@LeoGuoLabs</a></div></header>
-<main id="case" class="section-wrap"><nav class="breadcrumbs"><a href="{home}">{'风格片库' if zh else 'Style library'}</a> / {'制作案例' if zh else 'Production walkthrough'}</nav><section class="guide-hero"><div><p class="eyebrow">WHITEBOARD / PUBLIC SAMPLE</p><h1>{escape(content['title'])}</h1><p class="guide-description">{escape(content['description'])}</p>{credit(lang,date,REPO+'/commits/main/catalog/case-studies.json')}</div><figure><img src="{base}docs/readme/previews/whiteboard.{'zh' if zh else 'en'}.jpg" alt="{'白板样片剧照' if zh else 'Whiteboard sample frame'}"><figcaption>{'已发布样片剧照' if zh else 'Published sample frame'}</figcaption></figure></section><article class="case-body"><section><h2>{'观看与获取' if zh else 'Watch and obtain the inputs'}</h2><ul>{links}</ul></section>{''.join(sections)}<section><h2>{'源码与证据' if zh else 'Source and evidence'}</h2><ul>{sources}</ul></section></article></main><footer class="footer section-wrap"><a href="{home}">← {'返回风格片库' if zh else 'Back to the style library'}</a><a href="{REPO}">GitHub ↗</a></footer></body></html>'''
+<main id="case" class="section-wrap"><nav class="breadcrumbs"><a href="{home}">{'风格片库' if zh else 'Style library'}</a> / {'制作案例' if zh else 'Production walkthrough'}</nav><section class="guide-hero"><div><p class="eyebrow">WHITEBOARD / PUBLIC SAMPLE</p><h1>{escape(content['title'])}</h1><p class="guide-description">{escape(content['description'])}</p>{credit(lang,date,REPO+'/commits/main/catalog/case-studies.json')}</div><figure><img src="{prefix}docs/readme/frames/whiteboard.jpg" alt="{'白板样片剧照' if zh else 'Whiteboard sample frame'}"><figcaption>{'已发布样片剧照' if zh else 'Published sample frame'}</figcaption></figure></section><article class="case-body"><section><h2>{'观看与获取' if zh else 'Watch and obtain the inputs'}</h2><ul>{links}</ul></section>{''.join(sections)}<section><h2>{'源码与证据' if zh else 'Source and evidence'}</h2><ul>{sources}</ul></section></article></main><footer class="footer section-wrap"><a href="{home}">← {'返回风格片库' if zh else 'Back to the style library'}</a><a href="{REPO}">GitHub ↗</a></footer></body></html>'''
     graph = schema(base,url,title,content['description'],lang,date)
     graph.append({'@type':'BreadcrumbList','itemListElement':[
         {'@type':'ListItem','position':1,'name':'风格片库' if zh else 'Style library','item':home},
         {'@type':'ListItem','position':2,'name':content['title'],'item':url}]})
     return metadata(page,title,content['description'],url,base+'catalog/social-card.jpg',lang,alternatives,graph)
+
+
+def render_make_film(base, prefix, lang, date, revision):
+    zh = lang == 'zh'
+    home = base + ('zh/' if zh else '')
+    rel = 'guides/make-a-film-with-codex/'
+    url = home + rel
+    alts = {'en': base + rel, 'zh-CN': base + 'zh/' + rel, 'x-default': base + rel}
+    title = ('如何用 Codex 制作动画视频与影片' if zh else 'How to Make a Film or Animated Video with Codex') + ' | Codex Film Studio'
+    desc = ('从制作简报、选择风格和配音，到渲染与检查交付，学习如何用 Codex Film Studio 制作白板解说和动画影片。' if zh else 'Learn how to make a film or animated video with Codex: choose a style, write a brief, add narration, render and review an editable project.')
+    version = '?v=' + revision if revision else ''
+    if zh:
+        intro = 'Codex Film Studio 是开源的视频风格与制作流程库。你用自然语言描述影片，Codex 在本地工作区建立独立项目，结合所选风格创作场景、旁白和字幕，再渲染并检查成片。不同风格的样片与原始素材开放范围不同。'
+        sections = [
+            ('准备工作', f'安装并打开 Codex，克隆<a href="{REPO}">完整仓库</a>，在本地 Codex 聊天中打开该仓库。也可以按<a href="{REPO}/blob/main/docs/plugin.md">插件安装说明</a>使用已发布版本。所需工具随风格而异；白板制作通常需要 Node.js、Python 和 FFmpeg。让 Agent 检查依赖，不要只复制 Skill 文件夹。'),
+            ('写一份可执行的制作简报', '写清主题、目标观众、风格、语言、时长、画幅和交付物。示例：制作一部 90 秒英文白板解说片，向初学者解释滑轮如何省力。使用原创示意图，加入英文字幕，交付 MP4 与可编辑工程，并说明实际视听检查范围。'),
+            ('选择适合的风格', f'需要把概念一步步画出来时，从<a href="{home}styles/whiteboard/">白板解说</a>开始；如果内容依靠标题、新闻节奏或图表，也可以在<a href="{home}#library">风格库</a>比较。新主题需要重新创作叙事与画面，不能只替换样片字幕。'),
+            ('加入旁白、素材与字幕', f'提供自己的录音，或使用可访问的语音服务。仓库包含需要联网的 Edge TTS 工具；已配置的 Chatterbox 服务也是选项。检查授权素材与语言版本，按实际音频时长对齐画面和字幕，参考<a href="{REPO}/blob/main/methods/narration.md">旁白流程</a>。真人形象需要提供相应肖像。'),
+            ('渲染、检查并交付', '让 Agent 在仓库外创建独立制作项目，组织脚本、镜头、声音和字幕，先预览再渲染。检查静帧、运动、发音与音画同步；交付 MP4 和可编辑工程，并说明哪些内容实际经过视觉和听觉审阅。渲染成功不等于完成审阅。'),
+            ('从真实白板案例继续', f'查看<a href="{home}cases/whiteboard-rebuild/">白板样片制作案例</a>，了解公开输入、可获得的影片和重建范围。精确复刻还取决于原始工程、素材和环境是否可用。')]
+    else:
+        intro = 'Codex Film Studio is an open-source library of video styles and production workflows. Describe the film in natural language; Codex builds a separate local project, authors scenes in the chosen style, aligns narration and captions, and renders a reviewable film. Published sample and source availability vary by style.'
+        sections = [
+            ('Set up Codex and the film kit', f'Install and open Codex, clone the <a href="{REPO}">complete repository</a>, and open it in a local Codex chat. Alternatively follow the <a href="{REPO}/blob/main/docs/plugin.md">published plugin installation guide</a>. Dependencies vary by style; the whiteboard workflow typically uses Node.js, Python and FFmpeg. Ask the agent to check the environment; copying the Skill folder alone is not enough.'),
+            ('Write a brief the agent can act on', 'Specify the subject, audience, visual style, language, duration, aspect ratio and deliverables. Example: Make a 90-second English whiteboard explainer showing beginners how a pulley reduces effort. Draw original diagrams, add English captions, deliver an MP4 and editable project, and state the actual visual and listening review performed.'),
+            ('Choose a style for the story', f'For an animated whiteboard explainer that draws a concept step by step, start with the <a href="{home}styles/whiteboard/">whiteboard style guide</a>. For stories driven by headlines, news pacing or charts, compare options in the <a href="{home}#library">style library</a>. A new subject needs new narration and drawings; swapping a sample’s captions alone does not adapt the film.'),
+            ('Add voiceover, assets and captions', f'Supply an existing recording or use an available voice service. The repository includes Edge TTS tools that need an internet connection; a configured Chatterbox service is another option. Check asset permissions and language editions, then align pictures and captions to the actual audio duration. See the <a href="{REPO}/blob/main/methods/narration.md">narration workflow</a>. A specific real person requires a supplied portrait.'),
+            ('Render, review and deliver', 'Have the agent create an independent production project outside the library, coordinate the script, shots, sound and captions, and preview before rendering. Inspect stills and motion, listen for pronunciation and sync, and deliver the MP4 with the editable project and the scope of the actual review. A successful render alone is not a visual or listening review.'),
+            ('Explore a real whiteboard example', f'The <a href="{home}cases/whiteboard-rebuild/">whiteboard production walkthrough</a> identifies the public inputs, available film and rebuild scope. Exact replay still depends on the original editable source, assets and environment being available.')]
+    body = ''.join(f'<section><h2>{escape(h)}</h2><p>{content}</p></section>' for h, content in sections)
+    page = f"""<!doctype html><html lang="{'zh-CN' if zh else 'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="{prefix}catalog/studio.css{version}"><link rel="stylesheet" href="{prefix}catalog/studio-header.css{version}"><link rel="stylesheet" href="{prefix}catalog/brand.css{version}"></head><body class="guide-page"><a class="skip-link" href="#guide">{'跳转到正文' if zh else 'Skip to content'}</a><header class="guide-header section-wrap"><a class="footer-brand" href="{home}">CODEX FILM STUDIO</a><nav aria-label="Language"><a href="{alts['en']}" hreflang="en">EN</a> · <a href="{alts['zh-CN']}" hreflang="zh-CN">中文</a></nav></header><main id="guide" class="section-wrap"><nav class="breadcrumbs"><a href="{home}">{'风格片库' if zh else 'Style library'}</a> / {'制作教程' if zh else 'Making a film'}</nav><section class="guide-hero"><div><p class="eyebrow">CODEX FILM STUDIO / FIELD GUIDE</p><h1>{'如何用 Codex 制作动画视频与影片' if zh else 'How to Make a Film or Animated Video with Codex'}</h1><p class="guide-description">{escape(intro)}</p>{credit(lang,date,REPO+'/commits/main/scripts/build_search.py')}</div><figure><img src="{prefix}docs/readme/frames/whiteboard.jpg" alt="{'白板样片剧照' if zh else 'Whiteboard sample frame'}"><figcaption>{'公开样片剧照' if zh else 'Published sample frame'}</figcaption></figure></section><article class="case-body">{body}</article></main><footer class="footer section-wrap"><a href="{home}">{'返回风格片库' if zh else 'Back to the style library'}</a><a href="{REPO}">GitHub ↗</a></footer></body></html>"""
+    graph = schema(base,url,title,desc,lang,date)
+    graph.append({'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'风格片库' if zh else 'Style library','item':home},{'@type':'ListItem','position':2,'name':'制作教程' if zh else 'Making a film','item':url}]})
+    return metadata(page,title,desc,url,base+'catalog/social-card.jpg',lang,alts,graph)
 
 
 def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-studio/', revision=''):
@@ -312,7 +346,9 @@ def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-
         page = re.sub(r'(<div class="style-grid" id="style-grid"[^>]*>).*?(</div>)', lambda m:m[1]+static_cards(catalog,base,lang,strings[lang])+m[2],page,flags=re.S)
         page = re.sub(r'(<span id="collection-range">).*?(</span>)',rf'\g<1>01 — {len(catalog["styles"]):02}\2',page)
         page = page.replace('<div class="collection-note">', capability_overview(catalog,lang)+'<div class="collection-note">')
-        page = page.replace('</main>',home_answers(lang,date,catalog,base)+'</main>')
+        guide_url = url + 'guides/make-a-film-with-codex/'
+        guide_link = f'<p class="section-wrap"><a href="{guide_url}">{"阅读 Codex 影片制作教程" if lang == "zh" else "Read the guide to making a film with Codex"} →</a></p>'
+        page = page.replace('</main>',home_answers(lang,date,catalog,base)+guide_link+'</main>')
         page = page.replace('href="sitemap.xml"', f'href="{base}sitemap.xml"')
         page = re.sub(r'<noscript>.*?</noscript>', '<noscript><p class="noscript">'+('风格指南可直接阅读；搜索、筛选与详情弹窗需要 JavaScript。' if lang=='zh' else 'Read all style guides without JavaScript. Search, filters and detail dialogs use JavaScript.')+'</p></noscript>',page,flags=re.S)
         page = page.replace('placeholder="Find a style" aria-label="Find a style"',f'placeholder="{strings[lang]["search"]}" aria-label="{strings[lang]["search"]}"')
@@ -325,6 +361,12 @@ def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-
             target=output/route(style,lang)/'index.html'; target.parent.mkdir(parents=True,exist_ok=True)
             target.write_text(render_guide(style,content[style['id']][lang],catalog,base,prefix,lang,style_date,revision,strings[lang]))
             entries[base+route(style,lang)]=style_date
+    guide_date = modified('scripts/build_search.py', 'methods/WORKFLOW.md', 'methods/narration.md')
+    for lang in ['en', 'zh']:
+        relative = ('zh/' if lang == 'zh' else '') + 'guides/make-a-film-with-codex/'
+        target = output/relative/'index.html'; target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(render_make_film(base, prefix, lang, guide_date, revision))
+        entries[base+relative] = guide_date
     for case in cases:
         case_date = modified('catalog/case-studies.json',case['media']['manifest'],'scripts/build_search.py')
         for lang in ['en','zh']:

@@ -48,6 +48,26 @@ class SearchTests(unittest.TestCase):
         build_search(output,catalog,base_path=path,revision='test-revision',**options)
         return catalog
 
+    def test_film_guide_is_linked_and_discoverable_in_both_languages(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out=Path(directory)
+            self.make_site(out, 'https://films.example', '/studio/')
+            base='https://films.example/studio/'
+            urls=[n.text for n in ET.parse(out/'sitemap.xml').findall(
+                '{http://www.sitemaps.org/schemas/sitemap/0.9}url/'
+                '{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+            for prefix in ['', 'zh/']:
+                url=base+prefix+'guides/make-a-film-with-codex/'
+                page=Document((out/prefix/'guides/make-a-film-with-codex/index.html').read_text())
+                home=Document((out/prefix/'index.html').read_text())
+                self.assertIn(url,urls)
+                self.assertIn(url,[a['href'] for a in home.attrs('a')])
+                self.assertEqual(len(page.attrs('h1')),1)
+                self.assertEqual(page.attrs('link',rel='canonical')[0]['href'],url)
+                self.assertEqual({a['hreflang'] for a in page.attrs('link',rel='alternate')},{'en','zh-CN','x-default'})
+                self.assertIn(base+prefix+'cases/whiteboard-rebuild/',[a['href'] for a in page.attrs('a')])
+                self.assertTrue(page.json)
+
     def test_default_deployment_targets_current_pages_host(self):
         # A successful Pages deployment can otherwise publish canonical URLs
         # for a retired account. Exercise the actual default, not a test origin.
