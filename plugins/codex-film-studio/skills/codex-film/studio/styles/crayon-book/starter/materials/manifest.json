@@ -1,7 +1,0 @@
-[
-  {
-    "file": "materials/paper-relief.f32",
-    "sha256": "872d912302440551d7d700be6878cf60f4cf59ac6169cb4938416cbb10a62b50",
-    "description": "Phase-randomized paper relief, seed 4703, 8 rank-matching iterations; 1920x1080 little-endian float32, contains no imagery or story."
-  }
-]

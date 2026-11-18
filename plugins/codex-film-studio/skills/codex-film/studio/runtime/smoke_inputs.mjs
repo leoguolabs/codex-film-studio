@@ -22,13 +22,6 @@ if(['scifi-sitcom','midcentury-cartoon'].includes(id)){
  const puppet=x=>({type:'group',x,y:105,layers:[polygon([[-25,65],[25,65],[35,145],[-35,145]],profile.accent),polygon([[-30,0],[30,0],[35,50],[0,62],[-35,45]],profile.secondary),polygon([[-19,19],[-7,19],[-7,30],[-19,30]],'#fff'),polygon([[7,19],[19,19],[19,30],[7,30]],'#fff'),polygon([[-15,23],[-11,23],[-11,28],[-15,28]],profile.ink),polygon([[11,23],[15,23],[15,28],[11,28]],profile.ink),polygon([[-12,43],[12,43],[8,48],[-8,48]],profile.ink),{type:'group',x:22,y:76,motion:{rotation:[-.6,.8],holdFrames:id==='midcentury-cartoon'?2:1},layers:[polygon([[0,0],[65,-7],[68,5],[0,12]],profile.accent)]}]});
  shots=[{...base,layers:[puppet(210),puppet(430)]}];
 }
-if(id==='crayon-book'){
- const page=createCanvas(w,h),g=page.getContext('2d');
- const {drawStyle}=await import(new URL('../../lib/scene.mjs',import.meta.url));
- await drawStyle(g,{frame:71,localFrame:71,progress:1,seconds:3,shot:shots[0],plan:{width:w,height:h},profile,assets:new Map()});
- const waxPage=save('wax-page.png',page.toBuffer('image/png'));
- shots=[{...shots[0],end:72},{id:'page-turn',start:72,end:n,layers:[{type:'page-turn',x:320,y:85,width:170,height:150,frontFile:waxPage,backFile:assets[1].file,start:0,end:71}]}];
-}
 if(id==='art-collage')shots=[{...base,layers:[{type:'paper',x:120,y:65,width:240,height:180,motion:{from:[70,55],to:[210,85]},rotation:-.08},{type:'image',file:assets[0].file,x:280,y:100,width:180,height:135,rotation:.08}]}];
 if(id==='caption-news')shots=[{...base,layers:[{type:'headline',text:'MEASURE / CHECK',x:80,y:155,size:46,maxWidth:520},{type:'shape',points:[[0,0],[420,0],[420,10],[0,10]],fill:'#ebc234',x:100,y:205,motion:{from:[30,205],to:[110,205]}}]}];
 if(id==='art-deco')shots=[{...base,layers:[{type:'fan',x:320,y:210,radius:130},{type:'person',x:150,y:290,height:210}]}];
