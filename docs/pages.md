@@ -280,6 +280,8 @@ real text and links. The interactive catalog then enhances that same content.
 - `sitemap.xml` lists canonical public destinations only. Internal HTML inside
   release asset bundles gets `noindex, follow` and stays out of the sitemap.
   A missing page returns the Pages 404 status with a `noindex` error document.
+- `sitemap.txt` exposes the same canonical URLs as plain text for submission
+  when the Search Console sitemap report cannot process the XML.
 
 Run `python3 -m unittest discover -s scripts -p 'test_*.py'` before publishing.
 The search tests inspect raw HTML, language pairs, canonical URLs, schema JSON,
