@@ -18,6 +18,9 @@ Watch the short or long film, explore an original hand-to-switch print study,
 and use the style notes, Agent prompts to start a new film.
 The retained frame comparison and motion review are linked from the page.
 
+Use the [visual reference library](reference/README.md) to compare reference
+frames and calibrate motion with your new subject before building the full film.
+
 ## Start with a prompt / 用提示词开始
 
 Open the cloned studio in your coding Agent and paste:

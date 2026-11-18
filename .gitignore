@@ -11,6 +11,8 @@ films/
 **/media/
 **/review/
 **/reference/
+# Keep the licensed Mid-century Cartoon benchmarks with the style.
+!styles/midcentury-cartoon/reference/
 .verification/
 .site/
 

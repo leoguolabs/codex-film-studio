@@ -509,6 +509,15 @@
           "anchor": "films",
           "access": "release",
           "media_manifest": "styles/art-deco/showcase/media/films.json"
+        },
+        {
+          "id": "art-deco-landscape",
+          "title": "Landscape editions · 16:9",
+          "title_zh": "横版成片 · 16:9",
+          "page": "styles/art-deco/showcase/landscape.html",
+          "access": "local",
+          "project": "../codex-film-studio-projects/art-deco-landscape-20261026",
+          "source_page": "index.html"
         }
       ],
       "preview": "docs/readme/frames/art-deco.jpg",

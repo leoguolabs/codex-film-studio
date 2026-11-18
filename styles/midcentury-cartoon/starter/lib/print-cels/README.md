@@ -17,6 +17,6 @@ before measuring or drawing text.
 
 The default starter remains a material proof. These primitives do not author
 your narrative, pose rig, semantic contacts, typography, camera or soundtrack.
-Before expansion, compare a short new-subject calibration against references
-available to the production. Do not certify aesthetic equivalence from a
-renderer, pixel hash or successful import.
+Before expansion, follow `reference/performance.md` and compare the supplied
+native reference frames with a real new-subject calibration. Do not certify
+aesthetic equivalence from a renderer, pixel hash or successful import.

@@ -30,3 +30,10 @@ original source project and assets first. See [reproduction](../../methods/repro
 
 
 The default output is outside this library. Author a new storyboard and extend the supplied scene renderer there; do not copy a prior film's cast, claims, script or scene content. Status: renderer-ready. The style page links published films; landscape editions remain local. Neither establishes exact style equivalence for a new production.
+
+## Alternate aspect ratio
+
+The local studio links to the [16:9 landscape editions](showcase/landscape.html)
+when the retained production is available. The public style page screens the
+portrait films. See the [aspect-ratio workflow](../../methods/aspect-ratio-editions.md)
+for recomposition and edition-specific checks.

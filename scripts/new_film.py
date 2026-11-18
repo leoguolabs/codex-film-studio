@@ -100,6 +100,9 @@ def create(name, style, root=ROOT, output=None):
         shutil.copy2(runtime / "README.md", destination / "PRODUCTION.md")
     if blank and engine.is_dir():
         shutil.copytree(engine, destination / "engine", ignore=IGNORE)
+    reference = style_root / "reference"
+    if blank and reference.is_dir():
+        shutil.copytree(reference, destination / "reference", ignore=IGNORE)
     for path, target in copies:
         if path.suffix == ".md":
             text = project_text(path.read_text())

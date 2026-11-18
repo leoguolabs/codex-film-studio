@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "scope": "Empty contract; fill with the new subject in the external project.",
+  "fps": 24,
+  "shots": [],
+  "required_shot_fields": ["id", "start", "end", "purpose", "visual_function", "ground", "subject", "viewpoint", "reference_source", "reference_range", "action_phases", "contact_target", "domain_state_before", "domain_state_after", "result_read_range", "caption_safe_area", "transition", "sound_events"],
+  "rules": [
+    "Ranges use integer frames, zero-based and end-exclusive.",
+    "A non-contact shot explains why contact_target is null.",
+    "Action phases identify anticipation, contact, operation, result and settle where applicable.",
+    "Object state, inset, captions and sound share one timeline.",
+    "Reference roles do not authorize copying their story or cast.",
+    "Review evidence belongs to the external production."
+  ]
+}

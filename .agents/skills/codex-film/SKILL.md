@@ -14,6 +14,12 @@ entry's completion status, capabilities and template kind. Executable production
 kits include material renderers and a shared runtime; new subjects still need
 authored scenes and assets. `methods/` holds cross-style workflows only.
 
+For `midcentury-cartoon`, read `styles/midcentury-cartoon/reference/README.md`
+and `performance.md`, and actually inspect the function-matched source frames.
+The 408-frame reference library is copied into new projects. Calibrate a short
+performed section with the new subject before expanding the film; palette,
+fonts or successful rendering alone do not establish the example's quality.
+
 ## Start from the user's brief
 
 A natural-language request is sufficient to start. The Agent

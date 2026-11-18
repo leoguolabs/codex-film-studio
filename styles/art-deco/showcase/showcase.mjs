@@ -124,3 +124,13 @@ let saved;try{saved=localStorage.getItem('film-studio-language');}catch{/* Optio
 const requested=new URL(location.href).searchParams.get('lang');
 setLanguage(['en','zh'].includes(requested)?requested:saved==='zh'?'zh':'en');
 canvas.hidden=false;$('#study-poster').hidden=true;$('#transport').hidden=false;$('#chapters').hidden=false;
+
+// Local alternate editions use the retained project served by the local catalog.
+fetch(new URL('../../../catalog-availability.json', import.meta.url))
+  .then(response => response.ok ? response.json() : null)
+  .then(data => {
+    if (data?.mode === 'local' && data.pages?.['art-deco-landscape']) {
+      $('#landscape-films').hidden = false;
+    }
+  })
+  .catch(() => {});

@@ -56,7 +56,12 @@ paths and subtitle typography before non-Latin text can render correctly.
 
 ## Voice
 
-New projects include the optional [Edge TTS narration workflow](methods/narration.md). It sends the requested narration to the online voice service. Keep accepted WAV files with the project. Imported recordings and the Chatterbox integration are also supported.
+New projects include the optional [Edge TTS client](methods/narration.md) in
+`tools/tts/`. It sends narration to the online voice service. For English,
+`en-US-AvaNeural` at `+12%` is one option. The client can export the provider MP3,
+measured PCM WAVs, timing and hashes, and bind voice and captions to the
+shared frame timeline. Keep accepted WAVs with the project for replay.
+Imported recordings and the Chatterbox integration are also supported.
 
 The released demo inputs let you rebuild the examples without a TTS service.
 For a new story, choose one of these paths:

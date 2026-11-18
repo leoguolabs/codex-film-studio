@@ -11,6 +11,8 @@
    generated imagery or diagrams for that purpose. Use [media selection](media-selection.md)
    to inspect actual source intervals and reframe them around the subject.
 4. Generate narration through a configured service, or import recordings.
+   [Shared narration tools](narration.md) provide Edge TTS with selectable voices
+   and WAV/caption binding to the video timeline. Use retained audio for replay.
    Preserve original WAVs and source hashes; measure them before locking timing.
    Keep credentials and provider job records in the external project.
 5. Use one integer-frame clock with half-open shot ranges `[start, end)` for

@@ -6,6 +6,7 @@ All visual styles and their completion status are in [the style catalog](../styl
 | Method | Purpose |
 | --- | --- |
 | [WORKFLOW.md](WORKFLOW.md) | Brief, sources, shots, audio, frame timeline, render and delivery |
+| [Narration tools](narration.md) | Edge TTS voices, resumable WAV generation, measured timing and video integration |
 | [REVIEW.md](REVIEW.md) | Stills, motion, listening, encoded-file verification and revision evidence |
 | [Reference adaptation](reference-adaptation.md) | Transfer visual functions, motion grammar and aspect-ratio hierarchy |
 | [Frame-by-frame style comparison](frame-style-comparison.md) | Compare visual roles and record the scope of frame inspection |
