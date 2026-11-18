@@ -76,6 +76,11 @@ class PortalTests(unittest.TestCase):
             for asset in ['catalog/studio.mjs', 'catalog/studio.css', 'catalog/hero.svg',
                           'catalog/brand.css', 'catalog/brand/studio-logo.svg']:
                 self.assertIn(f'{asset}?v=portal-test', homepage)
+            for asset in ['catalog/home-theme.css', 'catalog/home-theme.js']:
+                self.assertTrue((output / asset).is_file())
+                for relative in ['index.html', 'zh/index.html']:
+                    self.assertIn(f'"/codex-film-studio/{asset}?v=portal-test"',
+                                  (output / relative).read_text())
             self.assertTrue((output / 'catalog/agent-start.mjs').is_file())
             # A <base> from a retained film must not redirect the shared entry
             # module into that production's media directory on GitHub Pages.

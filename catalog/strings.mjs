@@ -1,6 +1,7 @@
 // Shared by the static build and the interactive catalog. Keep this object valid JSON.
 export default {
   "en": {
+    "lightTheme": "Light theme",
     "skip": "Skip to the style library",
     "styles": "Styles",
     "create": "Create a film",
@@ -73,6 +74,7 @@ export default {
     "rebuildUnknown": "Not documented"
   },
   "zh": {
+    "lightTheme": "浅色主题",
     "skip": "跳转到风格片库",
     "styles": "风格片库",
     "create": "开始创作",

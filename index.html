@@ -7,11 +7,13 @@
   <meta name="description" content="Make films and animated videos with OpenAI Codex. Explore open-source styles, public samples, editable projects and production guides.">
   <title>Make Films and Animated Videos with Codex | Codex Film Studio</title>
 
+  <script src="catalog/home-theme.js"></script>
   <link rel="stylesheet" href="catalog/studio.css">
   <link rel="stylesheet" href="catalog/studio-header.css">
   <script type="module" src="catalog/agent-start.mjs"></script>
   <script type="module" src="catalog/studio.mjs"></script>
 <link rel="icon" href="catalog/brand/studio-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="catalog/brand.css">
+  <link rel="stylesheet" href="catalog/home-theme.css">
 </head>
 <body>
   <a class="skip-link" href="#library" data-i18n="skip">Skip to the style library</a>
@@ -25,8 +27,14 @@
       <a href="#create" data-i18n="create">Create a film</a>
     </nav>
     <div class="header-tools">
-      <div class="language-switch" role="group" aria-label="Language">
-        <button type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="zh" aria-pressed="false">中文</button>
+      <div class="appearance-tools">
+        <button type="button" class="theme-toggle" aria-pressed="false" hidden>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          <span data-i18n="lightTheme">Light theme</span>
+        </button>
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="zh" aria-pressed="false">中文</button>
+        </div>
       </div>
       <a class="studio-x-link" href="https://x.com/LeoGuoLabs" target="_blank" rel="noopener noreferrer" aria-label="@LeoGuoLabs on X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.5L1.8 2h6.4l4.5 6.8L18.9 2Zm-1.1 18h1.7L7.2 3.9H5.4L17.8 20Z"/></svg><span>@LeoGuoLabs</span></a>
       <a class="repository" href="https://github.com/leoguolabs/codex-film-studio" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>

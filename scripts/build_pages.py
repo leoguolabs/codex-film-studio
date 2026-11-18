@@ -102,6 +102,7 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
     # library artwork and approved Release samples enter the Pages artifact.
     files.extend((ROOT / name, name) for name in [
         "index.html", "catalog/studio.css", "catalog/studio.mjs",
+        "catalog/home-theme.css", "catalog/home-theme.js",
         "catalog/hero.svg", "catalog/mark.svg", "catalog/studio-header.css", "catalog/strings.mjs", "catalog/social-card.jpg",
         "catalog/film-screening.css", "catalog/film-screening.mjs",
         "catalog/agent-start.mjs",
@@ -178,7 +179,8 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
         homepage = output / "index.html"
         html = homepage.read_text(encoding="utf-8")
         query = urlencode({"v": revision})
-        for asset in ["catalog/studio.css", "catalog/studio.mjs", "catalog/hero.svg", "catalog/mark.svg"]:
+        for asset in ["catalog/studio.css", "catalog/studio.mjs", "catalog/hero.svg", "catalog/mark.svg",
+                      "catalog/home-theme.css", "catalog/home-theme.js"]:
             html = html.replace(f'"{asset}"', f'"{asset}?{query}"')
         homepage.write_text(html, encoding="utf-8")
         for style in catalog["styles"]:
