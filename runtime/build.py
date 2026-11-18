@@ -81,6 +81,14 @@ def audio_inputs(plan):
     return records
 
 
+def audio_clip_filters(start_sample, gain):
+    # adelay may emit padding before the first input PTS is known. In the
+    # resampler's 1/48000 time base, the sample count timestamps both padding
+    # and recorded audio continuously before the buses are mixed and trimmed.
+    return (f'aresample=48000,aformat=channel_layouts=stereo,volume={gain},'
+            f'adelay={start_sample}S:all=1,asetpts=N')
+
+
 def timestamp(frame, fps, separator='.'):
     ms = round(frame * 1000 / fps)
     return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02}{separator}{ms%1000:03}'
@@ -169,8 +177,8 @@ def main():
         for i, (item, file) in enumerate(audio, 1):
             mix_command += ['-i', file]
             samples = round(item['start']*48000/plan['fps'])
-            filters.append(f'[{i-1}:a]aresample=48000,aformat=channel_layouts=stereo,'
-                           f'volume={item.get("gain",1)},adelay={samples}S:all=1[a{i}]')
+            clip = audio_clip_filters(samples, item.get('gain', 1))
+            filters.append(f'[{i-1}:a]{clip}[a{i}]')
             buses[item['role']].append(f'[a{i}]')
         final_buses = []
         for role, inputs in buses.items():

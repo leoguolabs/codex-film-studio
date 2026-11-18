@@ -8,6 +8,8 @@ from reproduction import seal, restore, inspect_bundle, relative, archive, acqui
 import io
 import tarfile
 import subprocess
+import shutil
+import struct
 from new_film import ROOT, create
 
 spec = importlib.util.spec_from_file_location('runtime_build', ROOT/'runtime/build.py')
@@ -44,6 +46,22 @@ class ReproductionTests(unittest.TestCase):
             manifest['files'][0]['executable']='yes'
             (bundle/'reproduction-manifest.json').write_text(json.dumps(manifest))
             with self.assertRaises(ValueError):inspect_bundle(bundle)
+
+    @unittest.skipUnless(shutil.which('ffmpeg'), 'requires FFmpeg')
+    def test_delayed_audio_survives_a_buffered_input(self):
+        # Reversing twice preserves the samples but holds the first frame until EOF.
+        # This forces the delay filter to emit its leading silence before the cue is ready.
+        clip = build.audio_clip_filters(start_sample=12000, gain=1)
+        pcm = subprocess.check_output([
+            'ffmpeg', '-v', 'error', '-f', 'lavfi', '-i', 'aevalsrc=0.25:s=48000:d=0.125',
+            '-af', f'areverse,areverse,{clip},apad,atrim=duration=0.5',
+            '-ac', '1', '-f', 's16le', 'pipe:1',
+        ])
+        samples = [value for (value,) in struct.iter_unpack('<h', pcm)]
+        self.assertEqual(len(samples), 24000)
+        self.assertFalse(any(samples[:12000]))
+        self.assertTrue(all(samples[12000:18000]))
+        self.assertFalse(any(samples[18000:]))
 
     def test_python_and_javascript_output_dimensions_agree(self):
         vectors=[[1920,1080,w] for w in [2,320,480,640,720,1080,1920]]+[[1080,1920,720],[640,360,720]]
