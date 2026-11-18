@@ -396,10 +396,13 @@ def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-
             path.write_text(page)
     ns='http://www.sitemaps.org/schemas/sitemap/0.9'; ET.register_namespace('',ns)
     sitemap=ET.Element('{'+ns+'}urlset')
-    for url,lastmod in sorted(entries.items()):
+    sitemap_urls = sorted(entries)
+    for url in sitemap_urls:
+        lastmod = entries[url]
         node=ET.SubElement(sitemap,'{'+ns+'}url'); ET.SubElement(node,'{'+ns+'}loc').text=url
         if lastmod: ET.SubElement(node,'{'+ns+'}lastmod').text=lastmod
     ET.ElementTree(sitemap).write(output/'sitemap.xml',encoding='utf-8',xml_declaration=True)
+    (output/'sitemap.txt').write_text('\n'.join(sitemap_urls) + '\n', encoding='utf-8')
     (output/'robots.txt').write_text('# Effective only when served at the origin root /robots.txt.\n# A GitHub Pages project subdirectory cannot set origin-wide crawler policy.\nUser-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nSitemap: '+base+'sitemap.xml\n')
     (output/'404.html').write_text(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, follow"><title>Page not found | Codex Film Studio</title></head><body><h1>Page not found / 页面未找到</h1><p><a href="{base}">Style library</a> · <a href="{base}zh/">风格片库</a></p></body></html>')
     if revision:

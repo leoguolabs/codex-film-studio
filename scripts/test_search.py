@@ -101,6 +101,7 @@ class SearchTests(unittest.TestCase):
                 catalog=self.make_site(out,'https://films.example',prefix)
                 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
                 urls=[n.text for n in ET.parse(out/'sitemap.xml').findall('s:url/s:loc',ns)]
+                self.assertEqual((out/'sitemap.txt').read_text(encoding='utf-8').splitlines(), urls)
                 self.assertEqual(len(urls),len(set(urls)))
                 self.assertFalse(any('_assets' in u or '?' in u or '#' in u or '404' in u for u in urls))
                 for u in urls:
