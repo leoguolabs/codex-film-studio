@@ -2,6 +2,7 @@
 """List film styles or create an independent production outside this library."""
 import argparse
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -73,6 +74,15 @@ def create(name, style, root=ROOT, output=None):
         review_tools = root / "scripts/frame_review"
         if not (review_tools / "README.md").is_file():
             raise ValueError("Missing shared frame-review tools.")
+    player_assets = entry.get("player_assets", [])
+    if player_assets and not (source / "index.html").is_file():
+        raise ValueError(f"Missing player entry point: {source / 'index.html'}")
+    for asset in player_assets:
+        relative = Path(asset)
+        path = (root / relative).resolve()
+        if relative.is_absolute() or ".." in relative.parts or (root / "catalog") not in path.parents:
+            raise ValueError(f"Player asset must be inside catalog/: {asset}")
+        copies.append((path, asset))
     for path, _ in copies:
         if not path.is_file():
             raise ValueError(f"Incomplete style package: {path}")
@@ -98,7 +108,15 @@ def create(name, style, root=ROOT, output=None):
                               lambda m: f'](https://leoguolabs.github.io/codex-film-studio/styles/{style}/{m[1]})', text)
             (destination / target).write_text(text, encoding="utf-8")
         else:
+            (destination / target).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(path, destination / target)
+    if player_assets:
+        # The template is served inside the catalog, but the copied player is its own web root.
+        page = destination / "index.html"
+        html = page.read_text(encoding="utf-8")
+        catalog_url = Path(os.path.relpath(root / "catalog", source)).as_posix()
+        html = html.replace(f'"{catalog_url}/', '"catalog/')
+        page.write_text(html, encoding="utf-8")
     methods = root / "methods"
     if methods.is_dir():
         # Every style receives the shared decisions, including sample-based projects.

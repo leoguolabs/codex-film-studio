@@ -26,6 +26,12 @@
       "description": "One persistent board, handwritten ideas, moving markers and story-driven line characters.",
       "guide": "styles/whiteboard/STYLE.md",
       "template": "styles/whiteboard/studio",
+      "player_assets": [
+        "catalog/agent-start.mjs",
+        "catalog/studio-header.css",
+        "catalog/brand.css",
+        "catalog/brand/studio-logo.svg"
+      ],
       "poster": "styles/whiteboard/poster.png",
       "demo": "styles/whiteboard/DEMO.md",
       "status": "demo-ready",

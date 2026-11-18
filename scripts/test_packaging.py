@@ -2,11 +2,12 @@
 import io
 import json
 from pathlib import Path
+import re
 import tarfile
 import tempfile
 import unittest
 from fetch_demo import unpack, install
-from new_film import create, create_method, destination_for
+from new_film import ROOT, create, create_method, destination_for
 
 
 class PackagingTests(unittest.TestCase):
@@ -37,6 +38,18 @@ class PackagingTests(unittest.TestCase):
             self.assertEqual((dest / "film.mjs").read_text(), "user edit")
             with self.assertRaises(ValueError):
                 create("../../outside", "whiteboard", root)
+
+    def test_whiteboard_player_resolves_its_shared_assets_inside_the_project(self):
+        with tempfile.TemporaryDirectory() as temp:
+            project = create("film", "whiteboard", output=Path(temp) / "film")
+            html = (project / "index.html").read_text()
+            assets = set(re.findall(r'(?:src|href)="([^"]*catalog/[^"?#]+)', html))
+            self.assertIn("catalog/agent-start.mjs", assets)
+            self.assertIn("catalog/brand/studio-logo.svg", assets)
+            for asset in assets:
+                with self.subTest(asset=asset):
+                    self.assertTrue(asset.startswith("catalog/"))
+                    self.assertEqual((project / asset).read_bytes(), (ROOT / asset).read_bytes())
 
     def test_production_cannot_enter_library_through_a_symlink(self):
         with tempfile.TemporaryDirectory() as temp:

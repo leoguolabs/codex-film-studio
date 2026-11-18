@@ -31,6 +31,7 @@ def build(out):
     entry["source"] = {"source": "local", "path": f"./plugins/{name}"}
     catalog = json.loads((ROOT / "styles.json").read_text())
     style_ids = {s["id"] for s in catalog["styles"]}
+    player_assets = {asset for style in catalog["styles"] for asset in style.get("player_assets", [])}
     # Git is needed only by maintainers. Ship tracked production resources, never
     # local provider settings, credentials, node_modules or generated projects.
     tracked = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT).decode().split("\0")
@@ -52,12 +53,13 @@ def build(out):
             parts = path.parts
             if path.is_relative_to(SKILL):
                 copy(ROOT / path, skill / path.relative_to(SKILL))
-            elif (item in LIBRARY_FILES or parts[0] in {"runtime", "methods"}
+            elif (item in LIBRARY_FILES or item in player_assets or parts[0] in {"runtime", "methods"}
                   or item.startswith(("scripts/frame_review/", "scripts/tts/"))
                   or (len(parts) >= 3 and parts[0] == "styles" and parts[1] in style_ids
                       and parts[2] not in {"showcase", "tests"})):
                 copy(ROOT / path, studio / path)
         for required in [skill / "SKILL.md", skill / "studio.py", studio / "scripts/new_film.py",
+                         *(studio / asset for asset in sorted(player_assets)),
                          *(studio / s["guide"] for s in catalog["styles"]),
                          *(studio / s["template"] for s in catalog["styles"])]:
             if not required.exists():
