@@ -43,7 +43,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**18 种风格** · 18 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**17 种风格** · 17 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -73,19 +73,9 @@ codex plugin add codex-film-studio@visiontrail
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh#film"><img src="docs/readme/frames/crayon-book.jpg" alt="蜡笔绘本 — 影片截图" width="320"></a></td>
-<td width="62%" valign="top">
-<sub>03 / <code>crayon-book</code></sub>
-<h3>蜡笔绘本</h3>
-<sub>Crayon Picture Book</sub>
-<p>蜡质笔触与暖纸纹理，逐笔显现的绘画配合真实的绘本翻页。</p>
-<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=zh#film">▶ 在线播放</a></p>
-</td>
-</tr>
-<tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/midcentury-cartoon/showcase/index.html?lang=zh"><img src="docs/readme/frames/midcentury-cartoon.jpg" alt="50 年代平涂卡通 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>04 / <code>midcentury-cartoon</code></sub>
+<sub>03 / <code>midcentury-cartoon</code></sub>
 <h3>50 年代平涂卡通</h3>
 <sub>Mid-century Cartoon</sub>
 <p>柔和套色、微微错位的墨线与停格姿态，配合清楚的教学表演和爵士节奏。</p>
@@ -95,7 +85,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/satellite-briefing/showcase/index.html?lang=zh"><img src="docs/readme/frames/satellite-briefing.jpg" alt="卫星影像／地理简报 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>05 / <code>satellite-briefing</code></sub>
+<sub>04 / <code>satellite-briefing</code></sub>
 <h3>卫星影像／地理简报</h3>
 <sub>Satellite Briefing</sub>
 <p>以地理镜头连接真实卫星影像，用克制的标注解释位置、尺度与空间关系。</p>
@@ -105,7 +95,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/scifi-sitcom/showcase/index.html?lang=zh"><img src="docs/readme/frames/scifi-sitcom.jpg" alt="科幻情景喜剧卡通 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>06 / <code>scifi-sitcom</code></sub>
+<sub>05 / <code>scifi-sitcom</code></sub>
 <h3>科幻情景喜剧卡通</h3>
 <sub>Sci-Fi Sitcom Toon</sub>
 <p>粗墨线、平涂阴影与反差表演，用反应镜头和空间变化组织喜剧节奏。</p>
@@ -115,7 +105,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=zh#films"><img src="docs/readme/frames/microgame.jpg" alt="极速微游戏 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>07 / <code>microgame</code></sub>
+<sub>06 / <code>microgame</code></sub>
 <h3>极速微游戏</h3>
 <sub>Microgame Frenzy</sub>
 <p>命令、动作与结果构成的小关卡，用媒介切换、生命计数和加速节奏连接故事。</p>
@@ -125,7 +115,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=zh#films"><img src="docs/readme/frames/art-deco.jpg" alt="装饰艺术 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>08 / <code>art-deco</code></sub>
+<sub>07 / <code>art-deco</code></sub>
 <h3>装饰艺术</h3>
 <sub>Art Deco</sub>
 <p>黑漆、渐变黄铜、切面人物与具有空间感的机械动效。</p>
@@ -135,7 +125,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/caption-news/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/caption-news.jpg" alt="字幕新闻 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>09 / <code>caption-news</code></sub>
+<sub>08 / <code>caption-news</code></sub>
 <h3>字幕新闻</h3>
 <sub>Caption News</sub>
 <p>大字号字幕、黄色重点、账本式图表与有节奏的入场动效。</p>
@@ -145,7 +135,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/line-chart-comedy/showcase/index.html?lang=zh#films"><img src="docs/readme/frames/line-chart-comedy.jpg" alt="动态折线图喜剧 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>10 / <code>line-chart-comedy</code></sub>
+<sub>09 / <code>line-chart-comedy</code></sub>
 <h3>动态折线图喜剧</h3>
 <sub>Animated Line Chart Comedy</sub>
 <p>克制的图表界面，以生长折线、端点角色、事件卡片与漫画动作讲述数据变化。</p>
@@ -155,7 +145,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html?lang=zh#films"><img src="docs/readme/frames/lidar-survey.jpg" alt="点云测绘 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>11 / <code>lidar-survey</code></sub>
+<sub>10 / <code>lidar-survey</code></sub>
 <h3>点云测绘</h3>
 <sub>LiDAR Survey</sub>
 <p>以连续空间镜头串联测绘点云、树冠剥离、侧光地表与细线剖面，让数据逐层显现。</p>
@@ -165,7 +155,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/newsreel/showcase/index.html?lang=zh#screening"><img src="styles/newsreel/showcase/preview.jpg" alt="复古新闻片 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>12 / <code>newsreel</code></sub>
+<sub>11 / <code>newsreel</code></sub>
 <h3>复古新闻片</h3>
 <sub>Newsreel</sub>
 <p>档案影像、旋转头条、九张纸卡与旧时播音，让故事从放映室走来。</p>
@@ -175,7 +165,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/exploded-teardown/showcase/index.html?lang=zh#screening"><img src="styles/exploded-teardown/showcase/preview.jpg" alt="爆炸拆解 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>13 / <code>exploded-teardown</code></sub>
+<sub>12 / <code>exploded-teardown</code></sub>
 <h3>爆炸拆解</h3>
 <sub>Exploded Teardown</sub>
 <p>深色摄影棚中的物体，以错层展开、材质特写与精确工程标注，解释内部结构。</p>
@@ -185,7 +175,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/halftone-dossier.jpg" alt="复古半调案卷 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>14 / <code>halftone-dossier</code></sub>
+<sub>13 / <code>halftone-dossier</code></sub>
 <h3>复古半调案卷</h3>
 <sub>Halftone Dossier</sub>
 <p>暖色档案纸、专色网点、错版大字和实体印章，把故事编成一条证据链。</p>
@@ -195,7 +185,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/prismatic-atlas.jpg" alt="棱彩图谱 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>15 / <code>prismatic-atlas</code></sub>
+<sub>14 / <code>prismatic-atlas</code></sub>
 <h3>棱彩图谱</h3>
 <sub>Prismatic Atlas</sub>
 <p>以高饱和矢量世界、等距场景与清晰机制图，通过有意义的尺度变化解释科学。</p>
@@ -205,7 +195,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=zh#screening"><img src="styles/hologram-hud/showcase/preview.jpg" alt="科幻全息 HUD — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>16 / <code>hologram-hud</code></sub>
+<sub>15 / <code>hologram-hud</code></sub>
 <h3>科幻全息 HUD</h3>
 <sub>Sci-fi Hologram HUD</sub>
 <p>发光线框、扫描平面、目标锁定与局部拆解，逐步揭示物体如何运作。</p>
@@ -215,7 +205,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/luminous-worlds.jpg" alt="明彩世界 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>17 / <code>luminous-worlds</code></sub>
+<sub>16 / <code>luminous-worlds</code></sub>
 <h3>明彩世界</h3>
 <sub>Luminous Worlds</sub>
 <p>分层插画世界、清晰角色动作与明亮机制图，配套按视觉功能逐帧比对的工具。</p>
@@ -225,7 +215,7 @@ codex plugin add codex-film-studio@visiontrail
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/vivid-science.jpg" alt="鲜彩科学动画 — 影片截图" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>18 / <code>vivid-science</code></sub>
+<sub>17 / <code>vivid-science</code></sub>
 <h3>鲜彩科学动画</h3>
 <sub>Vivid Science</sub>
 <p>鲜明的矢量角色、饱和色彩世界与跨尺度科学叙事。</p>

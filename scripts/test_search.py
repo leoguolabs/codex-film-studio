@@ -214,7 +214,7 @@ class SearchTests(unittest.TestCase):
                 self.assertFalse(any(node['@type']=='FAQPage' for node in doc.json[0]['@graph']))
 
     def test_legacy_implicit_heads_keep_media_and_gain_head_metadata(self):
-        for name in ['crayon-book/showcase/index.html', 'midcentury-cartoon/showcase/motion.html',
+        for name in ['midcentury-cartoon/showcase/motion.html',
                      'satellite-briefing/showcase/comparison.html', 'scifi-sitcom/showcase/index.html']:
             with self.subTest(name=name):
                 source=(ROOT/'styles'/name).read_text()

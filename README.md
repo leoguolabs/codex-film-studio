@@ -43,7 +43,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**18 styles** · 18 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**17 styles** · 17 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -73,19 +73,9 @@ Package readiness, public films, source access and rebuild scope are separate. A
 </td>
 </tr>
 <tr>
-<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en#film"><img src="docs/readme/frames/crayon-book.jpg" alt="Crayon Picture Book — film frame" width="320"></a></td>
-<td width="62%" valign="top">
-<sub>03 / <code>crayon-book</code></sub>
-<h3>Crayon Picture Book</h3>
-<sub>蜡笔绘本</sub>
-<p>Wax pigment, textured paper, hand-drawn reveals and physical book motion.</p>
-<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/crayon-book/showcase/index.html?lang=en#film">▶ Watch online</a></p>
-</td>
-</tr>
-<tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/midcentury-cartoon/showcase/index.html?lang=en"><img src="docs/readme/frames/midcentury-cartoon.jpg" alt="Mid-century Cartoon — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>04 / <code>midcentury-cartoon</code></sub>
+<sub>03 / <code>midcentury-cartoon</code></sub>
 <h3>Mid-century Cartoon</h3>
 <sub>50 年代平涂卡通</sub>
 <p>Misregistered flat colour, broken ink, held poses and jazz.</p>
@@ -95,7 +85,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/satellite-briefing/showcase/index.html?lang=en"><img src="docs/readme/frames/satellite-briefing.jpg" alt="Satellite Briefing — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>05 / <code>satellite-briefing</code></sub>
+<sub>04 / <code>satellite-briefing</code></sub>
 <h3>Satellite Briefing</h3>
 <sub>卫星影像／地理简报</sub>
 <p>Geographic camera, satellite imagery and measured annotations.</p>
@@ -105,7 +95,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/scifi-sitcom/showcase/index.html?lang=en"><img src="docs/readme/frames/scifi-sitcom.jpg" alt="Sci-Fi Sitcom Toon — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>06 / <code>scifi-sitcom</code></sub>
+<sub>05 / <code>scifi-sitcom</code></sub>
 <h3>Sci-Fi Sitcom Toon</h3>
 <sub>科幻情景喜剧卡通</sub>
 <p>Flat cartoon drawing, contrasting performances and spatial comedy.</p>
@@ -115,7 +105,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/microgame/showcase/index.html?lang=en#films"><img src="docs/readme/frames/microgame.jpg" alt="Microgame Frenzy — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>07 / <code>microgame</code></sub>
+<sub>06 / <code>microgame</code></sub>
 <h3>Microgame Frenzy</h3>
 <sub>极速微游戏</sub>
 <p>Rapid command-action-result games with changing materials, lives and accelerating rhythm.</p>
@@ -125,7 +115,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=en#films"><img src="docs/readme/frames/art-deco.jpg" alt="Art Deco — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>08 / <code>art-deco</code></sub>
+<sub>07 / <code>art-deco</code></sub>
 <h3>Art Deco</h3>
 <sub>装饰艺术</sub>
 <p>Black lacquer, graded brass, faceted figures and spatial mechanical motion.</p>
@@ -135,7 +125,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/caption-news/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/caption-news.jpg" alt="Caption News — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>09 / <code>caption-news</code></sub>
+<sub>08 / <code>caption-news</code></sub>
 <h3>Caption News</h3>
 <sub>字幕新闻</sub>
 <p>Large editorial captions, yellow emphasis, ledger graphics and kinetic entrances.</p>
@@ -145,7 +135,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/line-chart-comedy/showcase/index.html?lang=en#films"><img src="docs/readme/frames/line-chart-comedy.jpg" alt="Animated Line Chart Comedy — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>10 / <code>line-chart-comedy</code></sub>
+<sub>09 / <code>line-chart-comedy</code></sub>
 <h3>Animated Line Chart Comedy</h3>
 <sub>动态折线图喜剧</sub>
 <p>A quiet chart interface with growing lines, expressive endpoint tokens, event cards and comic motion accents.</p>
@@ -155,7 +145,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/lidar-survey/showcase/index.html?lang=en#films"><img src="docs/readme/frames/lidar-survey.jpg" alt="LiDAR Survey — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>11 / <code>lidar-survey</code></sub>
+<sub>10 / <code>lidar-survey</code></sub>
 <h3>LiDAR Survey</h3>
 <sub>点云测绘</sub>
 <p>Measured point clouds, canopy peeling, raking-lit terrain and fine sections, carried by one continuous camera move.</p>
@@ -165,7 +155,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/newsreel/showcase/index.html?lang=en#screening"><img src="styles/newsreel/showcase/preview.jpg" alt="Newsreel — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>12 / <code>newsreel</code></sub>
+<sub>11 / <code>newsreel</code></sub>
 <h3>Newsreel</h3>
 <sub>复古新闻片</sub>
 <p>Archival pictures, spinning headlines, nine-card montages and a voice from the projection booth.</p>
@@ -175,7 +165,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/exploded-teardown/showcase/index.html?lang=en#screening"><img src="styles/exploded-teardown/showcase/preview.jpg" alt="Exploded Teardown — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>13 / <code>exploded-teardown</code></sub>
+<sub>12 / <code>exploded-teardown</code></sub>
 <h3>Exploded Teardown</h3>
 <sub>爆炸拆解</sub>
 <p>Dark-studio objects, staggered layer separation, material close-ups and precise engineering annotations.</p>
@@ -185,7 +175,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/halftone-dossier/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/halftone-dossier.jpg" alt="Halftone Dossier — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>14 / <code>halftone-dossier</code></sub>
+<sub>13 / <code>halftone-dossier</code></sub>
 <h3>Halftone Dossier</h3>
 <sub>复古半调案卷</sub>
 <p>Warm archive paper, spot-ink dots, offset headlines and physical stamps turn a story into a trail of exhibits.</p>
@@ -195,7 +185,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/prismatic-atlas/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/prismatic-atlas.jpg" alt="Prismatic Atlas — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>15 / <code>prismatic-atlas</code></sub>
+<sub>14 / <code>prismatic-atlas</code></sub>
 <h3>Prismatic Atlas</h3>
 <sub>棱彩图谱</sub>
 <p>Saturated vector worlds, inhabited isometric scenes and clear mechanisms connected by purposeful changes of scale.</p>
@@ -205,7 +195,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening"><img src="styles/hologram-hud/showcase/preview.jpg" alt="Sci-fi Hologram HUD — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>16 / <code>hologram-hud</code></sub>
+<sub>15 / <code>hologram-hud</code></sub>
 <h3>Sci-fi Hologram HUD</h3>
 <sub>科幻全息 HUD</sub>
 <p>Luminous wireframes, scanning planes, target locks and local exploded views reveal how an object works.</p>
@@ -215,7 +205,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/luminous-worlds.jpg" alt="Luminous Worlds — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>17 / <code>luminous-worlds</code></sub>
+<sub>16 / <code>luminous-worlds</code></sub>
 <h3>Luminous Worlds</h3>
 <sub>明彩世界</sub>
 <p>Layered illustrated worlds, crisp animated subjects and luminous mechanisms, with role-based every-frame diagnostics.</p>
@@ -225,7 +215,7 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <tr>
 <td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/vivid-science.jpg" alt="Vivid Science — film frame" width="320"></a></td>
 <td width="62%" valign="top">
-<sub>18 / <code>vivid-science</code></sub>
+<sub>17 / <code>vivid-science</code></sub>
 <h3>Vivid Science</h3>
 <sub>鲜彩科学动画</sub>
 <p>Expressive vector characters, saturated colour worlds and scale-changing science explanations.</p>

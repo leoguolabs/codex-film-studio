@@ -15,7 +15,7 @@ function assetURL(path) {
 
 // Categories are presentation metadata; paths, readiness and showcases come from styles.json.
 const categories = {
-  whiteboard:['drawn'], 'art-collage':['material'], 'crayon-book':['drawn','material'],
+  whiteboard:['drawn'], 'art-collage':['material'],
   'midcentury-cartoon':['animation','drawn'], 'satellite-briefing':['geography'], 'scifi-sitcom':['animation'],
   'caption-news':['animation','material'],
   'microgame':['animation','material'],

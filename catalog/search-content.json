@@ -7,10 +7,6 @@
     "en": {"use": "Choose Art Collage for a story whose ideas can be connected through paper layers, cutout objects and expressive typography.", "method": "Give paper pieces a visible material, edge and layering order. Use entrances, occlusion and replacement to explain relationships. Define characters and required identity assets for each new production.", "check": "Check readable type, cutout edges and identity consistency in stills and motion. A specific real person requires a user-supplied portrait for that production."},
     "zh": {"use": "当故事适合用纸张层次、剪贴物体和有表现力的字体建立联系时，可以选择艺术拼贴。", "method": "让纸片具有可见的材质、边缘和遮挡顺序，以进入、遮挡和替换解释关系。每个新制作项目分别确定角色与身份素材。", "check": "在静帧和运动中检查字体可读性、剪贴边缘和身份一致性。涉及具体真实人物时，需要用户为该制作项目提供肖像。"}
   },
-  "crayon-book": {
-    "en": {"use": "Choose Crayon Picture Book for a tactile illustrated story built from drawing reveals, wax pigment and physical page movement.", "method": "Separate paper fibres, directional wax passes and indigo contours. Keep small features readable and distinguish line drawing from colouring when the sequence calls for both.", "check": "Review pigment and paper at the encoded delivery scale. Check drawing order, page transitions, caption safe areas and deterministic frame seeking."},
-    "zh": {"use": "当故事需要逐笔绘画、蜡质颜料与真实翻页的触感时，可以选择蜡笔绘本。", "method": "分别处理纸张纤维、具有方向的蜡笔涂色和靛蓝轮廓。保持细小特征清晰；需要先勾线再上色时，应把两道显现过程分开。", "check": "在最终编码尺寸下检查颜料与纸纹，并检查绘画顺序、翻页衔接、字幕安全区和按帧定位的一致性。"}
-  },
   "midcentury-cartoon": {
     "en": {"use": "Choose Mid-century Cartoon for a warm instructional story in which visible character actions lead to understandable changes and results.", "method": "Use warm paper, soft complementary colours, slightly misregistered plates and broken ink. Stage meaningful hand actions and held poses, with flat shadows and clear object continuity.", "check": "Check line weight after camera moves, caption reading time and hand-to-object contact. Printed texture and decoration should leave room for the action."},
     "zh": {"use": "当教学故事需要人物通过可见动作呈现状态变化和结果时，可以选择温暖的 50 年代平涂卡通。", "method": "使用暖纸、柔和互补色、轻微错位的套色与断续墨线。编排有意义的手部动作和停格姿态，用平面阴影保持物体的连续性。", "check": "检查镜头移动后的线宽、字幕阅读时间与手和物体的接触关系，让印刷纹理和装饰为动作留出空间。"}

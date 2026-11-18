@@ -22,7 +22,7 @@ These project READMEs were reviewed for information architecture:
 | [Manim](https://github.com/3b1b/manim) | Connect a minimal working command to examples and deeper usage |
 
 The cover layout and copy are original. Film thumbnails come from this project's
-generated films; no reference-film frames are used. All 18 collection cards,
+generated films; no reference-film frames are used. All collection cards,
 including their static HTML and Chinese editions, use decoded film frames.
 Caption News and Art Deco each use three complete portrait frames arranged side
 by side; the remaining cards use a single complete frame. The type study on the
@@ -41,7 +41,6 @@ separately; the collection and README atlas point to the undecorated stills.
 | --- | --- | --- |
 | Whiteboard Explainer | Does AI Help You Learn—or Just Finish? | 01:45 |
 | Art Collage | Does AI Help You Learn—or Just Finish? · V11 | 00:06 |
-| Crayon Picture Book | Leo the Farmer · V11 | 01:06 |
 | Mid-century Cartoon | Does AI Help You Learn—or Just Finish? | 00:13 |
 | Satellite Briefing | Singapore · Three Days, Three Routes | 00:06 |
 | Sci-Fi Sitcom Toon | The House Gets Coffee · Stable V10 | 00:20 |
@@ -70,14 +69,11 @@ Credits retained from the production records:
   The whiteboard sample and its frames use [CC BY 4.0](../../MEDIA-LICENSE.md).
 - Art Collage V11 uses the production's newly generated fictional character and
   original paper composition. Its ChatGPT mark identifies the story's subject.
-- Crayon artwork is an independently drawn, unofficial adaptation of **Leo the
-  Farmer**, credited in its production to **Play with Gyuri / Gyuri and Friends**.
-  Character and story attribution is retained; no official episode frame is used.
 - The Singapore frame contains NASA Blue Marble / NASA GIBS imagery and
   EOxCloudless 2016 by EOX IT Services GmbH, containing modified Copernicus
   Sentinel data 2016, CC BY 4.0. Grading, map treatment and annotations are
   production modifications. This selected frame contains no footage insert.
-- Mid-century, crayon, satellite and sci-fi visual grammar was studied from
+- Mid-century, satellite and sci-fi visual grammar was studied from
   LemoLab's [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar), by
   [@lemomo_ai](https://x.com/lemomo_ai). These are the new productions' frames.
 

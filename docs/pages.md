@@ -117,22 +117,6 @@ All page dependencies and the locally hosted OFL display font are registered in
 `landing.assets`. Films, reference material and timelines still come from the
 existing pinned Release bundle. The package is now `renderer-ready`; the registry records a full sample rebuild, while source access remains a local bundle.
 
-Crayon Picture Book now has a complete bilingual independent page at
-`styles/crayon-book/showcase/index.html`. Following the Whiteboard page’s film,
-creation, production-note and source structure, it uses warm paper, handwritten
-titles, wax colours and original schematic material drawings. The retained
-*Leo the Farmer* 720p web preview has fifteen chapter jumps, active-chapter
-tracking, playback error feedback and its existing frame comparison. The page
-also covers paper/pigment, drawing reveals and physical book motion, with shared
-Agent prompts, a copyable creative brief, production guides and source credits.
-English and Chinese page text share the same video and preserve playback when
-switching languages. `landing.assets` registers the CSS and module; README
-preview images and watch links open `#film`, while the style-page entry opens
-the complete page. The checksum-pinned film bundle and review records are unchanged. Chinese
-display text uses a locally hosted, renamed Xiaolai subset (Crayon Hand SC),
-with fixed dry-pigment grain on large titles. The pinned generator verifies
-source identity and all page glyphs; its OFL licence ships with the font.
-
 ## Prompt-first film creation
 
 The homepage, style detail dialogs and registered style pages use
@@ -157,8 +141,8 @@ python3 scripts/serve_styles.py --port 8249
 Open **http://127.0.0.1:8249/** for the homepage. The server's
 `catalog-availability.json` checks the actual entry file for each retained local
 project. Local page links use the current local server, including a custom port.
-Published players also work online. Crayon Book, Mid-century Cartoon, Satellite
-Briefing and Sci-Fi Sitcom expose all nine existing entrances in both modes:
+Published players also work online. Mid-century Cartoon, Satellite Briefing and
+Sci-Fi Sitcom expose their showcase entrances in both modes:
 the catalog server reads retained originals, while Pages uses checksum-pinned
 `style-showcases-v1` Release bundles. README previews and the public collection
 open the online editions; explicit local-preview links use port 8249. A local
@@ -177,7 +161,7 @@ The package is now `renderer-ready`; original sample source remains local and it
 
 Mid-century Cartoon has short/long players and motion review. Satellite Briefing
 has a player, live composition and frame comparison. Sci-Fi Sitcom has its independent style page and frame-review
-player, Crayon Book has its player and frame comparison, and Caption News has a
+player, and Caption News has a
 chapter-enabled screening room in its independent style page. Their HTML lives in
 `styles/<id>/showcase/`; whiteboard retains `styles/whiteboard/studio/`.
 
@@ -217,8 +201,8 @@ use `--output /path/to/a/new-folder` for another preview build.
 
 The builder copies an explicit list of homepage assets, registered pages and
 verified Release bundles. It includes the existing Whiteboard, Caption News and
-Art Collage previews plus all nine Crayon Book, Mid-century Cartoon, Satellite
-Briefing and Sci-Fi Sitcom pages. Production media and story-specific composition
+Art Collage previews plus the Mid-century Cartoon, Satellite Briefing and
+Sci-Fi Sitcom pages. Production media and story-specific composition
 dependencies stay in Release archives, outside Git source and new-film starters.
 
 Each new bundle lists its exact files and maps retained `_projects/<id>/` routes
@@ -231,8 +215,7 @@ public catalog. `build-info.json` records the revision and pinned archive hashes
 Most online films are H.264/AAC previews up to 1280 × 720. The stable-motion
 Sci-Fi Sitcom edition serves its compact 1920 × 1080 master directly, preserving
 the original AAC without another compression pass. Frame comparison keeps
-every indexed frame; web frame images and Crayon Book review stills are compressed
-for delivery. Local original media and historical review records are preserved.
+every indexed frame, with web frame images compressed for delivery. Local original media and historical review records are preserved.
 The online-edition notice distinguishes these proxies from the reviewed masters.
 This publication does not constitute a new full-film visual or listening review.
 

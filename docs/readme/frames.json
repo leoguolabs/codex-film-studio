@@ -37,23 +37,6 @@
       "treatment": "Decoded source frame; full composition retained and resized. Localized labels are outside the image."
     },
     {
-      "style": "crayon-book",
-      "source_video": "../codex-film-studio-projects/crayon-book-film/media/leo-the-farmer-crayon-book.mp4",
-      "source_sha256": "500e95bd5bceee68c1abbae84e1b2f544a0c396c835418f975ccee278ff1d176",
-      "title": "Leo the Farmer · Crayon V11",
-      "title_zh": "小农夫 Leo · 蜡笔绘本 V11",
-      "seconds": 66.0,
-      "frame": 1584,
-      "fps": "24",
-      "native_dimensions": [
-        1920,
-        1080
-      ],
-      "image": "docs/readme/frames/crayon-book.jpg",
-      "image_sha256": "6d6527f80b17031f192aecdd265b3efe25a5190ad3f80839929a2edb182c296c",
-      "treatment": "Decoded source frame; full composition retained and resized. Localized labels are outside the image."
-    },
-    {
       "style": "midcentury-cartoon",
       "source_video": "productions/ai-learning-midcentury/media/Does-AI-Help-You-Learn-Midcentury.mp4",
       "source_sha256": "5997519d9ebec87df189e3cb97d32b9a9f71f8c6f29cfce20e03a9fa28bfc9e7",
