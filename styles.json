@@ -466,9 +466,9 @@
           "styles/whiteboard/studio/fonts/OFL-ArchitectsDaughter.txt"
         ]
       },
-      "preview": "docs/readme/frames/microgame.jpg",
-      "preview_zh": "docs/readme/frames/microgame.jpg",
-      "preview_kind": "frame",
+      "preview": "styles/microgame/showcase/preview.en.svg",
+      "preview_zh": "styles/microgame/showcase/preview.zh.svg",
+      "preview_kind": "schematic",
       "public_assets": "styles/microgame/demo-assets.json",
       "preview_showcase": "microgame-films"
     },
@@ -509,11 +509,20 @@
           "anchor": "films",
           "access": "release",
           "media_manifest": "styles/art-deco/showcase/media/films.json"
+        },
+        {
+          "id": "art-deco-landscape",
+          "title": "Landscape editions · 16:9",
+          "title_zh": "横版成片 · 16:9",
+          "page": "styles/art-deco/showcase/landscape.html",
+          "access": "local",
+          "project": "../codex-film-studio-projects/art-deco-landscape-20261026",
+          "source_page": "index.html"
         }
       ],
-      "preview": "docs/readme/frames/art-deco.jpg",
-      "preview_zh": "docs/readme/frames/art-deco.jpg",
-      "preview_kind": "frame",
+      "preview": "styles/art-deco/showcase/preview.en.svg",
+      "preview_zh": "styles/art-deco/showcase/preview.zh.svg",
+      "preview_kind": "schematic",
       "landing": {
         "page": "styles/art-deco/showcase/index.html",
         "assets": [
@@ -640,9 +649,9 @@
           "media_manifest": "styles/line-chart-comedy/showcase/media/films.json"
         }
       ],
-      "preview": "docs/readme/frames/line-chart-comedy.jpg",
-      "preview_zh": "docs/readme/frames/line-chart-comedy.jpg",
-      "preview_kind": "frame",
+      "preview": "styles/line-chart-comedy/showcase/preview.en.svg",
+      "preview_zh": "styles/line-chart-comedy/showcase/preview.zh.svg",
+      "preview_kind": "schematic",
       "landing": {
         "page": "styles/line-chart-comedy/showcase/index.html",
         "assets": [
@@ -695,9 +704,9 @@
           "media_manifest": "styles/lidar-survey/showcase/media/films.json"
         }
       ],
-      "preview": "docs/readme/frames/lidar-survey.jpg",
-      "preview_zh": "docs/readme/frames/lidar-survey.jpg",
-      "preview_kind": "frame",
+      "preview": "styles/lidar-survey/showcase/preview.en.svg",
+      "preview_zh": "styles/lidar-survey/showcase/preview.zh.svg",
+      "preview_kind": "schematic",
       "landing": {
         "page": "styles/lidar-survey/showcase/index.html",
         "assets": [
@@ -774,6 +783,65 @@
         }
       ],
       "preview_showcase": "newsreel-double-feature"
+    },
+    {
+      "id": "vivid-science",
+      "name": "Vivid Science",
+      "name_zh": "鲜彩科学动画",
+      "description": "Expressive vector characters, saturated colour worlds and scale-changing science explanations.",
+      "description_zh": "鲜明的矢量角色、饱和色彩世界与跨尺度科学叙事。",
+      "status": "toolkit-ready",
+      "status_note": "Original visual grammar, generic material primitives, abstract proof and every-frame comparison tools; story scenes and audio must be authored. No example content is bundled.",
+      "status_note_zh": "含原创视觉方法、通用绘制原语、抽象材质验证和全帧比对工具；故事场景与声音仍需创作，不附实例内容。",
+      "guide": "styles/vivid-science/STYLE.md",
+      "readme": "styles/vivid-science/README.md",
+      "prompt": "styles/vivid-science/prompt.txt",
+      "template": "styles/vivid-science/starter",
+      "template_kind": "blank",
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": false,
+        "published_demo": false,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": false,
+        "source_bundle_restore": false,
+        "published_film": false,
+        "original_source": "unavailable",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "material-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "vivid-science-film",
+          "title": "Finished film",
+          "title_zh": "最终成片",
+          "page": "styles/vivid-science/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/vivid-science/showcase/media/films.json"
+        }
+      ],
+      "preview": "styles/vivid-science/preview.svg",
+      "preview_zh": "styles/vivid-science/preview.svg",
+      "preview_kind": "schematic",
+      "landing": {
+        "page": "styles/vivid-science/showcase/index.html",
+        "assets": [
+          "styles/vivid-science/showcase/showcase.css",
+          "styles/vivid-science/showcase/showcase.mjs",
+          "styles/vivid-science/showcase/world.svg",
+          "styles/vivid-science/showcase/fonts/Jost.ttf",
+          "styles/vivid-science/showcase/fonts/OFL-Jost.txt",
+          "styles/vivid-science/STYLE.md",
+          "styles/vivid-science/README.md",
+          "styles/vivid-science/prompt.txt",
+          "styles/vivid-science/PROVENANCE.md"
+        ]
+      },
+      "public_assets": "styles/vivid-science/demo-assets.json",
+      "preview_showcase": "vivid-science-film"
     },
     {
       "id": "exploded-teardown",
@@ -891,9 +959,9 @@
       "name_zh": "棱彩图谱",
       "description": "Saturated vector worlds, inhabited isometric scenes and clear mechanisms connected by purposeful changes of scale.",
       "description_zh": "以高饱和矢量世界、等距场景与清晰机制图，通过有意义的尺度变化解释科学。",
-      "status": "renderer-ready",
-      "status_note": "Depth-ordered isometric tiles, animated heights and faceted prisms. Author the layers and soundtrack for each film.",
-      "status_note_zh": "可渲染有遮挡顺序的等距色块、高度变化与切面棱柱。每部新片需编排图层与声音。",
+      "status": "toolkit-ready",
+      "status_note": "Original style guide, generic geometry and frame-time helpers, and an empty production contract; author every story and scene.",
+      "status_note_zh": "已提供原创风格说明、通用几何与帧时间工具及空白输入契约；故事与场景需独立创作。",
       "guide": "styles/prismatic-atlas/STYLE.md",
       "readme": "styles/prismatic-atlas/README.md",
       "prompt": "styles/prismatic-atlas/prompt.txt",
@@ -901,10 +969,10 @@
       "template_kind": "blank",
       "capabilities": {
         "project_creation": true,
-        "scene_renderer": true,
+        "scene_renderer": false,
         "published_demo": false,
-        "published_film": true,
-        "original_source": "local-source-bundle",
+        "published_film": false,
+        "original_source": "unavailable",
         "sample_rebuild": "not-yet-revalidated",
         "new_film_scope": "style-tools-and-authored-scenes",
         "material_proof": true,
@@ -923,9 +991,9 @@
           "media_manifest": "styles/prismatic-atlas/showcase/media/films.json"
         }
       ],
-      "preview": "docs/readme/frames/prismatic-atlas.jpg",
-      "preview_zh": "docs/readme/frames/prismatic-atlas.jpg",
-      "preview_kind": "frame",
+      "preview": "styles/prismatic-atlas/preview.en.svg",
+      "preview_zh": "styles/prismatic-atlas/preview.zh.svg",
+      "preview_kind": "schematic",
       "preview_showcase": "prismatic-atlas-film",
       "public_assets": "styles/prismatic-atlas/demo-assets.json",
       "landing": {
@@ -1005,9 +1073,9 @@
       "name_zh": "明彩世界",
       "description": "Layered illustrated worlds, crisp animated subjects and luminous mechanisms, with role-based every-frame diagnostics.",
       "description_zh": "分层插画世界、清晰角色动作与明亮机制图，配套按视觉功能逐帧比对的工具。",
-      "status": "renderer-ready",
-      "status_note": "Layered illustration fields and luminous markers following cubic paths. Author the layers and soundtrack for each film.",
-      "status_note_zh": "可渲染分层插画与沿曲线路径运动的发光标记。每部新片需编排图层与声音。",
+      "status": "toolkit-ready",
+      "status_note": "Visual method, geometry and timing helpers, an empty production contract and full-frame diagnostics, plus a published English film. New scenes and sound require authoring.",
+      "status_note_zh": "含视觉方法、几何与时序工具、空白输入契约、全帧诊断与已发布英文成片。新的场景和声音需要另行创作。",
       "guide": "styles/luminous-worlds/STYLE.md",
       "readme": "styles/luminous-worlds/README.md",
       "prompt": "styles/luminous-worlds/prompt.txt",
@@ -1015,12 +1083,12 @@
       "template_kind": "blank",
       "capabilities": {
         "project_creation": true,
-        "scene_renderer": true,
+        "scene_renderer": false,
         "published_demo": false,
         "published_film": true,
         "original_source": "unavailable",
         "sample_rebuild": "not-yet-revalidated",
-        "new_film_scope": "style-tools-and-authored-scenes",
+        "new_film_scope": "hybrid-material-tools-and-authored-scenes",
         "material_proof": true,
         "locked_dependencies": true,
         "bundled_fonts": true,
@@ -1037,9 +1105,9 @@
           "media_manifest": "styles/luminous-worlds/showcase/media/films.json"
         }
       ],
-      "preview": "docs/readme/frames/luminous-worlds.jpg",
-      "preview_zh": "docs/readme/frames/luminous-worlds.jpg",
-      "preview_kind": "frame",
+      "preview": "styles/luminous-worlds/preview.svg",
+      "preview_zh": "styles/luminous-worlds/preview.svg",
+      "preview_kind": "schematic",
       "landing": {
         "page": "styles/luminous-worlds/showcase/index.html",
         "assets": [
@@ -1055,65 +1123,6 @@
       },
       "public_assets": "styles/luminous-worlds/demo-assets.json",
       "preview_showcase": "luminous-worlds-film"
-    },
-    {
-      "id": "vivid-science",
-      "name": "Vivid Science",
-      "name_zh": "鲜彩科学动画",
-      "description": "Expressive vector characters, saturated colour worlds and scale-changing science explanations.",
-      "description_zh": "鲜明的矢量角色、饱和色彩世界与跨尺度科学叙事。",
-      "status": "renderer-ready",
-      "status_note": "Shaded vector bodies and tapered ribbons with interpolated poses. Author the layers and soundtrack for each film.",
-      "status_note_zh": "可渲染带彩色阴影的矢量形体和可变形的渐细曲带。每部新片需编排图层与声音。",
-      "guide": "styles/vivid-science/STYLE.md",
-      "readme": "styles/vivid-science/README.md",
-      "prompt": "styles/vivid-science/prompt.txt",
-      "template": "styles/vivid-science/starter",
-      "template_kind": "blank",
-      "capabilities": {
-        "project_creation": true,
-        "scene_renderer": true,
-        "published_demo": false,
-        "material_proof": true,
-        "locked_dependencies": true,
-        "bundled_fonts": true,
-        "audio_mix": true,
-        "source_bundle_restore": false,
-        "published_film": true,
-        "original_source": "unavailable",
-        "sample_rebuild": "not-yet-revalidated",
-        "new_film_scope": "style-tools-and-authored-scenes"
-      },
-      "showcases": [
-        {
-          "id": "vivid-science-film",
-          "title": "Finished film",
-          "title_zh": "最终成片",
-          "page": "styles/vivid-science/showcase/index.html",
-          "anchor": "screening",
-          "access": "release",
-          "media_manifest": "styles/vivid-science/showcase/media/films.json"
-        }
-      ],
-      "preview": "docs/readme/frames/vivid-science.jpg",
-      "preview_zh": "docs/readme/frames/vivid-science.jpg",
-      "preview_kind": "frame",
-      "landing": {
-        "page": "styles/vivid-science/showcase/index.html",
-        "assets": [
-          "styles/vivid-science/showcase/showcase.css",
-          "styles/vivid-science/showcase/showcase.mjs",
-          "styles/vivid-science/showcase/world.svg",
-          "styles/vivid-science/showcase/fonts/Jost.ttf",
-          "styles/vivid-science/showcase/fonts/OFL-Jost.txt",
-          "styles/vivid-science/STYLE.md",
-          "styles/vivid-science/README.md",
-          "styles/vivid-science/prompt.txt",
-          "styles/vivid-science/PROVENANCE.md"
-        ]
-      },
-      "public_assets": "styles/vivid-science/demo-assets.json",
-      "preview_showcase": "vivid-science-film"
     }
   ],
   "capability_schema_version": 2

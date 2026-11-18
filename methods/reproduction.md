@@ -59,13 +59,6 @@ preview and full commands, then retain the technical receipt alongside the MP4.
 A completed clip is reported as **clip**, never a complete sample rebuild.
 Local source availability does not imply public download availability.
 
-Each file record may contain a boolean `executable` flag. New seals preserve this
-intent as mode 0755 for executable files and 0644 for other files through archive,
-acquisition and restore. Setuid, setgid and group/world write bits are never
-restored. Legacy schema-1 records without the flag remain readable and default
-to 0644; reseal original inputs to recover executable intent. Tar header modes
-cannot override the checksum-pinned manifest.
-
 `styles.json` capability schema 2 separates `published_film`, `scene_renderer`,
 `original_source`, `sample_rebuild`, and `new_film_scope`. `published_demo` remains
 the legacy bundled-demo flag for compatibility. `renderer-ready` means reusable

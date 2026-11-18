@@ -19,14 +19,6 @@ MANIFEST = 'reproduction-manifest.json'
 FORBIDDEN = {'node_modules', '.git', '.venv', '__pycache__', '.env'}
 
 
-def file_mode(entry):
-    """Carry only portable executable intent, never setuid or writable modes."""
-    executable = entry.get('executable', False)
-    if type(executable) is not bool:
-        raise ValueError('Manifest executable flag must be boolean')
-    return 0o755 if executable else 0o644
-
-
 def sha(file):
     digest = hashlib.sha256()
     with file.open('rb') as stream:
@@ -65,7 +57,6 @@ def inspect_bundle(bundle):
         raise ValueError('Invalid or empty reproduction manifest')
     seen = set()
     for entry in manifest['files']:
-        file_mode(entry)
         p = relative(entry['path'])
         if str(p) in seen:
             raise ValueError('Duplicate bundle path')
@@ -83,8 +74,7 @@ def inspect_bundle(bundle):
 def archive(bundle, output):
     """Portable deterministic archive; its SHA-256 authenticates the manifest too."""
     bundle = Path(bundle).resolve()
-    manifest = inspect_bundle(bundle)
-    modes = {entry['path']: file_mode(entry) for entry in manifest['files']}
+    inspect_bundle(bundle)
     output = external(output)
     output.parent.mkdir(parents=True, exist_ok=True)
     files = [bundle/MANIFEST, *sorted(p for p in (bundle/'project').rglob('*') if p.is_file())]
@@ -95,7 +85,7 @@ def archive(bundle, output):
                 info = tar.gettarinfo(str(file), arcname=file.relative_to(bundle).as_posix())
                 info.uid = info.gid = info.mtime = 0
                 info.uname = info.gname = ''
-                info.mode = modes.get(file.relative_to(bundle/'project').as_posix(), 0o644) if file != bundle/MANIFEST else 0o644
+                info.mode = 0o644
                 with file.open('rb') as stream: tar.addfile(info, stream)
     except BaseException:
         output.unlink(missing_ok=True)
@@ -136,10 +126,7 @@ def acquire(source, destination, expected_sha256, max_bytes=20*1024**3):
                 target = stage/name; target.parent.mkdir(parents=True, exist_ok=True)
                 with tar.extractfile(member) as incoming, target.open('xb') as outgoing:
                     shutil.copyfileobj(incoming, outgoing)
-        manifest = inspect_bundle(stage)
-        # Permission authority is the checksum-pinned manifest, not tar headers.
-        for entry in manifest['files']:
-            (stage/'project'/entry['path']).chmod(file_mode(entry))
+        inspect_bundle(stage)
         out.mkdir()
         try:
             for item in stage.iterdir(): shutil.move(str(item),out/item.name)
@@ -163,8 +150,7 @@ def seal(source, destination, recipe):
             text = file.read_text(errors='replace')
             if re.search(r'(?:sk-[A-Za-z0-9_-]{24,}|gh[pousr]_[A-Za-z0-9]{24,}|-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----)', text):
                 raise ValueError(f'Credential material detected; exclude or sanitize {name}')
-        records.append(dict(path=p.as_posix(), bytes=file.stat().st_size, sha256=sha(file),
-                            executable=bool(file.stat().st_mode & 0o111)))
+        records.append(dict(path=p.as_posix(), bytes=file.stat().st_size, sha256=sha(file)))
     if not records or len({r['path'] for r in records}) != len(records):
         raise ValueError('Recipe needs a nonempty, unique file list')
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -173,7 +159,6 @@ def seal(source, destination, recipe):
         for record in records:
             target = stage/'project'/record['path']; target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source/record['path'], target)
-            target.chmod(file_mode(record))
         manifest = {**{k:v for k,v in recipe.items() if k != 'files'},
                     'schema_version':1, 'files': records,
                     'verification_scope':'File integrity only; see the external validation record for render/playback coverage.'}
@@ -204,7 +189,6 @@ def restore(bundle, destination, style=None):
         for entry in manifest['files']:
             if sha(stage/entry['path']) != entry['sha256']:
                 raise ValueError('Bundle changed during restore')
-            (stage/entry['path']).chmod(file_mode(entry))
         for folder in manifest.get('working_directories', ['media', 'review']):
             target = stage/relative(folder)
             if target.exists() and not target.is_dir():

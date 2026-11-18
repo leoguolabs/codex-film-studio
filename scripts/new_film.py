@@ -95,17 +95,22 @@ def create(name, style, root=ROOT, output=None):
     destination.parent.mkdir(parents=True, exist_ok=True)
     # copytree creates the leaf exclusively and refuses a concurrent creation.
     shutil.copytree(source, destination, ignore=IGNORE)
-    if blank and entry.get('capabilities', {}).get('scene_renderer') and runtime.is_dir():
+    if blank and runtime.is_dir():
         shutil.copytree(runtime, destination / "tools/runtime", ignore=IGNORE)
         shutil.copy2(runtime / "README.md", destination / "PRODUCTION.md")
     if blank and engine.is_dir():
         shutil.copytree(engine, destination / "engine", ignore=IGNORE)
+    # Authored visual benchmarks are methodology, not the new production's media.
+    # Explicitly copy this optional directory despite the starter ignore rule.
+    reference = style_root / "reference"
+    if blank and reference.is_dir():
+        shutil.copytree(reference, destination / "reference", ignore=IGNORE)
     for path, target in copies:
         if path.suffix == ".md":
             text = project_text(path.read_text())
             if path.parent == style_root:
                 text = re.sub(r'\]\((showcase/[^)]+)\)',
-                              lambda m: f'](https://leoguolabs.github.io/codex-film-studio/styles/{style}/{m[1]})', text)
+                              lambda m: f'](https://visiontrail.github.io/codex-film-studio/styles/{style}/{m[1]})', text)
             (destination / target).write_text(text, encoding="utf-8")
         else:
             (destination / target).parent.mkdir(parents=True, exist_ok=True)
@@ -139,8 +144,9 @@ def create(name, style, root=ROOT, output=None):
         review_tools = root / "scripts/frame_review"
         if review_tools.is_dir():
             shutil.copytree(review_tools, destination / "tools/frame_review", ignore=IGNORE)
-    if (root / "scripts/tts").is_dir():
-        shutil.copytree(root / "scripts/tts", destination / "tools/tts", ignore=IGNORE)
+    speech_tools = root / "scripts/tts"
+    if speech_tools.is_dir():
+        shutil.copytree(speech_tools, destination / "tools/tts", ignore=IGNORE)
     return destination
 
 

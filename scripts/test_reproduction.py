@@ -7,9 +7,6 @@ import unittest
 from reproduction import seal, restore, inspect_bundle, relative, archive, acquire, sha
 import io
 import tarfile
-import subprocess
-import shutil
-import struct
 from new_film import ROOT, create
 
 spec = importlib.util.spec_from_file_location('runtime_build', ROOT/'runtime/build.py')
@@ -18,60 +15,6 @@ spec.loader.exec_module(build)
 
 
 class ReproductionTests(unittest.TestCase):
-    def test_executable_permissions_survive_archive_and_restore(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            root=Path(tmp); source=root/'source'; source.mkdir()
-            script=source/'build.sh'; script.write_text('#!/bin/sh\nprintf \"portable\\n\"\n'); script.chmod(0o775)
-            bundle=seal(source,root/'bundle',{'style':'test','files':['build.sh']})
-            self.assertTrue(inspect_bundle(bundle)['files'][0]['executable'])
-            packed=archive(bundle,root/'source.tar.gz')
-            with tarfile.open(root/'source.tar.gz') as tar:
-                self.assertEqual(tar.getmember('project/build.sh').mode,0o755)
-            acquired=acquire(root/'source.tar.gz',root/'unpacked',packed['sha256'])
-            restored=restore(acquired,root/'restored')
-            self.assertEqual((restored/'build.sh').stat().st_mode & 0o7777,0o755)
-            self.assertEqual(subprocess.check_output([str(restored/'build.sh')]),b'portable\n')
-            unsafe=root/'header-modes.tar.gz'
-            with tarfile.open(root/'source.tar.gz') as src,tarfile.open(unsafe,'w:gz') as dst:
-                for member in src:
-                    member.mode=0o7777
-                    dst.addfile(member,src.extractfile(member))
-            safe=acquire(unsafe,root/'header-modes',sha(unsafe))
-            self.assertEqual((safe/'project/build.sh').stat().st_mode & 0o7777,0o755)
-            # Legacy v1 manifests remain accepted, with a safe non-executable default.
-            manifest=inspect_bundle(bundle); del manifest['files'][0]['executable']
-            (bundle/'reproduction-manifest.json').write_text(json.dumps(manifest))
-            legacy=restore(bundle,root/'legacy')
-            self.assertEqual((legacy/'build.sh').stat().st_mode & 0o7777,0o644)
-            manifest['files'][0]['executable']='yes'
-            (bundle/'reproduction-manifest.json').write_text(json.dumps(manifest))
-            with self.assertRaises(ValueError):inspect_bundle(bundle)
-
-    @unittest.skipUnless(shutil.which('ffmpeg'), 'requires FFmpeg')
-    def test_delayed_audio_survives_a_buffered_input(self):
-        # Reversing twice preserves the samples but holds the first frame until EOF.
-        # This forces the delay filter to emit its leading silence before the cue is ready.
-        clip = build.audio_clip_filters(start_sample=12000, gain=1)
-        pcm = subprocess.check_output([
-            'ffmpeg', '-v', 'error', '-f', 'lavfi', '-i', 'aevalsrc=0.25:s=48000:d=0.125',
-            '-af', f'areverse,areverse,{clip},apad,atrim=duration=0.5',
-            '-ac', '1', '-f', 's16le', 'pipe:1',
-        ])
-        samples = [value for (value,) in struct.iter_unpack('<h', pcm)]
-        self.assertEqual(len(samples), 24000)
-        self.assertFalse(any(samples[:12000]))
-        self.assertTrue(all(samples[12000:18000]))
-        self.assertFalse(any(samples[18000:]))
-
-    def test_python_and_javascript_output_dimensions_agree(self):
-        vectors=[[1920,1080,w] for w in [2,320,480,640,720,1080,1920]]+[[1080,1920,720],[640,360,720]]
-        js="import {outputDimensions} from './runtime/dimensions.mjs'; console.log(JSON.stringify("+json.dumps(vectors)+".map(v=>outputDimensions(...v))));"
-        actual=json.loads(subprocess.check_output(['node','--input-type=module','-e',js],cwd=ROOT))
-        self.assertEqual(actual,[list(build.output_dimensions(*v)) for v in vectors])
-        self.assertEqual(build.output_dimensions(1920,1080,720),(720,406))
-        for width in [0,-2,721,True,1.5]:
-            with self.assertRaises(ValueError):build.output_dimensions(1920,1080,width)
-
     def test_archive_roundtrip_checksum_and_traversal(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/'source'; source.mkdir()
@@ -120,7 +63,7 @@ class ReproductionTests(unittest.TestCase):
         catalog=json.loads((ROOT/'styles.json').read_text())
         with tempfile.TemporaryDirectory() as tmp:
             for entry in catalog['styles']:
-                if entry['template_kind']!='blank' or not entry['capabilities']['scene_renderer']:continue
+                if entry['template_kind']!='blank':continue
                 with self.subTest(style=entry['id']):
                     p=create('kit',entry['id'],output=Path(tmp)/entry['id'])
                     package=json.loads((p/'package.json').read_text())

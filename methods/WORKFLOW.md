@@ -11,12 +11,14 @@
    generated imagery or diagrams for that purpose. Use [media selection](media-selection.md)
    to inspect actual source intervals and reframe them around the subject.
 4. Generate narration through a configured service, or import recordings.
+   [Shared narration tools](narration.md) provide Edge TTS with selectable voices
+   and WAV/caption binding to the video timeline; use retained audio for replay.
    Preserve original WAVs and source hashes; measure them before locking timing.
    Keep credentials and provider job records in the external project.
 5. Use one integer-frame clock with half-open shot ranges `[start, end)` for
    picture, speech, captions and event sounds. Derive state deterministically
    from the requested frame. Rebuild dependent timing when the audio changes.
-6. Author the subject's scene layers and sound mix with the supplied renderer when available; otherwise implement the renderer in the production.
+6. Author the subject's scene layers and sound mix with the supplied renderer; extend its scene module when needed.
    Keep narration, score, ambience and effects separately editable. Lock actual
    dependencies in the production, and coordinate FFmpeg with other local jobs.
 7. Render representative native-size stills and motion previews, inspect them,
@@ -29,5 +31,5 @@ For a compilation or changed brief, follow [revision and delivery](revision-deli
 Rebuild the edit around the new viewing experience, renew affected evidence and
 promote only subject-independent lessons to this library.
 
-A starter creates files and tools; authoring the scenes, narration and any missing rendering
+A starter creates files and tools; authoring the scenes, narration and scene extensions
 is part of the film project. A prior sample's acceptance does not accept a new film.

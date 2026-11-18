@@ -5,7 +5,7 @@ need authored scenes, source assets and accepted audio. Original-sample replay
 uses an external source bundle, as described in [reproduction](../../methods/reproduction.md).
 
 
-[Open the Art Deco style page](https://leoguolabs.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=en) · [中文独立风格页](https://leoguolabs.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=zh)
+[Open the Art Deco style page](https://visiontrail.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=en) · [中文独立风格页](https://visiontrail.github.io/codex-film-studio/styles/art-deco/showcase/index.html?lang=zh)
 
 Explore a 16-second interactive material study, palette, drawing and motion rules,
 and prompts to start a film with your Agent. The original study uses the reusable toolkit; it is
@@ -30,3 +30,12 @@ original source project and assets first. See [reproduction](../../methods/repro
 
 
 The default output is outside this library. Author a new storyboard and extend the supplied scene renderer there; do not copy a prior film's cast, claims, script or scene content. Status: renderer-ready. The style page links published films; landscape editions remain local. Neither establishes exact style equivalence for a new production.
+
+## Alternate aspect ratio
+
+The local catalog also links to [16:9 landscape editions](showcase/landscape.html),
+with the portrait films retained. Ask your Agent to open
+these external production files in the local studio. Landscape deliveries are local and separate
+from the pinned public film bundle. See the shared
+[aspect-ratio workflow](../../methods/aspect-ratio-editions.md) for recomposition
+and edition-specific checks.

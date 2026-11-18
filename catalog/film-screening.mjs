@@ -14,12 +14,9 @@ let films = [], selected = 0, failed = false;
 const language = () => document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
 const localized = value => typeof value === 'string' ? value : value?.[language()] ?? value?.en ?? '';
 const copy = (en, zh) => language() === 'zh' ? zh : en;
-function asset(path, remoteFilm = false) {
+function asset(path) {
   const url = new URL(path, mediaRoot);
-  if (!url.href.startsWith(mediaRoot.href)) {
-    if (remoteFilm && url.protocol === 'https:') return url.href;
-    throw new Error('Film asset outside media bundle');
-  }
+  if (!url.href.startsWith(mediaRoot.href)) throw new Error('Film asset outside media bundle');
   if (revision) url.searchParams.set('v', revision);
   return url.href;
 }
@@ -47,7 +44,7 @@ function choose(index) {
   const film = films[index];
   player.pause();
   player.querySelectorAll('track, source').forEach(node => node.remove());
-  player.src = asset(film.file, true);
+  player.src = asset(film.file);
   player.poster = asset(film.poster);
   player.style.aspectRatio = `${film.width} / ${film.height}`;
   for (const captions of film.captions ?? []) {
@@ -56,7 +53,7 @@ function choose(index) {
     track.srclang = captions.language; track.label = captions.label;
     player.append(track);
   }
-  download.href = asset(film.file, true);
+  download.href = asset(film.file);
   failed = false;
   renderLanguage();
   player.load();

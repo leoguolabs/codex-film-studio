@@ -41,7 +41,7 @@ class CatalogTests(unittest.TestCase):
                         image = ROOT / source['image']
                         self.assertEqual(hashlib.sha256(image.read_bytes()).hexdigest(), source['image_sha256'])
                 self.assertTrue(entry["capabilities"]["project_creation"])
-                self.assertIn(entry['capabilities']['original_source'], ['public-inputs-and-repository','local-source-bundle','unavailable','not-audited'])
+                self.assertIn(entry['capabilities']['original_source'], ['public-inputs-and-repository','local-source-bundle','unavailable'])
                 self.assertIn(entry['capabilities']['sample_rebuild'], ['full','clip','not-yet-revalidated'])
                 if entry['capabilities']['published_film']:
                     self.assertTrue(any(p['access']=='release' for p in entry['showcases']))

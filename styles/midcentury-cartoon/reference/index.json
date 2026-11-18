@@ -1,0 +1,1710 @@
+{
+  "schema": 1,
+  "coordinate_system": "zero-based, end-exclusive, 24 fps",
+  "purpose": "Visual calibration and role-based comparison; never automatic aesthetic acceptance",
+  "sources": [
+    {
+      "id": "pip",
+      "title": "Meet Pip · original style demonstration",
+      "sha256": "a73905d12f82a935d75413ef3415e51e5400b0a41dd45a132c2be55f43420ed6",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 24.0,
+      "frame_count": 960,
+      "color_space": "bt470bg",
+      "color_range": "pc",
+      "upstream_url": "https://github.com/lemomo-ai/lemo-opuscar/blob/02dce5b6ff6210622788c15319c082e9cb9e7217/styles/midcentury-toon/demo/lemo-opuscar_Mid-century-Cartoon_Meet-Pip.mp4",
+      "keyframes": [
+        0,
+        12,
+        24,
+        30,
+        36,
+        41,
+        42,
+        48,
+        49,
+        60,
+        65,
+        72,
+        74,
+        84,
+        96,
+        108,
+        110,
+        120,
+        132,
+        140,
+        144,
+        156,
+        163,
+        164,
+        168,
+        172,
+        176,
+        179,
+        180,
+        192,
+        196,
+        204,
+        210,
+        215,
+        216,
+        223,
+        228,
+        239,
+        240,
+        252,
+        264,
+        274,
+        276,
+        288,
+        292,
+        293,
+        300,
+        305,
+        312,
+        320,
+        324,
+        327,
+        335,
+        336,
+        340,
+        348,
+        349,
+        359,
+        360,
+        372,
+        374,
+        384,
+        388,
+        396,
+        398,
+        408,
+        412,
+        420,
+        432,
+        437,
+        438,
+        444,
+        447,
+        455,
+        456,
+        468,
+        470,
+        480,
+        489,
+        492,
+        503,
+        504,
+        515,
+        516,
+        525,
+        527,
+        528,
+        540,
+        552,
+        564,
+        573,
+        576,
+        588,
+        600,
+        610,
+        612,
+        624,
+        633,
+        636,
+        648,
+        654,
+        655,
+        660,
+        663,
+        672,
+        680,
+        684,
+        687,
+        692,
+        696,
+        704,
+        708,
+        720,
+        732,
+        744,
+        745,
+        755,
+        756,
+        767,
+        768,
+        775,
+        780,
+        792,
+        804,
+        815,
+        816,
+        828,
+        840,
+        845,
+        852,
+        864,
+        876,
+        878,
+        879,
+        883,
+        887,
+        888,
+        900,
+        912,
+        918,
+        924,
+        936,
+        948,
+        959
+      ],
+      "ranges": [
+        {
+          "role": "reveal",
+          "start": 0,
+          "end": 42,
+          "keyframes": [
+            0,
+            12,
+            24,
+            30,
+            36,
+            41
+          ],
+          "look_for": "A physical reveal precedes the title; body is planted."
+        },
+        {
+          "role": "title-and-read",
+          "start": 42,
+          "end": 164,
+          "keyframes": [
+            42,
+            49,
+            65,
+            74,
+            110,
+            140,
+            163
+          ],
+          "look_for": "Script kicker, slab headline and product medallion enter in order; allow a quiet read."
+        },
+        {
+          "role": "object-iris",
+          "start": 164,
+          "end": 180,
+          "keyframes": [
+            164,
+            168,
+            172,
+            176,
+            179
+          ],
+          "look_for": "Number badge is the geometric and semantic transition center."
+        },
+        {
+          "role": "contact-inset",
+          "start": 180,
+          "end": 240,
+          "keyframes": [
+            180,
+            196,
+            204,
+            210,
+            215,
+            223,
+            228,
+            239
+          ],
+          "look_for": "Establish context; show a native-drawn circular detail; hand contact changes the prop."
+        },
+        {
+          "role": "mechanism-hold",
+          "start": 240,
+          "end": 293,
+          "keyframes": [
+            240,
+            252,
+            274,
+            292
+          ],
+          "look_for": "Large clearance marks and a held body let the viewer read the result."
+        },
+        {
+          "role": "tool-inset",
+          "start": 293,
+          "end": 360,
+          "keyframes": [
+            293,
+            305,
+            320,
+            327,
+            335,
+            340,
+            349,
+            359
+          ],
+          "look_for": "Transition into a different ground; a local tool close-up presents a readable control state."
+        },
+        {
+          "role": "cause-and-result",
+          "start": 360,
+          "end": 438,
+          "keyframes": [
+            360,
+            374,
+            388,
+            398,
+            412,
+            437
+          ],
+          "look_for": "Signal travels from action to result; confirmation is held."
+        },
+        {
+          "role": "hero-hand",
+          "start": 438,
+          "end": 528,
+          "keyframes": [
+            438,
+            447,
+            455,
+            470,
+            489,
+            503,
+            515,
+            525,
+            527
+          ],
+          "look_for": "Close hand anticipates, presses, waits for feedback, and releases; thin screen-space lines."
+        },
+        {
+          "role": "overhead-route",
+          "start": 528,
+          "end": 655,
+          "keyframes": [
+            528,
+            540,
+            552,
+            573,
+            588,
+            610,
+            633,
+            654
+          ],
+          "look_for": "Pull back to a top view; one physical path reveals system behavior progressively."
+        },
+        {
+          "role": "material-tip",
+          "start": 655,
+          "end": 745,
+          "keyframes": [
+            655,
+            663,
+            672,
+            680,
+            684,
+            687,
+            692,
+            704,
+            720,
+            744
+          ],
+          "look_for": "Plane wipe; lower body to the target; grip/lift is causal and readable."
+        },
+        {
+          "role": "recap-lockup",
+          "start": 745,
+          "end": 879,
+          "keyframes": [
+            745,
+            755,
+            767,
+            775,
+            792,
+            815,
+            845,
+            878
+          ],
+          "look_for": "Miniatures preserve real prop identities; stagger recap then hold."
+        },
+        {
+          "role": "iris-end",
+          "start": 879,
+          "end": 960,
+          "keyframes": [
+            879,
+            883,
+            887,
+            888,
+            900,
+            918,
+            959
+          ],
+          "look_for": "Close on the narrative object and leave a stable final card."
+        }
+      ],
+      "scope": "Reference evidence only; do not import this cast, subject, captions or artwork into a new film."
+    },
+    {
+      "id": "reference-short",
+      "title": "Registered learning-film short example",
+      "sha256": "5997519d9ebec87df189e3cb97d32b9a9f71f8c6f29cfce20e03a9fa28bfc9e7",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 24.0,
+      "frame_count": 4752,
+      "color_space": "bt709",
+      "color_range": "tv",
+      "upstream_url": null,
+      "keyframes": [
+        103,
+        131,
+        172,
+        237,
+        265,
+        352,
+        417,
+        445,
+        568,
+        757,
+        785,
+        832,
+        917,
+        945,
+        1048,
+        1113,
+        1141,
+        1336,
+        1401,
+        1429,
+        1552,
+        1615,
+        1643,
+        1732,
+        1797,
+        1825,
+        1936,
+        1992,
+        2020,
+        2104,
+        2169,
+        2197,
+        2308,
+        2373,
+        2401,
+        2512,
+        2643,
+        2671,
+        2692,
+        2760,
+        2788,
+        2896,
+        2983,
+        3011,
+        3100,
+        3251,
+        3279,
+        3316,
+        3381,
+        3409,
+        3544,
+        3718,
+        3746,
+        3808,
+        3845,
+        3873,
+        4012,
+        4077,
+        4105,
+        4228,
+        4293,
+        4321,
+        4420,
+        4485,
+        4513,
+        4612,
+        4632,
+        4652,
+        4732
+      ],
+      "ranges": [
+        {
+          "role": "hook",
+          "shot": "01",
+          "start": 0,
+          "end": 192,
+          "keyframes": [
+            103,
+            131,
+            172
+          ],
+          "action": 111
+        },
+        {
+          "role": "title",
+          "shot": "02",
+          "start": 192,
+          "end": 372,
+          "keyframes": [
+            237,
+            265,
+            352
+          ],
+          "action": 245
+        },
+        {
+          "role": "four_tests",
+          "shot": "03",
+          "start": 372,
+          "end": 588,
+          "keyframes": [
+            417,
+            445,
+            568
+          ],
+          "action": 425
+        },
+        {
+          "role": "turkey",
+          "shot": "04",
+          "start": 588,
+          "end": 852,
+          "keyframes": [
+            757,
+            785,
+            832
+          ],
+          "action": 765
+        },
+        {
+          "role": "exam",
+          "shot": "05",
+          "start": 852,
+          "end": 1068,
+          "keyframes": [
+            917,
+            945,
+            1048
+          ],
+          "action": 925
+        },
+        {
+          "role": "guardrails",
+          "shot": "06",
+          "start": 1068,
+          "end": 1356,
+          "keyframes": [
+            1113,
+            1141,
+            1336
+          ],
+          "action": 1121
+        },
+        {
+          "role": "physics",
+          "shot": "07",
+          "start": 1356,
+          "end": 1572,
+          "keyframes": [
+            1401,
+            1429,
+            1552
+          ],
+          "action": 1409
+        },
+        {
+          "role": "limits",
+          "shot": "08",
+          "start": 1572,
+          "end": 1752,
+          "keyframes": [
+            1615,
+            1643,
+            1732
+          ],
+          "action": 1623
+        },
+        {
+          "role": "choose",
+          "shot": "09",
+          "start": 1752,
+          "end": 1956,
+          "keyframes": [
+            1797,
+            1825,
+            1936
+          ],
+          "action": 1805
+        },
+        {
+          "role": "step1",
+          "shot": "10",
+          "start": 1956,
+          "end": 2124,
+          "keyframes": [
+            1992,
+            2020,
+            2104
+          ],
+          "action": 2000
+        },
+        {
+          "role": "example",
+          "shot": "11",
+          "start": 2124,
+          "end": 2328,
+          "keyframes": [
+            2169,
+            2197,
+            2308
+          ],
+          "action": 2177
+        },
+        {
+          "role": "hint",
+          "shot": "12",
+          "start": 2328,
+          "end": 2532,
+          "keyframes": [
+            2373,
+            2401,
+            2512
+          ],
+          "action": 2381
+        },
+        {
+          "role": "algebra",
+          "shot": "13",
+          "start": 2532,
+          "end": 2712,
+          "keyframes": [
+            2643,
+            2671,
+            2692
+          ],
+          "action": 2651
+        },
+        {
+          "role": "step2",
+          "shot": "14",
+          "start": 2712,
+          "end": 2916,
+          "keyframes": [
+            2760,
+            2788,
+            2896
+          ],
+          "action": 2768
+        },
+        {
+          "role": "retrieve",
+          "shot": "15",
+          "start": 2916,
+          "end": 3120,
+          "keyframes": [
+            2983,
+            3011,
+            3100
+          ],
+          "action": 2991
+        },
+        {
+          "role": "feedback",
+          "shot": "16",
+          "start": 3120,
+          "end": 3336,
+          "keyframes": [
+            3251,
+            3279,
+            3316
+          ],
+          "action": 3259
+        },
+        {
+          "role": "step3",
+          "shot": "17",
+          "start": 3336,
+          "end": 3564,
+          "keyframes": [
+            3381,
+            3409,
+            3544
+          ],
+          "action": 3389
+        },
+        {
+          "role": "transfer",
+          "shot": "18",
+          "start": 3564,
+          "end": 3828,
+          "keyframes": [
+            3718,
+            3746,
+            3808
+          ],
+          "action": 3726
+        },
+        {
+          "role": "later",
+          "shot": "19",
+          "start": 3828,
+          "end": 4032,
+          "keyframes": [
+            3845,
+            3873,
+            4012
+          ],
+          "action": 3853
+        },
+        {
+          "role": "summary",
+          "shot": "20",
+          "start": 4032,
+          "end": 4248,
+          "keyframes": [
+            4077,
+            4105,
+            4228
+          ],
+          "action": 4085
+        },
+        {
+          "role": "caution",
+          "shot": "21",
+          "start": 4248,
+          "end": 4440,
+          "keyframes": [
+            4293,
+            4321,
+            4420
+          ],
+          "action": 4301
+        },
+        {
+          "role": "closing",
+          "shot": "22",
+          "start": 4440,
+          "end": 4632,
+          "keyframes": [
+            4485,
+            4513,
+            4612
+          ],
+          "action": 4493
+        },
+        {
+          "role": "credits",
+          "shot": "23",
+          "start": 4632,
+          "end": 4752,
+          "keyframes": [
+            4632,
+            4652,
+            4732
+          ],
+          "action": 4632
+        }
+      ],
+      "scope": "Reference evidence only; do not import this cast, subject, captions or artwork into a new film."
+    },
+    {
+      "id": "reference-long",
+      "title": "Registered learning-film long example",
+      "sha256": "13441784b2a4d2848fc4ac00ccbcef259e8af3c2ec555960cf98dae6d87efae3",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 24.0,
+      "frame_count": 15012,
+      "color_space": "bt709",
+      "color_range": "tv",
+      "upstream_url": null,
+      "keyframes": [
+        112,
+        140,
+        172,
+        283,
+        311,
+        412,
+        477,
+        505,
+        592,
+        657,
+        685,
+        796,
+        904,
+        932,
+        1024,
+        1124,
+        1152,
+        1240,
+        1359,
+        1387,
+        1492,
+        1690,
+        1718,
+        1756,
+        1865,
+        1893,
+        1984,
+        2069,
+        2097,
+        2200,
+        2324,
+        2352,
+        2464,
+        2529,
+        2557,
+        2740,
+        2847,
+        2875,
+        2968,
+        3033,
+        3061,
+        3172,
+        3280,
+        3308,
+        3400,
+        3463,
+        3491,
+        3568,
+        3695,
+        3723,
+        3844,
+        3959,
+        3987,
+        4084,
+        4203,
+        4231,
+        4336,
+        4461,
+        4489,
+        4612,
+        4739,
+        4767,
+        4900,
+        5020,
+        5048,
+        5164,
+        5278,
+        5306,
+        5404,
+        5522,
+        5550,
+        5656,
+        5763,
+        5791,
+        5884,
+        5958,
+        5986,
+        6088,
+        6144,
+        6172,
+        6256,
+        6321,
+        6349,
+        6448,
+        6559,
+        6587,
+        6688,
+        6794,
+        6822,
+        6916,
+        6981,
+        7009,
+        7108,
+        7239,
+        7267,
+        7276,
+        7377,
+        7405,
+        7492,
+        7593,
+        7621,
+        7708,
+        7803,
+        7831,
+        7996,
+        8064,
+        8092,
+        8188,
+        8275,
+        8303,
+        8380,
+        8504,
+        8532,
+        8644,
+        8770,
+        8798,
+        8920,
+        9071,
+        9099,
+        9124,
+        9235,
+        9263,
+        9364,
+        9438,
+        9466,
+        9580,
+        9754,
+        9782,
+        9796,
+        9909,
+        9937,
+        10036,
+        10160,
+        10188,
+        10300,
+        10405,
+        10433,
+        10516,
+        10633,
+        10661,
+        10768,
+        10805,
+        10833,
+        10960,
+        11070,
+        11098,
+        11200,
+        11321,
+        11349,
+        11464,
+        11582,
+        11610,
+        11704,
+        11828,
+        11856,
+        11968,
+        12095,
+        12123,
+        12268,
+        12383,
+        12411,
+        12520,
+        12631,
+        12659,
+        12760,
+        12878,
+        12906,
+        13012,
+        13137,
+        13165,
+        13288,
+        13414,
+        13442,
+        13564,
+        13678,
+        13706,
+        13804,
+        13921,
+        13949,
+        14044,
+        14109,
+        14137,
+        14248,
+        14355,
+        14383,
+        14476,
+        14541,
+        14569,
+        14668,
+        14733,
+        14761,
+        14848,
+        14868,
+        14888,
+        14992
+      ],
+      "ranges": [
+        {
+          "role": "hook",
+          "shot": "01",
+          "start": 0,
+          "end": 192,
+          "keyframes": [
+            112,
+            140,
+            172
+          ],
+          "action": 120
+        },
+        {
+          "role": "two_pages",
+          "shot": "02",
+          "start": 192,
+          "end": 432,
+          "keyframes": [
+            283,
+            311,
+            412
+          ],
+          "action": 291
+        },
+        {
+          "role": "title",
+          "shot": "03",
+          "start": 432,
+          "end": 612,
+          "keyframes": [
+            477,
+            505,
+            592
+          ],
+          "action": 485
+        },
+        {
+          "role": "four_tests",
+          "shot": "04",
+          "start": 612,
+          "end": 816,
+          "keyframes": [
+            657,
+            685,
+            796
+          ],
+          "action": 665
+        },
+        {
+          "role": "tests_detail",
+          "shot": "05",
+          "start": 816,
+          "end": 1044,
+          "keyframes": [
+            904,
+            932,
+            1024
+          ],
+          "action": 912
+        },
+        {
+          "role": "tests_detail",
+          "shot": "06",
+          "start": 1044,
+          "end": 1260,
+          "keyframes": [
+            1124,
+            1152,
+            1240
+          ],
+          "action": 1132
+        },
+        {
+          "role": "tests_detail",
+          "shot": "07",
+          "start": 1260,
+          "end": 1512,
+          "keyframes": [
+            1359,
+            1387,
+            1492
+          ],
+          "action": 1367
+        },
+        {
+          "role": "turkey",
+          "shot": "08",
+          "start": 1512,
+          "end": 1776,
+          "keyframes": [
+            1690,
+            1718,
+            1756
+          ],
+          "action": 1698
+        },
+        {
+          "role": "evidence_board",
+          "shot": "09",
+          "start": 1776,
+          "end": 2004,
+          "keyframes": [
+            1865,
+            1893,
+            1984
+          ],
+          "action": 1873
+        },
+        {
+          "role": "exam",
+          "shot": "10",
+          "start": 2004,
+          "end": 2220,
+          "keyframes": [
+            2069,
+            2097,
+            2200
+          ],
+          "action": 2077
+        },
+        {
+          "role": "two_pages",
+          "shot": "11",
+          "start": 2220,
+          "end": 2484,
+          "keyframes": [
+            2324,
+            2352,
+            2464
+          ],
+          "action": 2332
+        },
+        {
+          "role": "guardrails",
+          "shot": "12",
+          "start": 2484,
+          "end": 2760,
+          "keyframes": [
+            2529,
+            2557,
+            2740
+          ],
+          "action": 2537
+        },
+        {
+          "role": "evidence_board",
+          "shot": "13",
+          "start": 2760,
+          "end": 2988,
+          "keyframes": [
+            2847,
+            2875,
+            2968
+          ],
+          "action": 2855
+        },
+        {
+          "role": "physics",
+          "shot": "14",
+          "start": 2988,
+          "end": 3192,
+          "keyframes": [
+            3033,
+            3061,
+            3172
+          ],
+          "action": 3041
+        },
+        {
+          "role": "evidence_board",
+          "shot": "15",
+          "start": 3192,
+          "end": 3420,
+          "keyframes": [
+            3280,
+            3308,
+            3400
+          ],
+          "action": 3288
+        },
+        {
+          "role": "limits",
+          "shot": "16",
+          "start": 3420,
+          "end": 3588,
+          "keyframes": [
+            3463,
+            3491,
+            3568
+          ],
+          "action": 3471
+        },
+        {
+          "role": "two_pages",
+          "shot": "17",
+          "start": 3588,
+          "end": 3864,
+          "keyframes": [
+            3695,
+            3723,
+            3844
+          ],
+          "action": 3703
+        },
+        {
+          "role": "reading",
+          "shot": "18",
+          "start": 3864,
+          "end": 4104,
+          "keyframes": [
+            3959,
+            3987,
+            4084
+          ],
+          "action": 3967
+        },
+        {
+          "role": "reading",
+          "shot": "19",
+          "start": 4104,
+          "end": 4356,
+          "keyframes": [
+            4203,
+            4231,
+            4336
+          ],
+          "action": 4211
+        },
+        {
+          "role": "retrieval_study",
+          "shot": "20",
+          "start": 4356,
+          "end": 4632,
+          "keyframes": [
+            4461,
+            4489,
+            4612
+          ],
+          "action": 4469
+        },
+        {
+          "role": "retrieval_study",
+          "shot": "21",
+          "start": 4632,
+          "end": 4920,
+          "keyframes": [
+            4739,
+            4767,
+            4900
+          ],
+          "action": 4747
+        },
+        {
+          "role": "practice_cards",
+          "shot": "22",
+          "start": 4920,
+          "end": 5184,
+          "keyframes": [
+            5020,
+            5048,
+            5164
+          ],
+          "action": 5028
+        },
+        {
+          "role": "calendar_long",
+          "shot": "23",
+          "start": 5184,
+          "end": 5424,
+          "keyframes": [
+            5278,
+            5306,
+            5404
+          ],
+          "action": 5286
+        },
+        {
+          "role": "mix_cards",
+          "shot": "24",
+          "start": 5424,
+          "end": 5676,
+          "keyframes": [
+            5522,
+            5550,
+            5656
+          ],
+          "action": 5530
+        },
+        {
+          "role": "two_pages",
+          "shot": "25",
+          "start": 5676,
+          "end": 5904,
+          "keyframes": [
+            5763,
+            5791,
+            5884
+          ],
+          "action": 5771
+        },
+        {
+          "role": "choose",
+          "shot": "26",
+          "start": 5904,
+          "end": 6108,
+          "keyframes": [
+            5958,
+            5986,
+            6088
+          ],
+          "action": 5966
+        },
+        {
+          "role": "step1",
+          "shot": "27",
+          "start": 6108,
+          "end": 6276,
+          "keyframes": [
+            6144,
+            6172,
+            6256
+          ],
+          "action": 6152
+        },
+        {
+          "role": "example",
+          "shot": "28",
+          "start": 6276,
+          "end": 6468,
+          "keyframes": [
+            6321,
+            6349,
+            6448
+          ],
+          "action": 6329
+        },
+        {
+          "role": "reading",
+          "shot": "29",
+          "start": 6468,
+          "end": 6708,
+          "keyframes": [
+            6559,
+            6587,
+            6688
+          ],
+          "action": 6567
+        },
+        {
+          "role": "balance",
+          "shot": "30",
+          "start": 6708,
+          "end": 6936,
+          "keyframes": [
+            6794,
+            6822,
+            6916
+          ],
+          "action": 6802
+        },
+        {
+          "role": "hint",
+          "shot": "31",
+          "start": 6936,
+          "end": 7128,
+          "keyframes": [
+            6981,
+            7009,
+            7108
+          ],
+          "action": 6989
+        },
+        {
+          "role": "algebra",
+          "shot": "32",
+          "start": 7128,
+          "end": 7296,
+          "keyframes": [
+            7239,
+            7267,
+            7276
+          ],
+          "action": 7247
+        },
+        {
+          "role": "balance",
+          "shot": "33",
+          "start": 7296,
+          "end": 7512,
+          "keyframes": [
+            7377,
+            7405,
+            7492
+          ],
+          "action": 7385
+        },
+        {
+          "role": "balance",
+          "shot": "34",
+          "start": 7512,
+          "end": 7728,
+          "keyframes": [
+            7593,
+            7621,
+            7708
+          ],
+          "action": 7601
+        },
+        {
+          "role": "practice_cards",
+          "shot": "35",
+          "start": 7728,
+          "end": 8016,
+          "keyframes": [
+            7803,
+            7831,
+            7996
+          ],
+          "action": 7811
+        },
+        {
+          "role": "step2",
+          "shot": "36",
+          "start": 8016,
+          "end": 8208,
+          "keyframes": [
+            8064,
+            8092,
+            8188
+          ],
+          "action": 8072
+        },
+        {
+          "role": "retrieve",
+          "shot": "37",
+          "start": 8208,
+          "end": 8400,
+          "keyframes": [
+            8275,
+            8303,
+            8380
+          ],
+          "action": 8283
+        },
+        {
+          "role": "reading",
+          "shot": "38",
+          "start": 8400,
+          "end": 8664,
+          "keyframes": [
+            8504,
+            8532,
+            8644
+          ],
+          "action": 8512
+        },
+        {
+          "role": "error_work",
+          "shot": "39",
+          "start": 8664,
+          "end": 8940,
+          "keyframes": [
+            8770,
+            8798,
+            8920
+          ],
+          "action": 8778
+        },
+        {
+          "role": "feedback",
+          "shot": "40",
+          "start": 8940,
+          "end": 9144,
+          "keyframes": [
+            9071,
+            9099,
+            9124
+          ],
+          "action": 9079
+        },
+        {
+          "role": "error_work",
+          "shot": "41",
+          "start": 9144,
+          "end": 9384,
+          "keyframes": [
+            9235,
+            9263,
+            9364
+          ],
+          "action": 9243
+        },
+        {
+          "role": "step3",
+          "shot": "42",
+          "start": 9384,
+          "end": 9600,
+          "keyframes": [
+            9438,
+            9466,
+            9580
+          ],
+          "action": 9446
+        },
+        {
+          "role": "transfer",
+          "shot": "43",
+          "start": 9600,
+          "end": 9816,
+          "keyframes": [
+            9754,
+            9782,
+            9796
+          ],
+          "action": 9762
+        },
+        {
+          "role": "transfer_model",
+          "shot": "44",
+          "start": 9816,
+          "end": 10056,
+          "keyframes": [
+            9909,
+            9937,
+            10036
+          ],
+          "action": 9917
+        },
+        {
+          "role": "transfer_model",
+          "shot": "45",
+          "start": 10056,
+          "end": 10320,
+          "keyframes": [
+            10160,
+            10188,
+            10300
+          ],
+          "action": 10168
+        },
+        {
+          "role": "transfer_model",
+          "shot": "46",
+          "start": 10320,
+          "end": 10536,
+          "keyframes": [
+            10405,
+            10433,
+            10516
+          ],
+          "action": 10413
+        },
+        {
+          "role": "mix_cards",
+          "shot": "47",
+          "start": 10536,
+          "end": 10788,
+          "keyframes": [
+            10633,
+            10661,
+            10768
+          ],
+          "action": 10641
+        },
+        {
+          "role": "later",
+          "shot": "48",
+          "start": 10788,
+          "end": 10980,
+          "keyframes": [
+            10805,
+            10833,
+            10960
+          ],
+          "action": 10813
+        },
+        {
+          "role": "calendar_long",
+          "shot": "49",
+          "start": 10980,
+          "end": 11220,
+          "keyframes": [
+            11070,
+            11098,
+            11200
+          ],
+          "action": 11078
+        },
+        {
+          "role": "two_pages",
+          "shot": "50",
+          "start": 11220,
+          "end": 11484,
+          "keyframes": [
+            11321,
+            11349,
+            11464
+          ],
+          "action": 11329
+        },
+        {
+          "role": "writing",
+          "shot": "51",
+          "start": 11484,
+          "end": 11724,
+          "keyframes": [
+            11582,
+            11610,
+            11704
+          ],
+          "action": 11590
+        },
+        {
+          "role": "writing",
+          "shot": "52",
+          "start": 11724,
+          "end": 11988,
+          "keyframes": [
+            11828,
+            11856,
+            11968
+          ],
+          "action": 11836
+        },
+        {
+          "role": "writing",
+          "shot": "53",
+          "start": 11988,
+          "end": 12288,
+          "keyframes": [
+            12095,
+            12123,
+            12268
+          ],
+          "action": 12103
+        },
+        {
+          "role": "code",
+          "shot": "54",
+          "start": 12288,
+          "end": 12540,
+          "keyframes": [
+            12383,
+            12411,
+            12520
+          ],
+          "action": 12391
+        },
+        {
+          "role": "code",
+          "shot": "55",
+          "start": 12540,
+          "end": 12780,
+          "keyframes": [
+            12631,
+            12659,
+            12760
+          ],
+          "action": 12639
+        },
+        {
+          "role": "code",
+          "shot": "56",
+          "start": 12780,
+          "end": 13032,
+          "keyframes": [
+            12878,
+            12906,
+            13012
+          ],
+          "action": 12886
+        },
+        {
+          "role": "evidence_board",
+          "shot": "57",
+          "start": 13032,
+          "end": 13308,
+          "keyframes": [
+            13137,
+            13165,
+            13288
+          ],
+          "action": 13145
+        },
+        {
+          "role": "two_pages",
+          "shot": "58",
+          "start": 13308,
+          "end": 13584,
+          "keyframes": [
+            13414,
+            13442,
+            13564
+          ],
+          "action": 13422
+        },
+        {
+          "role": "two_pages",
+          "shot": "59",
+          "start": 13584,
+          "end": 13824,
+          "keyframes": [
+            13678,
+            13706,
+            13804
+          ],
+          "action": 13686
+        },
+        {
+          "role": "practice_cards",
+          "shot": "60",
+          "start": 13824,
+          "end": 14064,
+          "keyframes": [
+            13921,
+            13949,
+            14044
+          ],
+          "action": 13929
+        },
+        {
+          "role": "summary",
+          "shot": "61",
+          "start": 14064,
+          "end": 14268,
+          "keyframes": [
+            14109,
+            14137,
+            14248
+          ],
+          "action": 14117
+        },
+        {
+          "role": "practice_log",
+          "shot": "62",
+          "start": 14268,
+          "end": 14496,
+          "keyframes": [
+            14355,
+            14383,
+            14476
+          ],
+          "action": 14363
+        },
+        {
+          "role": "caution",
+          "shot": "63",
+          "start": 14496,
+          "end": 14688,
+          "keyframes": [
+            14541,
+            14569,
+            14668
+          ],
+          "action": 14549
+        },
+        {
+          "role": "closing",
+          "shot": "64",
+          "start": 14688,
+          "end": 14868,
+          "keyframes": [
+            14733,
+            14761,
+            14848
+          ],
+          "action": 14741
+        },
+        {
+          "role": "credits",
+          "shot": "65",
+          "start": 14868,
+          "end": 15012,
+          "keyframes": [
+            14868,
+            14888,
+            14992
+          ],
+          "action": 14868
+        }
+      ],
+      "scope": "Reference evidence only; do not import this cast, subject, captions or artwork into a new film."
+    }
+  ]
+}

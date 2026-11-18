@@ -3,7 +3,6 @@ import path from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 import {createHash} from 'node:crypto';
 import {createCanvas, loadImage, GlobalFonts} from '@napi-rs/canvas';
-import {outputDimensions} from './dimensions.mjs';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 export const hash = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -65,15 +64,15 @@ export async function main() {
     else if(!a.type||a.type==='image') assets.set(a.file,await loadImage(file));
     else throw Error(`Unsupported asset type: ${a.type}`);
   }
-  const {drawFrame,dispose,checkEnvironment,validateScene} = await import(pathToFileURL(path.join(ROOT,'src/scene.mjs')));
+  const {drawFrame} = await import(pathToFileURL(path.join(ROOT,'src/scene.mjs')));
   if (typeof drawFrame !== 'function') throw Error('src/scene.mjs must export drawFrame');
-  await validateScene?.(plan,assets);
   if (args.includes('--check')) {
-    await checkEnvironment?.();
     console.log('Timeline, font hashes, source imports and image hashes valid');
     return;
   }
-  const [width,height] = outputDimensions(plan.width,plan.height,Number(arg('--width',plan.width)));
+  const width = Number(arg('--width',plan.width));
+  const height = Math.round(width*plan.height/plan.width/2)*2;
+  if (!Number.isSafeInteger(width) || width<2 || width%2 || height<2) throw Error('Output width must be a positive even integer');
   // Render in the authored coordinate system. Material engines may inspect the
   // context matrix; output scaling must not become part of that scene camera.
   const canvas = createCanvas(plan.width,plan.height), ctx = canvas.getContext('2d');
@@ -85,7 +84,7 @@ export async function main() {
   const output = path.resolve(ROOT,arg('--out',single?'review/still.png':'media/frames'));
   if (single ? fs.existsSync(output) : fs.existsSync(output) && fs.readdirSync(output).length) throw Error(`Output exists: ${output}`);
   fs.mkdirSync(single?path.dirname(output):output,{recursive:true});
-  try { for (let frame=start;frame<end;frame++) {
+  for (let frame=start;frame<end;frame++) {
     const shot = plan.shots.find(s=>frame>=s.start&&frame<s.end);
     ctx.resetTransform(); ctx.clearRect(0,0,plan.width,plan.height);
     ctx.save();
@@ -105,7 +104,7 @@ export async function main() {
     deliveryContext.clearRect(0,0,width,height);
     deliveryContext.drawImage(canvas,0,0,width,height);
     fs.writeFileSync(single?output:path.join(output,`${String(frame-start).padStart(6,'0')}.png`),delivery.toBuffer('image/png'));
-  } } finally {await dispose?.();}
+  }
   console.log(JSON.stringify({output,start,end,frames:end-start}));
 }
 export function drawCaption(c,text,plan,profile) {

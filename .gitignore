@@ -11,6 +11,9 @@ films/
 **/media/
 **/review/
 **/reference/
+# Selected, licensed style benchmarks are reusable production evidence.
+!styles/midcentury-cartoon/reference/
+!styles/midcentury-cartoon/reference/**
 .verification/
 .site/
 

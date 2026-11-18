@@ -3,22 +3,13 @@
   "language": "en",
   "width": 1920,
   "height": 1080,
-  "fps": 24,
+  "fps": null,
   "duration_frames": 0,
   "shots": [],
   "events": [],
   "narration": [],
   "claims": [],
   "assets": [],
-  "audio": [],
-  "review": {
-    "automated_frame_coverage": null,
-    "visual_inspection": [],
-    "motion_inspection": [],
-    "listening": null,
-    "acceptance": null
-  },
-  "schema_version": 1,
-  "silent": false,
-  "captions": []
+  "audio": {"voice": [], "score": [], "ambience": [], "effects": []},
+  "review": {"automated_frame_coverage": null, "visual_inspection": [], "motion_inspection": [], "listening": null, "acceptance": null}
 }

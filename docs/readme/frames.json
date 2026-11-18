@@ -219,7 +219,7 @@
     },
     {
       "style": "newsreel",
-      "source_video": "https://github.com/leoguolabs/codex-film-studio/releases/download/newsreel-english-v3/subway.mp4",
+      "source_video": "https://github.com/visiontrail/codex-film-studio/releases/download/newsreel-english-v3/subway.mp4",
       "source_sha256": "fe0c25fc2891ad365309f57cda9388c7a60b7670de8a19e8abeb6863dd4ca270",
       "title": "Under the City · Newsreel English edition v3",
       "title_zh": "城市之下 · 复古新闻片英文版 V3",

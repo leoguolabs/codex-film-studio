@@ -23,3 +23,4 @@ export function drawHand(ctx, x, y, a, kind = 'open', side = 1, k = 1, skin = PA
   for (const s2 of seps) { const q = xform(s2, x, y, a, k); ctx.beginPath(); ctx.moveTo(...q[0]); ctx.lineTo(...q[1]); ctx.stroke(); }
   ctx.restore();
 }
+

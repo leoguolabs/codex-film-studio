@@ -38,8 +38,6 @@ def main():
     a=p.parse_args()
     project=create('smoke-'+a.style,a.style,output=a.output)
     run(['npm','ci','--ignore-scripts','--no-audit','--no-fund'],project)
-    if a.style=='exploded-teardown':
-        run(['npx','playwright','install','--no-shell',*(['--with-deps'] if sys.platform=='linux' else []),'chromium'],project)
     run(['node','tools/runtime/smoke_inputs.mjs'],project)
     run([sys.executable,'tools/runtime/build.py','--doctor'],project)
     run([sys.executable,'tools/runtime/build.py','--width','480'],project)
@@ -49,17 +47,7 @@ def main():
             'preview_onsets':verify_sync(project/'media/preview.mp4',[1]),
             'visual_review':'not performed','motion_review':'not performed','listening_review':'not performed'}
     (project/'review').mkdir(exist_ok=True)
-    if a.style == 'exploded-teardown':
-        run(['ffmpeg','-v','error','-i','media/film.mp4','-vf','select=eq(n\\,109)',
-             '-frames:v','1','review/rail.png'],project)
-        run(['node','tests/check-rail.js','review/rail.png'],project)
-        report['annotation_rail_regression']='passed at frame 109'
     if a.style == 'caption-news':
-        run([sys.executable,'tools/runtime/build.py','--preview','--start',0,'--end',fps,
-             '--width','720','--out','media/rounding-720.mp4'],project)
-        dimensions=json.loads((project/'media/rounding-720.json').read_text())['output_size']
-        assert dimensions==[720,406],dimensions
-        report['halfway_dimension_regression']=dimensions
         # Earlier captions must not leak text alignment into later headline frames.
         run(['node','scripts/render.mjs','--frame',2*fps,'--width','480','--out','review/isolated.png'],project)
         comparison=subprocess.run(['ffmpeg','-hide_banner','-ss','2','-i','media/film.mp4','-i','review/isolated.png',

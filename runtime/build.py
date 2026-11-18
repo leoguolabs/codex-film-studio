@@ -81,27 +81,9 @@ def audio_inputs(plan):
     return records
 
 
-def audio_clip_filters(start_sample, gain):
-    # adelay may emit padding before the first input PTS is known. In the
-    # resampler's 1/48000 time base, the sample count timestamps both padding
-    # and recorded audio continuously before the buses are mixed and trimmed.
-    return (f'aresample=48000,aformat=channel_layouts=stereo,volume={gain},'
-            f'adelay={start_sample}S:all=1,asetpts=N')
-
-
 def timestamp(frame, fps, separator='.'):
     ms = round(frame * 1000 / fps)
     return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02}{separator}{ms%1000:03}'
-
-
-def output_dimensions(source_width, source_height, width):
-    """Nearest even height, with exact half-way values rounded upward (JS parity)."""
-    if any(type(x) is not int or not 0 < x <= 2**53-1 for x in [source_width, source_height, width]):
-        raise ValueError('Output and source dimensions must be positive safe integers')
-    height = 2 * ((width * source_height + source_width) // (2 * source_width))
-    if width % 2 or height < 2 or height > 2**53-1:
-        raise ValueError('Output width must be even and produce a valid height')
-    return width, height
 
 
 def caption_files(plan, base):
@@ -145,8 +127,10 @@ def main():
     end = args.end if args.end is not None else min(plan['duration_frames'], start+8*plan['fps']) if args.preview else plan['duration_frames']
     if not 0 <= start < end <= plan['duration_frames']:
         raise ValueError('Require 0 <= start < end <= duration_frames')
-    width = args.width if args.width is not None else (640 if args.preview else plan['width'])
-    width, height = output_dimensions(plan['width'], plan['height'], width)
+    width = args.width or (640 if args.preview else plan['width'])
+    height = round(width*plan['height']/plan['width']/2)*2
+    if width < 2 or width % 2 or height < 2:
+        raise ValueError('Output width must be positive and even')
     if args.check:
         run(['node', ROOT/'scripts/render.mjs', '--check'] + (['--proof'] if args.proof else []), cwd=ROOT)
         print('Timeline and audio inputs valid; this does not validate visual content.')
@@ -177,8 +161,8 @@ def main():
         for i, (item, file) in enumerate(audio, 1):
             mix_command += ['-i', file]
             samples = round(item['start']*48000/plan['fps'])
-            clip = audio_clip_filters(samples, item.get('gain', 1))
-            filters.append(f'[{i-1}:a]{clip}[a{i}]')
+            filters.append(f'[{i-1}:a]aresample=48000,aformat=channel_layouts=stereo,'
+                           f'volume={item.get("gain",1)},adelay={samples}S:all=1[a{i}]')
             buses[item['role']].append(f'[a{i}]')
         final_buses = []
         for role, inputs in buses.items():
