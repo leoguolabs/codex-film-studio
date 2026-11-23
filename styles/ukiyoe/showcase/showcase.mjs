@@ -4,18 +4,6 @@ const feature = $("#feature");
 const study = $("#study");
 const cinema = $("#cinema");
 const proof = $("#proof");
-const hero = $("#panorama");
-const plates = ["river-print.webp", "orchard-print.webp"];
-const plateDescriptions = [
-  {
-    en: "An indigo carp windsock flies over a timber bridge and distant hills.",
-    zh: "靛蓝布鲤迎风鼓起，下方是木桥与远山。",
-  },
-  {
-    en: "Golden pears hang from a dark bough above the river.",
-    zh: "金黄的梨挂在墨色枝头，枝下是一弯河水。",
-  },
-];
 const inkNotes = [
   [
     "The key block leaves the dark cut lines on bare paper.",
@@ -70,10 +58,6 @@ cinema.addEventListener("click", (e) => {
   )
     cinema.close();
 });
-$("[data-play]").addEventListener("click", () => {
-  cinema.showModal();
-  feature.play().catch(() => {});
-});
 const params = new URLSearchParams(location.search);
 let storedLanguage;
 try {
@@ -81,6 +65,8 @@ try {
 } catch {}
 let lang = (params.get("lang") ?? storedLanguage) === "zh" ? "zh" : "en";
 const words = all("[data-zh]").map((el) => [el, el.textContent]);
+const cover = $(".wave img");
+const englishCoverText = cover.alt;
 const revision = new URL(import.meta.url).searchParams.get("v");
 function media(name) {
   const url = new URL("media/" + name, location.href);
@@ -114,10 +100,8 @@ let films = [],
   activeStudy = 0;
 function syncFilmText() {
   const film = films[selected];
-  hero.alt = plateDescriptions[selected][lang];
   if (!film) return;
   $("#film-title").textContent = film.title[lang];
-  $("#hero-film").textContent = film.title[lang];
   $("#logline").textContent = film.description[lang];
   feature.setAttribute("aria-label", film.title[lang]);
   $("#spec").textContent = clock(film.duration) + " · 1080p · 24 fps";
@@ -151,19 +135,11 @@ function chooseFilm(index) {
   if (!films[index]) return;
   selected = index;
   const f = films[index];
-  $("#pocket-art").srcset = localArt(
-    index === 0 ? "river-portrait.webp" : "orchard-portrait.webp",
-  );
-  hero.src = localArt(plates[index]);
-  $("#plate-no").textContent = "0" + (index + 1) + " / 02";
   feature.pause();
   feature.src = media(f.file);
   feature.poster = media(f.poster);
   feature.querySelector("track").src = media(f.captions[0].file);
   $("#mp4").href = media(f.file);
-  all("[data-film]").forEach((b, i) =>
-    b.setAttribute("aria-pressed", String(i === index)),
-  );
   syncFilmText();
   feature.load();
 }
@@ -176,6 +152,7 @@ function syncStudyText() {
 }
 function setLang(next, writeURL = false) {
   lang = next;
+  cover.alt = lang === "zh" ? cover.dataset.altZh : englishCoverText;
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
   document.title =
     lang === "zh"
@@ -199,8 +176,7 @@ function setLang(next, writeURL = false) {
       localStorage.setItem("codex-film-language", lang);
     } catch {}
   }
-  $("#hero-film").textContent =
-    all("[data-film]")[selected].querySelector("strong").textContent;
+  for (const refresh of scoreLabels) refresh();
   setImpression(impression);
   syncFilmText();
   syncStudyText();
@@ -208,9 +184,23 @@ function setLang(next, writeURL = false) {
 all("[data-lang]").forEach((b) =>
   b.addEventListener("click", () => setLang(b.dataset.lang, true)),
 );
-all("[data-film]").forEach((b, i) =>
-  b.addEventListener("click", () => chooseFilm(i)),
-);
+all("[data-film]").forEach((link, index) => {
+  link.addEventListener("click", (event) => {
+    if (
+      !films[index] ||
+      event.defaultPrevented ||
+      event.ctrlKey ||
+      event.metaKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+    event.preventDefault();
+    chooseFilm(index);
+    cinema.showModal();
+    feature.play().catch(() => {});
+  });
+});
 all("[data-study]").forEach((b, i) =>
   b.addEventListener("click", () => {
     activeStudy = i;
@@ -225,14 +215,79 @@ all("[data-study]").forEach((b, i) =>
     study.play().catch(() => {});
   }),
 );
+const scoreLabels = [];
+for (const control of all("[data-score]")) {
+  const audio = control.parentElement.querySelector("audio");
+  const seek = document.createElement("input");
+  seek.type = "range";
+  seek.min = "0";
+  seek.max = "1";
+  seek.step = ".1";
+  seek.value = "0";
+  const time = document.createElement("output");
+  time.textContent = "0:00";
+  const transport = document.createElement("div");
+  transport.className = "score-transport";
+  audio.before(transport);
+  transport.append(control, seek, time);
+  const label = () => {
+    const action =
+      lang === "zh"
+        ? audio.paused
+          ? "播放"
+          : "暂停"
+        : audio.paused
+          ? "Play "
+          : "Pause ";
+    control.setAttribute(
+      "aria-label",
+      action + audio.getAttribute("aria-label"),
+    );
+    control.setAttribute("aria-pressed", String(!audio.paused));
+    seek.setAttribute(
+      "aria-label",
+      (lang === "zh" ? "配乐进度 " : "Seek in ") +
+        audio.getAttribute("aria-label"),
+    );
+  };
+  scoreLabels.push(label);
+  for (const event of ["play", "pause", "ended"])
+    audio.addEventListener(event, label);
+  audio.addEventListener("loadedmetadata", () => {
+    if (Number.isFinite(audio.duration)) {
+      seek.max = audio.duration;
+      seek.disabled = false;
+    }
+  });
+  audio.addEventListener("timeupdate", () => {
+    seek.value = audio.currentTime;
+    time.textContent = clock(Math.floor(audio.currentTime));
+    seek.setAttribute("aria-valuetext", time.textContent);
+  });
+  seek.addEventListener("input", () => {
+    audio.currentTime = Number(seek.value);
+  });
+  control.addEventListener("click", () => {
+    if (!audio.paused) {
+      audio.pause();
+      return;
+    }
+    audio.play().catch(() => {
+      audio.hidden = false;
+      transport.hidden = true;
+    });
+  });
+  audio.hidden = true;
+  seek.disabled = true;
+  control.hidden = false;
+}
+$(".movement").addEventListener("toggle", (event) => {
+  if (!event.currentTarget.open) study.pause();
+});
 setLang(lang);
 try {
   const response = await fetch(media("films.json"));
-  if (!response.ok) throw new Error("Film index unavailable");
-  films = (await response.json()).films;
-  chooseFilm(selected);
+  if (response.ok) films = (await response.json()).films;
 } catch {
-  // Both direct features remain available if the film index cannot be fetched.
-  const b = all("[data-film]")[1];
-  b.addEventListener("click", () => location.assign(media("orchard.mp4")));
+  // The two programme links play the films directly if their chapter data is unavailable.
 }

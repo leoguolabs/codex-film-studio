@@ -20,7 +20,7 @@
     <script type="module" src="../../../catalog/agent-start.mjs"></script>
   </head>
   <body>
-    <a class="skip" href="#films"
+    <a class="skip" href="#screening"
       ><span data-zh="跳到放映区">Skip to the films</span></a
     >
     <header class="mast studio-page-header">
@@ -40,6 +40,7 @@
       <nav aria-label="Main">
         <a data-home href="../../../index.html#library"
           ><span data-zh="全部风格">All styles</span></a
+        ><a href="#screening"><span data-zh="放映">Films</span></a
         ><a href="#bench"><span data-zh="版画工坊">Printmaking</span></a
         ><a href="#sound"><span data-zh="声音">Sound</span></a
         ><a href="#make"><span data-zh="制作影片">Make a film</span></a>
@@ -61,108 +62,105 @@
     </header>
 
     <main>
-      <section id="films" class="gallery" aria-labelledby="page-title">
-        <div class="folio">
-          <div class="mounting" id="screening">
-            <picture class="landscape"
-              ><source
-                id="pocket-art"
-                media="(max-width:600px)"
-                srcset="river-portrait.webp" />
-              <img
-                class="panorama"
-                id="panorama"
-                src="river-print.webp"
-                width="1680"
-                height="680"
-                fetchpriority="high"
-                alt="An indigo carp windsock flies over a timber bridge and distant hills."
-            /></picture>
-            <div class="cartouches">
-              <h1 id="page-title">
-                <span class="tate" lang="ja">浮世絵</span
-                ><span class="sr-only"
-                  ><span data-zh="浮世绘木版短片"
-                    >Ukiyo-e woodblock films</span
-                  ></span
-                >
-              </h1>
-              <div class="narrow-title" aria-hidden="true">
-                <span data-zh="木版动画短片">Woodblock films</span>
-              </div>
-              <span class="seal" aria-hidden="true">木版</span>
-            </div>
-            <button class="watch hero-watch" type="button" data-play>
-              <span class="play-mark" aria-hidden="true">▶</span
-              ><span class="play-copy"
-                ><small><span data-zh="放映影片">Watch the film</span></small
-                ><strong id="hero-film">The Wind Has a Tail</strong></span
-              >
-            </button>
-          </div>
-          <div class="print-margin">
-            <span class="registration" aria-hidden="true">⌜</span
-            ><span class="edition"
-              ><span data-zh="原创木版短片"
-                >Ukiyo-e · Original woodblock films</span
+      <section class="overture" aria-labelledby="page-title">
+        <picture class="wave"
+          ><source media="(max-width:640px)" srcset="tide-portrait.webp" />
+          <img
+            src="tide.webp"
+            width="1840"
+            height="774"
+            alt="A curl of indigo surf rises around Mount Fuji beneath a vermilion sun."
+            data-alt-zh="靛蓝浪尖在左侧卷起，浪谷间露出远处的富士山。右侧一轮朱日映着墨字。"
+            fetchpriority="high"
+        /></picture>
+        <div class="inscription">
+          <h1 id="page-title">
+            <span class="brush" lang="ja">浮世絵</span
+            ><span class="sr-only"
+              ><span data-zh="浮世绘木版短片"
+                >Ukiyo-e woodblock films</span
               ></span
-            ><span class="margin-rule"></span
-            ><span class="plate-no" id="plate-no">01 / 02</span
-            ><span class="registration" aria-hidden="true">⌟</span>
+            >
+          </h1>
+          <div class="signature">
+            <i lang="en">Ukiyo-e</i
+            ><span class="red-seal" lang="ja" aria-hidden="true"
+              >木版<br />映画</span
+            >
           </div>
+          <p class="invitation">
+            <span data-zh="一尾布鲤乘风，一颗秋梨入怀。"
+              >A fish sewn from wind. A pear caught in cloth.</span
+            >
+          </p>
+          <a class="downstroke" href="#screening"
+            ><span data-zh="入席看短片">Watch the double bill</span>
+            <span aria-hidden="true">↓</span></a
+          >
         </div>
-        <div
-          class="film-slips"
-          role="group"
-          aria-label="Select a print and film / 选择版画与影片"
-        >
-          <article class="film-slip">
-            <button type="button" data-film="0" aria-pressed="true">
-              <span class="slip-thumbnail"
-                ><img src="media/wind.jpg" alt="" width="160" height="100" /><i
-                  aria-hidden="true"
-                  >一</i
-                ></span
-              ><span class="slip-copy"
-                ><strong
-                  ><span data-zh="风有一条尾巴"
-                    >The Wind Has a Tail</span
-                  ></strong
-                ><small
-                  ><span data-zh="姐姐把风缝进了一条鱼。"
-                    >A sister sews the wind into a fish.</span
-                  ></small
-                ></span
-              ><span class="slip-time">03:00</span>
-            </button>
+      </section>
+      <section class="programme" id="screening" aria-labelledby="bill-title">
+        <span id="films"></span>
+        <div class="bill-head">
+          <span class="fine-line"></span>
+          <h2 id="bill-title"><span data-zh="双片放映">A double bill</span></h2>
+          <span class="fine-line"></span>
+        </div>
+        <div class="fans">
+          <article class="programme-leaf">
+            <a data-film="0" href="media/wind.mp4"
+              ><img
+                class="fan"
+                src="river-fan.webp"
+                alt=""
+                width="900"
+                height="550"
+                loading="lazy"
+              />
+              <div class="film-lettering">
+                <h3><span data-zh="风有一条尾巴">The Wind Has a Tail</span></h3>
+                <p>
+                  <span data-zh="弟弟躺在床上，听得到河水。姐姐想让他看一眼风。"
+                    >From his bed, a boy can hear the river. His sister wants to
+                    show him the wind.</span
+                  >
+                </p>
+                <span class="play-title"
+                  ><i aria-hidden="true"></i
+                  ><span data-zh="放映">Screen film</span>
+                  <time>3:00</time></span
+                >
+              </div></a
+            >
           </article>
-          <article class="film-slip">
-            <button type="button" data-film="1" aria-pressed="false">
-              <span class="slip-thumbnail"
-                ><img
-                  src="media/orchard.jpg"
-                  alt=""
-                  width="160"
-                  height="100"
-                /><i aria-hidden="true">二</i></span
-              ><span class="slip-copy"
-                ><strong
-                  ><span data-zh="第四个布角">The Fourth Corner</span></strong
-                ><small
-                  ><span data-zh="梨园起风了，枝头的梨落向一方蓝布。"
-                    >An orchard, a rising wind and a square of blue cloth.</span
-                  ></small
-                ></span
-              ><span class="slip-time">03:01</span>
-            </button>
+          <article class="programme-leaf">
+            <a data-film="1" href="media/orchard.mp4"
+              ><img
+                class="fan"
+                src="orchard-fan.webp"
+                alt=""
+                width="900"
+                height="550"
+                loading="lazy"
+              />
+              <div class="film-lettering">
+                <h3><span data-zh="第四个布角">The Fourth Corner</span></h3>
+                <p>
+                  <span
+                    data-zh="June 提着空篮上山。还没走到树下，枝头的梨就晃了起来。"
+                    >June climbs to the orchard with an empty basket. Then the
+                    branches begin to shake.</span
+                  >
+                </p>
+                <span class="play-title"
+                  ><i aria-hidden="true"></i
+                  ><span data-zh="放映">Screen film</span>
+                  <time>3:01</time></span
+                >
+              </div></a
+            >
           </article>
         </div>
-        <noscript
-          ><p class="wrap">
-            <a href="media/wind.mp4">Watch The Wind Has a Tail (MP4)</a> ·
-            <a href="media/orchard.mp4">Watch The Fourth Corner (MP4)</a>
-          </p></noscript
-        >
       </section>
       <dialog id="cinema" aria-labelledby="film-title">
         <div class="cinema-top">
@@ -174,7 +172,7 @@
             id="feature"
             src="media/wind.mp4"
             poster="media/wind.jpg"
-            preload="metadata"
+            preload="none"
             controls
             playsinline
             aria-label="The Wind Has a Tail"
@@ -210,12 +208,106 @@
           aria-label="Chapters / 章节"
         ></div>
       </dialog>
+      <section id="sound" class="sound">
+        <div class="wrap">
+          <div class="heading">
+            <h2><span data-zh="听，河上有风">Listen by the river</span></h2>
+            <p
+              data-zh="两部影片各有一首用 Google Gemini 的 Lyria 音乐工具生成的配乐。这里可以单独听原曲，和成片里的旁白、环境录音分开欣赏。"
+            >
+              Google Gemini’s Lyria music tool generated one instrumental for
+              each film. Play the original scores here, before the narration and
+              field recordings were mixed in.
+            </p>
+          </div>
+          <div class="tracks">
+            <article class="sleeve">
+              <p class="track-film">
+                <span data-zh="风有一条尾巴">The Wind Has a Tail</span>
+              </p>
+              <h3 lang="en">Blue Thread on the River</h3>
+              <p
+                data-zh="创作提示指定日本筝与带气声的笛子。电影里还能听见河水、棉布被拉紧和缝口断开的声音。"
+              >
+                The brief called for koto and a breath-led flute. In the film,
+                river water, cotton pulling tight and a seam giving way share
+                the room with the music.
+              </p>
+              <button
+                hidden
+                type="button"
+                class="record-play"
+                data-score="wind"
+                aria-label="Play / 播放"
+              >
+                <i aria-hidden="true"></i></button
+              ><audio
+                controls
+                preload="none"
+                aria-label="Blue Thread on the River"
+                src="media/wind.m4a"
+              ></audio
+              ><a href="media/wind-music-brief.txt"
+                ><span data-zh="阅读音乐提示词">Read the music prompt</span>
+                ↗</a
+              >
+            </article>
+            <article class="sleeve">
+              <p class="track-film">
+                <span data-zh="第四个布角">The Fourth Corner</span>
+              </p>
+              <h3 lang="en">Four Knots at Dawn</h3>
+              <p
+                data-zh="原曲从五拍步行节奏起步。脚步声和梨落在布面上的声音，是后来按画面逐一对齐的。"
+              >
+                A five-beat walking pulse was the starting point. Footfalls and
+                the sound of pears hitting the cloth were placed against the
+                picture afterwards.
+              </p>
+              <button
+                hidden
+                type="button"
+                class="record-play"
+                data-score="orchard"
+                aria-label="Play / 播放"
+              >
+                <i aria-hidden="true"></i></button
+              ><audio
+                controls
+                preload="none"
+                aria-label="Four Knots at Dawn"
+                src="media/orchard.m4a"
+              ></audio
+              ><a href="media/orchard-music-brief.txt"
+                ><span data-zh="阅读音乐提示词">Read the music prompt</span>
+                ↗</a
+              >
+            </article>
+          </div>
+          <details>
+            <summary>
+              <span data-zh="音乐是怎样生成的"
+                >How the music was generated</span
+              >
+            </summary>
+            <p
+              data-zh="在 Gemini 中打开 Create music，选择标准时长和纯器乐，写入故事的时长、配器和转折点。梨园一曲在第二次请求后才得到可播放的音频。保存两首原曲后，我们在旁白处压低音乐，画面回到空纸时让声音一起停下。"
+            >
+              We opened Create music in Gemini, chose Standard length and
+              Instrumental, and described each story’s timing, instruments and
+              turning point. The orchard took a second request to return
+              playable audio. We kept both original performances, lowered the
+              music under speech and cut it to silence when the picture returned
+              to bare paper.
+            </p>
+          </details>
+        </div>
+      </section>
       <section id="bench" class="workshop">
         <div class="wrap">
           <div class="bench-intro">
-            <div class="wood-sign"><span aria-hidden="true">摺</span></div>
             <div>
-              <h2><span data-zh="版画工坊">At the printmaker’s bench</span></h2>
+              <h2><span data-zh="纸上留痕">Marks on paper</span></h2>
               <p>
                 <span
                   data-zh="同一条布鲤，要在纸上印四次。依次压下每块版，看看颜色在哪里交叠。"
@@ -273,149 +365,77 @@
               >
             </div>
           </div>
-          <div class="motion">
-            <div class="study-nav">
-              <h3><span data-zh="从版画到动作">Motion studies</span></h3>
-              <p>
-                <span
-                  data-zh="看色块对齐、针穿过棉布，再看草鞋离开地面的那一刻。"
-                  >Watch the blocks fall into register, a needle pass through
-                  cotton and a sandal leave the ground.</span
-                >
-              </p>
-              <div
-                class="bench-choices"
-                role="group"
-                aria-label="Choose a motion study / 选择动作片段"
-              >
-                <button data-study="0" aria-pressed="true">
-                  <img
-                    src="media/impression.jpg"
-                    alt=""
-                    width="92"
-                    height="52"
-                    loading="lazy"
-                  /><span data-zh="墨线与套色">Pigment &amp; paper</span>
-                  <span aria-hidden="true">↗</span></button
-                ><button data-study="1" aria-pressed="false">
-                  <img
-                    src="media/sewing.jpg"
-                    alt=""
-                    width="92"
-                    height="52"
-                    loading="lazy"
-                  /><span data-zh="手与针线">Hands at work</span>
-                  <span aria-hidden="true">↗</span></button
-                ><button data-study="2" aria-pressed="false">
-                  <img
-                    src="media/walk.jpg"
-                    alt=""
-                    width="92"
-                    height="52"
-                    loading="lazy"
-                  /><span data-zh="上坡的脚步">An uphill walk</span>
-                  <span aria-hidden="true">↗</span>
-                </button>
-              </div>
-            </div>
-            <figure>
-              <video
-                id="study"
-                src="media/impression.mp4"
-                poster="media/impression.jpg"
-                controls
-                playsinline
-                preload="metadata"
-                aria-label="Printmaking study"
-              ></video>
-              <figcaption id="study-note">
-                <span
-                  data-zh="先看黑色主版落下。河岸的各层颜色随后套上去，亮处仍透出纸色。"
-                  >Watch the black key line arrive first. Separate colour blocks
-                  fill the riverbank while the highlights keep the colour of the
-                  paper.</span
-                >
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section id="sound" class="sound">
-        <div class="wrap">
-          <div class="heading">
-            <h2><span data-zh="配乐与环境声">Music &amp; field sound</span></h2>
-            <p
-              data-zh="两部影片各有一首用 Google Gemini 的 Lyria 音乐工具生成的配乐。这里可以单独听原曲，和成片里的旁白、环境录音分开欣赏。"
-            >
-              Google Gemini’s Lyria music tool generated one instrumental for
-              each film. Play the original scores here, before the narration and
-              field recordings were mixed in.
-            </p>
-          </div>
-          <div class="tracks">
-            <article class="sleeve">
-              <p class="track-film">
-                <span data-zh="风有一条尾巴">The Wind Has a Tail</span>
-              </p>
-              <h3 lang="en">Blue Thread on the River</h3>
-              <p
-                data-zh="创作提示指定日本筝与带气声的笛子。电影里还能听见河水、棉布被拉紧和缝口断开的声音。"
-              >
-                The brief called for koto and a breath-led flute. In the film,
-                river water, cotton pulling tight and a seam giving way share
-                the room with the music.
-              </p>
-              <audio
-                controls
-                preload="none"
-                aria-label="Blue Thread on the River"
-                src="media/wind.m4a"
-              ></audio
-              ><a href="media/wind-music-brief.txt"
-                ><span data-zh="阅读音乐提示词">Read the music prompt</span>
-                ↗</a
-              >
-            </article>
-            <article class="sleeve">
-              <p class="track-film">
-                <span data-zh="第四个布角">The Fourth Corner</span>
-              </p>
-              <h3 lang="en">Four Knots at Dawn</h3>
-              <p
-                data-zh="原曲从五拍步行节奏起步。脚步声和梨落在布面上的声音，是后来按画面逐一对齐的。"
-              >
-                A five-beat walking pulse was the starting point. Footfalls and
-                the sound of pears hitting the cloth were placed against the
-                picture afterwards.
-              </p>
-              <audio
-                controls
-                preload="none"
-                aria-label="Four Knots at Dawn"
-                src="media/orchard.m4a"
-              ></audio
-              ><a href="media/orchard-music-brief.txt"
-                ><span data-zh="阅读音乐提示词">Read the music prompt</span>
-                ↗</a
-              >
-            </article>
-          </div>
-          <details>
+          <details class="movement">
             <summary>
-              <span data-zh="音乐是怎样生成的"
-                >How the music was generated</span
-              >
+              <span data-zh="看原片中的三个动作"
+                >Watch three gestures from the films</span
+              ><span aria-hidden="true">＋</span>
             </summary>
-            <p
-              data-zh="在 Gemini 中打开 Create music，选择标准时长和纯器乐，写入故事的时长、配器和转折点。梨园一曲在第二次请求后才得到可播放的音频。保存两首原曲后，我们在旁白处压低音乐，画面回到空纸时让声音一起停下。"
-            >
-              We opened Create music in Gemini, chose Standard length and
-              Instrumental, and described each story’s timing, instruments and
-              turning point. The orchard took a second request to return
-              playable audio. We kept both original performances, lowered the
-              music under speech and cut it to silence when the picture returned
-              to bare paper.
-            </p>
+            <div class="motion">
+              <div class="study-nav">
+                <h3><span data-zh="从版画到动作">Motion studies</span></h3>
+                <p>
+                  <span
+                    data-zh="看色块对齐、针穿过棉布，再看草鞋离开地面的那一刻。"
+                    >Watch the blocks fall into register, a needle pass through
+                    cotton and a sandal leave the ground.</span
+                  >
+                </p>
+                <div
+                  class="bench-choices"
+                  role="group"
+                  aria-label="Choose a motion study / 选择动作片段"
+                >
+                  <button data-study="0" aria-pressed="true">
+                    <img
+                      src="media/impression.jpg"
+                      alt=""
+                      width="92"
+                      height="52"
+                      loading="lazy"
+                    /><span data-zh="墨线与套色">Pigment &amp; paper</span>
+                    <span aria-hidden="true">↗</span></button
+                  ><button data-study="1" aria-pressed="false">
+                    <img
+                      src="media/sewing.jpg"
+                      alt=""
+                      width="92"
+                      height="52"
+                      loading="lazy"
+                    /><span data-zh="手与针线">Hands at work</span>
+                    <span aria-hidden="true">↗</span></button
+                  ><button data-study="2" aria-pressed="false">
+                    <img
+                      src="media/walk.jpg"
+                      alt=""
+                      width="92"
+                      height="52"
+                      loading="lazy"
+                    /><span data-zh="上坡的脚步">An uphill walk</span>
+                    <span aria-hidden="true">↗</span>
+                  </button>
+                </div>
+              </div>
+              <figure>
+                <video
+                  id="study"
+                  src="media/impression.mp4"
+                  poster="media/impression.jpg"
+                  controls
+                  playsinline
+                  preload="none"
+                  aria-label="Printmaking study"
+                ></video>
+                <figcaption id="study-note">
+                  <span
+                    data-zh="先看黑色主版落下。河岸的各层颜色随后套上去，亮处仍透出纸色。"
+                    >Watch the black key line arrive first. Separate colour
+                    blocks fill the riverbank while the highlights keep the
+                    colour of the paper.</span
+                  >
+                </figcaption>
+              </figure>
+            </div>
           </details>
         </div>
       </section>
@@ -453,8 +473,29 @@
           >
         </div>
       </section>
-      <section class="wrap references">
-        <h2><span data-zh="来源与鸣谢">Sources &amp; credits</span></h2>
+      <details class="wrap references">
+        <summary>
+          <span data-zh="出处与题记">Sources and colophon</span
+          ><span aria-hidden="true">＋</span>
+        </summary>
+        <p>
+          <span
+            data-zh="海报以葛饰北斋《神奈川冲浪里》（约 1830–32）为底本，循大都会艺术博物馆公共领域藏本 JP1847 的浪形分色重绘，另绘朱日、重新安排横竖两种构图。题字采用 Yuji Mai。"
+            >The opening seascape traces and re-inks the contours of Hokusai’s
+            Under the Wave off Kanagawa (ca. 1830–32), from the Metropolitan
+            Museum of Art’s public-domain impression JP1847. The sun and the two
+            poster compositions were drawn for this screening. The brush
+            lettering uses Yuji Mai.</span
+          >
+        </p>
+        <div class="links">
+          <a href="https://www.metmuseum.org/art/collection/search/45434"
+            ><span data-zh="查看馆藏原作">See the museum impression</span> ↗</a
+          ><a
+            href="https://github.com/leoguolabs/codex-film-studio/blob/main/styles/ukiyoe/showcase/cut-wave.py"
+            ><span data-zh="海报绘制源码">Poster drawing source</span> ↗</a
+          ><a href="Yuji-OFL.txt">Yuji Mai · OFL ↗</a>
+        </div>
         <p>
           <span
             data-zh="视觉参考是 Lemomo（LemoLab）的 44 秒短片《Toward the Mountain》，采用 CC BY 4.0 许可。版画引擎改编自其 MIT 许可代码。两部新作的场景和人物均为代码绘制，英文旁白使用 Kokoro。"
@@ -491,7 +532,7 @@
             >Fabric Rustling ↗</a
           >
         </div>
-      </section>
+      </details>
     </main>
     <footer class="wrap">
       <a data-home href="../../../index.html#library"

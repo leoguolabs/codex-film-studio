@@ -1101,6 +1101,12 @@
         "assets": [
           "styles/ukiyoe/showcase/showcase.css",
           "styles/ukiyoe/showcase/showcase.mjs",
+          "styles/ukiyoe/showcase/tide.webp",
+          "styles/ukiyoe/showcase/tide-portrait.webp",
+          "styles/ukiyoe/showcase/river-fan.webp",
+          "styles/ukiyoe/showcase/orchard-fan.webp",
+          "styles/ukiyoe/showcase/ink-script.ttf",
+          "styles/ukiyoe/showcase/Yuji-OFL.txt",
         "styles/ukiyoe/showcase/river-print.webp",
         "styles/ukiyoe/showcase/orchard-print.webp",
         "styles/ukiyoe/showcase/river-portrait.webp",
