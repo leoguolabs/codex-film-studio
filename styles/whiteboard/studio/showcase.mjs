@@ -1,6 +1,6 @@
 import {comparisonBeats} from './src/comparison.mjs'
 import {messages, chineseSources, resolveLanguage} from './showcase-i18n.mjs?v=notebook-1'
-import {mountMarkerJourney} from './marker-journey.mjs'
+import {mountMarkerJourney} from './marker-journey.mjs?v=notebook-2'
 
 const $ = id => document.getElementById(id)
 const main = $('film-player')

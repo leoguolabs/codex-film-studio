@@ -2,6 +2,7 @@ import {clamp, curve, marker, mix, paintStroke, pointAt, poly, smooth} from './s
 
 // All coordinates belong to the printed spread. The camera moves the page and its ink together.
 const width = 960, height = 640
+const drawingDuration = 2850
 const color = '#b94c2d'
 const trail = {color, width: 4.3, wobble: .7}
 const fold = {color, width: 5.0, wobble: .7}
@@ -54,6 +55,7 @@ export function mountMarkerJourney() {
   const motion = matchMedia('(prefers-reduced-motion: reduce)')
   const header = document.querySelector('.masthead')
   let startY = 0, travel = 1, painted = -1, pending = 0, automatic = 0
+  let wheelFrame = 0, wheelPosition = 0, wheelTarget = 0, lastWheelFrame = 0
   cover.classList.add('has-ink')
 
   function paint() {
@@ -88,6 +90,52 @@ export function mountMarkerJourney() {
     cancelAnimationFrame(automatic)
     automatic = 0
   }
+  function cancelWheel() {
+    cancelAnimationFrame(wheelFrame)
+    wheelFrame = 0
+  }
+  function followWheel(now) {
+    const elapsed = clamp(now - lastWheelFrame, 0, 64)
+    lastWheelFrame = now
+    const distance = wheelTarget - wheelPosition
+    const direction = Math.sign(distance)
+    const drawingEnd = startY + travel
+    const entering = direction > 0 ? wheelPosition < startY : wheelPosition > drawingEnd
+    const drawing = direction > 0
+      ? wheelPosition >= startY && wheelPosition < drawingEnd
+      : wheelPosition > startY && wheelPosition <= drawingEnd
+    const drawingSpeed = travel / drawingDuration
+    const speed = drawing ? drawingSpeed : Math.max(drawingSpeed, stage.offsetHeight / 650)
+    const boundary = direction > 0
+      ? (entering ? startY : drawingEnd)
+      : (entering ? drawingEnd : startY)
+    const room = entering || drawing ? Math.abs(boundary - wheelPosition) : Infinity
+    const distanceLeft = Math.abs(distance)
+    const step = Math.min(distanceLeft, room, speed * elapsed, Math.max(1, distanceLeft * (1 - Math.exp(-elapsed / 85))))
+    wheelPosition += direction * step
+    window.scrollTo({top: wheelPosition, behavior: 'instant'})
+    paint()
+    wheelFrame = step < distanceLeft ? requestAnimationFrame(followWheel) : 0
+  }
+  function steerWheel(event) {
+    if (motion.matches || event.ctrlKey || event.shiftKey || event.defaultPrevented || !event.cancelable) return
+    const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1
+    if (Math.abs(event.deltaX) > Math.abs(event.deltaY) || !event.deltaY) return
+    const y = wheelFrame ? wheelPosition : window.scrollY
+    const delta = event.deltaY * unit
+    // Outside the drawing, leave normal scrolling to the browser.
+    if (!wheelFrame && (Math.max(y, y + delta) <= startY || Math.min(y, y + delta) >= startY + travel)) return
+    event.preventDefault()
+    // Reversing the wheel discards queued movement in the old direction.
+    const origin = wheelFrame && Math.sign(wheelTarget - y) === Math.sign(delta) ? wheelTarget : y
+    const screenY = window.scrollY + screen.getBoundingClientRect().top
+    wheelTarget = clamp(origin + delta, 0, screenY)
+    if (!wheelFrame) {
+      wheelPosition = y
+      lastWheelFrame = performance.now()
+      wheelFrame = requestAnimationFrame(followWheel)
+    }
+  }
   function arrive() {
     if (location.hash !== '#screen') history.pushState(null, '', '#screen')
     screen.scrollIntoView({behavior: 'instant', block: 'start'})
@@ -97,6 +145,7 @@ export function mountMarkerJourney() {
     if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
     event.preventDefault()
     cancelRide()
+    cancelWheel()
     const from = window.scrollY, to = from + screen.getBoundingClientRect().top
     if (motion.matches || to - from < 5) {
       arrive()
@@ -104,7 +153,7 @@ export function mountMarkerJourney() {
     }
     // Give the pen its own time on the board, then carry the completed drawing up to the screen.
     const endOfDrawing = Math.max(from, Math.min(to, startY + travel))
-    const drawMs = 2850 * clamp((endOfDrawing - from) / (startY + travel))
+    const drawMs = drawingDuration * clamp((endOfDrawing - from) / (startY + travel))
     const revealMs = Math.max(320, 950 * clamp((to - endOfDrawing) / stage.offsetHeight))
     let elapsed = 0, previousFrame
     function frame(now) {
@@ -129,10 +178,19 @@ export function mountMarkerJourney() {
   for (const type of ['wheel', 'touchstart', 'pointerdown', 'keydown']) {
     window.addEventListener(type, cancelRide, {passive: true})
   }
+  window.addEventListener('wheel', steerWheel, {passive: false})
+  for (const type of ['touchstart', 'pointerdown', 'keydown', 'pagehide']) {
+    window.addEventListener(type, cancelWheel, {passive: true})
+  }
   window.addEventListener('scroll', requestPaint, {passive: true})
   window.addEventListener('pagehide', cancelRide)
-  document.addEventListener('visibilitychange', () => { if (document.hidden) cancelRide() })
-  motion.addEventListener('change', () => { cancelRide(); measure() })
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      cancelRide()
+      cancelWheel()
+    }
+  })
+  motion.addEventListener('change', () => { cancelRide(); cancelWheel(); measure() })
   const resize = new ResizeObserver(measure)
   for (const element of [header, cover, stage, canvas]) resize.observe(element)
   measure()
