@@ -1101,6 +1101,14 @@
         "assets": [
           "styles/ukiyoe/showcase/showcase.css",
           "styles/ukiyoe/showcase/showcase.mjs",
+        "styles/ukiyoe/showcase/river-print.webp",
+        "styles/ukiyoe/showcase/orchard-print.webp",
+        "styles/ukiyoe/showcase/river-portrait.webp",
+        "styles/ukiyoe/showcase/orchard-portrait.webp",
+        "styles/ukiyoe/showcase/impression-1.webp",
+        "styles/ukiyoe/showcase/impression-2.webp",
+        "styles/ukiyoe/showcase/impression-3.webp",
+        "styles/ukiyoe/showcase/impression-4.webp",
           "styles/ukiyoe/starter/fonts/shippori.ttf"
         ]
       },
