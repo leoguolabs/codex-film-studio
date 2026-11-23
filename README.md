@@ -43,7 +43,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**18 styles** · 18 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**19 styles** · 19 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -230,6 +230,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>浮世绘木版画</sub>
 <p>Hand-printed colour separations, carved contours and mounted panoramas.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/impasto.jpg" alt="Impasto Oil Painting — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>19 / <code>impasto</code></sub>
+<h3>Impasto Oil Painting</h3>
+<sub>厚涂油画</sub>
+<p>Palette-knife ridges catch the light as a single patch of colour travels through a painted world.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

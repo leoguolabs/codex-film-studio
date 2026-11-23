@@ -1105,6 +1105,59 @@
         ]
       },
       "public_assets": "styles/ukiyoe/demo-assets.json"
+    },
+    {
+      "id": "impasto",
+      "name": "Impasto Oil Painting",
+      "name_zh": "厚涂油画",
+      "description": "Palette-knife ridges catch the light as a single patch of colour travels through a painted world.",
+      "description_zh": "侧光照亮厚厚的画刀痕迹，一抹颜色随着人物的动作穿过画面。",
+      "status": "renderer-ready",
+      "status_note": "WebGL2 knife plates and a blank authored timeline.",
+      "status_note_zh": "可直接生成刀痕和侧光，需要为每部片绘制新场景。",
+      "guide": "styles/impasto/STYLE.md",
+      "readme": "styles/impasto/README.md",
+      "prompt": "styles/impasto/prompt.txt",
+      "template": "styles/impasto/starter",
+      "template_kind": "blank",
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "audio_mix": false,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "impasto-films",
+          "title": "Two English harbour films",
+          "title_zh": "两部英语港湾短片",
+          "page": "styles/impasto/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/impasto/showcase/media/films.json"
+        }
+      ],
+      "public_assets": "styles/impasto/demo-assets.json",
+      "preview": "docs/readme/frames/impasto.jpg",
+      "preview_zh": "docs/readme/frames/impasto.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "impasto-films",
+      "landing": {
+        "page": "styles/impasto/showcase/index.html",
+        "assets": [
+          "styles/impasto/showcase/showcase.css",
+          "styles/impasto/showcase/showcase.mjs",
+          "styles/impasto/STYLE.md",
+          "styles/impasto/prompt.txt",
+          "styles/impasto/PROVENANCE.md"
+        ]
+      }
     }
   ],
   "capability_schema_version": 2

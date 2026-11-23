@@ -134,5 +134,17 @@
       "method": "用代码画出墨线和色版，把画面装成手卷；五官采用同一套轮廓，肢体绕关节运动。",
       "check": "检查一整个动作中脸型是否稳定、脚掌是否踩实，再把旁白、音乐和接触音效对到镜头。"
     }
+  },
+  "impasto": {
+    "en": {
+      "use": "Use Impasto Oil Painting for a story told through a touch, a footprint or a patch of colour. Watch two complete English-language harbour films.",
+      "method": "Give palette-knife marks a direction and thickness, light their ridges from the side and keep the paint attached to its moving surface. Cut from the contact to its consequence.",
+      "check": "In the final encode, watch the planted foot, the grip and the object after release. Compare the painted relief in close-ups and wide shots. Listen to the generated cue, edited score and foley separately."
+    },
+    "zh": {
+      "use": "适合用触碰、脚印或一小块颜色推进的故事。独立页面可观看两部完整英语港湾短片。",
+      "method": "为刀痕指定方向和厚度，用侧光勾出凸起，让笔触随着物体运动。先交代接触，再让观众看到动作带来的变化。",
+      "check": "在成片里复看脚掌、握点和松手后的道具。近景和远景都要看清颜料起伏，生成原曲、成片配乐与拟音分别试听。"
+    }
   }
 }
