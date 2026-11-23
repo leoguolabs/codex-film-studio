@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/render.mjs",
+    "stills": "node scripts/render.mjs --stills"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.80"
+  }
+}

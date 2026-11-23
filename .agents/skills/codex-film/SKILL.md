@@ -20,6 +20,8 @@ The 408-frame reference library is copied into new projects. Calibrate a short
 performed section with the new subject before expanding the film; palette,
 fonts or successful rendering alone do not establish the example's quality.
 
+For `ukiyoe`, use the copied plate renderer, its STYLE.md and project README. Author new actions, generate the voice and check the moving print, registration and scroll reveal. For an independent skill trial, give a fresh context only the kit and the new brief. Retain its first encode before comparative review. For a performer or soundtrack, follow the ukiyoe starter’s PERFORMANCE-AND-MUSIC.md. Draw every illustration in code, isolate the rigid head from the arm joints, and compare face crops through the full working gesture. Preserve the drawing source, timings, music prompts and masters. Credit the actual music source and give the showcase a score-only audition.
+
 ## Start from the user's brief
 
 A natural-language request is sufficient to start. The Agent

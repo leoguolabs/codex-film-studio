@@ -1053,6 +1053,58 @@
       },
       "public_assets": "styles/vivid-science/demo-assets.json",
       "preview_showcase": "vivid-science-film"
+    },
+    {
+      "id": "ukiyoe",
+      "name": "Ukiyo-e Woodblock",
+      "name_zh": "浮世绘木版画",
+      "description": "Hand-printed colour separations, carved contours and mounted panoramas.",
+      "description_zh": "以木纹、套色、纸纤维和横向手卷绘制的新故事。",
+      "status": "renderer-ready",
+      "status_note": "Code-drawn performers, a mounted scroll and two public English films.",
+      "status_note_zh": "含代码绘制的人物、手卷镜头和两部公开英文成片。",
+      "guide": "styles/ukiyoe/STYLE.md",
+      "readme": "styles/ukiyoe/README.md",
+      "prompt": "styles/ukiyoe/prompt.txt",
+      "template": "styles/ukiyoe/starter",
+      "template_kind": "blank",
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": false,
+        "locked_dependencies": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "ukiyoe-films",
+          "title": "Two English films",
+          "title_zh": "两部英文短片",
+          "page": "styles/ukiyoe/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/ukiyoe/showcase/media/films.json"
+        }
+      ],
+      "uses_shared_runtime": false,
+      "preview": "docs/readme/frames/ukiyoe.jpg",
+      "preview_zh": "docs/readme/frames/ukiyoe.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "ukiyoe-films",
+      "landing": {
+        "page": "styles/ukiyoe/showcase/index.html",
+        "assets": [
+          "styles/ukiyoe/showcase/showcase.css",
+          "styles/ukiyoe/showcase/showcase.mjs",
+          "styles/ukiyoe/starter/fonts/shippori.ttf"
+        ]
+      },
+      "public_assets": "styles/ukiyoe/demo-assets.json"
     }
   ],
   "capability_schema_version": 2

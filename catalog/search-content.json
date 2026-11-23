@@ -122,5 +122,17 @@
       "method": "在深靛蓝与青绿的世界里建立清晰轮廓，以温暖的珊瑚色突出主体，用大块浅色高光交代形体。让眼神、准备、动作与反应跟随旁白的时间线；每次尺度变化，都保留可辨认的对象作为线索。",
       "check": "检查完整轮廓、连接部位、移动标签与每个转场。用连续帧诊断定位问题，再通过实际播放和听审判断运动与混音。科学内容需要资料依据；工具包提供通用原语和空白输入，每部影片仍需独立创作场景与声音。"
     }
+  },
+  "ukiyoe": {
+    "en": {
+      "use": "Choose Ukiyo-e Woodblock for a story told through a working hand, a change in the weather or an object travelling through a landscape.",
+      "method": "Draw the sumi contours and pigment fields in code, lay the sheets on a moving scroll, and keep the face rigid while the joints articulate.",
+      "check": "Compare face crops through the complete gesture, check each planted sandal, and align voice, music and recorded contact sounds to the scene."
+    },
+    "zh": {
+      "use": "适合用双手做事、天气变化或物件穿过风景来讲述的故事。",
+      "method": "用代码画出墨线和色版，把画面装成手卷；五官采用同一套轮廓，肢体绕关节运动。",
+      "check": "检查一整个动作中脸型是否稳定、脚掌是否踩实，再把旁白、音乐和接触音效对到镜头。"
+    }
   }
 }

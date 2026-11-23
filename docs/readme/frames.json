@@ -318,6 +318,23 @@
       "image": "docs/readme/frames/vivid-science.jpg",
       "image_sha256": "57a12c95cd70c4ad355c8e6f0a8efeb650fb5edb36337f28bdc5873bf885778f",
       "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
+    },
+    {
+      "style": "ukiyoe",
+      "source_video": "the-wind-has-a-tail/media/the-wind-has-a-tail.mp4",
+      "source_sha256": "e6e36a4e4d708f59951dfa24f50a7e9f0ae6356540d7cba077fac0a19e2210e0",
+      "title": "The Wind Has a Tail",
+      "title_zh": "风有一条尾巴",
+      "seconds": 162.0,
+      "frame": 3888,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/ukiyoe.jpg",
+      "image_sha256": "47d92b2deb62dddce76f279207b7db5597eab2fbdfb2ab12ecefbacccbe38554",
+      "treatment": "Decoded from the code-drawn final master. Full frame resized to 1440 × 810."
     }
   ]
 }

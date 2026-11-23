@@ -95,7 +95,8 @@ def create(name, style, root=ROOT, output=None):
     destination.parent.mkdir(parents=True, exist_ok=True)
     # copytree creates the leaf exclusively and refuses a concurrent creation.
     shutil.copytree(source, destination, ignore=IGNORE)
-    if blank and entry.get('capabilities', {}).get('scene_renderer') and runtime.is_dir():
+    if (blank and entry.get('uses_shared_runtime', True) and
+            entry.get('capabilities', {}).get('scene_renderer') and runtime.is_dir()):
         shutil.copytree(runtime, destination / "tools/runtime", ignore=IGNORE)
         shutil.copy2(runtime / "README.md", destination / "PRODUCTION.md")
     if blank and engine.is_dir():

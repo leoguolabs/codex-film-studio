@@ -126,9 +126,17 @@ class ReproductionTests(unittest.TestCase):
                     package=json.loads((p/'package.json').read_text())
                     lock=json.loads((p/'package-lock.json').read_text())
                     self.assertEqual(package['dependencies'],lock['packages']['']['dependencies'])
-                    self.assertTrue((p/'tools/runtime/build.py').is_file())
-                    self.assertTrue((p/'lib/scene.mjs').is_file())
-                    self.assertFalse(json.loads((p/'content/production.json').read_text())['shots'])
+                    if entry.get('uses_shared_runtime', True):
+                        self.assertTrue((p/'tools/runtime/build.py').is_file())
+                        self.assertTrue((p/'lib/scene.mjs').is_file())
+                        self.assertFalse(json.loads((p/'content/production.json').read_text())['shots'])
+                    else:
+                        self.assertTrue((p/'engine/render.js').is_file())
+                        self.assertEqual(package['scripts']['build'], 'node scripts/render.mjs')
+                        self.assertEqual(json.loads((p/'content/cues.json').read_text()), [])
+                        subprocess.run(['node', '--input-type=module', '-e',
+                                        "import {film} from './film.js'; if (film.sheets.length) process.exit(1)"],
+                                       cwd=p, check=True)
                     fonts=json.loads((p/'fonts/manifest.json').read_text())
                     self.assertTrue(fonts)
                     for font in fonts:

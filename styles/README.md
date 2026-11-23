@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**17 styles** · 17 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**18 styles** · 18 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -205,6 +205,17 @@ Ask your Agent to open local showcases and check their retained project files.
 <sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening">Finished film</a> · <a href="../styles/vivid-science/STYLE.md">Style guide</a> · <a href="../styles/vivid-science/prompt.txt">Prompt</a> · <a href="../styles/vivid-science/starter">Project files</a></sub>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/ukiyoe.jpg" alt="Ukiyo-e Woodblock — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>18 / <code>ukiyoe</code></sub>
+<h3>Ukiyo-e Woodblock</h3>
+<sub>浮世绘木版画</sub>
+<p>Hand-printed colour separations, carved contours and mounted panoramas.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en#screening">Two English films</a> · <a href="../styles/ukiyoe/STYLE.md">Style guide</a> · <a href="../styles/ukiyoe/prompt.txt">Prompt</a> · <a href="../styles/ukiyoe/starter">Project files</a></sub>
+</td>
+</tr>
 </table>
 
 ## Capabilities / 能力与网页
@@ -228,6 +239,7 @@ Ask your Agent to open local showcases and check their retained project files.
 | [科幻全息 HUD / Sci-fi Hologram HUD](hologram-hud/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en) · [English-narrated V60 film](https://leoguolabs.github.io/codex-film-studio/styles/hologram-hud/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [明彩世界 / Luminous Worlds](luminous-worlds/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en) · [Finished film](https://leoguolabs.github.io/codex-film-studio/styles/luminous-worlds/showcase/index.html?lang=en#screening) | `unavailable` | `not-yet-revalidated` |
 | [鲜彩科学动画 / Vivid Science](vivid-science/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en) · [Finished film](https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=en#screening) | `unavailable` | `not-yet-revalidated` |
+| [浮世绘木版画 / Ukiyo-e Woodblock](ukiyoe/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en) · [Two English films](https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 
 ## What is complete / 已完成什么
 
@@ -248,6 +260,7 @@ Ask your Agent to open local showcases and check their retained project files.
 - **hologram-hud** — 可渲染线框模型、扫描光带与投影环。每部新片需编排图层与声音。 Projected mesh edges, scanning bands and projector rings. Author the layers and soundtrack for each film.
 - **luminous-worlds** — 可渲染分层插画与沿曲线路径运动的发光标记。每部新片需编排图层与声音。 Layered illustration fields and luminous markers following cubic paths. Author the layers and soundtrack for each film.
 - **vivid-science** — 可渲染带彩色阴影的矢量形体和可变形的渐细曲带。每部新片需编排图层与声音。 Shaded vector bodies and tapered ribbons with interpolated poses. Author the layers and soundtrack for each film.
+- **ukiyoe** — 含代码绘制的人物、手卷镜头和两部公开英文成片。 Code-drawn performers, a mounted scroll and two public English films.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

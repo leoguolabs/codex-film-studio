@@ -27,6 +27,7 @@ const categories = {
   'luminous-worlds':['animation'],
   'vivid-science':['animation','drawn'],
   'hologram-hud':['animation'],
+  'ukiyoe':['drawn','material','animation'],
 };
 const state = { catalog:null, frames:{}, availability:{mode:'public', pages:{}}, language:'en', filter:'all', query:'', detail:null };
 const $ = selector => document.querySelector(selector);

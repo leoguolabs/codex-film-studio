@@ -1,0 +1,28 @@
+{
+  "release": "ukiyoe-woodblock-films-v1",
+  "archive": {
+    "name": "ukiyoe-woodblock-films-v1.tar.gz",
+    "bytes": 100378585,
+    "sha256": "f5a7e0eef7a6d95f14bd46fd37fc3b5f5c13ab38de8fc9185e2260e12c7f9694",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ukiyoe-woodblock-films-v1/ukiyoe-woodblock-films-v1.tar.gz"
+  },
+  "files": [
+    "media/films.json",
+    "media/impression.jpg",
+    "media/impression.mp4",
+    "media/orchard-music-brief.txt",
+    "media/orchard.en.vtt",
+    "media/orchard.jpg",
+    "media/orchard.m4a",
+    "media/orchard.mp4",
+    "media/sewing.jpg",
+    "media/sewing.mp4",
+    "media/walk.jpg",
+    "media/walk.mp4",
+    "media/wind-music-brief.txt",
+    "media/wind.en.vtt",
+    "media/wind.jpg",
+    "media/wind.m4a",
+    "media/wind.mp4"
+  ]
+}
