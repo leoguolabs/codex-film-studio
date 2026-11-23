@@ -4,4 +4,4 @@ A WebGL2 material and plate builder, with a blank setup function for an original
 
 [Physical staging, grips and supported poses](starter/PHYSICAL-CONTINUITY.md)
 
-[Watch both films, explore the paint and audition the scores](showcase/index.html)
+[Watch both films, explore the paint and audition the scores](https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=en)
