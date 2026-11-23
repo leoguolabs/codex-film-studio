@@ -43,7 +43,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**17 种风格** · 17 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**18 种风格** · 18 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -220,6 +220,16 @@ codex plugin add codex-film-studio@visiontrail
 <sub>Vivid Science</sub>
 <p>鲜明的矢量角色、饱和色彩世界与跨尺度科学叙事。</p>
 <p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/vivid-science/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/impasto.jpg" alt="厚涂油画 — 影片截图" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>18 / <code>impasto</code></sub>
+<h3>厚涂油画</h3>
+<sub>Impasto Oil Painting</sub>
+<p>侧光照亮厚厚的画刀痕迹，一抹颜色随着人物的动作穿过画面。</p>
+<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

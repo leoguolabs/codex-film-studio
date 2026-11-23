@@ -1,0 +1,27 @@
+{
+  "release": "impasto-screening-v1",
+  "archive": {
+    "name": "impasto-screening-v1.tar.gz",
+    "bytes": 129343475,
+    "sha256": "4ffba6f3148daeb2fbbd8af2b8ac20356b2d268ebcd2d10d983045151344a43e",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/impasto-screening-v1/impasto-screening-v1.tar.gz"
+  },
+  "files": [
+    "media/ferry-foley.m4a",
+    "media/ferry-gemini.m4a",
+    "media/ferry-score.m4a",
+    "media/ferry.jpg",
+    "media/ferry.mp4",
+    "media/ferry.vtt",
+    "media/films.json",
+    "media/fish-foley.m4a",
+    "media/fish-gemini.m4a",
+    "media/fish-score.m4a",
+    "media/fish.jpg",
+    "media/fish.mp4",
+    "media/fish.vtt",
+    "media/lantern.jpg",
+    "media/ribbon.jpg",
+    "media/spoon.jpg"
+  ]
+}

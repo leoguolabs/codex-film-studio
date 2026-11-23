@@ -26,3 +26,5 @@ All visual styles and their completion status are in [the style catalog](../styl
 
 [Reproduction and source bundles](reproduction.md) covers locked tools, materials,
 original-sample restoration and the distinction between integrity and style review.
+
+[Staging physical contact and supported poses](physical-continuity.md)

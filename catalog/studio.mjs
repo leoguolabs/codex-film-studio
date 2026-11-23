@@ -26,6 +26,7 @@ const categories = {
   'prismatic-atlas':['animation'],
   'luminous-worlds':['animation'],
   'vivid-science':['animation','drawn'],
+  impasto:['material','drawn','animation'],
   'hologram-hud':['animation'],
 };
 const state = { catalog:null, frames:{}, availability:{mode:'public', pages:{}}, language:'en', filter:'all', query:'', detail:null };

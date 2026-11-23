@@ -454,3 +454,7 @@ The effective robots policy is at the origin root; a project robots.txt cannot
 set it. Follow [Google's AI search guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide): useful source-backed content and crawlable
 pages are the baseline, with no special AI schema or llms.txt requirement.
 FAQ copy serves visitors; [FAQ rich results were retired](https://developers.google.com/search/updates#may-2026).
+
+## Impasto Oil Painting
+
+The [bilingual screening room](https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html) presents two complete English films with captions, chapter seeks, a transcript and a palette-knife study. Each film has a separate Google Gemini cue, edited score and foley audition with source and screen times. The two 720p web editions and their supporting media ship in a checksum-verified Release archive.

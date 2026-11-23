@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Impasto Oil Painting · Codex Film Studio</title>
+<meta name="description" content="Watch two English short films painted with a palette knife. Explore the paint relief, animated performances, Gemini scores and reusable film kit.">
+<link rel="icon" href="../../../catalog/brand/studio-logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../../catalog/studio-header.css">
+<link rel="stylesheet" href="../../../catalog/brand.css">
+<link rel="stylesheet" href="showcase.css">
+<script type="module" src="../../../catalog/agent-start.mjs"></script>
+<script type="module" src="showcase.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#screening" data-zh="跳至放映厅">Skip to screening</a>
+<header class="mast">
+  <a class="brand studio-brand-lockup" href="../../../" aria-label="Codex Film Studio"><img class="studio-brand-logo" width="43" height="43" src="../../../catalog/brand/studio-logo.svg" alt=""><span>CODEX<br>FILM STUDIO</span></a>
+  <nav aria-label="Studio"><a id="library" href="../../../#library" data-zh="全部风格">All styles</a><a href="#music" data-zh="声音">Sound</a><a href="#make" data-zh="制作影片">Make a film</a></nav>
+  <div class="utilities"><div class="languages" role="group" aria-label="Page language"><button type="button" data-language="en" lang="en" aria-pressed="true">EN</button><button type="button" data-language="zh" lang="zh-CN" aria-pressed="false">中文</button></div><a class="identity" href="https://x.com/LeoGuoLabs" aria-label="@LeoGuoLabs on X">𝕏</a><a class="git" href="https://github.com/leoguolabs/codex-film-studio">GitHub ↗</a></div>
+</header>
+<main>
+<section class="screening" id="screening">
+  <div class="intro">
+    <h1><span data-zh="厚涂">Impasto</span><em data-zh="油画">Oil Painting</em></h1>
+    <p class="lede" data-zh="一把画刀在颜料上留下山脊般的刀痕。侧光掠过，灰色港湾里，一点颜色开始移动。">A palette knife leaves ridges in the paint. Light catches their edges as a single colour begins to move through a grey harbour.</p>
+    <div class="films" role="group" aria-label="Select film">
+      <button type="button" data-film="ferry" aria-pressed="true"><span>The Last Ferry</span><time>3:03</time></button>
+      <button type="button" data-film="fish" aria-pressed="false"><span>A Fish for the Number Six</span><time>3:00</time></button>
+    </div>
+  </div>
+  <div class="screen">
+    <video id="player" controls playsinline preload="metadata" poster="media/ferry.jpg" aria-label="The Last Ferry">
+      <source src="media/ferry.mp4" type="video/mp4"><track kind="subtitles" src="media/ferry.vtt" srclang="en" label="English">
+    </video>
+    <div class="screen-line"><span data-zh="英语对白与字幕">English audio &amp; captions</span><span>720p · 24 fps</span><a id="download" href="media/ferry.mp4" download data-zh="下载 MP4 ↓">Download MP4 ↓</a></div>
+    <h2 id="film-title">The Last Ferry</h2>
+    <p id="synopsis">The landing bell is broken. Through the fog, a girl raises a red lantern and waits for the harbour to answer.</p>
+    <div class="chapters" id="chapters" aria-label="Chapters"></div>
+    <details><summary data-zh="英文旁白全文">English transcript</summary><div id="transcript" lang="en"></div></details>
+  </div>
+</section>
+<section class="bench wrap" id="notes">
+  <div class="section-head"><h2 data-zh="画刀下的动作">Under the knife</h2><p data-zh="点选一幅剧照，回到成片里看这笔颜料怎样动起来。">Choose a still to see how the gesture plays in the finished film.</p></div>
+  <div class="plates">
+    <a href="?film=ferry&amp;t=74.5#screening" data-shot="ferry" data-at="74.5"><img loading="lazy" src="media/lantern.jpg" alt="A girl holding a red lantern on the quay"><span class="plate-title" data-zh="提起一盏灯">Raise a lantern</span><small>The Last Ferry · 1:14</small><p data-zh="暖光只落在灯罩与衣袖上，背后石墙的刀痕仍藏在雾中。">Warm pigment gathers on glass and wool. The knife marks on the quay stay in the fog.</p></a>
+    <a href="?film=fish&amp;t=64#screening" data-shot="fish" data-at="64"><img loading="lazy" src="media/spoon.jpg" alt="A painted spoon pressing gold fish scales onto dark cloth"><span class="plate-title" data-zh="用勺子印鱼鳞">Print a fish scale</span><small>A Fish for the Number Six · 1:04</small><p data-zh="勺沿碰到布面才留下弯月形的金色印子。镜头拉开时，六道印子连成鱼身。">A crescent of gold appears where the spoon meets the cloth. A wider view turns six impressions into a fish.</p></a>
+    <a href="?film=fish&amp;t=115.5#screening" data-shot="fish" data-at="115.5"><img loading="lazy" src="media/ribbon.jpg" alt="Two hands drawing a red ribbon through the kite eyelet"><span class="plate-title" data-zh="穿过一个孔眼">Thread an eyelet</span><small>A Fish for the Number Six · 1:55</small><p data-zh="手指捏着红带两端。手往回拉，带子滑过孔眼，结才慢慢收紧。">Fingers hold the ends apart. As the hands draw back, ribbon slides through the eyelet and the loop pulls tight.</p></a>
+  </div>
+</section>
+<section id="music" class="sound"><div class="wrap sound-grid">
+  <div><h2 data-zh="港湾的声音">Sound of the harbour</h2><p data-zh="两部片分别在 Google Gemini 的 Create music 中生成器乐曲，再按镜头剪辑，与另写的室内乐、实录和拟音混合。每段可单独试听 18 秒。">Each film commissioned an instrumental in Google Gemini’s Create music. The cues were cut to picture and mixed with separately written chamber music, field recordings and foley. Each audition plays an 18-second excerpt.</p>
+  <label for="sound-film" data-zh="选择影片试听">Listen by film</label><select id="sound-film"><option value="ferry">The Last Ferry</option><option value="fish">A Fish for the Number Six</option></select></div>
+  <div><h3 id="score-title">The Last Ferry</h3><p id="score-note"></p><div id="tracks"></div><div id="edits"></div><details><summary data-zh="生成这首音乐的英文提示词">English music prompt</summary><blockquote id="music-prompt" lang="en"></blockquote></details></div>
+</div></section>
+<section class="wrap making" id="make"><div class="section-head"><h2 data-zh="制作一部厚涂短片">Make an impasto film</h2><p data-zh="选一个能留下痕迹的动作。先画灰色环境，再让人物用颜料改变它。">Start with an action that leaves a mark. Paint the setting in greys, then let a character change it with colour.</p></div>
+<film-agent-start style-id="impasto"><p data-zh="在 Codex 中打开完整仓库，描述你的题材、时长和配音语言。">Open the full repository in Codex and describe your subject, duration and narration language.</p></film-agent-start>
+<div class="method"><h3 data-zh="从刀痕到镜头">From knife mark to shot</h3><p data-zh="给每一笔指定刮刀方向和厚度。用侧光照亮凸起，让笔触随物体移动。先在近景交代手与道具接触的位置，再到远景看这些小动作给港湾带来了什么。">Give each stroke a direction and a thickness. Rake light across the ridges and keep the paint attached to the moving object. Establish the hand and its grip in close-up, then pull back to show what those small actions have changed.</p><p><a href="https://github.com/leoguolabs/codex-film-studio/blob/main/styles/impasto/STYLE.md" data-zh="厚涂绘制方法 ↗">Painting guide ↗</a> · <a href="https://github.com/leoguolabs/codex-film-studio/tree/main/styles/impasto/starter" data-zh="空白制作工程 ↗">Blank starter ↗</a> · <a href="https://github.com/leoguolabs/codex-film-studio/blob/main/methods/physical-continuity.md" data-zh="动作与道具检查 ↗">Staging and contact ↗</a></p></div>
+</section>
+<footer class="wrap"><h2 data-zh="来源与署名">Sources &amp; credits</h2>
+<p><span data-zh="画刀引擎改编自 Lemomo（LemoLab）的 MIT 开源项目。影片的题材、场景与配乐为本次制作。">The knife renderer adapts Lemomo (LemoLab)’s MIT-licensed engine. Both screenplays, sets and scores were created for these productions.</span> <a href="https://lemomo-ai.github.io/lemo-opuscar/styles/impasto/" data-zh="风格参考 ↗">Style reference ↗</a> · <a href="https://github.com/leoguolabs/codex-film-studio/blob/main/styles/impasto/PROVENANCE.md" data-zh="引擎与许可 ↗">Engine &amp; licence ↗</a></p>
+<p><span data-zh="海水、系缆和柴油机录音经剪辑混音，三项均为 CC0。">Water, working rope and diesel recordings were edited and mixed from three CC0 sources.</span> <a href="https://freesound.org/people/Alex_hears_things/sounds/352356/">Alex_hears_things</a> · <a href="https://freesound.org/people/Rmutt/sounds/145721/">Rmutt</a> · <a href="https://freesound.org/people/Sandermotions/sounds/328615/">Sandermotions</a>.</p>
+<p><span data-zh="《最后一班渡船》另用了 LG 在鹿特丹录下的船声，经过截取、滤波、声像调整与混音。">The Last Ferry also excerpts, filters, pans and mixes LG’s Rotterdam boat recording.</span> <a href="https://freesound.org/people/LG/sounds/90337/">Diesel engine boat 100214.wav</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="https://versilian-studios.com/vsco-community/" data-zh="室内乐采样 · VSCO 2 CE ↗">Chamber samples · VSCO 2 CE ↗</a></p>
+</footer>
+</main>
+</body></html>

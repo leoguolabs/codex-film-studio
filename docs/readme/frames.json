@@ -318,6 +318,23 @@
       "image": "docs/readme/frames/vivid-science.jpg",
       "image_sha256": "57a12c95cd70c4ad355c8e6f0a8efeb650fb5edb36337f28bdc5873bf885778f",
       "treatment": "Decoded frame from the current published sample; full composition retained and resized to 1440×810. No text, artwork or decoration added."
+    },
+    {
+      "style": "impasto",
+      "source_video": "The Last Ferry / final master",
+      "source_sha256": "cf4a35d7e4d72d712f4c4fcf7acedda5b3fcde8601d1b4c2c8a9c3c45457f4c7",
+      "title": "The Last Ferry",
+      "title_zh": "最后一班渡船",
+      "seconds": 127.41666666666667,
+      "frame": 3058,
+      "fps": "24",
+      "native_dimensions": [
+        1280,
+        720
+      ],
+      "image": "docs/readme/frames/impasto.jpg",
+      "image_sha256": "fc20db37349fd984187e46e71e72a61bcd71fdf823ef08c773391fd3198e0751",
+      "treatment": "Full frame from the final master at frame 3058, encoded as a JPEG for the style gallery."
     }
   ]
 }

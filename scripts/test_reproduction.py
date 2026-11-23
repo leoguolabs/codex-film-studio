@@ -127,6 +127,13 @@ class ReproductionTests(unittest.TestCase):
                     lock=json.loads((p/'package-lock.json').read_text())
                     self.assertEqual(package['dependencies'],lock['packages']['']['dependencies'])
                     self.assertTrue((p/'tools/runtime/build.py').is_file())
+                    if entry['id'] == 'impasto':
+                        self.assertIn('export const duration = 0;', (p/'src/film.js').read_text())
+                        for dependency in ['engine/impasto.js', 'engine/plate.js', 'engine/LICENSE-MIT.txt',
+                                           'src/stage.js', 'src/kinematics.js', 'scripts/check_contacts.mjs']:
+                            self.assertTrue((p/dependency).is_file(), dependency)
+                        self.assertEqual(package['scripts']['proof'], 'node scripts/render.mjs proof')
+                        continue
                     self.assertTrue((p/'lib/scene.mjs').is_file())
                     self.assertFalse(json.loads((p/'content/production.json').read_text())['shots'])
                     fonts=json.loads((p/'fonts/manifest.json').read_text())

@@ -14,6 +14,8 @@ entry's completion status, capabilities and template kind. Executable production
 kits include material renderers and a shared runtime; new subjects still need
 authored scenes and assets. `methods/` holds cross-style workflows only.
 
+For `impasto`, use the copied STYLE.md, the plate API in README.md, and its dedicated npm render commands. Calibrate a close-up and moving action with the actual height-field renderer. The project’s scripts/compare_frames.py supports two-way per-frame checks within matched shot roles. For a requested independent transfer, give the fresh production only the skill kit, then compare its first encoded result with the reference. On a motion or sound revision, compare both cuts at native speed, keep the accepted music source and stems, and give the film showcase a visible music-making section with the actual generator, source/film edit points, credits and separate auditions.
+
 For `midcentury-cartoon`, read `styles/midcentury-cartoon/reference/README.md`
 and `performance.md`, and actually inspect the function-matched source frames.
 The 408-frame reference library is copied into new projects. Calibrate a short
