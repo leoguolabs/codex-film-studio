@@ -1,0 +1,1 @@
+{"name":"colored-pencil-film","version":"1.0.0","private":true,"type":"module","scripts":{"proof":"node scripts/render.mjs proof","still":"node scripts/render.mjs still","picture":"node scripts/render.mjs picture"},"dependencies":{"three":"0.170.0","playwright-core":"1.59.1"}}

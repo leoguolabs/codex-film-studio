@@ -1,0 +1,23 @@
+{
+  "release": "colored-pencil-field-notes-v1",
+  "archive": {
+    "name": "colored-pencil-field-notes-v1.tar.gz",
+    "bytes": 17502360,
+    "sha256": "c5a6e28d6ec1027b0bb7a67f88ba90b24f08196dda4f483d7fdc28bd2f403391",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/colored-pencil-field-notes-v1/colored-pencil-field-notes-v1.tar.gz"
+  },
+  "files": [
+    "media/creek-field-sound.m4a",
+    "media/creek-score-in-film.m4a",
+    "media/creek-score-original.m4a",
+    "media/creek.vtt",
+    "media/creek.webp",
+    "media/films.json",
+    "media/pine-field-sound.m4a",
+    "media/pine-score-in-film.m4a",
+    "media/pine-score-original.m4a",
+    "media/pine.vtt",
+    "media/pine.webp",
+    "media/sound.json"
+  ]
+}

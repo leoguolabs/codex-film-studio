@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/"><strong>Open the style library ↗</strong></a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">Field Notes · colored-pencil films ↗</a> ·
   <a href="#the-style-atlas">Explore styles</a> ·
   <a href="#make-your-film">Start creating</a> ·
   <a href="CONTRIBUTING.md">Contribute</a> ·
@@ -43,7 +44,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**19 styles** · 19 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**20 styles** · 20 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -240,6 +241,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>厚涂油画</sub>
 <p>Palette-knife ridges catch the light as a single patch of colour travels through a painted world.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/colored-pencil.jpg" alt="Colored-Pencil Science Illustration — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>20 / <code>colored-pencil</code></sub>
+<h3>Colored-Pencil Science Illustration</h3>
+<sub>彩铅科普插画</sub>
+<p>Follow a disappearing creek and a winged pine seed through natural history drawings on textured paper.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

@@ -352,6 +352,23 @@
       "image": "docs/readme/frames/impasto.jpg",
       "image_sha256": "fc20db37349fd984187e46e71e72a61bcd71fdf823ef08c773391fd3198e0751",
       "treatment": "Full frame from the final master at frame 3058, encoded as a JPEG for the style gallery."
+    },
+    {
+      "style": "colored-pencil",
+      "source_video": "Where the Creek Goes / revised final master",
+      "source_sha256": "e8d808978dd7a67eec922c0266098aba7febcd41b8308778dde9c477a2e9290a",
+      "title": "Where the Creek Goes",
+      "title_zh": "溪流去了哪里",
+      "seconds": 25,
+      "frame": 600,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/colored-pencil.jpg",
+      "image_sha256": "c24de12d1d5e0939b6ef57b57bfae127e3fee2cc69847e79af48d58773153f6f",
+      "treatment": "Full frame from the revised master at frame 600, resized for the style gallery."
     }
   ]
 }

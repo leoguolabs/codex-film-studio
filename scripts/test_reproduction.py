@@ -134,7 +134,14 @@ class ReproductionTests(unittest.TestCase):
                             self.assertTrue((p/dependency).is_file(), dependency)
                         self.assertEqual(package['scripts']['proof'], 'node scripts/render.mjs proof')
                         continue
-                    if entry.get('uses_shared_runtime', True):
+                    if entry['id'] == 'colored-pencil':
+                        self.assertTrue((p / entry['renderer_entry']).is_file())
+                        self.assertTrue((p / 'fonts/glyphs.json').is_file())
+                        self.assertTrue((p / 'scripts/compare_pencil.py').is_file())
+                        subprocess.run(['node', '--input-type=module', '-e',
+                                        "import {duration,setup} from './src/film.js'; if (duration !== 0 || typeof setup !== 'function') process.exit(1)"],
+                                       cwd=p, check=True)
+                    elif entry.get('uses_shared_runtime', True):
                         self.assertTrue((p/'tools/runtime/build.py').is_file())
                         self.assertTrue((p/'lib/scene.mjs').is_file())
                         self.assertFalse(json.loads((p/'content/production.json').read_text())['shots'])

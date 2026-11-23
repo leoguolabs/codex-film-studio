@@ -75,7 +75,7 @@ class InstalledPluginTests(unittest.TestCase):
                         if item:
                             self.assertTrue((project / (ROOT / item).relative_to(template)).is_file(), item)
                     if style["status"] == "renderer-ready":
-                        renderer = "tools/runtime/build.py" if style.get("uses_shared_runtime", True) else "engine/render.js"
+                        renderer = "tools/runtime/build.py" if style.get("uses_shared_runtime", True) else style.get("renderer_entry", "engine/render.js")
                         self.assertTrue((project / renderer).is_file())
             bad = subprocess.run([*launcher, "new", "bad", "--style", "caption-news",
                                   "--output", str(install / "bad")], cwd=work, capture_output=True)

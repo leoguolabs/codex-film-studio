@@ -146,5 +146,17 @@
       "method": "为刀痕指定方向和厚度，用侧光勾出凸起，让笔触随着物体运动。先交代接触，再让观众看到动作带来的变化。",
       "check": "在成片里复看脚掌、握点和松手后的道具。近景和远景都要看清颜料起伏，生成原曲、成片配乐与拟音分别试听。"
     }
+  },
+  "colored-pencil": {
+    "en": {
+      "use": "Watch two short English natural history films in colored pencil. This style suits hidden mechanisms that can be drawn in cross-section.",
+      "method": "Build the landscape and cut face together. Anchor four layers of hatching to each surface and use a graphite magnifier to guide a change of scale.",
+      "check": "Inspect the shared turf and soil edge as the camera moves. Check that the seed releases from its cone and lands under gravity. Listen to each score and its location recordings."
+    },
+    "zh": {
+      "use": "观看两部英语彩铅自然短片。适合用剖面说明肉眼看不到的过程。",
+      "method": "将地表与剖面一起绘制，让四层排线固定在物体表面，用石墨放大镜引导镜头进入细节。",
+      "check": "推镜时复查草皮和土层共用的边缘，观察种翼离枝与落地，再分别试听音乐和现场录音。"
+    }
   }
 }

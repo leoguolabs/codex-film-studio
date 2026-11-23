@@ -458,3 +458,7 @@ FAQ copy serves visitors; [FAQ rich results were retired](https://developers.goo
 ## Impasto Oil Painting
 
 The [bilingual screening room](https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html) presents two complete English films with captions, chapter seeks, a transcript and a palette-knife study. Each film has a separate Google Gemini cue, edited score and foley audition with source and screen times. The two 720p web editions and their supporting media ship in a checksum-verified Release archive.
+
+## Colored-pencil field notes
+
+The [English](https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en) and [Chinese](https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh) editions share two full films, timed chapters, English transcripts, a movable pencil loupe and three listening choices per score. The screening MP4s stream from GitHub Releases. The checked Pages bundle supplies captions, posters, music and field recordings.
