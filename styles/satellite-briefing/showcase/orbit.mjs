@@ -1,101 +1,156 @@
-// A small geographic globe for the page. NASA's equirectangular photograph is
-// sampled on a sphere; the Singapore marker is projected from the same basis.
-export async function startOrbit(canvas, marker) {
-  const field = canvas.parentElement
-  const gl = canvas.getContext('webgl', { alpha: false, antialias: true })
-  if (!gl) { field.classList.add('unavailable'); return }
-  const compile = (type, source) => {
-    const shader = gl.createShader(type)
-    gl.shaderSource(shader, source)
-    gl.compileShader(shader)
-    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) throw new Error('Orbit shader unavailable')
-    return shader
-  }
-  const program = gl.createProgram()
-  gl.attachShader(program, compile(gl.VERTEX_SHADER, 'attribute vec2 position;varying vec2 uv;void main(){uv=position;gl_Position=vec4(position,0.,1.);}'))
-  gl.attachShader(program, compile(gl.FRAGMENT_SHADER, `
-    precision highp float;
-    varying vec2 uv;
-    uniform sampler2D earth;
-    uniform float aspect;
-    uniform vec3 axis, east, north;
-    const float distance=2.8;
-    const float focal=2.25;
-    void main(){
-      vec3 ray=normalize(vec3(uv.x*aspect/focal,uv.y/focal,-1.));
-      float b=distance*ray.z;
-      float disc=b*b-distance*distance+1.;
-      vec3 bg=vec3(7.,11.,14.)/255.;
-      if(disc<0.){
-        float rim=exp(-sqrt(-disc)*23.);
-        gl_FragColor=vec4(bg+vec3(.035,.10,.18)*rim,1.);return;
-      }
-      vec3 n=normalize(vec3(0.,0.,distance)+ray*(-b-sqrt(disc)));
-      vec3 globe=n.x*east+n.y*north+n.z*axis;
-      vec2 st=vec2((atan(globe.z,globe.x)+3.14159265)/6.2831853,.5-asin(globe.y)/3.14159265);
-      vec3 rgb=texture2D(earth,st).rgb;
-      float daylight=.40+.60*max(dot(n,normalize(vec3(-.65,.45,1.))),0.);
-      float limb=max(dot(n,-ray),0.);
-      rgb=pow(rgb,vec3(.86))*daylight*.95;
-      rgb=mix(rgb,vec3(.08,.20,.34),pow(1.-limb,4.)*.6);
-      gl_FragColor=vec4(rgb,1.);
-    }
-  `))
-  gl.linkProgram(program)
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) throw new Error('Orbit program unavailable')
-  gl.useProgram(program)
-  const buffer = gl.createBuffer()
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW)
-  const location = gl.getAttribLocation(program, 'position')
-  gl.enableVertexAttribArray(location)
-  gl.vertexAttribPointer(location, 2, gl.FLOAT, false, 0, 0)
-  const texture = gl.createTexture()
-  gl.bindTexture(gl.TEXTURE_2D, texture)
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
-  const photo = new Image()
-  photo.src = '/_projects/satellite-film/assets/plates/world.jpg'
-  await photo.decode()
-  gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,photo)
-  const uniforms = Object.fromEntries(['aspect','axis','east','north'].map(key => [key, gl.getUniformLocation(program,key)]))
-  const radians = Math.PI / 180
-  const vector = (lat, lon) => [Math.cos(lat*radians)*Math.cos(lon*radians), Math.sin(lat*radians), Math.cos(lat*radians)*Math.sin(lon*radians)]
-  const dot = (a,b) => a.reduce((sum,n,i) => sum+n*b[i],0)
-  const singapore = vector(1.35,103.82)
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)')
-  let visible = true, frame = 0, previous = -1000, phase = 0
-  const draw = () => {
-    const width = canvas.clientWidth, height = canvas.clientHeight
-    if (!width || !height) return
-    const pixelRatio = Math.min(devicePixelRatio || 1,1.6)
-    const w = Math.round(width*pixelRatio), h = Math.round(height*pixelRatio)
-    if (canvas.width !== w || canvas.height !== h) { canvas.width=w; canvas.height=h; gl.viewport(0,0,w,h) }
-    const lat=12, lon=105+Math.sin(phase)*1.2
-    const axis=vector(lat,lon), east=[-Math.sin(lon*radians),0,Math.cos(lon*radians)]
-    const north=[-Math.sin(lat*radians)*Math.cos(lon*radians),Math.cos(lat*radians),-Math.sin(lat*radians)*Math.sin(lon*radians)]
-    gl.uniform1f(uniforms.aspect,width/height)
-    for(const [key,value] of Object.entries({axis,east,north})) gl.uniform3fv(uniforms[key],value)
-    gl.drawArrays(gl.TRIANGLES,0,6)
-    const z=2.8-dot(singapore,axis)
-    marker.style.left=`${width/2+dot(singapore,east)/z*2.25*height/2}px`
-    marker.style.top=`${height/2-dot(singapore,north)/z*2.25*height/2}px`
-    marker.classList.add('ready')
-  }
-  const tick = now => {
-    frame=0
-    if (!visible || document.hidden || reduceMotion.matches) return
-    if (now-previous>80) { phase+=.003; draw(); previous=now }
-    frame=requestAnimationFrame(tick)
-  }
-  const resume = () => { if (!frame && visible && !document.hidden && !reduceMotion.matches) frame=requestAnimationFrame(tick) }
-  const observer = new IntersectionObserver(entries => { visible=entries[0].isIntersecting; resume() })
-  observer.observe(canvas)
-  new ResizeObserver(draw).observe(canvas)
-  document.addEventListener('visibilitychange',resume)
-  reduceMotion.addEventListener('change',()=>{draw();resume()})
-  canvas.addEventListener('webglcontextlost', event => {event.preventDefault();field.classList.add('unavailable');cancelAnimationFrame(frame)})
-  draw();resume()
+// Orthographic plates share a centre at 1.35° N, 103.82° E. Span is measured
+// in Earth radii, so coastlines stay registered as higher-resolution plates appear.
+const atlas = [
+  { span:2.012, file:'atlas-earth.webp' },
+  { span:.68, file:'atlas-straits.webp' },
+  { span:.12, file:'atlas-region.webp' },
+  { span:.024, file:'atlas-island.webp' },
+]
+const clamp = value => Math.max(0, Math.min(1, value))
+function smooth(start, end, value) {
+  const t = clamp((value - start) / (end - start))
+  return t * t * (3 - 2 * t)
 }
+
+function startOrbit() {
+  const stage = document.querySelector('.stage')
+  const passage = stage.parentElement
+  const projection = stage.querySelector('.projection')
+  const cover = stage.querySelector('.earth-plate')
+  const earthTarget = stage.querySelector('.earth-target')
+  const film = document.querySelector('#film')
+  const copy = stage.querySelector('.hero-copy')
+  const craft = stage.querySelector('.craft')
+  const rings = stage.querySelector('.orbit-art')
+  const fix = stage.querySelector('.locator')
+  const straits = stage.querySelector('.straits')
+  const arrival = stage.querySelector('.island')
+  const shade = stage.querySelector('.map-shade')
+  const bar = stage.querySelector('.ground-scale')
+  const scaleLabel = bar.querySelector('b'), scaleRule = bar.querySelector('i')
+  const needle = stage.querySelector('.ruler i')
+  const motion = matchMedia('(prefers-reduced-motion: reduce)')
+  let width, height, radius, centreX, centreY, top, travel, previousProgress
+  let flight = null, frame = 0
+  const header = document.querySelector('.masthead')
+  const plates = atlas.map(({span, file}, index) => {
+    const image = new Image()
+    image.alt = ''
+    image.decoding = 'async'
+    image.addEventListener('load', () => { previousProgress = undefined; schedule() })
+    image.src = index === 0 ? cover.currentSrc || cover.src : new URL(file, import.meta.url)
+    projection.append(image)
+    return { image, span }
+  })
+
+  function resize() {
+    stage.style.setProperty('--head-height', header.offsetHeight + 'px')
+    width = stage.clientWidth
+    height = stage.clientHeight
+    previousProgress = undefined
+    const style = getComputedStyle(cover)
+    radius = parseFloat(style.width) / atlas[0].span
+    centreX = parseFloat(style.left)
+    centreY = parseFloat(style.top)
+    top = passage.getBoundingClientRect().top + scrollY
+    travel = Math.max(1, passage.offsetHeight - height)
+    schedule()
+  }
+  function draw() {
+    const p = motion.matches ? 0 : clamp((scrollY - top) / travel)
+    if (p === previousProgress) return
+    previousProgress = p
+    const centre = smooth(.04, .46, p)
+    const x = centreX + (width / 2 - centreX) * centre
+    const y = centreY + (height / 2 - centreY) * centre
+    const scale = radius * Math.pow(Math.max(width / .013, height / .011) / radius, smooth(.04, 1, p))
+    // Keep the circular link on the visible globe as the camera moves. Once
+    // it covers the stage, a viewport diagonal already reaches every corner.
+    const hitScale = Math.min(scale, Math.hypot(width, height)) / radius
+    earthTarget.style.transform = `translate(-50%,-50%) translate(${x-centreX}px,${y-centreY}px) scale(${hitScale})`
+    // Composite the small source textures directly. Once a finer plate fills
+    // the viewport it replaces the much larger, fully hidden layer behind it.
+    let covered = false
+    for (let i = plates.length - 1; i >= 0; i--) {
+      const { image, span } = plates[i]
+      const side = scale * span
+      const coverage = side / (2 * Math.max(x, width-x, y, height-y))
+      // The two NASA insets share a colour treatment and have feathered
+      // edges. Introduce the Sentinel colour plate across the whole frame.
+      let blend = 1
+      if (i === plates.length - 1) blend = smooth(1.01, 1.48, coverage)
+      else if (i > 0) blend = smooth(.19, .55, coverage)
+      const visible = !covered && blend > 0 && image.naturalWidth > 0
+      image.style.visibility = visible ? 'visible' : 'hidden'
+      if (!visible) continue
+      image.style.opacity = blend
+      image.style.transform = `translate3d(${x}px,${y}px,0) scale(${side / 1024})`
+      covered = blend === 1 && coverage > 1.28
+    }
+    cover.style.visibility = plates[0].image.naturalWidth ? 'hidden' : 'visible'
+    const opening = 1 - smooth(.01, .22, p)
+    copy.style.opacity = opening
+    copy.inert = opening < .05
+    rings.style.opacity = 1 - smooth(0, .22, p)
+    const pass = smooth(0, .44, p)
+    craft.style.transform = `translate(-50%,-50%) translate(${width*.38*pass}px,${-height*.43*pass}px) rotate(${16*pass}deg) scale(${1+pass*.36})`
+    craft.style.opacity = 1 - smooth(.20,.42,p)
+    craft.inert = p > .40
+    fix.style.transform = `translate(${x-centreX}px,${y-centreY}px)`
+    fix.style.opacity = 1 - smooth(.16,.38,p)
+    shade.style.opacity = smooth(.18,.46,p)
+    straits.style.opacity = smooth(.35,.48,p) * (1 - smooth(.65,.76,p))
+    arrival.style.opacity = smooth(.76,.92,p)
+    bar.style.opacity = smooth(.29,.44,p)
+    // Project a round great-circle distance symmetrically about the centre.
+    const maxKm = 2 * 6371 * Math.asin(Math.min(1, 45 / scale))
+    const unit = 10 ** Math.floor(Math.log10(maxKm))
+    const km = [5, 2, 1].find(step => step * unit <= maxKm) * unit
+    scaleRule.style.width = (2 * scale * Math.sin(km / (2 * 6371))) + 'px'
+    scaleLabel.textContent = km + ' km'
+    needle.style.left = (p * 98) + '%'
+  }
+  function schedule() { if (!frame) frame = requestAnimationFrame(render) }
+  function render(now) {
+    frame = 0
+    if (flight) {
+      const target = top + passage.offsetHeight
+      if (flight.last !== null) flight.elapsed += Math.min(55, now - flight.last)
+      flight.last = now
+      const progress = clamp(flight.elapsed / flight.duration)
+      scrollTo({top:flight.start + (target - flight.start) * smooth(0, 1, progress), behavior:'instant'})
+      if (progress < 1) schedule()
+      else {
+        flight = null
+        film.focus({preventScroll:true})
+        if (location.hash !== '#film') history.pushState(null, '', '#film')
+      }
+    }
+    draw()
+  }
+  for (const link of stage.querySelectorAll('[data-descent]')) {
+    link.addEventListener('click', event => {
+      if (event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || motion.matches) return
+      event.preventDefault()
+      if (flight) return
+      flight = {start:scrollY, elapsed:0, last:null, duration:3700}
+      schedule()
+    })
+  }
+  const stop = () => { flight = null }
+  for (const name of ['wheel','touchstart','pointerdown','popstate','pagehide']) window.addEventListener(name, stop, {passive:true})
+  window.addEventListener('keydown', event => {
+    if (['Escape','Tab',' ','ArrowDown','ArrowUp','PageDown','PageUp','Home','End'].includes(event.key)) stop()
+  })
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stop() })
+  document.documentElement.classList.add('flight-ready')
+  const layout = new ResizeObserver(resize)
+  layout.observe(header)
+  layout.observe(stage)
+  window.addEventListener('scroll', schedule, {passive:true})
+  motion.addEventListener('change', () => { stop(); resize() })
+  window.addEventListener('pageshow', resize)
+  resize()
+}
+
+startOrbit()
