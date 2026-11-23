@@ -3,72 +3,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A whiteboard film about AI and learning, with a reusable Codex film project.">
-  <title>Codex Film Studio — Whiteboard Explainer</title>
-  <link rel="stylesheet" href="showcase.css?v=chinese-handwriting-v1">
-  <script type="module" src="showcase.mjs?v=edition-options-v1"></script>
-<script type="module" src="../../../catalog/agent-start.mjs"></script>
-<link rel="stylesheet" href="../../../catalog/studio-header.css">
-<link rel="icon" href="../../../catalog/brand/studio-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../catalog/brand.css">
+  <meta name="description" content="Follow a marker across an illustrated notebook, then watch a whiteboard film about AI and learning.">
+  <title>Whiteboard Explainer · Codex Film Studio</title>
+  <link rel="icon" href="../../../catalog/brand/studio-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../catalog/studio-header.css">
+  <link rel="stylesheet" href="../../../catalog/brand.css">
+  <link rel="stylesheet" href="showcase.css?v=notebook-1">
+  <script type="module" src="showcase.mjs?v=notebook-1"></script>
+  <script type="module" src="../../../catalog/agent-start.mjs"></script>
 </head>
 <body>
+  <a class="skip-link" href="#screen" data-i18n="skip">Skip to the film</a>
   <header class="masthead studio-has-x studio-page-header">
-    <a class="brand studio-brand-lockup" href="/" aria-label="Codex Film Studio — All styles / 全部风格"><img class="studio-brand-logo" src="../../../catalog/brand/studio-logo.svg" alt="" width="48" height="48" aria-hidden="true"><span class="brand-name">CODEX<br>FILM STUDIO</span></a>
-    <nav aria-label="Main" data-i18n-aria="mainNav"><a href="#film" data-i18n="navFilm">The film</a><a href="#frame-lab" data-i18n="navMake">Make a film</a><a href="#notes" data-i18n="navNotes">Build notes</a></nav>
-    <div class="header-tools studio-header-actions"><span class="edition" data-i18n="styleLabel">STYLE 001 / WHITEBOARD EXPLAINER</span><div class="language-switch" role="group" aria-label="Page language" data-i18n-aria="pageLanguage"><button type="button" data-language="en" lang="en" aria-pressed="true">EN</button><button type="button" data-language="zh" lang="zh-CN" aria-pressed="false">中文</button></div><a class="studio-x-link" href="https://x.com/LeoGuoLabs" target="_blank" rel="noopener noreferrer" aria-label="@LeoGuoLabs on X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.5L1.8 2h6.4l4.5 6.8L18.9 2Zm-1.1 18h1.7L7.2 3.9H5.4L17.8 20Z"/></svg><span>@LeoGuoLabs</span></a><a class="studio-github-link" href="https://github.com/leoguolabs/codex-film-studio" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+    <a class="brand studio-brand-lockup" href="/" aria-label="Codex Film Studio — All styles / 全部风格">
+      <img class="studio-brand-logo" src="../../../catalog/brand/studio-logo.svg" alt="" width="48" height="48">
+      <span class="brand-name">CODEX<br>FILM STUDIO</span>
+    </a>
+    <nav aria-label="Main" data-i18n-aria="mainNav">
+      <a href="#screen" data-draw-to-screen data-i18n="navFilm">The film</a>
+      <a href="#notes" data-i18n="navNotes">Studio notes</a>
+      <a href="#frame-lab" data-i18n="navMake">Make a film</a>
+    </nav>
+    <div class="header-tools studio-header-actions">
+      <div class="language-switch" role="group" aria-label="Page language" data-i18n-aria="pageLanguage">
+        <button type="button" data-language="en" lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-language="zh" lang="zh-CN" aria-pressed="false">中文</button>
+      </div>
+      <a class="studio-x-link" href="https://x.com/LeoGuoLabs" target="_blank" rel="noopener noreferrer" aria-label="@LeoGuoLabs on X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.5L1.8 2h6.4l4.5 6.8L18.9 2Zm-1.1 18h1.7L7.2 3.9H5.4L17.8 20Z"/></svg><span>@LeoGuoLabs</span></a>
+      <a class="studio-github-link" href="https://github.com/leoguolabs/codex-film-studio" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
   </header>
+
   <main>
-    <section id="film" class="hero">
-      <div class="eyebrow"><span class="dot"></span><span data-i18n="heroEyebrow">A FILM ABOUT LEARNING</span></div>
-      <div class="hero-copy">
-        <h1 data-i18n-html="heroTitle">What remains<br>when the answer<br>is <em>gone?</em></h1>
-        <div class="intro">
-          <p class="handwritten" data-i18n-html="handwritten">The work is finished.<br>What did you learn?</p>
-          <p data-i18n="intro">An AI tool can improve your result today. Whether that becomes knowledge you can use tomorrow is a different question.</p>
-          <p class="film-title" data-i18n="filmTitle">Does AI Help You Learn—or Just Finish?</p>
-          <div class="film-meta"><span id="film-duration">~3 MIN</span><span>1080P</span><span>24 FPS</span><span data-i18n="audioLanguage">ENGLISH AUDIO</span></div>
-          <div class="film-actions"><div id="edition-picker" class="edition-picker"><span data-i18n="editionLabel">Edition</span>
-            <div class="edition-options" role="group" aria-label="Film edition" data-i18n-aria="filmEdition">
-              <a class="edition-choice" href="?edition=short" data-edition="short" data-i18n="shortEdition" aria-current="page">Three-minute film</a>
-              <a class="edition-choice" href="?edition=long" data-edition="long" data-i18n="longEdition">Twelve-minute film</a>
-            </div>
+    <section id="cover" class="journey" aria-labelledby="cover-title">
+      <div class="board-stage">
+        <div class="cover-spread page-width">
+          <div class="cover-copy">
+            <p class="style-name"><i class="ink-sample" aria-hidden="true"></i><span data-i18n="styleName">Whiteboard Explainer</span></p>
+            <h1 id="cover-title" data-i18n-html="heroTitle">Erase the answer.<br><em>What stays?</em></h1>
+            <p class="cover-intro" data-i18n="intro">The homework is done. Close the laptop. Could you solve the same problem on a blank page tomorrow?</p>
+            <a class="draw-link" href="#screen" data-draw-to-screen><span class="play-mark" aria-hidden="true"></span><span data-i18n="watch">Follow the pen to the film</span></a>
           </div>
-          <a class="watch-link" href="#screen"><span data-i18n="watch">Watch the film</span><span class="watch-arrow" aria-hidden="true">↘</span></a></div>
+          <a class="drawing" href="#screen" data-draw-to-screen aria-label="Follow the marker from the open notebook to the film" data-i18n-aria="drawLabel">
+            <div class="art-paper">
+              <img src="notebook.webp" width="1536" height="1024" alt="" fetchpriority="high" draggable="false">
+              <canvas id="drawing-ink" aria-hidden="true"></canvas>
+            </div>
+          </a>
+        </div>
+        <div class="board-margin page-width">
+          <a class="scroll-cue" href="#screen" data-draw-to-screen><span class="scroll-arrow" aria-hidden="true">↓</span><span data-i18n="scroll">Scroll to draw</span></a>
+          <span class="ink-rule" aria-hidden="true"></span>
+          <span data-i18n="coverMeta">3 &amp; 12 min · English narration</span>
         </div>
       </div>
-      <figure id="screen" class="screen">
-        <video id="film-player" controls playsinline preload="metadata" poster="media/poster.jpg?edition=illustrated-v2" aria-label="Does AI Help You Learn—or Just Finish?" data-i18n-aria="filmTitle">
-          <source src="media/does-ai-help-you-learn-3min.mp4?edition=illustrated-v2" type="video/mp4">
-          <track kind="subtitles" src="media/captions.vtt" srclang="en" label="English">
-        </video>
-        <figcaption><span data-i18n="filmCaption">ONE BOARD. DRAWN BY HAND. A QUESTION WORTH KEEPING.</span><a id="download-film" href="media/does-ai-help-you-learn-3min.mp4" download data-i18n="download">Download film ↗</a></figcaption>
-      </figure>
-      <div class="chapter-strip" id="chapters" aria-label="Film chapters" data-i18n-aria="filmChapters"></div>
     </section>
 
-    <section id="frame-lab" class="make-film">
-      <div class="section-heading"><div><span class="eyebrow" data-i18n="makeEyebrow">02 / MAKE IT YOURS</span><h2 data-i18n-html="makeTitle">Your story.<br>The same style.</h2></div>
-        <p data-i18n="makeIntro">Make your own film with Codex Film Studio. Start with this whiteboard style, then bring a subject you want to explain.</p>
+    <div id="film">
+      <section id="screen" class="screening" tabindex="-1" aria-labelledby="screen-title">
+        <div class="screen-spread page-width">
+          <div class="screen-copy">
+            <p class="small-label"><span class="screen-dot" aria-hidden="true"></span><span data-i18n="screenLabel">Screening room</span></p>
+            <h2 id="screen-title" data-i18n-html="screenTitle">Does AI Help You Learn—or Just Finish?</h2>
+            <div id="edition-picker" class="edition-options" role="group" aria-label="Film edition" data-i18n-aria="filmEdition">
+              <a href="?edition=short#screen" data-edition="short" data-i18n="shortEdition" aria-current="page">Short film</a>
+              <a href="?edition=long#screen" data-edition="long" data-i18n="longEdition">Extended film</a>
+            </div>
+            <p class="film-meta"><span id="film-duration">3:00</span> · 1080p · 24 fps<br><span data-i18n="audioLanguage">English audio &amp; captions</span></p>
+            <a class="download" id="download-film" href="media/does-ai-help-you-learn-3min.mp4" download data-i18n="download">Download film ↓</a>
+          </div>
+          <div class="projection">
+            <figure class="screen-frame">
+              <video id="film-player" controls playsinline preload="metadata" poster="media/poster.jpg" aria-label="Does AI Help You Learn—or Just Finish?" data-i18n-aria="filmTitle">
+                <source src="media/does-ai-help-you-learn-3min.mp4" type="video/mp4">
+                <track kind="subtitles" src="media/captions.vtt" srclang="en" label="English">
+              </video>
+              <figcaption class="preview-controls" hidden>
+                <button id="play-film" type="button" class="play-film"><span class="play-mark" aria-hidden="true"></span><span data-i18n="playFull">Play full film</span></button>
+                <button id="toggle-preview" type="button" class="preview-toggle" data-i18n="pausePreview">Pause preview</button>
+              </figcaption>
+            </figure>
+            <div class="chapter-strip" id="chapters" role="group" aria-label="Film chapters" data-i18n-aria="filmChapters"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="notes" class="notes folio page-width" aria-labelledby="notes-title">
+      <div class="folio-heading">
+        <p class="small-label" data-i18n="navNotes">Studio notes</p>
+        <h2 id="notes-title" data-i18n-html="notesTitle">From the tip<br>of a <em>pen.</em></h2>
+        <p data-i18n="notesIntro">One board holds the whole film. The camera can return to an earlier drawing while the ink is still there.</p>
       </div>
-      <a class="repository-link" href="https://github.com/leoguolabs/codex-film-studio" target="_blank" rel="noopener noreferrer">
-        <span><small data-i18n="repoEyebrow">GET THE PROJECT ON GITHUB</small><strong>codex-film-studio</strong><span data-i18n="repoDescription">Style guides, editable examples and everything to get started.</span></span>
-      </a>
-      <film-agent-start style-id="whiteboard"><p>Open this repository in your coding Agent and describe your film. / 在 Agent 中打开仓库，描述你想制作的影片。</p><blockquote>Use the whiteboard style to make a film about [subject]. Handle project setup, production and review, then deliver the MP4 and editable project. / 请用 whiteboard 风格制作关于[主题]的视频，自动完成项目创建、制作与检查，交付 MP4 和可编辑工程。</blockquote></film-agent-start>
-      <div class="starter-prompt"><span class="eyebrow" data-i18n="promptEyebrow">TRY THIS IN CODEX</span><blockquote data-i18n="prompt">Make a three-minute whiteboard film about how solar panels work. Draw people and objects when they help explain an idea. Use English narration and deliver a 1080p video. Inspect and refine the result before showing me.</blockquote><p data-i18n="promptNote">To recreate this film first, ask Codex to follow the sample rebuild instructions in the README. The sample includes its recorded narration.</p></div>
-    </section>
-
-    <section id="notes" class="notes">
-      <div class="section-heading"><div><span class="eyebrow" data-i18n="notesEyebrow">03 / INSIDE THE STUDIO</span><h2 data-i18n-html="notesTitle">Built from the<br>tip of a pen.</h2></div><p data-i18n="notesIntro">A reusable local film project: write a story, place it on one board, give every mark a time, and inspect the resulting motion.</p></div>
-      <div class="note-grid">
-        <article><span class="note-number">01</span><h3 data-i18n="note1Title">People in the picture</h3><p data-i18n="note1Body">A learner uses a laptop, takes an exam and thinks through a method. People and place cues are drawn with the same ink as the argument.</p></article>
-        <article><span class="note-number">02</span><h3 data-i18n="note2Title">One shared clock</h3><p data-i18n="note2Body">Letter strokes, camera movement, pen lifts, captions and felt sounds follow the same timeline. Every frame can be reproduced.</p></article>
-        <article><span class="note-number">03</span><h3 data-i18n="note3Title">Evidence before polish</h3><p data-i18n="note3Body">The script separates assisted grades from unaided exams, immediate tests from retention, and a helpful tutor from a ready-made answer.</p></article>
+      <div class="ink-notes">
+        <article><i class="ink-swipe charcoal" aria-hidden="true"></i><div><h3 data-i18n="note1Title">People in the picture</h3><p data-i18n="note1Body">A learner works at a laptop, sits an exam and thinks through a problem. The figure and the argument come from the same felt tip.</p></div></article>
+        <article><i class="ink-swipe cobalt" aria-hidden="true"></i><div><h3 data-i18n="note2Title">One shared clock</h3><p data-i18n="note2Body">A line appears where the nib touches. The squeak, the pen lift and the next word in the narration all have their place in time.</p></div></article>
+        <article><i class="ink-swipe vermilion" aria-hidden="true"></i><div><h3 data-i18n="note3Title">Two different scores</h3><p data-i18n="note3Body">The film draws practice with help and an exam taken alone side by side. You can see which result each study actually measured.</p></div></article>
       </div>
-      <div class="build-links"><a href="https://github.com/leoguolabs/codex-film-studio#rebuild-the-whiteboard-sample" data-i18n="rebuild">Rebuild the project ↗</a><a href="https://github.com/leoguolabs/codex-film-studio/blob/main/DIRECTOR.md" data-i18n="direct">Direct your film ↗</a><a href="https://github.com/leoguolabs/codex-film-studio/blob/main/TECHNIQUE.md" data-i18n="production">Production guide ↗</a><a href="https://github.com/leoguolabs/codex-film-studio/blob/main/styles/whiteboard/studio/CREDITS.md" data-i18n="credits">Credits & licenses ↗</a></div>
     </section>
 
-    <section class="sources"><span class="eyebrow" data-i18n="researchEyebrow">04 / THE RESEARCH BEHIND THE FILM</span><div id="source-list"></div></section>
-    <footer><div class="footer-main"><div class="brand"><span class="brand-name">CODEX<br>FILM STUDIO</span></div><p><span data-i18n="madeWith">Made with</span> <a href="https://github.com/leoguolabs/codex-film-studio">Codex Film Studio</a>.<br><a href="https://github.com/leoguolabs/codex-film-studio/blob/main/styles/whiteboard/studio/CREDITS.md" data-i18n="credits">Credits &amp; licenses ↗</a></p><span data-i18n-html="footerEdition">Made for <a href="https://x.com/LeoGuoLabs" target="_blank" rel="noopener noreferrer">LeoGuoLabs</a><br>2026 · Edition 01</span></div><p class="source-credit" data-i18n-html="sourceCredit">Style and style-library inspiration: <a href="https://x.com/lemomo_ai" target="_blank" rel="noopener noreferrer">Lemomo / LemoLab (@lemomo_ai)</a> · <a href="https://github.com/lemomo-ai/lemo-opuscar" target="_blank" rel="noopener noreferrer">lemo-opuscar on GitHub</a>.</p></footer>
+    <section id="frame-lab" class="make-section">
+      <div class="folio page-width" aria-labelledby="make-title">
+        <div class="folio-heading">
+          <p class="small-label" data-i18n="navMake">Make a film</p>
+          <h2 id="make-title" data-i18n-html="makeTitle">Your turn at<br>the <em>board.</em></h2>
+          <p data-i18n="makeIntro">Bring a question you would like to draw. Start with a new subject or open the editable sample.</p>
+          <a class="text-link" href="https://github.com/leoguolabs/codex-film-studio" data-i18n="repo">Get the project on GitHub ↗</a>
+        </div>
+        <div class="prompt-sheet">
+          <p class="small-label" data-i18n="promptEyebrow">An example brief</p>
+          <blockquote data-i18n="prompt">Make a three-minute whiteboard film about how solar panels work. Draw people and objects when they help explain an idea. Use English narration and deliver a 1080p video. Inspect and refine the result before showing me.</blockquote>
+          <details class="prompt-fold"><summary data-i18n="openPrompts">Open the creation prompts</summary>
+            <film-agent-start style-id="whiteboard" compact><p>Open this repository in your coding Agent and describe your film. / 在 Agent 中打开仓库，描述你想制作的影片。</p><blockquote>Use the whiteboard style to make a film about [subject]. Handle project setup, production and review, then deliver the MP4 and editable project. / 请用白板讲解风格制作关于[主题]的视频，交付 MP4 和可编辑工程。</blockquote></film-agent-start>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="endnotes page-width">
+      <details class="references"><summary data-i18n="research">Research behind the film</summary><div id="source-list"></div></details>
+      <div class="build-links"><a href="https://github.com/leoguolabs/codex-film-studio#rebuild-the-whiteboard-sample" data-i18n="rebuild">Rebuild the sample ↗</a><a href="https://github.com/leoguolabs/codex-film-studio/blob/main/DIRECTOR.md" data-i18n="direct">Director’s guide ↗</a><a href="https://github.com/leoguolabs/codex-film-studio/blob/main/TECHNIQUE.md" data-i18n="production">Production guide ↗</a><a href="https://github.com/leoguolabs/codex-film-studio/blob/main/styles/whiteboard/studio/CREDITS.md" data-i18n="credits">Credits &amp; licenses ↗</a></div>
+    </div>
   </main>
+  <footer class="page-width">
+    <a class="footer-home" href="/" data-i18n="back">← All styles</a>
+    <p data-i18n-html="sourceCredit">Style-library inspiration by <a href="https://x.com/lemomo_ai" target="_blank" rel="noopener noreferrer">Lemomo / LemoLab</a> · <a href="https://github.com/lemomo-ai/lemo-opuscar" target="_blank" rel="noopener noreferrer">lemo-opuscar ↗</a>.</p>
+    <a href="https://x.com/LeoGuoLabs" target="_blank" rel="noopener noreferrer">LeoGuoLabs ↗</a>
+  </footer>
 </body>
 </html>

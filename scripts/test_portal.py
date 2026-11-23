@@ -95,6 +95,8 @@ class PortalTests(unittest.TestCase):
                 self.assertEqual(resolved.path, '/codex-film-studio/catalog/agent-start.mjs', relative)
                 self.assertEqual(resolved.query, 'v=portal-test', relative)
             self.assertIn('showcase.mjs', (output / 'styles/whiteboard/studio/index.html').read_text())
+            for asset in ['notebook.webp', 'marker-journey.mjs', 'src/board.mjs']:
+                self.assertTrue((output / 'styles/whiteboard/studio' / asset).is_file(), asset)
             self.assertTrue((output / 'styles/whiteboard/studio/editions/long/media/captions.vtt').is_file())
             self.assertEqual(len(list(output.rglob('*.mp4'))), len(manifest['editions']) + preview_movies)
             self.assertTrue((output / 'styles/caption-news/showcase/media/film.mp4').is_file())

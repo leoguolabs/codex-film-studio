@@ -1,7 +1,7 @@
 # Whiteboard Hand SC
 
-Chinese pen handwriting for the showcase page's blue title, margin question
-and creation prompt. English lettering continues to use Architects Daughter.
+Chinese pen handwriting for the showcase page's blue headings, scroll cue
+and example brief. English lettering continues to use Architects Daughter.
 The font is hosted with the page; no external font service is required.
 
 - Source: [Xiaolai v3.126](https://github.com/lxgw/kose-font/releases/tag/v3.126)

@@ -140,7 +140,7 @@ function boundsOf(shapes){
   return [Math.min(...shapes.map(s=>s.bounds[0])),Math.min(...shapes.map(s=>s.bounds[1])),
     Math.max(...shapes.map(s=>s.bounds[2])),Math.max(...shapes.map(s=>s.bounds[3]))]
 }
-function pointAt(stroke,u){
+export function pointAt(stroke,u){
   const length=clamp(u)*stroke.length
   let i=1
   while(i<stroke.lengths.length-1&&stroke.lengths[i]<length)i++
@@ -162,7 +162,7 @@ export function eraserState(e,t){
     x:mix(reverse?right:left,reverse?left:right,smooth(u)),y:e.y+rowHeight*(row+.5)}
   return {x:reverse?left:right,y:e.y+rowHeight*(row+.5+smooth((u-1)/.25))}
 }
-function paintStroke(ctx,s,progress=1){
+export function paintStroke(ctx,s,progress=1){
   if(progress<=0)return
   const limit=s.length*clamp(progress)
   let n=1
