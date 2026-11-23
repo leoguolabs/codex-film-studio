@@ -27,6 +27,14 @@ img{display:block}button{border:0}button:disabled{cursor:default}
 .spray{width:42vw;max-width:740px;opacity:0;transform-origin:0 0}
 .traveller{z-index:1;width:90px;transform-origin:0 0;opacity:0}
 .traveller img{width:100%;height:auto;transform-origin:13% 60%;filter:drop-shadow(0 1px .7px #4028194a)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.release-seed{display:none;position:absolute;inset:0;pointer-events:none;text-decoration:none}
+.has-flight .release-seed{display:block}
+.release-seed:focus-visible{outline:none}
+.cone-target{position:absolute;top:0;left:0;width:284px;height:328px;border-radius:48%;transform-origin:0 0}
+.cone-target,.traveller img,.seed-label span{pointer-events:auto;cursor:pointer}
+.release-seed:focus-visible .cone-target{outline:2px dashed var(--red);outline-offset:4px}
+.release-seed:is(:hover,:focus-visible) .seed-label span{text-decoration:underline;text-underline-offset:.2em}
 .landing-shadow{width:50px;height:7px;background:#503a2580;border-radius:50%;filter:blur(2px);opacity:0}
 .seed-label{position:absolute;top:0;left:0;opacity:0;font:italic 17px var(--book);color:#503b20;white-space:nowrap;will-change:transform}
 .seed-label span{background:#f5e8c9de;padding:2px 7px 3px;box-decoration-break:clone}

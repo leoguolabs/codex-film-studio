@@ -17,13 +17,17 @@
 <main>
   <section class="journey" id="canopy" aria-labelledby="flight-title">
     <div class="viewport">
-      <div class="stage" aria-hidden="true">
+      <div class="stage">
         <img class="woodland" src="forest-descent.webp" width="1024" height="1536" alt="" fetchpriority="high">
         <div class="morning-paper"></div>
         <img class="spray" src="near-needles.webp" alt="">
         <div class="landing-shadow"></div>
-        <div class="traveller"><img src="winged-seed.webp" width="500" height="165" alt=""></div>
-        <div class="seed-label"><i></i><span data-en="winged pine seed">带翅的松籽</span></div>
+        <a class="release-seed" href="#screening" aria-labelledby="release-label">
+          <span id="release-label" class="sr-only" data-en="Release the seed and follow it to the films">从松果放飞松籽，跟到林间放映</span>
+          <span class="cone-target"></span>
+          <span class="traveller"><img src="winged-seed.webp" width="500" height="165" alt=""></span>
+          <span class="seed-label"><i></i><span data-en="winged pine seed">带翅的松籽</span></span>
+        </a>
         <div class="forest-shade"></div>
       </div>
       <div class="opening">
@@ -45,7 +49,7 @@
     </div>
   </section>
 
-  <section class="screening" id="screening" aria-labelledby="film-title">
+  <section class="screening" id="screening" aria-labelledby="film-title" tabindex="-1">
     <div class="film-page">
       <div class="film-head">
         <div><p class="pencil-note" data-en="A screening in the clearing">林间放映</p><h2 id="film-title">雨后的松果</h2></div>

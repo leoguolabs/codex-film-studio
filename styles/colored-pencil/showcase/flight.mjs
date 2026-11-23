@@ -11,6 +11,8 @@ const shadow = journey.querySelector('.landing-shadow');
 const shade = journey.querySelector('.forest-shade');
 const paper = journey.querySelector('.morning-paper');
 const opening = journey.querySelector('.opening');
+const cone = journey.querySelector('.cone-target');
+const screening = document.querySelector('#screening');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const clamp = (x,a,b) => Math.max(a,Math.min(b,x));
 const mix = (a,b,t) => a+(b-a)*t;
@@ -43,15 +45,34 @@ function sample(t,k){
     +(-2*u3+3*u2)*b[k]+(u3-u2)*d*tangent(i+1,k);
 }
 let width=0,height=0,travel=0,top=0,requested=0;
+let screeningTop = 0;
+let autoFlight = null;
 function resize(){
   width=viewport.clientWidth;height=viewport.clientHeight;
   top=journey.getBoundingClientRect().top+scrollY;
   travel=Math.max(1,journey.offsetHeight-height);
+  screeningTop = screening.getBoundingClientRect().top + scrollY;
   requestFrame();
 }
-function frame(){
+function frame(now){
   requested=0;
   if(!height||!width)return;
+  if (autoFlight) {
+    // Hold the flight on a late frame so first paint or a slow decode cannot skip the takeoff.
+    if (autoFlight.previousFrame !== null) {
+      autoFlight.played += Math.min(50, now - autoFlight.previousFrame);
+    }
+    autoFlight.previousFrame = now;
+    const elapsed = Math.min(1, autoFlight.played / autoFlight.duration);
+    const progress = mix(ease(0, 1, elapsed), 1 - (1 - elapsed) ** 2, .3);
+    window.scrollTo({top: mix(autoFlight.from, screeningTop, progress), behavior: 'instant'});
+    if (elapsed < 1) {
+      requestFrame();
+    } else {
+      autoFlight = null;
+      screening.focus({preventScroll: true});
+    }
+  }
   const t=reduced.matches ? 0 : clamp((scrollY-top)/travel,0,1);
   const narrow=width<=680;
   const departure=ease(.025,.22,t), landing=ease(.85,.945,t);
@@ -68,6 +89,8 @@ function frame(){
   const ty=clamp(aimY*height-y*zoom,height-1536*zoom,0);
   woods.style.width='1024px';
   woods.style.transform=point(tx,ty)+' scale('+zoom.toFixed(5)+')';
+  // The painted cone occupies this oval on the original forest plate.
+  cone.style.transform = point(tx + 573 * zoom, ty + 191 * zoom) + ' scale(' + zoom + ')';
 
   const sx=tx+x*zoom,sy=ty+y*zoom;
   // Projection of a tilted rotating wing. The dark kernel is the pivot; the wing
@@ -100,6 +123,7 @@ function frame(){
   foreground.style.opacity=(.86*ease(.25,.36,t)*(1-ease(.55,.68,t))).toFixed(3);
   label.style.transform=point(sx+size*.36,sy+size*.31);
   label.style.opacity=((1-ease(.035,.12,t))*.98).toFixed(3);
+  label.style.visibility = t < .12 ? 'visible' : 'hidden';
   const intro=1-ease(.025,.20,t);
   opening.style.opacity=intro.toFixed(3);
   opening.inert=intro<.02;
@@ -109,10 +133,46 @@ function frame(){
   shade.style.opacity=ease(.76,1,t).toFixed(3);
 }
 function requestFrame(){if(!requested)requested=requestAnimationFrame(frame);}
+
+function followSeed(event) {
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  if (reduced.matches) return;
+  event.preventDefault();
+  if (autoFlight) return;
+  resize();
+  const remaining = clamp((screeningTop - scrollY) / (screeningTop - top), 0, 1);
+  autoFlight = {from: scrollY, previousFrame: null, played: 0, duration: Math.max(650, 4200 * remaining)};
+  document.querySelector('#teaser').preload = 'auto';
+  if (location.protocol !== 'file:' && location.hash !== '#screening') {
+    history.pushState(history.state, '', '#screening');
+  }
+  requestFrame();
+}
+
+for (const trigger of journey.querySelectorAll('a[href="#screening"]')) {
+  trigger.addEventListener('click', followSeed);
+}
+function stopFlight() { autoFlight = null; }
+window.addEventListener('wheel', stopFlight, {passive: true});
+window.addEventListener('touchmove', stopFlight, {passive: true});
+window.addEventListener('pointerdown', event => {
+  if (!event.target.closest('a[href="#screening"]')) stopFlight();
+}, {passive: true});
+window.addEventListener('keydown', event => {
+  if (['Escape','Tab',' ','ArrowDown','ArrowUp','PageDown','PageUp','Home','End'].includes(event.key)) stopFlight();
+});
+window.addEventListener('popstate', stopFlight);
+window.addEventListener('pagehide', stopFlight);
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) stopFlight();
+});
 document.documentElement.classList.add('has-flight');
 new ResizeObserver(resize).observe(viewport);
 window.addEventListener('scroll',requestFrame,{passive:true});
 window.addEventListener('resize',resize,{passive:true});
-reduced.addEventListener('change',resize);
+reduced.addEventListener('change', () => {
+  stopFlight();
+  resize();
+});
 window.addEventListener('pageshow',resize);
 resize();
