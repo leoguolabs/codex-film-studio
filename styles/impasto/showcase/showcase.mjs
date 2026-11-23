@@ -3,6 +3,7 @@ const player = byId('player');
 const media = new URL('./media/', location.href);
 const url = new URL(location.href);
 const copy = [...document.querySelectorAll('[data-zh]')].map(node => [node, node.textContent]);
+const illustrations = [...document.querySelectorAll('[data-zh-alt]')].map(node => [node, node.alt]);
 const filmButtons = [...document.querySelectorAll('[data-film]')];
 let films = [];
 let selected;
@@ -63,7 +64,6 @@ function labelAudio() {
     row.querySelector('audio').setAttribute('aria-label', sound.title[language] + ' · ' + labels[i]);
   });
   byId('edits').replaceChildren(...sound.edits.map(([original, film]) => element('div', words('Gemini','原曲') + ' ' + original + ' → ' + words('film','成片') + ' ' + film)));
-  byId('score-title').textContent = sound.title[language];
   byId('score-note').textContent = sound.score[language];
 }
 function soundTrack(sample) {
@@ -155,6 +155,7 @@ function localize() {
   document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
   document.title = words('Impasto Oil Painting','厚涂油画') + ' · Codex Film Studio';
   for (const [node, en] of copy) node.textContent = words(en, node.dataset.zh);
+  for (const [node, en] of illustrations) node.alt = words(en, node.dataset.zhAlt);
   byId('library').href = language === 'zh' ? '../../../zh/#library' : '../../../#library';
   document.querySelector('.brand').href = language === 'zh' ? '../../../zh/' : '../../../';
   document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
