@@ -1229,9 +1229,10 @@
       "landing": {
         "page": "styles/colored-pencil/showcase/index.html",
         "assets": [
-          "styles/colored-pencil/showcase/field-cover.webp",
-          "styles/colored-pencil/showcase/creek-detail.webp",
-          "styles/colored-pencil/showcase/pine-detail.webp",
+          "styles/colored-pencil/showcase/forest-descent.webp",
+          "styles/colored-pencil/showcase/near-needles.webp",
+          "styles/colored-pencil/showcase/winged-seed.webp",
+          "styles/colored-pencil/showcase/flight.mjs",
           "styles/colored-pencil/showcase/showcase.css",
           "styles/colored-pencil/showcase/showcase.mjs",
           "styles/colored-pencil/showcase/field-serif.woff2",
