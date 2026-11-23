@@ -1153,6 +1153,9 @@
         "assets": [
           "styles/impasto/showcase/showcase.css",
           "styles/impasto/showcase/showcase.mjs",
+          "styles/impasto/showcase/harbour-cover.webp",
+          "styles/impasto/showcase/light-study.webp",
+          "styles/impasto/showcase/waves.json",
           "styles/impasto/STYLE.md",
           "styles/impasto/prompt.txt",
           "styles/impasto/PROVENANCE.md"
