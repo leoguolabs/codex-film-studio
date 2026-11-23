@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/"><strong>Open the style library ↗</strong></a> ·
-  <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">Field Notes · colored-pencil films ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">A seed on the wind · colored-pencil films ↗</a> ·
   <a href="#the-style-atlas">Explore styles</a> ·
   <a href="#make-your-film">Start creating</a> ·
   <a href="CONTRIBUTING.md">Contribute</a> ·

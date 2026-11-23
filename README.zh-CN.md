@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/zh/"><strong>打开风格片库 ↗</strong></a> ·
-  <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh">山野手记 · 彩铅放映页 ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh">松籽乘风 · 彩铅放映页 ↗</a> ·
   <a href="#风格手册">浏览风格</a> ·
   <a href="#制作你的影片">开始创作</a> ·
   <a href="CONTRIBUTING.md">参与贡献</a> ·

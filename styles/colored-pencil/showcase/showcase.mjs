@@ -7,11 +7,10 @@ const motion = matchMedia('(prefers-reduced-motion: reduce)');
 let lang = (params.get('lang') || document.documentElement.lang).startsWith('en') ? 'en' : 'zh';
 let filmId = params.get('film') === 'creek' ? 'creek' : 'pine';
 let selectedSound = filmId, selectedTrack = 'score-original';
-let films = [], sound, visible = false, pendingSeek = null, glanceStart = 0, glanceEnd = 0;
+let films = [], sound, visible = false, pendingSeek = null;
 const choose = (en,zh) => lang === 'en' ? en : zh;
 const clock = seconds => String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(Math.floor(seconds%60)).padStart(2,'0');
 const media = name => new URL('media/'+name,document.baseURI).href;
-const range = {pine:[133.6,142.4],creek:[113.2,122]};
 const fallbackRoot = 'https://github.com/leoguolabs/codex-film-studio/releases/download/colored-pencil-field-notes-v1/';
 const defaults = {
   pine:{id:'pine',title:{en:'After the Rain',zh:'雨后的松果'},description:{en:'Follow the winged seed back to the forest floor.',zh:'一粒带翅的种子离开枝头，落回林地。'},duration:4028/24,chapters:[],transcript:[]},
@@ -70,10 +69,10 @@ function selectFilm(id){
   const captions=document.createElement('track');
   captions.kind='subtitles';captions.srclang='en';captions.label='English';captions.src=media(id+'.vtt');
   full.replaceChildren(captions);full.load();
-  const clip=offline?.glimpses?.[id];
-  [glanceStart,glanceEnd]=clip?[0,0]:range[id];
-  teaser.poster=media(id+'.webp');teaser.loop=Boolean(clip);teaser.muted=true;
-  teaser.src=clip || filmURL(id)+'#t='+glanceStart+','+glanceEnd;
+  teaser.poster=media(id+'.webp');
+  teaser.loop=true;
+  teaser.muted=true;
+  teaser.src=offline?.glimpses?.[id] || media(id+'-glimpse.mp4');
   teaser.load();filmNotes();previewPlayback();
 }
 function seekFull(){
@@ -84,13 +83,6 @@ function startFilm(at){
   pendingSeek=at;seekFull();$('.film-error').hidden=true;
   full.play().catch(()=>{if(full.error)$('.film-error').hidden=false;});
 }
-function previewLoop(){
-  if(glanceEnd && teaser.currentTime>=glanceEnd-.08 && visible && !screen.classList.contains('full')){
-    teaser.currentTime=glanceStart;previewPlayback();
-  }
-}
-teaser.addEventListener('loadedmetadata',()=>{if(glanceStart && Math.abs(teaser.currentTime-glanceStart)>.12)teaser.currentTime=glanceStart;});
-teaser.addEventListener('timeupdate',previewLoop);teaser.addEventListener('ended',previewLoop);
 full.addEventListener('loadedmetadata',seekFull);
 full.addEventListener('error',()=>{$('.film-error').hidden=false;});
 full.addEventListener('playing',()=>{audio.pause();$('.film-error').hidden=true;});
