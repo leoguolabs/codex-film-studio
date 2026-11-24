@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#091719">
+  <meta name="theme-color" content="#0c1217">
   <meta name="description" content="Singapore, seen from a different distance. A Satellite Briefing film and a geographic filmmaking style from Codex Film Studio.">
   <title>Singapore · Satellite Briefing — Codex Film Studio</title>
-  <link rel="preload" as="image" href="atlas-earth.webp">
+  <link rel="preload" as="image" href="orbit-disc.webp">
   <script type="module" src="showcase.mjs"></script>
   <script type="module" src="orbit.mjs"></script>
 <script type="module" src="../../../catalog/agent-start.mjs"></script>
@@ -24,17 +24,13 @@
   <main>
   <section class="passage" aria-labelledby="hero-title">
     <div class="stage">
-      <div class="sky" aria-hidden="true"></div>
       <div class="chart">
-        <div class="orbit-art" aria-hidden="true">
-          <div class="ring ring-outer"></div><div class="ring ring-inner"></div>
-          <div class="inclination"></div>
-        </div>
-        <img class="earth-plate" src="atlas-earth.webp" width="1320" height="1320" fetchpriority="high" alt="" aria-hidden="true">
+        <div class="orbit-art" aria-hidden="true"></div>
+        <img class="earth-plate" src="orbit-disc.webp" width="1320" height="1320" fetchpriority="high" alt="" aria-hidden="true">
         <div class="projection" aria-hidden="true"></div>
         <a class="earth-target" href="#film" data-descent aria-label="Descend from Earth orbit to Singapore" data-zh-label="从地球轨道下降到新加坡"></a>
         <div class="locator" aria-hidden="true"><i></i><span data-zh="新加坡">Singapore</span></div>
-        <a class="craft" href="#film" data-descent aria-label="Follow the satellite down to Singapore" data-zh-label="跟随卫星俯瞰新加坡"><img src="spacecraft.webp" alt="" width="860" height="484" fetchpriority="high"></a>
+        <a class="craft" href="#film" data-descent aria-label="Follow the satellite down to Singapore" data-zh-label="跟随卫星俯瞰新加坡"><img src="spacecraft.webp" alt="" width="800" height="335" fetchpriority="high"></a>
       </div>
       <div class="hero-copy">
         <p class="kicker"><i></i><span data-zh="地理影像图集">A geographic film atlas</span></p>
@@ -98,7 +94,7 @@
       <details><summary data-zh="用这个风格制作影片">Make a film in this style</summary><film-agent-start style-id="satellite-briefing"><p>Open this repository in your coding Agent and describe your film. / 在 Agent 中打开仓库，描述你想制作的影片。</p><blockquote>Use the satellite-briefing style to make a film about [subject]. Handle project setup, production and review, then deliver the MP4 and editable project. / 请用 satellite-briefing 风格制作关于[主题]的视频，自动完成项目创建、制作与检查，交付 MP4 和可编辑工程。</blockquote></film-agent-start></details>
       <details><summary data-zh="里斯本简报 · 提示词示例">A Lisbon brief · example prompt</summary><div class="starter-prompt"><div class="prompt-top"><span class="mono" data-zh="发给 CODEX 的第一条简报">YOUR FIRST BRIEF TO CODEX</span><button id="copy-prompt" type="button" data-zh="复制提示词 +">Copy prompt +</button></div><blockquote id="prompt" data-zh="使用 Satellite Briefing 风格，为第一次到访的旅客制作一部两分钟的里斯本介绍。使用有来源的真实卫星影像、地理标注和经过核实的实拍片段。英文旁白、英文字幕，输出 1080p 视频。检查画面、镜头运动和声音，并在交付前修正问题。">Make a two-minute Satellite Briefing film about Lisbon for a first-time visitor. Use sourced satellite imagery, geographic annotations and verified real footage. Deliver a 1080p film with English narration and English captions. Inspect the frames, camera movement and sound, and refine the result before delivery.</blockquote><p id="copy-status" role="status"></p></div></details>
       <details id="notes"><summary data-zh="影像来源与制作记录">Imagery, sources &amp; production records</summary>
-        <p class="art-credit" data-zh="封面地球使用 NASA Blue Marble（2004），区域与岛屿使用 EOX Sentinel-2 cloudless（2016，含修改的 Copernicus Sentinel 数据，CC BY 4.0）。图像经过投影与调色。前景卫星由 ImageGen 绘制，作为示意。">Earth imagery from NASA Blue Marble (2004). Local views from Sentinel-2 cloudless 2016 by EOX, with modified Copernicus Sentinel data 2016 (CC BY 4.0). Images reprojected and toned. The foreground spacecraft is an illustration made with ImageGen.</p>
+        <p class="art-credit" data-zh="封面地球按 Natural Earth 陆地轮廓绘制，前景卫星由 ImageGen 绘制。下降镜头使用经过投影与调色的 NASA Blue Marble（2004）与 EOX Sentinel-2 cloudless（2016，含修改的 Copernicus Sentinel 数据，CC BY 4.0）。">The opening globe traces Natural Earth land outlines. ImageGen illustrated the spacecraft. The descent uses reprojected and toned NASA Blue Marble (2004) and EOX Sentinel-2 cloudless (2016) imagery, including modified Copernicus Sentinel data 2016 (CC BY 4.0).</p>
         <div class="records"><a href="/_projects/satellite-film/DIRECTOR-BRIEF.md"><span data-zh="导演简报">Director’s brief</span><span>↗</span></a><a href="/_projects/satellite-film/sources-footage.md"><span data-zh="实拍片段与出处">Footage & provenance</span><span>↗</span></a><a href="/_projects/satellite-film/QUALITY-REVIEW.md"><span data-zh="画面与声音审阅">Picture & sound review</span><span>↗</span></a><a href="/_projects/satellite-film/CREDITS.md"><span data-zh="完整署名与许可">Full credits & licenses</span><span>↗</span></a></div><div class="sources-grid"><div><h3 data-zh="地球影像">The Earth imagery</h3><a href="https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/">NASA / Blue Marble Next Generation ↗</a><p data-zh="2004 年卫星合成影像，用于轨道与区域背景。">2004 satellite composites for orbital and regional context.</p><a href="/_projects/satellite-film/sources-imagery.md" data-zh="EOX / Sentinel-2 与影像记录 ↗">EOX / Sentinel-2 & imagery record ↗</a><p data-zh="2016 年历史拼接影像；不表示当前施工或服务状态。">2016 historical mosaics; not a record of current construction or services.</p></div><div><h3 data-zh="旅行资料">The travel research</h3><a href="https://www.visitsingapore.com/neighbourhood/featured-neighbourhood/marina-bay/" data-zh="新加坡旅游局 / 滨海湾 ↗">Visit Singapore / Marina Bay ↗</a><a href="https://www.gardensbythebay.com.sg/en/things-to-do/calendar-of-events/garden-rhapsody.html" data-zh="滨海湾花园 / Garden Rhapsody ↗">Gardens by the Bay / Garden Rhapsody ↗</a><a href="https://www.sentosa.com.sg/en/getting-to-sentosa/" data-zh="圣淘沙 / 抵达方式 ↗">Sentosa / Getting here ↗</a><a href="/_projects/satellite-film/sources-travel.md" data-zh="完整旅行资料记录 ↗">The full travel source record ↗</a></div></div>
       </details>
     </div>

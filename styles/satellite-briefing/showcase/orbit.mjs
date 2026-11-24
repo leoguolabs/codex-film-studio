@@ -21,7 +21,7 @@ function startOrbit() {
   const film = document.querySelector('#film')
   const copy = stage.querySelector('.hero-copy')
   const craft = stage.querySelector('.craft')
-  const rings = stage.querySelector('.orbit-art')
+  const orbit = stage.querySelector('.orbit-art')
   const fix = stage.querySelector('.locator')
   const straits = stage.querySelector('.straits')
   const arrival = stage.querySelector('.island')
@@ -33,12 +33,12 @@ function startOrbit() {
   let width, height, radius, centreX, centreY, top, travel, previousProgress
   let flight = null, frame = 0
   const header = document.querySelector('.masthead')
-  const plates = atlas.map(({span, file}, index) => {
+  const plates = atlas.map(({span, file}) => {
     const image = new Image()
     image.alt = ''
     image.decoding = 'async'
     image.addEventListener('load', () => { previousProgress = undefined; schedule() })
-    image.src = index === 0 ? cover.currentSrc || cover.src : new URL(file, import.meta.url)
+    image.src = new URL(file, import.meta.url)
     projection.append(image)
     return { image, span }
   })
@@ -87,11 +87,17 @@ function startOrbit() {
       image.style.transform = `translate3d(${x}px,${y}px,0) scale(${side / 1024})`
       covered = blend === 1 && coverage > 1.28
     }
-    cover.style.visibility = plates[0].image.naturalWidth ? 'hidden' : 'visible'
+    // The schematic and the first photograph use the same orthographic view.
+    // Crossfade them while the mark for Singapore stays on the same ground.
+    const photoAlpha = cover.complete && !cover.naturalWidth ? 1 : smooth(.035, .245, p)
+    projection.style.opacity = photoAlpha
+    const showDiagram = photoAlpha < 1 || !covered
+    cover.style.visibility = showDiagram ? 'visible' : 'hidden'
+    if (showDiagram) cover.style.transform = earthTarget.style.transform
     const opening = 1 - smooth(.01, .22, p)
     copy.style.opacity = opening
     copy.inert = opening < .05
-    rings.style.opacity = 1 - smooth(0, .22, p)
+    orbit.style.opacity = 1 - smooth(0, .22, p)
     const pass = smooth(0, .44, p)
     craft.style.transform = `translate(-50%,-50%) translate(${width*.38*pass}px,${-height*.43*pass}px) rotate(${16*pass}deg) scale(${1+pass*.36})`
     craft.style.opacity = 1 - smooth(.20,.42,p)

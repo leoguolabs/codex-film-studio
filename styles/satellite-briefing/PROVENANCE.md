@@ -33,7 +33,12 @@ modified, republished or copied into this starter.
 
 ## Orbital atlas on the showcase page
 
-The interactive cover uses four orthographic plates centred on Singapore.
+The opening schematic projects Natural Earth land at 1:110m onto a sphere
+centred on Singapore (1.35° N, 103.82° E). The dot rows follow parallels
+and stop at the coastline. The locator and the photographic descent share
+the same projection. [Land polygons, v5.1.2](https://github.com/nvkelso/natural-earth-vector/blob/v5.1.2/geojson/ne_110m_land.geojson) · [Public-domain terms](https://www.naturalearthdata.com/about/terms-of-use/)
+
+The descent uses four orthographic photographic plates centred on Singapore.
 The outer three sample NASA Blue Marble Next Generation (2004). The island
 view uses Sentinel-2 cloudless 2016 by EOX, containing modified Copernicus
 Sentinel data 2016, under CC BY 4.0. The cover reprojects and tones the
@@ -48,6 +53,6 @@ Instrument Serif is distributed with its [OFL](showcase/OFL-instrument-serif.txt
 
 <details><summary>Spacecraft art prompt</summary>
 
-A single elegant scientific Earth-observation satellite, isolated cutout, real transparent background. A pristine aerospace museum engineering model photographed in space-grade dramatic side light. Compact faceted champagne-gold multilayer foil bus, silver struts, one camera telescope and two long deep ink-navy solar-panel wings with fine warm metallic gridlines. Three-quarter oblique view in perspective, panel axis leaning diagonally from lower left to upper right across a landscape frame. Entire instrument in frame, object fills the canvas with modest clear margin, beautifully legible graphic silhouette, rich photographic microdetail, warm sun on upper left facing edges, cool teal ambient fill, high contrast. No planet, no background, no ground shadow, no stars, no lettering, no logos or insignia, no diagrams. Designed as a floating foreground element for an editorial orbital atlas.
+Create a single isolated spacecraft illustration on genuine alpha transparency, for a refined minimalist geospatial interface. Style is an impeccably designed orthographic industrial pictogram in soft 3D, midway between Dieter Rams product design and a Swiss transport diagram. Composition: an ultra-simple civil earth observation spacecraft viewed three-quarter isometric. Exactly one compact clean silver-white cuboid instrument bus with softly chamfered edges, one circular dark blue-black optical lens set FLUSH into its downward-forward face, and two identical extended flat rectangular slate-blue solar wings connected symmetrically on short rods. Make the central bus substantial, around one third of the full span. The array axis runs diagonally from LOWER LEFT to UPPER RIGHT at 20 degrees; visible foreshortening and three well-defined flat faces. Each wing is divided into just THREE wide clean segments by two thin pale parallel seams, and is surrounded by a narrow silver rim. Flat matte materials, very restrained tonal shading, sharp silhouette readable at 110 pixels wide. A little cool light on top-left planes, no black ink outline. STRICTLY LIMITED forms, no gold or foil, no complex PV cells, no circuit traces, no antennas, no dishes, no lettering, no emblems, no visible bolts, no greebles, no branding, no floor shadow, no backdrop, no Earth. Full object fits in frame with small transparent margin on all sides. Wide landscape composition.
 
 </details>
