@@ -1,6 +1,7 @@
 const film = document.querySelector("#film");
 const drawer = document.querySelector("#drawer");
 const pull = document.querySelector("#pull");
+const handle = document.querySelector(".pull-plate");
 const clip = new Audio();
 const recordings = [...document.querySelectorAll("audio"), film, clip];
 const labels = [...document.querySelectorAll("[data-zh]")].map((node) => [
@@ -17,6 +18,7 @@ let language = params.get("lang") === "zh" ? "zh" : "en";
 function drawLabel() {
   const open = drawer.classList.contains("open");
   pull.setAttribute("aria-expanded", String(open));
+  handle.setAttribute("aria-expanded", String(open));
   drawer.querySelector(".inside").setAttribute("aria-hidden", String(!open));
   drawer
     .querySelector(".pictures img")
@@ -73,6 +75,7 @@ document.querySelector(".languages").addEventListener("click", (event) => {
   history.replaceState(null, "", url);
   translate();
 });
+handle.addEventListener("click", () => pull.click());
 pull.addEventListener("click", () => {
   drawer.classList.toggle("open");
   drawLabel();

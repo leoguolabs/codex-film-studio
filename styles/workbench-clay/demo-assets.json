@@ -1,10 +1,10 @@
 {
   "release": "workbench-clay-ring-quietly-v1",
   "archive": {
-    "name": "workbench-clay-ring-quietly-v1.tar.gz",
-    "bytes": 56421697,
-    "sha256": "24d89d957ea4a40df0abb54e50e079c9bbb8148dd9234fe18dad14776b0fc6c7",
-    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/workbench-clay-ring-quietly-v1/workbench-clay-ring-quietly-v1.tar.gz"
+    "name": "workbench-clay-night-desk-page-v1.tar.gz",
+    "bytes": 6314655,
+    "sha256": "cc360a47b31fcf460491b20132b9c0f502b6768d157c17fc8fea7fbd60c3ad46",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/workbench-clay-ring-quietly-v1/workbench-clay-night-desk-page-v1.tar.gz"
   },
   "files": [
     "media/basil.webp",
@@ -20,7 +20,6 @@
     "media/original-waltz.m4a",
     "media/poster.webp",
     "media/ring-quietly.en.vtt",
-    "media/ring-quietly.mp4",
     "media/warmer.webp"
   ]
 }

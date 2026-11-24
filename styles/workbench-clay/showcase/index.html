@@ -31,13 +31,13 @@
   </div>
   <figure class="drawer" id="drawer">
     <div class="box"><div class="pictures"><img width="1280" height="720" src="media/poster.webp" fetchpriority="high" alt="Orr raises his hand above the brass bell while Nell signals for quiet." data-zh-alt="奥尔举起手准备按下铜铃，内尔在旁边示意他轻声。"><img class="inside" id="drawer-view" width="1280" height="720" src="media/basil.webp" alt="Basil lies curled against a blue button, eyes shut." data-zh-alt="巴兹尔闭着眼睛蜷在蓝纽扣旁。" aria-hidden="true"></div>
-    <div class="box-front"><span class="bureau" data-zh="夜班 · 失物招领">NIGHT DESK · LOST PROPERTY</span><span class="pull-plate" aria-hidden="true"><i></i></span></div></div>
+    <div class="box-front"><span class="bureau" data-zh="夜班 · 失物招领">NIGHT DESK · LOST PROPERTY</span><button class="pull-plate" type="button" aria-labelledby="pull" aria-controls="drawer-view" aria-expanded="false"><i aria-hidden="true"></i></button></div></div>
     <figcaption><span class="drawer-note" data-zh="谁睡在抽屉里？">Who sleeps in the drawer?</span><button type="button" id="pull" aria-controls="drawer-view" aria-expanded="false"><span data-zh="拉开看看">Pull to peek</span><b aria-hidden="true">↗</b></button></figcaption>
   </figure>
 </section>
 <section class="cinema" id="screening"><div class="wrap">
-  <div class="section-heading"><div><p class="eyebrow" data-zh="夜班放映室">The night screening</p><h2 data-zh="柜台开门了">At the counter</h2></div><p class="caption" data-zh="英语对白 · 英文可选字幕">English dialogue · Optional English captions</p></div>
-  <video id="film" controls playsinline preload="metadata" poster="media/desk.webp" aria-label="Ring Quietly"><source src="media/ring-quietly.mp4" type="video/mp4"><track label="English" kind="captions" srclang="en" src="media/ring-quietly.en.vtt"></video>
+  <div class="section-heading"><div><p class="eyebrow" data-zh="夜班放映室">The night screening</p><h2 data-zh="柜台开门了">At the counter</h2></div><div class="screening-info"><p class="caption" data-zh="英语对白 · 英文可选字幕">English dialogue · Optional English captions</p><a class="master" data-zh="下载原版 MP4 ↓" href="https://github.com/leoguolabs/codex-film-studio/releases/download/workbench-clay-ring-quietly-v1/ring-quietly.mp4">Download the original MP4 ↓</a></div></div>
+  <video id="film" controls playsinline preload="metadata" poster="media/desk.webp" aria-label="Ring Quietly"><source src="https://github.com/leoguolabs/codex-film-studio/releases/download/workbench-clay-ring-quietly-v1/ring-quietly.mp4" type="video/mp4"><track label="English" kind="captions" srclang="en" src="media/ring-quietly.en.vtt"></video>
   <div class="chapters" aria-label="Film chapters">
     <button data-time="0"><time>00:00</time><span data-zh="来领纽扣">A lost button</span></button>
     <button data-time="22.4"><time>00:22</time><span data-zh="第一声铃">The first ring</span></button>

@@ -350,6 +350,11 @@ h3 {
 .chapters time {
   color: #e8bc81;
 }
+.screening-info .master {
+  color: #e8bc81;
+  font-size: .82rem;
+  text-underline-offset: 3px;
+}
 .caption {
   font: normal 0.87rem/1.5 var(--mono);
   margin: 0;
