@@ -14,6 +14,8 @@ entry's completion status, capabilities and template kind. Executable production
 kits include material renderers and a shared runtime; new subjects still need
 authored scenes and assets. `methods/` holds cross-style workflows only.
 
+For `workbench-clay`, read the copied STYLE.md and starter README. Use the practical wooden set, simple round-headed clay puppets, quiet poses on twos and quick contacts on ones. On a restrained revision, preserve the selected sculpt and tune the clay colour and a few proportions. Time the English dialogue, Gemini score and recorded Foley to the picture edit. The style README links to the public screening of its sole example, *Ring Quietly*. For an independent trial, use the blank kit and a neutral brief until the first encode is saved. Open the example for comparison afterward.
+
 For `impasto`, use the copied STYLE.md, the plate API in README.md, and its dedicated npm render commands. Calibrate a close-up and moving action with the actual height-field renderer. The project’s scripts/compare_frames.py supports two-way per-frame checks within matched shot roles. For a requested independent transfer, give the fresh production only the skill kit, then compare its first encoded result with the reference. On a motion or sound revision, compare both cuts at native speed, keep the accepted music source and stems, and give the film showcase a visible music-making section with the actual generator, source/film edit points, credits and separate auditions.
 
 For `midcentury-cartoon`, read `styles/midcentury-cartoon/reference/README.md`

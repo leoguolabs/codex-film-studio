@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**20 styles** · 20 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**21 styles** · 21 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -238,6 +238,17 @@ Ask your Agent to open local showcases and check their retained project files.
 <sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en#screening">Field Notes · two English nature films</a> · <a href="../styles/colored-pencil/STYLE.md">Style guide</a> · <a href="../styles/colored-pencil/prompt.txt">Prompt</a> · <a href="../styles/colored-pencil/starter">Project files</a></sub>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en"><img src="../docs/readme/frames/workbench-clay.jpg" alt="Workbench Clay — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>21 / <code>workbench-clay</code></sub>
+<h3>Workbench Clay</h3>
+<sub>工作台黏土定格</sub>
+<p>Two clay puppets share a miniature wooden counter. A touch, a sound and a held reaction carry the joke.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en#screening">Ring Quietly</a> · <a href="../styles/workbench-clay/STYLE.md">Style guide</a> · <a href="../styles/workbench-clay/prompt.txt">Prompt</a> · <a href="../styles/workbench-clay/starter">Project files</a></sub>
+</td>
+</tr>
 </table>
 
 ## Capabilities / 能力与网页
@@ -264,6 +275,7 @@ Ask your Agent to open local showcases and check their retained project files.
 | [浮世绘木版画 / Ukiyo-e Woodblock](ukiyoe/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en) · [Two English films](https://leoguolabs.github.io/codex-film-studio/styles/ukiyoe/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [厚涂油画 / Impasto Oil Painting](impasto/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=en) · [Two English harbour films](https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [彩铅科普插画 / Colored-Pencil Science Illustration](colored-pencil/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en) · [Field Notes · two English nature films](https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
+| [工作台黏土定格 / Workbench Clay](workbench-clay/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en) · [Ring Quietly](https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 
 ## What is complete / 已完成什么
 
@@ -287,6 +299,7 @@ Ask your Agent to open local showcases and check their retained project files.
 - **ukiyoe** — 含代码绘制的人物、手卷镜头和两部公开英文成片。 Code-drawn performers, a mounted scroll and two public English films.
 - **impasto** — 可直接生成刀痕和侧光，需要为每部片绘制新场景。 WebGL2 knife plates and a blank authored timeline.
 - **colored-pencil** — 包含可运行的彩铅绘制器和空白场景接口。 WebGL pencil compiler and editable scene contract.
+- **workbench-clay** — 可用 Metal 渲染原创黏土偶与道具。 Native Metal miniature stage for authored scenes.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

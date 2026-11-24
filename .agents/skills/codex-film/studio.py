@@ -37,10 +37,16 @@ def doctor(style):
         problems.append("Use WSL2 on Windows. The production and review scripts use POSIX tools.")
     if sys.version_info < (3, 11):
         problems.append("Install Python 3.11+ with venv and run this launcher with it.")
-    for name, hint in [("node", f"install Node.js {minimum}+ with npm (Node 24 is used in CI)"),
-                       ("npm", "install npm with Node.js"),
-                       ("ffmpeg", "install FFmpeg with libx264 and AAC"),
-                       ("ffprobe", "install the FFmpeg tools including ffprobe")]:
+    media = [("ffmpeg", "install FFmpeg with libx264 and AAC"),
+             ("ffprobe", "install the FFmpeg tools including ffprobe")]
+    if style == "workbench-clay":
+        if sys.platform != "darwin":
+            problems.append("The miniature renderer requires a macOS Metal device.")
+        build_tools = [("swiftc", "install the Xcode command-line tools")]
+    else:
+        build_tools = [("node", f"install Node.js {minimum}+ with npm (Node 24 is used in CI)"),
+                       ("npm", "install npm with Node.js")]
+    for name, hint in build_tools + media:
         exe = shutil.which(name)
         if not exe:
             problems.append(f"{name} missing: {hint}.")
@@ -71,7 +77,8 @@ def prepare(project):
     if project == PACKAGE or PACKAGE in project.parents or not (project / "STYLE.md").is_file():
         raise SystemExit("Select a generated production project outside the plugin.")
     whiteboard = (project / "scripts/import_audio.py").is_file()
-    doctor("whiteboard" if whiteboard else None)
+    native_clay = (project / "engine/stage.metal").is_file()
+    doctor("workbench-clay" if native_clay else "whiteboard" if whiteboard else None)
 
     def run(cmd):
         subprocess.run(cmd, cwd=project, check=True)
@@ -83,7 +90,7 @@ def prepare(project):
             run(["npm", "run", "setup-renderer"])
         if "doctor" in scripts:
             run(["npm", "run", "doctor"])
-    if whiteboard:
+    if whiteboard or native_clay:
         run([sys.executable, "-m", "venv", ".venv"])
         run([str(project / ".venv/bin/python"), "-m", "pip", "install", "-r", "requirements.txt"])
     elif not (project / "package-lock.json").is_file():

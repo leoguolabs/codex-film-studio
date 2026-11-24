@@ -369,6 +369,23 @@
       "image": "docs/readme/frames/colored-pencil.jpg",
       "image_sha256": "c24de12d1d5e0939b6ef57b57bfae127e3fee2cc69847e79af48d58773153f6f",
       "treatment": "Full frame from the revised master at frame 600, resized for the style gallery."
+    },
+    {
+      "style": "workbench-clay",
+      "source_video": "Ring Quietly / final master",
+      "source_sha256": "1d4182ee3fbd4a1f5eeee01329e069e7e82ea2fd76b4bb442c7601ae30c2a3ac",
+      "title": "Ring Quietly",
+      "title_zh": "请轻轻按铃",
+      "seconds": 17.52,
+      "frame": 438,
+      "fps": "25",
+      "native_dimensions": [
+        1280,
+        720
+      ],
+      "image": "docs/readme/frames/workbench-clay.jpg",
+      "image_sha256": "9144ef465815dc3538e3b14094b5fbdcff5958429451d24c8cf41c9d6fb2c020",
+      "treatment": "Full encoded frame at frame 438, preserved at its native size for the style gallery."
     }
   ]
 }

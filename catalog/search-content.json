@@ -158,5 +158,9 @@
       "method": "将地表与剖面一起绘制，让四层排线固定在物体表面，用石墨放大镜引导镜头进入细节。",
       "check": "推镜时复查草皮和土层共用的边缘，观察种翼离枝与落地，再分别试听音乐和现场录音。"
     }
+  },
+  "workbench-clay": {
+    "en": {"use": "Visit the night desk in Ring Quietly. Tabletop clay suits small comedies in which a familiar object gets in the way.", "method": "Stage original articulated puppets at eye level on a wooden miniature. Hold quiet poses on twos and expose the fingertip and plunger on ones at contact.", "check": "Follow the contact, shadow and settling pose. Listen for the change in decay when felt covers brass."},
+    "zh": {"use": "走进《请轻轻按铃》的夜班柜台。这个风格适合围绕一件日常小物拍一出喜剧。", "method": "将镜头降到原创黏土偶的视线高度。静态动作一拍二，手指压住道具时改为一拍一。", "check": "看清接触、阴影和最后落稳的姿势。对比铜铃盖上毛毡前后的余音。"}
   }
 }

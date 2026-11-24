@@ -49,7 +49,7 @@ class CatalogTests(unittest.TestCase):
                     self.assertEqual(entry["status"], "demo-ready")
                     self.assertTrue((ROOT / entry["demo"]).is_file())
                 if entry["capabilities"]["scene_renderer"]:
-                    self.assertTrue((ROOT / entry["template"] / "scripts/render.mjs").is_file())
+                    self.assertTrue((ROOT / entry["template"] / entry.get("render_script", "scripts/render.mjs")).is_file())
                 for page in entry.get("showcases", []):
                     self.assertTrue((ROOT / page["page"]).is_file())
                     if page["access"] == "local":

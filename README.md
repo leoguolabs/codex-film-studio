@@ -44,7 +44,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**20 styles** · 20 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**21 styles** · 21 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -251,6 +251,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>彩铅科普插画</sub>
 <p>Follow a disappearing creek and a winged pine seed through natural history drawings on textured paper.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en"><img src="docs/readme/frames/workbench-clay.jpg" alt="Workbench Clay — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>21 / <code>workbench-clay</code></sub>
+<h3>Workbench Clay</h3>
+<sub>工作台黏土定格</sub>
+<p>Two clay puppets share a miniature wooden counter. A touch, a sound and a held reaction carry the joke.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

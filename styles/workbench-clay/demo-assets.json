@@ -1,0 +1,26 @@
+{
+  "release": "workbench-clay-ring-quietly-v1",
+  "archive": {
+    "name": "workbench-clay-ring-quietly-v1.tar.gz",
+    "bytes": 56421697,
+    "sha256": "24d89d957ea4a40df0abb54e50e079c9bbb8148dd9234fe18dad14776b0fc6c7",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/workbench-clay-ring-quietly-v1/workbench-clay-ring-quietly-v1.tar.gz"
+  },
+  "files": [
+    "media/basil.webp",
+    "media/bell.webp",
+    "media/brass.m4a",
+    "media/desk.webp",
+    "media/felt.m4a",
+    "media/films.json",
+    "media/floorboard-waltz.m4a",
+    "media/flying.webp",
+    "media/foley.m4a",
+    "media/landing.m4a",
+    "media/original-waltz.m4a",
+    "media/poster.webp",
+    "media/ring-quietly.en.vtt",
+    "media/ring-quietly.mp4",
+    "media/warmer.webp"
+  ]
+}

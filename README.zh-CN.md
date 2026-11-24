@@ -44,7 +44,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**20 种风格** · 20 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**21 种风格** · 21 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -251,6 +251,16 @@ codex plugin add codex-film-studio@visiontrail
 <sub>Colored-Pencil Science Illustration</sub>
 <p>沿着溪流钻进石灰岩，再跟着松籽落回林地。两部自然短片把纸纹、彩铅与剖面画在一起。</p>
 <p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=zh"><img src="docs/readme/frames/workbench-clay.jpg" alt="工作台黏土定格 — 影片截图" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>21 / <code>workbench-clay</code></sub>
+<h3>工作台黏土定格</h3>
+<sub>Workbench Clay</sub>
+<p>两个黏土偶共用一张微缩木柜台。一声轻响、一次触碰、半拍反应，就能讲完一个笑话。</p>
+<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

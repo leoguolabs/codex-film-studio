@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f2e8d0">
+  <meta name="description" content="Ring Quietly, an English Workbench Clay short. Visit the night desk, watch the film and listen to the little sounds that nearly wake a mouse.">
+  <title>Ring Quietly · Workbench Clay · Codex Film Studio</title>
+  <link rel="icon" href="../../../catalog/brand/studio-logo.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="media/poster.webp">
+  <link rel="stylesheet" href="../../../catalog/brand.css">
+  <link rel="stylesheet" href="../../../catalog/studio-header.css">
+  <link rel="stylesheet" href="counter.css">
+  <script type="module" src="../../../catalog/agent-start.mjs"></script>
+  <script type="module" src="counter.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#screening" data-zh="跳至正片">Skip to the film</a>
+<header class="mast wrap">
+  <a class="studio-brand-lockup home" href="../../../" aria-label="Codex Film Studio"><img class="studio-brand-logo" width="42" height="42" src="../../../catalog/brand/studio-logo.svg" alt=""><span>CODEX<br>FILM STUDIO</span></a>
+  <nav aria-label="Studio"><a class="library" href="../../../#library" data-zh="全部风格">All styles</a><a href="#screening" data-zh="放映">Screening</a><a href="#sound" data-zh="声音">Sound</a><a href="#make" data-zh="拍一部">Make a film</a></nav>
+  <div class="languages" role="group" aria-label="Language"><button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button></div>
+</header>
+<main>
+<section class="counter wrap" aria-labelledby="film-name">
+  <div class="intro">
+    <p class="imprint"><i aria-hidden="true"></i><span data-zh="工作台黏土定格">Workbench Clay</span></p>
+    <h1 id="film-name"><span data-zh="请轻轻">Ring</span><em data-zh="按铃">Quietly</em></h1>
+    <p class="synopsis" data-zh="夜班柜台来了一位客人，想领回一枚蓝纽扣。照规矩，他得先按铃。可旁边的小老鼠刚刚睡着。">A customer comes to the night desk for a blue button. The clerk insists he ring the bell. A little mouse has just fallen asleep.</p>
+    <a class="watch" href="#screening"><span class="play" aria-hidden="true"></span><span data-zh="看正片">Watch the film</span><small>2:12</small></a>
+  </div>
+  <figure class="drawer" id="drawer">
+    <div class="box"><div class="pictures"><img width="1280" height="720" src="media/poster.webp" fetchpriority="high" alt="Orr raises his hand above the brass bell while Nell signals for quiet." data-zh-alt="奥尔举起手准备按下铜铃，内尔在旁边示意他轻声。"><img class="inside" id="drawer-view" width="1280" height="720" src="media/basil.webp" alt="Basil lies curled against a blue button, eyes shut." data-zh-alt="巴兹尔闭着眼睛蜷在蓝纽扣旁。" aria-hidden="true"></div>
+    <div class="box-front"><span class="bureau" data-zh="夜班 · 失物招领">NIGHT DESK · LOST PROPERTY</span><span class="pull-plate" aria-hidden="true"><i></i></span></div></div>
+    <figcaption><span class="drawer-note" data-zh="谁睡在抽屉里？">Who sleeps in the drawer?</span><button type="button" id="pull" aria-controls="drawer-view" aria-expanded="false"><span data-zh="拉开看看">Pull to peek</span><b aria-hidden="true">↗</b></button></figcaption>
+  </figure>
+</section>
+<section class="cinema" id="screening"><div class="wrap">
+  <div class="section-heading"><div><p class="eyebrow" data-zh="夜班放映室">The night screening</p><h2 data-zh="柜台开门了">At the counter</h2></div><p class="caption" data-zh="英语对白 · 英文可选字幕">English dialogue · Optional English captions</p></div>
+  <video id="film" controls playsinline preload="metadata" poster="media/desk.webp" aria-label="Ring Quietly"><source src="media/ring-quietly.mp4" type="video/mp4"><track label="English" kind="captions" srclang="en" src="media/ring-quietly.en.vtt"></video>
+  <div class="chapters" aria-label="Film chapters">
+    <button data-time="0"><time>00:00</time><span data-zh="来领纽扣">A lost button</span></button>
+    <button data-time="22.4"><time>00:22</time><span data-zh="第一声铃">The first ring</span></button>
+    <button data-time="55.88"><time>00:55</time><span data-zh="会飞的指套">The flying warmer</span></button>
+    <button data-time="97"><time>01:37</time><span data-zh="无声的信号">A silent signal</span></button>
+    <button data-time="112.4"><time>01:52</time><span data-zh="巴兹尔的枕头">Basil’s pillow</span></button>
+  </div>
+</div></section>
+<section class="notes wrap" id="sound"><p class="eyebrow" data-zh="柜台拟音">Foley at the desk</p><h2 data-zh="这一声，有多轻？">How quiet is a ring?</h2>
+<p class="lead" data-zh="同一只铜铃，盖上一顶软帽，再按一次。点一下剧照，听听每次碰触留下的声音。">Slip a soft cap over the same brass bell and try again. Tap each film still to hear what touches what.</p>
+<div class="samples">
+  <button class="sample" data-clip="brass" aria-pressed="false"><img width="1280" height="720" loading="lazy" src="media/bell.webp" alt=""><span><b data-zh="裸露的铜铃">Bare brass</b><i aria-hidden="true"></i></span><small data-zh="轻轻一按，余音响满柜台。">A light press leaves a long metallic ring.</small></button>
+  <button class="sample" data-clip="felt" aria-pressed="false"><img width="1280" height="720" loading="lazy" src="media/warmer.webp" alt=""><span><b data-zh="裹上毛毡">Under felt</b><i aria-hidden="true"></i></span><small data-zh="指套贴着铃壳，把余音闷住。">The warmer against the shell cuts the ring short.</small></button>
+  <button class="sample" data-clip="landing" aria-pressed="false"><img width="1280" height="720" loading="lazy" src="media/flying.webp" alt=""><span><b data-zh="指套落下">The cap comes down</b><i aria-hidden="true"></i></span><small data-zh="最后那下轻响，是指套落在了内尔头上。">That last soft thump is the cap landing on Nell.</small></button>
+</div>
+<div class="score"><div class="score-title"><span class="stave" aria-hidden="true"></span><p class="eyebrow" data-zh="夜班配乐">Music for the night shift</p><h3 lang="en">Floorboard<br><em>Waltz</em></h3></div>
+<div><p data-zh="为这段夜班写下的 Gemini 配乐提示词里，有一支踩着三拍子踮脚走的小乐队：刷奏小鼓、低音提琴、弱音吉他和低音区的中音长笛。剪进正片时，乐句缩短了，对白响起时乐声也随之放低。">The brief for this Gemini instrumental called for a tiptoeing jazz waltz with brushed snare, upright bass, muted guitar and a low alto flute. The film edit shortens a phrase and lowers the music beneath the voices.</p>
+<label><span data-zh="Gemini 原曲">Original Gemini recording</span><audio controls preload="none" src="media/original-waltz.m4a"></audio></label>
+<label><span data-zh="成片配乐">Score as cut for the film</span><audio controls preload="none" src="media/floorboard-waltz.m4a"></audio></label>
+<label><span data-zh="单听全片拟音">The complete Foley track</span><audio controls preload="none" src="media/foley.m4a"></audio></label></div></div>
+<details class="credits"><summary data-zh="录音署名与授权">Recording credits &amp; licenses</summary><p data-zh="柜台铃由 joedeshon 录制。布料、脚步和碰撞声由 OwlishMedia 与 Iochi Glaucus 录制。原声经过截取、分层、滤波和声像调整，按画面中每次接触的位置混音。">The recordings were excerpted, layered, filtered and placed in stereo against the visible contacts.</p><ul><li><a href="https://freesound.org/people/joedeshon/sounds/78506/">Desk bell one time 01 · joedeshon</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li><li><a href="https://opengameart.org/content/sound-effects-pack">Sound effects pack · OwlishMedia</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li><a href="https://opengameart.org/content/fabric-rustling">Fabric rustling · Iochi Glaucus</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li></ul></details>
+</section>
+<section class="workshop" id="make"><div class="wrap bench"><figure><img loading="lazy" width="1280" height="720" src="media/basil.webp" alt="Basil asleep in the matchbox with the lost blue button." data-zh-alt="巴兹尔蜷在火柴盒里，枕着丢失的蓝纽扣。"><figcaption data-zh="失物登记：蓝纽扣一枚。状态：使用中。">Lost property: one blue button. Status: occupied.</figcaption></figure>
+<div><p class="eyebrow" data-zh="木台上的手艺">From the workbench</p><h2 data-zh="给小动作留个近景">Small gestures,<br>seen up close</h2><p data-zh="镜头放到木偶眼睛的高度，让桌面上的铜铃看起来有分量。让一盏侧灯擦过黏土脸，看得见指腹留下的浅痕。平静时一个姿势留两帧，手指压住铃钮的瞬间改为逐帧变化。">Put the lens at puppet-eye height so a desk bell feels substantial. Rake a soft light across the clay to catch the thumb marks. Hold quiet poses for two frames, then move frame by frame as a fingertip presses the plunger.</p><p data-zh="睡姿也要有支点。把小鼠的腿收在身体下，头靠向纽扣，让观众在一个近景里就明白牠睡得安稳。">A sleeping pose needs support, too. Tuck the mouse’s paws under its body and rest its head against the button. One close-up should be enough to tell the audience it can sleep there.</p><a class="guide" href="../STYLE.md" data-zh="阅读完整制作指南（英文） ↗">Read the full style guide ↗</a></div></div>
+<div class="wrap start"><details><summary><span data-zh="用这个风格拍一部短片">Make a Workbench Clay short</span><b aria-hidden="true">＋</b></summary><film-agent-start style-id="workbench-clay">Open Codex Film Studio in Codex and describe your film.</film-agent-start></details></div></section>
+</main>
+<footer class="wrap"><a class="library" href="../../../#library" data-zh="← 回到全部风格">← All styles</a><span>Codex Film Studio</span><a href="https://github.com/leoguolabs/codex-film-studio">GitHub ↗</a></footer>
+</body>
+</html>

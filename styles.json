@@ -1251,6 +1251,62 @@
         ]
       },
       "public_assets": "styles/colored-pencil/demo-assets.json"
+    },
+    {
+      "id": "workbench-clay",
+      "name": "Workbench Clay",
+      "name_zh": "工作台黏土定格",
+      "description": "Two clay puppets share a miniature wooden counter. A touch, a sound and a held reaction carry the joke.",
+      "description_zh": "两个黏土偶共用一张微缩木柜台。一声轻响、一次触碰、半拍反应，就能讲完一个笑话。",
+      "status": "renderer-ready",
+      "status_note": "Native Metal miniature stage for authored scenes.",
+      "status_note_zh": "可用 Metal 渲染原创黏土偶与道具。",
+      "guide": "styles/workbench-clay/STYLE.md",
+      "readme": "styles/workbench-clay/README.md",
+      "prompt": "styles/workbench-clay/prompt.txt",
+      "template": "styles/workbench-clay/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "renderer_entry": "engine/stage.metal",
+      "render_script": "scripts/render.py",
+      "preview": "docs/readme/frames/workbench-clay.jpg",
+      "preview_zh": "docs/readme/frames/workbench-clay.jpg",
+      "preview_kind": "frame",
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "audio_mix": false,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "ring-quietly",
+          "title": "Ring Quietly",
+          "title_zh": "请轻轻按铃",
+          "page": "styles/workbench-clay/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/workbench-clay/showcase/media/films.json"
+        }
+      ],
+      "landing": {
+        "page": "styles/workbench-clay/showcase/index.html",
+        "assets": [
+          "styles/workbench-clay/showcase/counter.css",
+          "styles/workbench-clay/showcase/counter.mjs",
+          "styles/workbench-clay/showcase/grain.png",
+          "styles/workbench-clay/showcase/fonts/YoungSerif-Regular.ttf",
+          "styles/workbench-clay/showcase/fonts/YoungSerif-OFL.txt",
+          "styles/workbench-clay/STYLE.md"
+        ]
+      },
+      "public_assets": "styles/workbench-clay/demo-assets.json"
     }
   ],
   "capability_schema_version": 2

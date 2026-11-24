@@ -10,6 +10,7 @@ import tarfile
 import subprocess
 import shutil
 import struct
+import sys
 from new_film import ROOT, create
 
 spec = importlib.util.spec_from_file_location('runtime_build', ROOT/'runtime/build.py')
@@ -123,6 +124,13 @@ class ReproductionTests(unittest.TestCase):
                 if entry['template_kind']!='blank' or not entry['capabilities']['scene_renderer']:continue
                 with self.subTest(style=entry['id']):
                     p=create('kit',entry['id'],output=Path(tmp)/entry['id'])
+                    if entry.get('render_script', '').endswith('.py'):
+                        self.assertTrue((p / entry['render_script']).is_file())
+                        self.assertTrue((p / entry['renderer_entry']).is_file())
+                        self.assertIn('numpy==', (p / 'requirements.txt').read_text())
+                        subprocess.run([sys.executable, '-c', 'import film; assert film.DURATION == 0 and callable(film.frame)'],
+                                       cwd=p, check=True)
+                        continue
                     package=json.loads((p/'package.json').read_text())
                     lock=json.loads((p/'package-lock.json').read_text())
                     self.assertEqual(package['dependencies'],lock['packages']['']['dependencies'])

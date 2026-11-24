@@ -28,6 +28,7 @@ const categories = {
   'vivid-science':['animation','drawn'],
   impasto:['material','drawn','animation'],
   'hologram-hud':['animation'],
+  'workbench-clay':['material','animation'],
   'colored-pencil':['drawn','material','animation'],
   'ukiyoe':['drawn','material','animation'],
 };
