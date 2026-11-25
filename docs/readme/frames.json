@@ -386,6 +386,23 @@
       "image": "docs/readme/frames/workbench-clay.jpg",
       "image_sha256": "9144ef465815dc3538e3b14094b5fbdcff5958429451d24c8cf41c9d6fb2c020",
       "treatment": "Full encoded frame at frame 438, preserved at its native size for the style gallery."
+    },
+    {
+      "style": "marker-paper",
+      "source_video": "Which Pizza Wins? / Gemini mix, final master",
+      "source_sha256": "098257b8434de92817f72beeb3a4e1a1fdf3fc03623d021f8fddd9dff9d2382d",
+      "title": "Which Pizza Wins?",
+      "title_zh": "哪份披萨更多？",
+      "seconds": 8.333333333333334,
+      "frame": 200,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/marker-paper.jpg",
+      "image_sha256": "0940381908acb4817b1d88998220599fff800bf723765480c9b2cd46b6e8c157",
+      "treatment": "The complete encoded frame, resized for the gallery."
     }
   ]
 }

@@ -162,5 +162,17 @@
   "workbench-clay": {
     "en": {"use": "Visit the night desk in Ring Quietly. Tabletop clay suits small comedies in which a familiar object gets in the way.", "method": "Stage original articulated puppets at eye level on a wooden miniature. Hold quiet poses on twos and expose the fingertip and plunger on ones at contact.", "check": "Follow the contact, shadow and settling pose. Listen for the change in decay when felt covers brass."},
     "zh": {"use": "走进《请轻轻按铃》的夜班柜台。这个风格适合围绕一件日常小物拍一出喜剧。", "method": "将镜头降到原创黏土偶的视线高度。静态动作一拍二，手指压住道具时改为一拍一。", "check": "看清接触、阴影和最后落稳的姿势。对比铜铃盖上毛毡前后的余音。"}
+  },
+  "marker-paper": {
+    "en": {
+      "use": "Watch two English shorts about sharing pizza and unwinding tape. Try the roll on the screening page.",
+      "method": "Draw familiar objects on numbered sheets. Blue measures the radius. Red follows the unknown through the equation and back into the drawing.",
+      "check": "Turn the sheet at the change of question. Hear the original Gemini music, the edited score and the felt tip against the paper."
+    },
+    "zh": {
+      "use": "看两支关于披萨和胶带的英文短片，亲手把屏幕上的胶带从满卷拉到纸芯。",
+      "method": "在带页码的白纸上画日常小物。蓝笔量半径，红笔从待求量跟到公式，再回到图上的答案。",
+      "check": "看镜头如何钻入一笔，再从纸角翻页。可以单听 Gemini 原曲、片中配乐和笔尖擦过纸张的声音。"
+    }
   }
 }

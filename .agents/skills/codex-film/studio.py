@@ -90,7 +90,7 @@ def prepare(project):
             run(["npm", "run", "setup-renderer"])
         if "doctor" in scripts:
             run(["npm", "run", "doctor"])
-    if whiteboard or native_clay:
+    if whiteboard or native_clay or (project / "scripts/paper_sound.py").is_file():
         run([sys.executable, "-m", "venv", ".venv"])
         run([str(project / ".venv/bin/python"), "-m", "pip", "install", "-r", "requirements.txt"])
     elif not (project / "package-lock.json").is_file():

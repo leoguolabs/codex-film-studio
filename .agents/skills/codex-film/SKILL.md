@@ -28,6 +28,8 @@ For `ukiyoe`, use the copied plate renderer, its STYLE.md and project README. Au
 
 For `colored-pencil`, use the bundled perspective world and graphite lens in the copied kit. Follow its README for geometry, surface anchors, pressure and the serialized final mux. For skill-only transfer, keep the new production context free of reference material until its first encoded film is saved. Give the film showcase a visible music section with the actual generator, track title, generation brief, timeline edit and separate score and effects players. Retain the accepted source audio and credit the field recordings.
 
+For `marker-paper`, draw a worked question across numbered sheets. Register the same ink stroke on both sides of a camera push. Group nearby glyphs into a soft felt-tip rub. Retain the requested Gemini performance, its cue edit and the separate page-turn stem. The style README links to the two-film screening. For a skill-only trial, seal the first encode before opening it.
+
 ## Start from the user's brief
 
 A natural-language request is sufficient to start. The Agent

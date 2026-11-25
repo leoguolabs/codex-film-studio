@@ -1,0 +1,1 @@
+The acoustic instrument recordings are from Versilian Studios’ VS Chamber Orchestra Community Edition and Versilian Community Sample Library under CC0 1.0. The pinned original paths and hashes are in samples.json.

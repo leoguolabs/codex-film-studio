@@ -1,0 +1,20 @@
+{
+  "release": "marker-paper-paper-math-v1",
+  "archive": {
+    "name": "marker-paper-page-v1.tar.gz",
+    "bytes": 902999,
+    "sha256": "3015a948ebff21a9527db93d34f475f1f6395aca9dd54cfb485130fae92315f8",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/marker-paper-paper-math-v1/marker-paper-page-v1.tar.gz"
+  },
+  "files": [
+    "media/films.json",
+    "media/pizza-mix.mp3",
+    "media/pizza-paper.m4a",
+    "media/pizza.vtt",
+    "media/pizza.webp",
+    "media/tape-mix.mp3",
+    "media/tape-paper.m4a",
+    "media/tape.vtt",
+    "media/tape.webp"
+  ]
+}

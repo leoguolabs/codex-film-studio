@@ -30,6 +30,7 @@ const categories = {
   'hologram-hud':['animation'],
   'workbench-clay':['material','animation'],
   'colored-pencil':['drawn','material','animation'],
+  'marker-paper':['drawn','material','animation'],
   'ukiyoe':['drawn','material','animation'],
 };
 const state = { catalog:null, frames:{}, availability:{mode:'public', pages:{}}, language:'en', filter:'all', query:'', detail:null };

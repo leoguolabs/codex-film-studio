@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Paper Math · Marker on Paper · Codex Film Studio</title>
+    <meta
+      name="description"
+      content="Two everyday puzzles worked out in felt-tip ink. Watch the pizza and tape films, try a paper experiment, and hear their original scores."
+    />
+    <meta name="theme-color" content="#f6f3e9" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Paper Math · Marker on Paper" />
+    <meta
+      property="og:description"
+      content="Two English shorts, three markers, and a sheet of paper."
+    />
+    <meta
+      property="og:image"
+      content="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/table.webp"
+    />
+    <link rel="icon" href="../../../catalog/mark.svg" />
+    <link rel="stylesheet" href="paper.css" />
+    <script>
+      document.documentElement.lang =
+        new URLSearchParams(location.search).get("lang") === "zh"
+          ? "zh-CN"
+          : "en";
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#screening" data-zh="跳至放映">Skip to the films</a>
+    <header class="mast">
+      <a class="wordmark" href="../../../?lang=en#library" data-home
+        ><span class="press-mark" aria-hidden="true"><i></i><i></i><i></i></span
+        >Codex Film Studio</a
+      >
+      <nav aria-label="Sections" data-label-zh="页面导航">
+        <a href="#screening" data-zh="放映">Screening</a
+        ><a href="#experiment" data-zh="动手试试">Paper experiment</a
+        ><a href="#sound" data-zh="听声音">Sound</a>
+      </nav>
+      <div class="mast-end">
+        <a class="library" href="../../../?lang=en#library" data-home
+          ><span aria-hidden="true">↖</span>
+          <span data-zh="全部风格">All styles</span></a
+        ><button
+          type="button"
+          id="language"
+          lang="zh-CN"
+          aria-label="切换为中文"
+        >
+          中文
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="cover" aria-labelledby="cover-title">
+        <div class="cover-copy">
+          <p class="handline">
+            <span class="color-marks" aria-hidden="true"
+              ><i></i><i></i><i></i></span
+            ><span data-zh="马克笔白纸速写">Marker on Paper</span>
+          </p>
+          <h1 id="cover-title">
+            <span data-zh="纸上">Paper</span><em data-zh="有数">Math.</em>
+          </h1>
+          <p
+            class="deck"
+            data-zh="两个小披萨，还是一个大披萨？胶带薄了一半，还剩多长？翻开两张白纸，把答案画出来。"
+          >
+            Two small pizzas or one large? How much tape is left on a half-used
+            roll? Two everyday puzzles, worked out by hand.
+          </p>
+          <a href="#screening" class="ink-button"
+            ><span aria-hidden="true">▶</span
+            ><span data-zh="看两部短片">Watch the films</span></a
+          >
+        </div>
+        <figure class="cover-art">
+          <div class="print">
+            <img
+              src="table.webp"
+              width="1536"
+              height="1024"
+              fetchpriority="high"
+              alt="A pizza drawn in felt-tip ink, with a red-edged slice cut out of the sheet"
+              data-alt-zh="蓝色桌面上的马克笔披萨画，红边纸片从饼里切出一角"
+            /><a
+              class="turn-corner"
+              href="#screening"
+              aria-label="Turn the sheet to the films"
+              data-label-zh="翻页看片"
+            ></a>
+          </div>
+          <figcaption>
+            <span class="spec-line"></span
+            ><span data-zh="《哪份披萨更多？》封面习作"
+              >Cover study for Which Pizza Wins?</span
+            >
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        id="screening"
+        class="screening section"
+        aria-labelledby="screen-title"
+      >
+        <div class="section-line">
+          <span class="folio" aria-hidden="true">1</span>
+          <h2 id="screen-title" data-zh="纸上放映">On the sheet</h2>
+          <span class="rule"></span>
+        </div>
+        <div
+          class="film-choices"
+          role="group"
+          aria-label="Choose a film"
+          data-label-zh="选择影片"
+        >
+          <button type="button" data-film="pizza" aria-pressed="true">
+            <span class="choice-icon pizza-icon" aria-hidden="true">◔</span
+            ><span data-zh="哪份披萨更多？">Which Pizza Wins?</span
+            ><small>0:56</small>
+          </button>
+          <button type="button" data-film="tape" aria-pressed="false">
+            <span class="choice-icon" aria-hidden="true">◎</span
+            ><span data-zh="胶带还剩一半吗？">Half a Roll Left?</span
+            ><small>1:29.5</small>
+          </button>
+        </div>
+        <div class="screen-layout">
+          <div class="projector">
+            <video
+              id="film"
+              preload="metadata"
+              controls
+              playsinline
+              poster="media/pizza.webp"
+              src="https://github.com/leoguolabs/codex-film-studio/releases/download/marker-paper-paper-math-v1/pizza-720p.mp4"
+              aria-label="Which Pizza Wins?"
+            >
+              <track
+                kind="captions"
+                srclang="en"
+                label="English"
+                src="media/pizza.vtt"
+              />
+            </video>
+          </div>
+          <div class="program">
+            <p class="handline small" data-zh="本场短片">Now showing</p>
+            <h3 id="film-title">Which Pizza Wins?</h3>
+            <p id="synopsis">
+              The shop offers two eight-inch pizzas or one twelve-inch pizza.
+              Draw the radii before placing your order.
+            </p>
+            <ol
+              id="chapters"
+              aria-label="Film chapters"
+              data-label-zh="影片章节"
+            ></ol>
+            <a
+              id="original-film"
+              class="text-link"
+              href="https://github.com/leoguolabs/codex-film-studio/releases/download/marker-paper-paper-math-v1/pizza-1080p.mp4"
+              data-zh="下载 1080p 原片 ↗"
+              >Download the 1080p film ↗</a
+            >
+          </div>
+        </div>
+        <details class="transcript">
+          <summary data-zh="英文旁白与字幕">
+            English narration &amp; captions
+          </summary>
+          <div>
+            <a
+              id="caption-file"
+              href="media/pizza.vtt"
+              download
+              data-zh="下载英文字幕"
+              >Download English captions</a
+            >
+            <p id="transcript"></p>
+          </div>
+        </details>
+        <p class="error" id="film-status" role="status" hidden></p>
+      </section>
+
+      <section
+        class="experiment section"
+        id="experiment"
+        aria-labelledby="try-title"
+      >
+        <div class="section-line">
+          <span class="folio" aria-hidden="true">2</span>
+          <h2 id="try-title" data-zh="把胶带拉开">Unwind the roll</h2>
+          <span class="rule"></span>
+        </div>
+        <div class="workbench">
+          <div class="experiment-notes">
+            <h3 data-zh="薄了一半，长度呢？">Half as thick. Half as long?</h3>
+            <p
+              data-zh="最外面的一圈最长。拖动蓝色滑块，看看胶带从满卷退向纸芯时，红色的长度条怎么变。"
+            >
+              The outer turn is the longest. Slide from a full roll toward its
+              cardboard core and watch the red strip measure the length left.
+            </p>
+            <label for="radius" class="slider-label"
+              ><span data-zh="当前半径">Outside radius</span
+              ><output id="radius-value" for="radius">3 cm</output></label
+            >
+            <input
+              id="radius"
+              type="range"
+              min="10"
+              max="50"
+              step="1"
+              value="30"
+              aria-describedby="roll-result"
+            />
+            <div class="limits">
+              <span data-zh="纸芯 · 1 cm">Core · 1 cm</span
+              ><span data-zh="满卷 · 5 cm">Full · 5 cm</span>
+            </div>
+            <p id="roll-result" class="answer">
+              <strong>⅓</strong>
+              <span data-zh="的胶带还卷在纸芯上">of the tape is left</span>
+            </p>
+          </div>
+          <figure class="roll-sheet">
+            <canvas
+              id="roll"
+              width="920"
+              height="526"
+              role="img"
+              aria-label="Top view of the tape and a strip showing how much length remains"
+            ></canvas>
+            <figcaption data-zh="厚度相同，截面面积之比就是长度之比。">
+              At a constant thickness, the ratio of areas gives the ratio of
+              lengths.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="sound" class="sound section" aria-labelledby="sound-title">
+        <div class="sound-inner">
+          <div class="section-line">
+            <span class="folio" aria-hidden="true">3</span>
+            <h2 id="sound-title" data-zh="纸张的声音">The sound of paper</h2>
+            <span class="rule"></span>
+          </div>
+          <div class="sound-grid">
+            <div class="sound-intro">
+              <p class="handline small" data-zh="两支短片的配乐">
+                Two original scores
+              </p>
+              <h3 id="song-title">At the Corner Table</h3>
+              <p id="sound-note"></p>
+              <label for="sound-film" data-zh="选择影片">Choose a film</label
+              ><select id="sound-film">
+                <option value="pizza" data-zh="哪份披萨更多？">
+                  Which Pizza Wins?
+                </option>
+                <option value="tape" data-zh="胶带还剩一半吗？">
+                  Half a Roll Left?
+                </option>
+              </select>
+            </div>
+            <div class="sound-deck">
+              <div
+                class="listen-tabs"
+                role="group"
+                aria-label="Listening tracks"
+                data-label-zh="选择试听音轨"
+              >
+                <button
+                  type="button"
+                  data-take="original"
+                  aria-pressed="true"
+                  data-zh="Gemini 原曲"
+                >
+                  Gemini original</button
+                ><button
+                  type="button"
+                  data-take="score"
+                  aria-pressed="false"
+                  data-zh="片中配乐"
+                >
+                  Film score</button
+                ><button
+                  type="button"
+                  data-take="paper"
+                  aria-pressed="false"
+                  data-zh="笔和翻页"
+                >
+                  Pen &amp; page</button
+                ><button
+                  type="button"
+                  data-take="mix"
+                  aria-pressed="false"
+                  data-zh="成片混音"
+                >
+                  Final mix
+                </button>
+              </div>
+              <p class="track-line" id="track-line"></p>
+              <audio
+                id="audio"
+                preload="none"
+                controls
+                src="https://github.com/leoguolabs/codex-film-studio/releases/download/marker-paper-paper-math-v1/pizza-original.m4a"
+                aria-label="At the Corner Table"
+              ></audio>
+              <details class="sound-detail">
+                <summary data-zh="配乐如何跟着翻页走">
+                  How the score follows the fold
+                </summary>
+                <p id="music-cut"></p>
+                <p id="music-brief" lang="en"></p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="make" class="make section" aria-labelledby="make-title">
+        <div class="make-head">
+          <p class="handline small" data-zh="再翻一张白纸">One more sheet</p>
+          <h2 id="make-title" data-zh="下一个问题，你来画。">
+            Draw your own question.
+          </h2>
+        </div>
+        <div class="make-body">
+          <p
+            data-zh="黑笔画物体，蓝笔标已知长度，红笔留给答案。从一个能拿在手里的东西开始。"
+          >
+            Outline the object in black. Mark the given lengths in blue. Save
+            red for the answer. Start with something you can hold in your hand.
+          </p>
+          <blockquote
+            id="prompt"
+            data-zh="用马克笔白纸速写拍一支英文短片。把同一个三明治沿对角或横向切开，证明两种切法怎样分出等量的面包。"
+          >
+            Make an English Marker on Paper short. Cut the same sandwich
+            diagonally and straight across. Draw why both cuts give equal
+            halves.
+          </blockquote>
+          <div class="make-links">
+            <button type="button" id="copy" data-zh="复制这个题目">
+              Copy the brief</button
+            ><a
+              href="https://github.com/leoguolabs/codex-film-studio/tree/main/styles/marker-paper"
+              data-zh="风格与制作包 ↗"
+              >Style &amp; drawing kit ↗</a
+            ><span class="copy-status" id="copy-status" role="status"></span>
+          </div>
+          <details class="studio-note"><summary data-zh="在 Codex 中开始制作">Start a film in Codex</summary><film-agent-start style-id="marker-paper"></film-agent-start></details>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a href="../../../?lang=en#library" data-home data-zh="↖ 回到全部风格"
+        >↖ Back to all styles</a
+      >
+      <details>
+        <summary data-zh="制作署名">Colophon</summary>
+        <p
+          data-zh="影片与展映由 Codex Film Studio 制作。笔迹与纸张材质改编自 LemoLab 的 MIT 实现。Kalam 与霞鹜文楷用于页面手写字。封面静物由 ImageGen 创作，放映海报取自成片。英文声线为 Kokoro，配乐由 Google Gemini 创作。"
+        >
+          Films and exhibition by Codex Film Studio. The ink and paper adapt
+          LemoLab’s MIT-licensed material. Hand lettering uses Kalam and LXGW
+          WenKai. The cover still life was made with ImageGen. The screening
+          posters are frames from the films. English voice by Kokoro. Original
+          music by Google Gemini.
+        </p>
+        <a
+          href="https://github.com/lemomo-ai/lemo-opuscar/tree/main/styles/marker-paper"
+          >LemoLab ↗</a
+        >
+      </details>
+    </footer>
+    <script type="module" src="../../../catalog/agent-start.mjs"></script>
+    <script type="module" src="paper.mjs"></script>
+  </body>
+</html>

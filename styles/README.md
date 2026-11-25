@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**21 styles** · 21 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**22 styles** · 22 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -249,6 +249,17 @@ Ask your Agent to open local showcases and check their retained project files.
 <sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en#screening">Ring Quietly</a> · <a href="../styles/workbench-clay/STYLE.md">Style guide</a> · <a href="../styles/workbench-clay/prompt.txt">Prompt</a> · <a href="../styles/workbench-clay/starter">Project files</a></sub>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en"><img src="../docs/readme/frames/marker-paper.jpg" alt="Marker on Paper — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>22 / <code>marker-paper</code></sub>
+<h3>Marker on Paper</h3>
+<sub>马克笔白纸速写</sub>
+<p>Two pizzas and a roll of tape turn into questions about area. The black marker draws the object, blue gives the measurements, and red circles the answer.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en#screening">Paper Math · two English films</a> · <a href="../styles/marker-paper/STYLE.md">Style guide</a> · <a href="../styles/marker-paper/prompt.txt">Prompt</a> · <a href="../styles/marker-paper/starter">Project files</a></sub>
+</td>
+</tr>
 </table>
 
 ## Capabilities / 能力与网页
@@ -276,6 +287,7 @@ Ask your Agent to open local showcases and check their retained project files.
 | [厚涂油画 / Impasto Oil Painting](impasto/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=en) · [Two English harbour films](https://leoguolabs.github.io/codex-film-studio/styles/impasto/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [彩铅科普插画 / Colored-Pencil Science Illustration](colored-pencil/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en) · [Field Notes · two English nature films](https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [工作台黏土定格 / Workbench Clay](workbench-clay/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en) · [Ring Quietly](https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
+| [马克笔白纸速写 / Marker on Paper](marker-paper/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en) · [Paper Math · two English films](https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en#screening) | `local-source-bundle` | `full` |
 
 ## What is complete / 已完成什么
 
@@ -300,6 +312,7 @@ Ask your Agent to open local showcases and check their retained project files.
 - **impasto** — 可直接生成刀痕和侧光，需要为每部片绘制新场景。 WebGL2 knife plates and a blank authored timeline.
 - **colored-pencil** — 包含可运行的彩铅绘制器和空白场景接口。 WebGL pencil compiler and editable scene contract.
 - **workbench-clay** — 可用 Metal 渲染原创黏土偶与道具。 Native Metal miniature stage for authored scenes.
+- **marker-paper** — 包含纸张、圆头马克笔、配音对时与立体声混音，已有两部英文短片可看。 Matte paper, a rounded felt tip, timed voice and stereo sound. Two original English films are available to watch.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

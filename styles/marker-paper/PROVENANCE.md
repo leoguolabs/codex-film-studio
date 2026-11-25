@@ -1,0 +1,3 @@
+The marker geometry, ink density, procedural paper, glyph centre lines and diagonal fold adapt the MIT-licensed material system by Lemomo (LemoLab). See starter/engine/LICENSE-MIT.txt. The standalone Node renderer, editable score and English production workflow adapt those materials for new drawings. Kalam uses the SIL Open Font License. The instrument recordings are CC0 from Versilian Studios. Sample paths and checksums accompany the kit.
+
+[Pinned upstream implementation and film credits](https://github.com/lemomo-ai/lemo-opuscar/tree/8ca0dd805e214bcc1d30714cd5b9d21cc02a454b/styles/marker-paper/demo)

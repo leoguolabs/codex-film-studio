@@ -1308,6 +1308,69 @@
         ]
       },
       "public_assets": "styles/workbench-clay/demo-assets.json"
+    },
+    {
+      "id": "marker-paper",
+      "name": "Marker on Paper",
+      "name_zh": "马克笔白纸速写",
+      "description": "Two pizzas and a roll of tape turn into questions about area. The black marker draws the object, blue gives the measurements, and red circles the answer.",
+      "description_zh": "两张披萨、一卷胶带，都是关于面积的问题。黑笔勾轮廓，蓝笔量尺寸，红笔圈答案。",
+      "status": "renderer-ready",
+      "status_note": "Matte paper, a rounded felt tip, timed voice and stereo sound. Two original English films are available to watch.",
+      "status_note_zh": "包含纸张、圆头马克笔、配音对时与立体声混音，已有两部英文短片可看。",
+      "guide": "styles/marker-paper/STYLE.md",
+      "readme": "styles/marker-paper/README.md",
+      "prompt": "styles/marker-paper/prompt.txt",
+      "template": "styles/marker-paper/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "renderer_entry": "engine/sheet.mjs",
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "full",
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "bundled_fonts": true
+      },
+      "showcases": [
+        {
+          "id": "marker-paper-paper-math",
+          "title": "Paper Math · two English films",
+          "title_zh": "纸上有数 · 两部英文短片",
+          "page": "styles/marker-paper/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/marker-paper/showcase/media/films.json"
+        }
+      ],
+      "preview": "docs/readme/frames/marker-paper.jpg",
+      "preview_zh": "docs/readme/frames/marker-paper.jpg",
+      "preview_kind": "frame",
+      "public_assets": "styles/marker-paper/demo-assets.json",
+      "landing": {
+        "page": "styles/marker-paper/showcase/index.html",
+        "assets": [
+          "styles/marker-paper/showcase/paper.css",
+          "styles/marker-paper/showcase/paper.mjs",
+          "styles/marker-paper/showcase/table.webp",
+          "styles/marker-paper/showcase/grain.png",
+          "styles/marker-paper/showcase/paper-hand.woff2",
+          "styles/marker-paper/showcase/WenKai-OFL.txt",
+          "styles/marker-paper/showcase/paper-serif.woff2",
+          "styles/marker-paper/showcase/InstrumentSerif-OFL.txt",
+          "styles/marker-paper/showcase/paper-sans.woff2",
+          "styles/marker-paper/showcase/InstrumentSans-OFL.txt",
+          "styles/marker-paper/showcase/kalam-bold.woff2",
+          "styles/marker-paper/showcase/kalam-regular.woff2",
+          "styles/marker-paper/starter/fonts/OFL.txt"
+        ]
+      }
     }
   ],
   "capability_schema_version": 2

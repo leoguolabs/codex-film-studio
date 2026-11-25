@@ -1,0 +1,19 @@
+{
+  "title": "",
+  "provider": "Google Gemini",
+  "tool": "Create music",
+  "source": "audio/gemini/performance.flac",
+  "source_sha256": "",
+  "music_under_voice_db": -20,
+  "marker_under_voice_db": -32,
+  "speech_duck_db": 3.5,
+  "cues": [
+    {
+      "film_in": 0,
+      "film_out": 0,
+      "source_in": 0,
+      "fade_in": 1,
+      "fade_out": 1
+    }
+  ]
+}

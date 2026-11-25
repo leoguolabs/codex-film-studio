@@ -1,0 +1,90 @@
+[
+  {
+    "instrument": "bass",
+    "file": "BKCtbss_Pizz_C1_v1_rr1.flac",
+    "root": 36,
+    "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Contrabass/Pizz/BKCtbss_Pizz_C1_v1_rr1.wav",
+    "sha256": "13a75b41fa293ebdceb36881db52c16acfec62af77f99a88db57b2ef12139a60",
+    "source_sha256": "5591160a867b21ba193d601390c9e1f35ec8d5deb0de686a410d25a98a103b06"
+  },
+  {
+    "instrument": "bass",
+    "file": "BKCtbss_Pizz_G0_v1_rr1.flac",
+    "root": 31,
+    "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Contrabass/Pizz/BKCtbss_Pizz_G0_v1_rr1.wav",
+    "sha256": "f866db59c5d2e6f4dc3e9b02225463b736ade161bb37deac316f61cf73e68e1b",
+    "source_sha256": "6c8ed06c816b2aee6443a3df4d8c24dd05d1e6fa72595d47b0e3755cd251e60f"
+  },
+  {
+    "instrument": "clarinet",
+    "file": "DCClar_stac_D4_v1_rr1_sum.flac",
+    "root": 74,
+    "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Woodwinds/Clarinet/stac/DCClar_stac_D4_v1_rr1_sum.wav",
+    "sha256": "8be027db87e0eb6c7bfa83b8dd25daebbfb82de436734a69bb6e2b695337e462",
+    "source_sha256": "eb4305356c58c5c14e3bcbe24aa888ee361024412016ac02acdda15668387c40"
+  },
+  {
+    "instrument": "bassoon",
+    "file": "PSBassoon_G2_v1_rr1.flac",
+    "root": 55,
+    "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Woodwinds/Bassoon/stac/PSBassoon_G2_v1_rr1.wav",
+    "sha256": "511cc19de00efb57a4a99e49abc565a57d21a2b74da2aca5b2b015844d236c11",
+    "source_sha256": "0d339309b43f78279c1aedb729c596b33c5a6324b45441acb76f893983b64ae2"
+  },
+  {
+    "instrument": "harp",
+    "file": "KSHarp_D4_mf1.flac",
+    "root": 62,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Composite%20Chordophones/Concert%20Harp/KSHarp_D4_mf1.wav",
+    "sha256": "5f5c2fd93c5d1af111aa25c462a832654a44cde6f303e2701311181f7caa4fb7",
+    "source_sha256": "ebfde8aab4411019e37e3426f4dd88d6a52a38c2d0261d7f10ec63d8ff584dc7"
+  },
+  {
+    "instrument": "harp",
+    "file": "KSHarp_A4_mf1.flac",
+    "root": 69,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Composite%20Chordophones/Concert%20Harp/KSHarp_A4_mf1.wav",
+    "sha256": "47d4acd074d4481f073af08d003378c66c0b359a788f4ec6320d162cae91f62c",
+    "source_sha256": "3665f3975cad4a33f46784aa4f896f4b4319ba2b7831e892d975bc38c9f09f23"
+  },
+  {
+    "instrument": "bell",
+    "file": "glock_soft_G5_01.flac",
+    "root": 91,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Glockenspiel/glock_soft_G5_01.wav",
+    "sha256": "29e86c2011c3ab49b7ea2c105b4c66b820f164b55f43d99f21f278ac8fc3fc91",
+    "source_sha256": "73f6a6de89291d0292b303d641444de5e6e1561881f09f6cf20d77f245f7bec3"
+  },
+  {
+    "instrument": "shaker",
+    "file": "Mid_ShakerDouble_Down_rr1.flac",
+    "root": 0,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Shaker%2C%20Small/Mid_ShakerDouble_Down_rr1.wav",
+    "sha256": "c4c41dc335422de9ef84e1231a3cf88f21e0092c5c09ba6d13acca959f419319",
+    "source_sha256": "0df7c271e1dba4de7304f7df81886390dd9ae698bfdd6df570026af4f2223574"
+  },
+  {
+    "instrument": "shaker",
+    "file": "Mid_ShakerDouble_Up_rr1.flac",
+    "root": 0,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Shaker%2C%20Small/Mid_ShakerDouble_Up_rr1.wav",
+    "sha256": "7908e5b9d12fc7de6b31aa60d6c2892148b4fc2e6b8011d08400acd6e810dc10",
+    "source_sha256": "69a10776db0b838bc6555be2dbdb41e1521bb28bba2e89963d1bf779bfb5b61f"
+  },
+  {
+    "instrument": "claves",
+    "file": "Claves1_Hit_v1_rr1_Sum.flac",
+    "root": 0,
+    "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Percussion/Claves1_Hit_v1_rr1_Sum.wav",
+    "sha256": "cd01773e4bb448fa598635119f20bf38449de76497553a973bfeca70d9048134",
+    "source_sha256": "569812aca160bf35d71ac16e678f5528b2093ece086300cd97a0064e17d23f20"
+  },
+  {
+    "instrument": "block",
+    "file": "wood_click_pp_rr1.flac",
+    "root": 0,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Woodblock/wood_click_pp_rr1.wav",
+    "sha256": "fc96940e57c1aefccdd380640b7d5a63bbbf08e7285ef63286efad7e697a1ecc",
+    "source_sha256": "2c21a5de6f3ddd51ce851325ba6caa4a187422c51299da7b2fdc4f51ae5e9ee1"
+  }
+]
