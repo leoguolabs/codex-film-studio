@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**22 styles** · 22 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**23 styles** · 23 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -260,6 +260,17 @@ Ask your Agent to open local showcases and check their retained project files.
 <sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en#screening">Paper Math · two English films</a> · <a href="../styles/marker-paper/STYLE.md">Style guide</a> · <a href="../styles/marker-paper/prompt.txt">Prompt</a> · <a href="../styles/marker-paper/starter">Project files</a></sub>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/ipad-sketch.jpg" alt="Tablet Sketch Explainer — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>23 / <code>ipad-sketch</code></sub>
+<h3>Tablet Sketch Explainer</h3>
+<sub>平板速写讲解</sub>
+<p>A stylus draws in grainy graphite before off-register colour arrives. A moving canvas reveals one complete illustrated page.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening">Watch the double feature</a> · <a href="../styles/ipad-sketch/STYLE.md">Style guide</a> · <a href="../styles/ipad-sketch/prompt.txt">Prompt</a> · <a href="../styles/ipad-sketch/starter">Project files</a></sub>
+</td>
+</tr>
 </table>
 
 ## Capabilities / 能力与网页
@@ -288,6 +299,7 @@ Ask your Agent to open local showcases and check their retained project files.
 | [彩铅科普插画 / Colored-Pencil Science Illustration](colored-pencil/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en) · [Field Notes · two English nature films](https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [工作台黏土定格 / Workbench Clay](workbench-clay/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en) · [Ring Quietly](https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [马克笔白纸速写 / Marker on Paper](marker-paper/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en) · [Paper Math · two English films](https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en#screening) | `local-source-bundle` | `full` |
+| [平板速写讲解 / Tablet Sketch Explainer](ipad-sketch/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en) · [Watch the double feature](https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 
 ## What is complete / 已完成什么
 
@@ -313,6 +325,7 @@ Ask your Agent to open local showcases and check their retained project files.
 - **colored-pencil** — 包含可运行的彩铅绘制器和空白场景接口。 WebGL pencil compiler and editable scene contract.
 - **workbench-clay** — 可用 Metal 渲染原创黏土偶与道具。 Native Metal miniature stage for authored scenes.
 - **marker-paper** — 包含纸张、圆头马克笔、配音对时与立体声混音，已有两部英文短片可看。 Matte paper, a rounded felt tip, timed voice and stereo sound. Two original English films are available to watch.
+- **ipad-sketch** — 包含离线铅笔绘制、手势镜头、英文配音时间轴和逐笔拟音。 Offline pencil renderer, gesture camera, English voice timing and mark-driven sound.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

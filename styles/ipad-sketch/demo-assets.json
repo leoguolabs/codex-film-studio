@@ -1,0 +1,58 @@
+{
+  "release": "ipad-sketch-film-pair-v1",
+  "archive": {
+    "name": "ipad-sketch-page-v1.tar.gz",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/ipad-sketch-page-v1.tar.gz",
+    "sha256": "ab6898b3109a0af4ecc1a2f8f4d320145eafe66a290b5a1bc18c4d0a13daa031",
+    "bytes": 889611
+  },
+  "files": [
+    "media/films.json",
+    "media/kernel-foley.m4a",
+    "media/kernel-poster.webp",
+    "media/kernel-study.webp",
+    "media/kernel.vtt",
+    "media/maple-foley.m4a",
+    "media/maple-poster.webp",
+    "media/maple-study.webp",
+    "media/maple.vtt"
+  ],
+  "external_media": [
+    {
+      "name": "kernel-hd.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/kernel-hd.mp4",
+      "bytes": 102801577,
+      "sha256": "13c282159070f474607ae2c5771ba73049753f807b984214a5802434c0143b25"
+    },
+    {
+      "name": "maple-hd.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/maple-hd.mp4",
+      "bytes": 99809914,
+      "sha256": "ca048854b2edfb3b28bd72636af71e4459a433495bf705ba0dfd4a5479db6d4b"
+    },
+    {
+      "name": "kernel.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/kernel.mp4",
+      "bytes": 23124244,
+      "sha256": "631e88a6bce24bba3211880e29a3e71a5e11f4eedbc77d4ad5b2b36f397aa5c3"
+    },
+    {
+      "name": "kernel-music.m4a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/kernel-music.m4a",
+      "bytes": 4222162,
+      "sha256": "51b452448d856109ca5e4c701bc0312dfab54b9a31cf5e22209860a8e536d6ea"
+    },
+    {
+      "name": "maple.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/maple.mp4",
+      "bytes": 23759641,
+      "sha256": "de872ab5eca793a170f1c020411bb5676246cdc40962d1bd14dd548bc1bb0e0a"
+    },
+    {
+      "name": "maple-music.m4a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/maple-music.m4a",
+      "bytes": 4260028,
+      "sha256": "8bfeb0d368e2bf4f617aec3213ccc9bf4f9493616a6d9952c7686ad6f1279b2e"
+    }
+  ]
+}

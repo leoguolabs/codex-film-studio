@@ -1371,6 +1371,65 @@
           "styles/marker-paper/starter/fonts/OFL.txt"
         ]
       }
+    },
+    {
+      "id": "ipad-sketch",
+      "name": "Tablet Sketch Explainer",
+      "name_zh": "平板速写讲解",
+      "description": "A stylus draws in grainy graphite before off-register colour arrives. A moving canvas reveals one complete illustrated page.",
+      "description_zh": "笔尖先落下带纸纹的铅笔线，再铺上略微错位的色块。镜头在同一张画纸上平移、转动，最后展开全页。",
+      "status": "renderer-ready",
+      "status_note": "Offline pencil renderer, gesture camera, English voice timing and mark-driven sound.",
+      "status_note_zh": "包含离线铅笔绘制、手势镜头、英文配音时间轴和逐笔拟音。",
+      "guide": "styles/ipad-sketch/STYLE.md",
+      "readme": "styles/ipad-sketch/README.md",
+      "prompt": "styles/ipad-sketch/prompt.txt",
+      "template": "styles/ipad-sketch/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "renderer_entry": "engine/tablet.mjs",
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "bundled_fonts": true
+      },
+      "showcases": [
+        {
+          "id": "ipad-sketch-films",
+          "title": "Watch the double feature",
+          "title_zh": "看两部平板速写短片",
+          "page": "styles/ipad-sketch/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/ipad-sketch/showcase/media/films.json"
+        }
+      ],
+      "preview": "docs/readme/frames/ipad-sketch.jpg",
+      "preview_zh": "docs/readme/frames/ipad-sketch.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "ipad-sketch-films",
+      "landing": {
+        "page": "styles/ipad-sketch/showcase/index.html",
+        "assets": [
+          "styles/ipad-sketch/showcase/sketch.css",
+          "styles/ipad-sketch/showcase/sketch.mjs",
+          "styles/ipad-sketch/showcase/jacket.webp",
+          "styles/ipad-sketch/showcase/paper.webp",
+          "styles/ipad-sketch/showcase/instrument.woff2",
+          "styles/ipad-sketch/showcase/serif-OFL.txt",
+          "styles/ipad-sketch/showcase/caveat.woff2",
+          "styles/ipad-sketch/starter/fonts/OFL.txt"
+        ]
+      },
+      "public_assets": "styles/ipad-sketch/demo-assets.json"
     }
   ],
   "capability_schema_version": 2

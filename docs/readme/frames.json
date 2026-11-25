@@ -403,6 +403,23 @@
       "image": "docs/readme/frames/marker-paper.jpg",
       "image_sha256": "0940381908acb4817b1d88998220599fff800bf723765480c9b2cd46b6e8c157",
       "treatment": "The complete encoded frame, resized for the gallery."
+    },
+    {
+      "style": "ipad-sketch",
+      "source_video": "The Long Way Down / final Gemini-scored master",
+      "source_sha256": "ca048854b2edfb3b28bd72636af71e4459a433495bf705ba0dfd4a5479db6d4b",
+      "title": "The Long Way Down",
+      "title_zh": "枫籽慢慢落",
+      "seconds": 17,
+      "frame": 408,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/ipad-sketch.jpg",
+      "image_sha256": "952514213690722d019cbc638036a2173963c1194569239dc682ca3a2a078335",
+      "treatment": "Full encoded frame at 17 seconds, resized to 960 × 540 for the style gallery."
     }
   ]
 }

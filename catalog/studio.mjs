@@ -31,6 +31,7 @@ const categories = {
   'workbench-clay':['material','animation'],
   'colored-pencil':['drawn','material','animation'],
   'marker-paper':['drawn','material','animation'],
+  'ipad-sketch':['drawn','animation','material'],
   'ukiyoe':['drawn','material','animation'],
 };
 const state = { catalog:null, frames:{}, availability:{mode:'public', pages:{}}, language:'en', filter:'all', query:'', detail:null };

@@ -16,6 +16,7 @@
   <a href="https://leoguolabs.github.io/codex-film-studio/"><strong>Open the style library ↗</strong></a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">A seed on the wind · colored-pencil films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en">Paper Math · marker films ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en">A Pop &amp; a Pirouette · tablet sketch films ↗</a> ·
   <a href="#the-style-atlas">Explore styles</a> ·
   <a href="#make-your-film">Start creating</a> ·
   <a href="CONTRIBUTING.md">Contribute</a> ·
@@ -45,7 +46,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**22 styles** · 22 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**23 styles** · 23 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -272,6 +273,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>马克笔白纸速写</sub>
 <p>Two pizzas and a roll of tape turn into questions about area. The black marker draws the object, blue gives the measurements, and red circles the answer.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/ipad-sketch.jpg" alt="Tablet Sketch Explainer — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>23 / <code>ipad-sketch</code></sub>
+<h3>Tablet Sketch Explainer</h3>
+<sub>平板速写讲解</sub>
+<p>A stylus draws in grainy graphite before off-register colour arrives. A moving canvas reveals one complete illustrated page.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

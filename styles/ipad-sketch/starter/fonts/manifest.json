@@ -1,0 +1,14 @@
+[
+  {
+    "file": "fonts/Caveat-Bold.ttf",
+    "family": "Caveat",
+    "license": "fonts/OFL.txt",
+    "sha256": "0bad5f008ed34ae62fa28bfa5b27a28b9972b9729c387ff25b75fb77fae93a51"
+  },
+  {
+    "file": "fonts/Caveat-Medium.ttf",
+    "family": "Caveat",
+    "license": "fonts/OFL.txt",
+    "sha256": "094c24f55992ee009c2499b37b6b08efe4bf604b4abf2e7fd189d597aea8f172"
+  }
+]

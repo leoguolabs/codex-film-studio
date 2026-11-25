@@ -1,0 +1,3 @@
+The pencil, paper grain, fill masks, glyph tracing geometry, camera interpolation and stylus adapt the MIT-licensed material code by Lemomo (LemoLab). The Node runtime, incremental compositor, English caption layout, editing interface and sound workflow are adaptations. The MIT notice is in starter/engine/LICENSE-MIT.txt. Caveat is used under the SIL Open Font License in starter/fonts/OFL.txt. The starter contains the English glyph paths and font instances.
+
+[Upstream code and credits, pinned version](https://github.com/lemomo-ai/lemo-opuscar/tree/8ca0dd805e214bcc1d30714cd5b9d21cc02a454b/styles/ipad-sketch/demo)

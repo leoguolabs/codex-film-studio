@@ -102,3 +102,11 @@ Check representative stills and a motion preview before the complete build.
 Inspect the final MP4, repair observed failures and deliver the file with its
 editable source. Report actual verification scope. A local film request does
 not authorize publishing it or creating an external account.
+
+For the tablet sketch (`ipad-sketch`), start from the empty page in the kit.
+Follow the stylus on a single continuous sheet, carry earlier marks through
+camera gestures, and review the offset pigment and line reveal in motion.
+For a supplied or generated music recording, use the recorded-score edit
+described in the kit, then check the music, foley and narration together.
+The [screening page](https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en)
+has two complete English films, a pencil scrubber and isolated audio.

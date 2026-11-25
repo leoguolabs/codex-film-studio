@@ -157,6 +157,13 @@ class ReproductionTests(unittest.TestCase):
                         subprocess.run(['node', '--input-type=module', '-e',
                                         "import {duration,setup} from './src/film.js'; if (duration !== 0 || typeof setup !== 'function') process.exit(1)"],
                                        cwd=p, check=True)
+                    elif entry['id'] == 'ipad-sketch':
+                        self.assertTrue((p / entry['renderer_entry']).is_file())
+                        self.assertTrue((p / 'scripts/recorded_score.py').is_file())
+                        self.assertEqual(json.loads((p / 'content/cues.json').read_text()), [])
+                        subprocess.run(['node', '--input-type=module', '-e',
+                                        "import film from './src/film.mjs'; if (film.duration !== 0 || typeof film.build !== 'function') process.exit(1)"],
+                                       cwd=p, check=True)
                     elif entry.get('uses_shared_runtime', True):
                         self.assertTrue((p/'tools/runtime/build.py').is_file())
                         self.assertTrue((p/'lib/scene.mjs').is_file())
