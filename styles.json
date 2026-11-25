@@ -1358,6 +1358,10 @@
         "assets": [
           "styles/marker-paper/showcase/paper.css",
           "styles/marker-paper/showcase/paper.mjs",
+          "styles/marker-paper/showcase/ink-journey.css",
+          "styles/marker-paper/showcase/ink-journey.mjs",
+          "styles/marker-paper/showcase/pizza-cut.webp",
+          "styles/marker-paper/showcase/felt-tip.webp",
           "styles/marker-paper/showcase/table.webp",
           "styles/marker-paper/showcase/grain.png",
           "styles/marker-paper/showcase/paper-hand.woff2",

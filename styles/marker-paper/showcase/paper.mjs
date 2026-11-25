@@ -429,26 +429,6 @@ localizeStatic();
 drawRoll();
 document.fonts?.ready.then(drawRoll);
 
-const print = one(".print"),
-  cover = one(".cover");
-if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  let queued = false;
-  const update = () => {
-    queued = false;
-    const box = cover.getBoundingClientRect();
-    const progress = Math.min(1, Math.max(0, -box.top / (box.height * 0.9)));
-    print.style.setProperty("--turn", (4 + progress * 28).toFixed(2) + "%");
-  };
-  const queue = () => {
-    if (!queued) {
-      queued = true;
-      requestAnimationFrame(update);
-    }
-  };
-  addEventListener("scroll", queue, { passive: true });
-  addEventListener("resize", queue);
-  update();
-}
 try {
   const result = await fetch(media("films.json"));
   if (!result.ok) throw new Error("Missing film program");

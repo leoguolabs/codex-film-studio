@@ -21,6 +21,7 @@
     />
     <link rel="icon" href="../../../catalog/mark.svg" />
     <link rel="stylesheet" href="paper.css" />
+    <link rel="stylesheet" href="ink-journey.css" />
     <script>
       document.documentElement.lang =
         new URLSearchParams(location.search).get("lang") === "zh"
@@ -29,82 +30,78 @@
     </script>
   </head>
   <body>
-    <a class="skip" href="#screening" data-zh="跳至放映">Skip to the films</a>
-    <header class="mast">
-      <a class="wordmark" href="../../../?lang=en#library" data-home
-        ><span class="press-mark" aria-hidden="true"><i></i><i></i><i></i></span
-        >Codex Film Studio</a
-      >
-      <nav aria-label="Sections" data-label-zh="页面导航">
-        <a href="#screening" data-zh="放映">Screening</a
-        ><a href="#experiment" data-zh="动手试试">Paper experiment</a
-        ><a href="#sound" data-zh="听声音">Sound</a>
-      </nav>
-      <div class="mast-end">
-        <a class="library" href="../../../?lang=en#library" data-home
-          ><span aria-hidden="true">↖</span>
-          <span data-zh="全部风格">All styles</span></a
-        ><button
-          type="button"
-          id="language"
-          lang="zh-CN"
-          aria-label="切换为中文"
-        >
-          中文
-        </button>
-      </div>
-    </header>
+    <a class="skip" href="#screening" data-skip-drawing data-zh="跳至放映">Skip to the films</a>
     <main>
-      <section class="cover" aria-labelledby="cover-title">
-        <div class="cover-copy">
-          <p class="handline">
-            <span class="color-marks" aria-hidden="true"
-              ><i></i><i></i><i></i></span
-            ><span data-zh="马克笔白纸速写">Marker on Paper</span>
-          </p>
-          <h1 id="cover-title">
-            <span data-zh="纸上">Paper</span><em data-zh="有数">Math.</em>
-          </h1>
-          <p
-            class="deck"
-            data-zh="两个小披萨，还是一个大披萨？胶带薄了一半，还剩多长？翻开两张白纸，把答案画出来。"
-          >
-            Two small pizzas or one large? How much tape is left on a half-used
-            roll? Two everyday puzzles, worked out by hand.
-          </p>
-          <a href="#screening" class="ink-button"
-            ><span aria-hidden="true">▶</span
-            ><span data-zh="看两部短片">Watch the films</span></a
-          >
-        </div>
-        <figure class="cover-art">
-          <div class="print">
-            <img
-              src="table.webp"
-              width="1536"
-              height="1024"
-              fetchpriority="high"
-              alt="A pizza drawn in felt-tip ink, with a red-edged slice cut out of the sheet"
-              data-alt-zh="蓝色桌面上的马克笔披萨画，红边纸片从饼里切出一角"
-            /><a
-              class="turn-corner"
-              href="#screening"
-              aria-label="Turn the sheet to the films"
-              data-label-zh="翻页看片"
-            ></a>
+      <section class="paper-journey" id="desk" aria-labelledby="cover-title" aria-describedby="drawing-description">
+        <p class="drawing-description" id="drawing-description" data-zh="蓝色马克笔横过十二英寸的纸披萨，再沿半径回到圆心。纸张翻过，露出播放器。">A blue marker crosses a twelve-inch paper pizza and returns along its radius to the centre. The sheet turns over to reveal the film player.</p>
+        <div class="desk-window">
+          <div class="sheet-face">
+            <div class="sheet-stock" aria-hidden="true"><i></i><i></i></div>
+            <div class="drawing-plane">
+              <img class="pizza-cut" src="pizza-cut.webp" fetchpriority="high" width="720" height="720" alt="" />
+              <svg class="measurements" viewBox="-320 -320 640 640" aria-hidden="true">
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path id="diameter" pathLength="1" d="M-258 74 Q-137 37 -13 4 T258 -74" />
+                  <path class="diameter-ends" d="M-252 59 L-258 74 L-241 78 M241 -79 L258 -74 L252 -60" />
+                  <path id="radius-stroke" pathLength="1" d="M258 -74 Q262 -61 264 -50 Q135 -10 7 26 Q3 12 0 0" />
+                  <circle class="centre-dot" cx="0" cy="0" r="5" />
+                </g>
+              </svg>
+              <span class="measurement length" aria-hidden="true">12 in</span>
+              <span class="measurement half" aria-hidden="true">6 in</span>
+              <a href="#screening" class="pen-tool" data-follow-ink
+                 aria-label="Follow the marker from the rim to the centre"
+                 data-label-zh="跟随马克笔，从披萨边缘画到圆心">
+                <img src="felt-tip.webp" width="640" height="70" alt="" draggable="false" />
+              </a>
+            </div>
+            <header class="mast desk-top">
+              <a class="wordmark" href="../../../?lang=en#library" data-home
+                ><span class="press-mark" aria-hidden="true"><i></i><i></i><i></i></span
+                >Codex Film Studio</a
+              >
+              <nav aria-label="Sections" data-label-zh="页面导航">
+                <a href="#screening" data-skip-drawing data-zh="放映">Screening</a
+                ><a href="#experiment" data-zh="动手试试">Paper experiment</a
+                ><a href="#sound" data-zh="听声音">Sound</a>
+              </nav>
+              <div class="mast-end">
+                <a class="library" href="../../../?lang=en#library" data-home
+                  ><span aria-hidden="true">↖</span>
+                  <span data-zh="全部风格">All styles</span></a
+                ><button
+                  type="button"
+                  id="language"
+                  lang="zh-CN"
+                  aria-label="切换为中文"
+                >
+                  中文
+                </button>
+              </div>
+            </header>
+            <div class="opening-copy">
+              <p class="handline"><span data-zh="马克笔白纸速写">Marker on Paper</span></p>
+              <h1 id="cover-title"><span data-zh="纸上">Paper</span> <em data-zh="有数">Math.</em></h1>
+              <p class="opening-question" data-zh="两个小披萨，还是一个大披萨？">Two small pizzas or one large?</p>
+            </div>
+            <div class="margin-words" aria-hidden="true">
+              <p class="diameter-note"><span data-zh="从一侧边缘，">Edge to edge.</span><em data-zh="量到另一侧。">Twelve inches across.</em></p>
+              <p class="radius-note"><span data-zh="从边缘回到圆心，">Back to the centre.</span><em data-zh="刚好是六英寸。">Six inches this time.</em></p>
+            </div>
+            <div class="desk-actions">
+              <a class="follow-ink" href="#screening" data-follow-ink><i aria-hidden="true">↓</i><span class="motion-label" data-zh="跟着笔尖走">Follow the marker</span><span class="still-label" data-zh="看片">Watch the films</span></a>
+              <span class="wheel-hint" data-zh="也可向下滚动">or scroll to draw</span>
+              <span class="swipe-hint" data-zh="也可向上轻扫">or swipe up to draw</span>
+            </div>
+            <a class="skip-drawing" href="#screening" data-skip-drawing data-zh="直接看片 ↘">Straight to the films ↘</a>
           </div>
-          <figcaption>
-            <span class="spec-line"></span
-            ><span data-zh="《哪份披萨更多？》封面习作"
-              >Cover study for Which Pizza Wins?</span
-            >
-          </figcaption>
-        </figure>
+          <canvas class="fold-back" aria-hidden="true"></canvas>
+        </div>
       </section>
 
       <section
         id="screening"
-        class="screening section"
+        class="screening section" tabindex="-1"
         aria-labelledby="screen-title"
       >
         <div class="section-line">
@@ -367,11 +364,11 @@
       <details>
         <summary data-zh="制作署名">Colophon</summary>
         <p
-          data-zh="影片与展映由 Codex Film Studio 制作。笔迹与纸张材质改编自 LemoLab 的 MIT 实现。Kalam 与霞鹜文楷用于页面手写字。封面静物由 ImageGen 创作，放映海报取自成片。英文声线为 Kokoro，配乐由 Google Gemini 创作。"
+          data-zh="影片与展映由 Codex Film Studio 制作。笔迹与纸张材质改编自 LemoLab 的 MIT 实现。Kalam 与霞鹜文楷用于页面手写字。开场的纸披萨和蓝色马克笔由 ImageGen 创作。笔尖沿着画面里的测量线移动。放映海报取自成片。英文声线为 Kokoro，配乐由 Google Gemini 创作。"
         >
           Films and exhibition by Codex Film Studio. The ink and paper adapt
           LemoLab’s MIT-licensed material. Hand lettering uses Kalam and LXGW
-          WenKai. The cover still life was made with ImageGen. The screening
+          WenKai. The paper pizza and blue marker were made with ImageGen. The nib follows the measurement drawn on the sheet. The screening
           posters are frames from the films. English voice by Kokoro. Original
           music by Google Gemini.
         </p>
@@ -382,6 +379,7 @@
       </details>
     </footer>
     <script type="module" src="../../../catalog/agent-start.mjs"></script>
+    <script type="module" src="ink-journey.mjs"></script>
     <script type="module" src="paper.mjs"></script>
   </body>
 </html>
