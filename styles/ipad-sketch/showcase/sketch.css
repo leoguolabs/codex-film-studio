@@ -181,9 +181,11 @@ footer a:hover,
   height: 100%;
   object-fit: cover;
   object-position: 50% 48%;
-  z-index: -1;
+  z-index: 0;
 }
 .cover-copy {
+  position: relative;
+  z-index: 1;
   margin-left: max(var(--gutter), calc((100vw - 1392px) / 2 + 62px));
   width: min(36vw, 540px);
   padding: 24px 0 36px;
@@ -1018,24 +1020,6 @@ html[lang^="zh"] .kicker {
     height: 100svh;
     min-height: 445px;
   }
-  .pencil-flight .cover-plate > canvas:not([hidden]) {
-    display: block;
-  }
-  .pencil-flight .turn-note {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin-top: 18px;
-    color: #705438;
-    font: 500 19px/1.3 var(--hand);
-  }
-  .turn-note i {
-    font: 18px/1 var(--serif);
-    transform: rotate(8deg);
-  }
-  html[lang^="zh"] .turn-note {
-    font-size: 14px;
-  }
 }
 @media (prefers-reduced-motion: no-preference) and (max-width: 930px) and (orientation: portrait) {
   .pencil-flight .cover {
@@ -1065,9 +1049,6 @@ html[lang^="zh"] .kicker {
     justify-content: center;
     align-items: flex-start;
     background: #f8ead2 url(paper.webp);
-  }
-  .pencil-flight .turn-note {
-    margin-top: 12px;
   }
   .pencil-flight .cover-reel {
     background: #f8ead2 url(paper.webp);
@@ -1102,5 +1083,70 @@ html[lang^="zh"] .kicker {
 @media (min-aspect-ratio: 2/1) {
   .pencil-flight .cover-plate {
     object-position: 50% 6%;
+  }
+}
+
+/* The transparent button sits only over the painting, clear of the film link. */
+.cover-plate > .cutout-sheet,
+.cover-trigger[hidden],
+.still-hint {
+  display: none;
+}
+.cover-trigger {
+  position: absolute;
+  inset: 0 0 0 40%;
+  width: 60%;
+  z-index: 1;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  touch-action: pan-y pinch-zoom;
+}
+.cover-trigger:focus-visible {
+  outline: 2px dashed #916c40;
+  outline-offset: -7px;
+}
+.pencil-ready .cover-plate > canvas:not([hidden]) {
+  display: block;
+}
+.pop-caption {
+  display: grid;
+}
+.pop-caption > span {
+  grid-area: 1 / 1;
+}
+.pop-caption [aria-hidden="true"] {
+  visibility: hidden;
+}
+.pencil-ready .turn-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  color: #705438;
+  font: 500 19px/1.3 var(--hand);
+}
+.turn-note i {
+  font: 18px/1 var(--serif);
+  transform: rotate(8deg);
+}
+html[lang^="zh"] .turn-note {
+  font-size: 14px;
+}
+@media (max-width: 930px) and (orientation: portrait), (max-width: 610px) {
+  .cover-trigger {
+    inset: 0;
+    width: 100%;
+  }
+  .pencil-ready .turn-note {
+    margin-top: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pencil-ready .motion-hint {
+    display: none;
+  }
+  .pencil-ready .still-hint {
+    display: inline;
   }
 }

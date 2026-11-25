@@ -33,15 +33,24 @@
   <div class="cover-reel">
     <section class="cover" aria-labelledby="page-title">
       <div class="cover-plate">
-        <img class="cover-art" src="jacket.webp" width="1774" height="887" fetchpriority="high" alt="A popcorn flake hangs in the air above an ear of corn while a winged maple seed spirals away from its twig." data-zh-alt="玉米穗上方跃起一朵爆米花，枫枝边的一枚翅果正旋着落下。">
+        <img class="cover-art" src="jacket.webp" width="1774" height="887" fetchpriority="high" alt="One golden kernel sits at the crown of a corn cob. A winged maple seed hangs beside it." data-zh-alt="一颗金黄的籽粒嵌在玉米穗顶，旁边悬着一枚带翅的枫籽。">
+        <img class="cutout-sheet" src="pencil-pieces.webp" width="788" height="324" alt="" hidden>
         <canvas hidden aria-hidden="true"></canvas>
+        <button type="button" class="cover-trigger" aria-controls="pop-caption" aria-describedby="pop-hint" aria-label="Watch the kernel pop and the maple seed turn" data-zh-label="看玉米粒爆开、枫籽旋落" hidden></button>
       </div>
       <div class="cover-copy">
         <p class="imprint"><span aria-hidden="true"></span><span data-zh="平板速写讲解">Tablet Sketch Explainer</span></p>
         <h1 id="page-title"><span data-zh="一跃，">A Pop</span><em><span class="amp" data-zh="一"> &amp; a </span><span data-zh="旋">Pirouette</span></em></h1>
-        <p class="deck" data-zh="一粒玉米从锅里弹起，一枚枫籽旋着落下。两颗种子，怎样借到腾空的那一瞬？">A kernel springs from a pan. A maple seed twirls to the ground. How do two little seeds find their moment in the air?</p>
+        <p class="deck pop-caption" id="pop-caption">
+          <span data-pop-from="0" aria-hidden="false" data-zh="玉米穗顶，一颗籽粒还裹着金黄的外壳。旁边的枫籽正要旋落。">One golden kernel sits in its row. Beside it, a maple seed is about to turn.</span>
+          <span data-pop-from=".065" aria-hidden="true" data-zh="籽粒受热，里面的水变成蒸汽，顶住紧闭的外壳。">The kernel heats up. Inside, water turns to steam and presses against the hull.</span>
+          <span data-pop-from=".29" aria-hidden="true" data-zh="金黄色的外壳裂开一道缝，露出一点白色。">A seam splits the golden hull. A speck of white shows through.</span>
+          <span data-pop-from=".42" aria-hidden="true" data-zh="壳里的压力骤降，白色淀粉从裂口翻出来，膨成一朵花。">The pressure drops. Soft starch spills through the split and billows into white folds.</span>
+          <span data-pop-from=".615" aria-hidden="true" data-zh="砰！爆米花离开穗顶，向上蹦了起来。">Pop! The open flake springs up from the ear.</span>
+          <span data-pop-from=".94" aria-hidden="true" data-zh="白花飞到半空，中央还能看见金黄的外壳。旁边的枫籽旋着落下。">High above the ear, a bit of golden hull still clings to the flake. The maple seed spirals down.</span>
+        </p>
         <div class="cover-actions"><a class="watch" href="#screening"><i class="triangle" aria-hidden="true"></i><span data-zh="看两部短片">Watch the films</span></a><span class="runtime" data-zh="每部 3 分钟">3 minutes each</span></div>
-        <p class="turn-note"><i aria-hidden="true">↓</i><span data-zh="往下滚，看种子飞起来">Scroll to set the seeds in motion</span></p>
+        <p class="turn-note" id="pop-hint"><i aria-hidden="true">↝</i><span class="motion-hint" data-zh="滚动细看，或点插画看它爆开">Scroll through the pop, or tap the illustration to play</span><span class="still-hint" data-zh="点插画，逐张看玉米爆开">Tap the illustration to step through the pop</span></p>
       </div>
     </section>
   </div>
