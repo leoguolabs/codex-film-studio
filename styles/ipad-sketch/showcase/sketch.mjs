@@ -156,17 +156,17 @@ function programme() {
     ...movie.transcript.map((cue) => timeButton(cue.at, cue.text)),
   );
   $("#master").href = movie.hd;
-  mark("[data-film]", "film", selected);
+  mark("button[data-film]", "film", selected);
 }
 function chooseFilm(id, sync = true) {
   const movie = films[id];
-  if (video.dataset.film !== id) {
+  if (video.dataset.activeFilm !== id) {
     if (seekListener) video.removeEventListener("loadedmetadata", seekListener);
     video.pause();
     video.poster = "media/" + movie.poster;
     video.querySelector("track").src = "media/" + movie.captions;
     video.querySelector("source").src = movie.file;
-    video.dataset.film = id;
+    video.dataset.activeFilm = id;
     video.load();
   }
   selected = id;
@@ -306,9 +306,9 @@ async function start() {
     throw new Error("Film programme unavailable (" + response.status + ")");
   const manifest = await response.json();
   films = Object.fromEntries(manifest.films.map((film) => [film.id, film]));
-  if (selected === "kernel") video.dataset.film = "kernel";
+  if (selected === "kernel") video.dataset.activeFilm = "kernel";
   chooseFilm(selected);
-  for (const button of all("[data-film]"))
+  for (const button of all("button[data-film]"))
     button.onclick = () => {
       chooseFilm(button.dataset.film);
       bookmark();
