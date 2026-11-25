@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7ecd7">
+  <meta name="description" content="Why does popcorn jump? Why does a maple seed spin? Watch two three-minute pencil films, wind the drawings back and listen to their original scores.">
+  <meta property="og:title" content="A Pop &amp; a Pirouette · Codex Film Studio">
+  <meta property="og:description" content="Two seeds, two ways to take to the air. A tablet sketch double feature.">
+  <meta property="og:image" content="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/jacket.webp">
+  <title>A Pop &amp; a Pirouette · Tablet Sketch Explainer · Codex Film Studio</title>
+  <link rel="icon" href="../../../catalog/brand/studio-logo.svg">
+  <link rel="stylesheet" href="../../../catalog/brand.css">
+  <link rel="stylesheet" href="sketch.css">
+  <script type="module" src="sketch.mjs"></script>
+  <script type="module" src="../../../catalog/agent-start.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#screening" data-zh="跳到放映区">Skip to the films</a>
+<header class="mast">
+  <a class="studio-brand-lockup home" href="../../../?lang=en" aria-label="Codex Film Studio"><img class="studio-brand-logo" src="../../../catalog/brand/studio-logo.svg" width="40" height="40" alt=""><span>Codex Film Studio</span></a>
+  <nav aria-label="Navigation"><a class="library" href="../../../?lang=en#library" data-zh="全部风格">All styles</a><a href="#screening" data-zh="看短片">Films</a><a href="#study" data-zh="翻画稿">The pencil</a><a href="#sound" data-zh="听声音">Sound</a></nav>
+  <div class="languages" role="group" aria-label="Language"><button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button><i aria-hidden="true">/</i><button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button></div>
+</header>
+<main>
+  <section class="cover" aria-labelledby="page-title">
+    <img class="cover-art" src="jacket.webp" width="1774" height="887" fetchpriority="high" alt="A popcorn flake leaps from an ear of corn while a winged maple seed spirals away from its twig." data-zh-alt="玉米穗上方跃起一朵爆米花，枫枝边的一枚翅果正旋着落下。">
+    <div class="cover-copy">
+      <p class="imprint"><span aria-hidden="true"></span><span data-zh="平板速写讲解">Tablet Sketch Explainer</span></p>
+      <h1 id="page-title"><span data-zh="一跃，">A Pop</span><em><span class="amp" data-zh="一"> &amp; a </span><span data-zh="旋">Pirouette</span></em></h1>
+      <p class="deck" data-zh="一粒玉米从锅里弹起，一枚枫籽旋着落下。两颗种子，怎样借到腾空的那一瞬？">A kernel springs from a pan. A maple seed twirls to the ground. How do two little seeds find their moment in the air?</p>
+      <div class="cover-actions"><a class="watch" href="#screening"><i class="triangle" aria-hidden="true"></i><span data-zh="看两部短片">Watch the films</span></a><span class="runtime" data-zh="每部 3 分钟">3 minutes each</span></div>
+    </div>
+  </section>
+  <section class="cinema" id="screening" aria-labelledby="screening-title">
+    <div class="wrap">
+      <div class="section-top"><h2 id="screening-title" data-zh="两颗种子的放映会">The double feature</h2><p class="edition" data-zh="英语旁白 · 英文手写字幕">English voice · Handwritten English captions</p></div>
+      <div class="film-tabs" role="group" aria-label="Choose a film" data-zh-label="选片">
+        <button data-film="kernel" type="button" aria-pressed="true"><i class="kernel-mark" aria-hidden="true"></i><span data-zh="一粒玉米，砰">A Kernel Lets Go</span><small>3:00</small></button>
+        <button data-film="maple" type="button" aria-pressed="false"><i class="wing-mark" aria-hidden="true"></i><span data-zh="枫籽慢慢落">The Long Way Down</span><small>3:00</small></button>
+      </div>
+      <div class="projection">
+        <video id="player" controls playsinline preload="metadata" poster="media/kernel-poster.webp" aria-label="A Kernel Lets Go"><source src="https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/kernel.mp4" type="video/mp4"><track kind="captions" src="media/kernel.vtt" srclang="en" label="English"></video>
+        <div class="programme"><h3 id="film-title">A Kernel Lets Go</h3><p id="synopsis">Inside a hard yellow shell, a little water waits. When the shell gives way, what pushes the kernel off the pan?</p>
+          <nav id="chapters" class="chapters" aria-label="Film scenes" data-zh-label="片中镜头"></nav>
+          <details><summary data-zh="读英文旁白">Read the English narration</summary><div id="transcript" lang="en"></div></details>
+          <a class="master-link" id="master" href="https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/kernel-hd.mp4"><span data-zh="下载 1080p 原片">Download the 1080p film</span> <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="study wrap" id="study" aria-labelledby="study-title">
+    <div class="study-copy"><p class="hand kicker" data-zh="看笔尖走过">At the pencil tip</p><h2 id="study-title" data-zh="线条怎样变成颜色？">When does a line become colour?</h2>
+      <p id="study-note">Watch the pencil pick out the rows on the cob, one grain at a time. Then the green of the husk slides just over the edge of the line.</p>
+      <div class="specimens" role="group" aria-label="Drawing subject" data-zh-label="速写题材"><button type="button" data-study="kernel" aria-pressed="true" data-zh="玉米穗">Corn ear</button><button type="button" data-study="maple" aria-pressed="false" data-zh="枫树枝">Maple twig</button></div>
+    </div>
+    <figure class="leaf"><div class="leaf-art" role="img" aria-label="Pencil study from the film" id="study-frame"></div>
+      <figcaption><div class="study-control"><button type="button" id="study-play" aria-label="Play the drawing" data-zh-label="播放画稿"><span aria-hidden="true">▶</span></button><label for="scrub" class="hand" data-zh="拖动画稿">Turn the pencil back</label><output id="study-time" for="scrub">0:00</output></div><input type="range" id="scrub" min="0" max="35" step="1" value="0" aria-label="Scrub the drawing" data-zh-label="拖动查看落笔过程"></figcaption>
+    </figure>
+  </section>
+  <section class="sound" id="sound" aria-labelledby="sound-title"><div class="wrap sound-grid">
+    <div class="sound-copy"><p class="hand kicker" data-zh="把耳朵贴近纸面">An ear to the paper</p><h2 id="sound-title" data-zh="听见那一瞬">Listen for the moment</h2>
+      <p data-zh="音乐停出一个空隙，玉米才“砰”地一声；枫籽碰到靴边，只剩轻轻一擦。两首配乐都由 Google Gemini 为这两部短片创作。">The music leaves room for a pop. A seed brushes a boot with barely a sound. Google Gemini composed an original score for each film.</p>
+    </div>
+    <div class="record"><div class="score-tabs" role="group" aria-label="Choose a soundtrack" data-zh-label="选择配乐"><button type="button" data-score="kernel" aria-pressed="true" data-zh="玉米">The kernel</button><button type="button" data-score="maple" aria-pressed="false" data-zh="枫籽">The maple seed</button></div>
+      <h3 id="score-title" lang="en">Pressure, Then Air</h3><p id="score-note">Muted upright piano, bass clarinet and plucked strings gather around the pop.</p>
+      <div class="audio-row"><label for="music" data-zh="单听配乐">Music alone</label><audio id="music" controls preload="none" src="https://github.com/leoguolabs/codex-film-studio/releases/download/ipad-sketch-film-pair-v1/kernel-music.m4a"></audio></div>
+      <div class="audio-row"><label for="foley" data-zh="单听笔触与拟音">Pencil &amp; foley</label><audio id="foley" controls preload="none" src="media/kernel-foley.m4a"></audio></div>
+      <a href="#screening" id="sound-cue" class="cue-link"></a>
+    </div>
+  </div></section>
+  <section class="colophon wrap" id="make"><div><h2 data-zh="下一页，你来画。">What will you draw?</h2><p data-zh="挑一样你想弄明白的小东西。从它的一根轮廓线开始。">Pick one small thing you would like to understand. Start with its outline.</p>
+    <details><summary data-zh="用平板速写风格拍短片">Make a tablet sketch film</summary><film-agent-start style-id="ipad-sketch"><p data-zh="在 Codex 里打开项目，描述你的短片。">Open the project in Codex and describe your film.</p></film-agent-start></details></div>
+    <div class="sources"><h3 data-zh="画页旁的参考">In the margins</h3><a href="https://lemomo-ai.github.io/lemo-opuscar/styles/ipad-sketch/" data-zh="风格灵感 · LemoLab 平板速写">Style inspiration · LemoLab tablet sketch</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4345489/" data-zh="玉米为什么会跳 · Virot 与 Ponomarenko">The popcorn jump · Virot &amp; Ponomarenko</a><a href="https://doi.org/10.1126/science.1174196" data-zh="枫籽的飞行 · Lentink 等">Maple seed flight · Lentink et al.</a></div>
+  </section>
+</main>
+<footer><a class="home" href="../../../?lang=en">Codex Film Studio</a><a class="library" href="../../../?lang=en#library" data-zh="回到全部风格 ↗">Back to all styles ↗</a><a href="https://x.com/LeoGuoLabs">@LeoGuoLabs</a></footer>
+</body>
+</html>

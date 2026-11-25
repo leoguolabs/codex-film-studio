@@ -15,6 +15,7 @@
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/"><strong>Open the style library ↗</strong></a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">A seed on the wind · colored-pencil films ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en">A Pop &amp; a Pirouette · tablet sketch films ↗</a> ·
   <a href="#the-style-atlas">Explore styles</a> ·
   <a href="#make-your-film">Start creating</a> ·
   <a href="CONTRIBUTING.md">Contribute</a> ·
@@ -44,7 +45,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**21 styles** · 21 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**22 styles** · 22 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -261,6 +262,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>工作台黏土定格</sub>
 <p>Two clay puppets share a miniature wooden counter. A touch, a sound and a held reaction carry the joke.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/workbench-clay/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/ipad-sketch.jpg" alt="Tablet Sketch Explainer — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>22 / <code>ipad-sketch</code></sub>
+<h3>Tablet Sketch Explainer</h3>
+<sub>平板速写讲解</sub>
+<p>A stylus draws in grainy graphite before off-register colour arrives. A moving canvas reveals one complete illustrated page.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

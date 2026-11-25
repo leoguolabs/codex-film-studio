@@ -386,6 +386,23 @@
       "image": "docs/readme/frames/workbench-clay.jpg",
       "image_sha256": "9144ef465815dc3538e3b14094b5fbdcff5958429451d24c8cf41c9d6fb2c020",
       "treatment": "Full encoded frame at frame 438, preserved at its native size for the style gallery."
+    },
+    {
+      "style": "ipad-sketch",
+      "source_video": "The Long Way Down / final Gemini-scored master",
+      "source_sha256": "ca048854b2edfb3b28bd72636af71e4459a433495bf705ba0dfd4a5479db6d4b",
+      "title": "The Long Way Down",
+      "title_zh": "枫籽慢慢落",
+      "seconds": 17,
+      "frame": 408,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/ipad-sketch.jpg",
+      "image_sha256": "952514213690722d019cbc638036a2173963c1194569239dc682ca3a2a078335",
+      "treatment": "Full encoded frame at 17 seconds, resized to 960 × 540 for the style gallery."
     }
   ]
 }

@@ -162,5 +162,17 @@
   "workbench-clay": {
     "en": {"use": "Visit the night desk in Ring Quietly. Tabletop clay suits small comedies in which a familiar object gets in the way.", "method": "Stage original articulated puppets at eye level on a wooden miniature. Hold quiet poses on twos and expose the fingertip and plunger on ones at contact.", "check": "Follow the contact, shadow and settling pose. Listen for the change in decay when felt covers brass."},
     "zh": {"use": "走进《请轻轻按铃》的夜班柜台。这个风格适合围绕一件日常小物拍一出喜剧。", "method": "将镜头降到原创黏土偶的视线高度。静态动作一拍二，手指压住道具时改为一拍一。", "check": "看清接触、阴影和最后落稳的姿势。对比铜铃盖上毛毡前后的余音。"}
+  },
+  "ipad-sketch": {
+    "en": {
+      "use": "Watch a popcorn kernel jump and a maple seed spin. Tablet sketch suits a small question that opens into a whole illustrated page.",
+      "method": "Track the stylus over graphite outlines, let the flat pigment cross the line, then pull the camera back to show how the drawings fit together.",
+      "check": "Scrub the corn ear or maple twig and watch where the pen and colour meet. Listen to each Gemini score and the isolated pencil and foley."
+    },
+    "zh": {
+      "use": "看一粒玉米弹起、一枚枫籽旋落。平板速写适合把一个小问题慢慢画成一整页。",
+      "method": "让笔尖沿着石墨轮廓移动，色块略微越过线条。最后拉远镜头，看几处速写怎样连成整张图。",
+      "check": "拖动玉米穗或枫枝的真实画格，观察落笔和铺色的先后，再单独听两首 Gemini 配乐及笔触拟音。"
+    }
   }
 }
