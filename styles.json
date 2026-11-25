@@ -1421,6 +1421,7 @@
         "assets": [
           "styles/ipad-sketch/showcase/sketch.css",
           "styles/ipad-sketch/showcase/sketch.mjs",
+          "styles/ipad-sketch/showcase/airborne.mjs",
           "styles/ipad-sketch/showcase/jacket.webp",
           "styles/ipad-sketch/showcase/paper.webp",
           "styles/ipad-sketch/showcase/instrument.woff2",

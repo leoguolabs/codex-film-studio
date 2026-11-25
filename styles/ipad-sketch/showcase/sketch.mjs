@@ -192,6 +192,53 @@ function showFrame() {
     position + " · " + local(["film time", "片中时间"]),
   );
 }
+// A hand-selected frame becomes the starting point for the next scroll.
+// Leaving the sheet restores its ordinary beginning on the next approach.
+const quietMotion = matchMedia("(prefers-reduced-motion: reduce)");
+const studySheet = paper.closest("figure");
+let studyScrollFrame = 0;
+let scrollOffset = 0;
+let lastPaperPosition = null;
+function paperPosition() {
+  const sheet = studySheet.getBoundingClientRect();
+  if (sheet.bottom <= 0 || sheet.top >= innerHeight) return null;
+  const art = paper.getBoundingClientRect();
+  return (
+    (innerHeight * 0.85 - art.top) / (innerHeight * 0.57 + art.height * 0.55)
+  );
+}
+function holdStudyFrame() {
+  lastPaperPosition = paperPosition();
+  scrollOffset = lastPaperPosition === null ? 0 : Number(slider.value) / Number(slider.max) - lastPaperPosition;
+}
+function followStudyScroll() {
+  studyScrollFrame = 0;
+  if (!films || quietMotion.matches) return;
+  const current = paperPosition();
+  if (current === null) {
+    lastPaperPosition = null;
+    scrollOffset = 0;
+    return;
+  }
+  if (current === lastPaperPosition) return;
+  if (studyAnimation) {
+    if (lastPaperPosition !== null) scrollOffset = Number(slider.value) / Number(slider.max) - lastPaperPosition;
+    stopStudy();
+  }
+  lastPaperPosition = current;
+  const bounded = Math.max(0, Math.min(1, current + scrollOffset));
+  scrollOffset = bounded - current;
+  const next = Math.round(bounded * Number(slider.max));
+  if (next !== Number(slider.value)) {
+    slider.value = next;
+    showFrame();
+  }
+}
+function scheduleStudyScroll() {
+  if (!quietMotion.matches && !studyScrollFrame)
+    studyScrollFrame = requestAnimationFrame(followStudyScroll);
+}
+
 function setStudyPlay(playing) {
   studyPlay.firstElementChild.textContent = playing ? "Ⅱ" : "▶";
   const words = playing
@@ -221,11 +268,13 @@ function chooseStudy(id) {
   slider.value = 0;
   mark("[data-study]", "study", id);
   studyLabels();
+  holdStudyFrame();
 }
 function playStudy() {
   if (!films) return;
   if (studyAnimation) {
     stopStudy();
+    holdStudyFrame();
     return;
   }
   if (slider.value === slider.max) slider.value = 0;
@@ -242,7 +291,10 @@ function playStudy() {
     showFrame();
     if (Number(slider.value) < range)
       studyAnimation = requestAnimationFrame(advance);
-    else stopStudy();
+    else {
+      stopStudy();
+      holdStudyFrame();
+    }
   };
   setStudyPlay(true);
   studyAnimation = requestAnimationFrame(advance);
@@ -320,7 +372,11 @@ async function start() {
   slider.oninput = () => {
     stopStudy();
     showFrame();
+    holdStudyFrame();
   };
+  window.addEventListener("scroll", scheduleStudyScroll, { passive: true });
+  window.addEventListener("resize", scheduleStudyScroll);
+  quietMotion.addEventListener("change", scheduleStudyScroll);
   studyPlay.onclick = playStudy;
   $("#sound-cue").onclick = (event) => {
     event.preventDefault();

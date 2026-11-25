@@ -12,6 +12,13 @@
   <link rel="icon" href="../../../catalog/brand/studio-logo.svg">
   <link rel="stylesheet" href="../../../catalog/brand.css">
   <link rel="stylesheet" href="sketch.css">
+  <script>
+    // Reserve the jacket's scroll distance before the browser follows a deep link.
+    if (window.Path2D && window.ResizeObserver && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("pencil-flight");
+    }
+  </script>
+  <script type="module" src="airborne.mjs"></script>
   <script type="module" src="sketch.mjs"></script>
   <script type="module" src="../../../catalog/agent-start.mjs"></script>
 </head>
@@ -23,15 +30,21 @@
   <div class="languages" role="group" aria-label="Language"><button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button><i aria-hidden="true">/</i><button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button></div>
 </header>
 <main>
-  <section class="cover" aria-labelledby="page-title">
-    <img class="cover-art" src="jacket.webp" width="1774" height="887" fetchpriority="high" alt="A popcorn flake hangs in the air above an ear of corn while a winged maple seed spirals away from its twig." data-zh-alt="玉米穗上方跃起一朵爆米花，枫枝边的一枚翅果正旋着落下。">
-    <div class="cover-copy">
-      <p class="imprint"><span aria-hidden="true"></span><span data-zh="平板速写讲解">Tablet Sketch Explainer</span></p>
-      <h1 id="page-title"><span data-zh="一跃，">A Pop</span><em><span class="amp" data-zh="一"> &amp; a </span><span data-zh="旋">Pirouette</span></em></h1>
-      <p class="deck" data-zh="一粒玉米从锅里弹起，一枚枫籽旋着落下。两颗种子，怎样借到腾空的那一瞬？">A kernel springs from a pan. A maple seed twirls to the ground. How do two little seeds find their moment in the air?</p>
-      <div class="cover-actions"><a class="watch" href="#screening"><i class="triangle" aria-hidden="true"></i><span data-zh="看两部短片">Watch the films</span></a><span class="runtime" data-zh="每部 3 分钟">3 minutes each</span></div>
-    </div>
-  </section>
+  <div class="cover-reel">
+    <section class="cover" aria-labelledby="page-title">
+      <div class="cover-plate">
+        <img class="cover-art" src="jacket.webp" width="1774" height="887" fetchpriority="high" alt="A popcorn flake hangs in the air above an ear of corn while a winged maple seed spirals away from its twig." data-zh-alt="玉米穗上方跃起一朵爆米花，枫枝边的一枚翅果正旋着落下。">
+        <canvas hidden aria-hidden="true"></canvas>
+      </div>
+      <div class="cover-copy">
+        <p class="imprint"><span aria-hidden="true"></span><span data-zh="平板速写讲解">Tablet Sketch Explainer</span></p>
+        <h1 id="page-title"><span data-zh="一跃，">A Pop</span><em><span class="amp" data-zh="一"> &amp; a </span><span data-zh="旋">Pirouette</span></em></h1>
+        <p class="deck" data-zh="一粒玉米从锅里弹起，一枚枫籽旋着落下。两颗种子，怎样借到腾空的那一瞬？">A kernel springs from a pan. A maple seed twirls to the ground. How do two little seeds find their moment in the air?</p>
+        <div class="cover-actions"><a class="watch" href="#screening"><i class="triangle" aria-hidden="true"></i><span data-zh="看两部短片">Watch the films</span></a><span class="runtime" data-zh="每部 3 分钟">3 minutes each</span></div>
+        <p class="turn-note"><i aria-hidden="true">↓</i><span data-zh="往下滚，看种子飞起来">Scroll to set the seeds in motion</span></p>
+      </div>
+    </section>
+  </div>
   <section class="cinema" id="screening" aria-labelledby="screening-title">
     <div class="wrap">
       <div class="section-top"><h2 id="screening-title" data-zh="两颗种子的放映会">The double feature</h2><p class="edition" data-zh="英语旁白 · 英文手写字幕">English voice · Handwritten English captions</p></div>
@@ -55,7 +68,7 @@
       <div class="specimens" role="group" aria-label="Drawing subject" data-zh-label="速写题材"><button type="button" data-study="kernel" aria-pressed="true" data-zh="玉米穗">Corn ear</button><button type="button" data-study="maple" aria-pressed="false" data-zh="枫树枝">Maple twig</button></div>
     </div>
     <figure class="leaf"><div class="leaf-art" role="img" aria-label="Pencil study from the film" id="study-frame"></div>
-      <figcaption><div class="study-control"><button type="button" id="study-play" aria-label="Play the drawing" data-zh-label="播放画稿"><span aria-hidden="true">▶</span></button><label for="scrub" class="hand" data-zh="拖动画稿">Turn the pencil back</label><output id="study-time" for="scrub">0:00</output></div><input type="range" id="scrub" min="0" max="35" step="1" value="0" aria-label="Scrub the drawing" data-zh-label="拖动查看落笔过程"></figcaption>
+      <figcaption><div class="study-control"><button type="button" id="study-play" aria-label="Play the drawing" data-zh-label="播放画稿"><span aria-hidden="true">▶</span></button><label for="scrub" class="hand"><span class="scroll-label" data-zh="滚动或拖动画稿">Scroll or scrub the drawing</span><span class="drag-label" data-zh="拖动画稿">Scrub the drawing</span></label><output id="study-time" for="scrub">0:00</output></div><input type="range" id="scrub" min="0" max="35" step="1" value="0" aria-label="Scrub the drawing" data-zh-label="拖动查看落笔过程"></figcaption>
     </figure>
   </section>
   <section class="sound" id="sound" aria-labelledby="sound-title"><div class="wrap sound-grid">
