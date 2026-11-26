@@ -1,5 +1,5 @@
-@font-face{font-family:PaperDisplay;src:url(../starter/fonts/Display.ttf) format("truetype");font-style:normal;font-weight:400 900;font-display:swap}
-@font-face{font-family:PaperText;src:url(../starter/fonts/Narrator.ttf) format("truetype");font-style:normal;font-weight:400 900;font-display:swap}
+@font-face{font-family:PaperDisplay;src:url(display.woff2) format("woff2");font-style:normal;font-weight:400 900;font-display:swap}
+@font-face{font-family:PaperText;src:url(narrator.woff2) format("woff2");font-style:normal;font-weight:400 900;font-display:swap}
 
 :root{
   color-scheme:light;

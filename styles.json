@@ -1606,8 +1606,8 @@
         "assets": [
           "styles/papercut-red/showcase/showcase.css",
           "styles/papercut-red/showcase/showcase.mjs",
-          "styles/papercut-red/starter/fonts/Display.ttf",
-          "styles/papercut-red/starter/fonts/Narrator.ttf",
+          "styles/papercut-red/showcase/display.woff2",
+          "styles/papercut-red/showcase/narrator.woff2",
           "styles/papercut-red/starter/fonts/OFL-Fraunces.txt",
           "styles/papercut-red/starter/fonts/OFL-Bodoni-Moda.txt"
         ]

@@ -1,33 +1,22 @@
 {
   "release": "vermilion-papercut-screening-v1",
   "archive": {
-    "name": "vermilion-paper-screening-v1.tar.gz",
-    "bytes": 1525863,
-    "sha256": "9139c39c452dcd4e364c776da7353cf4863c5d8e1cb7e625439731e4561dc8fc",
-    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/vermilion-paper-screening-v1.tar.gz"
+    "name": "vermilion-paper-page-v1.tar.gz",
+    "bytes": 390941,
+    "sha256": "78072e75d602adfb11be8140f27e0dc74472489838d8f7cd682abb439ec39c19",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/vermilion-paper-page-v1.tar.gz"
   },
   "files": [
-    "media/cut-motion-0.webp",
-    "media/cut-motion-1.webp",
-    "media/cut-motion-2.webp",
     "media/cut-start.webp",
     "media/ferry-poster.webp",
     "media/ferry.vtt",
     "media/films.json",
-    "media/fold-motion-0.webp",
-    "media/fold-motion-1.webp",
     "media/fold-start.webp",
     "media/glowing-arrow.webp",
-    "media/light-motion-0.webp",
-    "media/light-motion-1.webp",
-    "media/light-motion-2.webp",
     "media/light-start.webp",
     "media/motion.json",
     "media/opening.webp",
     "media/rice-fibre.webp",
-    "media/turn-motion-0.webp",
-    "media/turn-motion-1.webp",
-    "media/turn-motion-2.webp",
     "media/turn-start.webp",
     "media/wind-poster.webp",
     "media/wind.vtt"
@@ -80,6 +69,30 @@
       "bytes": 29582737,
       "sha256": "098ec43124339fd02e9632e505b5af5b4be150346d34baf9562183e0b488b177",
       "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/wind.mp4"
+    },
+    {
+      "name": "paper-cut-frames.webp",
+      "bytes": 229260,
+      "sha256": "de98a879efecc07773b9b6befc7a489c6ffa3d2d81a97c4207b4528ec6095bce",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/paper-cut-frames.webp"
+    },
+    {
+      "name": "paper-fold-frames.webp",
+      "bytes": 177220,
+      "sha256": "11864362e6b5e5b520f13ffcad892018f9eaf514fb5b5b72ab21d1223f0c4e7c",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/paper-fold-frames.webp"
+    },
+    {
+      "name": "paper-light-frames.webp",
+      "bytes": 325590,
+      "sha256": "7809b1855b0078365ee5329a02f8f017ae50a734e904fe5226b9b889979f567a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/paper-light-frames.webp"
+    },
+    {
+      "name": "paper-turn-frames.webp",
+      "bytes": 408012,
+      "sha256": "bea1816398cf528cda96ff90b7218c3a474d9f4f26393fd15197f3375b4a43d2",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/paper-turn-frames.webp"
     }
   ]
 }

@@ -180,7 +180,7 @@ function sprite(file) {
     item.ready = true;
     schedule();
   });
-  image.src = media(file);
+  image.src = new URL(file,media('')).href;
   return item;
 }
 
