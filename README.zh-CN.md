@@ -17,7 +17,7 @@
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh">松籽乘风 · 彩铅放映页 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=zh">纸上有数 · 马克笔放映页 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=zh">一跃，一旋 · 平板速写放映页 ↗</a> ·
-  <a href="https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=zh">城市交响曲 · 三城放映 ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=zh">城市交响曲 · 滚动三城影像 ↗</a> ·
   <a href="#风格手册">浏览风格</a> ·
   <a href="#制作你的影片">开始创作</a> ·
   <a href="CONTRIBUTING.md">参与贡献</a> ·

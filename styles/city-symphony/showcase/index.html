@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>City Symphony — Three City Films · Codex Film Studio</title>
-<meta name="description" content="Turn a photographic record into sixteen city windows. Watch and hear three scored films of Chongqing, San Francisco and New York Harbor.">
+<meta name="description" content="Scroll through moving frames from Chongqing, San Francisco and New York Harbor. Open the full film at any frame and hear its original score.">
 <meta name="theme-color" content="#101918">
 <link rel="icon" href="../../../catalog/mark.svg" type="image/svg+xml">
-<link rel="preload" href="record.avif" as="image">
+<link rel="preload" href="michroma.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="symphony.css">
 <script type="module" src="symphony.mjs"></script>
 <script type="module" src="../../../catalog/agent-start.mjs"></script>
@@ -20,20 +20,29 @@
    <a class="brand" href="../../../?lang=en"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Codex Film Studio</a>
    <nav aria-label="Site"><a class="library" href="../../../?lang=en#library" data-zh="全部风格">All styles</a><span class="divider" aria-hidden="true"></span><a id="language" href="?lang=zh" hreflang="zh" lang="zh">中文</a></nav>
   </header>
-  <div class="stage wrap">
-   <div class="intro">
-    <p class="imprint"><span aria-hidden="true"></span><b data-zh="三城放映">A three-city screening</b></p>
-    <h1 id="title"><span data-zh="城市">City</span> <em data-zh="交响曲">Symphony</em></h1>
-    <p class="opening" data-zh="一列火车穿进楼房。一辆缆车翻过山脊。一艘渡轮划开港湾。三座城市，各有自己的拍子。">A train threads a tower. A cable car crests a hill. A ferry cuts the harbor. Three cities keep their own time.</p>
-    <div class="entry"><a class="watch" href="#screening"><span aria-hidden="true">▶</span><b data-zh="看三部短片">Watch the films</b></a><button class="follow" id="follow" type="button"><span aria-hidden="true">↻</span><b data-zh="让唱片转动">Turn the record</b></button></div>
-   </div>
-   <figure class="turntable" aria-label="A photographic record of three cities unfolding into sixteen windows">
-    <img class="record-fallback" src="record.avif" alt="" fetchpriority="high" width="900" height="900">
-    <canvas id="pressing" aria-hidden="true"></canvas>
-    <figcaption><span class="signal" aria-hidden="true"></span><span id="stage-caption" data-zh="唱片上的三座城">Three cities on a record</span></figcaption>
+  <div class="stage">
+   <figure class="projection" aria-label="A scroll-controlled montage from the selected city film">
+    <img id="overture-poster" fetchpriority="high" src="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/chongqing.webp" alt="" width="880" height="495">
+    <canvas id="projection-frame" aria-hidden="true"></canvas>
    </figure>
+   <div class="poster-burn" aria-hidden="true"></div>
+   <div class="intro wrap">
+    <p class="imprint"><span aria-hidden="true"></span><b data-zh="三城实拍短片展">Three films on location</b></p>
+    <h1 id="title"><span data-zh="城市">City</span> <em data-zh="交响曲">Symphony</em></h1>
+    <p class="opening" data-zh="列车穿楼，缆车越岭，渡轮离岸。三座城市，各有自己的拍子。">A train threads a tower. A cable car crests a hill. A ferry cuts the harbor.</p>
+    <div class="entry"><a class="watch" href="#screening"><span aria-hidden="true">▶</span><b data-zh="看完整影片">Watch the films</b></a><button class="follow" id="follow" type="button" aria-pressed="false"><span aria-hidden="true">▷</span><b id="follow-text" data-zh="跟随剪辑">Follow the cut</b></button></div>
+   </div>
+   <div class="film-signature" aria-hidden="true"><span></span><i></i></div>
   </div>
-  <div class="ruler wrap"><span class="scroll-note"><span aria-hidden="true">↓</span> <span data-zh="滚动展开分屏">Scroll to split the frame</span></span><div class="meter" aria-hidden="true"><i></i></div><span class="ends" data-zh="从一幅影像到十六扇窗">One image to sixteen windows</span></div>
+  <div class="cue-desk wrap">
+   <div class="city-selector" role="group" aria-label="Select the city shown in the prologue">
+    <button data-prologue="chongqing" type="button" aria-pressed="true" data-zh="重庆">Chongqing</button>
+    <button data-prologue="san-francisco" type="button" aria-pressed="false" data-zh="旧金山">San Francisco</button>
+    <button data-prologue="new-york" type="button" aria-pressed="false" data-zh="纽约港">New York Harbor</button>
+   </div>
+   <div class="cue-line"><span class="scroll-note"><i aria-hidden="true">↓</i> <span data-zh="滚动剪辑">Scroll the film</span></span><div class="meter" aria-hidden="true"><i></i></div></div>
+   <div class="cue-readout"><span id="stage-caption" data-zh="洪崖洞亮灯">Lights on at Hongya Cave</span><span id="cut-time" aria-hidden="true"></span><button id="pause-guide" type="button" hidden data-zh="暂停">Pause</button><a id="match-cut" href="#screening" hidden data-zh="从这一格放映 ↗">Play from this frame ↗</a></div>
+  </div>
  </div>
 </section>
 <section id="screening" class="screening sheet" aria-labelledby="programme-title">
@@ -50,7 +59,7 @@
  </div>
 </section>
 <section class="listening" id="listening" aria-labelledby="sound-title"><div class="wrap sound-layout">
- <div class="sound-heading"><p class="folio" data-zh="唱片的另一面">The B-side</p><h2 id="sound-title" data-zh="听，最后一拍。">Hear the last beat.</h2><p id="sound-note"></p></div>
+ <div class="sound-heading"><p class="folio" data-zh="配乐试听">The listening room</p><h2 id="sound-title" data-zh="听，最后一拍。">Hear the last beat.</h2><p id="sound-note"></p></div>
  <div class="sound-cues"><div><span class="track-no" aria-hidden="true">A</span><div><h3 id="score-title">Through the Tiered Streets</h3><p data-zh="为本片生成的 Gemini 原曲">Original Gemini instrumental</p><audio id="score" controls preload="none"></audio></div></div>
  <div><span class="track-no" aria-hidden="true">B</span><div><h3 data-zh="从街景到朗读">From street to spoken line</h3><p id="coda-window"></p><audio id="coda" controls preload="none"></audio></div></div></div>
  </div></section>

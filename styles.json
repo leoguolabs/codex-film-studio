@@ -1487,11 +1487,11 @@
         "assets": [
           "styles/city-symphony/showcase/credits.html",
           "styles/city-symphony/showcase/grain.png",
-          "styles/city-symphony/showcase/record.avif",
-          "styles/city-symphony/showcase/record.mjs",
+          "styles/city-symphony/showcase/contact-print.avif",
+          "styles/city-symphony/showcase/michroma.woff2",
+          "styles/city-symphony/showcase/projection.mjs",
           "styles/city-symphony/showcase/symphony.css",
-          "styles/city-symphony/showcase/symphony.mjs",
-          "styles/city-symphony/showcase/windows.avif"
+          "styles/city-symphony/showcase/symphony.mjs"
         ]
       },
       "public_assets": "styles/city-symphony/demo-assets.json"

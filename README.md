@@ -17,7 +17,7 @@
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">A seed on the wind · colored-pencil films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en">Paper Math · marker films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en">A Pop &amp; a Pirouette · tablet sketch films ↗</a> ·
-  <a href="https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=en">City Symphony · three city films ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=en">City Symphony · scroll through three films ↗</a> ·
   <a href="#the-style-atlas">Explore styles</a> ·
   <a href="#make-your-film">Start creating</a> ·
   <a href="CONTRIBUTING.md">Contribute</a> ·

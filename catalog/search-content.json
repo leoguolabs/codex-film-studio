@@ -191,12 +191,12 @@
     "en": {
       "use": "Three photographic portraits of Chongqing, San Francisco and New York Harbor.",
       "method": "Cut trains, cable cars and ferries to an original score. Build two, four, nine and sixteen windows, then bring an archive into the present.",
-      "check": "Turn the picture disc, watch the three English films and listen across the final cut from street to spoken line."
+      "check": "Scroll real frames from any of the three films, open the full film at that frame, and listen across the final cut to the spoken line."
     },
     "zh": {
       "use": "重庆、旧金山和纽约港的三部实拍城市肖像。",
       "method": "跟着音乐剪列车、缆车和渡轮；把画面展开为两格、四格、九格、十六格，再让档案与今天的街景并置。",
-      "check": "用滚轮展开摄影唱片，观看三部英文短片，听同一首配乐怎样从街景延续到片尾朗读。"
+      "check": "滚动实拍画格，看分屏、档案与书页，停在任意画格接着播放原片，再听音乐怎样延续到片尾朗读。"
     }
   }
 }

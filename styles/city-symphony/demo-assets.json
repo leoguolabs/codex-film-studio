@@ -66,6 +66,60 @@
       "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/new-york-coda.m4a",
       "bytes": 264924,
       "sha256": "8970d746002d8975bebc85ca7eec831659ef3935f975173b5c3696147a8c970f"
+    },
+    {
+      "name": "chongqing-scroll-v1.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/chongqing-scroll-v1.mp4",
+      "bytes": 3779968,
+      "sha256": "3b234dc658a60d178a4f56ad9d306dc76c41f3b7424c9a17abfc31a8dce371f7"
+    },
+    {
+      "name": "san-francisco-scroll-v1.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/san-francisco-scroll-v1.mp4",
+      "bytes": 3395203,
+      "sha256": "efa59bcf0c6e339477d86577ba9f92b8d6512d5c0b3d4eb14d123836f18c03d6"
+    },
+    {
+      "name": "new-york-scroll-v1.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/new-york-scroll-v1.mp4",
+      "bytes": 3376818,
+      "sha256": "15319e923c7860c3a15ddd2aecd391401423cbb8517ac7d98f350e7a429b570d"
+    },
+    {
+      "name": "chongqing-exposures-1-v1.webp",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/chongqing-exposures-1-v1.webp",
+      "bytes": 781004,
+      "sha256": "623b6255f145330e15ef90667ba5db45c135aaa571f4c5a5935b8b0bb27649f6"
+    },
+    {
+      "name": "chongqing-exposures-2-v1.webp",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/chongqing-exposures-2-v1.webp",
+      "bytes": 821708,
+      "sha256": "3cbb27323720e7af00e167ec59aa8de5cdafb90d4ce625c4715b7383315f5324"
+    },
+    {
+      "name": "san-francisco-exposures-1-v1.webp",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/san-francisco-exposures-1-v1.webp",
+      "bytes": 822604,
+      "sha256": "4da30d64870ebffb14bee6bbb3c5fac997814a212fc601a71d8fa5ce04e42811"
+    },
+    {
+      "name": "san-francisco-exposures-2-v1.webp",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/san-francisco-exposures-2-v1.webp",
+      "bytes": 633846,
+      "sha256": "b936af2ed455bc0dc56d92c7b47391662d94bfed600f7a4a5974643345a2800f"
+    },
+    {
+      "name": "new-york-exposures-1-v1.webp",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/new-york-exposures-1-v1.webp",
+      "bytes": 528774,
+      "sha256": "2c70aef43bc6bf8de466464bea613e98a5d7da8389ceaf49e9568a2ccf460783"
+    },
+    {
+      "name": "new-york-exposures-2-v1.webp",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/new-york-exposures-2-v1.webp",
+      "bytes": 508778,
+      "sha256": "b5778afcb801c2e3e3bea0897dc87d20f5d676dc5a82f4d91ba4100ae2d29965"
     }
   ]
 }

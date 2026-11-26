@@ -322,6 +322,12 @@ References: [Google JavaScript SEO](https://developers.google.com/search/docs/cr
 [robots.txt scope](https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt),
 [Google AI search guidance](https://developers.google.com/search/docs/appearance/ai-features),
 [OpenAI search crawler](https://developers.openai.com/api/docs/bots).
+## City Symphony
+
+The [City Symphony screening room](https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=en) opens on a location photograph. Scroll in either direction to move through excerpts from the selected film. The edit grows from two windows to sixteen, pauses on a single action, pairs archive and present, then cuts to black and a printed document. Selecting a frame opens the complete film at its corresponding time.
+
+The three release reels use the original 30 fps timeline. Paired contact sheets carry the same moving shots through decoder seeks. The smaller on-page print covers the initial load. The prologue is silent, leaves scrolling in the browser’s control and offers a still opening with reduced motion. The screening room holds the English captions, the original scores, a closing mix excerpt for each film and the picture credits.
+
 ## Finished films on style pages
 
 Every primary style page leads with a final MP4. Interactive material studies

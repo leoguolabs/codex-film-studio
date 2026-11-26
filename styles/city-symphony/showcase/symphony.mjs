@@ -1,4 +1,4 @@
-import {mountRecord} from './record.mjs';
+import {mountProjection} from './projection.mjs';
 
 const select = id => document.getElementById(id);
 const plateRoot = ['localhost','127.0.0.1','[::1]'].includes(location.hostname) ? 'plates/' : 'https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/';
@@ -34,12 +34,47 @@ const films = {
     lineCredit:['Original closing line, spoken in English','原创片尾独白 · 英语朗读']
   }
 };
-const stageNames=[['Three cities on a record','唱片上的三座城'],['Two windows · counterpoint','两扇窗 · 对位'],['Four windows · four beats','四扇窗 · 四拍'],['Nine windows · cross rhythms','九扇窗 · 交错节奏'],['Sixteen windows · full ensemble','十六扇窗 · 合奏']];
-let stage=0, entries=[], active=Object.hasOwn(films,params.get('film'))?params.get('film'):'chongqing';
+const phrases = {
+  chongqing: {
+    opening:['Lights on at Hongya Cave','洪崖洞亮灯'], street:['A train enters Liziba','列车驶入李子坝'],
+    brake:['A boat on the river','一叶船横过江面'], archive:['Chaotianmen, 1941 / today','朝天门，1941 / 今日街梯'],
+    page:['A map of the rivers','展开旧地图']
+  },
+  'san-francisco': {
+    opening:['Golden Gate at dusk','暮色中的金门大桥'], street:['Over the crest by cable car','缆车翻过山脊'],
+    brake:['A ride between the rails','沿着缆车轨道前行'], archive:['Market Street, 1906 / a modern ride','市场街，1906 / 今日缆车'],
+    page:['A page of Bret Harte','布雷特·哈特的诗页']
+  },
+  'new-york': {
+    opening:['The Staten Island Ferry','斯塔滕岛渡轮'], street:['Ferry at the slip','渡轮离岸'],
+    brake:['A gull crosses the harbor','海鸥掠过港湾'], archive:['New York Harbor, 1903 / today','纽约港，1903 / 今日'],
+    page:['The 1845 harbor chart','1845 年的港湾海图']
+  }
+};
+const sharedCues = {
+  two:['Two windows','两格对位'], four:['Four windows','四格齐奏'],
+  nine:['Nine windows','九格交错'], sixteen:['Sixteen windows','十六格合奏'],
+  black:['Cut to black','切入黑场']
+};
+let entries = [];
+let active = Object.hasOwn(films,params.get('film')) ? params.get('film') : 'chongqing';
+let phase = 'opening', sourceFrame = null, projection;
 const player=select('picture'),score=select('score'),coda=select('coda');
 const media=[player,score,coda];
 const clock=seconds=>Math.floor(seconds/60)+':'+String(Math.floor(seconds%60)).padStart(2,'0');
-function labelStage(n){stage=n;select('stage-caption').textContent=translate(stageNames[n])}
+function labelCue(name, frame) {
+  phase = name; sourceFrame = frame;
+  select('stage-caption').textContent=translate(sharedCues[name] || phrases[active][name]);
+  select('cut-time').textContent = frame===null ? '' :
+    [Math.floor(frame/1800), Math.floor(frame/30)%60, frame%30].map(n=>String(n).padStart(2,'0')).join(':');
+  select('cut-time').title=translate(['Minutes, seconds, frames at 30 fps','分、秒、帧，每秒三十帧']);
+  select('match-cut').hidden=frame===null;
+}
+function playFrom(seconds) {
+  player.currentTime=seconds;
+  player.play().catch(()=>{});
+  player.focus({preventScroll:true});
+}
 function setURL() {
   const url=new URL(location.href);url.searchParams.set('lang',language);url.searchParams.set('film',active);
   history.replaceState(null,'',url);
@@ -61,8 +96,7 @@ function drawFilm(changeMedia=false) {
     const b=document.createElement('button');b.type='button';b.className='chapter';
     const when=document.createElement('span');when.textContent=clock(time);b.append(when,translate([en,zh]));
     b.addEventListener('click',()=>{
-      // Assign the pending seek before play so a fresh film opens on the selected frame.
-      player.currentTime=time;player.play().catch(()=>{});player.focus({preventScroll:true});
+      playFrom(time);
     });return b;
   }));
   if(changeMedia) {
@@ -81,14 +115,35 @@ function setLanguage() {
   url.searchParams.set('lang',other);url.searchParams.set('film',active);langLink.href=url;langLink.textContent=other==='en'?'EN':'中文';langLink.lang=other;langLink.hreflang=other;
   document.querySelectorAll('a.brand').forEach(el=>el.href='../../../?lang='+language);
   document.querySelectorAll('a.library').forEach(el=>el.href='../../../?lang='+language+'#library');
-  select('pressing').parentElement.setAttribute('aria-label',translate(['A photographic record of three cities unfolds into sixteen windows','三座城市的摄影唱片随滚动展开成十六格分屏']));
-  labelStage(stage);drawFilm();
+  select('projection-frame').parentElement.setAttribute('aria-label',translate(['Use the scroll wheel to run real film frames forward and backward','用滚轮正放或倒放成片的真实画格']));
+  document.querySelector('.city-selector').setAttribute('aria-label',translate(['Choose a city for the prologue','选择序幕中的城市']));
+  document.querySelectorAll('[data-prologue]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.prologue===active)));
+  labelCue(phase,sourceFrame);drawFilm();
 }
 select('language').addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();language=language==='zh'?'en':'zh';setURL();setLanguage()});
-document.querySelectorAll('[data-film]').forEach(b=>b.addEventListener('click',()=>{if(active===b.dataset.film)return;active=b.dataset.film;setURL();setLanguage();drawFilm(true)}));
+function chooseCity(id) {
+  if (id===active) return;
+  active=id;
+  phase='opening'; sourceFrame=null;
+  setURL(); setLanguage(); drawFilm(true);
+  projection.selectCity(id);
+}
+document.querySelectorAll('[data-film],[data-prologue]').forEach(b=>{
+  b.addEventListener('click',()=>chooseCity(b.dataset.film || b.dataset.prologue));
+});
+let pressedFrame=null;
+select('match-cut').addEventListener('pointerdown',()=>{pressedFrame=sourceFrame});
+select('match-cut').addEventListener('pointercancel',()=>{pressedFrame=null});
+select('match-cut').addEventListener('click', event=>{
+  if(sourceFrame===null || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)return;
+  const time=(event.detail && pressedFrame!==null ? pressedFrame : sourceFrame)/30;
+  pressedFrame=null;
+  projection.stopGuide();
+  playFrom(time);
+});
 media.forEach(el=>el.addEventListener('play',()=>media.filter(other=>other!==el).forEach(other=>other.pause())));
 setLanguage();
-mountRecord(select('overture'),labelStage).catch(()=>{select('follow').hidden=true;select('overture').classList.add('still')});
+projection=mountProjection({section:select('overture'),city:active,posterURL:plate,onCue:labelCue});
 try {
   const response=await fetch('media/films.json');if(!response.ok)throw Error(response.status);
   ({films:entries}=await response.json());drawFilm(true);
