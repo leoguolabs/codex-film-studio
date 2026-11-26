@@ -2,8 +2,8 @@
   "release": "vermilion-papercut-screening-v1",
   "archive": {
     "name": "vermilion-paper-screening-v1.tar.gz",
-    "bytes": 1530950,
-    "sha256": "7278d6195720c62cb139b06f16e379347d66969e07cc7efe514041042fe5dd42",
+    "bytes": 1525863,
+    "sha256": "9139c39c452dcd4e364c776da7353cf4863c5d8e1cb7e625439731e4561dc8fc",
     "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/vermilion-paper-screening-v1.tar.gz"
   },
   "files": [
