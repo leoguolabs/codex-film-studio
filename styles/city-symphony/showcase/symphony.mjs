@@ -1,8 +1,20 @@
 import {mountProjection} from './projection.mjs';
 
 const select = id => document.getElementById(id);
-const plateRoot = ['localhost','127.0.0.1','[::1]'].includes(location.hostname) ? 'plates/' : 'https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/';
+const localPlates = ['localhost','127.0.0.1','[::1]'].includes(location.hostname);
+const plateRoot = localPlates ? 'plates/' : 'https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/';
 const plate = (city, suffix = '') => plateRoot + city + suffix + '.webp';
+const portrait = select('overture-portrait');
+const chongqingWide = localPlates ? plate('chongqing', '-cover-4k') : select('overture-poster').src;
+const chongqingPortrait = localPlates ? plate('chongqing', '-cover-portrait') : portrait.srcset;
+const openingPhoto = city => city === 'chongqing' ? chongqingWide : plate(city);
+function setOpeningPortrait(city) {
+  if (city === 'chongqing') {
+    portrait.srcset = chongqingPortrait;
+  } else {
+    portrait.removeAttribute('srcset');
+  }
+}
 document.querySelectorAll('[data-film] img').forEach(img => { img.src = plate(img.closest('button').dataset.film); });
 const params = new URLSearchParams(location.search);
 let language = params.get('lang') === 'zh' || (!params.has('lang') && navigator.language.startsWith('zh')) ? 'zh' : 'en';
@@ -126,6 +138,7 @@ function chooseCity(id) {
   active=id;
   phase='opening'; sourceFrame=null;
   setURL(); setLanguage(); drawFilm(true);
+  setOpeningPortrait(id);
   projection.selectCity(id);
 }
 document.querySelectorAll('[data-film],[data-prologue]').forEach(b=>{
@@ -143,7 +156,8 @@ select('match-cut').addEventListener('click', event=>{
 });
 media.forEach(el=>el.addEventListener('play',()=>media.filter(other=>other!==el).forEach(other=>other.pause())));
 setLanguage();
-projection=mountProjection({section:select('overture'),city:active,posterURL:plate,onCue:labelCue});
+setOpeningPortrait(active);
+projection=mountProjection({section:select('overture'),city:active,posterURL:openingPhoto,onCue:labelCue});
 try {
   const response=await fetch('media/films.json');if(!response.ok)throw Error(response.status);
   ({films:entries}=await response.json());drawFilm(true);

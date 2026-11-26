@@ -213,7 +213,11 @@ export function mountProjection({section, city, posterURL, onCue}) {
         drawPrint(Math.min(23,key+1),cx+smallW+8,cy,smallW,smallH);
         shown = reel.keys[key]; mode = 'contact';
       } else if (poster.complete && poster.naturalWidth) {
-        context.drawImage(poster,x,y,w,h);
+        // A phone's opening photograph is vertical. Crop it to the film aperture during a seek.
+        const sw = Math.min(poster.naturalWidth, poster.naturalHeight * w / h);
+        const sh = sw * h / w;
+        context.drawImage(poster, (poster.naturalWidth - sw) / 2, (poster.naturalHeight - sh) / 2,
+                          sw, sh, x, y, w, h);
       }
     }
     if (still || shown===null) publishCue('opening',null,mode);

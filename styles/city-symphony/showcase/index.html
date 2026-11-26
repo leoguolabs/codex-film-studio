@@ -22,7 +22,10 @@
   </header>
   <div class="stage">
    <figure class="projection" aria-label="A scroll-controlled montage from the selected city film">
-    <img id="overture-poster" fetchpriority="high" src="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/chongqing.webp" alt="" width="880" height="495">
+    <picture>
+     <source id="overture-portrait" media="(max-width: 700px) and (orientation: portrait)" srcset="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/8a0d1364696aeb7f7b1bea196666812393132281/styles/city-symphony/showcase/plates/chongqing-cover-portrait.webp" width="1440" height="2160">
+     <img id="overture-poster" fetchpriority="high" src="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/8a0d1364696aeb7f7b1bea196666812393132281/styles/city-symphony/showcase/plates/chongqing-cover-4k.webp" alt="" width="3840" height="2160">
+    </picture>
     <canvas id="projection-frame" aria-hidden="true"></canvas>
    </figure>
    <div class="poster-burn" aria-hidden="true"></div>
