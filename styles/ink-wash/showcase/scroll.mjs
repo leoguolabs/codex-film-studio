@@ -196,6 +196,24 @@ reduced.addEventListener('change', motionMode);
 showFrame(0);
 motionMode();
 
+// Warm the HTTP cache while the reader takes in the first painting. The
+// browser can discard these hints on a constrained connection or device.
+function warmHandscroll() {
+  if (navigator.connection?.saveData || reduced.matches || location.hash) return;
+  for (const key of Object.keys(films)) {
+    for (let sheet = 0; sheet < 7; sheet++) {
+      if (sheets.has(key + '-' + sheet)) continue;
+      const hint = document.createElement('link');
+      hint.rel = 'prefetch';
+      hint.as = 'image';
+      hint.href = 'media/' + key + '-ink-' + sheet + '.webp';
+      document.head.append(hint);
+    }
+  }
+}
+if ('requestIdleCallback' in window) window.requestIdleCallback(warmHandscroll);
+else window.setTimeout(warmHandscroll, 300);
+
 const video = $('film'),
   audio = $('audio');
 let filmId = 'moon',
