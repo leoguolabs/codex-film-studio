@@ -30,6 +30,8 @@ For `colored-pencil`, use the bundled perspective world and graphite lens in the
 
 For `marker-paper`, draw a worked question across numbered sheets. Register the same ink stroke on both sides of a camera push. Group nearby glyphs into a soft felt-tip rub. Retain the requested Gemini performance, its cue edit and the separate page-turn stem. The style README links to the two-film screening. For a skill-only trial, seal the first encode before opening it.
 
+For `papercut-red`, use the copied Vermilion Paper Cut guide and blank kit. Author pierced paper paths, pinned profile actions and a practical fold or light reveal. Keep separate paper Foley and narration. When a score generator is requested, retain its original recording and edit points and use the kit’s score-replacement workflow. [Paper Holds Light](https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html) demonstrates four gestures and screens the two examples.
+
 ## Start from the user's brief
 
 A natural-language request is sufficient to start. The Agent

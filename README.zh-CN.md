@@ -48,7 +48,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**25 种风格** · 25 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**26 种风格** · 26 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -305,6 +305,16 @@ codex plugin add codex-film-studio@visiontrail
 <sub>Xuan Ink Wash</sub>
 <p>苍鹭啄向水中月，狐狸跃起够秋柿。滚动宣纸手卷，逐帧展开这两笔。</p>
 <p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=zh"><img src="docs/readme/frames/papercut-red.jpg" alt="朱红窗花剪纸 — 影片截图" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>26 / <code>papercut-red</code></sub>
+<h3>朱红窗花剪纸</h3>
+<sub>Vermilion Paper Cut</sub>
+<p>让滚轮带动剪刀、展开纸鸢、点亮一扇窗，再看两部朱红窗花剪纸短片。</p>
+<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=zh">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

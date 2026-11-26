@@ -1,0 +1,85 @@
+{
+  "release": "vermilion-papercut-screening-v1",
+  "archive": {
+    "name": "vermilion-paper-screening-v1.tar.gz",
+    "bytes": 1530950,
+    "sha256": "7278d6195720c62cb139b06f16e379347d66969e07cc7efe514041042fe5dd42",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/vermilion-paper-screening-v1.tar.gz"
+  },
+  "files": [
+    "media/cut-motion-0.webp",
+    "media/cut-motion-1.webp",
+    "media/cut-motion-2.webp",
+    "media/cut-start.webp",
+    "media/ferry-poster.webp",
+    "media/ferry.vtt",
+    "media/films.json",
+    "media/fold-motion-0.webp",
+    "media/fold-motion-1.webp",
+    "media/fold-start.webp",
+    "media/glowing-arrow.webp",
+    "media/light-motion-0.webp",
+    "media/light-motion-1.webp",
+    "media/light-motion-2.webp",
+    "media/light-start.webp",
+    "media/motion.json",
+    "media/opening.webp",
+    "media/rice-fibre.webp",
+    "media/turn-motion-0.webp",
+    "media/turn-motion-1.webp",
+    "media/turn-motion-2.webp",
+    "media/turn-start.webp",
+    "media/wind-poster.webp",
+    "media/wind.vtt"
+  ],
+  "streams": [
+    {
+      "name": "ferry-foley.m4a",
+      "bytes": 509312,
+      "sha256": "0affe2f228f8fed1998b07fbd4278d304d74e27a4d7b3e9f8f3dea6c74e75e4b",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/ferry-foley.m4a"
+    },
+    {
+      "name": "ferry-original.m4a",
+      "bytes": 1450659,
+      "sha256": "91dda9c9e9c4d4d34e3a36751097959c3ee034a5e4aad418dc223ad2cf6df3c1",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/ferry-original.m4a"
+    },
+    {
+      "name": "ferry-score.m4a",
+      "bytes": 951479,
+      "sha256": "bff96132c80ba6269877a144077b712b8eb2ff7950bcea00e282db9bf763cbef",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/ferry-score.m4a"
+    },
+    {
+      "name": "ferry.mp4",
+      "bytes": 24321557,
+      "sha256": "a0a087251272caae304b0cc525696b4c4f75973ce2ff878c9f785fa6714cd41d",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/ferry.mp4"
+    },
+    {
+      "name": "wind-foley.m4a",
+      "bytes": 540553,
+      "sha256": "368a3a563c32ef62fa23e24cc357fda1d120f45e4051a45657e153773549e5b6",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/wind-foley.m4a"
+    },
+    {
+      "name": "wind-original.m4a",
+      "bytes": 1451024,
+      "sha256": "f0dcc870cb1ea8bae27536a335d2862d6bf0c046959dd3cf4b8369020bb31c49",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/wind-original.m4a"
+    },
+    {
+      "name": "wind-score.m4a",
+      "bytes": 992929,
+      "sha256": "906b1c8a53b0773b7018bfd2d2d27eee14581a6944bd355e2217a602de8730b9",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/wind-score.m4a"
+    },
+    {
+      "name": "wind.mp4",
+      "bytes": 29582737,
+      "sha256": "098ec43124339fd02e9632e505b5af5b4be150346d34baf9562183e0b488b177",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/vermilion-papercut-screening-v1/wind.mp4"
+    }
+  ]
+}

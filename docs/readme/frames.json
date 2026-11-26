@@ -454,6 +454,23 @@
       "image": "docs/readme/frames/ink-wash.jpg",
       "image_sha256": "308c80cf66a9306e414d5f89be11568f6347227c74e8e5cabfc950adc7025d2a",
       "treatment": "Complete frame at the opening of the ink wave, resized to 960 × 540."
+    },
+    {
+      "style": "papercut-red",
+      "source_video": "The Wind’s Two Tails / final Gemini-scored master",
+      "source_sha256": "098ec43124339fd02e9632e505b5af5b4be150346d34baf9562183e0b488b177",
+      "title": "The Wind’s Two Tails",
+      "title_zh": "风的两条尾巴",
+      "seconds": 40.833333333333336,
+      "frame": 980,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/papercut-red.jpg",
+      "image_sha256": "2f7a3fb3ef7e1cae1559608acfb05d232ef153cce1f561ffb5dc5889ed6c7108",
+      "treatment": "Complete encoded frame of the paper turn, resized to 1280 × 720."
     }
   ]
 }

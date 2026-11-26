@@ -1556,6 +1556,63 @@
         ]
       },
       "public_assets": "styles/ink-wash/demo-assets.json"
+    },
+    {
+      "id": "papercut-red",
+      "name": "Vermilion Paper Cut",
+      "name_zh": "朱红窗花剪纸",
+      "description": "Paper scissors, mirror folds and candlelit apertures in two vermilion paper-cut fables.",
+      "description_zh": "让滚轮带动剪刀、展开纸鸢、点亮一扇窗，再看两部朱红窗花剪纸短片。",
+      "status": "renderer-ready",
+      "status_note": "Editable cut-paper renderer, synchronized audio and two released English shorts.",
+      "status_note_zh": "可编辑的剪纸渲染与同步音轨，已发布两部英文短片。",
+      "guide": "styles/papercut-red/STYLE.md",
+      "readme": "styles/papercut-red/README.md",
+      "prompt": "styles/papercut-red/prompt.txt",
+      "template": "styles/papercut-red/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "vermilion-paper-screening",
+          "title": "Paper Holds Light · two paper-cut films",
+          "title_zh": "纸里有光 · 朱红窗花剪纸双片",
+          "page": "styles/papercut-red/showcase/index.html",
+          "access": "release",
+          "media_manifest": "styles/papercut-red/showcase/media/films.json"
+        }
+      ],
+      "render_script": "scripts/render.mjs",
+      "renderer_entry": "engine/paper.mjs",
+      "preview": "docs/readme/frames/papercut-red.jpg",
+      "preview_zh": "docs/readme/frames/papercut-red.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "vermilion-paper-screening",
+      "landing": {
+        "page": "styles/papercut-red/showcase/index.html",
+        "assets": [
+          "styles/papercut-red/showcase/showcase.css",
+          "styles/papercut-red/showcase/showcase.mjs",
+          "styles/papercut-red/starter/fonts/Display.ttf",
+          "styles/papercut-red/starter/fonts/Narrator.ttf",
+          "styles/papercut-red/starter/fonts/OFL-Fraunces.txt",
+          "styles/papercut-red/starter/fonts/OFL-Bodoni-Moda.txt"
+        ]
+      },
+      "public_assets": "styles/papercut-red/demo-assets.json"
     }
   ],
   "capability_schema_version": 2

@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**25 styles** · 25 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**26 styles** · 26 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -293,6 +293,17 @@ Ask your Agent to open local showcases and check their retained project files.
 <sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en#screening">Between Strokes · two ink fables</a> · <a href="../styles/ink-wash/STYLE.md">Style guide</a> · <a href="../styles/ink-wash/prompt.txt">Prompt</a> · <a href="../styles/ink-wash/starter">Project files</a></sub>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=en"><img src="../docs/readme/frames/papercut-red.jpg" alt="Vermilion Paper Cut — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>26 / <code>papercut-red</code></sub>
+<h3>Vermilion Paper Cut</h3>
+<sub>朱红窗花剪纸</sub>
+<p>Paper scissors, mirror folds and candlelit apertures in two vermilion paper-cut fables.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=en">▶ Watch online</a></p>
+<sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=en">Style page</a> · <a href="../styles/papercut-red/STYLE.md">Style guide</a> · <a href="../styles/papercut-red/prompt.txt">Prompt</a> · <a href="../styles/papercut-red/starter">Project files</a></sub>
+</td>
+</tr>
 </table>
 
 ## Capabilities / 能力与网页
@@ -324,6 +335,7 @@ Ask your Agent to open local showcases and check their retained project files.
 | [平板速写讲解 / Tablet Sketch Explainer](ipad-sketch/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en) · [Watch the double feature](https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [城市交响曲 / City Symphony](city-symphony/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=en) · [Watch the three city films](https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [宣纸写意水墨 / Xuan Ink Wash](ink-wash/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en) · [Between Strokes · two ink fables](https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
+| [朱红窗花剪纸 / Vermilion Paper Cut](papercut-red/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=en) | `local-source-bundle` | `not-yet-revalidated` |
 
 ## What is complete / 已完成什么
 
@@ -352,6 +364,7 @@ Ask your Agent to open local showcases and check their retained project files.
 - **ipad-sketch** — 包含离线铅笔绘制、手势镜头、英文配音时间轴和逐笔拟音。 Offline pencil renderer, gesture camera, English voice timing and mark-driven sound.
 - **city-symphony** — 可直接运行的实拍蒙太奇制作包，按真实时间戳取帧。 Executable photographic montage kit and timestamp-based plate renderer.
 - **ink-wash** — 可编辑的压感毛笔、宣纸合成器、山水工具、配音配乐与离线渲染器。 Editable pressure brush, paper compositor, landscape tools, audio and offscreen compiler.
+- **papercut-red** — 可编辑的剪纸渲染与同步音轨，已发布两部英文短片。 Editable cut-paper renderer, synchronized audio and two released English shorts.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

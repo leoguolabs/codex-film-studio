@@ -52,8 +52,8 @@ def doctor(style):
             problems.append(f"{name} missing: {hint}.")
             continue
         command = [exe]
-        if style == "ink-wash" and name == "ffmpeg":
-            gate = ROOT / "styles/ink-wash/starter/scripts/ffmpeg_serial.py"
+        if style in {"ink-wash", "papercut-red"} and name == "ffmpeg":
+            gate = ROOT / "styles" / style / "starter/scripts/ffmpeg_serial.py"
             command = [sys.executable, str(gate), "--"]
         proc = subprocess.run([*command, "-version" if name.startswith("ff") else "--version"],
                               capture_output=True, text=True)
@@ -83,7 +83,10 @@ def prepare(project):
     whiteboard = (project / "scripts/import_audio.py").is_file()
     native_clay = (project / "engine/stage.metal").is_file()
     ink_wash = (project / "engine/ink.js").is_file() and (project / "engine/comp.js").is_file()
-    doctor("ink-wash" if ink_wash else "workbench-clay" if native_clay else "whiteboard" if whiteboard else None)
+    paper_cut = (project / "engine/paper.mjs").is_file() and (project / "scripts/replace_score.py").is_file()
+    style = ("papercut-red" if paper_cut else "ink-wash" if ink_wash else
+             "workbench-clay" if native_clay else "whiteboard" if whiteboard else None)
+    doctor(style)
 
     def run(cmd):
         subprocess.run(cmd, cwd=project, check=True)
@@ -95,7 +98,7 @@ def prepare(project):
             run(["npm", "run", "setup-renderer"])
         if "doctor" in scripts:
             run(["npm", "run", "doctor"])
-    if whiteboard or native_clay or ink_wash or (project / "scripts/paper_sound.py").is_file():
+    if style or (project / "scripts/paper_sound.py").is_file():
         run([sys.executable, "-m", "venv", ".venv"])
         run([str(project / ".venv/bin/python"), "-m", "pip", "install", "-r", "requirements.txt"])
     elif not (project / "package-lock.json").is_file():

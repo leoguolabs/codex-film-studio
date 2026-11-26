@@ -1,0 +1,14 @@
+[
+  {
+    "file": "fonts/Display.ttf",
+    "license": "fonts/OFL-Bodoni-Moda.txt",
+    "family": "Bodoni Moda",
+    "sha256": "550f5e34ee0a828d7941b1fe9bc58b34e5260d3f33a61532e6d0a0114e79a5cf"
+  },
+  {
+    "file": "fonts/Narrator.ttf",
+    "license": "fonts/OFL-Fraunces.txt",
+    "family": "Fraunces",
+    "sha256": "177ff6c0f14e5550a3c624247cd1189611d4eb65d000b14944c63d967958abbb"
+  }
+]

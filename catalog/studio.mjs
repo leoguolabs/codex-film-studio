@@ -31,6 +31,7 @@ const categories = {
   'workbench-clay':['material','animation'],
   'colored-pencil':['drawn','material','animation'],
   'ink-wash':['drawn','material','animation'],
+  'papercut-red':['drawn','material','animation'],
   'marker-paper':['drawn','material','animation'],
   'ipad-sketch':['drawn','animation','material'],
   'city-symphony':['geography','material'],

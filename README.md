@@ -48,7 +48,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**25 styles** · 25 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**26 styles** · 26 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -305,6 +305,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>宣纸写意水墨</sub>
 <p>A heron strikes at a reflected moon. A fox leaps for a persimmon. Unroll both gestures on xuan paper.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=en"><img src="docs/readme/frames/papercut-red.jpg" alt="Vermilion Paper Cut — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>26 / <code>papercut-red</code></sub>
+<h3>Vermilion Paper Cut</h3>
+<sub>朱红窗花剪纸</sub>
+<p>Paper scissors, mirror folds and candlelit apertures in two vermilion paper-cut fables.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=en">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

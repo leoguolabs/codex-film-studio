@@ -210,5 +210,17 @@
       "method": "用有轻重的笔触在宣纸上画出生灵。落笔前蓄势，接触之后让墨迹收住。",
       "check": "在喙尖破水、后爪蹬雪处来回滚动，单独试听原曲、片中配乐与拟音。"
     }
-  }
+  },
+    "papercut-red": {
+      "en": {
+        "use": "Open the red paper with the wheel and watch two original paper-cut films about a kite and a ferry.",
+        "method": "Cut apertures into textured, opaque paper shapes. Move joined limbs on twos, and use a fold, a cut or light for the action.",
+        "check": "Reverse the actual scissor and unfold frames, then compare the Gemini original recording, edited score and paper Foley."
+      },
+      "zh": {
+        "use": "用滚轮展开朱红剪纸，再看纸鸢与渡船的两部原创短片。",
+        "method": "在带纤维的不透明纸片上挖出剪孔。关节逐两帧移动，让折痕、剪口或透光改变故事。",
+        "check": "来回滚动查看剪刀、展开和透光的画格，再单独试听 Gemini 原曲、片中配乐和纸张拟音。"
+      }
+    }
 }

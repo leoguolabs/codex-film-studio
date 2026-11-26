@@ -1,0 +1,14 @@
+{
+  "name": "vermilion-papercut-film",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "proof": "node scripts/render.mjs proof",
+    "still": "node scripts/render.mjs still",
+    "build": "python3 scripts/build.py"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "1.2.1"
+  }
+}

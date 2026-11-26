@@ -165,6 +165,14 @@ class ReproductionTests(unittest.TestCase):
                         subprocess.run(['node', '--input-type=module', '-e',
                                         "import {setup,draw} from './film.js'; if (typeof setup !== 'function' || typeof draw !== 'function') process.exit(1)"],
                                        cwd=p, check=True)
+                    elif entry['id'] == 'papercut-red':
+                        for file in (entry['renderer_entry'], 'scripts/build.py', 'scripts/replace_score.py'):
+                            self.assertTrue((p / file).is_file(), file)
+                        self.assertEqual(json.loads((p / 'content/narration.json').read_text())['lines'], [])
+                        self.assertEqual(json.loads((p / 'content/sound.json').read_text())['phrases'], [])
+                        subprocess.run(['node', '--input-type=module', '-e',
+                                        "import {shots,draw} from './film.mjs'; if (shots.length || typeof draw !== 'function') process.exit(1)"],
+                                       cwd=p, check=True)
                     elif entry['id'] == 'colored-pencil':
                         self.assertTrue((p / entry['renderer_entry']).is_file())
                         self.assertTrue((p / 'fonts/glyphs.json').is_file())
