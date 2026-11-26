@@ -21,6 +21,7 @@ all('[data-lang]').forEach((link) => {
   if (link.dataset.lang === language) link.setAttribute('aria-current', 'page');
 });
 $('catalog').href = zh ? '../../../zh/#library' : '../../../#library';
+const streamRoot = 'https://github.com/leoguolabs/codex-film-studio/releases/download/ink-wash-handscroll-v1/';
 const films = {
   moon: {
     title: 'A Mouthful of Moon',
@@ -213,7 +214,7 @@ function setProgram(key) {
   const captionMode = video.textTracks[0]?.mode;
   if (filmId !== key) {
     video.pause();
-    video.src = 'media/' + key + '.mp4';
+    video.src = streamRoot + key + '.mp4';
     video.poster = 'media/' + key + '-poster.webp';
     const track = document.createElement('track');
     Object.assign(track, {
@@ -280,7 +281,7 @@ function setSound(key, type) {
   soundId = key;
   layer = type;
   audio.src =
-    'media/' + activeSound() + (layer === 'original' ? '.mp3' : '.m4a');
+    streamRoot + activeSound() + (layer === 'original' ? '.mp3' : '.m4a');
   audio.load();
   $('scoreTitle').textContent =
     layer === 'foley'

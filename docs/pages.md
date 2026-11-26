@@ -191,6 +191,7 @@ python3 scripts/fetch_demo.py --edition all
 With Python 3.11 or later:
 
 ```sh
+python3 -m pip install -r scripts/pages-requirements.txt
 python3 scripts/build_pages.py
 python3 styles/whiteboard/studio/scripts/serve.py --port 8248 --directory .site
 ```

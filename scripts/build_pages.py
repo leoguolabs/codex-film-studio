@@ -84,7 +84,18 @@ def prepare_public_document(text, mounts, base_path, web_preview=False):
     return text.replace('</style>', '</style>' + notice, 1)
 
 
-def build_site(demo_root, output, revision="", published_roots=None, base_path="/codex-film-studio/", site_origin=DEFAULT_ORIGIN):
+def write_gallery_preview(source, destination):
+    """Keep the source frame in Git and size its public copy for the gallery."""
+    from PIL import Image
+
+    with Image.open(source) as image:
+        image.thumbnail((960, 960), Image.Resampling.LANCZOS)
+        image.save(destination, 'JPEG', quality=84, optimize=True, progressive=True)
+    if destination.stat().st_size >= source.stat().st_size:
+        shutil.copyfile(source, destination)
+
+
+def build_site(demo_root, output, revision="", published_roots=None, base_path="/codex-film-studio/", site_origin=DEFAULT_ORIGIN, web_gallery=False):
     """Copy only the files needed by the public player, never a whole studio."""
     if output.exists():
         raise FileExistsError(output)
@@ -140,6 +151,7 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
                 page.pop(private_key, None)
     frame_manifest = ROOT / "docs/readme/frames.json"
     frames = json.loads(frame_manifest.read_text()).get("frames", []) if frame_manifest.exists() else []
+    gallery_paths = {frame["image"] for frame in frames}
     for frame in frames:
         files.append((ROOT / frame["image"], frame["image"]))
     files = list(dict.fromkeys(files))
@@ -157,7 +169,10 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
     for source, relative in files:
         destination = output / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(source, destination)
+        if web_gallery and relative in gallery_paths and destination.suffix.lower() == '.jpg':
+            write_gallery_preview(source, destination)
+        else:
+            shutil.copyfile(source, destination)
     # Legacy players use origin-root routes and retained-project base URLs.
     # Rebase only the newly released pages and assets; local sources stay intact.
     for path in output.rglob('*'):
@@ -252,7 +267,7 @@ def main():
                 print(f"Downloading verified {style['id']} preview…", flush=True)
                 published_roots[style['id']] = fetch_showcase_bundle(
                     bundle, Path(temporary) / style['id'], args.asset_dir)
-        build_site(demo_root, args.output.resolve(), args.revision, published_roots, args.base_path, args.site_origin)
+        build_site(demo_root, args.output.resolve(), args.revision, published_roots, args.base_path, args.site_origin, web_gallery=True)
 
 
 if __name__ == "__main__":

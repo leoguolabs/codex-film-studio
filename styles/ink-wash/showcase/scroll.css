@@ -1,11 +1,11 @@
 @font-face {
   font-family: Inscription;
-  src: url(../starter/fonts/capitals.ttf) format('truetype');
+  src: url(inscriptions.woff2) format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: Quill;
-  src: url(../starter/fonts/italic.ttf) format('truetype');
+  src: url(quill.woff2) format('woff2');
   font-style: italic;
   font-display: swap;
 }

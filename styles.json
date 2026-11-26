@@ -1550,8 +1550,8 @@
           "styles/ink-wash/showcase/opening.webp",
           "styles/ink-wash/showcase/mountains.webp",
           "styles/ink-wash/showcase/paper.webp",
-          "styles/ink-wash/starter/fonts/capitals.ttf",
-          "styles/ink-wash/starter/fonts/italic.ttf",
+          "styles/ink-wash/showcase/inscriptions.woff2",
+          "styles/ink-wash/showcase/quill.woff2",
           "styles/ink-wash/starter/fonts/OFL-Cormorant.txt"
         ]
       },
