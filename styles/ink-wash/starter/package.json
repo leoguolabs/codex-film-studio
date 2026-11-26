@@ -1,0 +1,14 @@
+{
+  "name": "xuan-ink-film",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "proof": "node scripts/render.mjs proof",
+    "still": "node scripts/render.mjs still",
+    "picture": "node scripts/render.mjs picture"
+  },
+  "dependencies": {
+    "playwright-core": "1.59.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "music_source_file": "",
+  "field_directory": "audio/field",
+  "music_edits_columns": [
+    "timeline",
+    "source",
+    "duration",
+    "fade_in",
+    "fade_out",
+    "linear_gain"
+  ],
+  "music_edits": [],
+  "music_space_columns": [
+    "in",
+    "out",
+    "ramp_down",
+    "ramp_up",
+    "floor"
+  ],
+  "music_space": [],
+  "recorded_foley_columns": [
+    "action",
+    "field_file_stem",
+    "timeline",
+    "source",
+    "source_duration",
+    "playback_rate",
+    "peak_pre_pan",
+    "pan",
+    "highpass_hz",
+    "lowpass_hz",
+    "attack",
+    "release"
+  ],
+  "recorded_foley": []
+}

@@ -1,0 +1,38 @@
+{
+  "release": "ink-wash-handscroll-v1",
+  "archive": {
+    "name": "ink-wash-handscroll-v1.tar.gz",
+    "bytes": 32406527,
+    "sha256": "6a24362ceeb55fe36dc850bdb69b6a4420dd3a36773199ae40140bebc29eacbf",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/ink-wash-handscroll-v1/ink-wash-handscroll-v1.tar.gz"
+  },
+  "files": [
+    "media/films.json",
+    "media/fox-foley.m4a",
+    "media/fox-ink-0.webp",
+    "media/fox-ink-1.webp",
+    "media/fox-ink-2.webp",
+    "media/fox-ink-3.webp",
+    "media/fox-ink-4.webp",
+    "media/fox-ink-5.webp",
+    "media/fox-ink-6.webp",
+    "media/fox-original.mp3",
+    "media/fox-poster.webp",
+    "media/fox-score.m4a",
+    "media/fox.mp4",
+    "media/fox.vtt",
+    "media/moon-foley.m4a",
+    "media/moon-ink-0.webp",
+    "media/moon-ink-1.webp",
+    "media/moon-ink-2.webp",
+    "media/moon-ink-3.webp",
+    "media/moon-ink-4.webp",
+    "media/moon-ink-5.webp",
+    "media/moon-ink-6.webp",
+    "media/moon-original.mp3",
+    "media/moon-poster.webp",
+    "media/moon-score.m4a",
+    "media/moon.mp4",
+    "media/moon.vtt"
+  ]
+}

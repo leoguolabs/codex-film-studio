@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/"><strong>Open the style library ↗</strong></a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en">Between Strokes · unroll two ink films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">A seed on the wind · colored-pencil films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en">Paper Math · marker films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en">A Pop &amp; a Pirouette · tablet sketch films ↗</a> ·
@@ -47,7 +48,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**24 styles** · 24 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**25 styles** · 25 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -294,6 +295,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>城市交响曲</sub>
 <p>An original score cuts real streets, moving light and archival film into a portrait of a place.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/ink-wash.jpg" alt="Xuan Ink Wash — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>25 / <code>ink-wash</code></sub>
+<h3>Xuan Ink Wash</h3>
+<sub>宣纸写意水墨</sub>
+<p>A heron strikes at a reflected moon. A fox leaps for a persimmon. Unroll both gestures on xuan paper.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

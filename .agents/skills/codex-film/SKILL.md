@@ -112,3 +112,5 @@ The [screening page](https://leoguolabs.github.io/codex-film-studio/styles/ipad-
 has two complete English films, a pencil scrubber and isolated audio.
 
 For City Symphony (`city-symphony`), cut real location footage to one score and let the number of simultaneous views follow its subdivisions. Carry the music through the cut to the document and lower it ahead of the spoken coda. Use [music continuity](../../../methods/music-continuity.md) and the registered style guide. The [screening room](https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=en) lets a viewer scrub real frames, resume the matching film at the selected frame, and hear each closing transition.
+
+For Xuan Ink Wash (`ink-wash`), follow the pressure and contact study in the starter’s GESTURE-AND-SOUND.md. [Between Strokes](https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en) lets viewers reverse the actual contact frames and hear the original music, edited score and Foley separately.

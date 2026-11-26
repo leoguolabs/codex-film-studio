@@ -1,0 +1,12 @@
+[
+  {
+    "file": "fonts/capitals.ttf",
+    "license": "fonts/OFL-Cormorant.txt",
+    "sha256": "648cd1c932871e4e8e1d147b593315409e8ea82282f88e9397e2cceae83d065b"
+  },
+  {
+    "file": "fonts/italic.ttf",
+    "license": "fonts/OFL-Cormorant.txt",
+    "sha256": "0f48ea6abb2084537854f7174c470991a463b13036309e3b50a81511611c530d"
+  }
+]

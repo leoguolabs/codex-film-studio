@@ -1495,6 +1495,67 @@
         ]
       },
       "public_assets": "styles/city-symphony/demo-assets.json"
+    },
+    {
+      "id": "ink-wash",
+      "name": "Xuan Ink Wash",
+      "name_zh": "宣纸写意水墨",
+      "description": "A heron strikes at a reflected moon. A fox leaps for a persimmon. Unroll both gestures on xuan paper.",
+      "description_zh": "苍鹭啄向水中月，狐狸跃起够秋柿。滚动宣纸手卷，逐帧展开这两笔。",
+      "status": "renderer-ready",
+      "status_note": "Editable pressure brush, paper compositor, landscape tools, audio and offscreen compiler.",
+      "status_note_zh": "可编辑的压感毛笔、宣纸合成器、山水工具、配音配乐与离线渲染器。",
+      "guide": "styles/ink-wash/STYLE.md",
+      "readme": "styles/ink-wash/README.md",
+      "prompt": "styles/ink-wash/prompt.txt",
+      "template": "styles/ink-wash/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "bundled_fonts": true
+      },
+      "showcases": [
+        {
+          "id": "ink-wash-double-bill",
+          "title": "Between Strokes · two ink fables",
+          "title_zh": "一笔之间 · 水墨双片",
+          "page": "styles/ink-wash/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/ink-wash/showcase/media/films.json"
+        }
+      ],
+      "render_script": "scripts/render.mjs",
+      "renderer_entry": "engine/comp.js",
+      "preview": "docs/readme/frames/ink-wash.jpg",
+      "preview_zh": "docs/readme/frames/ink-wash.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "ink-wash-double-bill",
+      "landing": {
+        "page": "styles/ink-wash/showcase/index.html",
+        "assets": [
+          "styles/ink-wash/showcase/scroll.css",
+          "styles/ink-wash/showcase/scroll.mjs",
+          "styles/ink-wash/showcase/listening.json",
+          "styles/ink-wash/showcase/opening.webp",
+          "styles/ink-wash/showcase/mountains.webp",
+          "styles/ink-wash/showcase/paper.webp",
+          "styles/ink-wash/starter/fonts/capitals.ttf",
+          "styles/ink-wash/starter/fonts/italic.ttf",
+          "styles/ink-wash/starter/fonts/OFL-Cormorant.txt"
+        ]
+      },
+      "public_assets": "styles/ink-wash/demo-assets.json"
     }
   ],
   "capability_schema_version": 2

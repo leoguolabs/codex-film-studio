@@ -30,6 +30,7 @@ const categories = {
   'hologram-hud':['animation'],
   'workbench-clay':['material','animation'],
   'colored-pencil':['drawn','material','animation'],
+  'ink-wash':['drawn','material','animation'],
   'marker-paper':['drawn','material','animation'],
   'ipad-sketch':['drawn','animation','material'],
   'city-symphony':['geography','material'],

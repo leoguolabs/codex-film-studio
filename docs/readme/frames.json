@@ -437,6 +437,23 @@
       "image": "docs/readme/frames/city-symphony.jpg",
       "image_sha256": "c2b4bb737dddf19c3c64590a4c3728a0b3ebcaff90e4980488bf68600339d6b9",
       "treatment": "Complete sixteen-window frame from the delivered film, resized to 480 × 270 for the catalog."
+    },
+    {
+      "style": "ink-wash",
+      "source_video": "A Mouthful of Moon / final English master",
+      "source_sha256": "67c0b42dd917b37f951910aee562e96ebacaeb84724f0c64921942f072f54950",
+      "title": "A Mouthful of Moon",
+      "title_zh": "一喙月光",
+      "seconds": 30.208333333333332,
+      "frame": 725,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/ink-wash.jpg",
+      "image_sha256": "308c80cf66a9306e414d5f89be11568f6347227c74e8e5cabfc950adc7025d2a",
+      "treatment": "Complete frame at the opening of the ink wave, resized to 960 × 540."
     }
   ]
 }

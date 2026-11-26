@@ -51,7 +51,11 @@ def doctor(style):
         if not exe:
             problems.append(f"{name} missing: {hint}.")
             continue
-        proc = subprocess.run([exe, "-version" if name.startswith("ff") else "--version"],
+        command = [exe]
+        if style == "ink-wash" and name == "ffmpeg":
+            gate = ROOT / "styles/ink-wash/starter/scripts/ffmpeg_serial.py"
+            command = [sys.executable, str(gate), "--"]
+        proc = subprocess.run([*command, "-version" if name.startswith("ff") else "--version"],
                               capture_output=True, text=True)
         version = proc.stdout.splitlines()[:1]
         print(f"{name}: {version[0] if version else exe}")
@@ -62,7 +66,7 @@ def doctor(style):
         elif name == "node" and int(version[0].lstrip("v").split(".")[0]) < minimum:
             problems.append(f"Old Node.js: {hint}.")
         if name == "ffmpeg" and not proc.returncode:
-            encoders = subprocess.run([exe, "-hide_banner", "-encoders"], capture_output=True, text=True)
+            encoders = subprocess.run([*command, "-hide_banner", "-encoders"], capture_output=True, text=True)
             needed = {"libx264", "aac"}
             found = {parts[1] for line in encoders.stdout.splitlines() if len(parts := line.split()) >= 2}
             if encoders.returncode or not needed <= found:
@@ -78,7 +82,8 @@ def prepare(project):
         raise SystemExit("Select a generated production project outside the plugin.")
     whiteboard = (project / "scripts/import_audio.py").is_file()
     native_clay = (project / "engine/stage.metal").is_file()
-    doctor("workbench-clay" if native_clay else "whiteboard" if whiteboard else None)
+    ink_wash = (project / "engine/ink.js").is_file() and (project / "engine/comp.js").is_file()
+    doctor("ink-wash" if ink_wash else "workbench-clay" if native_clay else "whiteboard" if whiteboard else None)
 
     def run(cmd):
         subprocess.run(cmd, cwd=project, check=True)
@@ -90,7 +95,7 @@ def prepare(project):
             run(["npm", "run", "setup-renderer"])
         if "doctor" in scripts:
             run(["npm", "run", "doctor"])
-    if whiteboard or native_clay or (project / "scripts/paper_sound.py").is_file():
+    if whiteboard or native_clay or ink_wash or (project / "scripts/paper_sound.py").is_file():
         run([sys.executable, "-m", "venv", ".venv"])
         run([str(project / ".venv/bin/python"), "-m", "pip", "install", "-r", "requirements.txt"])
     elif not (project / "package-lock.json").is_file():
