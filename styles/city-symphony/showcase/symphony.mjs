@@ -18,10 +18,10 @@ const films = {
     lineCredit:['Original closing line, spoken in English','原创片尾独白 · 英语朗读']
   },
   'san-francisco':{
-    name:['San Francisco','旧金山'], synopsis:['Cable tracks lead down Market Street. The fog lifts over the Golden Gate, then the city gives way to a page of Bret Harte.','缆车轨道沿市场街向前延伸。雾从金门大桥上散开，镜头最后落在布雷特·哈特的一页诗上。'],
-    cuts:[[7.5,'The cable-car crest','缆车越过山脊'],[20,'Market Street, twice','两个年代的市场街'],[40.3,'The poem page','诗集书页']],
-    archive:['Market Street, 1906 / the street today','1906 年的市场街 / 今日街景'],
-    note:['The Miles Brothers filmed Market Street from a moving cable car in 1906. Beside it, a modern camera looks down the same street. Watch how the rails hold both pictures together.','1906 年，迈尔斯兄弟从行驶的缆车上拍下市场街。并排的现代镜头沿着同一条街望去。两幅画面里的轨道，把相隔百年的视线引向远处。'],
+    name:['San Francisco','旧金山'], synopsis:['A cable car crests a hill. A ride filmed in 1906 flickers beside a modern one, before the film turns to the Golden Gate and a page of Bret Harte.','缆车翻过山脊。1906 年的乘车影像在今天的车窗旁闪动，接着镜头转向金门大桥，最后落在布雷特·哈特的一页诗上。'],
+    cuts:[[7.5,'The cable-car crest','缆车越过山脊'],[20,'Two cable-car rides','两个年代的缆车'],[40.3,'The poem page','诗集书页']],
+    archive:['Market Street, 1906 / a modern cable-car ride','1906 年的市场街 / 今日缆车沿途'],
+    note:['The Miles Brothers filmed Market Street from a moving cable car in 1906. Beside it, a modern camera looks ahead from a San Francisco cable car. Watch how the rails hold both pictures together.','1906 年，迈尔斯兄弟从行驶的缆车上拍下市场街。并排的现代镜头从旧金山的一辆缆车向前望去。两幅画面里的轨道，把相隔百年的视线引向远处。'],
     sound:['Listen from the bridge lights into the printed poem. The same music sinks beneath the first syllable and returns after the reading.','从桥灯一直听到诗页。还是刚才那段音乐，它在第一个音节前慢慢压低，读完才重新浮起。'],
     lineCredit:['Bret Harte, “San Francisco, From the Sea” · 1871 edition','布雷特·哈特《从海上看旧金山》· 1871 年版']
   },
