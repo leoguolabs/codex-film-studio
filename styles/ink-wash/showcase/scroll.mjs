@@ -84,12 +84,15 @@ function loadSheet(film, index) {
   }
   return sheets.get(key);
 }
+function sheetForFrame(number) {
+  const film = number < 42 ? 'moon' : 'fox';
+  return loadSheet(film, Math.floor((number % 42) / 6));
+}
 function paintFrame(number) {
   if (number < 0) return;
   const film = number < 42 ? 'moon' : 'fox',
     frame = number % 42;
-  const chunk = Math.floor(frame / 6);
-  const sheet = loadSheet(film, chunk);
+  const sheet = sheetForFrame(number);
   if (sheet.complete && sheet.naturalWidth) {
     const tile = frame % 6;
     ctx.drawImage(
@@ -162,10 +165,8 @@ gesturePlay.onclick = () => {
     stopPlayback();
     return;
   }
-  const film = position < 42 ? 'moon' : 'fox';
-  const first = film === 'moon' ? 0 : 42;
-  const last = first + 41;
-  if (position === last) jump(first);
+  const last = Number($('scrub').max);
+  if (position === last) jump(42);
   $('gestureIcon').textContent = 'Ⅱ';
   $('gestureLabel').textContent = tr('暂停笔势', 'Pause the brushstroke');
 
@@ -173,7 +174,7 @@ gesturePlay.onclick = () => {
   let due = performance.now() + interval;
   function advance() {
     const next = position + 1;
-    const sheet = loadSheet(film, Math.floor((next - first) / 6));
+    const sheet = sheetForFrame(next);
     if (sheet.complete) {
       if (!sheet.naturalWidth) {
         stopPlayback();
