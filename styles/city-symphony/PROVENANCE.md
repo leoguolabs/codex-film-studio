@@ -1,0 +1,3 @@
+# Attribution
+
+Visual and editorial research drew on LemoLab’s [City Symphony](https://lemomo-ai.github.io/lemo-opuscar/styles/city-symphony/), [style guide](https://github.com/lemomo-ai/lemo-opuscar/blob/main/styles/city-symphony/STYLE.md) and public example. LemoLab licenses its written guide under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). The wording, production tools and scores for this kit were independently written. The production workspace retains the released reference, its credits and the credits for newly sourced media. Michroma and Instrument Sans carry their bundled SIL Open Font Licenses.

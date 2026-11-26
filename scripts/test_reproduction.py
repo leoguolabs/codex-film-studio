@@ -124,6 +124,14 @@ class ReproductionTests(unittest.TestCase):
                 if entry['template_kind']!='blank' or not entry['capabilities']['scene_renderer']:continue
                 with self.subTest(style=entry['id']):
                     p=create('kit',entry['id'],output=Path(tmp)/entry['id'])
+                    if entry['id'] == 'city-symphony':
+                        self.assertTrue((p / entry['render_script']).is_file())
+                        self.assertTrue((p / entry['renderer_entry']).is_file())
+                        cut = json.loads((p / 'content/cut.json').read_text())
+                        self.assertEqual(cut['shots'], [])
+                        self.assertEqual(cut['assets'], {})
+                        self.assertTrue((p / 'methods/music-continuity.md').is_file())
+                        continue
                     if entry.get('render_script', '').endswith('.py'):
                         self.assertTrue((p / entry['render_script']).is_file())
                         self.assertTrue((p / entry['renderer_entry']).is_file())

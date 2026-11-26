@@ -1,0 +1,71 @@
+{
+  "release": "city-symphony-screenings-v1",
+  "archive": {
+    "name": "city-symphony-programme-v1.tar.gz",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/city-symphony-programme-v1.tar.gz",
+    "bytes": 1408,
+    "sha256": "388d7faa06ba854d0f669ed46a4737ccae3bb411da0a1361a0b634b33522c765"
+  },
+  "files": [
+    "media/chongqing.vtt",
+    "media/films.json",
+    "media/new-york.vtt",
+    "media/san-francisco.vtt"
+  ],
+  "external_media": [
+    {
+      "name": "chongqing.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/chongqing.mp4",
+      "bytes": 25474822,
+      "sha256": "fae000fcdd64dd35a28d485a1907b2b3e12b5050f38fb6e971e9542351621faf"
+    },
+    {
+      "name": "chongqing-score.m4a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/chongqing-score.m4a",
+      "bytes": 1057253,
+      "sha256": "3cc899326bb247ad22bb1b787486a1a51ed76f46a6cb4b1bd2109fbee85da502"
+    },
+    {
+      "name": "chongqing-coda.m4a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/chongqing-coda.m4a",
+      "bytes": 244239,
+      "sha256": "b436c5a544ca4d73c3483b5303c6d82bf12c83aa1fe04d7042cbe67573ed81a5"
+    },
+    {
+      "name": "san-francisco.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/san-francisco.mp4",
+      "bytes": 26012821,
+      "sha256": "1a268ab5fef14fbfbdc9e8355a834eda298f98fee6326ab9921d06bd0d8409db"
+    },
+    {
+      "name": "san-francisco-score.m4a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/san-francisco-score.m4a",
+      "bytes": 1692612,
+      "sha256": "6276c0a01582434a037dab3618c81e54a27ecf83a5a72be3651a8681487b5633"
+    },
+    {
+      "name": "san-francisco-coda.m4a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/san-francisco-coda.m4a",
+      "bytes": 317288,
+      "sha256": "9376b556d702bbe24de475245f3798290d39115cb130b2e4ddd782e7b1489efd"
+    },
+    {
+      "name": "new-york.mp4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/new-york.mp4",
+      "bytes": 20280746,
+      "sha256": "395e4650f18b9585d228345a5d427716d045b7bff53d756196832f54855bf46e"
+    },
+    {
+      "name": "new-york-score.m4a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/new-york-score.m4a",
+      "bytes": 2325284,
+      "sha256": "8d60d7c71835d0fd9f8e19c299dbe508b477f3ec350a18ec5a8821f1073a6c28"
+    },
+    {
+      "name": "new-york-coda.m4a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/new-york-coda.m4a",
+      "bytes": 264924,
+      "sha256": "8970d746002d8975bebc85ca7eec831659ef3935f975173b5c3696147a8c970f"
+    }
+  ]
+}

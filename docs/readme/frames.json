@@ -420,6 +420,23 @@
       "image": "docs/readme/frames/ipad-sketch.jpg",
       "image_sha256": "952514213690722d019cbc638036a2173963c1194569239dc682ca3a2a078335",
       "treatment": "Full encoded frame at 17 seconds, resized to 960 × 540 for the style gallery."
+    },
+    {
+      "style": "city-symphony",
+      "source_video": "Where the Street Changes Floors / final English master",
+      "source_sha256": "d7af6c45c703a5fec0a9629e9639227c1d011a999fede414225ff7528e59e88d",
+      "title": "Where the Street Changes Floors",
+      "title_zh": "街道在这里换层",
+      "seconds": 19.1,
+      "frame": 573,
+      "fps": "30",
+      "native_dimensions": [
+        1280,
+        720
+      ],
+      "image": "docs/readme/frames/city-symphony.jpg",
+      "image_sha256": "c2b4bb737dddf19c3c64590a4c3728a0b3ebcaff90e4980488bf68600339d6b9",
+      "treatment": "Complete sixteen-window frame from the delivered film, resized to 480 × 270 for the catalog."
     }
   ]
 }

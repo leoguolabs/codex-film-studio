@@ -1,0 +1,5 @@
+numpy>=1.26,<3
+opencv-python-headless>=4.9,<5
+Pillow>=10,<13
+scipy>=1.11,<2
+pyloudnorm>=0.1,<1

@@ -32,6 +32,7 @@ const categories = {
   'colored-pencil':['drawn','material','animation'],
   'marker-paper':['drawn','material','animation'],
   'ipad-sketch':['drawn','animation','material'],
+  'city-symphony':['geography','material'],
   'ukiyoe':['drawn','material','animation'],
 };
 const state = { catalog:null, frames:{}, availability:{mode:'public', pages:{}}, language:'en', filter:'all', query:'', detail:null };

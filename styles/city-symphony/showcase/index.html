@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>City Symphony — Three City Films · Codex Film Studio</title>
+<meta name="description" content="Turn a photographic record into sixteen city windows. Watch and hear three scored films of Chongqing, San Francisco and New York Harbor.">
+<meta name="theme-color" content="#101918">
+<link rel="icon" href="../../../catalog/mark.svg" type="image/svg+xml">
+<link rel="preload" href="record.avif" as="image">
+<link rel="stylesheet" href="symphony.css">
+<script type="module" src="symphony.mjs"></script>
+<script type="module" src="../../../catalog/agent-start.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#screening" data-zh="跳到放映厅">Skip to the films</a>
+<main>
+<section id="overture" class="overture" aria-labelledby="title">
+ <div class="pin">
+  <header class="mast wrap">
+   <a class="brand" href="../../../?lang=en"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Codex Film Studio</a>
+   <nav aria-label="Site"><a class="library" href="../../../?lang=en#library" data-zh="全部风格">All styles</a><span class="divider" aria-hidden="true"></span><a id="language" href="?lang=zh" hreflang="zh" lang="zh">中文</a></nav>
+  </header>
+  <div class="stage wrap">
+   <div class="intro">
+    <p class="imprint"><span aria-hidden="true"></span><b data-zh="三城放映">A three-city screening</b></p>
+    <h1 id="title"><span data-zh="城市">City</span> <em data-zh="交响曲">Symphony</em></h1>
+    <p class="opening" data-zh="一列火车穿进楼房。一辆缆车翻过山脊。一艘渡轮划开港湾。三座城市，各有自己的拍子。">A train threads a tower. A cable car crests a hill. A ferry cuts the harbor. Three cities keep their own time.</p>
+    <div class="entry"><a class="watch" href="#screening"><span aria-hidden="true">▶</span><b data-zh="看三部短片">Watch the films</b></a><button class="follow" id="follow" type="button"><span aria-hidden="true">↻</span><b data-zh="让唱片转动">Turn the record</b></button></div>
+   </div>
+   <figure class="turntable" aria-label="A photographic record of three cities unfolding into sixteen windows">
+    <img class="record-fallback" src="record.avif" alt="" fetchpriority="high" width="900" height="900">
+    <canvas id="pressing" aria-hidden="true"></canvas>
+    <figcaption><span class="signal" aria-hidden="true"></span><span id="stage-caption" data-zh="唱片上的三座城">Three cities on a record</span></figcaption>
+   </figure>
+  </div>
+  <div class="ruler wrap"><span class="scroll-note"><span aria-hidden="true">↓</span> <span data-zh="滚动展开分屏">Scroll to split the frame</span></span><div class="meter" aria-hidden="true"><i></i></div><span class="ends" data-zh="从一幅影像到十六扇窗">One image to sixteen windows</span></div>
+ </div>
+</section>
+<section id="screening" class="screening sheet" aria-labelledby="programme-title">
+ <div class="wrap">
+  <div class="section-head"><div><p class="folio" data-zh="放映厅">The screening room</p><h2 id="programme-title" data-zh="三座城，三部片。">Three city films.</h2></div><p class="runinfo" data-zh="实地影像 · 英语旁白与字幕">Location footage · English voice &amp; captions</p></div>
+  <div class="programme" role="group" aria-label="Film selection">
+   <button type="button" data-film="chongqing" aria-pressed="true"><img src="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/chongqing.webp" alt="" loading="lazy" width="320" height="180"><span><b data-zh="重庆">Chongqing</b><small>00:48</small></span></button>
+   <button type="button" data-film="san-francisco" aria-pressed="false"><img src="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/san-francisco.webp" alt="" loading="lazy" width="320" height="180"><span><b data-zh="旧金山">San Francisco</b><small>00:52</small></span></button>
+   <button type="button" data-film="new-york" aria-pressed="false"><img src="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/new-york.webp" alt="" loading="lazy" width="320" height="180"><span><b data-zh="纽约港">New York Harbor</b><small>00:44</small></span></button>
+  </div>
+  <div class="projector"><video id="picture" controls playsinline preload="metadata" poster="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/chongqing.webp" aria-label="Where the Street Changes Floors"><source src="https://github.com/leoguolabs/codex-film-studio/releases/download/city-symphony-screenings-v1/chongqing.mp4" type="video/mp4"><track src="media/chongqing.vtt" kind="captions" srclang="en" label="English"></video></div>
+  <div class="programme-note"><div><h3 id="film-title">Where the Street Changes Floors</h3><p id="synopsis">At Liziba, a train disappears into a block of flats. Down by the Jialing, another street begins several floors below.</p></div><div class="chapters"><h4 data-zh="从这里看">Jump to a cut</h4><div id="chapter-list"></div></div></div>
+  <p id="load-state" role="status" hidden></p>
+ </div>
+</section>
+<section class="listening" id="listening" aria-labelledby="sound-title"><div class="wrap sound-layout">
+ <div class="sound-heading"><p class="folio" data-zh="唱片的另一面">The B-side</p><h2 id="sound-title" data-zh="听，最后一拍。">Hear the last beat.</h2><p id="sound-note"></p></div>
+ <div class="sound-cues"><div><span class="track-no" aria-hidden="true">A</span><div><h3 id="score-title">Through the Tiered Streets</h3><p data-zh="为本片生成的 Gemini 原曲">Original Gemini instrumental</p><audio id="score" controls preload="none"></audio></div></div>
+ <div><span class="track-no" aria-hidden="true">B</span><div><h3 data-zh="从街景到朗读">From street to spoken line</h3><p id="coda-window"></p><audio id="coda" controls preload="none"></audio></div></div></div>
+ </div></section>
+<section class="liner sheet" aria-labelledby="liner-title"><div class="wrap liner-layout">
+ <figure><img id="archive-plate" src="https://raw.githubusercontent.com/leoguolabs/codex-film-studio/479d3c92382f27f9e1fdeb1cab412a5e31c1b3e9/styles/city-symphony/showcase/plates/chongqing-archive.webp" alt="" width="680" height="383" loading="lazy"><figcaption id="archive-caption"></figcaption></figure>
+ <div><p class="folio" data-zh="剪辑手记">Liner notes</p><h2 id="liner-title" data-zh="两代人，同一条路。">Two times, one street.</h2><p id="archive-note"></p><blockquote id="line"></blockquote><p id="line-source"></p>
+ <a id="credits" href="credits.html#chongqing" data-zh="查看影像、音乐与档案出处 ↗">Film, music &amp; archive credits ↗</a></div>
+ </div></section>
+<section class="make"><div class="wrap make-inner"><div><p class="folio" data-zh="拍下一座城">Make a city film</p><h2 data-zh="你的城市是什么拍子？">What time does your city keep?</h2></div><details><summary data-zh="用这个风格制作短片">Make a film in this style</summary><film-agent-start style-id="city-symphony"><p>Choose a returning view, a scored montage, a real archive and a closing voice.</p></film-agent-start></details></div></section>
+</main>
+<footer><div class="wrap"><a class="brand" href="../../../?lang=en">Codex Film Studio</a><a href="https://lemomo-ai.github.io/lemo-opuscar/styles/city-symphony/" data-zh="风格灵感 · LemoLab ↗">Style inspiration · LemoLab ↗</a><a class="library" href="../../../?lang=en#library" data-zh="回到全部风格 ↑">Back to all styles ↑</a></div></footer>
+</body></html>

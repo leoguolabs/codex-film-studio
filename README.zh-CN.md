@@ -17,6 +17,7 @@
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh">松籽乘风 · 彩铅放映页 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=zh">纸上有数 · 马克笔放映页 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=zh">一跃，一旋 · 平板速写放映页 ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=zh">城市交响曲 · 三城放映 ↗</a> ·
   <a href="#风格手册">浏览风格</a> ·
   <a href="#制作你的影片">开始创作</a> ·
   <a href="CONTRIBUTING.md">参与贡献</a> ·
@@ -46,7 +47,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**23 种风格** · 23 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**24 种风格** · 24 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -283,6 +284,16 @@ codex plugin add codex-film-studio@visiontrail
 <sub>Tablet Sketch Explainer</sub>
 <p>笔尖先落下带纸纹的铅笔线，再铺上略微错位的色块。镜头在同一张画纸上平移、转动，最后展开全页。</p>
 <p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/city-symphony.jpg" alt="城市交响曲 — 影片截图" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>24 / <code>city-symphony</code></sub>
+<h3>城市交响曲</h3>
+<sub>City Symphony</sub>
+<p>用原创配乐衔接实拍街道、流动灯光和档案胶片，拍一座城市的肖像。</p>
+<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/city-symphony/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

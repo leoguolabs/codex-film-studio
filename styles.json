@@ -1436,6 +1436,65 @@
         ]
       },
       "public_assets": "styles/ipad-sketch/demo-assets.json"
+    },
+    {
+      "id": "city-symphony",
+      "name": "City Symphony",
+      "name_zh": "城市交响曲",
+      "description": "An original score cuts real streets, moving light and archival film into a portrait of a place.",
+      "description_zh": "用原创配乐衔接实拍街道、流动灯光和档案胶片，拍一座城市的肖像。",
+      "status": "renderer-ready",
+      "status_note": "Executable photographic montage kit and timestamp-based plate renderer.",
+      "status_note_zh": "可直接运行的实拍蒙太奇制作包，按真实时间戳取帧。",
+      "guide": "styles/city-symphony/STYLE.md",
+      "readme": "styles/city-symphony/README.md",
+      "prompt": "styles/city-symphony/prompt.txt",
+      "template": "styles/city-symphony/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": false,
+        "audio_mix": false,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "bundled_fonts": true
+      },
+      "showcases": [
+        {
+          "id": "city-symphony-films",
+          "title": "Watch the three city films",
+          "title_zh": "看三部城市短片",
+          "page": "styles/city-symphony/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/city-symphony/showcase/media/films.json"
+        }
+      ],
+      "render_script": "scripts/assemble.py",
+      "renderer_entry": "scripts/print_look.py",
+      "preview": "docs/readme/frames/city-symphony.jpg",
+      "preview_zh": "docs/readme/frames/city-symphony.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "city-symphony-films",
+      "landing": {
+        "page": "styles/city-symphony/showcase/index.html",
+        "assets": [
+          "styles/city-symphony/showcase/credits.html",
+          "styles/city-symphony/showcase/grain.png",
+          "styles/city-symphony/showcase/record.avif",
+          "styles/city-symphony/showcase/record.mjs",
+          "styles/city-symphony/showcase/symphony.css",
+          "styles/city-symphony/showcase/symphony.mjs",
+          "styles/city-symphony/showcase/windows.avif"
+        ]
+      },
+      "public_assets": "styles/city-symphony/demo-assets.json"
     }
   ],
   "capability_schema_version": 2

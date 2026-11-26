@@ -186,5 +186,17 @@
       "method": "让笔尖沿着石墨轮廓移动，色块略微越过线条。最后拉远镜头，看几处速写怎样连成整张图。",
       "check": "拖动玉米穗或枫枝的真实画格，观察落笔和铺色的先后，再单独听两首 Gemini 配乐及笔触拟音。"
     }
+  },
+  "city-symphony": {
+    "en": {
+      "use": "Three photographic portraits of Chongqing, San Francisco and New York Harbor.",
+      "method": "Cut trains, cable cars and ferries to an original score. Build two, four, nine and sixteen windows, then bring an archive into the present.",
+      "check": "Turn the picture disc, watch the three English films and listen across the final cut from street to spoken line."
+    },
+    "zh": {
+      "use": "重庆、旧金山和纽约港的三部实拍城市肖像。",
+      "method": "跟着音乐剪列车、缆车和渡轮；把画面展开为两格、四格、九格、十六格，再让档案与今天的街景并置。",
+      "check": "用滚轮展开摄影唱片，观看三部英文短片，听同一首配乐怎样从街景延续到片尾朗读。"
+    }
   }
 }
