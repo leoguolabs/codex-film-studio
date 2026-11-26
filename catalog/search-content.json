@@ -198,5 +198,17 @@
       "method": "跟着音乐剪列车、缆车和渡轮；把画面展开为两格、四格、九格、十六格，再让档案与今天的街景并置。",
       "check": "滚动实拍画格，看分屏、档案与书页，停在任意画格接着播放原片，再听音乐怎样延续到片尾朗读。"
     }
+  },
+  "ink-wash": {
+    "en": {
+      "use": "Unroll two ink fables about a heron and a fox. Scroll through the actual brushwork and screen both complete English films.",
+      "method": "Build an articulated creature from pressure strokes on fibrous xuan paper. Leave a pause before contact and let the ink run out after it.",
+      "check": "Reverse the wheel at impact to follow the beak and paw. Compare the Gemini original, the film score and isolated Foley."
+    },
+    "zh": {
+      "use": "展开苍鹭和狐狸的水墨寓言。滚轮可以倒看真实画格，两部短片均可完整放映。",
+      "method": "用有轻重的笔触在宣纸上画出生灵。落笔前蓄势，接触之后让墨迹收住。",
+      "check": "在喙尖破水、后爪蹬雪处来回滚动，单独试听原曲、片中配乐与拟音。"
+    }
   }
 }

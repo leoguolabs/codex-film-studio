@@ -1,0 +1,3 @@
+The generic pressure brush, landscape forms, paper compositor and interpolation functions are adapted from LemoLab’s MIT-licensed code in lemo-opuscar, revision 8ca0dd805e214bcc1d30714cd5b9d21cc02a454b. Their license accompanies the engine. [Source repository](https://github.com/lemomo-ai/lemo-opuscar)
+
+Cormorant Garamond Italic and Cormorant SC Semibold are by the Cormorant Project Authors, under the included SIL Open Font License 1.1. Google Fonts revision 86aced91de05cd4f96a06838124cca45be337b2b supplied the font files. The production harness, directing instructions, sound synthesis and new paintings are separate contributions.

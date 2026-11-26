@@ -158,7 +158,14 @@ class ReproductionTests(unittest.TestCase):
                                         "import film from './src/film.mjs'; if (film.duration || film.sheets.length) process.exit(1)"],
                                        cwd=p, check=True)
                         continue
-                    if entry['id'] == 'colored-pencil':
+                    if entry['id'] == 'ink-wash':
+                        self.assertTrue((p / entry['renderer_entry']).is_file())
+                        self.assertEqual(json.loads((p / 'content/narration.json').read_text())['lines'], [])
+                        self.assertEqual(json.loads((p / 'content/sound.json').read_text())['notes'], [])
+                        subprocess.run(['node', '--input-type=module', '-e',
+                                        "import {setup,draw} from './film.js'; if (typeof setup !== 'function' || typeof draw !== 'function') process.exit(1)"],
+                                       cwd=p, check=True)
+                    elif entry['id'] == 'colored-pencil':
                         self.assertTrue((p / entry['renderer_entry']).is_file())
                         self.assertTrue((p / 'fonts/glyphs.json').is_file())
                         self.assertTrue((p / 'scripts/compare_pencil.py').is_file())
