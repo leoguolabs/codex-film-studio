@@ -255,7 +255,29 @@ a {
   align-self: center;
   margin: 0 -2vw 0 -3.2vw;
 }
+.painting-control {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+.gesture-cue {
+  position: absolute;
+  right: 6%;
+  bottom: 4%;
+  display: inline-flex;
+  align-items: center;
+  gap: .55em;
+  padding: .34em .65em;
+  color: var(--red);
+  background: #f2ecdeed;
+  font: 12px/1.3 var(--serif);
+}
+.painting-control:is(:hover, :focus-visible) .gesture-cue {
+  box-shadow: inset 0 -1px var(--red);
+}
 .imagewell {
+  display: block;
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;

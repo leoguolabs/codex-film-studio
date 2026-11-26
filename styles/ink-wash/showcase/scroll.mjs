@@ -146,12 +146,64 @@ function showFrame(value) {
   if (j > 0) loadSheet(film, j - 1);
   if (j === 6 && film === 'moon') loadSheet('fox', 0);
 }
+const gesturePlay = $('gesturePlay');
+let playback = null;
+
+function stopPlayback() {
+  if (playback === null) return;
+  clearTimeout(playback);
+  playback = null;
+  $('gestureIcon').textContent = '▶';
+  $('gestureLabel').textContent = tr('播放笔势', 'Play the brushstroke');
+}
+
+gesturePlay.onclick = () => {
+  if (playback !== null) {
+    stopPlayback();
+    return;
+  }
+  const film = position < 42 ? 'moon' : 'fox';
+  const first = film === 'moon' ? 0 : 42;
+  const last = first + 41;
+  if (position === last) jump(first);
+  $('gestureIcon').textContent = 'Ⅱ';
+  $('gestureLabel').textContent = tr('暂停笔势', 'Pause the brushstroke');
+
+  const interval = 1000 / 24;
+  let due = performance.now() + interval;
+  function advance() {
+    const next = position + 1;
+    const sheet = loadSheet(film, Math.floor((next - first) / 6));
+    if (sheet.complete) {
+      if (!sheet.naturalWidth) {
+        stopPlayback();
+        return;
+      }
+      jump(next);
+      if (next === last) {
+        stopPlayback();
+        return;
+      }
+    }
+    const now = performance.now();
+    due = Math.max(due + interval, now + interval / 2);
+    playback = setTimeout(advance, due - now);
+  }
+  playback = setTimeout(advance, interval);
+};
+
 let scheduled = false;
 function followScroll() {
   scheduled = false;
   if (reduced.matches) return;
   const range = journey.offsetHeight - leaf.offsetHeight;
-  if (range > 0) showFrame((-journey.getBoundingClientRect().top / range) * 83);
+  if (range <= 0) return;
+  const progress = -journey.getBoundingClientRect().top / range;
+  const frame = Math.max(0, Math.min(83, Math.round(progress * 83)));
+  if (frame !== position) {
+    stopPlayback();
+    showFrame(frame);
+  }
 }
 function schedule() {
   if (!scheduled) {
@@ -169,27 +221,28 @@ function jump(value) {
     });
   }
 }
-$('scrub').addEventListener('input', (e) => jump(Number(e.target.value)));
+function manualJump(value) {
+  stopPlayback();
+  jump(value);
+}
+$('scrub').addEventListener('input', (e) => manualJump(Number(e.target.value)));
 $('scrub').setAttribute(
   'aria-label',
   tr('逐帧展卷', 'Unroll the brushwork frame by frame'),
 );
-art.setAttribute(
-  'aria-label',
-  tr(
-    '苍鹭落喙与狐狸跃起的逐帧水墨画',
-    'Sequential ink drawings of the heron striking and the fox leaping',
-  ),
-);
 all('[data-jump]').forEach(
-  (b) => (b.onclick = () => jump(Number(b.dataset.jump))),
+  (b) => (b.onclick = () => manualJump(Number(b.dataset.jump))),
 );
 function motionMode() {
+  stopPlayback();
   $('wheelHint').textContent = reduced.matches
     ? tr('拖动看画', 'Scrub the ink')
     : tr('滚动展卷', 'Scroll to unroll');
   schedule();
 }
+window.addEventListener('wheel', stopPlayback, { passive: true });
+window.addEventListener('touchmove', stopPlayback, { passive: true });
+window.addEventListener('pagehide', stopPlayback);
 window.addEventListener('scroll', schedule, { passive: true });
 window.addEventListener('resize', schedule);
 reduced.addEventListener('change', motionMode);
@@ -362,6 +415,7 @@ const framePlay = $('framePlay');
 framePlay.title = tr('从这一帧放映', 'Play from this frame');
 framePlay.setAttribute('aria-label', framePlay.title);
 framePlay.onclick = () => {
+  stopPlayback();
   const key = position < 42 ? 'moon' : 'fox';
   const seconds = (films[key].first + (position % 42)) / 24;
   setProgram(key);
