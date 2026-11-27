@@ -77,8 +77,8 @@ class PortalTests(unittest.TestCase):
                           'catalog/brand.css', 'catalog/brand/studio-logo.svg']:
                 self.assertIn(f'{asset}?v=portal-test', homepage)
             for asset in ['catalog/home-theme.css', 'catalog/home-theme.js',
-                          'catalog/homepage.css', 'catalog/film-reel.mjs',
-                          *[f'docs/readme/frames/{name}.jpg' for name in ('papercut-red', 'ukiyoe', 'ink-wash')]]:
+                          'catalog/homepage.css', 'catalog/edit-desk.css', 'catalog/edit-desk.mjs',
+                          *[f'docs/readme/frames/{name}.jpg' for name in ('paper-lantern', 'papercut-red', 'ink-wash')]]:
                 self.assertTrue((output / asset).is_file())
                 for relative in ['index.html', 'zh/index.html']:
                     self.assertIn(f'"/codex-film-studio/{asset}?v=portal-test"',

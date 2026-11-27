@@ -360,7 +360,8 @@ def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-
         page = page.replace('href="sitemap.xml"', f'href="{base}sitemap.xml"')
         page = re.sub(r'<noscript>.*?</noscript>', '<noscript><p class="noscript">'+('风格指南可直接阅读；搜索、筛选与详情弹窗需要 JavaScript。' if lang=='zh' else 'Read all style guides without JavaScript. Search, filters and detail dialogs use JavaScript.')+'</p></noscript>',page,flags=re.S)
         page = page.replace(f'placeholder="{strings["en"]["search"]}"', f'placeholder="{strings[lang]["search"]}"')
-        for label in ['search', 'filterLabel', 'reelControls', 'compareStyles', 'compareClose', 'close']:
+        for label in ['search', 'filterLabel', 'deskScrub', 'deskPrevious', 'deskNext',
+                      'compareStyles', 'compareClose', 'close']:
             page = page.replace(f'aria-label="{strings["en"][label]}"', f'aria-label="{strings[lang][label]}"')
         graph=schema(base,url,title,desc,lang,date,[(loc(s,'name',lang),base+route(s,lang)) for s in catalog['styles']])
         page=metadata(page,title,desc,url,base+'catalog/social-card.jpg',lang,{'en':base,'zh-CN':base+'zh/','x-default':base},graph)

@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="catalog/studio-header.css">
   <script type="module" src="catalog/agent-start.mjs"></script>
   <script type="module" src="catalog/studio.mjs"></script>
-  <script type="module" src="catalog/film-reel.mjs"></script>
+  <script type="module" src="catalog/edit-desk.mjs"></script>
   <link rel="icon" href="catalog/brand/studio-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="catalog/brand.css">
   <link rel="stylesheet" href="catalog/home-theme.css">
   <link rel="stylesheet" href="catalog/homepage.css">
+  <link rel="stylesheet" href="catalog/edit-desk.css">
 </head>
 <body class="all-styles">
   <a class="skip-link" href="#library" data-i18n="skip">Skip to the style library</a>
@@ -45,46 +46,106 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-stage section-wrap">
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="heroEyebrow">THE OPEN-SOURCE FILM STYLE LIBRARY</p>
-          <h1 id="hero-title"><span data-i18n="heroLine1">One story.</span><br><em data-i18n="heroLine2">So many ways.</em></h1>
-          <p class="product-definition" data-i18n="productDefinition">Find a look for your next Codex film. Explore sample films, style guides and reusable production tools.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#library"><span data-i18n="explore">See all styles</span><span aria-hidden="true">↓</span></a>
+    <section class="desk-hero" aria-labelledby="hero-title">
+      <div class="section-wrap desk-shell">
+        <div class="desk-intro">
+          <div>
+            <h1 id="hero-title" data-i18n="deskHeadline">Find your film’s style.</h1>
+            <p data-i18n="productDefinition">Preview shots on the timeline, then explore the guides and tools behind each style.</p>
+          </div>
+          <div class="desk-actions">
+            <a class="button primary" href="#library"><span data-i18n="explore">Browse the style library</span><span aria-hidden="true">↓</span></a>
             <a class="button secondary" href="#create"><span data-i18n="create">Create a film</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div class="film-reel">
-          <div class="reel-gate">
-            <div class="reel-screen" aria-hidden="true">
-              <img class="reel-frame" src="docs/readme/frames/papercut-red.jpg" alt="" width="1280" height="720" fetchpriority="high">
-              <img class="reel-frame" src="docs/readme/frames/ukiyoe.jpg" alt="" width="1440" height="810" decoding="async">
-              <img class="reel-frame" src="docs/readme/frames/ink-wash.jpg" alt="" width="960" height="540" decoding="async">
-              <span class="reel-splice"></span>
-              <span class="reel-lens"><canvas></canvas></span>
+
+        <div class="edit-desk" id="edit-desk">
+          <section class="desk-bin" aria-labelledby="desk-bin-title">
+            <div class="desk-panel-bar"><h2 id="desk-bin-title" data-i18n="deskBin">Source bin</h2></div>
+            <ul class="desk-sources">
+              <li><button type="button" class="desk-source" data-shot="paper-lantern" aria-pressed="true" disabled>
+                <img src="docs/readme/frames/paper-lantern.jpg" width="96" height="54" alt="">
+                <span data-i18n="deskLantern">Paper Lightbox</span>
+              </button></li>
+              <li><button type="button" class="desk-source" data-shot="papercut-red" aria-pressed="false" disabled>
+                <img src="docs/readme/frames/papercut-red.jpg" width="96" height="54" alt="">
+                <span data-i18n="deskPaper">Vermilion Paper Cut</span>
+              </button></li>
+              <li><button type="button" class="desk-source" data-shot="ink-wash" aria-pressed="false" disabled>
+                <img src="docs/readme/frames/ink-wash.jpg" width="96" height="54" alt="">
+                <span data-i18n="deskInk">Xuan Ink Wash</span>
+              </button></li>
+            </ul>
+          </section>
+
+          <section class="desk-program" aria-labelledby="desk-program-title">
+            <div class="desk-panel-bar"><h2 id="desk-program-title" data-i18n="deskProgram">Program monitor</h2><span class="desk-mono">16:9</span></div>
+            <div class="desk-monitor" id="desk-monitor">
+              <div class="desk-picture">
+                <img class="desk-still" src="docs/readme/frames/paper-lantern.jpg" alt="" width="960" height="540" fetchpriority="high">
+                <canvas width="960" height="540" aria-hidden="true"></canvas>
+              </div>
             </div>
-            <button type="button" class="reel-play" hidden>
-              <span class="reel-play-icon" aria-hidden="true"></span>
-              <span data-reel-start data-i18n="reelPlay">Play motion</span>
-              <span data-reel-stop data-i18n="reelStop" hidden>Stop motion</span>
-            </button>
-          </div>
-          <div class="reel-footer">
-            <div class="reel-caption">
-              <span class="reel-label" data-reel-label data-i18n="reelLabel">Frames from the library</span>
-              <span class="reel-label" data-reel-scroll data-i18n="reelScroll" hidden>Scroll to change frames</span>
-              <a class="reel-link" data-reel-style="papercut-red" href="styles/papercut-red/showcase/index.html"><span data-i18n="reelPaper">Vermilion Paper Cut</span><span aria-hidden="true">↗</span></a>
-              <a class="reel-link" data-reel-style="ukiyoe" href="styles/ukiyoe/showcase/index.html#screening" hidden><span data-i18n="reelWood">Ukiyo-e Woodblock</span><span aria-hidden="true">↗</span></a>
-              <a class="reel-link" data-reel-style="ink-wash" href="styles/ink-wash/showcase/index.html#screening" hidden><span data-i18n="reelInk">Xuan Ink Wash</span><span aria-hidden="true">↗</span></a>
+            <div class="desk-transport">
+              <span class="desk-timecode desk-mono">00:00:00:00</span>
+              <div class="desk-transport-buttons">
+                <button type="button" data-cut="-1" aria-label="Previous edit" disabled><span class="desk-skip-icon" aria-hidden="true"></span></button>
+                <button type="button" class="desk-play" aria-keyshortcuts="Space" disabled>
+                  <span class="desk-play-icon" aria-hidden="true"></span>
+                  <span data-desk-start data-i18n="deskPlay">Play sequence</span>
+                  <span data-desk-stop data-i18n="deskPause" hidden>Pause sequence</span>
+                </button>
+                <button type="button" data-cut="1" aria-label="Next edit" disabled><span class="desk-skip-icon" aria-hidden="true"></span></button>
+              </div>
+              <span class="desk-duration desk-mono">00:00:09:00</span>
             </div>
-            <div class="reel-controls" role="group" aria-label="Featured film frames" hidden>
-              <button type="button" aria-pressed="true"><span data-i18n="reelPaper">Vermilion Paper Cut</span></button>
-              <button type="button" aria-pressed="false"><span data-i18n="reelWood">Ukiyo-e Woodblock</span></button>
-              <button type="button" aria-pressed="false"><span data-i18n="reelInk">Xuan Ink Wash</span></button>
+          </section>
+
+          <section class="desk-timeline" aria-labelledby="desk-timeline-title">
+            <div class="desk-panel-bar">
+              <h2 id="desk-timeline-title" data-i18n="deskTimeline">Timeline</h2>
+              <p class="desk-hint" id="desk-hint">
+                <span data-desk-scroll data-i18n="deskScrollHint" hidden>Scroll or drag the playhead</span>
+                <span data-desk-manual data-i18n="deskManualHint" hidden>Drag the playhead to scrub</span>
+              </p>
+              <span class="desk-mono">24 FPS</span>
             </div>
-          </div>
+            <div class="desk-track">
+              <div class="desk-track-name desk-mono" aria-hidden="true">V1</div>
+              <div class="desk-rail">
+                <div class="desk-ruler desk-mono" aria-hidden="true"><span>00:00</span><span>00:03</span><span>00:06</span><span>00:09</span></div>
+                <div class="desk-clips" aria-hidden="true">
+                  <div class="desk-clip" data-segment="paper-lantern" data-current><img src="docs/readme/frames/paper-lantern.jpg" width="96" height="54" alt=""><span data-i18n="deskLantern">Paper Lightbox</span></div>
+                  <div class="desk-clip" data-segment="papercut-red"><img src="docs/readme/frames/papercut-red.jpg" width="96" height="54" alt=""><span data-i18n="deskPaperShort">Paper Cut</span></div>
+                  <div class="desk-clip" data-segment="ink-wash"><img src="docs/readme/frames/ink-wash.jpg" width="96" height="54" alt=""><span data-i18n="deskInkShort">Ink Wash</span></div>
+                </div>
+                <span class="desk-playhead" aria-hidden="true"></span>
+                <input class="desk-scrub" type="range" min="0" max="216" step="1" value="0" aria-label="Sequence playhead" aria-describedby="desk-hint" aria-controls="desk-monitor" disabled>
+              </div>
+            </div>
+          </section>
+
+          <section class="desk-inspector" aria-labelledby="desk-style-title">
+            <div class="desk-panel-bar"><h2 id="desk-style-title" data-i18n="deskNotes">Style notes</h2></div>
+            <div class="desk-note" data-note="paper-lantern">
+              <h3 data-i18n="deskLantern">Paper Lightbox</h3>
+              <p class="desk-film-name" data-i18n="deskLanternFilm">The Bell in the Fog</p>
+              <p class="desk-note-copy" data-i18n="deskLanternDetail">Layered paper silhouettes and a warm window give a miniature harbor its depth.</p>
+              <a href="styles/paper-lantern/showcase/index.html#screening" data-desk-style="paper-lantern"><span data-i18n="deskWatch">Watch the film</span><span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="desk-note" data-note="papercut-red" hidden>
+              <h3 data-i18n="deskPaper">Vermilion Paper Cut</h3>
+              <p class="desk-film-name" data-i18n="deskPaperFilm">The Wind’s Two Tails</p>
+              <p class="desk-note-copy" data-i18n="deskPaperDetail">A fold opens into a mirrored cutout. The shape of the paper creates the movement.</p>
+              <a href="styles/papercut-red/showcase/index.html#screening" data-desk-style="papercut-red"><span data-i18n="deskWatch">Watch the film</span><span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="desk-note" data-note="ink-wash" hidden>
+              <h3 data-i18n="deskInk">Xuan Ink Wash</h3>
+              <p class="desk-film-name" data-i18n="deskInkFilm">A Mouthful of Moon</p>
+              <p class="desk-note-copy" data-i18n="deskInkDetail">The heron’s strike brings wet brushstrokes, paper grain, and open space into motion.</p>
+              <a href="styles/ink-wash/showcase/index.html#screening" data-desk-style="ink-wash"><span data-i18n="deskWatch">Watch the film</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </section>
         </div>
       </div>
     </section>

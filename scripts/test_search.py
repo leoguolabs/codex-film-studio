@@ -123,7 +123,9 @@ class SearchTests(unittest.TestCase):
                     browse = [a for a in doc.attrs('a') if a.get('class') == 'button primary']
                     self.assertEqual([a['href'] for a in browse], ['#library'])
                     text=' '.join(doc.text)
-                    self.assertIn('播放动效' if lang=='zh' else 'Play motion', text)
+                    self.assertIn('播放序列' if lang=='zh' else 'Play sequence', text)
+                    self.assertIn('时间线播放头' if lang=='zh' else 'Sequence playhead',
+                                  [a.get('aria-label') for a in doc.attrs('input')])
                     self.assertNotIn('Opening the collection',text)
                     self.assertNotIn('正在打开风格片库',text)
                     self.assertIn('如何用 Codex' if lang=='zh' else 'How do you make a video',text)

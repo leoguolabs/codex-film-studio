@@ -11,15 +11,18 @@ changing local source alone does not publish it.
 
 ## Design and source
 
-`index.html` and `catalog/` contain the homepage. Its opening reel uses frames
-from Vermilion Paper Cut, Ukiyo-e Woodblock and Xuan Ink Wash. Native scrolling
-moves the splice and refracting lens in either direction. The reel buttons also
-select individual frames, including when `prefers-reduced-motion` turns off
-scroll-driven motion. Play motion runs the sequence once on request. The
-first-screen style link and `#library` both jump directly to the complete
-collection. Browsers without WebGL use a CSS glass lens. English and
-Chinese copy share the layout, with separate public URLs. No framework, CDN,
-remote font or third-party script is needed.
+`index.html` and `catalog/` contain the homepage. The editing desk opens on a
+silent nine-second sequence of published frames from Paper Lightbox, Vermilion
+Paper Cut and Xuan Ink Wash. Native scrolling moves the playhead in either
+direction. The timeline supports dragging and frame stepping with the arrow
+keys, and the transport supports playback and jumps between cuts. The inspector
+opens the current film’s screening. The screen starts on a still and uses each
+style’s existing frame sheets as they load. Reduced motion disables scroll
+scrubbing and keeps manual controls available.
+
+The first-screen style link and `#library` both jump directly to the complete
+collection. English and Chinese copy share the layout, with separate public
+URLs. The desk uses Canvas 2D and native controls.
 
 Public builds add the commit revision to homepage asset URLs, catalog requests
 and frame previews. This avoids reusing assets from the previous deployment

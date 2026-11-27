@@ -59,7 +59,6 @@
   & .primary:hover { background: #79351f; border-color: #79351f; color: var(--panel); }
   & .library .filters .selected:hover { background: var(--green); color: var(--panel); }
 
-  & .product-definition,
   & .library :is(.section-aside, .card-description, .card-meta, .collection-note),
   & .library .search input::placeholder { color: var(--muted); }
   & .search-answers pre { background: var(--wash); border-color: var(--line); }

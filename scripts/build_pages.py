@@ -90,7 +90,7 @@ def write_gallery_preview(source, destination):
 
     with Image.open(source) as image:
         image.thumbnail((960, 960), Image.Resampling.LANCZOS)
-        image.save(destination, 'JPEG', quality=84, optimize=True, progressive=True)
+        image.save(destination, 'JPEG', quality=83, optimize=True, progressive=True)
     if destination.stat().st_size >= source.stat().st_size:
         shutil.copyfile(source, destination)
 
@@ -115,8 +115,8 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
     files.extend((ROOT / name, name) for name in [
         "index.html", "catalog/studio.css", "catalog/studio.mjs",
         "catalog/home-theme.css", "catalog/home-theme.js",
-        "catalog/homepage.css", "catalog/film-reel.mjs",
-        "catalog/hero.svg", "catalog/mark.svg", "catalog/studio-header.css", "catalog/strings.mjs", "catalog/social-card.jpg",
+        "catalog/homepage.css", "catalog/edit-desk.css", "catalog/edit-desk.mjs",
+        "catalog/mark.svg", "catalog/studio-header.css", "catalog/strings.mjs", "catalog/social-card.jpg",
         "catalog/film-screening.css", "catalog/film-screening.mjs",
         "catalog/agent-start.mjs",
         "catalog/brand.css", "catalog/brand/studio-logo.svg",
@@ -196,7 +196,7 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
         homepage = output / "index.html"
         html = homepage.read_text(encoding="utf-8")
         query = urlencode({"v": revision})
-        for asset in ["catalog/studio.css", "catalog/studio.mjs", "catalog/homepage.css", "catalog/film-reel.mjs",
+        for asset in ["catalog/studio.css", "catalog/studio.mjs", "catalog/homepage.css", "catalog/edit-desk.css", "catalog/edit-desk.mjs",
                       "catalog/home-theme.css", "catalog/home-theme.js"]:
             html = html.replace(f'"{asset}"', f'"{asset}?{query}"')
         html = re.sub(r'src="(docs/readme/frames/[^"]+)"', rf'src="\1?{query}"', html)

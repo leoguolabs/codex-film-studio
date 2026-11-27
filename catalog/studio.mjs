@@ -149,14 +149,16 @@ async function setLanguage(language) {
   searchInput.placeholder = t('search');
   searchInput.setAttribute('aria-label', t('search'));
   $('.filters').setAttribute('aria-label',t('filterLabel'));
-  $('.reel-controls').setAttribute('aria-label', t('reelControls'));
+  $('.desk-scrub').setAttribute('aria-label', t('deskScrub'));
+  $('[data-cut="-1"]').setAttribute('aria-label', t('deskPrevious'));
+  $('[data-cut="1"]').setAttribute('aria-label', t('deskNext'));
   $('#style-dialog .dialog-close').setAttribute('aria-label',t('close'));
   $('#compare-dialog .dialog-close').setAttribute('aria-label', t('compareClose'));
   try { localStorage.setItem('film-studio-language',language); } catch { /* Private browsing can disable storage. */ }
   if (!PAGE_LANGUAGE) { const url = new URL(location.href); url.searchParams.set('lang',language); history.replaceState(null,'',url); }
   if (state.catalog) {
     renderStyles();
-    updateReelLinks();
+    updateDeskLinks();
     if (state.detail) renderDetail();
     if (compareDialog.open) renderComparison();
   }
@@ -183,11 +185,15 @@ function capabilitySummary(entry, includeStatus = false) {
   return `<dl class="capability-facts">${facts.map(([label, value]) => `<div><dt>${escape(label)}</dt><dd>${escape(value)}</dd></div>`).join('')}</dl>`;
 }
 
-function updateReelLinks() {
-  document.querySelectorAll('[data-reel-style]').forEach(link => {
-    const entry = state.catalog.styles.find(style => style.id === link.dataset.reelStyle);
+function updateDeskLinks() {
+  document.querySelectorAll('[data-desk-style]').forEach(link => {
+    const entry = state.catalog.styles.find(style => style.id === link.dataset.deskStyle);
     const page = entry && (samplePage(entry) ?? stylePage(entry));
-    if (page) link.href = pageURL(page);
+    if (page) {
+      const url = new URL(pageURL(page));
+      if (!url.hash) url.hash = link.hash;
+      link.href = url.href;
+    }
   });
 }
 
@@ -447,7 +453,7 @@ try {
   for (const button of filterButtons) button.disabled = false;
   searchInput.disabled = false;
   applySearch();
-  updateReelLinks();
+  updateDeskLinks();
   // Keep old root links to a specific edition or chapter working after the homepage moves.
   if (params.has('edition') || location.hash === '#film') {
     const target = new URL('styles/whiteboard/studio/index.html',SITE_ROOT);
