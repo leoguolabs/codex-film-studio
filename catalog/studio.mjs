@@ -38,9 +38,27 @@ const categories = {
   'city-symphony':['geography','material'],
   'ukiyoe':['drawn','material','animation'],
 };
-const state = { catalog:null, frames:{}, availability:{mode:'public', pages:{}}, language:'en', filter:'all', query:'', detail:null };
 const $ = selector => document.querySelector(selector);
+const styleGrid = $('#style-grid');
+const toolbar = $('.library-toolbar');
+const searchInput = $('#style-search');
+const filterButtons = [...document.querySelectorAll('[data-filter]')];
+const compareButton = $('#open-comparison');
+const compareDialog = $('#compare-dialog');
+const searchParams = new URLSearchParams(location.search);
+const requestedFilter = filterButtons.find(button => button.dataset.filter === searchParams.get('category'));
+const state = {
+  catalog: null,
+  frames: {},
+  availability: { mode: 'public', pages: {} },
+  language: 'en',
+  filter: requestedFilter?.dataset.filter ?? 'all',
+  query: searchParams.get('q') ?? '',
+  detail: null,
+  comparison: [],
+};
 const t = key => copy[state.language][key] ?? copy.en[key] ?? key;
+const format = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name]);
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const localized = (entry, field) => state.language === 'zh' ? entry[`${field}_zh`] ?? entry[field] : entry[field];
 const repoLink = path => `${REPO}/blob/main/${path.split('/').map(encodeURIComponent).join('/')}`;
@@ -64,12 +82,11 @@ function preview(entry, eager = false) {
 function previewPage(entry) {
   return entry.showcases?.find(page => page.id === entry.preview_showcase);
 }
-function previewAction(entry, contents, className = '', showDetails = false) {
-  const page = showDetails ? null : previewPage(entry);
-  const label = escape(localized(entry,'name'));
-  return page
-    ? `<a class="${className}" href="${escape(pageURL(page))}" aria-label="${label}">${contents}</a>`
-    : `<button type="button" class="${className}" data-style="${escape(entry.id)}" aria-label="${label}" aria-haspopup="dialog" aria-controls="style-dialog">${contents}</button>`;
+function samplePage(entry) {
+  if (!(entry.capabilities.published_film ?? entry.capabilities.published_demo)) return null;
+  const preview = previewPage(entry);
+  if (preview?.access === 'release') return preview;
+  return entry.showcases?.find(page => page.access === 'release');
 }
 function readPreference() {
   if (PAGE_LANGUAGE) return PAGE_LANGUAGE;
@@ -83,6 +100,7 @@ async function setLanguage(language) {
   if (PAGE_LANGUAGE && language !== PAGE_LANGUAGE) {
     const url = new URL(language === 'zh' ? 'zh/' : './', SITE_ROOT);
     url.search = location.search; url.searchParams.delete('lang');
+    url.hash = location.hash;
     try {
       // Keep the live controls and their state; translate generated content
       // from the crawlable language page without navigating to an old fragment.
@@ -128,54 +146,132 @@ async function setLanguage(language) {
     if (link.dataset.language === language) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
   });
-  const search = $('#style-search');
-  search.placeholder = t('search'); search.setAttribute('aria-label',t('search'));
+  searchInput.placeholder = t('search');
+  searchInput.setAttribute('aria-label', t('search'));
   $('.filters').setAttribute('aria-label',t('filterLabel'));
-  $('.dialog-close').setAttribute('aria-label',t('close'));
+  $('.reel-controls').setAttribute('aria-label', t('reelControls'));
+  $('#style-dialog .dialog-close').setAttribute('aria-label',t('close'));
+  $('#compare-dialog .dialog-close').setAttribute('aria-label', t('compareClose'));
   try { localStorage.setItem('film-studio-language',language); } catch { /* Private browsing can disable storage. */ }
   if (!PAGE_LANGUAGE) { const url = new URL(location.href); url.searchParams.set('lang',language); history.replaceState(null,'',url); }
-  if (state.catalog) { renderStyles(); if (state.detail) renderDetail(); }
+  if (state.catalog) {
+    renderStyles();
+    updateReelLinks();
+    if (state.detail) renderDetail();
+    if (compareDialog.open) renderComparison();
+  }
   window.scrollTo({top: position, behavior: 'instant'});
 }
 function guideURL(entry) {
   return new URL(`${state.language === 'zh' ? 'zh/' : ''}styles/${entry.id}/`, SITE_ROOT).href;
 }
-function guideLink(entry) {
-  return PAGE_LANGUAGE ? '<a class="card-page" href="' + escape(guideURL(entry)) + '">' + (state.language === 'zh' ? '风格与制作指南' : 'Style & production guide') + '<span aria-hidden="true">→</span></a>' : '';
+function guideLink(entry, compact = false) {
+  if (!PAGE_LANGUAGE) return '';
+  const label = t('styleGuidePage');
+  const title = compact ? t('guide') : label;
+  return `<a class="card-page" href="${escape(guideURL(entry))}" aria-label="${escape(label)}">${escape(title)}<span aria-hidden="true">→</span></a>`;
 }
-function capabilitySummary(entry) {
+function capabilitySummary(entry, includeStatus = false) {
   const caps = entry.capabilities;
   const source = {'public-inputs-and-repository':'sourcePublic', 'local-source-bundle':'sourceLocal', 'not-audited':'sourceUnaudited', 'unavailable':'sourceUnavailable'};
   const rebuild = {'clip':'rebuildClip', 'full':'rebuildFull', 'not-yet-revalidated':'rebuildUnvalidated'};
   const rows = [['renderer', caps.scene_renderer ? 'rendererIncluded' : 'rendererAuthored'],
     ['originalSource', source[caps.original_source] ?? 'sourceUnknown'],
     ['sampleRebuild', rebuild[caps.sample_rebuild] ?? 'rebuildUnknown']];
-  return `<dl class="capability-facts">${rows.map(([label, value]) => `<div><dt>${escape(t(label))}</dt><dd>${escape(t(value))}</dd></div>`).join('')}</dl>`;
+  const facts = rows.map(([label, value]) => [t(label), t(value)]);
+  if (includeStatus) facts.unshift([t('compareReadiness'), localized(state.catalog.statuses[entry.status], 'name')]);
+  return `<dl class="capability-facts">${facts.map(([label, value]) => `<div><dt>${escape(label)}</dt><dd>${escape(value)}</dd></div>`).join('')}</dl>`;
 }
+
+function updateReelLinks() {
+  document.querySelectorAll('[data-reel-style]').forEach(link => {
+    const entry = state.catalog.styles.find(style => style.id === link.dataset.reelStyle);
+    const page = entry && (samplePage(entry) ?? stylePage(entry));
+    if (page) link.href = pageURL(page);
+  });
+}
+
+function normalizeSearch(value) {
+  return value.normalize('NFKC').toLowerCase().replace(/[\p{Dash_Punctuation}_\s]+/gu, ' ').trim();
+}
+
+function sampleLink(entry) {
+  const sample = samplePage(entry);
+  const page = sample ?? stylePage(entry);
+  if (!page) return '';
+  const title = sample ? t('compareWatch') : stylePageLabel(page);
+  return `<a class="card-page" href="${escape(pageURL(page))}">${escape(title)}<span aria-hidden="true">↗</span></a>`;
+}
+
 function renderStyles() {
   if (!state.catalog) return;
-  const entries = state.catalog.styles.filter(entry => {
-    const matchesCategory = state.filter === 'all' || categories[entry.id]?.includes(state.filter);
-    const haystack = `${entry.name} ${entry.name_zh} ${entry.id} ${entry.description} ${entry.description_zh}`.toLocaleLowerCase();
-    return matchesCategory && haystack.includes(state.query.toLocaleLowerCase().trim());
-  });
+  const query = normalizeSearch(state.query);
+  const terms = query ? query.split(' ') : [];
+  const matches = [];
+  for (const entry of state.catalog.styles) {
+    const tags = categories[entry.id] ?? [];
+    if (state.filter !== 'all' && !tags.includes(state.filter)) continue;
+    if (!query) {
+      matches.push({ entry, score: 0 });
+      continue;
+    }
+    const names = normalizeSearch([entry.name, entry.name_zh, entry.id].join(' '));
+    const descriptions = normalizeSearch([entry.description, entry.description_zh].join(' '));
+    const labels = tags.flatMap(tag => [copy.en[tag], copy.zh[tag]]);
+    const haystack = [names, descriptions, normalizeSearch(labels.join(' '))].join(' ');
+    if (!terms.every(term => haystack.includes(term))) continue;
+    const titleMatches = terms.filter(term => names.includes(term)).length;
+    const phraseMatch = names.includes(query) ? 2 : Number(descriptions.includes(query));
+    matches.push({ entry, score: titleMatches * 3 + phraseMatch });
+  }
+  const entries = matches.sort((a, b) => b.score - a.score).map(match => match.entry);
   const count = entries.length, total = state.catalog.styles.length;
-  $('#collection-range').textContent = `01 — ${String(total).padStart(2,'0')}`;
-  $('#style-count').textContent = state.language === 'zh' ? `${total} 种视觉语言 · 无限种故事${count !== total ? ` · 显示 ${count} 种` : ''}` : `${total} visual languages. Endless stories.${count !== total ? ` · ${count} shown` : ''}`;
-  $('#style-grid').innerHTML = entries.map((entry,i) => {
-    const pages = entry.showcases ?? [], hasLocal = pages.some(p => p.access === 'local');
-    const primary = stylePage(entry);
-    const filmLabel = pages.some(p => p.access === 'release') ? 'publicSample' : hasLocal ? 'localPages' : 'noFilm';
-    return `<article class="style-card" style="--delay:${i*.035}s">${previewAction(entry,`<div class="card-art">${preview(entry)}<span class="card-index">${String(state.catalog.styles.indexOf(entry)+1).padStart(2,'0')}</span><span class="preview-kind">${t(entry.preview_kind === 'frame' ? 'frame' : 'sketch')}</span><span class="card-arrow" aria-hidden="true">↗</span></div><div class="card-heading"><h3>${escape(localized(entry,'name'))}</h3><span aria-hidden="true">↗</span></div><p class="card-description">${escape(localized(entry,'description'))}</p>`,'card-open',true)}<div class="card-meta"><span>${escape(localized(state.catalog.statuses[entry.status],'name'))}</span><span class="${(entry.capabilities.published_film ?? entry.capabilities.published_demo) ? 'published' : ''}">${t(filmLabel)}</span></div>${capabilitySummary(entry)}<div class="card-actions">${primary ? `<a class="card-page" href="${escape(pageURL(primary))}">${stylePageLabel(primary)}<span aria-hidden="true">↗</span></a>` : ''}${guideLink(entry)}</div></article>`;
-  }).join('') || `<p class="empty-state">${t('noResults')}</p>`;
+  const resultText = format(count === total && state.filter === 'all' && !terms.length ? 'totalStyles' : 'results', { count, total });
+  const resultCount = $('#style-count');
+  if (resultCount.textContent !== resultText) resultCount.textContent = resultText;
+  styleGrid.innerHTML = entries.map(entry => {
+    const name = localized(entry, 'name');
+    const kind = entry.preview_kind === 'frame' ? '' : `<span class="preview-kind">${t('sketch')}</span>`;
+    return `<article class="style-card">
+      <div class="card-content">
+        <div class="card-art">${preview(entry)}${kind}</div>
+        <div class="card-heading"><h3><button type="button" class="card-open" data-style="${escape(entry.id)}" aria-haspopup="dialog" aria-controls="style-dialog">
+          ${escape(name)}<span aria-hidden="true">＋</span>
+        </button></h3></div>
+        <p class="card-description">${escape(localized(entry, 'description'))}</p>
+      </div>
+      <div class="card-meta"><span>${escape(localized(state.catalog.statuses[entry.status], 'name'))}</span></div>
+      <div class="card-actions">
+        ${sampleLink(entry)}
+        ${guideLink(entry, true)}
+        <button type="button" class="card-compare" data-compare-style="${escape(entry.id)}" aria-label="${escape(format('compareAdd', {style:name}))}" aria-pressed="false">
+          <span aria-hidden="true" class="is-unselected">＋</span><span aria-hidden="true" class="is-selected">✓</span>${t('compareCard')}
+        </button>
+      </div>
+    </article>`;
+  }).join('') || `<div class="empty-state"><p>${t('noResults')}</p><button type="button" data-reset-search>${t('resetSearch')}</button></div>`;
+  updateComparisonControls();
 }
 function renderDetail() {
   const entry = state.catalog.styles.find(s => s.id === state.detail);
   if (!entry) return;
   const primary = stylePage(entry);
+  const sample = previewPage(entry);
   const missing = primary?.access === 'local' && !isAvailable(primary);
   const links = primary ? `<a class="primary-page" href="${escape(pageURL(primary))}">${stylePageLabel(primary)}<span aria-hidden="true">↗</span></a>` : '';
-  $('#style-detail').innerHTML = `<div class="detail-art" data-preview-kind="${escape(entry.preview_kind ?? 'schematic')}">${previewPage(entry) ? previewAction(entry,preview(entry,true),'preview-player') : preview(entry,true)}<span class="preview-kind">${t(entry.preview_kind === 'frame' ? 'frame' : 'sketch')}</span></div><div class="detail-copy"><p class="eyebrow">${escape(entry.id.toUpperCase().replaceAll('-',' / '))}</p><h2 id="detail-title">${escape(localized(entry,'name'))}</h2><p class="detail-description">${escape(localized(entry,'description'))}</p>${guideLink(entry)}<h3>${t('openPages')}</h3><div class="detail-pages">${links}</div>${!primary ? `<p class="local-help">${t('noShowcase')}</p>` : ''}${missing ? `<p class="local-help">${state.availability.mode === 'local' ? t('missingProject') : t('localHelp')}</p>` : ''}<div class="detail-links"><a href="${repoLink(entry.guide)}" target="_blank" rel="noopener noreferrer">${t('guide')} ↗</a><a href="${repoLink(entry.prompt)}" target="_blank" rel="noopener noreferrer">${t('prompt')} ↗</a><a href="${REPO}/tree/main/${entry.template}" target="_blank" rel="noopener noreferrer">${t('files')} ↗</a></div><h3>${t('startStyle')}</h3><film-agent-start style-id="${escape(entry.id)}" compact></film-agent-start></div>`;
+  const art = preview(entry, true);
+  const previewLink = sample ? `<a class="preview-player" href="${escape(pageURL(sample))}">${art}</a>` : art;
+  $('#style-detail').innerHTML = `<div class="detail-art" data-preview-kind="${escape(entry.preview_kind ?? 'schematic')}">${previewLink}<span class="preview-kind">${t(entry.preview_kind === 'frame' ? 'frame' : 'sketch')}</span></div>
+    <div class="detail-copy">
+      <h2 id="detail-title">${escape(localized(entry, 'name'))}</h2>
+      <p class="detail-description">${escape(localized(entry, 'description'))}</p>
+      <div class="detail-pages">${links}${guideLink(entry)}</div>
+      ${!primary ? `<p class="local-help">${t('noShowcase')}</p>` : ''}
+      ${missing ? `<p class="local-help">${t(state.availability.mode === 'local' ? 'missingProject' : 'localHelp')}</p>` : ''}
+      ${capabilitySummary(entry, true)}
+      <div class="detail-links"><a href="${repoLink(entry.guide)}" target="_blank" rel="noopener noreferrer">${t('guide')} ↗</a><a href="${repoLink(entry.prompt)}" target="_blank" rel="noopener noreferrer">${t('prompt')} ↗</a><a href="${REPO}/tree/main/${entry.template}" target="_blank" rel="noopener noreferrer">${t('files')} ↗</a></div>
+      <h3>${t('startStyle')}</h3><film-agent-start style-id="${escape(entry.id)}" compact></film-agent-start>
+    </div>`;
 }
 function openStyle(id) {
   state.detail = id; renderDetail();
@@ -184,17 +280,139 @@ function openStyle(id) {
   if (!$('#style-dialog').open) $('#style-dialog').showModal();
 }
 function closeStyle() { $('#style-dialog').close(); }
-document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click',event => { event.preventDefault(); setLanguage(button.dataset.language); }));
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click',() => {
-  state.filter = button.dataset.filter;
-  document.querySelectorAll('[data-filter]').forEach(item => { const selected = item === button; item.classList.toggle('selected',selected); item.setAttribute('aria-pressed',selected); });
+
+function updateURL(parameters) {
+  const url = new URL(location.href);
+  for (const [key, value] of Object.entries(parameters)) {
+    if (value) url.searchParams.set(key, value);
+    else url.searchParams.delete(key);
+  }
+  history.replaceState(history.state, '', url);
+}
+
+function applySearch(revealResults = false) {
+  const firstRowIsAbove = revealResults && styleGrid.getBoundingClientRect().top < toolbar.getBoundingClientRect().bottom - 12;
+  for (const button of filterButtons) {
+    const selected = button.dataset.filter === state.filter;
+    button.classList.toggle('selected', selected);
+    button.setAttribute('aria-pressed', String(selected));
+  }
+  updateURL({ q: state.query.trim(), category: state.filter === 'all' ? '' : state.filter });
   renderStyles();
-}));
-$('#style-search').addEventListener('input',event => { state.query = event.target.value; if (state.catalog) renderStyles(); });
-document.addEventListener('click',event => {
-  const card = event.target.closest('[data-style]'); if (card) openStyle(card.dataset.style);
+  if (firstRowIsAbove) $('#library').scrollIntoView({behavior:'instant'});
+}
+
+function updateComparisonControls() {
+  const count = state.comparison.length;
+  compareButton.disabled = count === 0;
+  compareButton.dataset.ready = String(count === 2);
+  compareButton.querySelector('.compare-count').textContent = count + '/2';
+  compareButton.setAttribute('aria-label', t('compareStyles') + ', ' + format('compareSelection', {count}));
+  document.querySelectorAll('[data-compare-style]').forEach(button => {
+    const selected = state.comparison.includes(button.dataset.compareStyle);
+    button.setAttribute('aria-pressed', String(selected));
+  });
+}
+
+let toastTimeout;
+function showToast(message) {
+  const toast = $('#toast');
+  toast.textContent = message;
+  toast.classList.add('visible');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('visible');
+    toast.textContent = '';
+  }, 3600);
+}
+
+function toggleComparison(id) {
+  const index = state.comparison.indexOf(id);
+  if (index !== -1) {
+    state.comparison.splice(index, 1);
+  } else if (state.comparison.length < 2) {
+    state.comparison.push(id);
+  } else {
+    showToast(t('compareFull'));
+    return;
+  }
+  updateURL({ compare: state.comparison.join(',') });
+  updateComparisonControls();
+  $('#compare-status').textContent = format('compareSelection', {count: state.comparison.length});
+  if (compareDialog.open) {
+    renderComparison();
+    compareDialog.querySelector('.dialog-close').focus({preventScroll:true});
+  }
+}
+
+function renderComparison() {
+  const styles = state.comparison.map(id => state.catalog.styles.find(entry => entry.id === id));
+  const panels = styles.map(entry => {
+    const name = localized(entry, 'name');
+    return `<article class="compare-cell">
+      <div class="compare-image">${preview(entry, true)}</div>
+      <h3>${escape(name)}</h3>
+      <p>${escape(localized(entry, 'description'))}</p>
+      ${capabilitySummary(entry, true)}
+      <div class="compare-actions">
+        ${sampleLink(entry)}
+        <button type="button" data-use-style="${escape(entry.id)}">${t('compareUse')} <span aria-hidden="true">→</span></button>
+        <button type="button" class="remove-comparison" data-remove-comparison="${escape(entry.id)}" aria-label="${escape(format('compareRemove', {style:name}))}">${t('compareRemoveAction')}</button>
+      </div>
+    </article>`;
+  });
+  if (styles.length < 2) {
+    panels.push(`<div class="compare-empty"><p>${t(styles.length ? 'compareMore' : 'compareEmpty')}</p>
+      <button type="button" data-close-comparison>${t('compareBack')}</button></div>`);
+  }
+  $('#compare-content').innerHTML = styles.length ? `<div class="compare-grid">${panels.join('')}</div>` : panels[0];
+}
+
+document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click',event => { event.preventDefault(); setLanguage(button.dataset.language); }));
+for (const button of filterButtons) button.addEventListener('click', () => {
+  state.filter = button.dataset.filter;
+  applySearch(true);
 });
-$('.dialog-close').addEventListener('click',closeStyle);
+searchInput.value = state.query;
+searchInput.addEventListener('input', () => {
+  state.query = searchInput.value;
+  applySearch(true);
+});
+document.addEventListener('click',event => {
+  const card = event.target.closest('[data-style]');
+  const compare = event.target.closest('[data-compare-style]');
+  if (card && state.catalog) openStyle(card.dataset.style);
+  if (compare) toggleComparison(compare.dataset.compareStyle);
+  if (event.target.closest('[data-reset-search]')) {
+    state.filter = 'all';
+    state.query = searchInput.value = '';
+    applySearch(true);
+    searchInput.focus();
+  }
+});
+compareButton.addEventListener('click', () => {
+  renderComparison();
+  compareDialog.showModal();
+  compareDialog.scrollTop = 0;
+});
+compareDialog.addEventListener('click', event => {
+  const remove = event.target.closest('[data-remove-comparison]');
+  const create = event.target.closest('[data-use-style]');
+  if (remove) toggleComparison(remove.dataset.removeComparison);
+  if (create) {
+    $('#create film-agent-start').setAttribute('style-id', create.dataset.useStyle);
+    compareDialog.close();
+    const section = $('#create');
+    history.pushState(history.state, '', '#create');
+    section.focus({preventScroll:true});
+    section.scrollIntoView();
+  }
+  if (event.target.closest('.dialog-close, [data-close-comparison]')) compareDialog.close();
+});
+compareDialog.addEventListener('close', () => {
+  if (compareButton.disabled) searchInput.focus({preventScroll:true});
+});
+$('#style-dialog .dialog-close').addEventListener('click',closeStyle);
 $('#style-dialog').addEventListener('click',event => {
   if (event.target !== $('#style-dialog')) return;
   const bounds = event.target.getBoundingClientRect();
@@ -223,15 +441,21 @@ try {
   ]);
   state.catalog = catalog; if (availability) state.availability = availability;
   for (const frame of frames?.frames ?? []) state.frames[frame.style] = frame.image;
-  renderStyles();
-  // Keep old root links to a specific edition or chapter working after the homepage moves.
+  const styleIds = new Set(catalog.styles.map(entry => entry.id));
   const params = new URLSearchParams(location.search);
+  state.comparison = [...new Set(params.get('compare')?.split(',') ?? [])].filter(id => styleIds.has(id)).slice(0, 2);
+  for (const button of filterButtons) button.disabled = false;
+  searchInput.disabled = false;
+  applySearch();
+  updateReelLinks();
+  // Keep old root links to a specific edition or chapter working after the homepage moves.
   if (params.has('edition') || location.hash === '#film') {
     const target = new URL('styles/whiteboard/studio/index.html',SITE_ROOT);
     target.search = location.search; target.hash = location.hash; location.replace(target.href);
-  } else if (params.has('style') && catalog.styles.some(entry => entry.id === params.get('style'))) openStyle(params.get('style'));
+  } else if (styleIds.has(params.get('style'))) openStyle(params.get('style'));
 } catch (error) {
   console.error(error);
-  if (!$('#style-grid').querySelector('article')) $('#style-grid').innerHTML = `<p class="empty-state">${t('loadFailed')} <a href="${REPO}/blob/main/styles/README.md">↗</a></p>`;
-  document.querySelectorAll('[data-filter]').forEach(button => { button.disabled = true; });
+  if (!styleGrid.querySelector('article')) styleGrid.innerHTML = `<p class="empty-state">${t('loadFailed')} <a href="${REPO}/blob/main/styles/README.md">↗</a></p>`;
+  for (const button of filterButtons) button.disabled = true;
+  searchInput.disabled = true;
 }

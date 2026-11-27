@@ -73,10 +73,12 @@ class PortalTests(unittest.TestCase):
                         self.assertEqual(film['sha256'], 'unchanged-media-digest')
                         self.assertIn('github.com/visiontrail/',manifest_file.read_text())
             homepage = (output / 'index.html').read_text()
-            for asset in ['catalog/studio.mjs', 'catalog/studio.css', 'catalog/hero.svg',
+            for asset in ['catalog/studio.mjs', 'catalog/studio.css',
                           'catalog/brand.css', 'catalog/brand/studio-logo.svg']:
                 self.assertIn(f'{asset}?v=portal-test', homepage)
-            for asset in ['catalog/home-theme.css', 'catalog/home-theme.js']:
+            for asset in ['catalog/home-theme.css', 'catalog/home-theme.js',
+                          'catalog/homepage.css', 'catalog/film-reel.mjs',
+                          *[f'docs/readme/frames/{name}.jpg' for name in ('papercut-red', 'ukiyoe', 'ink-wash')]]:
                 self.assertTrue((output / asset).is_file())
                 for relative in ['index.html', 'zh/index.html']:
                     self.assertIn(f'"/codex-film-studio/{asset}?v=portal-test"',

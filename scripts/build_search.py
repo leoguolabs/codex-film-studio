@@ -204,12 +204,18 @@ def home_answers(lang, date, catalog, base):
 
 def static_cards(catalog, base, lang, strings):
     cards = []
-    for index, style in enumerate(catalog['styles'], 1):
+    for style in catalog['styles']:
         name, description = loc(style, 'name', lang), loc(style, 'description', lang)
         href = base + route(style, lang)
         preview = loc(style, 'preview', lang) or style.get('poster', '')
-        kind = ('样片剧照' if lang == 'zh' else 'FILM FRAME') if style.get('preview_kind') == 'frame' else ('风格示意' if lang == 'zh' else 'STYLE STUDY')
-        cards.append(f'''<article class="style-card"><a class="card-open" href="{href}"><div class="card-art"><img src="{base + preview}" alt="{escape(name)} — {kind}" loading="lazy"><span class="card-index">{index:02}</span><span class="preview-kind">{kind}</span></div><div class="card-heading"><h3>{escape(name)}</h3><span aria-hidden="true">↗</span></div><p class="card-description">{escape(description)}</p></a><div class="card-meta"><span>{escape(loc(catalog["statuses"][style["status"]],"name",lang))}</span><span>{escape(strings["publicSample"] if style["capabilities"].get("published_film",style["capabilities"].get("published_demo")) else strings["noFilm"])}</span></div>{capability_facts(style, strings)}<div class="card-actions"><a class="card-page" href="{href}">{'风格与制作指南' if lang == 'zh' else 'Style & production guide'} →</a></div></article>''')
+        kind = strings['frame' if style.get('preview_kind') == 'frame' else 'sketch']
+        badge = f'<span class="preview-kind">{escape(kind)}</span>' if style.get('preview_kind') != 'frame' else ''
+        status = loc(catalog['statuses'][style['status']], 'name', lang)
+        cards.append(f'''<article class="style-card">
+<a class="card-open" href="{href}"><div class="card-art"><img src="{base + preview}" alt="{escape(name)} — {escape(kind)}" loading="lazy">{badge}</div><div class="card-heading"><h3>{escape(name)}</h3></div><p class="card-description">{escape(description)}</p></a>
+<div class="card-meta"><span>{escape(status)}</span></div>
+<details class="card-capabilities"><summary>{escape(strings['cardCapabilities'])}</summary>{capability_facts(style, strings)}</details>
+<div class="card-actions"><a class="card-page" href="{href}">{escape(strings['styleGuidePage'])} <span aria-hidden="true">→</span></a></div></article>''')
     return ''.join(cards)
 
 
@@ -340,18 +346,22 @@ def build_search(output, catalog, origin=DEFAULT_ORIGIN, base_path='/codex-film-
         page = translate_home(home_source, strings[lang])
         page = page.replace('<html lang="en">', f'<html lang="{"zh-CN" if lang == "zh" else "en"}" data-site-root="{prefix}" data-page-language="{lang}">')
         # Root-based asset paths also work at /zh/ and at custom-domain deployments.
-        page = re.sub(r'(href|src)="((?:catalog/|styles/)[^"]*)"', lambda m:f'{m[1]}="{prefix}{m[2]}"', page)
+        page = re.sub(r'(href|src)="((?:catalog/|styles/|docs/readme/frames/)[^"]*)"', lambda m:f'{m[1]}="{prefix}{m[2]}"', page)
         page = re.sub(r'href="(?:\./|#(library|create))"', lambda m:'href="'+url+('#'+m[1] if m[1] else '')+'"', page)
         page = re.sub(r'<button type="button" data-language="(en|zh)"[^>]*>(.*?)</button>', lambda m:f'<a data-language="{m[1]}" href="{base + ("zh/" if m[1]=="zh" else "")}" lang="{"zh-CN" if m[1]=="zh" else "en"}" hreflang="{"zh-CN" if m[1]=="zh" else "en"}"'+(' aria-current="page"' if m[1]==lang else '')+f'>{m[2]}</a>',page)
         page = re.sub(r'(<div class="style-grid" id="style-grid"[^>]*>).*?(</div>)', lambda m:m[1]+static_cards(catalog,base,lang,strings[lang])+m[2],page,flags=re.S)
-        page = re.sub(r'(<span id="collection-range">).*?(</span>)',rf'\g<1>01 — {len(catalog["styles"]):02}\2',page)
+        count_label = strings[lang]['totalStyles'].format(count=len(catalog['styles']))
+        page = page.replace('id="style-count" role="status"></p>',
+                            f'id="style-count" role="status">{escape(count_label)}</p>')
         page = page.replace('<div class="collection-note">', capability_overview(catalog,lang)+'<div class="collection-note">')
         guide_url = url + 'guides/make-a-film-with-codex/'
         guide_link = f'<p class="section-wrap"><a href="{guide_url}">{"阅读 Codex 影片制作教程" if lang == "zh" else "Read the guide to making a film with Codex"} →</a></p>'
         page = page.replace('</main>',home_answers(lang,date,catalog,base)+guide_link+'</main>')
         page = page.replace('href="sitemap.xml"', f'href="{base}sitemap.xml"')
         page = re.sub(r'<noscript>.*?</noscript>', '<noscript><p class="noscript">'+('风格指南可直接阅读；搜索、筛选与详情弹窗需要 JavaScript。' if lang=='zh' else 'Read all style guides without JavaScript. Search, filters and detail dialogs use JavaScript.')+'</p></noscript>',page,flags=re.S)
-        page = page.replace('placeholder="Find a style" aria-label="Find a style"',f'placeholder="{strings[lang]["search"]}" aria-label="{strings[lang]["search"]}"')
+        page = page.replace(f'placeholder="{strings["en"]["search"]}"', f'placeholder="{strings[lang]["search"]}"')
+        for label in ['search', 'filterLabel', 'reelControls', 'compareStyles', 'compareClose', 'close']:
+            page = page.replace(f'aria-label="{strings["en"][label]}"', f'aria-label="{strings[lang][label]}"')
         graph=schema(base,url,title,desc,lang,date,[(loc(s,'name',lang),base+route(s,lang)) for s in catalog['styles']])
         page=metadata(page,title,desc,url,base+'catalog/social-card.jpg',lang,{'en':base,'zh-CN':base+'zh/','x-default':base},graph)
         target=output/home_path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page)
