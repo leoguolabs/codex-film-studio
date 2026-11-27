@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0e1a24"><title>Night Windows · Paper Lightbox · Codex Film Studio</title>
+  <meta name="description" content="Turn a little theatre of cut paper and light with your scroll. Watch The Bell in the Fog and The Penny Wren, and listen to their scores.">
+  <link rel="icon" href="../../../catalog/mark.svg"><link rel="preload" as="image" href="media/window-still.webp">
+  <link rel="stylesheet" href="theatre.css">
+  <script type="module" src="theatre.mjs"></script><script type="module" src="../../../catalog/agent-start.mjs"></script>
+</head>
+<body>
+<header class="mast">
+  <a class="wordmark" href="../../../?lang=en#library" data-library><i class="mark" aria-hidden="true"><b></b></i>Codex Film Studio</a>
+  <nav aria-label="Navigation"><a href="#screening" data-zh="放映">Films</a><a href="#sound" data-zh="原声">Sound</a><span class="languages"><a hreflang="en" lang="en" href="?lang=en">EN</a><i>/</i><a hreflang="zh" lang="zh" href="?lang=zh">中文</a></span></nav>
+</header>
+<main>
+<section id="overture" aria-labelledby="night-title">
+<div class="pin">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="kicker"><span class="lamp-dot"></span><span data-zh="纸雕灯影">Paper lightbox</span></p>
+      <h1 id="night-title"><span data-zh="纸窗">Night</span><em data-zh="入夜">Windows</em></h1>
+      <p class="intro" data-zh="雾港里，一盏灯等着归船。候车室里，一只铜鸟等着窗外的回声。">A lamp waits for a boat in the fog. A brass bird waits for an answer beyond the glass.</p>
+      <a class="ticket" href="#screening"><span aria-hidden="true">▶</span> <span data-zh="看两部短片">Watch the films</span></a>
+    </div>
+    <figure class="instrument">
+      <div class="case">
+        <div class="case-lip"></div><div class="case-reveal"></div>
+        <div class="glass">
+          <img id="still" src="media/window-still.webp" width="1280" height="600" alt="">
+          <canvas id="frames" width="768" height="360" aria-hidden="true"></canvas>
+          <div class="vignette"></div>
+        </div>
+        <span class="pinhead p1"></span><span class="pinhead p2"></span><span class="pinhead p3"></span><span class="pinhead p4"></span>
+      </div>
+      <figcaption class="scale"><span class="plate-id"><i aria-hidden="true"></i><span id="plate-title" data-zh="码头的灯">The landing light</span></span>
+        <div class="stops" role="group" aria-label="Scenes"><button type="button" data-step="0" aria-label="The landing light" aria-pressed="true">I</button><button type="button" data-step="1" aria-label="Through the nets" aria-pressed="false">II</button><button type="button" data-step="2" aria-label="The bell buoy" aria-pressed="false">III</button><button type="button" data-step="3" aria-label="The brass wren" aria-pressed="false">IV</button></div>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="scroll-foot"><span class="scroll-rule"><i></i></span><span data-zh="向下滚动，让纸景动起来">Scroll to turn the paper scenes</span><b aria-hidden="true">↓</b></div>
+</div>
+</section>
+<section id="screening" class="screening" aria-labelledby="screen-title" tabindex="-1">
+<div class="wrap">
+  <div class="section-heading"><div><p class="kicker" data-zh="纸窗放映室">The screening room</p><h2 id="screen-title" data-zh="灯下双片">The double bill</h2></div><span class="format" data-zh="两部短片 · 各 48 秒 · 英文原声">Two shorts · 48 seconds each · English</span></div>
+  <div class="program" role="group" aria-label="Select a film">
+    <button type="button" data-film="bell" aria-pressed="true"><img src="media/bell-poster.webp" width="80" height="45" alt="" loading="lazy"><span><small>I</small><b data-zh="雾里的钟声">The Bell in the Fog</b></span></button>
+    <button type="button" data-film="wren" aria-pressed="false"><img src="media/wren-poster.webp" width="80" height="45" alt="" loading="lazy"><span><small>II</small><b data-zh="一便士的鹪鹩">The Penny Wren</b></span></button>
+  </div>
+  <figure class="projection">
+    <div class="screen">
+      <video id="glimpse" muted loop playsinline preload="none" poster="media/bell-poster.webp" aria-hidden="true"></video>
+      <video id="film" controls playsinline preload="none" poster="media/bell-poster.webp" aria-label="The Bell in the Fog" hidden></video>
+      <button type="button" id="play"><i aria-hidden="true">▶</i><span data-zh="播放全片">Play film</span></button>
+    </div>
+    <figcaption><p id="synopsis">In a fogbound harbour, Nell finds her way home by the sound of an iron bell.</p><a id="direct" href="https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/bell.mp4" data-zh="打开 MP4 ↗">Open MP4 ↗</a></figcaption>
+  </figure>
+  <div class="notes"><details><summary data-zh="选看一幕">Scenes from the film</summary><div id="chapters"></div></details><details><summary data-zh="读英文旁白">Read the narration</summary><div id="lines" lang="en"></div></details></div>
+</div>
+</section>
+<section class="sound" id="sound" aria-labelledby="sound-title"><div class="wrap sound-grid">
+  <div class="sound-intro"><p class="kicker"><span class="lamp-dot"></span><span data-zh="灯箱原声">From the lightbox</span></p><h2 id="sound-title"><span data-zh="闭上眼，">Close your eyes.</span><em data-zh="听一听。">Listen.</em></h2><p data-zh="浮标钟响，机械鸟唱。把配乐与动作声分开听，就能听出窗外是谁在回应。">Hear the iron buoy and the little brass pipes on their own. Listen for the bird that answers from outside.</p></div>
+  <div class="sleeve">
+    <label for="sound-film" data-zh="选择影片原声">Choose a soundtrack</label><select id="sound-film"><option value="bell" data-zh="雾里的钟声">The Bell in the Fog</option><option value="wren" data-zh="一便士的鹪鹩">The Penny Wren</option></select>
+    <h3 id="song">Salt on the Sill</h3>
+    <div class="auditions" role="group" aria-label="Listening tracks"><button type="button" data-track="original" aria-pressed="true" data-zh="Gemini 原曲">Gemini original</button><button type="button" data-track="score" aria-pressed="false" data-zh="片中配乐">Film edit</button><button type="button" data-track="foley" aria-pressed="false" data-zh="动作音效">Foley</button></div>
+    <audio controls preload="none" id="audio" aria-label="Salt on the Sill"></audio>
+    <details><summary data-zh="这段音乐怎么剪">Inside the cue</summary><p id="music-edit"></p><details><summary data-zh="读 Gemini 生成提示词">Read the Gemini prompt</summary><p id="prompt" lang="en"></p></details></details>
+  </div>
+</div></section>
+<footer><div class="wrap"><div class="colophon"><div><p class="kicker" data-zh="制作手记">From the worktable</p><h2 data-zh="一盏灯，几层纸。">A lamp behind the paper.</h2></div><div><p data-zh="远山、码头、渔网各占一层。镜头往前，近处的纸比远山移得快。窗孔透出暖光，钟锤和鸟嘴各绕自己的支点转动。">The mountains, pier and fishing nets each occupy a separate plane. Move the camera and the near card crosses first. Light passes through cut windows. The clapper and the bird’s bill turn on their own pivots.</p><details><summary data-zh="用这个风格制作短片">Make a paper lightbox film</summary><film-agent-start style-id="paper-lantern"></film-agent-start></details>
+    <details><summary data-zh="制作与署名">Production credits</summary><p data-zh="两部英文原创短片使用 Kokoro 旁白和为影片生成的 Gemini 器乐。滚动画面直接取自两部成片。纸材、背光与光晕渲染源自 Lemomo（LemoLab）的 MIT 授权工具。">Both original English shorts use Kokoro narration and instrumental music composed for them in Google Gemini. The scroll sequence uses frames from the finished films. Paper, lighting and bloom draw on Lemomo’s MIT-licensed LemoLab renderer.</p><a href="https://lemomo-ai.github.io/lemo-opuscar/styles/paper-lantern/" data-zh="LemoLab 风格原作 ↗">LemoLab style reference ↗</a> · <a href="https://github.com/leoguolabs/codex-film-studio/tree/main/styles/paper-lantern" data-zh="制作工具与许可 ↗">Tools and licences ↗</a></details></div></div>
+    <div class="endline"><a data-library href="../../../?lang=en#library" data-zh="← 全部风格">← All styles</a><a href="#overture" data-zh="回到灯箱 ↑">Back to the lightbox ↑</a></div></div></footer>
+</main>
+</body></html>

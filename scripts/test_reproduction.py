@@ -173,6 +173,13 @@ class ReproductionTests(unittest.TestCase):
                         subprocess.run(['node', '--input-type=module', '-e',
                                         "import {shots,draw} from './film.mjs'; if (shots.length || typeof draw !== 'function') process.exit(1)"],
                                        cwd=p, check=True)
+                    elif entry['id'] == 'paper-lantern':
+                        for asset in (entry['renderer_entry'], 'engine/player.js', 'scripts/sound.py', 'scripts/master.py'):
+                            self.assertTrue((p / asset).is_file(), asset)
+                        self.assertEqual(json.loads((p / 'timeline.json').read_text())['duration'], 0)
+                        subprocess.run(['node', '--input-type=module', '-e',
+                                        "import {shots} from './src/film.js'; if (shots.length) process.exit(1)"],
+                                       cwd=p, check=True)
                     elif entry['id'] == 'colored-pencil':
                         self.assertTrue((p / entry['renderer_entry']).is_file())
                         self.assertTrue((p / 'fonts/glyphs.json').is_file())

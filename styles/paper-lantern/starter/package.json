@@ -1,0 +1,1 @@
+{"name":"paper-lightbox-film","private":true,"version":"1.0.0","type":"module","scripts":{"proof":"node scripts/render.mjs proof","still":"node scripts/render.mjs still","build":"node scripts/render.mjs build"},"dependencies":{"three":"0.170.0","playwright-core":"1.65.1"}}

@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/"><strong>Open the style library ↗</strong></a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en">Night Windows · enter the paper lightbox ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en">Between Strokes · unroll two ink films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">A seed on the wind · colored-pencil films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en">Paper Math · marker films ↗</a> ·
@@ -48,7 +49,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**26 styles** · 26 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**27 styles** · 27 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -315,6 +316,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>朱红窗花剪纸</sub>
 <p>Paper scissors, mirror folds and candlelit apertures in two vermilion paper-cut fables.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=en">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en"><img src="docs/readme/frames/paper-lantern.jpg" alt="Paper Lightbox — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>27 / <code>paper-lantern</code></sub>
+<h3>Paper Lightbox</h3>
+<sub>纸雕灯影</sub>
+<p>Scroll through a backlit paper harbour and a clockwork wren, then watch both night-time fables.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

@@ -222,5 +222,17 @@
         "method": "在带纤维的不透明纸片上挖出剪孔。关节逐两帧移动，让折痕、剪口或透光改变故事。",
         "check": "来回滚动查看剪刀、展开和透光的画格，再单独试听 Gemini 原曲、片中配乐和纸张拟音。"
       }
+    },
+  "paper-lantern": {
+    "en": {
+      "use": "Explore two night-time stories through a working paper lightbox, then see the short films.",
+      "method": "Separate near and far silhouettes, hinge the moving parts, and shine a warm lamp through small cut openings.",
+      "check": "Reverse the scroll through the nets and bell. Compare the brass bird calls against the edited Gemini score."
+    },
+    "zh": {
+      "use": "滚动操纵一座小灯箱，再观看雾港与机械鸟的两部夜间短片。",
+      "method": "前后纸景分层，钟锤和鸟嘴各有支点。暖灯从纸层的小窗透出。",
+      "check": "反向滚动观察近景渔网和浮标钟锤，再对照机械鸟的鸣声与 Gemini 配乐。"
     }
+  }
 }

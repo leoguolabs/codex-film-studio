@@ -30,6 +30,24 @@ def select_python():
                 os.execv(python, [python, *sys.argv])
 
 
+def lightbox_python():
+    """Select an interpreter supported by the pinned narration backend."""
+    candidates = [sys.executable, *(shutil.which(f"python3.{minor}") for minor in (13, 12, 11))]
+    if shutil.which("uv"):
+        lookup = subprocess.run(["uv", "python", "find", ">=3.11,<3.14"],
+                                capture_output=True, text=True)
+        if lookup.returncode == 0:
+            candidates.append(lookup.stdout.strip())
+    for candidate in dict.fromkeys(filter(None, candidates)):
+        result = subprocess.run([candidate, "-c",
+                                 "import sys; print(sys.executable); "
+                                 "sys.exit(not ((3, 11) <= sys.version_info < (3, 14)))"],
+                                capture_output=True, text=True)
+        if result.returncode == 0:
+            return result.stdout.strip()
+    raise SystemExit("Paper Lightbox voice preparation requires Python 3.11, 3.12 or 3.13.")
+
+
 def doctor(style):
     minimum = 22 if style == "whiteboard" else 20
     problems = []
@@ -52,7 +70,7 @@ def doctor(style):
             problems.append(f"{name} missing: {hint}.")
             continue
         command = [exe]
-        if style in {"ink-wash", "papercut-red"} and name == "ffmpeg":
+        if style in {"ink-wash", "papercut-red", "paper-lantern"} and name == "ffmpeg":
             gate = ROOT / "styles" / style / "starter/scripts/ffmpeg_serial.py"
             command = [sys.executable, str(gate), "--"]
         proc = subprocess.run([*command, "-version" if name.startswith("ff") else "--version"],
@@ -86,6 +104,8 @@ def prepare(project):
     paper_cut = (project / "engine/paper.mjs").is_file() and (project / "scripts/replace_score.py").is_file()
     style = ("papercut-red" if paper_cut else "ink-wash" if ink_wash else
              "workbench-clay" if native_clay else "whiteboard" if whiteboard else None)
+    if (project / "engine/box.js").is_file() and (project / "engine/post.js").is_file():
+        style = "paper-lantern"
     doctor(style)
 
     def run(cmd):
@@ -99,7 +119,8 @@ def prepare(project):
         if "doctor" in scripts:
             run(["npm", "run", "doctor"])
     if style or (project / "scripts/paper_sound.py").is_file():
-        run([sys.executable, "-m", "venv", ".venv"])
+        python = lightbox_python() if style == "paper-lantern" else sys.executable
+        run([python, "-m", "venv", ".venv"])
         run([str(project / ".venv/bin/python"), "-m", "pip", "install", "-r", "requirements.txt"])
     elif not (project / "package-lock.json").is_file():
         print("Read STYLE.md and the project README for authoring and renderer requirements.")

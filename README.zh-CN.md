@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/zh/"><strong>打开风格片库 ↗</strong></a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=zh">纸窗入夜 · 进入纸雕灯箱 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=zh">一笔之间 · 展开水墨双片 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh">松籽乘风 · 彩铅放映页 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=zh">纸上有数 · 马克笔放映页 ↗</a> ·
@@ -48,7 +49,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**26 种风格** · 26 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**27 种风格** · 27 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -315,6 +316,16 @@ codex plugin add codex-film-studio@visiontrail
 <sub>Vermilion Paper Cut</sub>
 <p>让滚轮带动剪刀、展开纸鸢、点亮一扇窗，再看两部朱红窗花剪纸短片。</p>
 <p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=zh">▶ 在线播放</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=zh"><img src="docs/readme/frames/paper-lantern.jpg" alt="纸雕灯影 — 影片截图" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>27 / <code>paper-lantern</code></sub>
+<h3>纸雕灯影</h3>
+<sub>Paper Lightbox</sub>
+<p>滚动穿过透光的纸雕雾港，转动机械鸟，再看两部灯箱夜话。</p>
+<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=zh">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

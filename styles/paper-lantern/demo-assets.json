@@ -1,0 +1,106 @@
+{
+  "release": "paper-lightbox-night-windows-v1",
+  "archive": {
+    "name": "night-window-paper.tar.gz",
+    "bytes": 130981,
+    "sha256": "6be7de07861d4fd4b28a7873e64b3d76fda404fd539fd69cda5afe06efdc7194",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/night-window-paper.tar.gz"
+  },
+  "files": [
+    "media/bell-poster.webp",
+    "media/bell.vtt",
+    "media/bird-still.webp",
+    "media/buoy-still.webp",
+    "media/films.json",
+    "media/nets-still.webp",
+    "media/window-still.webp",
+    "media/wren-poster.webp",
+    "media/wren.vtt"
+  ],
+  "streams": [
+    {
+      "name": "bell-foley.m4a",
+      "bytes": 876418,
+      "sha256": "09ff85553a2360141647b0c7fb423701f630365a5c5d1265bcb064d40207368c",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/bell-foley.m4a"
+    },
+    {
+      "name": "bell-glimpse.mp4",
+      "bytes": 207221,
+      "sha256": "868aa3f0f5b1d4e694d529049a9f56824a7235d513f6e7a235e2f88f4745eacc",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/bell-glimpse.mp4"
+    },
+    {
+      "name": "bell-original.m4a",
+      "bytes": 1195938,
+      "sha256": "5a0cb281c80c2d0fda681bfdbdf696c4765a8c9a199f61e59e9f962c9b1d8dd9",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/bell-original.m4a"
+    },
+    {
+      "name": "bell-score.m4a",
+      "bytes": 972851,
+      "sha256": "f769383057480e04924eb5f1c20874920768f4fdeae503a545fc3fdec1fe4f59",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/bell-score.m4a"
+    },
+    {
+      "name": "bell.mp4",
+      "bytes": 24436082,
+      "sha256": "5936862cfab747c1e4cb4bbdd5d39e254e9ac397b23533748ea94f057a3c677d",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/bell.mp4"
+    },
+    {
+      "name": "bird-frames.webp",
+      "bytes": 353684,
+      "sha256": "de3b7729b7a845cf4e11b77ac7b9fcce7ee21921bac1af9522b24e90afde49f3",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/bird-frames.webp"
+    },
+    {
+      "name": "buoy-frames.webp",
+      "bytes": 161216,
+      "sha256": "8ac25037159f772fb782096faaf8be64347de2d1973ba6b77baf7a371fd8c1c5",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/buoy-frames.webp"
+    },
+    {
+      "name": "nets-frames.webp",
+      "bytes": 242018,
+      "sha256": "e66af0d0c8cbb8db5013032f2f01a4443782b750497e471e8be48e99adfd6a96",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/nets-frames.webp"
+    },
+    {
+      "name": "window-frames.webp",
+      "bytes": 276610,
+      "sha256": "e80260fb81887057f8732e0f54ffc012f450aa90a14c8738af4ec8e901975b5f",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/window-frames.webp"
+    },
+    {
+      "name": "wren-foley.m4a",
+      "bytes": 815182,
+      "sha256": "e695ba24e8ab58da4b2d323c5ee5eda6d7779b1af5fd089a2f5cb6039da7533a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/wren-foley.m4a"
+    },
+    {
+      "name": "wren-glimpse.mp4",
+      "bytes": 94212,
+      "sha256": "b8c37db17957b797acadcc07be5a3e8798e5dbdf2d23e4f9a529b9f0868cc41b",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/wren-glimpse.mp4"
+    },
+    {
+      "name": "wren-original.m4a",
+      "bytes": 1225026,
+      "sha256": "b6cda7e220fd4aba4d968aa92f47fc9c106121d05553acf0d85fe2bf8818c9a0",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/wren-original.m4a"
+    },
+    {
+      "name": "wren-score.m4a",
+      "bytes": 974596,
+      "sha256": "35c25b909a5d3cd5daf2c92ce89038d1ae14460c62c0141472e93bfd9c7e8d6e",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/wren-score.m4a"
+    },
+    {
+      "name": "wren.mp4",
+      "bytes": 21909296,
+      "sha256": "cf6df2ffed2baa372dd09a64a05af6d1bc0c81a1e9a12bb3927dade7a65b436f",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-lightbox-night-windows-v1/wren.mp4"
+    }
+  ]
+}

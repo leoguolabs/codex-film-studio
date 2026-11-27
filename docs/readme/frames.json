@@ -471,6 +471,23 @@
       "image": "docs/readme/frames/papercut-red.jpg",
       "image_sha256": "2f7a3fb3ef7e1cae1559608acfb05d232ef153cce1f561ffb5dc5889ed6c7108",
       "treatment": "Complete encoded frame of the paper turn, resized to 1280 × 720."
+    },
+    {
+      "style": "paper-lantern",
+      "source_video": "The Bell in the Fog / final Gemini-scored master",
+      "source_sha256": "5936862cfab747c1e4cb4bbdd5d39e254e9ac397b23533748ea94f057a3c677d",
+      "title": "The Bell in the Fog",
+      "title_zh": "雾里的钟声",
+      "seconds": 3.8333333333333335,
+      "frame": 115,
+      "fps": "30",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/paper-lantern.jpg",
+      "image_sha256": "4e12ccbcd87b91d00d3b6f64e88eecfd56b3990cfcc67627106ecfae2bc96dc5",
+      "treatment": "Complete harbour frame, resized to 960 × 540."
     }
   ]
 }

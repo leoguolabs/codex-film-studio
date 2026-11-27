@@ -1613,6 +1613,62 @@
         ]
       },
       "public_assets": "styles/papercut-red/demo-assets.json"
+    },
+    {
+      "id": "paper-lantern",
+      "name": "Paper Lightbox",
+      "name_zh": "纸雕灯影",
+      "description": "Scroll through a backlit paper harbour and a clockwork wren, then watch both night-time fables.",
+      "description_zh": "滚动穿过透光的纸雕雾港，转动机械鸟，再看两部灯箱夜话。",
+      "status": "renderer-ready",
+      "status_note": "An editable layered-paper theatre with two released English shorts and Gemini scores.",
+      "status_note_zh": "可编辑的分层纸雕灯箱，两部英文短片均配有 Gemini 原创器乐。",
+      "guide": "styles/paper-lantern/STYLE.md",
+      "readme": "styles/paper-lantern/README.md",
+      "prompt": "styles/paper-lantern/prompt.txt",
+      "template": "styles/paper-lantern/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "paper-lightbox-night-windows",
+          "title": "Night Windows · two paper lightbox films",
+          "title_zh": "纸窗入夜 · 纸雕灯影双片",
+          "page": "styles/paper-lantern/showcase/index.html",
+          "access": "release",
+          "media_manifest": "styles/paper-lantern/showcase/media/films.json"
+        }
+      ],
+      "render_script": "scripts/render.mjs",
+      "renderer_entry": "engine/box.js",
+      "preview": "docs/readme/frames/paper-lantern.jpg",
+      "preview_zh": "docs/readme/frames/paper-lantern.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "paper-lightbox-night-windows",
+      "landing": {
+        "page": "styles/paper-lantern/showcase/index.html",
+        "assets": [
+          "styles/paper-lantern/showcase/theatre.css",
+          "styles/paper-lantern/showcase/theatre.mjs",
+          "styles/paper-lantern/showcase/cormorant.woff2",
+          "styles/paper-lantern/showcase/fibre.webp",
+          "styles/paper-lantern/starter/fonts/OFL-Cormorant.txt"
+        ]
+      },
+      "public_assets": "styles/paper-lantern/demo-assets.json"
     }
   ],
   "capability_schema_version": 2
