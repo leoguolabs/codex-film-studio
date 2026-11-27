@@ -15,7 +15,9 @@ changing local source alone does not publish it.
 from Vermilion Paper Cut, Ukiyo-e Woodblock and Xuan Ink Wash. Native scrolling
 moves the splice and refracting lens in either direction. The reel buttons also
 select individual frames, including when `prefers-reduced-motion` turns off
-scroll-driven motion. Browsers without WebGL use a CSS glass lens. English and
+scroll-driven motion. Play motion runs the sequence once on request. The
+first-screen style link and `#library` both jump directly to the complete
+collection. Browsers without WebGL use a CSS glass lens. English and
 Chinese copy share the layout, with separate public URLs. No framework, CDN,
 remote font or third-party script is needed.
 

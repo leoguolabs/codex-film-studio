@@ -120,7 +120,10 @@ class SearchTests(unittest.TestCase):
                     self.assertEqual(len(doc.attrs('h1')),1)
                     self.assertEqual(doc.attrs('html')[0]['data-site-root'],prefix)
                     self.assertEqual(doc.attrs('html')[0]['lang'],'zh-CN' if lang=='zh' else 'en')
+                    browse = [a for a in doc.attrs('a') if a.get('class') == 'button primary']
+                    self.assertEqual([a['href'] for a in browse], ['#library'])
                     text=' '.join(doc.text)
+                    self.assertIn('播放动效' if lang=='zh' else 'Play motion', text)
                     self.assertNotIn('Opening the collection',text)
                     self.assertNotIn('正在打开风格片库',text)
                     self.assertIn('如何用 Codex' if lang=='zh' else 'How do you make a video',text)

@@ -117,7 +117,7 @@ async function setLanguage(language) {
         if (source && target) target.replaceWith(source.cloneNode(true));
       }
       const previousHome = new URL(PAGE_LANGUAGE === 'zh' ? 'zh/' : './', SITE_ROOT);
-      document.querySelectorAll('a[href]:not([data-language])').forEach(link => {
+      document.querySelectorAll('a[href]:not([data-language], [href^="#"])').forEach(link => {
         const target = new URL(link.href);
         if (target.origin === previousHome.origin && target.pathname === previousHome.pathname) {
           target.pathname = url.pathname;

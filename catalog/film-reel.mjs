@@ -110,14 +110,25 @@ const frames = [...screen.querySelectorAll('.reel-frame')];
 const links = [...reel.querySelectorAll('.reel-link')];
 const controls = reel.querySelector('.reel-controls');
 const buttons = [...controls.querySelectorAll('button')];
+const play = reel.querySelector('.reel-play');
+const playLabel = play.querySelector('[data-reel-start]');
+const stopLabel = play.querySelector('[data-reel-stop]');
+const staticCaption = reel.querySelector('[data-reel-label]');
+const scrollCaption = reel.querySelector('[data-reel-scroll]');
 const motion = matchMedia('(prefers-reduced-motion: no-preference)');
+const previewDuration = 3600;
 const last = frames.length - 1;
 const clamp = (value, minimum, maximum) => Math.min(maximum, Math.max(minimum, value));
 let active = 0, choice = 0, choiceAt = null;
+let playbackStart = null;
 let top, bottom, travel, lensWidth, lensHeight;
-let optics, pending = 0, lastPosition = -1;
+let optics, pending = 0, lastPosition = -1, lastOptical;
 
-function show(position, moveLens) {
+function show(position, optical) {
+  if (position === lastPosition && optical === lastOptical) return;
+  lastPosition = position;
+  lastOptical = optical;
+
   const first = Math.floor(position);
   const next = Math.min(first + 1, last);
   const time = clamp((position - first - 0.1) / 0.8, 0, 1);
@@ -134,7 +145,7 @@ function show(position, moveLens) {
     frame.style.setProperty('--frame-clip', clip + '%');
   });
 
-  const progress = moveLens ? position / last : 0;
+  const progress = position / last;
   const x = 0.74 - 0.29 * progress;
   const y = 0.63 - 0.15 * progress;
   screen.style.setProperty('--lens-x', x * 100 + '%');
@@ -143,23 +154,53 @@ function show(position, moveLens) {
   screen.style.setProperty('--splice-origin', cut * 100 + '%');
   screen.style.setProperty('--splice-light', String(4 * reveal * cut));
 
-  if (moveLens && lensWidth && lensHeight) optics ??= createOptics(canvas, frames) || false;
+  if (optical && lensWidth && lensHeight) optics ??= createOptics(canvas, frames) || false;
   const otherFrame = reveal > 0 ? next : first;
-  const drawn = moveLens && optics && optics(first, otherFrame, x, y, lensWidth, lensHeight, cut);
+  const drawn = optical && optics && optics(first, otherFrame, x, y, lensWidth, lensHeight, cut);
   lens.dataset.optics = drawn ? 'ready' : 'fallback';
 }
 
-function update() {
+function setPlayback(start) {
+  playbackStart = start;
+  const playing = start !== null;
+  play.dataset.playing = String(playing);
+  playLabel.hidden = playing;
+  stopLabel.hidden = !playing;
+}
+
+function selectFrame(index) {
+  setPlayback(null);
+  choice = index;
+  choiceAt = window.scrollY;
+  show(index, motion.matches);
+}
+
+function update(timestamp) {
   pending = 0;
   const y = window.scrollY;
+  if (choiceAt !== null && Math.abs(y - choiceAt) > 22) {
+    choiceAt = null;
+    if (playbackStart !== null) {
+      choice = active;
+      setPlayback(null);
+    }
+  }
+  if (playbackStart !== null) {
+    const progress = clamp((timestamp - playbackStart) / previewDuration, 0, 1);
+    show(progress * last, true);
+    if (progress < 1) schedule();
+    else {
+      choice = last;
+      setPlayback(null);
+    }
+    return;
+  }
+
   if (motion.matches && y > bottom) return;
-  if (choiceAt !== null && Math.abs(y - choiceAt) > 22) choiceAt = null;
   let position = choice;
   if (motion.matches && choiceAt === null) {
     position = reel.querySelector('.reel-link:focus-visible') ? active : clamp((y - top) / travel, 0, 1) * last;
   }
-  if (position === lastPosition) return;
-  lastPosition = position;
   show(position, motion.matches);
 }
 
@@ -180,25 +221,38 @@ function measure() {
   schedule();
 }
 
-buttons.forEach((button, i) => button.addEventListener('click', () => {
-  choice = i;
+function syncMotionCaption() {
+  staticCaption.hidden = motion.matches;
+  scrollCaption.hidden = !motion.matches;
+}
+
+buttons.forEach((button, index) => button.addEventListener('click', () => selectFrame(index)));
+play.addEventListener('click', () => {
+  if (playbackStart !== null) {
+    selectFrame(active);
+    return;
+  }
   choiceAt = window.scrollY;
-  lastPosition = i;
-  show(i, motion.matches);
-}));
+  setPlayback(performance.now());
+  show(0, true);
+  schedule();
+});
 for (const frame of frames) frame.addEventListener('load', () => {
+  if (frame === frames[0]) screen.dataset.loaded = '';
   lastPosition = -1;
   schedule();
 });
 canvas.addEventListener('webglcontextlost', () => { lens.dataset.optics = 'fallback'; });
 motion.addEventListener('change', () => {
-  choice = active;
-  lastPosition = -1;
-  schedule();
+  syncMotionCaption();
+  selectFrame(active);
 });
 if ('ResizeObserver' in window) new ResizeObserver(measure).observe(hero);
 window.addEventListener('resize', measure, { passive: true });
 window.addEventListener('scroll', schedule, { passive: true });
 reel.addEventListener('focusout', schedule);
+if (frames[0].complete && frames[0].naturalWidth) screen.dataset.loaded = '';
+syncMotionCaption();
 controls.hidden = false;
+play.hidden = false;
 measure();

@@ -52,7 +52,7 @@
           <h1 id="hero-title"><span data-i18n="heroLine1">One story.</span><br><em data-i18n="heroLine2">So many ways.</em></h1>
           <p class="product-definition" data-i18n="productDefinition">Find a look for your next Codex film. Explore sample films, style guides and reusable production tools.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#library"><span data-i18n="explore">Browse all styles</span><span aria-hidden="true">↓</span></a>
+            <a class="button primary" href="#library"><span data-i18n="explore">See all styles</span><span aria-hidden="true">↓</span></a>
             <a class="button secondary" href="#create"><span data-i18n="create">Create a film</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -65,10 +65,16 @@
               <span class="reel-splice"></span>
               <span class="reel-lens"><canvas></canvas></span>
             </div>
+            <button type="button" class="reel-play" hidden>
+              <span class="reel-play-icon" aria-hidden="true"></span>
+              <span data-reel-start data-i18n="reelPlay">Play motion</span>
+              <span data-reel-stop data-i18n="reelStop" hidden>Stop motion</span>
+            </button>
           </div>
           <div class="reel-footer">
             <div class="reel-caption">
-              <span class="reel-label" data-i18n="reelLabel">Frames from the library</span>
+              <span class="reel-label" data-reel-label data-i18n="reelLabel">Frames from the library</span>
+              <span class="reel-label" data-reel-scroll data-i18n="reelScroll" hidden>Scroll to change frames</span>
               <a class="reel-link" data-reel-style="papercut-red" href="styles/papercut-red/showcase/index.html"><span data-i18n="reelPaper">Vermilion Paper Cut</span><span aria-hidden="true">↗</span></a>
               <a class="reel-link" data-reel-style="ukiyoe" href="styles/ukiyoe/showcase/index.html#screening" hidden><span data-i18n="reelWood">Ukiyo-e Woodblock</span><span aria-hidden="true">↗</span></a>
               <a class="reel-link" data-reel-style="ink-wash" href="styles/ink-wash/showcase/index.html#screening" hidden><span data-i18n="reelInk">Xuan Ink Wash</span><span aria-hidden="true">↗</span></a>
