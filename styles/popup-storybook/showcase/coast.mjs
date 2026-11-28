@@ -74,10 +74,13 @@ stops.forEach((button,i)=>button.addEventListener('click',()=>{
 }));
 
 const player=$('film'), audio=$('audio');
+const release='https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/';
+let chapterStart=null;
+player.addEventListener('loadedmetadata',()=>{if(chapterStart!==null){player.currentTime=chapterStart;chapterStart=null;}});
 let current, currentStem='score';
 function refreshAudio() {
   const key=$('sound-film').value;
-  audio.pause();audio.src='media/'+key+'-'+currentStem+'.m4a';
+  audio.pause();audio.src=release+key+'-'+currentStem+'.m4a';
   audio.setAttribute('aria-label',say(...films[key].title)+' · '+(currentStem==='score'?say('Film score','配乐'):say('Paper Foley','纸张拟音')));
   for (const btn of document.querySelectorAll('[data-stem]'))btn.setAttribute('aria-pressed',String(currentStem===btn.dataset.stem));
 }
@@ -87,18 +90,18 @@ function chooseFilm(key) {
   if(!first){
     player.pause();
     player.poster='media/'+key+'-poster.webp';
-    player.querySelector('source').src='media/'+key+'.mp4';
+    chapterStart=null;player.querySelector('source').src=release+key+'-web.mp4';
     player.querySelector('track').src='media/'+key+'.vtt';
     player.load();
   }
   player.setAttribute('aria-label',say(...info.title));
   $('synopsis').textContent=say(...info.summary);
-  $('master').href='https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/'+info.slug+'.mp4';
+  $('master').href=release+info.slug+'.mp4';
   for(const btn of document.querySelectorAll('[data-film]'))btn.setAttribute('aria-pressed',String(key===btn.dataset.film));
   $('chapters').replaceChildren(...info.chapters.map(([time,en,cn])=>{
     const btn=document.createElement('button');btn.type='button';
     const stamp=document.createElement('span');stamp.textContent='0:'+String(Math.floor(time)).padStart(2,'0');
-    btn.append(stamp,say(en,cn));btn.addEventListener('click',()=>{player.currentTime=time;player.play().catch(()=>{});});
+    btn.append(stamp,say(en,cn));btn.addEventListener('click',()=>{if(player.readyState>=1)player.currentTime=time;else chapterStart=time;player.play().catch(()=>{});});
     return btn;
   }));
   $('transcript').textContent='';

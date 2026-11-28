@@ -1,20 +1,17 @@
 {
   "release": "paper-coast-storybook-v1",
   "archive": {
-    "name": "paper-coast-media-v1.tar.gz",
-    "bytes": 29918841,
-    "sha256": "6244d90df1952e3f370ff0346f69591cf175c981183a64d53943c2a8b906e0a5",
-    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/paper-coast-media-v1.tar.gz"
+    "name": "paper-coast-pages-v2.tar.gz",
+    "bytes": 530868,
+    "sha256": "f4e23f58a1c4ff1c815697c46c98883b16d66aca0f68224f40a0cb8d07d42596",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/paper-coast-pages-v2.tar.gz"
   },
   "files": [
     "media/beetle.webp",
     "media/book-cover.webp",
     "media/buoy.webp",
-    "media/button-paper.m4a",
     "media/button-poster.webp",
-    "media/button-score.m4a",
     "media/button-transcript.txt",
-    "media/button.mp4",
     "media/button.vtt",
     "media/button.webp",
     "media/cutter.webp",
@@ -26,11 +23,8 @@
     "media/gutter-floor.webp",
     "media/home.webp",
     "media/keeper.webp",
-    "media/letter-paper.m4a",
     "media/letter-poster.webp",
-    "media/letter-score.m4a",
     "media/letter-transcript.txt",
-    "media/letter.mp4",
     "media/letter.vtt",
     "media/lighthouse.webp",
     "media/mushrooms.webp",
@@ -58,6 +52,42 @@
       "bytes": 96737220,
       "sha256": "675d9d9f94ff403e6c4201dcdb5254527e7f7c80d5f75424f42e09e796f1ae1c",
       "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/the-button-ferry.mp4"
+    },
+    {
+      "name": "letter-web.mp4",
+      "bytes": 10247296,
+      "sha256": "91bee6bf6164847503d9293da6a24ae57c19e658e970cc9fe31eeccebec25acd",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/letter-web.mp4"
+    },
+    {
+      "name": "button-web.mp4",
+      "bytes": 16299550,
+      "sha256": "eb2f4c422ad05154d0257787136a2a5fb75b556475af4659d0b75ffd2ab7e844",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/button-web.mp4"
+    },
+    {
+      "name": "button-paper.m4a",
+      "bytes": 125631,
+      "sha256": "66837e7d01530e77d152a644fc1bd50cc9c76d3ba8b68b350a5ea4b15c9e6b84",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/button-paper.m4a"
+    },
+    {
+      "name": "button-score.m4a",
+      "bytes": 693792,
+      "sha256": "e78047915b4af378b051cdaac56c7bb96d21cded045e5ec90ec621d04aab0c2a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/button-score.m4a"
+    },
+    {
+      "name": "letter-paper.m4a",
+      "bytes": 68382,
+      "sha256": "756e920031e00a99e1682ad0b08364a7368a32cecee7e444e0ab79db869bb844",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/letter-paper.m4a"
+    },
+    {
+      "name": "letter-score.m4a",
+      "bytes": 620922,
+      "sha256": "2a3e7d0ca4877d1eb67d3fc5318733d9dffecc1425b8bb23c4fca905a4d79ccd",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/letter-score.m4a"
     }
   ]
 }
