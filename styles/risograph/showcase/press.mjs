@@ -4,6 +4,8 @@ const url = new URL(location.href);
 let lang = url.searchParams.get('lang') === 'zh' ? 'zh' : 'en';
 let selected = url.searchParams.get('film') === 'bell' ? 'bell' : 'turn';
 let stem = 'effects';
+// Pin the artwork to the same immutable impression in both language editions.
+const art = 'https://raw.githubusercontent.com/leoguolabs/codex-film-studio/2dd70da47ed5bea1f207b14adc436446aec64411/styles/risograph/showcase/';
 const release = 'https://github.com/leoguolabs/codex-film-studio/releases/download/risograph-double-bill-v1/';
 const movie = $('#movie'), audio = $('#audio'), soundFilm = $('#sound-film');
 const text = pair => pair[lang === 'zh' ? 1 : 0];
@@ -51,7 +53,7 @@ function program() {
 }
 function loadFilm() {
   movie.pause();
-  movie.poster=selected+'.webp'; movie.src=release+selected+'.mp4';
+  movie.poster=art+selected+'.webp'; movie.src=release+selected+'.mp4';
   const track=document.createElement('track');
   track.kind='captions';track.label='English';track.srclang='en';track.src=selected+'.vtt';
   movie.replaceChildren(track);movie.load();program();
@@ -87,7 +89,8 @@ let printPlate=null,lastImpression=-1;
 async function preparePress() {
   if(reduced.matches)return;
   const canvas=$('.live-print'),density=new Image();
-  density.src='separations.webp';
+  density.crossOrigin='anonymous';
+  density.src=art+'separations.webp';
   try {
     const [{makeRiso}]=await Promise.all([import('../starter/engine/riso.js'),density.decode()]);
     const print=makeRiso(canvas,canvas.width,canvas.height);

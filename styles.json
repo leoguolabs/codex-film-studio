@@ -1956,16 +1956,9 @@
         "assets": [
           "styles/risograph/showcase/press.css",
           "styles/risograph/showcase/press.mjs",
-          "styles/risograph/showcase/proof-0.webp",
-          "styles/risograph/showcase/proof-1.webp",
-          "styles/risograph/showcase/proof-2.webp",
-          "styles/risograph/showcase/turn.webp",
-          "styles/risograph/showcase/bell.webp",
           "styles/risograph/showcase/turn.vtt",
           "styles/risograph/showcase/bell.vtt",
           "styles/risograph/showcase/grain.png",
-          "styles/risograph/showcase/press.woff2",
-          "styles/risograph/showcase/separations.webp",
           "styles/risograph/starter/engine/riso.js",
           "styles/risograph/starter/engine/LICENSE-MIT.txt",
           "styles/risograph/starter/fonts/Bricolage-OFL.txt"
