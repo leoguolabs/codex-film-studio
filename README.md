@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/"><strong>Open the style library ↗</strong></a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en">Catch the light · through a hand-drawn pinhole ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/popup-storybook/showcase/index.html?lang=en">The Paper Coast · turn the pop-up book ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en">Anatomy of a Voice · open a moving-coil microphone ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en">Night Windows · enter the paper lightbox ↗</a> ·

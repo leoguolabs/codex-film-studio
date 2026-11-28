@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/zh/"><strong>打开风格片库 ↗</strong></a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=zh">接住一束光 · 滚动穿过手绘针孔 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/popup-storybook/showcase/index.html?lang=zh">纸上海岸 · 滚动翻开立体书 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=zh">声音的剖面 · 随滚轮拆开麦克风 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=zh">纸窗入夜 · 进入纸雕灯箱 ↗</a> ·
