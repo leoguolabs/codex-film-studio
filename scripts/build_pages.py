@@ -95,6 +95,23 @@ def write_gallery_preview(source, destination):
         shutil.copyfile(source, destination)
 
 
+def optimize_large_jpegs(output):
+    """Recode Huffman tables only. The JPEG coefficients and metadata stay intact."""
+    jpegtran = shutil.which("jpegtran")
+    if not jpegtran:
+        raise RuntimeError("Install jpegtran (libjpeg-turbo-progs on Ubuntu) to fit the public gallery.")
+    saved = 0
+    for path in sorted(output.rglob("*.jpg")):
+        original_size = path.stat().st_size
+        if original_size < 1_000_000:
+            continue
+        encoded = subprocess.check_output([jpegtran, "-copy", "all", "-optimize", str(path)])
+        if len(encoded) < original_size:
+            path.write_bytes(encoded)
+            saved += original_size - len(encoded)
+    return saved
+
+
 def build_site(demo_root, output, revision="", published_roots=None, base_path="/codex-film-studio/", site_origin=DEFAULT_ORIGIN, web_gallery=False):
     """Copy only the files needed by the public player, never a whole studio."""
     if output.exists():
@@ -239,6 +256,10 @@ def build_site(demo_root, output, revision="", published_roots=None, base_path="
     }, indent=2) + "\n")
     # https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
     total_bytes = sum(path.stat().st_size for path in output.rglob('*') if path.is_file())
+    if web_gallery and total_bytes > 1_000_000_000:
+        saved = optimize_large_jpegs(output)
+        total_bytes -= saved
+        print(f"Lossless JPEG coding saved {saved:,} bytes; site size {total_bytes:,} bytes.")
     if total_bytes > 1_000_000_000:
         raise ValueError(f"Pages site exceeds the 1 GB budget: {total_bytes:,} bytes. "
                          "Optimize the web previews before publishing.")
