@@ -1,3 +1,4 @@
+const release='https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/';
 const $ = selector => document.querySelector(selector);
 const all = selector => [...document.querySelectorAll(selector)];
 const clamp = (value, low, high) => Math.max(low, Math.min(high, value));
@@ -37,7 +38,7 @@ function requestSheet(group) {
     if (Math.floor(frame/batch) === group) paint();
   };
   img.onerror = () => sheets.delete(group);
-  img.src = 'media/plate-' + String(group).padStart(2,'0') + '.webp';
+  img.src = release+'plate-' + String(group).padStart(2,'0') + '.webp';
 }
 function drawLeader(index) {
   leader.clearRect(0,0,tile,tile);
@@ -102,7 +103,6 @@ document.fonts.ready.then(()=>drawLeader(Math.max(0,shown)));
 scrollDrawing();
 
 const film=$('#film'), glimpse=$('#glimpse'), audio=$('#audio'), play=$('#play');
-const release='https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/';
 const reelButtons=all('[data-film]'), trackButtons=all('[data-track]');
 const synopsis={
   coil:pick('A microphone has no battery. Under the grille, a curl of wire turns the pressure of a voice into an electrical signal.','这支麦克风里没有电池。网罩下，一圈铜线随振膜移动，把说话时的气压变化变成电信号。'),
@@ -134,7 +134,7 @@ function chooseFilm(id) {
   film.pause();film.removeAttribute('src');film.replaceChildren();film.load();
   entered=false;play.hidden=false;glimpse.hidden=false;film.hidden=true;$('#status').textContent='';
   const key=selected.id,name=zh?selected.title_zh:selected.title;
-  film.poster=glimpse.poster='media/'+key+'.jpg';glimpse.src='media/'+key+'-glimpse.mp4';
+  film.poster=glimpse.poster='media/'+key+'.jpg';glimpse.src=release+key+'-glimpse.mp4';
   const cc=document.createElement('track');cc.kind='captions';cc.srclang='en';cc.label='English';cc.src='media/'+key+'.vtt';film.append(cc);
   $('#film-title').textContent=name;film.setAttribute('aria-label',name);$('#direct').href=selected.file;
   $('#synopsis').textContent=synopsis[key];$('#runtime').textContent=clock(Math.round(selected.seconds))+'  ·  1080p  ·  EN';

@@ -1779,8 +1779,8 @@
           "styles/line-cutaway/showcase/showcase.mjs",
           "styles/line-cutaway/showcase/frontispiece.webp",
           "styles/line-cutaway/showcase/anchors.json",
-          "styles/line-cutaway/starter/fonts/PlexMono.ttf",
-          "styles/line-cutaway/starter/fonts/PlexSans.ttf",
+          "styles/line-cutaway/showcase/plate-mono.woff2",
+          "styles/line-cutaway/showcase/plate-sans.woff2",
           "styles/line-cutaway/starter/fonts/OFL-mono.txt",
           "styles/line-cutaway/starter/fonts/OFL-sans.txt"
         ]

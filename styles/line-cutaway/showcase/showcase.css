@@ -1,7 +1,7 @@
 @font-face{font-family:Instrument;src:url("../../satellite-briefing/showcase/atlas-roman.ttf") format("truetype");font-display:swap}
 @font-face{font-family:Instrument;src:url("../../satellite-briefing/showcase/atlas-italic.woff2") format("woff2");font-style:italic;font-display:swap}
-@font-face{font-family:Plex;src:url("../starter/fonts/PlexSans.ttf");font-display:swap}
-@font-face{font-family:PlateMono;src:url("../starter/fonts/PlexMono.ttf");font-display:swap}
+@font-face{font-family:Plex;src:url("plate-sans.woff2");font-display:swap}
+@font-face{font-family:PlateMono;src:url("plate-mono.woff2");font-display:swap}
 :root{--paper:#f2efe6;--ink:#242521;--oxide:#a44228;--line:#c8c2b4;--mono:PlateMono,"SFMono-Regular",Consolas,monospace;--display:Instrument,"Songti SC","Noto Serif CJK SC",Georgia,serif;--pad:clamp(20px,5vw,96px);color:var(--ink);background:var(--paper);font-family:Plex,"PingFang SC","Microsoft Yahei",sans-serif}
 *{box-sizing:border-box}body,figure,p,h1,h2{margin:0}button,select,audio{font:inherit}a{color:inherit}button,select{cursor:pointer}button{color:inherit}button:focus-visible,a:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #dc734b;outline-offset:4px}.skip{position:fixed;top:-100px;z-index:8;background:white;padding:12px}.skip:focus{top:8px}[hidden]{display:none!important}
 .journey{height:365vh;height:365svh;position:relative}.folio,.listening{background-color:var(--paper);background-image:linear-gradient(90deg,rgba(65,55,38,.038) 1px,transparent 1px),linear-gradient(rgba(65,55,38,.038) 1px,transparent 1px),radial-gradient(ellipse at 70% 44%,#faf8f0 0%,#f1eee5 65%,#e9e6dc 100%);background-size:36px 36px,36px 36px,100% 100%}

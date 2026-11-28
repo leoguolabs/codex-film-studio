@@ -1,31 +1,15 @@
 {
   "release": "line-cutaway-signal-v1",
   "archive": {
-    "name": "signal-study.tar.gz",
-    "bytes": 2315097,
-    "sha256": "c1df03d210dbc5786bc92d0556d0022c2d5e019484da00b068a97479d8922a1f",
-    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/signal-study.tar.gz"
+    "name": "signal-sheet.tar.gz",
+    "bytes": 137607,
+    "sha256": "39e8889cf96eb1b4bc5e939e6a43317260516f5b2845afbfb65eb5fdba386012",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/signal-sheet.tar.gz"
   },
   "files": [
-    "media/coil-glimpse.mp4",
     "media/coil.jpg",
     "media/coil.vtt",
     "media/films.json",
-    "media/plate-00.webp",
-    "media/plate-01.webp",
-    "media/plate-02.webp",
-    "media/plate-03.webp",
-    "media/plate-04.webp",
-    "media/plate-05.webp",
-    "media/plate-06.webp",
-    "media/plate-07.webp",
-    "media/plate-08.webp",
-    "media/plate-09.webp",
-    "media/plate-10.webp",
-    "media/plate-11.webp",
-    "media/plate-12.webp",
-    "media/plate-13.webp",
-    "media/valve-glimpse.mp4",
     "media/valve.jpg",
     "media/valve.vtt"
   ],
@@ -65,6 +49,102 @@
       "bytes": 17163703,
       "sha256": "11b26316eac0fa179110e248b6c97558a89e5695f29e8193ddad81f065379056",
       "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/valve.mp4"
+    },
+    {
+      "name": "coil-glimpse.mp4",
+      "bytes": 235060,
+      "sha256": "3a60739607378f1779632f0aa5e466231e025a9a759bb86af0cfa031530db5f1",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/coil-glimpse.mp4"
+    },
+    {
+      "name": "plate-00.webp",
+      "bytes": 128088,
+      "sha256": "bd39ad5feab0c7bd3165183a62f410115eb9271de3ebc09ee3ad8d94f8e11df2",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-00.webp"
+    },
+    {
+      "name": "plate-01.webp",
+      "bytes": 126154,
+      "sha256": "6e49bac2fd3de66e5fa3d0a34e251db03cbf0a46372310828a4e4cd23b32bcc2",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-01.webp"
+    },
+    {
+      "name": "plate-02.webp",
+      "bytes": 121556,
+      "sha256": "eb0c763f4b8aa264e64c1d1aad44c7858ae28f6fd5df6fcc06e707fad19929ee",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-02.webp"
+    },
+    {
+      "name": "plate-03.webp",
+      "bytes": 115104,
+      "sha256": "33a1d72b8f46fa7db4476dc80876ae5270b453c000bcfbafbc34831b750cd62f",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-03.webp"
+    },
+    {
+      "name": "plate-04.webp",
+      "bytes": 106616,
+      "sha256": "757e5b464df5d749db5527abcaca32e930feb1231974db0af2ebe93f3e568087",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-04.webp"
+    },
+    {
+      "name": "plate-05.webp",
+      "bytes": 101046,
+      "sha256": "e2e57fd84ade07a9fb048f2a4747c783a80568de347eb8b32bdd7234a8d201b5",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-05.webp"
+    },
+    {
+      "name": "plate-06.webp",
+      "bytes": 103202,
+      "sha256": "751d0b52a90f86d2107aa30c37795586b0ca17a58d5d8fa881bf179d395c9bc8",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-06.webp"
+    },
+    {
+      "name": "plate-07.webp",
+      "bytes": 121424,
+      "sha256": "67d3f156418297c28030a5455f5cbfcfb3e137eeccb401791a5250813b867703",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-07.webp"
+    },
+    {
+      "name": "plate-08.webp",
+      "bytes": 89288,
+      "sha256": "300946c31c269bec40a69e6c997112bfbe132d5fa41a0889ac20135a34c99f0e",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-08.webp"
+    },
+    {
+      "name": "plate-09.webp",
+      "bytes": 85136,
+      "sha256": "6ee975b1e7383b84ed7f873419ba0cdc880d9b0057bc98eb2b50dbcc1c38e5eb",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-09.webp"
+    },
+    {
+      "name": "plate-10.webp",
+      "bytes": 125420,
+      "sha256": "d624799bf74ebec0cd9d7b784ab6f24a0a7f1f035a6d1515adc2a9a91dbface0",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-10.webp"
+    },
+    {
+      "name": "plate-11.webp",
+      "bytes": 174018,
+      "sha256": "9e437ac0e54d7da1ce3363874057a5b5ce072613781fe89eef66a37fe4e9e54c",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-11.webp"
+    },
+    {
+      "name": "plate-12.webp",
+      "bytes": 200758,
+      "sha256": "f4a0d48451acfc7620aa7230a2aefbc12038477ba79d04a0063d33dba03bcdf8",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-12.webp"
+    },
+    {
+      "name": "plate-13.webp",
+      "bytes": 207668,
+      "sha256": "da35caa419605f439b72bbac075c04bb3b8f3a81b093b1a22c1e9997e0762cc0",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/plate-13.webp"
+    },
+    {
+      "name": "valve-glimpse.mp4",
+      "bytes": 209787,
+      "sha256": "31499f2a3d8ba3dda1f4535510f3c6c2da2952f4501798e5468b9693d2212780",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/valve-glimpse.mp4"
     }
   ]
 }
