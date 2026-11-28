@@ -57,7 +57,7 @@ def doctor(style):
         problems.append("Install Python 3.11+ with venv and run this launcher with it.")
     media = [("ffmpeg", "install FFmpeg with libx264 and AAC"),
              ("ffprobe", "install the FFmpeg tools including ffprobe")]
-    if style == "popup-storybook":
+    if style in {"popup-storybook", "line-cutaway"}:
         build_tools = []
     elif style == "workbench-clay":
         if sys.platform != "darwin":
@@ -72,7 +72,7 @@ def doctor(style):
             problems.append(f"{name} missing: {hint}.")
             continue
         command = [exe]
-        if style in {"ink-wash", "papercut-red", "paper-lantern"} and name == "ffmpeg":
+        if style in {"ink-wash", "papercut-red", "paper-lantern", "line-cutaway"} and name == "ffmpeg":
             gate = ROOT / "styles" / style / "starter/scripts/ffmpeg_serial.py"
             command = [sys.executable, str(gate), "--"]
         if style == "popup-storybook" and name == "ffmpeg":
@@ -112,6 +112,8 @@ def prepare(project):
         style = "paper-lantern"
     if (project / "engine/book.py").is_file() and (project / "content/book.json").is_file():
         style = "popup-storybook"
+    if (project / "engine/plate.py").is_file() and (project / "engine/lettering.py").is_file():
+        style = "line-cutaway"
     doctor(style)
 
     def run(cmd):
@@ -125,7 +127,7 @@ def prepare(project):
         if "doctor" in scripts:
             run(["npm", "run", "doctor"])
     if style or (project / "scripts/paper_sound.py").is_file():
-        python = lightbox_python() if style in {"paper-lantern", "popup-storybook"} else sys.executable
+        python = lightbox_python() if style in {"paper-lantern", "popup-storybook", "line-cutaway"} else sys.executable
         run([python, "-m", "venv", ".venv"])
         run([str(project / ".venv/bin/python"), "-m", "pip", "install", "-r", "requirements.txt"])
     elif not (project / "package-lock.json").is_file():

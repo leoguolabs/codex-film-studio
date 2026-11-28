@@ -1,0 +1,14 @@
+# Make a Line Cutaway film
+
+Use Python 3.11 with the packages in requirements.txt, an OpenGL 3.3 context and FFmpeg. Copy the kit to a new writable production directory. Render commands run in that copy.
+
+1. Write the subject's claims and sources. Build a physically recognizable silhouette with actual parts. Replace the calibration ring in film.py. The assembled object, section and inset must come from the same solid geometry.
+2. Author content/narration.json with English lines. Each entry takes text, optional speak, optional caption as an array of lines and optional hold in seconds. scripts/voice.py --models DIR reads kokoro-v1.0.onnx and voices-v1.0.bin from DIR. Run with Python. It generates retained WAV takes and content/cues.json. Subsequent runs reuse those takes.
+3. Build cuts around the measured cues. Write a Film(cfg,quality) class whose frame(seconds) returns a 1920 × 1080 PIL image. Plate.begin(azimuth,elevation,vertical_span,target,center) uses millimetres and screen pixels. Add meshes once. Plate.draw takes a model matrix and a grey reflectance; orange ranges from 0 to 1. Local section planes discard points where dot(normal, point) + offset > 0. Cap exposed solids or build the section explicitly. Plate.project transforms world-space anchors to sheet pixels.
+4. Draw with Sheet after Plate.finish. Use text wipes and leaders at projected anchors with one secondary specification line. Call Sheet.caption for the active cue. Split a long English sentence at a natural phrase. Keep the caption clear of mechanism labels. Add the final title block to the paper beside the assembled object.
+5. Give content/sound.json the score's midi root, bpm, phrase (semitones or null rests) and events with at in seconds, kind (click, brush or tone), gain and pan. Run python scripts/mix.py. Keep the generated voice, score, Foley and mix.
+6. Run python scripts/render.py --still 1 4 8 and inspect the actual pictures. For a motion excerpt, add --range FIRST END --output media/preview.mp4. For delivery run python scripts/render.py. This waits for existing FFmpeg jobs before encoding. The renderer takes measured voice timing from content/cues.json. Use python scripts/proof.py to test the material alone.
+
+Plate creates its own OpenGL context. On macOS, run the renderer on a machine with a WindowServer session. An independent production may use its own higher quality geometry, font treatment, music and editing within the same style.
+
+For a sampled score, write content/music.json with a notes array. Each row is [instrument, start seconds, MIDI pitch, duration seconds, level, pan]. Use mallet, bow, bell, harp and bass. The short FLAC instruments and source URLs are in engine/samples. The mixer times the notes to the measured voice, leaves a configurable voice_over_music_db margin (default 12 dB during speech), and writes post-fader stems that sum to the delivery mix. A production can keep its authored score entirely offline.

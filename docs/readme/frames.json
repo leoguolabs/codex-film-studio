@@ -505,6 +505,23 @@
       "image": "docs/readme/frames/popup-storybook.jpg",
       "image_sha256": "6e54cd1a0489daca8006e5aea8ae94c5b22775beb1229a025ca6a549e3713b65",
       "treatment": "Full encoded frame at Lighthouse Point, resized to 960 × 540."
+    },
+    {
+      "style": "line-cutaway",
+      "source_video": "The Voltage in Your Voice / final English master",
+      "source_sha256": "bd5fc88d9bfcb457c0e6984fb7a5c8d50301658eaf418d3c9100d16caf54cf48",
+      "title": "The Voltage in Your Voice",
+      "title_zh": "声音里的电压",
+      "seconds": 21.75,
+      "frame": 522,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/line-cutaway.jpg",
+      "image_sha256": "630ac8c13f42b5cbc5d250f51934234d938cf99f985979fcad7faf9fd3a93f48",
+      "treatment": "Complete winding shot resized to 1280 × 720."
     }
   ]
 }

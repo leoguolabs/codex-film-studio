@@ -132,6 +132,13 @@ class ReproductionTests(unittest.TestCase):
                         self.assertEqual(cut['assets'], {})
                         self.assertTrue((p / 'methods/music-continuity.md').is_file())
                         continue
+                    if entry['id'] == 'line-cutaway':
+                        self.assertTrue((p / entry['renderer_entry']).is_file())
+                        self.assertTrue((p / entry['render_script']).is_file())
+                        self.assertEqual(json.loads((p / 'content/narration.json').read_text())['lines'], [])
+                        self.assertIn('moderngl==', (p / 'requirements.txt').read_text())
+                        self.assertIn('scene.frame(', (p / entry['render_script']).read_text())
+                        continue
                     if entry.get('render_script', '').endswith('.py'):
                         self.assertTrue((p / entry['render_script']).is_file())
                         self.assertTrue((p / entry['renderer_entry']).is_file())

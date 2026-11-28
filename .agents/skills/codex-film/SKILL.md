@@ -118,3 +118,5 @@ For City Symphony (`city-symphony`), cut real location footage to one score and 
 For Xuan Ink Wash (`ink-wash`), follow the pressure and contact study in the starter’s GESTURE-AND-SOUND.md. [Between Strokes](https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en) lets viewers reverse the actual contact frames and hear the original music, edited score and Foley separately.
 
 For Pop-Up Storybook (`popup-storybook`, 纸艺立体书), follow the hinged-card and printed-stage guide. [The Paper Coast](https://leoguolabs.github.io/codex-film-studio/styles/popup-storybook/showcase/index.html?lang=en) presents the illustrated book, both English films and their separate score and paper tracks.
+
+For Line Cutaway (线稿剖面 or hardcore-info), use the millimetre-scale solid renderer and the projected sheet in the blank kit. Check the moving contact surface, anchored leaders and real clearance in the section.
