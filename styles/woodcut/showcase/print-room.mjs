@@ -67,9 +67,17 @@ const foil = $(".first-print");
 const still = matchMedia(
   "(prefers-reduced-motion: reduce), (max-height:540px) and (max-width:740px)",
 );
-const images = impressions.map(({ file }) =>
-  Object.assign(new Image(), { crossOrigin: "anonymous", src: file }),
-);
+const images = impressions.map(() => {
+  const image = new Image();
+  image.crossOrigin = "anonymous";
+  image.addEventListener("load", schedule);
+  return image;
+});
+function loadPlate(index) {
+  const image = images[index];
+  if (!image.hasAttribute("src")) image.src = impressions[index].file;
+  return image.complete && image.naturalWidth > 0;
+}
 let selection = 0,
   requested = false;
 function progress() {
@@ -173,7 +181,15 @@ function draw() {
   $("#next").disabled = index === 2;
   foil.alt = impressions[index].alt;
   journey.style.setProperty("--pull", String(0.02 + 0.98 * p));
-  if (!g || !images.every((im) => im.complete && im.naturalWidth)) return;
+  const from = Math.min(1, Math.floor(pos));
+  const phase = Math.max(0, Math.min(1, (pos - from - 0.12) / 0.76));
+  const turning = !still.matches && phase > 0 && phase < 1;
+  const currentReady = loadPlate(index);
+  if (p > 0 && p < 1) {
+    loadPlate(from);
+    loadPlate(from + 1);
+  }
+  if (!g || !currentReady) return;
   const w = canvas.clientWidth,
     h = canvas.clientHeight;
   if (!w || !h) return;
@@ -186,11 +202,12 @@ function draw() {
     canvas.height = Math.round(h * density);
   }
   g.setTransform(canvas.width / w, 0, 0, canvas.height / h, 0, 0);
-  const from = Math.min(1, Math.floor(pos)),
-    segment = pos - from;
-  const phase = Math.max(0, Math.min(1, (segment - 0.12) / 0.76));
-  if (phase <= 0 || phase >= 1 || still.matches) plate(index, w, h);
-  else curl(from, from + 1, phase, w, h);
+  g.clearRect(0, 0, w, h);
+  if (turning && loadPlate(from) && loadPlate(from + 1)) {
+    curl(from, from + 1, phase, w, h);
+  } else {
+    plate(index, w, h);
+  }
 }
 function schedule() {
   if (!requested) {
@@ -214,7 +231,7 @@ function turn(direction) {
 }
 $("#previous").onclick = () => turn(-1);
 $("#next").onclick = () => turn(1);
-images.forEach((img) => img.addEventListener("load", schedule));
+
 new ResizeObserver(schedule).observe(canvas);
 still.addEventListener("change", schedule);
 addEventListener("scroll", schedule, { passive: true });

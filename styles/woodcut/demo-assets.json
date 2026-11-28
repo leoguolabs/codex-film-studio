@@ -1,10 +1,10 @@
 {
   "release": "woodcut-print-room-v1",
   "archive": {
-    "name": "woodcut-captions-v1.tar.gz",
-    "bytes": 1220,
-    "sha256": "eaa24a50d6e01bd20f3cc9cff33fed6d321f3d8faeea0122df05cd3b8f319dac",
-    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/woodcut-captions-v1.tar.gz"
+    "name": "woodcut-program-v1.tar.gz",
+    "bytes": 1402,
+    "sha256": "f7737d4a517097a27d91ed642c196662ff6b8871e00ab8beff93621910d54069",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/woodcut-program-v1.tar.gz"
   },
   "files": [
     "media/films.json",
