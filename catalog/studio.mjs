@@ -39,6 +39,7 @@ const categories = {
   'marker-paper':['drawn','material','animation'],
   'ipad-sketch':['drawn','animation','material'],
   'city-symphony':['geography','material'],
+  'woodcut':['material','drawn','animation'],
   'ukiyoe':['drawn','material','animation'],
 };
 const $ = selector => document.querySelector(selector);

@@ -1845,6 +1845,69 @@
         ]
       },
       "public_assets": "styles/sketchnote/demo-assets.json"
+    },
+    {
+      "id": "woodcut",
+      "name": "Woodcut on Laid Paper",
+      "name_zh": "木刻版画",
+      "description": "Pull a lighthouse, a copper flame and a sheep bell from a woodblock, then watch two hand-cut English films.",
+      "description_zh": "揭起印张，看海岬、铜色灯火和山口的羊铃依次显影，再放映两部原创木刻短片。",
+      "status": "renderer-ready",
+      "status_note": "Relief knife engine, sculpted macro, sheet curl, chamber score and English voice.",
+      "status_note_zh": "可编辑的木刻刀痕、浮雕特写、揭纸、室内乐和英文配音。",
+      "guide": "styles/woodcut/STYLE.md",
+      "readme": "styles/woodcut/README.md",
+      "prompt": "styles/woodcut/prompt.txt",
+      "template": "styles/woodcut/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": true,
+        "original_source": "unavailable",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "woodcut-double-bill",
+          "title": "Cut from the Dark · two woodcut films",
+          "title_zh": "从暗处刻出光 · 木刻双片",
+          "page": "styles/woodcut/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/woodcut/showcase/media/films.json"
+        }
+      ],
+      "render_script": "scripts/render.mjs",
+      "renderer_entry": "engine/studio.js",
+      "preview": "docs/readme/frames/woodcut.jpg",
+      "preview_zh": "docs/readme/frames/woodcut.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "woodcut-double-bill",
+      "public_assets": "styles/woodcut/demo-assets.json",
+      "landing": {
+        "page": "styles/woodcut/showcase/index.html",
+        "assets": [
+          "styles/woodcut/showcase/headland.webp",
+          "styles/woodcut/showcase/knot.webp",
+          "styles/woodcut/showcase/lantern.webp",
+          "styles/woodcut/showcase/print-room.css",
+          "styles/woodcut/showcase/print-room.mjs",
+          "styles/woodcut/showcase/shears.webp",
+          "styles/woodcut/showcase/sheep.webp",
+          "styles/woodcut/showcase/stock.webp",
+          "styles/woodcut/starter/fonts/Fell.ttf",
+          "styles/woodcut/starter/fonts/FellSC.ttf",
+          "styles/woodcut/starter/fonts/OFL-IMFell.txt"
+        ]
+      }
     }
   ],
   "capability_schema_version": 2

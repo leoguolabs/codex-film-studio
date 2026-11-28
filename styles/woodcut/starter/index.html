@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Woodcut film</title><style>
+@font-face{font-family:Fell;src:url(fonts/Fell.ttf)}@font-face{font-family:FellSC;src:url(fonts/FellSC.ttf)}*{margin:0}canvas{width:100vw;height:auto;display:block}
+</style><canvas width="1920" height="1080"></canvas><script type="module">
+import {draw} from './film.js';
+const [cfg,cues]=await Promise.all(['narration','cues'].map(n=>fetch('content/'+n+'.json').then(r=>r.json())));
+await Promise.all(['Fell','FellSC'].map(f=>document.fonts.load('44px '+f)));
+const g=document.querySelector('canvas').getContext('2d');
+window.filmFrames=Math.round(cfg.duration*24);
+window.drawFrame=n=>draw(g,n,cues.find(c=>n/24>=c.start&&n/24<c.end));
+window.ready=true;
+</script></html>

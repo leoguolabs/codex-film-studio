@@ -122,3 +122,5 @@ For Pop-Up Storybook (`popup-storybook`, 纸艺立体书), follow the hinged-car
 For Line Cutaway (线稿剖面 or hardcore-info), use the millimetre-scale solid renderer and the projected sheet in the blank kit. Check the moving contact surface, anchored leaders and real clearance in the section.
 
 For Sketchnote, compose the complete dot-paper poster before drawing the opening clue. [Catch the light](https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en) follows the film artwork through the aperture and back to the sheet.
+
+For Woodcut on Laid Paper, carve the silhouettes, sculpt the working close-up and print through the ink compositor. [Cut from the Dark](https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en) lets viewers pull three impressions and hear both films’ separate scores and Foley.

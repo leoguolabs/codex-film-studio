@@ -19,6 +19,7 @@
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en">Anatomy of a Voice · open a moving-coil microphone ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en">Night Windows · enter the paper lightbox ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en">Between Strokes · unroll two ink films ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en">Cut from the Dark · pull a woodcut print ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">A seed on the wind · colored-pencil films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en">Paper Math · marker films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en">A Pop &amp; a Pirouette · tablet sketch films ↗</a> ·
@@ -52,7 +53,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**30 styles** · 30 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**31 styles** · 31 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -359,6 +360,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>视觉笔记</sub>
 <p>Follow a point of candlelight through a pinhole, then open a popcorn kernel. Both films unfold across one sheet of hand-drawn notes.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/woodcut.jpg" alt="Woodcut on Laid Paper — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>31 / <code>woodcut</code></sub>
+<h3>Woodcut on Laid Paper</h3>
+<sub>木刻版画</sub>
+<p>Pull a lighthouse, a copper flame and a sheep bell from a woodblock, then watch two hand-cut English films.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

@@ -270,5 +270,17 @@
   "sketchnote": {
     "en": {"use": "Explain a mechanism by following a single coloured detail across a page of illustrated notes.", "method": "Draw the mechanism at two scales. Keep the dot grid in the same coordinates as the pen, labels and marker shadows while the camera crosses the sheet.", "check": "Scrub the cut into the detail. The shared mark should keep its screen position and size. Pull back far enough to read the panel sequence.", "best_for": ["A physical process with a visible change", "A lecture that can fit on one illustrated page"], "faq": [{"q": "What appears in a close-up?", "a": "A second drawing can live inside a small mark on the page. The camera magnifies it until the internal parts and their labels become readable."}, {"q": "How do I edit the narration?", "a": "Edit the English cue text, regenerate its voice take and use the measured cue times to adjust the drawing and camera."}]},
     "zh": {"use": "跟着一个有颜色的细节跨过整张手绘笔记，讲清一个过程。", "method": "在同一张点阵纸上画出物体的外形和内部结构。镜头移动时，墨线、文字和马克笔阴影留在纸面的原位。", "check": "逐帧查看进入细节的那次切换，检查同一个标记在两侧画面中的大小和位置。拉远后应能读出整页的顺序。", "best_for": ["能画出物理变化的科普", "能归纳为一张手绘笔记的讲解"], "faq": [{"q": "放大后能看到什么？", "a": "小标记内部可以另画一幅结构图。镜头移近以后，内部零件和手写标注才变得清楚。"}, {"q": "怎样修改英文配音？", "a": "修改英文台词并重新生成这条录音，再用实测时长调整绘画动作和镜头。"}]}
+  },
+  "woodcut": {
+    "en": {
+      "use": "Tell a tactile story about a repair or the return of light and sound.",
+      "method": "Cut the silhouettes in reverse, rub a sheet against the ink, and carry a single spot colour through the grooves.",
+      "check": "Follow the knife direction around the hand and check that the letters read forwards when the impression lifts."
+    },
+    "zh": {
+      "use": "用黑白木刻表现一次修补，或一缕光和一声铃的归来。",
+      "method": "反刻剪影，在上墨的木版上覆纸擦印，让一种专色沿刻槽扩散。",
+      "check": "检查刻痕是否顺着手的体积转向，揭纸时反刻文字应当成为正字。"
+    }
   }
 }

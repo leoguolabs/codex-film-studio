@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#eee8d8" />
+    <meta
+      name="description"
+      content="Pull three woodcut impressions from the block with a scroll, then watch two English films about a lighthouse and a shepherd's bell."
+    />
+    <title>Cut from the Dark · Woodcut on Laid Paper · Codex Film Studio</title>
+    <link rel="icon" href="../../../catalog/mark.svg" />
+    <link rel="preload" href="headland.webp" as="image" />
+    <link rel="stylesheet" href="print-room.css" />
+    <script type="module" src="print-room.mjs"></script>
+    <script type="module" src="../../../catalog/agent-start.mjs"></script>
+  </head>
+  <body>
+    <a class="skip" href="#screening" data-zh="跳至影片">Skip to the films</a>
+    <main>
+      <section class="journey" id="press" aria-labelledby="title">
+        <div class="pinned">
+          <header class="mast">
+            <a class="brand" data-library href="../../../?lang=en#library"
+              ><img src="../../../catalog/brand/studio-logo.svg" alt="" />Codex
+              Film Studio</a
+            >
+            <nav>
+              <a
+                data-library
+                href="../../../?lang=en#library"
+                data-zh="全部风格"
+                >All styles</a
+              ><a href="#screening" data-zh="放映室">Screening room</a
+              ><a id="language" href="?lang=zh" lang="zh-CN">中文</a>
+            </nav>
+          </header>
+          <div class="press-layout">
+            <div class="edition">
+              <p class="medium" data-zh="木刻版画">Woodcut on Laid Paper</p>
+              <h1 id="title">
+                <span data-zh="从暗处">Cut from</span
+                ><em data-zh="刻出光">the dark.</em>
+              </h1>
+              <p
+                class="intro"
+                data-zh="一盏灯照亮海岬，一声铃穿过山雾。两个故事，从同一片墨黑里刻出来。"
+              >
+                A lamp on the headland. A bell in the fog. Two stories carved
+                out of black ink.
+              </p>
+              <a class="to-films" href="#screening"
+                ><i aria-hidden="true">▶</i
+                ><span data-zh="看两部短片">Watch the two films</span></a
+              >
+            </div>
+            <figure class="impression">
+              <div class="plate">
+                <img
+                  class="first-print"
+                  src="headland.webp"
+                  fetchpriority="high"
+                  alt="A white lighthouse throws a beam across a black sea towards a small boat."
+                  data-alt-zh="木刻灯塔从海岬投下一束光，照向海面上的小船。"
+                />
+                <canvas id="sheet" aria-hidden="true"></canvas>
+              </div>
+              <figcaption>
+                <span class="folio" id="folio">I / III</span
+                ><span class="print-name" id="plate-name">The headland</span>
+                <div class="turn">
+                  <button
+                    type="button"
+                    id="previous"
+                    aria-label="Previous impression"
+                    data-label-zh="上一张印样"
+                  >
+                    ←</button
+                  ><button
+                    type="button"
+                    id="next"
+                    aria-label="Next impression"
+                    data-label-zh="下一张印样"
+                  >
+                    →
+                  </button>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="press-foot">
+            <div class="scroll-cue">
+              <span class="scroll-arrow" aria-hidden="true">↓</span
+              ><span data-zh="向下滚动，揭起印张"
+                >Scroll to pull the print</span
+              >
+            </div>
+            <div class="etch" aria-hidden="true"><b></b></div>
+            <a href="#screening" data-zh="跳至放映 ↓">Skip to screening ↓</a>
+          </div>
+        </div>
+      </section>
+      <section id="screening" class="screening" aria-labelledby="screen-title">
+        <div class="inner">
+          <div class="section-head">
+            <div>
+              <p class="medium" data-zh="木刻短片双映">A woodcut double bill</p>
+              <h2 id="screen-title" data-zh="纸上放映室">The screening room</h2>
+            </div>
+            <div
+              class="film-choices"
+              role="group"
+              aria-label="Select a film"
+              data-label-zh="选择影片"
+            >
+              <button data-film="wick" type="button" aria-pressed="true">
+                <span>Ⅰ</span> <b data-zh="灯塔">The lighthouse</b></button
+              ><button data-film="pass" type="button" aria-pressed="false">
+                <span>Ⅱ</span> <b data-zh="羊铃">The sheep bell</b>
+              </button>
+            </div>
+          </div>
+          <div class="program">
+            <figure class="player">
+              <video
+                id="film"
+                controls
+                playsinline
+                preload="none"
+                poster="media/wick.webp"
+                src="https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/wick.mp4"
+                aria-label="A Wick Against the Sea"
+              >
+                <track
+                  kind="subtitles"
+                  srclang="en"
+                  label="English"
+                  src="media/wick.vtt"
+                />
+              </video>
+            </figure>
+            <div class="film-note">
+              <p class="runtime" id="runtime">00:48 · English</p>
+              <h3 id="film-title" lang="en">A Wick Against the Sea</h3>
+              <p id="synopsis" class="synopsis">
+                A keeper has one match left. A boat is still out beyond the
+                headland.
+              </p>
+              <details>
+                <summary data-zh="选看一幕">Scenes</summary>
+                <div id="scenes"></div>
+              </details>
+              <details>
+                <summary data-zh="英文旁白">English narration</summary>
+                <div id="lines" lang="en"></div>
+              </details>
+              <a
+                class="direct"
+                id="direct"
+                href="https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/wick.mp4"
+                data-zh="单独打开影片 ↗"
+                >Open the film ↗</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sound" id="sound" aria-labelledby="sound-title">
+        <div class="sound-inner">
+          <figure class="sound-print">
+            <img
+              id="sound-art"
+              src="shears.webp"
+              loading="lazy"
+              alt="A carved hand trims a wick with shears."
+              data-alt-zh="木刻画面中，一只手用剪刀修剪灯芯。"
+            />
+          </figure>
+          <div class="sound-copy">
+            <p class="medium" data-zh="声音与刀痕">Sound &amp; incision</p>
+            <h2 id="sound-title" data-zh="听见手上的动作">
+              Listen to the hands
+            </h2>
+            <label for="sound-film" data-zh="选择影片原声">Sound from</label>
+            <select id="sound-film">
+              <option value="wick">A Wick Against the Sea</option>
+              <option value="pass">The Bell at Grey Pass</option>
+            </select>
+            <p id="sound-note">
+              Bowed cello holds the sea steady. Listen separately for the scrape
+              of the shears and the strike of a match.
+            </p>
+            <div
+              class="tracks"
+              role="group"
+              aria-label="Select an audio track"
+              data-label-zh="选择声音分轨"
+            >
+              <button
+                type="button"
+                data-track="music"
+                aria-pressed="true"
+                data-zh="配乐"
+              >
+                Score</button
+              ><button
+                type="button"
+                data-track="foley"
+                aria-pressed="false"
+                data-zh="拟音"
+              >
+                Foley
+              </button>
+            </div>
+            <audio
+              id="audio"
+              controls
+              preload="none"
+              src="media/wick-music.m4a"
+              aria-label="A Wick Against the Sea · Score"
+            ></audio>
+          </div>
+        </div>
+      </section>
+      <footer class="inner colophon">
+        <div>
+          <h2 data-zh="版尾记">Colophon</h2>
+          <p
+            data-zh="刻去的地方留下纸白。守塔人的火焰用铜色，牧羊人的鞋带用暗红。灯光和铃声都沿着原有的刀槽散开。"
+          >
+            The cut leaves the paper bare. Copper belongs to the keeper’s flame,
+            oxblood to the shepherd’s lace. Light and sound travel through the
+            grooves already in the block.
+          </p>
+        </div>
+        <div class="notes">
+          <details>
+            <summary data-zh="创作与署名">Making &amp; credits</summary>
+            <p
+              data-zh="插画取自两部影片。刻线与卷纸沿用 LemoLab 的开源木刻工具。字体为 Igino Marini 的 IM FELL English。灯塔片使用 Versilian Studios 的大提琴采样。英文旁白由 Kokoro 配音。"
+            >
+              The illustrations come from the two films. The relief tools build
+              on LemoLab’s woodcut engine. Type is IM FELL English by Igino
+              Marini. The lighthouse score uses Versilian Studios cello samples.
+              English voices are performed with Kokoro.
+            </p>
+            <a
+              href="https://lemomo-ai.github.io/lemo-opuscar/styles/woodcut/"
+              data-zh="LemoLab 的木刻原片 ↗"
+              >LemoLab’s original woodcut film ↗</a
+            >
+          </details>
+          <details>
+            <summary data-zh="用这个风格拍片">Make a woodcut film</summary>
+            <film-agent-start style-id="woodcut"></film-agent-start>
+          </details>
+          <div class="footer-links">
+            <a
+              data-library
+              href="../../../?lang=en#library"
+              data-zh="← 全部风格"
+              >← All styles</a
+            ><a href="#press" data-zh="回到木版 ↑">Back to the block ↑</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

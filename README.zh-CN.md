@@ -19,6 +19,7 @@
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=zh">声音的剖面 · 随滚轮拆开麦克风 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=zh">纸窗入夜 · 进入纸雕灯箱 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=zh">一笔之间 · 展开水墨双片 ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=zh">从暗处刻出光 · 揭开木刻印张 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh">松籽乘风 · 彩铅放映页 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=zh">纸上有数 · 马克笔放映页 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=zh">一跃，一旋 · 平板速写放映页 ↗</a> ·
@@ -52,7 +53,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**30 种风格** · 30 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**31 种风格** · 31 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -359,6 +360,16 @@ codex plugin add codex-film-studio@visiontrail
 <sub>Sketchnote</sub>
 <p>跟着一束烛光穿过针孔，再剖开一粒爆米花。两部短片各自从一个小线索，画成一整张视觉笔记。</p>
 <p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/woodcut.jpg" alt="木刻版画 — 影片截图" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>31 / <code>woodcut</code></sub>
+<h3>木刻版画</h3>
+<sub>Woodcut on Laid Paper</sub>
+<p>揭起印张，看海岬、铜色灯火和山口的羊铃依次显影，再放映两部原创木刻短片。</p>
+<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

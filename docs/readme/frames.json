@@ -539,6 +539,23 @@
       "image": "docs/readme/frames/sketchnote.jpg",
       "image_sha256": "ebeacbeeafd3b503c1289afb82a609a433963d60fe75601fa839e252334d430f",
       "treatment": "Complete final poster at frame 1060, resized to 960 × 540."
+    },
+    {
+      "style": "woodcut",
+      "title": "A Wick Against the Sea",
+      "title_zh": "守塔人的火柴",
+      "source_video": "A Wick Against the Sea / final English master",
+      "source_sha256": "d9c23671c67381a87955d3a6b878e12cb1b6b6c888a7a8d35852551a90160b7d",
+      "seconds": 40.833333333333336,
+      "frame": 980,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/woodcut.jpg",
+      "image_sha256": "329483bbfa4f5b0a084e8545f1e9e3fa1748ea7a4e7423e88dbf25881dee2d50",
+      "treatment": "Complete lighthouse beam at frame 980, resized to 1280 × 720 from the production render."
     }
   ]
 }

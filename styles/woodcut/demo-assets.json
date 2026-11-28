@@ -1,0 +1,34 @@
+{
+  "release": "woodcut-print-room-v1",
+  "archive": {
+    "name": "woodcut-impressions-v1.tar.gz",
+    "bytes": 3472653,
+    "sha256": "4e723db38377a05b5b21946a985c2d17a761767300cc7c64d90027db08fb76a5",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/woodcut-impressions-v1.tar.gz"
+  },
+  "files": [
+    "media/films.json",
+    "media/pass-foley.m4a",
+    "media/pass-music.m4a",
+    "media/pass.vtt",
+    "media/pass.webp",
+    "media/wick-foley.m4a",
+    "media/wick-music.m4a",
+    "media/wick.vtt",
+    "media/wick.webp"
+  ],
+  "streams": [
+    {
+      "name": "pass.mp4",
+      "bytes": 47018502,
+      "sha256": "2a1805e18939986e6414690171d3a29415a089c51b944bfcfcdd63f78f73f752",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/pass.mp4"
+    },
+    {
+      "name": "wick.mp4",
+      "bytes": 42906210,
+      "sha256": "fa45d1223da0ebfc86059fc1d64c4181ab3a84c96fd522797d27a4e0bf3190d7",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/wick.mp4"
+    }
+  ]
+}
