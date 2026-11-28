@@ -208,9 +208,10 @@ function normalizeSearch(value) {
 
 function sampleLink(entry) {
   const sample = samplePage(entry);
-  const page = sample ?? stylePage(entry);
+  const coverAction = entry.landing && localized(entry.landing, 'card_action');
+  const page = coverAction ? entry.landing : sample ?? stylePage(entry);
   if (!page) return '';
-  const title = sample ? t('compareWatch') : stylePageLabel(page);
+  const title = coverAction || (sample ? t('compareWatch') : stylePageLabel(page));
   return `<a class="card-page" href="${escape(pageURL(page))}">${escape(title)}<span aria-hidden="true">↗</span></a>`;
 }
 

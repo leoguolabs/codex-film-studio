@@ -1953,6 +1953,8 @@
       "public_assets": "styles/risograph/demo-assets.json",
       "landing": {
         "page": "styles/risograph/showcase/index.html",
+        "card_action": "Pull the print",
+        "card_action_zh": "滚动套印",
         "assets": [
           "styles/risograph/showcase/press.css",
           "styles/risograph/showcase/press.mjs",
