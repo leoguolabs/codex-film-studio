@@ -1,11 +1,11 @@
 @font-face {
   font-family: Fell;
-  src: url("../starter/fonts/Fell.ttf") format("truetype");
+  src: url("fell.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: FellSC;
-  src: url("../starter/fonts/FellSC.ttf") format("truetype");
+  src: url("fell-small-caps.woff2") format("woff2");
   font-display: swap;
 }
 :root {

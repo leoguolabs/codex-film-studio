@@ -1,21 +1,15 @@
 {
   "release": "woodcut-print-room-v1",
   "archive": {
-    "name": "woodcut-impressions-v1.tar.gz",
-    "bytes": 3472653,
-    "sha256": "4e723db38377a05b5b21946a985c2d17a761767300cc7c64d90027db08fb76a5",
-    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/woodcut-impressions-v1.tar.gz"
+    "name": "woodcut-captions-v1.tar.gz",
+    "bytes": 1220,
+    "sha256": "eaa24a50d6e01bd20f3cc9cff33fed6d321f3d8faeea0122df05cd3b8f319dac",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/woodcut-captions-v1.tar.gz"
   },
   "files": [
     "media/films.json",
-    "media/pass-foley.m4a",
-    "media/pass-music.m4a",
     "media/pass.vtt",
-    "media/pass.webp",
-    "media/wick-foley.m4a",
-    "media/wick-music.m4a",
-    "media/wick.vtt",
-    "media/wick.webp"
+    "media/wick.vtt"
   ],
   "streams": [
     {
@@ -29,6 +23,30 @@
       "bytes": 42906210,
       "sha256": "fa45d1223da0ebfc86059fc1d64c4181ab3a84c96fd522797d27a4e0bf3190d7",
       "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/wick.mp4"
+    },
+    {
+      "name": "pass-foley.m4a",
+      "bytes": 809624,
+      "sha256": "6a0b4349401ecd42fdbf9b061fade938744636d46f0a3480769e83f3d0277021",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/pass-foley.m4a"
+    },
+    {
+      "name": "pass-music.m4a",
+      "bytes": 946714,
+      "sha256": "4ec02a0c59164bed33ef7e8221d6d80e1ebbc2ecf01141c3a2d9d13d2ad211f4",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/pass-music.m4a"
+    },
+    {
+      "name": "wick-foley.m4a",
+      "bytes": 508262,
+      "sha256": "403feed187c7bd4dbe78743ec9c50c4bcb1c2b79f54b6242c386cbfce0bd4aca",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/wick-foley.m4a"
+    },
+    {
+      "name": "wick-music.m4a",
+      "bytes": 842798,
+      "sha256": "71252a440dcd04daa684d463a94666cc16f6dbbca3429d62910a019bdcee15b7",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/woodcut-print-room-v1/wick-music.m4a"
     }
   ]
 }

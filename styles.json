@@ -1895,16 +1895,12 @@
       "landing": {
         "page": "styles/woodcut/showcase/index.html",
         "assets": [
-          "styles/woodcut/showcase/headland.webp",
-          "styles/woodcut/showcase/knot.webp",
-          "styles/woodcut/showcase/lantern.webp",
           "styles/woodcut/showcase/print-room.css",
           "styles/woodcut/showcase/print-room.mjs",
-          "styles/woodcut/showcase/shears.webp",
-          "styles/woodcut/showcase/sheep.webp",
           "styles/woodcut/showcase/stock.webp",
-          "styles/woodcut/starter/fonts/Fell.ttf",
-          "styles/woodcut/starter/fonts/FellSC.ttf",
+          "styles/woodcut/showcase/headland.webp",
+          "styles/woodcut/showcase/fell.woff2",
+          "styles/woodcut/showcase/fell-small-caps.woff2",
           "styles/woodcut/starter/fonts/OFL-IMFell.txt"
         ]
       }

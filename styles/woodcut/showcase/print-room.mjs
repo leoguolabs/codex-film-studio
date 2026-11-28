@@ -28,6 +28,9 @@ languageLink.addEventListener("click", () => {
   languageLink.href = alternate.href;
 });
 
+// Pin these exhibition plates to their reviewed Git artwork revision.
+const plates =
+  "https://raw.githubusercontent.com/leoguolabs/codex-film-studio/1c0b10808aee30633dd2c8aecfb4b3fa817d8f23/styles/woodcut/showcase/";
 const impressions = [
   {
     file: "headland.webp",
@@ -39,7 +42,7 @@ const impressions = [
     ),
   },
   {
-    file: "lantern.webp",
+    file: plates + "lantern.webp",
     name: local("The last match", "最后一根火柴"),
     center: 0.5,
     alt: local(
@@ -48,7 +51,7 @@ const impressions = [
     ),
   },
   {
-    file: "sheep.webp",
+    file: plates + "sheep.webp",
     name: local("A bell in the fog", "雾中铃声"),
     center: 0.58,
     alt: local(
@@ -65,7 +68,7 @@ const still = matchMedia(
   "(prefers-reduced-motion: reduce), (max-height:540px) and (max-width:740px)",
 );
 const images = impressions.map(({ file }) =>
-  Object.assign(new Image(), { src: file }),
+  Object.assign(new Image(), { crossOrigin: "anonymous", src: file }),
 );
 let selection = 0,
   requested = false;
@@ -237,7 +240,7 @@ const notes = {
       "Bowed cello holds the sea steady. Listen separately for the scrape of the shears and the strike of a match.",
       "弓弦托住了海面的起伏。单听拟音，可以听到剪刀擦过灯芯，以及火柴划响的一瞬。",
     ),
-    art: "shears.webp",
+    art: plates + "shears.webp",
     alt: local("A hand trims a wick with shears.", "一只手用剪刀修剪灯芯。"),
   },
   pass: {
@@ -257,7 +260,7 @@ const notes = {
       "Under a quiet bed of strings, leather tightens against iron. The first bell strike carries across the hillside.",
       "弦乐压低了声音，皮绳在铁环上收紧。第一声羊铃从山坡上传开。",
     ),
-    art: "knot.webp",
+    art: plates + "knot.webp",
     alt: local(
       "Carved fingers thread a red bootlace through the bell.",
       "木刻的手指把红鞋带穿进铃舌。",
@@ -310,7 +313,7 @@ function pickFilm(key) {
     url = release + key + ".mp4";
   if (film.getAttribute("src") !== url) {
     film.pause();
-    film.poster = "media/" + key + ".webp";
+    film.poster = key === "wick" ? "headland.webp" : plates + "sheep.webp";
     const captions = document.createElement("track");
     Object.assign(captions, {
       kind: "subtitles",
@@ -349,7 +352,7 @@ function pickFilm(key) {
 function pickAudio() {
   const key = $("#sound-film").value,
     info = notes[key];
-  const src = "media/" + key + "-" + track + ".m4a";
+  const src = release + key + "-" + track + ".m4a";
   if (audio.getAttribute("src") !== src) {
     audio.pause();
     audio.src = src;
