@@ -556,6 +556,23 @@
       "image": "docs/readme/frames/woodcut.jpg",
       "image_sha256": "329483bbfa4f5b0a084e8545f1e9e3fa1748ea7a4e7423e88dbf25881dee2d50",
       "treatment": "Complete lighthouse beam at frame 980, resized to 1280 × 720 from the production render."
+    },
+    {
+      "style": "risograph",
+      "title": "One More Turn",
+      "title_zh": "再坐一圈",
+      "source_video": "One More Turn / final master",
+      "source_sha256": "fa6c6c350bd887570e6c0e7767a954e3792c83131bfbcace8e4d64554555c350",
+      "seconds": 22.5,
+      "frame": 540,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/risograph.jpg",
+      "image_sha256": "b97a98bd9838b7fddc7bf7b24b6a57161182680b61f60ddcb0f6db2cdaf9ceb8",
+      "treatment": "Full carousel reaction shot at frame 540, resized to 960 × 540."
     }
   ]
 }

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Midway Press · Risograph Print | Codex Film Studio</title>
+<meta name="description" content="Pull a three-colour carousel print, then watch One More Turn and Bell Hop, two original English risograph shorts.">
+<meta name="theme-color" content="#f6f1e6">
+<link rel="stylesheet" href="press.css">
+<script type="module" src="press.mjs"></script>
+<script type="module" src="../../../catalog/agent-start.mjs"></script>
+</head>
+<body>
+<header class="mast">
+  <a class="brand library" href="../../../?lang=en#library"><i class="inks" aria-hidden="true"><i></i><i></i><i></i></i>Codex Film Studio</a>
+  <nav aria-label="Navigation"><a href="#screening" data-zh="放映">Screening</a><a href="#sound" data-zh="声音">Sound</a><a class="language" href="?lang=zh" lang="zh">中文</a></nav>
+</header>
+<main>
+<section class="journey" id="cover" aria-labelledby="cover-title">
+ <div class="pinned"><div class="spread">
+  <div class="cover-copy">
+   <p class="kicker"><span class="register" aria-hidden="true">⊕</span> <span data-zh="孔版套色印刷">Risograph Print</span></p>
+   <h1 id="cover-title"><span data-zh="游艺">Midway</span><em data-zh="印社">Press.</em></h1>
+   <p class="lede" data-zh="一枚铜环，一声铃响。两部短片从同一台三色印刷机上走下来。">A brass ring. A desk bell. Two little films from the same three ink drums.</p>
+   <a class="screen-link" href="#screening"><span class="play-triangle">▶</span><span data-zh="看两部短片">Watch the double bill</span></a>
+  </div>
+  <div class="press" aria-label="Interactive carousel print">
+   <div class="underlay" aria-hidden="true"></div>
+   <figure class="sheet proofsheet">
+    <div class="mat">
+     <img class="plate base" src="proof-0.webp" width="1440" height="810" data-alt-zh="蓝墨印出的木马、女孩和摩天轮" alt="The rider, horse and Ferris wheel printed in blue ink">
+     <img class="plate yellow" src="proof-1.webp" width="1440" height="810" alt="">
+     <img class="plate pink" src="proof-2.webp" width="1440" height="810" alt="">
+     <canvas class="live-print" width="1440" height="810" aria-hidden="true" hidden></canvas>
+    </div>
+    <figcaption><b>ONE MORE TURN</b><span class="proof-label">BLUE + YELLOW + PINK</span></figcaption>
+   </figure>
+   <figure class="sheet cover-sheet" aria-hidden="true">
+    <div class="mat"><img src="proof-2.webp" width="1440" height="810" alt="" fetchpriority="high"></div>
+    <figcaption><b>ONE MORE TURN</b><span>THE MIDWAY PRESS</span></figcaption>
+   </figure>
+  </div>
+  <div class="pull-note"><div class="feed" aria-hidden="true"><i></i></div>
+   <p><span class="down" aria-hidden="true">↓</span> <span class="instruction" data-zh="滚动，一色一色地印">Scroll to pull the print</span></p>
+   <span class="phase" aria-live="off"></span>
+  </div>
+ </div></div>
+</section>
+<section id="screening" class="screening">
+ <div class="wrap">
+  <div class="section-title"><div><p class="kicker" data-zh="双片连映">A double feature</p><h2 data-zh="小小放映场">Picture show</h2></div><span class="format" data-zh="英文原声 · 24 帧／秒">English audio · 24 fps</span></div>
+  <div class="programme" aria-label="Films"><button data-film="turn" aria-pressed="true"><img src="turn.webp" width="896" height="504" alt=""><span><b>One More Turn</b><small data-zh="再坐一圈 · 40 秒">A brass-ring story · 40 sec</small></span></button>
+   <button data-film="bell" aria-pressed="false"><img src="bell.webp" width="896" height="504" alt=""><span><b>Bell Hop</b><small data-zh="叮咚，客到 · 27 秒">At the night desk · 27 sec</small></span></button></div>
+  <div class="screen-layout"><div class="projection"><video id="movie" controls playsinline preload="none" width="1280" height="720" poster="turn.webp" aria-label="One More Turn"></video></div>
+   <article class="film-notes"><h3 id="film-title">One More Turn</h3><p id="synopsis"></p><ol class="chapters" aria-label="Chapters"></ol><a id="mp4" data-zh="打开影片 MP4 ↗">Open film MP4 ↗</a></article></div>
+ </div>
+</section>
+<section id="sound" class="sound"><div class="wrap sound-spread">
+ <div class="sound-copy"><p class="kicker" data-zh="原声分轨">From the soundtrack</p><h2><span data-zh="听见">Listen to</span><br><em data-zh="第二声铃。">the second bell.</em></h2><p data-zh="麻雀按了一下铃，第二声是谁敲的？把配乐拿开，只听柜台边的动静。">The sparrow rings once. Who rings a second time? Lift the music out and listen at the desk.</p></div>
+ <div class="record"><div class="grooves" aria-hidden="true"><i></i></div><div class="record-copy"><label for="sound-film" data-zh="选一部原声">Listen to a film</label><select id="sound-film"><option value="bell">Bell Hop</option><option value="turn">One More Turn</option></select>
+ <div class="tracks"><button data-stem="effects" aria-pressed="true" data-zh="拟音">Effects</button><button data-stem="score" aria-pressed="false" data-zh="配乐">Score</button></div><p id="sound-note"></p><audio id="audio" controls preload="none" aria-label="Selected sound stem"></audio></div></div>
+</div></section>
+<section class="endpaper"><div class="wrap endgrid"><div><p class="kicker" data-zh="印后手记">Printer’s notes</p><h2 data-zh="纸边的墨迹">In the margins</h2></div>
+ <div class="colophon"><p data-zh="片头先走蓝版。黄墨压上蓝墨，木马身上便有了绿色；荧光粉再落下，裙摆和鬃毛转成紫色。三只印鼓各自偏开一点，放大看，轮廓旁还能找到另一道颜色。">Blue goes through first. Yellow over blue makes the horse green. Fluorescent pink brings violet to the dress and mane. Each drum lands a little off register, leaving a second colour along the edges.</p>
+ <details><summary data-zh="创作与署名">Making the films &amp; credits</summary><p data-zh="这张互动海报重新编排了《One More Turn》里的木马、骑手和摩天轮，三张校样均由正片的分色绘制器输出。《Bell Hop》另画了一间旅馆，让麻雀和夜班猫演完一场小喜剧。两部短片的配乐与拟音分别编写。英文声音采用 Kokoro 的 am_adam 和 bf_emma。">The broadside rearranges the horse, rider and Ferris wheel from One More Turn. Its three proofs come from the film’s separation renderer. Bell Hop has a separately drawn hotel, sparrow and night clerk. Each film has its own composed score and effects. English voices use Kokoro am_adam and bf_emma.</p>
+ <p><a href="https://lemomo-ai.github.io/lemo-opuscar/styles/risograph/" id="credit-link" data-zh="LemoLab · 孔版套印参考原作 ↗">LemoLab · risograph reference ↗</a></p></details>
+ <details><summary data-zh="用这个风格拍一部短片">Make a film in this style</summary><film-agent-start style-id="risograph"></film-agent-start></details>
+ </div></div></section>
+</main>
+<footer><a class="library" href="../../../?lang=en#library" data-zh="← 全部风格">← All styles</a><a href="#cover" data-zh="回到印社 ↑">Back to the press ↑</a></footer>
+</body></html>

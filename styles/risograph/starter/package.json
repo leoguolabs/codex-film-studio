@@ -1,0 +1,8 @@
+{
+  "name": "risograph-film",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {"playwright-core": "1.60.0"},
+  "scripts": {"render": "node scripts/render.mjs"}
+}

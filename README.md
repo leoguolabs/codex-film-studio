@@ -20,6 +20,7 @@
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en">Night Windows · enter the paper lightbox ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en">Between Strokes · unroll two ink films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en">Cut from the Dark · pull a woodcut print ↗</a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en">Midway Press · pull a three-colour print ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=en">A seed on the wind · colored-pencil films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/marker-paper/showcase/index.html?lang=en">Paper Math · marker films ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ipad-sketch/showcase/index.html?lang=en">A Pop &amp; a Pirouette · tablet sketch films ↗</a> ·
@@ -53,7 +54,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**31 styles** · 31 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**32 styles** · 32 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 <!-- capability-summary:end -->
 
@@ -370,6 +371,16 @@ Package readiness, public films, source access and rebuild scope are separate. A
 <sub>木刻版画</sub>
 <p>Pull a lighthouse, a copper flame and a sheep bell from a woodblock, then watch two hand-cut English films.</p>
 <p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en#screening"><img src="docs/readme/frames/risograph.jpg" alt="Risograph Print — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>32 / <code>risograph</code></sub>
+<h3>Risograph Print</h3>
+<sub>孔版套色印刷</sub>
+<p>A carousel rider reaches for a brass ring. A sparrow wakes a hotel cat. Scroll through three ink impressions and watch both shorts.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
 </td>
 </tr>
 </table>

@@ -1,0 +1,50 @@
+{
+  "release": "risograph-double-bill-v1",
+  "archive": {
+    "name": "midway-programme-v1.tar.gz",
+    "bytes": 560,
+    "sha256": "cca425fd6bdad150933e9d0d4d688d761723124dbbd23da6431fea4e9ef7f027",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/risograph-double-bill-v1/midway-programme-v1.tar.gz"
+  },
+  "files": [
+    "media/films.json"
+  ],
+  "streams": [
+    {
+      "name": "bell.mp4",
+      "bytes": 15981419,
+      "sha256": "99a8234ab2a94f4bd44e0944a24747602f554a164dc8bdfc764939bcc5a02e15",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/risograph-double-bill-v1/bell.mp4"
+    },
+    {
+      "name": "turn.mp4",
+      "bytes": 26766849,
+      "sha256": "54b315037b6214e687215e098510a2633003e5e07649289b6acc522b4f96dc3b",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/risograph-double-bill-v1/turn.mp4"
+    },
+    {
+      "name": "bell-effects.m4a",
+      "bytes": 149267,
+      "sha256": "aa76834d8f5d4471596b6fc9ad2ee4b74d3730713608d24c2d0291105814f6f3",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/risograph-double-bill-v1/bell-effects.m4a"
+    },
+    {
+      "name": "bell-score.m4a",
+      "bytes": 422275,
+      "sha256": "8e20831b844aebe68fc674b59b0086ec445fe07855bc1009959f0e0b6a096f65",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/risograph-double-bill-v1/bell-score.m4a"
+    },
+    {
+      "name": "turn-effects.m4a",
+      "bytes": 182837,
+      "sha256": "b82ce42f46d41741ea1f393e75e3e781ca69b07737e4df1af2666f317d821d00",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/risograph-double-bill-v1/turn-effects.m4a"
+    },
+    {
+      "name": "turn-score.m4a",
+      "bytes": 629478,
+      "sha256": "ed7d463dde2c3964e99e342fc2aac9cb216e6e0598435c4ce77e88953b38df45",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/risograph-double-bill-v1/turn-score.m4a"
+    }
+  ]
+}

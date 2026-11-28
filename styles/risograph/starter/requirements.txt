@@ -1,0 +1,6 @@
+numpy==2.4.6
+scipy==1.17.1
+soundfile==0.14.0
+kokoro-onnx==0.6.1
+onnxruntime==1.31.1
+espeakng-loader==0.2.4

@@ -164,6 +164,16 @@ class ReproductionTests(unittest.TestCase):
                             self.assertTrue((p/dependency).is_file(), dependency)
                         self.assertEqual(package['scripts']['proof'], 'node scripts/render.mjs proof')
                         continue
+                    if entry['id'] == 'risograph':
+                        for file in (entry['renderer_entry'], 'engine/riso.js', 'engine/draw.js', 'scripts/sound.py'):
+                            self.assertTrue((p / file).is_file(), file)
+                        self.assertEqual(json.loads((p / 'content/narration.json').read_text())['lines'], [])
+                        self.assertEqual(json.loads((p / 'content/score.json').read_text())['chords'], [])
+                        subprocess.run(['node', '--input-type=module', '-e',
+                                        "import {film,drawScene,vignette} from './film.js'; "
+                                        "if (film.duration !== 0 || [drawScene,vignette].some(f=>typeof f!=='function')) process.exit(1)"],
+                                       cwd=p, check=True)
+                        continue
                     if entry['id'] == 'sketchnote':
                         self.assertTrue((p / entry['renderer_entry']).is_file())
                         self.assertTrue((p / 'scripts/sound.py').is_file())

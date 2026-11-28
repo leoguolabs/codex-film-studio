@@ -72,7 +72,7 @@ def doctor(style):
             problems.append(f"{name} missing: {hint}.")
             continue
         command = [exe]
-        if style in {"ink-wash", "papercut-red", "paper-lantern", "line-cutaway", "sketchnote"} and name == "ffmpeg":
+        if style in {"ink-wash", "papercut-red", "paper-lantern", "line-cutaway", "sketchnote", "risograph"} and name == "ffmpeg":
             gate = ROOT / "styles" / style / "starter/scripts/ffmpeg_serial.py"
             command = [sys.executable, str(gate), "--"]
         if style == "popup-storybook" and name == "ffmpeg":
@@ -116,6 +116,8 @@ def prepare(project):
         style = "line-cutaway"
     if (project / "engine/note.mjs").is_file():
         style = "sketchnote"
+    if (project / "engine/riso.js").is_file():
+        style = "risograph"
     doctor(style)
 
     def run(cmd):
@@ -123,13 +125,15 @@ def prepare(project):
 
     if (project / "package-lock.json").is_file():
         run(["npm", "ci"])
+        if style == "risograph" and not os.environ.get("RISO_CHROMIUM"):
+            run(["npx", "playwright-core", "install", "chromium"])
         scripts = json.loads((project / "package.json").read_text()).get("scripts", {})
         if "setup-renderer" in scripts:
             run(["npm", "run", "setup-renderer"])
         if "doctor" in scripts:
             run(["npm", "run", "doctor"])
     if style or (project / "scripts/paper_sound.py").is_file():
-        python = lightbox_python() if style in {"paper-lantern", "popup-storybook", "line-cutaway", "sketchnote"} else sys.executable
+        python = lightbox_python() if style in {"paper-lantern", "popup-storybook", "line-cutaway", "sketchnote", "risograph"} else sys.executable
         run([python, "-m", "venv", ".venv"])
         run([str(project / ".venv/bin/python"), "-m", "pip", "install", "-r", "requirements.txt"])
     elif not (project / "package-lock.json").is_file():

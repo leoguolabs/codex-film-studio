@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**31 styles** · 31 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**32 styles** · 32 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -359,6 +359,17 @@ Ask your Agent to open local showcases and check their retained project files.
 <sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en#screening">Cut from the Dark · two woodcut films</a> · <a href="../styles/woodcut/STYLE.md">Style guide</a> · <a href="../styles/woodcut/prompt.txt">Prompt</a> · <a href="../styles/woodcut/starter">Project files</a></sub>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/risograph.jpg" alt="Risograph Print — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>32 / <code>risograph</code></sub>
+<h3>Risograph Print</h3>
+<sub>孔版套色印刷</sub>
+<p>A carousel rider reaches for a brass ring. A sparrow wakes a hotel cat. Scroll through three ink impressions and watch both shorts.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en#screening">Midway Press · a risograph double bill</a> · <a href="../styles/risograph/STYLE.md">Style guide</a> · <a href="../styles/risograph/prompt.txt">Prompt</a> · <a href="../styles/risograph/starter">Project files</a></sub>
+</td>
+</tr>
 </table>
 
 ## Capabilities / 能力与网页
@@ -396,6 +407,7 @@ Ask your Agent to open local showcases and check their retained project files.
 | [线稿剖面 / Line Cutaway](line-cutaway/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en) | `local-source-bundle` | `not-yet-revalidated` |
 | [视觉笔记 / Sketchnote](sketchnote/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en) · [Two films on dot paper](https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en#screening) | `not-audited` | `not-yet-revalidated` |
 | [木刻版画 / Woodcut on Laid Paper](woodcut/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en) · [Cut from the Dark · two woodcut films](https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en#screening) | `unavailable` | `not-yet-revalidated` |
+| [孔版套色印刷 / Risograph Print](risograph/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en) · [Midway Press · a risograph double bill](https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 
 ## What is complete / 已完成什么
 
@@ -430,6 +442,7 @@ Ask your Agent to open local showcases and check their retained project files.
 - **line-cutaway** — 可编辑的毫米尺度模型，两部英文短片配有原创室内乐。 Editable millimetre solids and two released English shorts with original chamber scores.
 - **sketchnote** — 含可执行绘制工具、手写字、镜头、英文配音时间轴与分轨。 Executable blank kit with handwriting, camera, English narration timing and sound stems.
 - **woodcut** — 可编辑的木刻刀痕、浮雕特写、揭纸、室内乐和英文配音。 Relief knife engine, sculpted macro, sheet curl, chamber score and English voice.
+- **risograph** — 可编辑的三色套印着色器、镜头时钟、英文配音与分层配乐。 Three-plate WebGL compositor, film clock, English speech and layered score.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

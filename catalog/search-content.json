@@ -282,5 +282,45 @@
       "method": "反刻剪影，在上墨的木版上覆纸擦印，让一种专色沿刻槽扩散。",
       "check": "检查刻痕是否顺着手的体积转向，揭纸时反刻文字应当成为正字。"
     }
+  },
+  "risograph": {
+    "en": {
+      "use": "Stage a small physical joke around one object and let each new ink colour change what the audience can see.",
+      "method": "Draw separate blue, yellow and fluorescent pink densities. Time a new impression to a gesture or a sound, then pull back to reveal the sheet.",
+      "check": "Watch the hand, the object and the sound cue together. The grain and misregistration should leave the catch or impact easy to read.",
+      "best_for": [
+        "A short physical comedy",
+        "A story built around a repeated gesture or sound"
+      ],
+      "faq": [
+        {
+          "q": "Where do green and purple come from?",
+          "a": "Transparent yellow over blue makes green. Blue and fluorescent pink overlap to make purple."
+        },
+        {
+          "q": "What does scrolling control?",
+          "a": "The finished print lifts away. As you keep scrolling, yellow and pink pass across the blue impression. Scroll back to separate the colours again."
+        }
+      ]
+    },
+    "zh": {
+      "use": "围绕一件小物件安排一段动作喜剧，让每一次上墨都给观众看见一点新东西。",
+      "method": "分别绘制蓝、黄、荧光粉三块色版。让新颜色踩着人物的动作或一声脆响进入，最后拉远，让观众看见整张纸。",
+      "check": "把手、道具和声音放在一起检查。即使网点跳动、色版略偏，观众也应看清抓住铜环或按铃的瞬间。",
+      "best_for": [
+        "有一个清楚动作的短喜剧",
+        "围绕重复动作或声响展开的故事"
+      ],
+      "faq": [
+        {
+          "q": "绿色和紫色从哪里来？",
+          "a": "黄墨透过蓝墨形成绿色。蓝色和荧光粉叠在一起，就有了紫色。"
+        },
+        {
+          "q": "滚轮控制什么？",
+          "a": "先揭开上面的成品印张，再滚动，让黄墨和粉墨先后印过蓝色底图。向回滚动可以分开色层。"
+        }
+      ]
+    }
   }
 }

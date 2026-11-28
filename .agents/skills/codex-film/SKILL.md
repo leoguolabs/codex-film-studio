@@ -124,3 +124,5 @@ For Line Cutaway (线稿剖面 or hardcore-info), use the millimetre-scale solid
 For Sketchnote, compose the complete dot-paper poster before drawing the opening clue. [Catch the light](https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en) follows the film artwork through the aperture and back to the sheet.
 
 For Woodcut on Laid Paper, carve the silhouettes, sculpt the working close-up and print through the ink compositor. [Cut from the Dark](https://leoguolabs.github.io/codex-film-studio/styles/woodcut/showcase/index.html?lang=en) lets viewers pull three impressions and hear both films’ separate scores and Foley.
+
+For Risograph Print, draw separate blue, yellow and fluorescent pink plates. [Midway Press](https://leoguolabs.github.io/codex-film-studio/styles/risograph/showcase/index.html?lang=en) shows the ink passes from one separated drawing and screens both films with their scores and effects.

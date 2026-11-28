@@ -1904,6 +1904,73 @@
           "styles/woodcut/starter/fonts/OFL-IMFell.txt"
         ]
       }
+    },
+    {
+      "id": "risograph",
+      "name": "Risograph Print",
+      "name_zh": "孔版套色印刷",
+      "description": "A carousel rider reaches for a brass ring. A sparrow wakes a hotel cat. Scroll through three ink impressions and watch both shorts.",
+      "description_zh": "女孩伸手去够木马旁的铜环，麻雀按铃叫醒夜班猫。滚动叠印三色海报，再看两部英文短片。",
+      "status": "renderer-ready",
+      "status_note": "Three-plate WebGL compositor, film clock, English speech and layered score.",
+      "status_note_zh": "可编辑的三色套印着色器、镜头时钟、英文配音与分层配乐。",
+      "guide": "styles/risograph/STYLE.md",
+      "readme": "styles/risograph/README.md",
+      "prompt": "styles/risograph/prompt.txt",
+      "template": "styles/risograph/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "bundled_fonts": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "midway-press",
+          "title": "Midway Press · a risograph double bill",
+          "title_zh": "游艺印社 · 孔版双片连映",
+          "page": "styles/risograph/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/risograph/showcase/media/films.json"
+        }
+      ],
+      "render_script": "scripts/render.mjs",
+      "renderer_entry": "engine/studio.js",
+      "preview": "docs/readme/frames/risograph.jpg",
+      "preview_zh": "docs/readme/frames/risograph.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "midway-press",
+      "public_assets": "styles/risograph/demo-assets.json",
+      "landing": {
+        "page": "styles/risograph/showcase/index.html",
+        "assets": [
+          "styles/risograph/showcase/press.css",
+          "styles/risograph/showcase/press.mjs",
+          "styles/risograph/showcase/proof-0.webp",
+          "styles/risograph/showcase/proof-1.webp",
+          "styles/risograph/showcase/proof-2.webp",
+          "styles/risograph/showcase/turn.webp",
+          "styles/risograph/showcase/bell.webp",
+          "styles/risograph/showcase/turn.vtt",
+          "styles/risograph/showcase/bell.vtt",
+          "styles/risograph/showcase/grain.png",
+          "styles/risograph/showcase/press.woff2",
+          "styles/risograph/showcase/separations.webp",
+          "styles/risograph/starter/engine/riso.js",
+          "styles/risograph/starter/engine/LICENSE-MIT.txt",
+          "styles/risograph/starter/fonts/Bricolage-OFL.txt"
+        ]
+      }
     }
   ],
   "capability_schema_version": 2
