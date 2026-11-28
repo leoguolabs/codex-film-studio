@@ -89,8 +89,8 @@ def write_gallery_preview(source, destination):
     from PIL import Image
 
     with Image.open(source) as image:
-        image.thumbnail((720, 720), Image.Resampling.LANCZOS)
-        image.save(destination, 'JPEG', quality=77, optimize=True, progressive=True)
+        image.thumbnail((960, 960), Image.Resampling.LANCZOS)
+        image.save(destination, 'JPEG', quality=83, optimize=True, progressive=True)
     if destination.stat().st_size >= source.stat().st_size:
         shutil.copyfile(source, destination)
 

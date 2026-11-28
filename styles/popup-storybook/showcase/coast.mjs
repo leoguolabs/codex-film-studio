@@ -70,7 +70,7 @@ mountBook($('paper')).then(draw=>{
 }).catch(()=>{ /* The illustrated cover remains available if a browser cannot decode the cutouts. */ });
 stops.forEach((button,i)=>button.addEventListener('click',()=>{
   const start=window.scrollY+journey.getBoundingClientRect().top;
-  window.scrollTo({top:start+i*(journey.offsetHeight-pin.offsetHeight)/2,behavior:reduce.matches?'instant':'smooth'});
+  window.scrollTo({top:start+i*(journey.offsetHeight-pin.offsetHeight)/2,behavior:'instant'});
 }));
 
 const player=$('film'), audio=$('audio');

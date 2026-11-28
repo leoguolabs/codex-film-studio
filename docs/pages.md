@@ -484,3 +484,7 @@ Vermilion Paper Cut has a bilingual [Paper Holds Light](../styles/papercut-red/s
 ## Paper Lightbox
 
 [Night Windows](https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en) follows four reversible scroll studies from the two finished films. Release assets stream both 1080p films, silent previews, frame strips and three listening tracks per film. The small Pages archive supplies first-paint stills, English captions, chapters, narration and cue notes. The All Styles catalog and both root READMEs open the lightbox.
+
+## Pop-Up Storybook
+
+Scroll through Lighthouse Point, the button crossing and the delivery in an illustrated book. The three page stops also work by keyboard. Reduced motion selects a still composition at each stop. Both English films have captions, a transcript, chapter seeks and separate music and paper Foley. The Pages archive contains the painted cutouts and chapter materials. The pinned GitHub Release streams the 720p web films and supplies the original 1080p downloads. [The Paper Coast](https://leoguolabs.github.io/codex-film-studio/styles/popup-storybook/showcase/index.html?lang=en) · [纸上海岸](https://leoguolabs.github.io/codex-film-studio/styles/popup-storybook/showcase/index.html?lang=zh)
