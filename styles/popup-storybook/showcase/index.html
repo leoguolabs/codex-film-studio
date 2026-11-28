@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102f35">
+  <title>The Paper Coast · Pop-Up Storybook · Codex Film Studio</title>
+  <meta name="description" content="Turn the pages of a miniature paper coast, then watch The Last Blue Letter and The Button Ferry with their original English soundtracks.">
+  <link rel="icon" href="../../../catalog/mark.svg">
+  <link rel="stylesheet" href="coast.css">
+  <script type="module" src="coast.mjs"></script>
+  <script type="module" src="../../../catalog/agent-start.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#screening" data-zh="跳到影片">Skip to the films</a>
+<main>
+<section id="book" class="journey" aria-labelledby="title">
+ <div class="pin">
+  <header class="mast">
+   <a class="library" href="../../../?lang=en#library"><img src="../../../catalog/brand/studio-logo.svg" alt="" width="31" height="31"><span>Codex Film Studio</span><i>/</i><span data-zh="全部风格">All styles</span></a>
+   <nav aria-label="Navigation"><a href="#screening" data-zh="放映">Screening</a><a class="sound-nav" href="#sound" data-zh="原声">Sound</a><span class="lang"><a href="?lang=en" hreflang="en" lang="en">EN</a><i>/</i><a href="?lang=zh" hreflang="zh" lang="zh-CN">中文</a></span></nav>
+  </header>
+  <div class="opening">
+   <div class="title-block">
+    <p class="rubric"><i></i><span data-zh="纸艺立体书">Pop-Up Storybook</span></p>
+    <h1 id="title"><span data-zh="纸上">The Paper</span><em data-zh="海岸">Coast</em></h1>
+    <p class="lede" data-zh="一封蓝信要过海，一粒纽扣要渡船。沿着书脊，翻过两段小小的航程。">A blue letter crosses the sea. A red button crosses a puddle. Two small voyages, bound in one book.</p>
+    <a class="watch" href="#screening"><span class="play-icon" aria-hidden="true"></span><span data-zh="看两部短片">Watch the films</span></a>
+   </div>
+   <figure class="atlas">
+    <img id="book-still" src="media/book-cover.webp" width="1200" height="850" alt="" fetchpriority="high">
+    <canvas id="paper" width="1200" height="850" role="img" aria-label="An open illustrated book with hinged paper scenery" data-zh-aria="摊开的海岸立体书，纸景沿折痕升起"></canvas>
+    <figcaption class="plate"><span class="plate-no" id="plate-no">I</span><span id="plate-name" data-zh="灯塔岬">Lighthouse Point</span></figcaption>
+   </figure>
+  </div>
+  <div class="turnbar"><span class="scroll-cue"><i aria-hidden="true">↓</i><span data-zh="滚动翻页">Scroll to turn the page</span></span><div class="ribbon"><span></span></div><div class="stops" role="group" aria-label="Choose a page" data-zh-aria="选择书页"><button data-stop="0" aria-pressed="true" aria-label="Lighthouse Point" data-zh-aria="灯塔岬">I</button><button data-stop="1" aria-pressed="false" aria-label="The button crossing" data-zh-aria="纽扣渡口">II</button><button data-stop="2" aria-pressed="false" aria-label="The letter arrives" data-zh-aria="蓝信抵达">III</button></div></div>
+ </div>
+</section>
+<section class="screening" id="screening" aria-labelledby="films-title">
+ <div class="wrap">
+  <div class="section-line"><span class="rubric ink"><i></i><span data-zh="书中放映">The screening room</span></span><span data-zh="英语原声 · 英文字幕">English audio · English captions</span></div>
+  <div class="screen-layout">
+   <div class="film-info"><h2 id="films-title" data-zh="两段航程">Two voyages</h2>
+    <div class="program" role="group" aria-label="Select a film" data-zh-aria="选片">
+     <button type="button" data-film="letter" aria-pressed="true"><span class="roman">I</span><span><b data-zh="最后一封蓝信">The Last Blue Letter</b><small>00:43.7</small></span></button>
+     <button type="button" data-film="button" aria-pressed="false"><span class="roman">II</span><span><b data-zh="纽扣渡船">The Button Ferry</b><small>00:50</small></span></button>
+    </div>
+    <p id="synopsis" data-zh="Nell 在九岁生日那天搭火车、换渡船，把最后一封信送到父亲守着的灯塔。">On her ninth birthday, Nell takes a train and a ferry to deliver one last letter to her father at the lighthouse.</p>
+    <a id="master" class="plain-link" href="https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/the-last-blue-letter.mp4" data-zh="下载 1080p 成片 ↓">Download the 1080p film ↓</a>
+   </div>
+   <div class="projection"><video id="film" playsinline controls preload="none" poster="media/letter-poster.webp" aria-label="The Last Blue Letter"><source src="media/letter.mp4" type="video/mp4"><track kind="captions" src="media/letter.vtt" srclang="en" label="English"></video>
+    <div class="chapters" id="chapters" role="group" aria-label="Film chapters" data-zh-aria="影片章节"></div>
+    <details><summary data-zh="英文旁白全文">English transcript</summary><p id="transcript" lang="en"></p></details>
+   </div>
+  </div>
+ </div>
+</section>
+<section id="sound" class="sound"><div class="wrap sound-layout">
+ <figure class="keepsakes" aria-hidden="true"><img class="envelope" src="media/envelope.webp" alt="" loading="lazy"><img class="spool" src="media/spool.webp" alt="" loading="lazy"><img class="red-button" src="media/button.webp" alt="" loading="lazy"></figure>
+ <div class="listening"><p class="rubric ink"><i></i><span data-zh="来自原片的录音">From the soundtracks</span></p><h2 data-zh="听，纸在动">Listen to the paper</h2>
+ <p data-zh="竖琴和钟声陪着信上路。单独听纸张拟音，可以听到布景立起时轻轻的一刷。">Harp and bells carry the letter along the coast. Isolate the paper track to hear the little brush of a set rising.</p>
+ <label class="select-line"><span data-zh="影片">Film</span><select id="sound-film"><option value="letter" data-zh="最后一封蓝信">The Last Blue Letter</option><option value="button" data-zh="纽扣渡船">The Button Ferry</option></select></label>
+ <div class="tracks" role="group" aria-label="Audio stems" data-zh-aria="原声分轨"><button type="button" data-stem="score" aria-pressed="true" data-zh="配乐">Film score</button><button type="button" data-stem="paper" aria-pressed="false" data-zh="纸张拟音">Paper Foley</button></div>
+ <audio id="audio" controls preload="none" src="media/letter-score.m4a" aria-label="Film score"></audio>
+ </div>
+</div></section>
+</main>
+<footer><div class="wrap"><div class="foot-title"><span>The Paper Coast</span><a class="library" href="../../../?lang=en#library" data-zh="返回全部风格 ↗">Back to all styles ↗</a></div>
+ <details><summary data-zh="纸景制作与署名">Paper construction &amp; credits</summary><p data-zh="两部短片各自绘制了人物、水彩布景与地面。每张纸片沿底边折起，留下的投影交代了它离纸面有多远。网页里的灯塔、蓝信和纽扣沿用原画。">Both shorts have their own painted cast, scenery and printed ground. Each cutout opens along its bottom edge and casts a shadow onto the page. The lighthouse, letter and button in this book come from the film artwork.</p><p data-zh="英语旁白采用 Kokoro 的 Emma 声线。原创配乐使用 Versilian Studios 的 VCSL 乐器采样（CC0）。">English narration uses Kokoro’s Emma voice. The original scores use CC0 instrument recordings from Versilian Studios’ VCSL.</p><p><a href="https://github.com/xikhar/papercraft">Papercraft ↗</a>　<a href="https://github.com/sgossner/VCSL">VCSL ↗</a>　<a href="https://github.com/leoguolabs/codex-film-studio/tree/main/styles/popup-storybook" data-zh="制作指南 ↗">Style guide ↗</a></p></details>
+ <details><summary data-zh="制作自己的纸艺电影">Make your own pop-up film</summary><film-agent-start style-id="popup-storybook"></film-agent-start></details></div></footer>
+</body></html>

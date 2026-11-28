@@ -1,0 +1,1 @@
+The matte printed card, base hinge and macro-lens principles follow Shikhar's MIT-licensed [Papercraft](https://github.com/xikhar/papercraft). The renderer in this package is an independent OpenGL implementation. The acoustic sample credits and licences are in engine/samples. The title font has its OFL in fonts.

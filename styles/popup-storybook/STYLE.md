@@ -1,0 +1,15 @@
+# Pop-Up Storybook
+
+Build a journey across small round stages standing on one continuous sheet. Give each location a different printed floor. Paths, pools, rugs, flags, tracks and masonry belong to the page and stay visible after every upright has folded. Fray the rim and show the warm brown layer underneath. Leave open space beyond the rim, with a few illustrated stars or clouds planted on tiny sticks.
+
+Paint the face of each upright in fine sepia pen, watercolor, hatching and worn pigment. Cut out the actual silhouette, including openings. A printed bench needs its slats and legs, a tree its internal branch structure, and a face its own expression. Use rich local accents in each place, low matte light and warm narrow card edges. Set a main back wall or outdoor landmark, side wings, a middle-distance performer and loose foreground props. Give each one a patch of floor. Print remote details in smaller scale. Cross several footprints with the camera before the next reveal.
+
+Start on standing serif title lettering, dark ink outlined with a hair of cream. Glide across the sheet into the first disk. Stagger rigid rises from the foot crease, settle with a brief rebound and let the cast perform something legible. Move from a view of the whole disk into a tighter three-quarter overhead view, then pull back and travel on. A near lip or tree can be soft while the performer stays sharp. A recurring figure must retain its silhouette and scale. Make an object change hands or state for a visible reason. Let the last action land before the night-paper coda. Lettering may stand in the paper world. Write original English lines for the time available, with silence during some reveals.
+
+Listen for one musical idea travelling through the different spaces. Give each hinge a restrained paper brush. Spread sparse bell or string notes across the final star field. Keep score and voice stems. Inspect the size of the closest cast, contact shadows, tinted far paper, actual fold direction, the full crossing between dioramas and the final reading hold.
+
+In a brisk travel sequence, give the empty printed disk time to arrive before the first hinge lifts. Build from the back row toward the viewer, briefly hold the performer, then lay the foreground down first as the camera heads for the next disk. Check the change in projected disk size through the push and pull. A slower rescue or handoff can use a moving close view to follow the actual object. Print colored fibers across a seamless backing sheet, with a deeper violet field and a small amber pool where each final star meets the paper.
+
+For a boat or railing, separate the upright back from the near hull or rail. Place each actor behind the near lip and in front of the sail or back wall. Keep feet, grips and moving shadows registered. For a cord, project its two attachment points through the same hinge transforms as the actors, including during a fold. Check an actual encoded crossing and departure.
+
+For a night ending, bring small stars up in separate beats, let one larger star catch the last musical accent, and hold its glow before the page darkens.

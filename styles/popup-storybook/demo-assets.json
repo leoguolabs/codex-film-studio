@@ -1,0 +1,63 @@
+{
+  "release": "paper-coast-storybook-v1",
+  "archive": {
+    "name": "paper-coast-media-v1.tar.gz",
+    "bytes": 29918841,
+    "sha256": "6244d90df1952e3f370ff0346f69591cf175c981183a64d53943c2a8b906e0a5",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/paper-coast-media-v1.tar.gz"
+  },
+  "files": [
+    "media/beetle.webp",
+    "media/book-cover.webp",
+    "media/buoy.webp",
+    "media/button-paper.m4a",
+    "media/button-poster.webp",
+    "media/button-score.m4a",
+    "media/button-transcript.txt",
+    "media/button.mp4",
+    "media/button.vtt",
+    "media/button.webp",
+    "media/cutter.webp",
+    "media/envelope.webp",
+    "media/fence.webp",
+    "media/films.json",
+    "media/ground-4.webp",
+    "media/gull.webp",
+    "media/gutter-floor.webp",
+    "media/home.webp",
+    "media/keeper.webp",
+    "media/letter-paper.m4a",
+    "media/letter-poster.webp",
+    "media/letter-score.m4a",
+    "media/letter-transcript.txt",
+    "media/letter.mp4",
+    "media/letter.vtt",
+    "media/lighthouse.webp",
+    "media/mushrooms.webp",
+    "media/nell.webp",
+    "media/offering.webp",
+    "media/pier.webp",
+    "media/pine.webp",
+    "media/pinks.webp",
+    "media/pip-pull.webp",
+    "media/reed.webp",
+    "media/rock.webp",
+    "media/spool.webp",
+    "media/tree.webp",
+    "media/village.webp"
+  ],
+  "streams": [
+    {
+      "name": "the-last-blue-letter.mp4",
+      "bytes": 62517508,
+      "sha256": "8aecc88f70914032c84683128c479467621ed0f152eefd0d015cdda0431c9113",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/the-last-blue-letter.mp4"
+    },
+    {
+      "name": "the-button-ferry.mp4",
+      "bytes": 96737220,
+      "sha256": "675d9d9f94ff403e6c4201dcdb5254527e7f7c80d5f75424f42e09e796f1ae1c",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/paper-coast-storybook-v1/the-button-ferry.mp4"
+    }
+  ]
+}

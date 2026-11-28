@@ -488,6 +488,23 @@
       "image": "docs/readme/frames/paper-lantern.jpg",
       "image_sha256": "4e12ccbcd87b91d00d3b6f64e88eecfd56b3990cfcc67627106ecfae2bc96dc5",
       "treatment": "Complete harbour frame, resized to 960 × 540."
+    },
+    {
+      "style": "popup-storybook",
+      "source_video": "The Last Blue Letter / final master",
+      "source_sha256": "8aecc88f70914032c84683128c479467621ed0f152eefd0d015cdda0431c9113",
+      "title": "The Last Blue Letter",
+      "title_zh": "最后一封蓝信",
+      "seconds": 34.733333333333334,
+      "frame": 1042,
+      "fps": "30",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/popup-storybook.jpg",
+      "image_sha256": "6e54cd1a0489daca8006e5aea8ae94c5b22775beb1229a025ca6a549e3713b65",
+      "treatment": "Full encoded frame at Lighthouse Point, resized to 960 × 540."
     }
   ]
 }

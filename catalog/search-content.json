@@ -234,5 +234,26 @@
       "method": "前后纸景分层，钟锤和鸟嘴各有支点。暖灯从纸层的小窗透出。",
       "check": "反向滚动观察近景渔网和浮标钟锤，再对照机械鸟的鸣声与 Gemini 配乐。"
     }
+  },
+  "popup-storybook": {
+    "en": {
+      "use": "Follow a character or object through a small world printed on one sheet of paper.",
+      "method": "Print the ground of each round stage separately. Hinge painted cutouts at their feet, give them contact shadows and move the camera across the page into the next scene.",
+      "check": "Scrub a rise, a handoff and a fold. The feet should stay on their creases, and the carried object should remain visible between the front and back scenery.",
+      "best_for": [
+        "A journey with a recurring character",
+        "A short story with a visible delivery, rescue or return"
+      ]
+    },
+    "zh": {
+      "use": "让观众跟随一个角色或物件，穿过纸面上的几个小世界。",
+      "method": "为每座圆形舞台画出地面。让彩绘纸片沿脚下的折痕立起，给它们投下阴影，再让镜头沿着纸面滑向下一幕。",
+      "check": "逐帧查看纸片立起、物件交接和舞台收拢。脚应贴着折痕，交接的物件应能从前后景之间看清。",
+      "best_for": [
+        "同一角色沿途停留的旅程",
+        "有递送、救援或返家动作的短故事"
+      ]
+    }
   }
+
 }

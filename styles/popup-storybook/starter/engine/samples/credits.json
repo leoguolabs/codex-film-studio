@@ -1,0 +1,47 @@
+[
+  {
+    "name": "mallet",
+    "note": 81,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Vibraphone/Soft%20Mallets/Vibes_soft_A4_v1_rr1_Main.wav",
+    "source_sha256": "48e942290a982768d7a0038e28a76a99cb666673518b29ebdc55de5e1491025f",
+    "license": "CC0 1.0",
+    "credit": "Versilian Studios / sgossner/VCSL",
+    "preparation": "Mono excerpt of up to 3.2 seconds; pitch reference in MIDI notes, A4 = 69."
+  },
+  {
+    "name": "bow",
+    "note": 67,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Vibraphone/Bowed/Vibes_bowed_G3_rr1_Main.wav",
+    "source_sha256": "4b566300ee58c75de89e97278607f710ba0a807622582118d9f2e451d8bf573c",
+    "license": "CC0 1.0",
+    "credit": "Versilian Studios / sgossner/VCSL",
+    "preparation": "Mono excerpt of up to 3.2 seconds; pitch reference in MIDI notes, A4 = 69."
+  },
+  {
+    "name": "bell",
+    "note": 84,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Glockenspiel/glock_soft_C5_02.wav",
+    "source_sha256": "4fa149e6f224557df5fab98ad660a8f192bc6fbf2556077dd1089509bf4424e2",
+    "license": "CC0 1.0",
+    "credit": "Versilian Studios / sgossner/VCSL",
+    "preparation": "Mono excerpt of up to 3.2 seconds; pitch reference in MIDI notes, A4 = 69."
+  },
+  {
+    "name": "harp",
+    "note": 62,
+    "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Composite%20Chordophones/Concert%20Harp/KSHarp_D4_f1.wav",
+    "source_sha256": "e81cba502669ecb390b02b803302f8492c29a1714893a16a342551b00bab6456",
+    "license": "CC0 1.0",
+    "credit": "Versilian Studios / sgossner/VCSL",
+    "preparation": "Mono excerpt of up to 3.2 seconds; pitch reference in MIDI notes, A4 = 69."
+  },
+  {
+    "name": "bass",
+    "note": 40,
+    "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Contrabass/Pizz/BKCtbss_Pizz_E1_v1_rr1.wav",
+    "source_sha256": "818fd3e7cc5200774333fc5dbb37e021ed0f155918cafe129acc0e90d37f9d49",
+    "license": "CC0 1.0",
+    "credit": "Versilian Studios / sgossner/VSCO-2-CE",
+    "preparation": "Mono excerpt of up to 3.2 seconds; pitch reference in MIDI notes, A4 = 69."
+  }
+]

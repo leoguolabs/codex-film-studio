@@ -1669,6 +1669,63 @@
         ]
       },
       "public_assets": "styles/paper-lantern/demo-assets.json"
+    },
+    {
+      "id": "popup-storybook",
+      "name": "Pop-Up Storybook",
+      "name_zh": "纸艺立体书",
+      "description": "Turn a hinged watercolor coast by scrolling, then watch a birthday letter and a button ferry make their crossings.",
+      "description_zh": "滚动翻开水彩纸景，看一封蓝信抵达灯塔，一艘纽扣船渡过积水。",
+      "status": "renderer-ready",
+      "status_note": "An editable hinged-card renderer with two finished English films, captions, scores and paper Foley.",
+      "status_note_zh": "可编辑的折纸布景与镜头，两支英文成片附字幕、配乐和纸张拟音。",
+      "guide": "styles/popup-storybook/STYLE.md",
+      "readme": "styles/popup-storybook/README.md",
+      "prompt": "styles/popup-storybook/prompt.txt",
+      "template": "styles/popup-storybook/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": false,
+        "locked_dependencies": false,
+        "bundled_fonts": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "paper-coast-double-bill",
+          "title": "The Paper Coast · Two pop-up voyages",
+          "title_zh": "纸上海岸 · 两段航程",
+          "page": "styles/popup-storybook/showcase/index.html",
+          "access": "release",
+          "media_manifest": "styles/popup-storybook/showcase/media/films.json"
+        }
+      ],
+      "render_script": "render.py",
+      "renderer_entry": "engine/book.py",
+      "preview": "docs/readme/frames/popup-storybook.jpg",
+      "preview_zh": "docs/readme/frames/popup-storybook.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "paper-coast-double-bill",
+      "landing": {
+        "page": "styles/popup-storybook/showcase/index.html",
+        "assets": [
+          "styles/popup-storybook/showcase/coast.css",
+          "styles/popup-storybook/showcase/coast.mjs",
+          "styles/popup-storybook/showcase/book.mjs",
+          "styles/popup-storybook/showcase/coast-serif.woff2",
+          "styles/popup-storybook/showcase/grain.webp",
+          "styles/popup-storybook/starter/fonts/OFL-Cormorant.txt"
+        ]
+      },
+      "public_assets": "styles/popup-storybook/demo-assets.json"
     }
   ],
   "capability_schema_version": 2
