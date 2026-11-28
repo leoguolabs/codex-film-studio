@@ -1669,6 +1669,65 @@
         ]
       },
       "public_assets": "styles/paper-lantern/demo-assets.json"
+    },
+    {
+      "id": "line-cutaway",
+      "name": "Line Cutaway",
+      "name_zh": "线稿剖面",
+      "description": "Open a microphone with the scroll wheel, then watch two graphite-and-copper films about moving parts.",
+      "description_zh": "随滚轮打开动圈麦克风，再看两部用石墨线条与铜色剖面讲述机械运动的短片。",
+      "status": "renderer-ready",
+      "status_note": "Editable millimetre solids and two released English shorts with original chamber scores.",
+      "status_note_zh": "可编辑的毫米尺度模型，两部英文短片配有原创室内乐。",
+      "guide": "styles/line-cutaway/STYLE.md",
+      "readme": "styles/line-cutaway/README.md",
+      "prompt": "styles/line-cutaway/prompt.txt",
+      "template": "styles/line-cutaway/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": false,
+        "bundled_fonts": true,
+        "audio_mix": true,
+        "original_source": "local-source-bundle",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes"
+      },
+      "showcases": [
+        {
+          "id": "anatomy-of-a-voice",
+          "title": "Anatomy of a Voice · two Line Cutaway films",
+          "title_zh": "声音的剖面 · 线稿剖面双片",
+          "page": "styles/line-cutaway/showcase/index.html",
+          "access": "release",
+          "media_manifest": "styles/line-cutaway/showcase/media/films.json"
+        }
+      ],
+      "render_script": "scripts/render.py",
+      "renderer_entry": "engine/plate.py",
+      "public_assets": "styles/line-cutaway/demo-assets.json",
+      "preview": "docs/readme/frames/line-cutaway.jpg",
+      "preview_zh": "docs/readme/frames/line-cutaway.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "anatomy-of-a-voice",
+      "landing": {
+        "page": "styles/line-cutaway/showcase/index.html",
+        "assets": [
+          "styles/line-cutaway/showcase/showcase.css",
+          "styles/line-cutaway/showcase/showcase.mjs",
+          "styles/line-cutaway/showcase/frontispiece.webp",
+          "styles/line-cutaway/showcase/anchors.json",
+          "styles/line-cutaway/starter/fonts/PlexMono.ttf",
+          "styles/line-cutaway/starter/fonts/PlexSans.ttf",
+          "styles/line-cutaway/starter/fonts/OFL-mono.txt",
+          "styles/line-cutaway/starter/fonts/OFL-sans.txt"
+        ]
+      }
     }
   ],
   "capability_schema_version": 2

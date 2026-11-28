@@ -21,6 +21,7 @@ const categories = {
   'microgame':['animation','material'],
   'line-chart-comedy':['animation'], 'art-deco':['animation','material'],
   'lidar-survey':['geography'], 'newsreel':['material'],
+  'line-cutaway':['drawn','animation'],
   'exploded-teardown':['animation','material'],
   'halftone-dossier':['animation','material'],
   'prismatic-atlas':['animation'],

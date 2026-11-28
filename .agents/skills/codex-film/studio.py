@@ -57,7 +57,9 @@ def doctor(style):
         problems.append("Install Python 3.11+ with venv and run this launcher with it.")
     media = [("ffmpeg", "install FFmpeg with libx264 and AAC"),
              ("ffprobe", "install the FFmpeg tools including ffprobe")]
-    if style == "workbench-clay":
+    if style == "line-cutaway":
+        build_tools = []
+    elif style == "workbench-clay":
         if sys.platform != "darwin":
             problems.append("The miniature renderer requires a macOS Metal device.")
         build_tools = [("swiftc", "install the Xcode command-line tools")]
@@ -70,7 +72,7 @@ def doctor(style):
             problems.append(f"{name} missing: {hint}.")
             continue
         command = [exe]
-        if style in {"ink-wash", "papercut-red", "paper-lantern"} and name == "ffmpeg":
+        if style in {"ink-wash", "papercut-red", "paper-lantern", "line-cutaway"} and name == "ffmpeg":
             gate = ROOT / "styles" / style / "starter/scripts/ffmpeg_serial.py"
             command = [sys.executable, str(gate), "--"]
         proc = subprocess.run([*command, "-version" if name.startswith("ff") else "--version"],
@@ -106,6 +108,8 @@ def prepare(project):
              "workbench-clay" if native_clay else "whiteboard" if whiteboard else None)
     if (project / "engine/box.js").is_file() and (project / "engine/post.js").is_file():
         style = "paper-lantern"
+    if (project / "engine/plate.py").is_file() and (project / "engine/lettering.py").is_file():
+        style = "line-cutaway"
     doctor(style)
 
     def run(cmd):
@@ -119,7 +123,7 @@ def prepare(project):
         if "doctor" in scripts:
             run(["npm", "run", "doctor"])
     if style or (project / "scripts/paper_sound.py").is_file():
-        python = lightbox_python() if style == "paper-lantern" else sys.executable
+        python = lightbox_python() if style in {"paper-lantern", "line-cutaway"} else sys.executable
         run([python, "-m", "venv", ".venv"])
         run([str(project / ".venv/bin/python"), "-m", "pip", "install", "-r", "requirements.txt"])
     elif not (project / "package-lock.json").is_file():

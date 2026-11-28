@@ -234,5 +234,17 @@
       "method": "前后纸景分层，钟锤和鸟嘴各有支点。暖灯从纸层的小窗透出。",
       "check": "反向滚动观察近景渔网和浮标钟锤，再对照机械鸟的鸣声与 Gemini 配乐。"
     }
+  },
+  "line-cutaway": {
+    "en": {
+      "use": "Follow a small movement through a familiar object, from the grille of a microphone to the wire that moves in its magnetic field.",
+      "method": "Orbit a millimetre-scale assembly, lift its parts in order and travel into the active clearance. Reserve copper for the moving path.",
+      "check": "Keep callouts attached through the orbit and show the two contact surfaces in the final section."
+    },
+    "zh": {
+      "use": "从熟悉的物件追入细小的运动，比如从麦克风网罩进入磁场中振动的铜线。",
+      "method": "环绕毫米尺度的模型，依次抬起零件，推入运动间隙。用铜色标出正在工作的路径。",
+      "check": "标注须跟紧旋转的零件，最后的剖面应让人看清相对运动的两个表面。"
+    }
   }
 }

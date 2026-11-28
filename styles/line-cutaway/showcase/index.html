@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f1eee5">
+<title>Anatomy of a Voice · Line Cutaway</title>
+<meta name="description" content="Turn a moving-coil microphone inside out with your scroll wheel. Two short films in graphite and copper, with their original chamber scores.">
+<link rel="icon" href="../../../catalog/mark.svg">
+<link rel="preload" as="image" href="frontispiece.webp">
+<link rel="stylesheet" href="showcase.css">
+<script type="module" src="../../../catalog/agent-start.mjs"></script><script type="module" src="showcase.mjs"></script>
+</head>
+<body><a class="skip" href="#screening" data-zh="跳到放映区">Skip to the films</a>
+<main>
+<section class="journey" id="opening" aria-labelledby="headline">
+  <div class="folio">
+    <header class="mast"><a class="library" href="../../../?lang=en#library" data-zh="← 全部风格">← All styles</a><span class="wordmark">Codex Film Studio</span><a class="lang" href="?lang=zh" lang="zh-CN">中文</a></header>
+    <div class="spread">
+      <div class="opening-copy">
+        <p class="medium"><i></i><span data-zh="线稿剖面">Line Cutaway</span></p>
+        <h1 id="headline"><span data-zh="声音的">Anatomy</span><em data-zh="剖面。">of a voice.</em></h1>
+        <p class="deck" data-zh="一句话离开嘴唇，怎样在一圈铜丝里变成电压？">How does a word on your lips become a voltage in a winding of copper?</p>
+        <a class="screen-link" href="#screening"><span class="play-glyph" aria-hidden="true">▶</span><span data-zh="看两部短片">Watch the two films</span></a>
+      </div>
+      <figure class="specimen" role="img" aria-label="A moving-coil microphone opening in section" data-zh-aria="逐层展开的动圈麦克风剖面">
+        <div class="dial" aria-hidden="true"><div></div></div>
+        <div class="drawing"><img src="frontispiece.webp" alt="" width="1080" height="1080" fetchpriority="high"><canvas id="plate" width="736" height="736"></canvas><canvas id="leader" width="736" height="736"></canvas></div>
+        <div class="section-mark" aria-hidden="true">A<span>—</span>A</div>
+      </figure>
+    </div>
+    <div class="margin">
+      <div class="gesture"><span aria-hidden="true" class="wheel-arrow">↓</span><span data-zh="滚动，打开麦克风">Scroll to open the microphone</span></div>
+      <nav class="stops" aria-label="Drawing positions" data-zh-aria="剖面位置">
+        <button type="button" data-stop="0" aria-current="step"><i></i><span data-zh="网罩">Grille</span></button>
+        <button type="button" data-stop=".47"><i></i><span data-zh="音圈">Winding</span></button>
+        <button type="button" data-stop=".95"><i></i><span data-zh="磁隙">Air gap</span></button>
+      </nav>
+    </div>
+  </div>
+</section>
+<section class="cinema" id="screening" aria-labelledby="film-title" tabindex="-1">
+ <div class="wrap">
+   <div class="cinema-head"><div><p class="medium"><i></i><span data-zh="双片放映">A double bill</span></p><h2 id="film-title">The Voltage in Your Voice</h2></div>
+   <div class="reels" role="group" aria-label="Choose a film" data-zh-aria="选一部影片">
+     <button class="reel" data-film="coil" type="button" aria-pressed="true"><img src="media/coil.jpg" loading="lazy" alt=""><span data-zh="动圈麦克风">Microphone</span></button>
+     <button class="reel" data-film="valve" type="button" aria-pressed="false"><img src="media/valve.jpg" loading="lazy" alt=""><span data-zh="球式止回阀">Check valve</span></button>
+   </div></div>
+   <div class="screen"><video id="glimpse" playsinline muted loop preload="none" poster="media/coil.jpg" aria-hidden="true"></video>
+     <button id="play" type="button"><span aria-hidden="true">▶</span><b data-zh="播放全片">Play full film</b></button>
+     <video id="film" controls playsinline preload="none" poster="media/coil.jpg" hidden></video>
+   </div>
+   <div class="under"><p id="synopsis"></p><span class="runtime" id="runtime"></span></div>
+   <div class="film-notes"><details><summary data-zh="选看一幕">Scenes</summary><div id="chapters"></div></details><details><summary data-zh="英文旁白">English narration</summary><div id="transcript" lang="en"></div></details><a id="direct" href="https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/coil.mp4" data-zh="打开 MP4 ↗">Open MP4 ↗</a></div>
+   <p id="status" role="status"></p>
+ </div>
+</section>
+<section class="listening" aria-labelledby="sound-title">
+ <div class="wrap sound-spread">
+  <div><p class="medium"><i></i><span data-zh="听声音的剖面">Listening in section</span></p><h2 id="sound-title"><span data-zh="只留">Isolate</span> <em data-zh="一轨。">a track.</em></h2>
+  <p class="sound-copy" data-zh="拿掉旁白，听槌击与拨弦。再单听网罩分离、零件归位时留下的轻响。">Lift out the voice and listen for struck bars and plucked strings. Then hear the little ticks where the drawing opens and the parts settle.</p></div>
+  <div class="sound-sheet"><label for="sound-film" data-zh="选听影片">Sound from</label><select id="sound-film"><option value="coil" data-zh="声音里的电压">The Voltage in Your Voice</option><option value="valve" data-zh="一颗钢球，单向通行">Ball Check Valve</option></select>
+   <div class="tracks" role="group" aria-label="Audio tracks" data-zh-aria="音轨"><button data-track="score" aria-pressed="true" data-zh="片中配乐">Film score</button><button data-track="foley" aria-pressed="false" data-zh="机械拟音">Mechanical Foley</button></div>
+   <canvas class="wave" width="850" height="100" aria-hidden="true"></canvas><audio id="audio" controls preload="none"></audio>
+  </div>
+ </div>
+</section>
+<footer><div class="wrap endnotes"><a href="#opening" data-zh="↑ 回到剖面">↑ Back to the drawing</a>
+ <details><summary data-zh="关于画面与声音">Picture &amp; sound credits</summary><p data-zh="滚轮里的网罩、振膜和铜线圈取自动圈麦克风正片的三维模型。两部片的英文配音均为 Kokoro 的 bm_george。原创配乐使用 Versilian Studios 的 CC0 器乐采样。">The scroll study uses the grille, diaphragm and winding from the microphone film’s own 3D model. Both English films use Kokoro’s bm_george voice. Their original scores use CC0 instrument samples from Versilian Studios.</p><a href="https://lemomo-ai.github.io/lemo-opuscar/styles/hardcore-info/" data-zh="LemoLab 的线稿剖面原作 ↗">Line-art reference by LemoLab ↗</a></details>
+ <details><summary data-zh="用线稿剖面拍片">Make a Line Cutaway film</summary><film-agent-start style-id="line-cutaway"></film-agent-start></details>
+</div></footer>
+</main></body></html>

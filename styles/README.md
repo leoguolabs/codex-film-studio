@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**27 styles** · 27 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**28 styles** · 28 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -315,6 +315,17 @@ Ask your Agent to open local showcases and check their retained project files.
 <sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en">Style page</a> · <a href="../styles/paper-lantern/STYLE.md">Style guide</a> · <a href="../styles/paper-lantern/prompt.txt">Prompt</a> · <a href="../styles/paper-lantern/starter">Project files</a></sub>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en"><img src="../docs/readme/frames/line-cutaway.jpg" alt="Line Cutaway — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>28 / <code>line-cutaway</code></sub>
+<h3>Line Cutaway</h3>
+<sub>线稿剖面</sub>
+<p>Open a microphone with the scroll wheel, then watch two graphite-and-copper films about moving parts.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en">▶ Watch online</a></p>
+<sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en">Style page</a> · <a href="../styles/line-cutaway/STYLE.md">Style guide</a> · <a href="../styles/line-cutaway/prompt.txt">Prompt</a> · <a href="../styles/line-cutaway/starter">Project files</a></sub>
+</td>
+</tr>
 </table>
 
 ## Capabilities / 能力与网页
@@ -348,6 +359,7 @@ Ask your Agent to open local showcases and check their retained project files.
 | [宣纸写意水墨 / Xuan Ink Wash](ink-wash/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en) · [Between Strokes · two ink fables](https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=en#screening) | `local-source-bundle` | `not-yet-revalidated` |
 | [朱红窗花剪纸 / Vermilion Paper Cut](papercut-red/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/papercut-red/showcase/index.html?lang=en) | `local-source-bundle` | `not-yet-revalidated` |
 | [纸雕灯影 / Paper Lightbox](paper-lantern/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en) | `local-source-bundle` | `not-yet-revalidated` |
+| [线稿剖面 / Line Cutaway](line-cutaway/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en) | `local-source-bundle` | `not-yet-revalidated` |
 
 ## What is complete / 已完成什么
 
@@ -378,6 +390,7 @@ Ask your Agent to open local showcases and check their retained project files.
 - **ink-wash** — 可编辑的压感毛笔、宣纸合成器、山水工具、配音配乐与离线渲染器。 Editable pressure brush, paper compositor, landscape tools, audio and offscreen compiler.
 - **papercut-red** — 可编辑的剪纸渲染与同步音轨，已发布两部英文短片。 Editable cut-paper renderer, synchronized audio and two released English shorts.
 - **paper-lantern** — 可编辑的分层纸雕灯箱，两部英文短片均配有 Gemini 原创器乐。 An editable layered-paper theatre with two released English shorts and Gemini scores.
+- **line-cutaway** — 可编辑的毫米尺度模型，两部英文短片配有原创室内乐。 Editable millimetre solids and two released English shorts with original chamber scores.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

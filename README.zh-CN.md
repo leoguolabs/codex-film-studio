@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="https://leoguolabs.github.io/codex-film-studio/zh/"><strong>打开风格片库 ↗</strong></a> ·
+  <a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=zh">声音的剖面 · 随滚轮拆开麦克风 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=zh">纸窗入夜 · 进入纸雕灯箱 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/ink-wash/showcase/index.html?lang=zh">一笔之间 · 展开水墨双片 ↗</a> ·
   <a href="https://leoguolabs.github.io/codex-film-studio/styles/colored-pencil/showcase/index.html?lang=zh">松籽乘风 · 彩铅放映页 ↗</a> ·
@@ -49,7 +50,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**27 种风格** · 27 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**28 种风格** · 28 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -326,6 +327,16 @@ codex plugin add codex-film-studio@visiontrail
 <sub>Paper Lightbox</sub>
 <p>滚动穿过透光的纸雕雾港，转动机械鸟，再看两部灯箱夜话。</p>
 <p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=zh">▶ 在线播放</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=zh"><img src="docs/readme/frames/line-cutaway.jpg" alt="线稿剖面 — 影片截图" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>28 / <code>line-cutaway</code></sub>
+<h3>线稿剖面</h3>
+<sub>Line Cutaway</sub>
+<p>随滚轮打开动圈麦克风，再看两部用石墨线条与铜色剖面讲述机械运动的短片。</p>
+<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=zh">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

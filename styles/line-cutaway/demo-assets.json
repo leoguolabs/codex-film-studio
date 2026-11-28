@@ -1,0 +1,70 @@
+{
+  "release": "line-cutaway-signal-v1",
+  "archive": {
+    "name": "signal-study.tar.gz",
+    "bytes": 2315097,
+    "sha256": "c1df03d210dbc5786bc92d0556d0022c2d5e019484da00b068a97479d8922a1f",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/signal-study.tar.gz"
+  },
+  "files": [
+    "media/coil-glimpse.mp4",
+    "media/coil.jpg",
+    "media/coil.vtt",
+    "media/films.json",
+    "media/plate-00.webp",
+    "media/plate-01.webp",
+    "media/plate-02.webp",
+    "media/plate-03.webp",
+    "media/plate-04.webp",
+    "media/plate-05.webp",
+    "media/plate-06.webp",
+    "media/plate-07.webp",
+    "media/plate-08.webp",
+    "media/plate-09.webp",
+    "media/plate-10.webp",
+    "media/plate-11.webp",
+    "media/plate-12.webp",
+    "media/plate-13.webp",
+    "media/valve-glimpse.mp4",
+    "media/valve.jpg",
+    "media/valve.vtt"
+  ],
+  "streams": [
+    {
+      "name": "coil-foley.m4a",
+      "bytes": 202543,
+      "sha256": "175ea1c3cd8a348e416e1706975a667633f63cb25c81984e3bafe978f0dcc8da",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/coil-foley.m4a"
+    },
+    {
+      "name": "coil-score.m4a",
+      "bytes": 1012192,
+      "sha256": "3b31b159459209e9f6a74e8d7e24709d6d9a178834856e36ca450ab6ac12f515",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/coil-score.m4a"
+    },
+    {
+      "name": "coil.mp4",
+      "bytes": 19865074,
+      "sha256": "bd5fc88d9bfcb457c0e6984fb7a5c8d50301658eaf418d3c9100d16caf54cf48",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/coil.mp4"
+    },
+    {
+      "name": "valve-foley.m4a",
+      "bytes": 202232,
+      "sha256": "516f7c17661a649d12e2541f9a72535d41bebc7cded5c9ba39e36a628f78836a",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/valve-foley.m4a"
+    },
+    {
+      "name": "valve-score.m4a",
+      "bytes": 1215753,
+      "sha256": "2855efc02f1bfdd7c9e281dc8d5b34dda50e447a9212c019eefc70c128be6a11",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/valve-score.m4a"
+    },
+    {
+      "name": "valve.mp4",
+      "bytes": 17163703,
+      "sha256": "11b26316eac0fa179110e248b6c97558a89e5695f29e8193ddad81f065379056",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/line-cutaway-signal-v1/valve.mp4"
+    }
+  ]
+}

@@ -488,6 +488,23 @@
       "image": "docs/readme/frames/paper-lantern.jpg",
       "image_sha256": "4e12ccbcd87b91d00d3b6f64e88eecfd56b3990cfcc67627106ecfae2bc96dc5",
       "treatment": "Complete harbour frame, resized to 960 × 540."
+    },
+    {
+      "style": "line-cutaway",
+      "source_video": "The Voltage in Your Voice / final English master",
+      "source_sha256": "bd5fc88d9bfcb457c0e6984fb7a5c8d50301658eaf418d3c9100d16caf54cf48",
+      "title": "The Voltage in Your Voice",
+      "title_zh": "声音里的电压",
+      "seconds": 21.75,
+      "frame": 522,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/line-cutaway.jpg",
+      "image_sha256": "630ac8c13f42b5cbc5d250f51934234d938cf99f985979fcad7faf9fd3a93f48",
+      "treatment": "Complete winding shot resized to 1280 × 720."
     }
   ]
 }
