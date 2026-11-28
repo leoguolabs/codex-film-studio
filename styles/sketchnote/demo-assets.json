@@ -1,0 +1,22 @@
+{
+  "release": "sketchnote-screenings-v1",
+  "archive": {
+    "name": "sketchnote-screenings-v1.tar.gz",
+    "bytes": 15763035,
+    "sha256": "32bd9aef50e28817cead2abd2e8c50ab61647cd911a9e9c4bbb7277739c62926",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/sketchnote-screenings-v1.tar.gz"
+  },
+  "files": [
+    "media/films.json",
+    "media/pinhole-music.m4a",
+    "media/pinhole-pen.m4a",
+    "media/pinhole-poster.webp",
+    "media/pinhole.mp4",
+    "media/pinhole.vtt",
+    "media/popcorn-music.m4a",
+    "media/popcorn-pen.m4a",
+    "media/popcorn-poster.webp",
+    "media/popcorn.mp4",
+    "media/popcorn.vtt"
+  ]
+}

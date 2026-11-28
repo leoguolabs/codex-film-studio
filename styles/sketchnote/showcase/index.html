@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f7f4eb" />
+    <meta
+      name="description"
+      content="Follow a fleck of light through a hand-drawn pinhole camera. An interactive Sketchnote exhibition and two complete science films on dot paper."
+    />
+    <title>Catch the light · Sketchnote · Codex Film Studio</title>
+    <link rel="icon" href="../../../catalog/mark.svg" />
+    <link rel="preload" href="dark-box.webp" as="image" />
+    <link rel="stylesheet" href="notebook.css" />
+    <script type="module" src="notebook.mjs"></script>
+    <script type="module" src="../../../catalog/agent-start.mjs"></script>
+  </head>
+  <body>
+    <header class="mast">
+      <a class="brand" data-library href="../../../?lang=en#library"
+        ><img src="../../../catalog/brand/studio-logo.svg" alt="" />Codex Film Studio</a
+      >
+      <nav>
+        <a data-library href="../../../?lang=en#library" data-zh="全部风格">All styles</a
+        ><a href="#screening" data-zh="放映室">Screening room</a
+        ><a class="lang" id="language" href="?lang=zh" lang="zh-CN">中文</a>
+      </nav>
+    </header>
+    <main>
+      <section id="notebook" class="journey" aria-labelledby="cover-title">
+        <div class="sticky">
+          <div class="sheet">
+            <div class="sheet-head">
+              <span><i class="swatch"></i> <b data-zh="视觉笔记">Sketchnote</b></span
+              ><span data-zh="光学手记">Optics notebook</span>
+            </div>
+            <div class="spread">
+              <div class="lettering">
+                <p class="folio" id="folio" data-zh="图一 · 暗箱">Fig. 1 · The dark box</p>
+                <h1 id="cover-title">
+                  <span id="headline-a">Catch</span><em id="headline-b">the light.</em>
+                </h1>
+                <p class="lede" id="lede">
+                  A candle stands upright. Its image hangs upside down. Where did the flip happen?
+                </p>
+                <a class="watch" href="#screening"
+                  ><span aria-hidden="true">▶</span>
+                  <span data-zh="看两部短片">Watch the two films</span></a
+                >
+              </div>
+              <figure class="drawing">
+                <canvas
+                  id="paper"
+                  width="900"
+                  height="600"
+                  role="img"
+                  aria-label="A fineliner drawing of a cardboard pinhole camera with a golden opening."
+                ></canvas>
+                <noscript><img src="dark-box.webp" alt="The hand-drawn pinhole camera" /></noscript>
+                <figcaption id="art-note">a hole in a sheet of foil</figcaption>
+              </figure>
+            </div>
+            <div class="sheet-foot">
+              <a class="scroll-cue" href="#screening"
+                ><span class="wheel" aria-hidden="true">↓</span
+                ><span data-zh="滚动，跟着光走">Scroll to follow the light</span></a
+              >
+              <div class="stops" aria-label="Select a view">
+                <button data-stop="0" aria-label="Camera">01</button><i></i
+                ><button data-stop="1" aria-label="Pinhole">02</button><i></i
+                ><button data-stop="2" aria-label="Poster">03</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="screening" class="screen room">
+        <div class="wrap">
+          <div class="section-line">
+            <span data-zh="视觉笔记放映室">Sketchnote screening room</span
+            ><span data-zh="两部英文短片">Two films in English</span>
+          </div>
+          <div class="film-heading">
+            <h2 data-zh="翻开另一页。">Turn the page.</h2>
+            <div class="film-tabs" aria-label="Choose a film">
+              <button type="button" data-film="pinhole" aria-pressed="true">
+                <span aria-hidden="true">01</span> <b data-zh="针孔">Pinhole</b></button
+              ><button type="button" data-film="popcorn" aria-pressed="false">
+                <span aria-hidden="true">02</span> <b data-zh="爆米花">Popcorn</b>
+              </button>
+            </div>
+          </div>
+          <div class="projector">
+            <video
+              id="movie"
+              controls
+              playsinline
+              preload="metadata"
+              poster="media/pinhole-poster.webp"
+              src="media/pinhole.mp4"
+            >
+              <track kind="subtitles" label="English" srclang="en" src="media/pinhole.vtt" />
+            </video>
+          </div>
+          <div class="program">
+            <div>
+              <p class="duration" id="duration">00:46 · EN</p>
+              <h3 id="film-title">The Upside-Down Flame</h3>
+              <p id="synopsis"></p>
+            </div>
+            <div>
+              <div id="chapters"></div>
+              <details>
+                <summary data-zh="读英文旁白">Read the English narration</summary>
+                <p id="transcript" lang="en"></p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="materials" class="room material">
+        <div class="wrap">
+          <div class="section-line">
+            <span data-zh="纸上细部">From the drawing</span
+            ><span data-zh="细针笔 / 马克笔">Fineliner / marker</span>
+          </div>
+          <div class="material-head">
+            <h2 data-zh="看近一点。">Look closer.</h2>
+            <p
+              data-zh="同一支黄笔，在暗箱里追光，在玉米粒里追一小块壳。点一张细部图，去影片里看它怎样动起来。"
+            >
+              The same yellow marker follows a ray in one film and a scrap of hull in the other. Pick a
+              detail to see it move in the film.
+            </p>
+          </div>
+          <div class="specimens">
+            <button data-detail="pinhole" data-time="21.67">
+              <img src="foil.webp" width="1000" height="800" loading="lazy" alt="" /><span
+                ><b data-zh="锡箔上的针孔">The foil aperture</b><small>00:21 ↗</small></span
+              >
+            </button>
+            <button data-detail="popcorn" data-time="20.48">
+              <img src="starch.webp" width="660" height="538" loading="lazy" alt="" /><span
+                ><b data-zh="淀粉里的蒸汽">Steam in the starch</b><small>00:20 ↗</small></span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="sound" class="room sound">
+        <div class="wrap sound-grid">
+          <div>
+            <p class="folio" data-zh="声音手记">Sound notes</p>
+            <h2 data-zh="听，笔尖落下。">Hear the pen.</h2>
+            <p data-zh="每落一笔，就响一声。把片中的干笔声和木槌、低音、铃音的配乐分开听。">
+              Each stroke has a sound. Hear the dry pen on its own, then the mallets, bass and bells that
+              play beneath it.
+            </p>
+          </div>
+          <div class="sound-slip">
+            <label for="sound-film" data-zh="选一部短片">Choose a film</label
+            ><select id="sound-film">
+              <option value="pinhole" data-zh="倒过来的火焰">The Upside-Down Flame</option>
+              <option value="popcorn" data-zh="爆米花的里面">Inside a Popcorn Kernel</option>
+            </select>
+            <div class="tracks">
+              <button data-stem="pen" aria-pressed="true" data-zh="笔尖声">Pen strokes</button
+              ><button data-stem="music" aria-pressed="false" data-zh="片中配乐">Film score</button>
+            </div>
+            <audio id="audition" controls preload="none" src="media/pinhole-pen.m4a"></audio>
+          </div>
+        </div>
+      </section>
+      <footer class="room">
+        <div class="wrap">
+          <div class="section-line">
+            <span data-zh="下一张点阵纸">A fresh sheet of dot paper</span
+            ><a data-library href="../../../?lang=en#library" data-zh="全部风格 ↗">All styles ↗</a>
+          </div>
+          <h2 data-zh="画下你的问题。">Draw your question.</h2>
+          <p data-zh="挑一件让你好奇的小事。从最后要摊开的那张手绘笔记，倒推第一笔画在哪里。">
+            Pick something small that makes you curious. Sketch the finished poster first, then decide
+            where its first line belongs.
+          </p>
+          <film-agent-start style-id="sketchnote"></film-agent-start>
+          <div class="credits">
+            <a
+              href="https://github.com/leoguolabs/codex-film-studio/tree/main/styles/sketchnote"
+              data-zh="绘制指南与空白工程 ↗"
+              >Drawing guide &amp; blank kit ↗</a
+            ><a
+              href="https://github.com/lemomo-ai/lemo-opuscar/tree/439b98af08b04400f8fd8a8dd19cd773c0c96532/styles/sketchnote"
+              data-zh="绘制工具改编自 Lemomo（LemoLab）↗"
+              >Drawing tools adapted from Lemomo (LemoLab) ↗</a
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1785,6 +1785,66 @@
           "styles/line-cutaway/starter/fonts/OFL-sans.txt"
         ]
       }
+    },
+    {
+      "id": "sketchnote",
+      "name": "Sketchnote",
+      "name_zh": "视觉笔记",
+      "description": "Follow a point of candlelight through a pinhole, then open a popcorn kernel. Both films unfold across one sheet of hand-drawn notes.",
+      "description_zh": "跟着一束烛光穿过针孔，再剖开一粒爆米花。两部短片各自从一个小线索，画成一整张视觉笔记。",
+      "status": "renderer-ready",
+      "status_note": "Executable blank kit with handwriting, camera, English narration timing and sound stems.",
+      "status_note_zh": "含可执行绘制工具、手写字、镜头、英文配音时间轴与分轨。",
+      "guide": "styles/sketchnote/STYLE.md",
+      "readme": "styles/sketchnote/README.md",
+      "prompt": "styles/sketchnote/prompt.txt",
+      "template": "styles/sketchnote/starter",
+      "template_kind": "blank",
+      "uses_shared_runtime": false,
+      "renderer_entry": "engine/note.mjs",
+      "showcases": [
+        {
+          "id": "sketchnote-double-bill",
+          "title": "Two films on dot paper",
+          "title_zh": "点阵纸上的两部短片",
+          "page": "styles/sketchnote/showcase/index.html",
+          "anchor": "screening",
+          "access": "release",
+          "media_manifest": "styles/sketchnote/showcase/media/films.json"
+        }
+      ],
+      "capabilities": {
+        "project_creation": true,
+        "scene_renderer": true,
+        "published_demo": false,
+        "published_film": true,
+        "material_proof": true,
+        "locked_dependencies": true,
+        "audio_mix": true,
+        "original_source": "not-audited",
+        "sample_rebuild": "not-yet-revalidated",
+        "new_film_scope": "style-tools-and-authored-scenes",
+        "bundled_fonts": true
+      },
+      "preview": "docs/readme/frames/sketchnote.jpg",
+      "preview_zh": "docs/readme/frames/sketchnote.jpg",
+      "preview_kind": "frame",
+      "preview_showcase": "sketchnote-double-bill",
+      "landing": {
+        "page": "styles/sketchnote/showcase/index.html",
+        "assets": [
+          "styles/sketchnote/showcase/notebook.css",
+          "styles/sketchnote/showcase/notebook.mjs",
+          "styles/sketchnote/showcase/dark-box.webp",
+          "styles/sketchnote/showcase/foil.webp",
+          "styles/sketchnote/showcase/starch.webp",
+          "styles/sketchnote/starter/fonts/Kalam-Bold.ttf",
+          "styles/sketchnote/starter/fonts/PatrickHand-Regular.ttf",
+          "styles/sketchnote/starter/fonts/OFL-kalam.txt",
+          "styles/sketchnote/starter/fonts/OFL-patrickhand.txt"
+        ]
+      },
+      "public_assets": "styles/sketchnote/demo-assets.json"
     }
   ],
   "capability_schema_version": 2

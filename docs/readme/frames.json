@@ -522,6 +522,23 @@
       "image": "docs/readme/frames/line-cutaway.jpg",
       "image_sha256": "630ac8c13f42b5cbc5d250f51934234d938cf99f985979fcad7faf9fd3a93f48",
       "treatment": "Complete winding shot resized to 1280 × 720."
+    },
+    {
+      "style": "sketchnote",
+      "title": "The Upside-Down Flame",
+      "title_zh": "倒过来的火焰",
+      "source_video": "The Upside-Down Flame / final master",
+      "source_sha256": "a0c0f3d62f4f1f515edc21f4228466c19dad09bf4786b8387bc54e111b88bcf7",
+      "seconds": 44.166666666666664,
+      "frame": 1060,
+      "fps": "24",
+      "native_dimensions": [
+        1920,
+        1080
+      ],
+      "image": "docs/readme/frames/sketchnote.jpg",
+      "image_sha256": "ebeacbeeafd3b503c1289afb82a609a433963d60fe75601fa839e252334d430f",
+      "treatment": "Complete final poster at frame 1060, resized to 960 × 540."
     }
   ]
 }

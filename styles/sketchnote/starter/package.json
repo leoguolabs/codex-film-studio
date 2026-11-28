@@ -1,0 +1,17 @@
+{
+  "name": "sketchnote-film",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "proof": "node scripts/render.mjs proof",
+    "still": "node scripts/render.mjs still",
+    "frames": "node scripts/render.mjs frames",
+    "events": "node scripts/render.mjs events",
+    "encode": "node scripts/render.mjs encode",
+    "build": "node scripts/render.mjs events && python3 scripts/sound.py mix && node scripts/render.mjs frames && node scripts/render.mjs encode"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.80"
+  }
+}

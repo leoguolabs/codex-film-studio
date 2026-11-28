@@ -6,7 +6,7 @@ package completion and showcase availability. Shared workflows live in `methods/
 所有风格统一放在 `styles/<id>/`。完成状态描述仓库中的可复用内容；
 已有本地影片网页、公开样片与新影片验收分别记录。
 
-**29 styles** · 29 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
+**30 styles** · 30 executable production kits, including 1 with a complete editable sample project (Whiteboard Explainer)
 
 ## Visual index / 风格一览
 
@@ -337,6 +337,17 @@ Ask your Agent to open local showcases and check their retained project files.
 <sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en">Style page</a> · <a href="../styles/line-cutaway/STYLE.md">Style guide</a> · <a href="../styles/line-cutaway/prompt.txt">Prompt</a> · <a href="../styles/line-cutaway/starter">Project files</a></sub>
 </td>
 </tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en#screening"><img src="../docs/readme/frames/sketchnote.jpg" alt="Sketchnote — film frame" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>30 / <code>sketchnote</code></sub>
+<h3>Sketchnote</h3>
+<sub>视觉笔记</sub>
+<p>Follow a point of candlelight through a pinhole, then open a popcorn kernel. Both films unfold across one sheet of hand-drawn notes.</p>
+<p><b>Executable production kit</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en#screening">▶ Watch online</a></p>
+<sub><a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en">Style page</a> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en#screening">Two films on dot paper</a> · <a href="../styles/sketchnote/STYLE.md">Style guide</a> · <a href="../styles/sketchnote/prompt.txt">Prompt</a> · <a href="../styles/sketchnote/starter">Project files</a></sub>
+</td>
+</tr>
 </table>
 
 ## Capabilities / 能力与网页
@@ -372,6 +383,7 @@ Ask your Agent to open local showcases and check their retained project files.
 | [纸雕灯影 / Paper Lightbox](paper-lantern/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/paper-lantern/showcase/index.html?lang=en) | `local-source-bundle` | `not-yet-revalidated` |
 | [纸艺立体书 / Pop-Up Storybook](popup-storybook/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/popup-storybook/showcase/index.html?lang=en) | `local-source-bundle` | `not-yet-revalidated` |
 | [线稿剖面 / Line Cutaway](line-cutaway/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=en) | `local-source-bundle` | `not-yet-revalidated` |
+| [视觉笔记 / Sketchnote](sketchnote/README.md) | `renderer-ready` | Included / 已有 | [Style page](https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en) · [Two films on dot paper](https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en#screening) | `not-audited` | `not-yet-revalidated` |
 
 ## What is complete / 已完成什么
 
@@ -404,6 +416,7 @@ Ask your Agent to open local showcases and check their retained project files.
 - **paper-lantern** — 可编辑的分层纸雕灯箱，两部英文短片均配有 Gemini 原创器乐。 An editable layered-paper theatre with two released English shorts and Gemini scores.
 - **popup-storybook** — 可编辑的折纸布景与镜头，两支英文成片附字幕、配乐和纸张拟音。 An editable hinged-card renderer with two finished English films, captions, scores and paper Foley.
 - **line-cutaway** — 可编辑的毫米尺度模型，两部英文短片配有原创室内乐。 Editable millimetre solids and two released English shorts with original chamber scores.
+- **sketchnote** — 含可执行绘制工具、手写字、镜头、英文配音时间轴与分轨。 Executable blank kit with handwriting, camera, English narration timing and sound stems.
 
 Publication, executable rendering, source access and rebuild scope are independent.
 `full` means a complete rebuild; `clip` covers only the documented excerpt.

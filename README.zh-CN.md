@@ -51,7 +51,7 @@ codex plugin add codex-film-studio@visiontrail
 
 <!-- capability-summary:start -->
 
-**29 种风格** · 29 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
+**30 种风格** · 30 个可执行制作包，其中 1 个附完整可编辑样片工程（白板讲解）
 
 <!-- capability-summary:end -->
 
@@ -348,6 +348,16 @@ codex plugin add codex-film-studio@visiontrail
 <sub>Line Cutaway</sub>
 <p>随滚轮打开动圈麦克风，再看两部用石墨线条与铜色剖面讲述机械运动的短片。</p>
 <p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/line-cutaway/showcase/index.html?lang=zh">▶ 在线播放</a></p>
+</td>
+</tr>
+<tr>
+<td width="38%" valign="middle"><a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=zh#screening"><img src="docs/readme/frames/sketchnote.jpg" alt="视觉笔记 — 影片截图" width="320"></a></td>
+<td width="62%" valign="top">
+<sub>30 / <code>sketchnote</code></sub>
+<h3>视觉笔记</h3>
+<sub>Sketchnote</sub>
+<p>跟着一束烛光穿过针孔，再剖开一粒爆米花。两部短片各自从一个小线索，画成一整张视觉笔记。</p>
+<p><b>可执行制作包</b> · <a href="https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=zh#screening">▶ 在线播放</a></p>
 </td>
 </tr>
 </table>

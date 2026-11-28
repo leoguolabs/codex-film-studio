@@ -157,6 +157,15 @@ class ReproductionTests(unittest.TestCase):
                             self.assertTrue((p/dependency).is_file(), dependency)
                         self.assertEqual(package['scripts']['proof'], 'node scripts/render.mjs proof')
                         continue
+                    if entry['id'] == 'sketchnote':
+                        self.assertTrue((p / entry['renderer_entry']).is_file())
+                        self.assertTrue((p / 'scripts/sound.py').is_file())
+                        self.assertEqual(json.loads((p / 'content/narration.json').read_text())['lines'], [])
+                        self.assertEqual(json.loads((p / 'content/score.json').read_text())['sections'], [])
+                        subprocess.run(['node', '--input-type=module', '-e',
+                                        "import film from './src/film.mjs'; if (typeof film.build !== 'function') process.exit(1)"],
+                                       cwd=p, check=True)
+                        continue
                     if entry['id'] == 'marker-paper':
                         for file in (entry['renderer_entry'], 'fonts/glyphs.json', 'scripts/paper_sound.py',
                                      'scripts/recorded_music.py', 'content/music.example.json'):

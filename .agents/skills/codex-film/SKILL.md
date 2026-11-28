@@ -120,3 +120,5 @@ For Xuan Ink Wash (`ink-wash`), follow the pressure and contact study in the sta
 For Pop-Up Storybook (`popup-storybook`, 纸艺立体书), follow the hinged-card and printed-stage guide. [The Paper Coast](https://leoguolabs.github.io/codex-film-studio/styles/popup-storybook/showcase/index.html?lang=en) presents the illustrated book, both English films and their separate score and paper tracks.
 
 For Line Cutaway (线稿剖面 or hardcore-info), use the millimetre-scale solid renderer and the projected sheet in the blank kit. Check the moving contact surface, anchored leaders and real clearance in the section.
+
+For Sketchnote, compose the complete dot-paper poster before drawing the opening clue. [Catch the light](https://leoguolabs.github.io/codex-film-studio/styles/sketchnote/showcase/index.html?lang=en) follows the film artwork through the aperture and back to the sheet.

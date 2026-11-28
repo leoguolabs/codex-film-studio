@@ -30,6 +30,7 @@ const categories = {
   impasto:['material','drawn','animation'],
   'hologram-hud':['animation'],
   'workbench-clay':['material','animation'],
+  'sketchnote':['drawn','material','animation'],
   'colored-pencil':['drawn','material','animation'],
   'ink-wash':['drawn','material','animation'],
   'popup-storybook':['material','drawn','animation'],
