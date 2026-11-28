@@ -1956,6 +1956,8 @@
         "assets": [
           "styles/risograph/showcase/press.css",
           "styles/risograph/showcase/press.mjs",
+          "styles/risograph/showcase/turn.webp",
+          "styles/risograph/showcase/bell.webp",
           "styles/risograph/showcase/turn.vtt",
           "styles/risograph/showcase/bell.vtt",
           "styles/risograph/showcase/grain.png",
