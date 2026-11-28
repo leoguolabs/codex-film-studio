@@ -1,22 +1,54 @@
 {
   "release": "sketchnote-screenings-v1",
   "archive": {
-    "name": "sketchnote-screenings-v1.tar.gz",
-    "bytes": 15763035,
-    "sha256": "32bd9aef50e28817cead2abd2e8c50ab61647cd911a9e9c4bbb7277739c62926",
-    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/sketchnote-screenings-v1.tar.gz"
+    "name": "sketchnote-paper-v1.tar.gz",
+    "bytes": 194912,
+    "sha256": "bbbc843a85153dc0ff194adbd11d2c09f83894256695d9e270b3029a990e62b0",
+    "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/sketchnote-paper-v1.tar.gz"
   },
   "files": [
     "media/films.json",
-    "media/pinhole-music.m4a",
-    "media/pinhole-pen.m4a",
     "media/pinhole-poster.webp",
-    "media/pinhole.mp4",
     "media/pinhole.vtt",
-    "media/popcorn-music.m4a",
-    "media/popcorn-pen.m4a",
     "media/popcorn-poster.webp",
-    "media/popcorn.mp4",
     "media/popcorn.vtt"
+  ],
+  "streams": [
+    {
+      "name": "pinhole-music.m4a",
+      "bytes": 511982,
+      "sha256": "8de7c9aa98cc2f4f2bcf709820436c01f1b32deafed5a40cffedfbc46cf917eb",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/pinhole-music.m4a"
+    },
+    {
+      "name": "pinhole-pen.m4a",
+      "bytes": 445528,
+      "sha256": "f377a7088bcef46aae8c3309595cc0356dadcf9835ebb4659ed96062c7a40533",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/pinhole-pen.m4a"
+    },
+    {
+      "name": "pinhole.mp4",
+      "bytes": 6765425,
+      "sha256": "5fbd4af4f7f411a74c14175f6e484c225c67df840e5af538484ca7fa7d0758db",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/pinhole.mp4"
+    },
+    {
+      "name": "popcorn-music.m4a",
+      "bytes": 552474,
+      "sha256": "63d39bcee2c6b098e94c1b9235b1488fb8f59d7f174f0c54071ec6b91be566bf",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/popcorn-music.m4a"
+    },
+    {
+      "name": "popcorn-pen.m4a",
+      "bytes": 417919,
+      "sha256": "653891efb777347170b96bbc2088b1268ae23c0419d098c9b93bb997b1515a75",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/popcorn-pen.m4a"
+    },
+    {
+      "name": "popcorn.mp4",
+      "bytes": 7075906,
+      "sha256": "615f2269ef979fedc75f86178da5fc6a36b1f094551e0f05b51f66153cb72b7f",
+      "url": "https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/popcorn.mp4"
+    }
   ]
 }

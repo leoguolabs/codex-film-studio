@@ -1,10 +1,10 @@
 @font-face {
   font-family: Kalam;
-  src: url('../starter/fonts/Kalam-Bold.ttf');
+  src: url('kalam.woff2');
 }
 @font-face {
   font-family: Patrick;
-  src: url('../starter/fonts/PatrickHand-Regular.ttf');
+  src: url('patrick.woff2');
 }
 :root {
   --ink: #29282b;

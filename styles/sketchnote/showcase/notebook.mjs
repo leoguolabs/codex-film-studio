@@ -255,6 +255,7 @@ const desc = {
     '爆米花的褶皱里藏着一小片金色硬壳。从这条线索倒回去，看它怎样裹住整粒玉米。',
   ],
 };
+const release = 'https://github.com/leoguolabs/codex-film-studio/releases/download/sketchnote-screenings-v1/';
 const movie = $('#movie'),
   audio = $('#audition');
 let filmId = url.searchParams.get('film') === 'popcorn' ? 'popcorn' : 'pinhole',
@@ -264,7 +265,7 @@ const clock = (t) => '00:' + String(Math.floor(t)).padStart(2, '0');
 function sound() {
   const id = $('#sound-film').value;
   audio.pause();
-  audio.src = 'media/' + id + '-' + stem + '.m4a';
+  audio.src = release + id + '-' + stem + '.m4a';
   audio.setAttribute(
     'aria-label',
     (filmData[id]?.title[Number(zh)] || id) + ' · ' + $('[data-stem="' + stem + '"]').textContent,
@@ -273,9 +274,9 @@ function sound() {
 }
 function setMovie(id, writeURL = false) {
   filmId = id;
-  if (movie.getAttribute('src') !== 'media/' + id + '.mp4') {
+  if (movie.getAttribute('src') !== release + id + '.mp4') {
     movie.pause();
-    movie.src = 'media/' + id + '.mp4';
+    movie.src = release + id + '.mp4';
     movie.poster = 'media/' + id + '-poster.webp';
     const track = document.createElement('track');
     Object.assign(track, {
